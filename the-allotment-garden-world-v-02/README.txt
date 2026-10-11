@@ -1,6 +1,9 @@
 THE ALLOTMENT — GARDEN WORLD v0.2
 
 WHAT CHANGED
+- Curved, hand-laid cobblestone paths inspired by French and Italian gardens.
+- Rounded worn limestone stones, staggered joints, varied warm grey/cream tones.
+- Actual bevel geometry and procedural PBR mineral detail, with clean intersections.
 - Dense, short 3D lawn with varied blade height, lean, color and gentle breeze.
 - Procedural PBR turf with fine relief, roughness and natural green variation.
 - Grass respects curved paths, raised beds, buildings and park stepping stones.

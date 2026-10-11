@@ -7,6 +7,8 @@ const PLOT_SIZE := 18.0
 const COLOURS := [Color("df909d"), Color("f0c86b"), Color("a995d4"), Color("f3e5ce"), Color("c879ad"), Color("e7aa7f")]
 const Lawn = preload("res://scripts/lawn.gd")
 var lawn = Lawn.new()
+const CobblePaths = preload("res://scripts/cobble_paths.gd")
+var cobble_paths = CobblePaths.new()
 var camera: Camera3D
 var focus := Vector3(0.0, 0.0, 0.0)
 var orbit := 0.75
@@ -150,7 +152,7 @@ func _cylinder(pos: Vector3, radius: float, height: float, color: Color, parent:
 
 func _build_neighborhood() -> void:
 	lawn.cover_ground(_box(Vector3(0, -0.43, 0), Vector3(108, 0.65, 108), Color("668557")))
-	# Paths are composed of small overlapping stone segments, producing gentle curves.
+	# Curved cobblestone lanes sit above a recessed bed of earthy joints.
 	for lane in [-11.0, 11.0]:
 		_path_curve(true, lane)
 		_path_curve(false, lane)
@@ -170,13 +172,14 @@ func _path_curve(vertical: bool, lane: float) -> void:
 		var t := float(i) / 48.0
 		var along := -39.0 + 78.0 * t
 		var side := lane + 0.66 * sin(t * TAU * 1.3 + lane * 0.08)
-		var here := Vector3(side, 0.045, along) if vertical else Vector3(along, 0.045, side)
+		var here := Vector3(side, 0.004, along) if vertical else Vector3(along, 0.004, side)
 		if i > 0:
 			var midway := (previous + here) * 0.5
-			var piece := _box(midway, Vector3(3.1, 0.085, previous.distance_to(here) + 0.20), Color("bda88b"))
+			var piece := _box(midway, Vector3(3.1, 0.05, previous.distance_to(here) + 0.20), Color("706958"))
 			if not vertical:
 				piece.rotation.y = PI * 0.5
 		previous = here
+	cobble_paths.build(self, vertical, lane)
 
 func _build_plot(origin: Vector3, gx: int, gz: int) -> void:
 	var plot := Node3D.new()
