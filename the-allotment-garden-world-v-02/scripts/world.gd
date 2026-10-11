@@ -5,6 +5,8 @@ extends Node3D
 const PLOT_SPACING := 22.0
 const PLOT_SIZE := 18.0
 const COLOURS := [Color("df909d"), Color("f0c86b"), Color("a995d4"), Color("f3e5ce"), Color("c879ad"), Color("e7aa7f")]
+const Lawn = preload("res://scripts/lawn.gd")
+var lawn = Lawn.new()
 var camera: Camera3D
 var focus := Vector3(0.0, 0.0, 0.0)
 var orbit := 0.75
@@ -16,6 +18,7 @@ var hud: Label
 func _ready() -> void:
 	_build_lighting()
 	_build_neighborhood()
+	lawn.populate(self)
 	_build_camera()
 	_build_hud()
 
@@ -146,7 +149,7 @@ func _cylinder(pos: Vector3, radius: float, height: float, color: Color, parent:
 		parent.add_child(node)
 
 func _build_neighborhood() -> void:
-	_box(Vector3(0, -0.43, 0), Vector3(108, 0.65, 108), Color("668557"))
+	lawn.cover_ground(_box(Vector3(0, -0.43, 0), Vector3(108, 0.65, 108), Color("668557")))
 	# Paths are composed of small overlapping stone segments, producing gentle curves.
 	for lane in [-11.0, 11.0]:
 		_path_curve(true, lane)
@@ -181,8 +184,8 @@ func _build_plot(origin: Vector3, gx: int, gz: int) -> void:
 	plot.position = origin
 	add_child(plot)
 	var style := (gx + 1) * 3 + gz + 1
-	var ground := [Color("799767"), Color("829c70"), Color("769365"), Color("869b72")][style % 4]
-	_box(Vector3(0, 0.01, 0), Vector3(PLOT_SIZE, 0.13, PLOT_SIZE), ground, plot)
+	var ground: Color = [Color("799767"), Color("829c70"), Color("769365"), Color("869b72")][style % 4]
+	lawn.cover_ground(_box(Vector3(0, 0.01, 0), Vector3(PLOT_SIZE, 0.13, PLOT_SIZE), ground, plot))
 	# Low timber edging with the front left open for a gate.
 	for side in [-1.0, 1.0]:
 		_box(Vector3(side * 8.7, 0.30, 0), Vector3(0.14, 0.50, 17.4), Color("987955"), plot)

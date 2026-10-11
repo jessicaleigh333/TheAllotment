@@ -1,6 +1,11 @@
 THE ALLOTMENT — GARDEN WORLD v0.2
 
 WHAT CHANGED
+- Dense, short 3D lawn with varied blade height, lean, color and gentle breeze.
+- Procedural PBR turf with fine relief, roughness and natural green variation.
+- Grass respects curved paths, raised beds, buildings and park stepping stones.
+- Grass is grouped into culled MultiMeshes; distant ground retains surface detail.
+- No weeds or flowers are added to the lawn; existing garden planting is retained.
 - Softer, warmer lighting; natural muted greens and stone pathways.
 - Nine garden plots have varied beds, planting colors, edging and landscaping.
 - Curved neighborhood pathways and a small landscaped gathering space.
@@ -23,5 +28,5 @@ R: reset
 NOTES
 This is real procedural Godot 4 scene code, not a static rendering. Still a rough
 visual prototype with primitive geometry, not the final Tea House level of art.
-It has not been run inside Godot in this environment; if there's an error, send
-its Godot message and we'll fix it. No external assets or plugins are required.
+Grass update validated in Godot 4.6.3 with a headless startup and OpenGL
+Compatibility renders of the overview and close-up. No external assets or plugins are required.
