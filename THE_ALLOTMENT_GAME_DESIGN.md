@@ -1,5 +1,5 @@
 # The Allotment — Game Design
-Status: Living design reference. Updated 2026-10-11.
+Status: Living design reference. Updated 2026-10-14.
 
 ## Purpose
 The Allotment is a beautiful, welcoming, softly stylized 3D gardening and social game. Players should be able to create extraordinary gardens through time and effort, without needing to spend real money. This document records design decisions and intended features; it is **not** proof that a feature is already implemented.
@@ -12,12 +12,38 @@ The Allotment is a beautiful, welcoming, softly stylized 3D gardening and social
 
 ## Neighborhoods and plots
 - The French garden neighborhood is an early focus. Each neighborhood contains nine plots.
-- Standard plots are approximately 1.84 acres; premium plots approximately 3.67 acres (design targets; verify actual in-game scale).
+- Owner-approved permanent layout: a shared circular courtyard with nine wedge-shaped gardens arranged around it, each entrance facing inward. Adjoining wedges meet along shared green hedges (stone walls may also be used); there are no radial paths between gardens. `main.tscn` is the game entry point with the detailed side-navigation icons.
+- The previous 3×3 grid is reserved for asset staging and prototypes, including walls; run `staging/asset_staging.tscn` separately. Garden scale and art remain prototypes until reviewed.
+- Standard plots are approximately 1.84 acres (7,446.22 m²); premium plots approximately 3.67 acres. Main-scene standard wedge meshes now use one Godot unit per metre, with their ground surface area verified. Shared paths and the courtyard are excluded from plot acreage. Premium plot geometry is still planned.
 - Assign randomized terrain and special feature selections deterministically when a neighborhood is created, using saved seeds/metadata.
 - Players should not be able to preview or identify which plots have rare features before discovery.
 - Support spacious gardens with meaningful open planting space, accessible paths, and sensible terrain/collision rules.
 - Allow full-scale, substantial features (including major grottos, ruins and monumental landscape elements) even on standard plots where layout permits; do not arbitrarily reduce everything to tiny ornaments.
 - Players should be able to garden among and around substantial landmarks.
+
+## Garden selection, ownership and visiting
+Owner-confirmed rules (2026-10-13). Status: local avatar walking implemented; login, claiming and authoritative ownership enforcement remain planned.
+
+- After logging in, a new player can choose an empty, unclaimed garden. A garden already claimed by another player is unavailable for selection.
+- Before choosing, a new player can enter and walk around available gardens to inspect the space. Entering or viewing a garden does not claim it; selection is a separate deliberate action.
+- Every player can enter every garden in the game and look around, including gardens owned by other players. Owning a garden is not a prerequisite for visiting.
+- Only a garden's owner may add, remove or move its contents. Visitors cannot change another player's layout, plants, decorations or other placed objects.
+- Visitors will be able to perform specific permitted tasks later. Those tasks and their permissions will be defined separately; visiting alone does not grant editing permission.
+- Available gardens start without player-added plants, decorations or buildings. Existing sample furnishings in the prototype are demonstration assets, not a completed new-player starting state.
+- Exploring available spaces must preserve the existing rare-feature discovery rule: ordinary inspection must not expose hidden rare-feature metadata or reveal undiscovered features.
+- Implementation must persist ownership and enforce it on changes to garden contents. Availability must be checked when a player selects a garden so two players cannot claim the same space.
+
+## Account onboarding and neighborhood codes
+Owner-confirmed direction (2026-10-13). Status: specified; account services, terms acceptance, neighborhood lookup and this onboarding UI are not yet implemented.
+
+- New-player sequence: create an account / log in, complete required terms acceptance, choose a neighborhood, explore, then explicitly select an empty unclaimed garden.
+- The neighborhood step includes a text input labeled **Neighborhood code**, followed by a **Join neighborhood** button, so a player can enter a code shared by a friend.
+- Every neighborhood has a unique, persistent shareable ID/code. Players can view and copy their neighborhood's code to invite friends. The final code format is not yet decided.
+- A code identifies the neighborhood, not an individual garden. Joining through a code does not claim a garden or change editing permissions.
+- Players without a code need a route to find a neighborhood with available gardens; the field must not prevent them from continuing.
+- Invalid or unknown codes show a clear message and allow correction without losing onboarding progress.
+- A neighborhood with all nine gardens claimed remains open to visitors. Explain that no gardens are currently available there, and let the player visit or look for another neighborhood with an unclaimed space.
+- Garden availability is rechecked when a player chooses a space; a valid neighborhood code does not reserve a garden.
 
 ## French landscape authenticity
 Ground French-neighborhood designs in real French garden and landscape precedents rather than generic fantasy:
@@ -35,7 +61,37 @@ These are **inspirations**, not instructions to copy protected contemporary artw
 - Seasonal world events and themed decorations (Easter, Halloween, Christmas) may encourage return visits.
 - Daily login rewards can include decorative items. Players who do not spend real money must still have fair routes to attractive gardens and earnable decor.
 - Social/team activities and short, skill-based minigames are planned; make controls approachable on touch and desktop, with precise timing and meaningful mastery.
-- A detailed, inclusive avatar creator is planned, not an immediate implementation priority.
+- Owner requested a playable cozy garden character and an expandable avatar section on 2026-10-13. The initial workshop is implemented separately; main-menu access will be added later. A broader, inclusive appearance library remains planned.
+
+## Player character and avatar workshop
+Owner-requested direction (2026-10-13). Status: functional local prototype integrated; original character artwork ready for visual review.
+
+- A reusable animated gardener starts in the shared courtyard. Camera-relative strolling, brisk walking, physical floor/structure/hedge collision, all nine entrance routes and a switch to the neighborhood overview are implemented. Visiting does not claim or edit a plot.
+- Original editable Blender source and a rigged GLB provide idle/walk animations, four hair arrangements, dress/trousers, straw hat with flowers, satchel, apron, freckles and garden-inspired clothing details. The latest owner-supplied romantic gardener sheet guides almond eyes, sculpted face, fuller waves, a layered sage/ivory skirt, corset lacing, botanical embroidery and worn leather accessories; the requested first texture polish pass is now integrated. Original shared linen/embroidery, hair, leather, straw, skin and iris maps preserve player recoloring. Owner-requested slimmer biceps/sleeves, shorter chin, fuller cheeks and a gentle storybook smile are implemented. The hat correction adds a fitted crown, gently curved solid brim/rolled edge and attached flower band; final sculpt/animation/production polish remains planned.
+- Owner requested further reference-matching polish with free resources and credit tracking (2026-10-14). The character now adapts CC0 MakeHuman head anatomy, Microsoft/Khronos woven-fabric maps and Poly Haven sunrise illumination. Sources, license evidence, hashes and credit text are preserved in the project CREDITS.md/third-party manifest. Face controls include continuous nose/eyelid corrections and keep fitted features/headwear aligned.
+- The separate `features/avatar/screen.tscn` workshop has live preview, three palettes, eleven color controls, height/build controls and initial face morphs. A versioned local appearance save is loaded by the player. It is deliberately absent from the main navigation until later.
+- Additional hairstyles, clothing and accessories, wider body/face representation, production art polish/LOD, camera obstruction handling, touch/gamepad controls and multiplayer avatar synchronization remain future work. Starter proportions and options do not represent complete customization of every appearance detail.
+- Preview, architecture and testing: `the-allotment-garden-world-v-02/features/avatar/README.md` and `TESTING.md`.
+
+## Ground covers and pathway customization
+Owner-requested scope (2026-10-13). Status: functional local editor integrated; procedural surface artwork ready for review; account/multiplayer services still planned.
+
+- Garden Editor now includes a visual catalog of 83 ground-cover definitions across stone/cobblestone, brick/terracotta, decorative tiles, natural covers, wood/rustic surfaces, ornamental/specialty surfaces and luminous materials. Definitions share tileable procedural shader profiles and per-placement appearance data.
+- Starter materials are cobblestone, brick, moss, gravel, basic tile, ornate tile, glowing pebbles and glowing stepping stones. The rest of the catalog uses the same expandable system.
+- Player controls include a color wheel, HEX colors, presets/favorites, independent surface/grout/accent/glow colors, finish, pattern size/rotation, glow enable/intensity/scope and multiple glow colors. Borders have separate appearance and glow controls.
+- Functional tools include brush painting, straight/curved paths, circles, rectangles, erase, replace, recolor and sample. Whole-stroke undo/redo and owner/context/seed-scoped save/load are implemented.
+- The current trowel button opens an explicitly local demo editor for Garden 01. This is not a live account claim. Neighboring wedges and protected structure/hedge footprints cannot be painted. The original terrain and objects are preserved.
+- A separate sloped staging workshop provides day/night examples, layered details, edging and a luminous trail. A reusable day/night node drives material emission without per-stone lights. Compatibility has visible emission; renderer-supported bloom still requires Forward+/Mobile verification.
+- Logical placement uses 0.5-metre cells, chunk/material batching and metre-based tile UVs. Flush borders and feathered transitions are implemented; sculpted vegetation/crystal detail, raised curbs, final art, production performance tuning, mobile verification and authoritative multiplayer synchronization remain future work.
+- Implementation, preview and tests: `the-allotment-garden-world-v-02/features/garden_editor/README.md` and `TESTING.md`.
+
+## Neighborhood weather
+Owner-requested feature (2026-10-13). Status: functional simulated weather provider and forecast module integrated.
+
+- Clicking the main-screen weather information opens current conditions and the next five days, with conditions, high/low temperatures, rain chances and current wind speed. The module supports Fahrenheit/Celsius display.
+- Weather is simulated for the neighborhood, shared across its gardens and deterministic by persisted neighborhood seed and UTC date. Current conditions use the same daily generation as the forecast; hourly updates refresh the HUD/module. A game-clock override is available for future authoritative time integration.
+- Real-world weather services, visual rain/snow effects and effects on plant growth/watering are not connected.
+- Implementation and testing: `the-allotment-garden-world-v-02/features/weather/README.md`.
 
 ## Current asset-generation priorities
 Track each item as Planned / In progress / Ready for review / Approved / Integrated.

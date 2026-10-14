@@ -1,0 +1,7 @@
+[gd_scene format=3]
+
+[node name="WorldMapScreen" type="Label"]
+text = "World Map is coming soon.
+
+Your garden is waiting while we prepare this feature."
+autowrap_mode = 2

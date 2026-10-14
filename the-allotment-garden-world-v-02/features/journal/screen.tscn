@@ -1,0 +1,7 @@
+[gd_scene format=3]
+
+[node name="JournalScreen" type="Label"]
+text = "Journal is coming soon.
+
+Your garden is waiting while we prepare this feature."
+autowrap_mode = 2

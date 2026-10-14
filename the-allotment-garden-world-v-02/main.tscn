@@ -1,6 +1,18 @@
-[gd_scene load_steps=2 format=3]
+[gd_scene load_steps=4 format=3]
 
-[ext_resource type="Script" path="res://scripts/world.gd" id="1_world"]
+[ext_resource type="Script" path="res://scripts/courtyard_world.gd" id="1_world"]
+
+[ext_resource type="PackedScene" path="res://ui/world_backdrop.tscn" id="2_backdrop"]
+
+[ext_resource type="Script" path="res://features/weather/weather_system.gd" id="3_weather"]
 
 [node name="TheAllotmentWorld" type="Node3D"]
 script = ExtResource("1_world")
+default_distance = 390.0
+default_pitch = 1.05
+maximum_distance = 700.0
+
+[node name="StorybookBackdrop" parent="." instance=ExtResource("2_backdrop")]
+
+[node name="GardenWeather" type="Node" parent="."]
+script = ExtResource("3_weather")

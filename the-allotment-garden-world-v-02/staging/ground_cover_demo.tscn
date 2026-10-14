@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://staging/ground_cover_demo.gd" id="1"]
+
+[node name="GroundCoverWorkshop" type="Node3D"]
+script = ExtResource("1")
+default_distance = 55.0
+default_pitch = 0.95
+maximum_distance = 115.0

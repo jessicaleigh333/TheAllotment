@@ -1,0 +1,45 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://staging/asset_staging.gd" id="1"]
+
+[node name="AssetStaging" type="Node3D"]
+script = ExtResource("1")
+default_distance = 90.0
+
+[node name="AssetSlots" type="Node3D" parent="."]
+
+[node name="Slot01" type="Node3D" parent="AssetSlots"]
+position = Vector3(-22, 0.1, -22)
+metadata/sample_plot = "Plot_1_1"
+
+[node name="Slot02" type="Node3D" parent="AssetSlots"]
+position = Vector3(-22, 0.1, 0)
+metadata/sample_plot = "Plot_1_2"
+
+[node name="Slot03" type="Node3D" parent="AssetSlots"]
+position = Vector3(-22, 0.1, 22)
+metadata/sample_plot = "Plot_1_3"
+
+[node name="Slot04" type="Node3D" parent="AssetSlots"]
+position = Vector3(0, 0.1, -22)
+metadata/sample_plot = "Plot_2_1"
+
+[node name="Slot05" type="Node3D" parent="AssetSlots"]
+position = Vector3(0, 0.1, 0)
+metadata/sample_plot = "Plot_2_2"
+
+[node name="Slot06" type="Node3D" parent="AssetSlots"]
+position = Vector3(0, 0.1, 22)
+metadata/sample_plot = "Plot_2_3"
+
+[node name="Slot07" type="Node3D" parent="AssetSlots"]
+position = Vector3(22, 0.1, -22)
+metadata/sample_plot = "Plot_3_1"
+
+[node name="Slot08" type="Node3D" parent="AssetSlots"]
+position = Vector3(22, 0.1, 0)
+metadata/sample_plot = "Plot_3_2"
+
+[node name="Slot09" type="Node3D" parent="AssetSlots"]
+position = Vector3(22, 0.1, 22)
+metadata/sample_plot = "Plot_3_3"

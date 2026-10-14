@@ -1,0 +1,7 @@
+[gd_scene format=3]
+
+[node name="SettingsScreen" type="Label"]
+text = "Settings is coming soon.
+
+Your garden is waiting while we prepare this feature."
+autowrap_mode = 2

@@ -1,0 +1,122 @@
+{
+  "schema_version": 1,
+  "recorded_date_utc": "2026-10-14",
+  "scope": "External resources introduced for gardener texture and lighting pass. Integration is tracked in CREDITS.md and avatar documentation.",
+  "assets": [
+    {
+      "id": "spruit_sunrise",
+      "title": "Spruit Sunrise",
+      "author": "HDRI Haven / Poly Haven",
+      "individual_author": "Not independently confirmed",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/legalcode",
+      "primary_source": "https://polyhaven.com/a/spruit_sunrise",
+      "license_evidence": [
+        "poly_haven/spruit_sunrise/evidence/poly_haven_asset_license.en.json",
+        "poly_haven/spruit_sunrise/evidence/model_viewer_attribution_excerpt.md"
+      ],
+      "files": [
+        {
+          "path": "poly_haven/spruit_sunrise/spruit_sunrise_1k.hdr",
+          "download_url": "https://raw.githubusercontent.com/mrdoob/three.js/dev/examples/textures/equirectangular/spruit_sunrise_1k.hdr",
+          "upstream_git_blob_sha": "8897536c654c45f201b4661728ebb2c786280f80",
+          "modifications": "None; original HDRI. Godot builds an import cache and filtered radiance data.",
+          "downloaded": true,
+          "bytes": 1500948,
+          "sha256": "38199a31e945906f6778431e989256a92d9d78b0cfc0f902accad9f5244bf50f",
+          "download_date_utc": "2026-10-14",
+          "upstream_blob_verified": true
+        }
+      ],
+      "intended_use": "Outdoor image-based portrait illumination; no world geometry replacement."
+    },
+    {
+      "id": "microsoft_sheen_cloth",
+      "title": "Sheen Cloth woven texture maps",
+      "author": "Microsoft",
+      "year": 2020,
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/legalcode",
+      "primary_source": "https://github.com/KhronosGroup/glTF-Sample-Assets/tree/main/Models/SheenCloth",
+      "license_evidence": [
+        "microsoft_sheen_cloth/evidence/LICENSE.upstream.md",
+        "microsoft_sheen_cloth/evidence/README.upstream.md",
+        "microsoft_sheen_cloth/evidence/metadata.upstream.json"
+      ],
+      "metadocumentation_license": "CC-BY-4.0",
+      "metadocumentation_credit": "KhronosGroup glTF-Sample-Assets contributors / Microsoft",
+      "files": [
+        {
+          "path": "microsoft_sheen_cloth/technicalFabricSmall_normal_256.png",
+          "download_url": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/SheenCloth/glTF/technicalFabricSmall_normal_256.png",
+          "upstream_git_blob_sha": "db729e7c095cef2a8002f3f466edb567ca8557b8",
+          "modifications": "None; original tileable 256 x 256 source map.",
+          "downloaded": true,
+          "bytes": 127852,
+          "sha256": "299b1ccf8957d451d7841672b1750b5cfcea65fee1c97eec6b086dc3fdeea838",
+          "download_date_utc": "2026-10-14",
+          "upstream_blob_verified": true
+        },
+        {
+          "path": "microsoft_sheen_cloth/technicalFabricSmall_orm_256.png",
+          "download_url": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/SheenCloth/glTF/technicalFabricSmall_orm_256.png",
+          "upstream_git_blob_sha": "ad7169856218663c1188723dac77ebffb9a13a82",
+          "modifications": "None; original tileable 256 x 256 source map.",
+          "downloaded": true,
+          "bytes": 131303,
+          "sha256": "41c04abdb9531d00a4ac832d41f02cd549c7be74886c4d492475cfb95d239a20",
+          "download_date_utc": "2026-10-14",
+          "upstream_blob_verified": true
+        },
+        {
+          "path": "microsoft_sheen_cloth/technicalFabricSmall_basecolor_256.png",
+          "download_url": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/SheenCloth/glTF/technicalFabricSmall_basecolor_256.png",
+          "upstream_git_blob_sha": "cb097f10e0176af0141c13b868b1172fe083b3c5",
+          "modifications": "None; original tileable 256 x 256 source map.",
+          "downloaded": true,
+          "bytes": 125026,
+          "sha256": "e945c0b2aa6e3987d8bb8af23aca58a3f75cce2992bb4803bec8cac6cde8474e",
+          "download_date_utc": "2026-10-14",
+          "upstream_blob_verified": true
+        }
+      ],
+      "intended_use": "Restrained woven cloth microdetail, retaining original garden colors and embroidery. No sample mesh or baked mesh AO is included."
+    },
+    {
+      "id": "makehuman_hm08_anatomy",
+      "title": "MakeHuman hm08 base mesh anatomy source",
+      "author": [
+        "Data Collection AB",
+        "Joel Palmius",
+        "Jonas Hauquier"
+      ],
+      "year": 2020,
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/legalcode",
+      "primary_source": "https://github.com/makehumancommunity/makehuman/blob/master/makehuman/data/3dobjs/base.obj",
+      "license_evidence": [
+        "makehuman_head/evidence/LICENSE.upstream.md",
+        "makehuman_head/evidence/LICENSE.ASSETS.upstream.md",
+        "makehuman_head/source/base.obj (original header)"
+      ],
+      "files": [
+        {
+          "path": "makehuman_head/source/base.obj",
+          "download_url": "https://raw.githubusercontent.com/makehumancommunity/makehuman/master/makehuman/data/3dobjs/base.obj",
+          "upstream_git_blob_sha": "d26635e9326e3cca30778fd7b9c00062b03cce09",
+          "modifications": "None to preserved source. Character generator adapts selected head/neck geometry to existing rig and storybook proportions; see generator and avatar documentation for derivative.",
+          "downloaded": true,
+          "bytes": 1749303,
+          "sha256": "8e761e6624b8f54536409135d1636da63b32486a90d4897f84e121d144f6fb4c",
+          "download_date_utc": "2026-10-14",
+          "upstream_blob_verified": true
+        }
+      ],
+      "intended_use": "Connected head/neck anatomy foundation for storybook gardener. No MakeHuman application code is included."
+    }
+  ],
+  "legal_text_snapshots": {
+    "licenses/CC0-1.0.txt": "https://raw.githubusercontent.com/spdx/license-list-data/main/text/CC0-1.0.txt",
+    "licenses/CC-BY-4.0.txt": "https://raw.githubusercontent.com/spdx/license-list-data/main/text/CC-BY-4.0.txt"
+  }
+}

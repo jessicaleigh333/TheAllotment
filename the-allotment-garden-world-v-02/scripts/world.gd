@@ -5,21 +5,27 @@ extends Node3D
 const PLOT_SPACING := 22.0
 const PLOT_SIZE := 18.0
 const COLOURS := [Color("df909d"), Color("f0c86b"), Color("a995d4"), Color("f3e5ce"), Color("c879ad"), Color("e7aa7f")]
+@export var default_pitch := 0.72
+@export var default_distance := 57.0
+@export var maximum_distance := 115.0
 var camera: Camera3D
 var focus := Vector3(0.0, 0.0, 0.0)
 var orbit := 0.75
 var distance := 57.0
 var pitch := 0.72
 var dragging := false
-var hud: Label
+var ui_panel_open := false
 
 func _ready() -> void:
+	distance = default_distance
+	pitch = default_pitch
 	_build_lighting()
 	_build_neighborhood()
 	_build_camera()
 	_build_hud()
 
 func _process(delta: float) -> void:
+	if ui_panel_open or get_viewport().gui_get_focus_owner() is LineEdit: return
 	var movement := Vector3.ZERO
 	if Input.is_key_pressed(KEY_W) or Input.is_key_pressed(KEY_UP): movement.z -= 1.0
 	if Input.is_key_pressed(KEY_S) or Input.is_key_pressed(KEY_DOWN): movement.z += 1.0
@@ -33,21 +39,22 @@ func _process(delta: float) -> void:
 	_update_camera()
 
 func _unhandled_input(event: InputEvent) -> void:
+	if ui_panel_open: return
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_RIGHT:
 			dragging = event.pressed
 		elif event.pressed and event.button_index == MOUSE_BUTTON_WHEEL_UP:
-			distance = maxf(12.0, distance - 3.0)
+			distance = maxf(12.0, distance - maxf(3.0, distance * 0.06))
 		elif event.pressed and event.button_index == MOUSE_BUTTON_WHEEL_DOWN:
-			distance = minf(115.0, distance + 3.0)
+			distance = minf(maximum_distance, distance + maxf(3.0, distance * 0.06))
 	elif event is InputEventMouseMotion and dragging:
 		orbit -= event.relative.x * 0.008
 		pitch = clampf(pitch + event.relative.y * 0.006, 0.3, 1.35)
 	elif event is InputEventKey and event.pressed and event.keycode == KEY_R:
 		focus = Vector3.ZERO
 		orbit = 0.75
-		pitch = 0.72
-		distance = 57.0
+		pitch = default_pitch
+		distance = default_distance
 
 func _build_lighting() -> void:
 	var environment := WorldEnvironment.new()
@@ -80,17 +87,13 @@ func _update_camera() -> void:
 	camera.look_at(focus, Vector3.UP)
 
 func _build_hud() -> void:
-	var layer := CanvasLayer.new()
-	add_child(layer)
-	var panel := PanelContainer.new()
-	panel.position = Vector2(14, 14)
-	panel.custom_minimum_size = Vector2(325, 0)
-	layer.add_child(panel)
-	hud = Label.new()
-	hud.text = "THE ALLOTMENT | Garden neighborhood v0.2\nWASD: pan   Q/E: rotate   Right-drag: orbit\nMouse wheel: zoom   R: reset"
-	hud.add_theme_color_override("font_color", Color("24372a"))
-	hud.add_theme_font_size_override("font_size", 13)
-	panel.add_child(hud)
+	var game_hud := preload("res://ui/game_hud.tscn").instantiate()
+	add_child(game_hud)
+	game_hud.panel_visibility_changed.connect(func(is_open: bool) -> void:
+		ui_panel_open = is_open
+		dragging = false
+	)
+
 
 func _material(color: Color, roughness: float = 1.0, transparent: bool = false) -> StandardMaterial3D:
 	var mat := StandardMaterial3D.new()
@@ -181,7 +184,7 @@ func _build_plot(origin: Vector3, gx: int, gz: int) -> void:
 	plot.position = origin
 	add_child(plot)
 	var style := (gx + 1) * 3 + gz + 1
-	var ground := [Color("799767"), Color("829c70"), Color("769365"), Color("869b72")][style % 4]
+	var ground: Color = [Color("799767"), Color("829c70"), Color("769365"), Color("869b72")][style % 4]
 	_box(Vector3(0, 0.01, 0), Vector3(PLOT_SIZE, 0.13, PLOT_SIZE), ground, plot)
 	# Low timber edging with the front left open for a gate.
 	for side in [-1.0, 1.0]:
