@@ -47,7 +47,7 @@ func install_leaf_collision() -> int:
 		body.collision_mask = 2
 		var shape := CollisionShape3D.new()
 		var box := BoxShape3D.new()
-		var timber: bool = get_parent().get_meta("garden_asset","") == "timber_gate"
+		var timber: bool = get_parent().get_meta("gate_timber",false)
 		box.size = Vector3(1,1.12 if timber else 1.60,.10)
 		shape.shape = box
 		shape.position = Vector3(.5 if hinge == left else -.5,.64 if timber else .94,0)

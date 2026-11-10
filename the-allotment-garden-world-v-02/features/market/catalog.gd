@@ -1,7 +1,7 @@
 extends RefCounted
 const Growth := preload("res://features/market/plant_growth.gd")
 const ATLAS := preload("res://features/market/item_atlas.png")
-const ITEMS := [
+const BASE_ITEMS := [
 	{"id":"garden_gate","name":"Wrought-iron garden gates","category":"Decor","price":0,"icon":8,"radius":1.9,"featured":true,"description":"Paired scrolling iron gates on limestone piers. Opens automatically as the gardener approaches. 3 m wide, 2 m tall."},
 	{"id":"timber_gate","name":"Timber garden gates","category":"Decor","price":0,"icon":8,"radius":1.7,"description":"An arched pair of timber gates with metal hinges. Opens as the gardener approaches. 2.4 m wide, 1.3 m tall."},
 	{"id":"rock_wall","name":"Rock wall · straight","category":"Decor","price":0,"icon":10,"radius":1.05,"description":"A 2 m limestone and fieldstone border with staggered stones and a coping cap. Place near another wall end to connect."},
@@ -25,6 +25,8 @@ const ITEMS := [
 	{"id":"watering_can","name":"Watering can","category":"Tools","price":20,"icon":15,"radius":.5,"description":"A decorative metal watering can. Plant watering gameplay is not connected yet."},
 	{"id":"basil","name":"Sweet basil","latin":"Ocimum basilicum","category":"Plants","price":0,"icon":7,"radius":.3,"season":"Summer","sun":"Full sun","water":"Moderate","description":"A leafy culinary herb with branching stems and paired green leaves."},
 ]
+
+const ITEMS := BASE_ITEMS+preload("res://assets/garden_art/french_collection.gd").CATALOG
 
 static func by_id(id: String) -> Dictionary:
 	if id.count("@") > 1: return {}
@@ -54,7 +56,7 @@ static func stage_id(id: String, stage: int) -> String:
 	return plant+{0:"@seed",2:"@seedling",3:"@young",4:""}.get(stage,"")
 
 static func icon(item: Dictionary) -> Texture2D:
-	if item.id in preload("res://assets/garden_art/garden_boundary.gd").IDS:
+	if item.id in preload("res://assets/garden_art/garden_boundary.gd").IDS or preload("res://assets/garden_art/french_collection.gd").SIZES.has(item.id):
 		return load("res://assets/garden_art/icons/"+str(item.id)+".svg")
 	var texture := AtlasTexture.new()
 	texture.atlas = ATLAS

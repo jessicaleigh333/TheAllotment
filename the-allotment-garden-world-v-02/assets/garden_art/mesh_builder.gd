@@ -27,7 +27,7 @@ static func material(role: int) -> Material:
 	var settings := ConfigFile.new()
 	settings.load("user://title_settings.cfg")
 	result.set_shader_parameter("motion",0.0 if settings.get_value("title","reduced_motion",false) else 1.0)
-	result.set_shader_parameter("roughness_value",.38 if role in [5,8] else .83)
+	result.set_shader_parameter("roughness_value",.28 if role == 12 else (.38 if role in [5,8] else .83))
 	result.set_shader_parameter("metallic_value",.72 if role == 5 else 0.0)
 	materials[role] = result
 	return result

@@ -1,8 +1,10 @@
 extends RefCounted
 ## Socket alignment and oriented footprint checks for modular borders.
-const IDS := ["garden_gate","timber_gate","rock_wall","rock_wall_corner","rock_wall_end"]
+const French := preload("res://assets/garden_art/french_collection.gd")
+const IDS := ["garden_gate","timber_gate","rock_wall","rock_wall_corner","rock_wall_end","chateau_gate","potager_gate","limestone_wall","fieldstone_wall","ivy_wall","stone_balustrade"]
 
 static func sockets(id: String) -> Array:
+	id = French.ALIASES.get(id,id)
 	match id:
 		"rock_wall": return [Vector2(-1,0),Vector2(1,0)]
 		"rock_wall_corner": return [Vector2(1,-.775),Vector2(-.775,1)]
@@ -27,6 +29,7 @@ static func snap(id: String, point: Vector2, angle: float, placed: Array, area: 
 	return result
 
 static func boxes(id: String) -> Array:
+	id = French.ALIASES.get(id,id)
 	match id:
 		"rock_wall": return [[Vector2.ZERO,Vector2(2,.45)]]
 		"rock_wall_corner": return [[Vector2(0,-.775),Vector2(2,.45)],[Vector2(-.775,0),Vector2(.45,2)]]
