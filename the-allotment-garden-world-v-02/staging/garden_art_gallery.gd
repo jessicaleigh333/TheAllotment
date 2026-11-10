@@ -2,7 +2,7 @@ extends Node3D
 const Art := preload("res://assets/garden_art/garden_library.gd")
 const Model := preload("res://features/market/item_model.tscn")
 const Growth := preload("res://features/market/plant_growth.gd")
-const COLLECTION := ["rose","sunflower","lavender","hydrangea","cosmos","daisy","basil","bench","rose_arch","fountain","lantern","trellis","planter","watering_can","straw_hat","tree","cypress","hedge","shrub","shed","greenhouse","stall","bed","central_planter","garden_gate","timber_gate","rock_wall","rock_wall_corner","rock_wall_end"]
+const COLLECTION := ["rose","sunflower","lavender","hydrangea","cosmos","daisy","basil","bench","rose_arch","fountain","lantern","trellis","planter","watering_can","straw_hat","tree","cypress","hedge","shrub","shed","greenhouse","stall","bed","central_planter","garden_gate","timber_gate","rock_wall","rock_wall_corner","rock_wall_end","chateau_gate","potager_gate","limestone_wall","fieldstone_wall","ivy_wall","stone_balustrade","anduze_jar","clay_bowl","glazed_olive_pot","stone_urn","stone_trough","carved_square_pot","stone_dove","botanical_medallion","garden_muse_bust","armillary_sphere","garden_sundial","vine_pergola","iron_pavilion","espalier_screen","wall_fountain","stone_alcove"]
 var specimen: Node3D
 var camera: Camera3D
 var heading: Label
@@ -60,8 +60,10 @@ func _ready() -> void:
 	layout.add_child(heading)
 	var choose := OptionButton.new()
 	asset_choice = choose
-	for id in COLLECTION: choose.add_item(id.replace("_"," ").capitalize())
-	choose.item_selected.connect(func(index: int) -> void: selected = COLLECTION[index]; show_asset(selected))
+	for id in COLLECTION:
+		choose.add_item(id.replace("_"," ").capitalize())
+		choose.set_item_metadata(choose.item_count-1,id)
+	choose.item_selected.connect(func(index: int) -> void: selected = choose.get_item_metadata(index); show_asset(selected))
 	layout.add_child(choose)
 	var stages := OptionButton.new()
 	stage_choice = stages
@@ -85,13 +87,15 @@ func _ready() -> void:
 
 func show_asset(id: String) -> void:
 	selected = id
-	if gate_control: gate_control.visible = id in ["garden_gate","timber_gate"]
-	if asset_choice: asset_choice.select(COLLECTION.find(id))
+	if gate_control: gate_control.visible = id in ["garden_gate","timber_gate"] or Art.French.GATES.has(id)
+	if asset_choice:
+		for index in range(asset_choice.item_count):
+			if asset_choice.get_item_metadata(index) == id: asset_choice.select(index)
 	if stage_choice: stage_choice.visible = Growth.PLANTS.has(id)
 	if is_instance_valid(specimen):
 		remove_child(specimen)
 		specimen.queue_free()
-	if Growth.PLANTS.has(id) or Art.SIZES.has(id) or Art.Boundary.SIZES.has(id):
+	if Growth.PLANTS.has(id) or Art.SIZES.has(id) or Art.Boundary.SIZES.has(id) or Art.French.SIZES.has(id):
 		specimen = Model.instantiate()
 		specimen.item_id = id
 		if Growth.PLANTS.has(id): specimen.growth_age_days = Growth.PLANTS[id].days[stage]

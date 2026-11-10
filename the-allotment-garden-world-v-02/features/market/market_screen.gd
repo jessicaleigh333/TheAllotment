@@ -249,7 +249,7 @@ func _refresh_grid() -> void:
 		if category == "Seeds" and (not item.has("plant") or int(item.growth_stage) != 0): continue
 		if category == "Plants" and not item.has("plant"): continue
 		if category not in ["All","Featured","Pinned","Seeds","Plants"] and item.category != category: continue
-		if not query.is_empty() and (str(item.name)+" "+str(item.get("latin",""))).to_lower().find(query.to_lower()) < 0: continue
+		if not query.is_empty() and (str(item.name)+" "+str(item.get("latin",""))+" "+str(item.get("family",""))+" "+str(item.get("inspiration",""))).to_lower().find(query.to_lower()) < 0: continue
 		matches += 1
 		var card := _button("",_select.bind(item.id))
 		card.custom_minimum_size = Vector2(160,191)
@@ -323,6 +323,11 @@ func _refresh_details() -> void:
 	description.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	description.custom_minimum_size.x = 260
 	details.add_child(description)
+	if item.has("inspiration"):
+		var inspiration := _text("Inspired by "+str(item.inspiration),12,Color("657058"))
+		inspiration.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+		inspiration.custom_minimum_size.x = 260
+		details.add_child(inspiration)
 	if item.has("season"):
 		details.add_child(_text("%s · %s\nWater: %s" % [item.season,item.sun,item.water],14,Color("5a664a")))
 	details.add_child(_text("In backpack: %d" % store.count(item.id),16,Color("334632")))

@@ -10,7 +10,7 @@ float hash(vec3 p) { return fract(sin(dot(p,vec3(127.1,311.7,74.7)))*43758.5453)
 void vertex() {
  object_position = VERTEX;
  vec3 world = (MODEL_MATRIX * vec4(VERTEX,1.0)).xyz;
- float bend = COLOR.a * wind_strength * motion;
+ float bend = COLOR.a * wind_strength * motion * ((kind == 1 || kind == 2) ? 1.0 : 0.0);
  VERTEX.x += bend * sin(TIME*.85+world.x*.37+world.z*.23);
  VERTEX.z += bend*.45 * sin(TIME*1.13+world.z*.31);
 }

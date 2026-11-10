@@ -1,4 +1,5 @@
 extends RefCounted
+const French := preload("res://assets/garden_art/french_collection.gd")
 const Boundary := preload("res://assets/garden_art/garden_boundary.gd")
 const Builder := preload("res://assets/garden_art/mesh_builder.gd")
 const GREEN := Color("547b45")
@@ -37,19 +38,24 @@ static func attach(root: Node3D, id: String, stage: int = 4, tint: Color = Color
 		node.visibility_range_end = [18,45,0][lod]
 		root.add_child(node)
 	root.set_meta("garden_asset",id)
-	if id in ["garden_gate","timber_gate"]:
+	if id in ["garden_gate","timber_gate"] or French.GATES.has(id):
+		var gate_type: String = French.GATES.get(id,id)
+		root.set_meta("gate_timber",gate_type == "timber_gate")
 		for side in [-1,1]:
 			var hinge := Node3D.new()
 			hinge.name = "LeftHinge" if side == -1 else "RightHinge"
-			hinge.position.x = side*(1.05 if id == "garden_gate" else 1.0)
+			hinge.position.x = side*(1.05 if gate_type == "garden_gate" else 1.0)
 			root.add_child(hinge)
-			attach(hinge,"iron_gate_leaf" if id == "garden_gate" else "timber_gate_leaf")
+			attach(hinge,{"chateau_gate":"chateau_gate_leaf","potager_gate":"potager_gate_leaf"}.get(id,"iron_gate_leaf" if gate_type == "garden_gate" else "timber_gate_leaf"))
 			if side == 1:
 				for mesh in hinge.get_children():
 					if mesh is MeshInstance3D: mesh.scale.x *= -1
 		var controller := preload("res://assets/garden_art/gate_controller.gd").new()
 		controller.name = "GateController"
 		root.add_child(controller)
+	if id in ["vine_pergola","iron_pavilion","espalier_screen","wall_fountain","stone_alcove"]:
+		var dimensions: Vector3 = French.SIZES[id]
+		root.set_meta("asset_footprint",Vector2(dimensions.x,dimensions.z))
 	if id in ["shed","greenhouse","stall","bed"]:
 		root.set_meta("asset_footprint",{"shed":Vector2(3.8,4.5),"greenhouse":Vector2(3.8,4.5),"stall":Vector2(3.4,2.1),"bed":Vector2(3.2,3.5)}[id])
 
@@ -189,6 +195,9 @@ static func _plant(b: RefCounted, id: String, stage: int, tint: Color) -> void:
 				_leaves(b,p,height,.17,8,2)
 
 static func _object(b: RefCounted, id: String, tint: Color) -> void:
+	if French.SIZES.has(id) or id in ["chateau_gate_leaf","potager_gate_leaf"]:
+		French.build(b,id)
+		return
 	if id in Boundary.IDS or id in ["iron_gate_leaf","timber_gate_leaf"]:
 		Boundary.build(b,id)
 		return
@@ -466,9 +475,10 @@ static func _bed(b: RefCounted) -> void:
 	b.box(Vector3(0,.31,0),Vector3(2.96,.10,3.24),.03,4,Color("584635"))
 
 static func add_collision(root: Node3D) -> int:
-	if root.has_node("PlayerCollision"): return 0
-	var id: String = root.get_meta("garden_asset","")
-	var recipes: Array = []
+	if root.has_node("PlayerCollision") or root.has_node("Geometry/PlayerCollision"): return 0
+	var source_id: String = root.get_meta("garden_asset","")
+	var id: String = French.ALIASES.get(source_id,source_id)
+	var recipes: Array = French.collision(id) if French.SIZES.has(id) else []
 	if id in ["garden_gate","timber_gate"]:
 		var controller := root.get_node_or_null("GateController")
 		if controller: controller.install_leaf_collision()
@@ -502,12 +512,19 @@ static func add_collision(root: Node3D) -> int:
 			if id == "shed": recipes.append([Vector3(0,1.2,2.1),Vector3(3.4,2.4,.15),"box"])
 			else:
 				for x in [-1.1,1.1]: recipes.append([Vector3(x,1.2,2.1),Vector3(1.2,2.4,.15),"box"])
+	if source_id in ["limestone_wall","fieldstone_wall","ivy_wall","stone_balustrade"]:
+		var dimensions: Vector3 = French.SIZES[source_id]
+		if source_id == "ivy_wall": dimensions.y = 1.15
+		recipes = [[Vector3(0,dimensions.y*.5,0),dimensions,"box"]]
 	if recipes.is_empty(): return 0
 	var body := StaticBody3D.new()
 	body.name = "PlayerCollision"
 	body.collision_layer = 1
 	body.collision_mask = 2
-	root.add_child(body)
+	var collision_parent: Node = root
+	if source_id in ["vine_pergola","iron_pavilion","espalier_screen","wall_fountain","stone_alcove"] and root.has_node("Geometry"):
+		collision_parent = root.get_node("Geometry")
+	collision_parent.add_child(body)
 	for recipe in recipes:
 		var collision := CollisionShape3D.new()
 		if recipe[2] == "box":
