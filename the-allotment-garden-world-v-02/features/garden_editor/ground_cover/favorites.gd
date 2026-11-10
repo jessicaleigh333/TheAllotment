@@ -5,9 +5,9 @@ var combinations: Array[Dictionary] = []
 var catalog
 var storage_path := PATH
 
-func _init(material_catalog, path: String = PATH) -> void:
+func _init(material_catalog, path: String = "") -> void:
 	catalog = material_catalog
-	storage_path = path
+	storage_path = preload("res://features/profiles/local_profiles.gd").save_root()+"ground_cover/favorites.json" if path.is_empty() else path
 	if FileAccess.file_exists(storage_path):
 		var data = JSON.parse_string(FileAccess.get_file_as_string(storage_path))
 		if data is Dictionary and data.get("schema_version", 0) == 1 and data.get("colors", []) is Array and data.get("combinations", []) is Array:

@@ -1,13 +1,15 @@
-# Garden title screen
+# Seasonal garden title screen
 
-The project now starts at `title_screen.tscn`. The user-supplied garden screenshot was cleaned with image generation to remove the surrounding iPad interface; the resulting illustration retains the composition and painted button labels but is a regenerated derivative, not a pixel-exact crop.
+F5 starts `title_screen.tscn`. Four seasonal illustrations preserve the supplied title composition, woman, dog, title and button positions. Spring uses the cleaned original; summer, autumn and winter are image-generated edits of it. The images are regenerated derivatives of the supplied iPad screenshot rather than pixel-exact crops. They remain ready for visual review.
 
-Localized shader motion gently sways the canopy/foreground flowers and breathes the dog chest. Warm lantern illumination flickers. A small extra butterfly flutters across the open sky. These are restrained 2D effects; the dog is not a rigged character animation. The original illustration remains unmodified at runtime.
+The title defaults to the computer's local clock and meteorological season: spring March–May, summer June–August, autumn September–November, winter December–February. Southern Hemisphere shifts this by six months. Day runs 08:00–18:00; twilight blends 06:00–08:00 and 18:00–20:00; full night is 20:00–06:00. This is a fixed artistic schedule, not calculated local sunrise/sunset. It refreshes every 30 seconds while open. The gear offers automatic/individual season, automatic/day/night and hemisphere settings, saved locally with volume, mute and reduced motion.
 
-Login and Create Account have keyboard-focusable hit areas aligned to the painted plaques. Both continue the existing preview terms/neighborhood flow: authentication services remain unimplemented. Back to title dismisses that flow. The gear opens sound volume, mute, and reduced motion, saved locally. Reduced motion stops the shader movement and hides the extra butterfly. The illustration fits without cropping or stretching; wider displays have dark green side margins.
+Every seasonal image supports a cool moonlit night treatment with readable title/plaques and a warm lantern pool. Local shader motion sways foliage, breathes the dog's chest and flickers the lantern. An extra animated butterfly appears in daylight except winter. Reduced motion stops these animations and hides the extra butterfly. The dog is a restrained 2D effect rather than a rigged animation. Wider displays retain dark green side margins without cropping the art.
 
-Breeze, insects and soft chimes are original procedural audio synthesized in `garden_ambience.gd`. Breeze/insects loop quietly. Chimes first occur after 14–24 seconds, then 22–46 seconds apart. Mute and volume zero silence the title ambience. Audio nodes are freed when the title scene exits. No paid assets or remote audio services are needed.
+Original procedural breeze and soft insects loop quietly, with chimes initially after 14–24 seconds and then 22–46 seconds apart. Winter silences insects; autumn reduces them. No paid recordings or online audio services are used.
 
-Preview: F5, or F6 on this scene. Test the gear, both account plaques, Back to title, and continue into the garden. Visual and audio approval is pending, especially on the owner's Godot 4.7.2 device.
+The painted Login plaque opens the local saved-profile chooser. Create Account creates a local profile; neither requests passwords or contacts account services. Enter garden goes directly to the playable garden. Return to title in the exploration controls allows switching profiles. The existing onboarding-preview scene is retained separately but no longer required to enter the game.
 
-Validation: Godot 4.6.3 import, title interaction/ambience assertions and a real OpenGL Compatibility screenshot using software rendering. `tests/verify_title.gd` exercises controls, sound settings, reduced motion and welcome flow. Preview screenshot is captured separately rather than shipped as a runtime asset.
+Validation in Godot 4.6.3: all eight seasonal/day-night combinations rendered under OpenGL Compatibility; seasonal/month/hemisphere/clock assertions, title controls and local-profile entry passed. The project targets Godot 4.7; owner visual/audio approval in 4.7.2 remains pending.
+
+Tests: `tests/verify_title.gd`, `tests/verify_local_profiles.gd`, `tests/verify_profile_entry.gd`. Run profile tests with a fresh isolated XDG_DATA_HOME to avoid using real profiles. See `features/profiles/README.md` for save behavior.

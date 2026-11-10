@@ -7,6 +7,12 @@ var rng := RandomNumberGenerator.new()
 var chime_delay := 15.0
 var volume := 0.55
 var muted := false
+var insect_season_gain := 0.0
+
+func set_season(season: int, night: float) -> void:
+	insect_season_gain = -80.0 if season == 3 else (-9.0 if season == 2 else 0.0)
+	insect_season_gain += lerpf(-3.0,0.0,night)
+	apply_volume()
 
 func _ready() -> void:
 	rng.randomize()
@@ -31,7 +37,7 @@ func apply_volume() -> void:
 	if breeze == null: return
 	var gain := linear_to_db(maxf(volume,0.0001)) if not muted else -80.0
 	breeze.volume_db = gain - 7.0
-	insects.volume_db = gain - 15.0
+	insects.volume_db = gain - 15.0 + insect_season_gain
 	chimes.volume_db = gain - 12.0
 
 func _exit_tree() -> void:

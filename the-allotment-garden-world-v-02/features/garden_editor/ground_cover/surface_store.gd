@@ -345,7 +345,7 @@ func restore_snapshot(data: Variant) -> bool:
 	return true
 
 func default_save_path() -> String:
-	return "user://ground_cover/" + context_id.validate_filename() + ".json"
+	return preload("res://features/profiles/local_profiles.gd").save_root()+"ground_cover/" + context_id.validate_filename() + ".json"
 
 func save_to(path: String = "") -> bool:
 	if not _authorize() or transaction: return false
