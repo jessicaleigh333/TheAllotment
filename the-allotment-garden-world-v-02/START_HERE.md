@@ -23,3 +23,5 @@ The Market and neighborhood now share the detailed plant, furniture and building
 Garden gates and rock walls: Shop → Decor has five free boundary pieces. Walls snap at their ends; R rotates. Walk toward either gate to open it automatically. The 3D review gallery also has an Open / close gates button.
 
 French garden collection: 22 new free pieces are under Shop → Decor. Search `pots`, `sculptures`, `structures` or `Villandry`, or open `staging/french_garden_showcase.tscn` and press F6 to browse them up close.
+
+Roman columns / vertical building: search `Roman` in Shop → Decor. Place a plinth, then point at its top to stack compatible column parts. Stack mode starts on for Roman pieces; T toggles it. R rotates; View ↑ / ↓ adjusts the camera. Upper pieces must be removed before their supports. Open `staging/roman_building_showcase.tscn` with F6 for a full stacked example.

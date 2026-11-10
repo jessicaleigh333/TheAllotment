@@ -2,7 +2,7 @@ extends Node3D
 const Art := preload("res://assets/garden_art/garden_library.gd")
 const Model := preload("res://features/market/item_model.tscn")
 const Growth := preload("res://features/market/plant_growth.gd")
-const COLLECTION := ["rose","sunflower","lavender","hydrangea","cosmos","daisy","basil","bench","rose_arch","fountain","lantern","trellis","planter","watering_can","straw_hat","tree","cypress","hedge","shrub","shed","greenhouse","stall","bed","central_planter","garden_gate","timber_gate","rock_wall","rock_wall_corner","rock_wall_end","chateau_gate","potager_gate","limestone_wall","fieldstone_wall","ivy_wall","stone_balustrade","anduze_jar","clay_bowl","glazed_olive_pot","stone_urn","stone_trough","carved_square_pot","stone_dove","botanical_medallion","garden_muse_bust","armillary_sphere","garden_sundial","vine_pergola","iron_pavilion","espalier_screen","wall_fountain","stone_alcove"]
+const COLLECTION := ["rose","sunflower","lavender","hydrangea","cosmos","daisy","basil","bench","rose_arch","fountain","lantern","trellis","planter","watering_can","straw_hat","tree","cypress","hedge","shrub","shed","greenhouse","stall","bed","central_planter","garden_gate","timber_gate","rock_wall","rock_wall_corner","rock_wall_end","chateau_gate","potager_gate","limestone_wall","fieldstone_wall","ivy_wall","stone_balustrade","anduze_jar","clay_bowl","glazed_olive_pot","stone_urn","stone_trough","carved_square_pot","stone_dove","botanical_medallion","garden_muse_bust","armillary_sphere","garden_sundial","vine_pergola","iron_pavilion","espalier_screen","wall_fountain","stone_alcove","roman_plinth","attic_column_base","plain_column_drum","fluted_column_drum","short_column_drum","doric_capital","ionic_capital","corinthian_capital","doric_column","ionic_column","corinthian_column","roman_architrave","stone_cornice","roman_pedestal"]
 var specimen: Node3D
 var camera: Camera3D
 var heading: Label
@@ -95,7 +95,7 @@ func show_asset(id: String) -> void:
 	if is_instance_valid(specimen):
 		remove_child(specimen)
 		specimen.queue_free()
-	if Growth.PLANTS.has(id) or Art.SIZES.has(id) or Art.Boundary.SIZES.has(id) or Art.French.SIZES.has(id):
+	if Growth.PLANTS.has(id) or Art.SIZES.has(id) or Art.Boundary.SIZES.has(id) or Art.French.SIZES.has(id) or Art.Roman.SIZES.has(id):
 		specimen = Model.instantiate()
 		specimen.item_id = id
 		if Growth.PLANTS.has(id): specimen.growth_age_days = Growth.PLANTS[id].days[stage]

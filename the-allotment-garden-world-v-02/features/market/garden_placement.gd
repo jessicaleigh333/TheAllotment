@@ -1,4 +1,6 @@
 extends Node
+const Stack := preload("res://features/market/stack_rules.gd")
+const Picker := preload("res://features/market/stack_picker.gd")
 const Boundary := preload("res://features/market/boundary_placement.gd")
 const Growth := preload("res://features/market/plant_growth.gd")
 const Store := preload("res://features/market/market_store.gd")
@@ -26,6 +28,10 @@ var ghost_materials: Array[StandardMaterial3D] = []
 var ghost_valid := false
 var ghost_shaders: Array[ShaderMaterial] = []
 var growth_timer := 0.0
+var stack_mode := false
+var stack_button: Button
+var candidate_elevation := 0.0
+var candidate_supports: Array = []
 
 func configure(target_world: Node3D) -> void:
 	world = target_world
@@ -62,7 +68,7 @@ func reload_items() -> void:
 		if not Growth.species(placement.id).is_empty():
 			model.growth_age_days = Growth.age_days(placement,Time.get_unix_time_from_system())
 			model.set_meta("growth_record",placement)
-		model.position = Vector3(point.x,terrains[scope].sample_height(point),point.y)
+		model.position = Vector3(point.x,terrains[scope].sample_height(point)+Stack.elevation(placement),point.y)
 		model.rotation.y = placement.angle
 		roots[scope].add_child(model)
 		preload("res://features/avatar/world_collisions.gd").install(model)
@@ -77,8 +83,13 @@ func begin(id: String, scope: String = "courtyard") -> bool:
 	if not areas.has(scope): return false
 	_select_area(scope)
 	reload_items()
+	if not store.ensure_placement_ids(func(record: Dictionary) -> float:
+		return terrains[record.get("area","garden")].sample_height(Vector2(record.x,record.z))): return false
 	if not store.readable or not Catalog.placeable(Catalog.by_id(id)): return false
 	item_id = id
+	stack_mode = Stack.Roman.SIZES.has(id)
+	candidate_elevation = 0
+	candidate_supports = []
 	angle = 0
 	old_camera = {"focus":world.focus,"distance":world.distance,"pitch":world.pitch,"orbit":world.orbit,"walking":world.walking_mode}
 	world.set_walking_mode(false)
@@ -87,6 +98,12 @@ func begin(id: String, scope: String = "courtyard") -> bool:
 	world.distance = 68 if area == "courtyard" else 33
 	world.pitch = .95
 	world.orbit = .2
+	if Stack.Roman.SIZES.has(id):
+		world.distance = 20
+		world.focus = garden.to_global(Vector3(5,.4,9) if area == "courtyard" else Vector3(0,.4,46))
+		for record in store.data.placed:
+			if record.get("area","garden") == area and not Stack.top(record.id).is_empty():
+				world.focus = garden.to_global(Vector3(record.x,Stack.top_y(record),record.z))
 	world._update_camera()
 	world.get_node("GameHUD").hide()
 	ghost = _model(id)
@@ -127,10 +144,16 @@ func _build_overlay() -> void:
 	var row := HBoxContainer.new()
 	row.alignment = BoxContainer.ALIGNMENT_CENTER
 	column.add_child(row)
-	for action in [["Rotate · R",func() -> void: angle += PI/4],["Done · Esc",finish]]:
+	if Stack.can_stack(item_id):
+		stack_button = Button.new()
+		stack_button.custom_minimum_size = Vector2(150,44)
+		stack_button.text = "Stack: on · T" if stack_mode else "Stack: off · T"
+		stack_button.pressed.connect(_toggle_stack)
+		row.add_child(stack_button)
+	for action in [["Rotate · R",func() -> void: angle += PI/4],["View ↑",func() -> void: _raise_view(.75)],["View ↓",func() -> void: _raise_view(-.75)],["Done · Esc",finish]]:
 		var button := Button.new()
 		button.text = action[0]
-		button.custom_minimum_size = Vector2(160,44)
+		button.custom_minimum_size = Vector2(100,44)
 		button.pressed.connect(action[1])
 		row.add_child(button)
 
@@ -148,30 +171,54 @@ func _terrain_allowed(item: Dictionary, point: Vector2, scope: String = "") -> b
 		if absf(surface.sample_height(edge)-height) > .06: return false
 	return true
 
-func allowed(id: String, point: Vector2) -> bool:
+func allowed(id: String, point: Vector2, elevation: float = 0.0, supports: Array = []) -> bool:
 	var item := Catalog.by_id(id)
-	if not _terrain_allowed(item,point): return false
+	if not _terrain_allowed(item,point) or not is_finite(elevation) or elevation < 0 or elevation+Stack.size(id).y > Stack.MAX_HEIGHT: return false
+	var bottom: float = terrain.sample_height(point)+elevation
+	if elevation > 0:
+		var required := Stack.supports_for(id,point,angle,bottom,store.data.placed,area)
+		var provided: Array = supports.duplicate()
+		required.sort()
+		provided.sort()
+		if required.is_empty() or provided != required: return false
+	elif not supports.is_empty(): return false
 	for placement in store.data.placed:
 		if placement.get("area","garden") != area: continue
 		var other := Catalog.by_id(placement.id)
-		if id in Boundary.IDS and placement.id in Boundary.IDS:
+		var other_bottom: float = terrain.sample_height(Vector2(placement.x,placement.z))+Stack.elevation(placement)
+		if bottom >= other_bottom+Stack.size(placement.id).y-Stack.EPS or other_bottom >= bottom+Stack.size(id).y-Stack.EPS: continue
+		if elevation > 0 or Stack.elevation(placement) > 0:
+			if Stack.volume_overlap(id,point,angle,placement.id,Vector2(placement.x,placement.z),placement.angle): return false
+		elif id in Boundary.IDS and placement.id in Boundary.IDS:
 			if Boundary.overlap(id,point,angle,placement.id,Vector2(placement.x,placement.z),placement.angle): return false
 		elif point.distance_to(Vector2(placement.x,placement.z)) < float(item.radius)+float(other.radius)+.15: return false
 	return true
 
-func place_at(point: Vector2) -> bool:
-	if not active or not allowed(item_id,point): return false
-	if not store.place(item_id,point,angle,area): return false
+func place_at(point: Vector2, elevation: float = 0.0, supports: Array = []) -> bool:
+	if not active or not allowed(item_id,point,elevation,supports): return false
+	var ground: float = terrain.sample_height(point)
+	if not store.place(item_id,point,angle,area,elevation,supports,ground): return false
 	var model := _model(item_id)
 	if not Growth.species(item_id).is_empty():
 		var record: Dictionary = store.data.placed[-1]
 		model.growth_age_days = Growth.age_days(record,Time.get_unix_time_from_system())
 		model.set_meta("growth_record",record)
-	model.position = Vector3(point.x,terrain.sample_height(point),point.y)
+	model.position = Vector3(point.x,ground+elevation,point.y)
 	model.rotation.y = angle
 	placed_root.add_child(model)
 	preload("res://features/avatar/world_collisions.gd").install(model)
+	if stack_mode:
+		world.focus.y = garden.to_global(Vector3(point.x,ground+elevation+Stack.size(item_id).y,point.y)).y
+		world._update_camera()
 	return true
+
+func _toggle_stack() -> void:
+	stack_mode = not stack_mode
+	if is_instance_valid(stack_button): stack_button.text = "Stack: on · T" if stack_mode else "Stack: off · T"
+
+func _raise_view(amount: float) -> void:
+	world.focus.y = clampf(world.focus.y+amount,0,Stack.MAX_HEIGHT)
+	world._update_camera()
 
 func _tint_ghost(valid: bool) -> void:
 	ghost_valid = valid
@@ -189,25 +236,34 @@ func _process(delta: float) -> void:
 	var move := Vector3(float(Input.is_key_pressed(KEY_D))-float(Input.is_key_pressed(KEY_A)),0,float(Input.is_key_pressed(KEY_S))-float(Input.is_key_pressed(KEY_W)))
 	world.focus += move.limit_length(1.0).rotated(Vector3.UP,world.orbit)*delta*world.distance*.5
 	world._update_camera()
-	candidate = terrain.pick(world.camera,get_viewport().get_mouse_position())
-	if candidate != null and item_id in Boundary.IDS: candidate = Boundary.snap(item_id,candidate,angle,store.data.placed,area)
+	candidate_elevation = 0
+	candidate_supports = []
+	var picked := Picker.pick(world.camera,get_viewport().get_mouse_position(),garden,item_id,angle,store.data.placed,area,terrain.sample_height) if stack_mode else {}
+	if not picked.is_empty():
+		candidate = picked.point
+		candidate_elevation = picked.elevation
+		candidate_supports = picked.supports
+		angle = picked.angle
+	else: candidate = terrain.pick(world.camera,get_viewport().get_mouse_position())
+	if candidate != null and candidate_elevation == 0 and item_id in Boundary.IDS: candidate = Boundary.snap(item_id,candidate,angle,store.data.placed,area)
 	ghost.visible = candidate != null
-	var valid := candidate != null and allowed(item_id,candidate)
+	var valid := candidate != null and allowed(item_id,candidate,candidate_elevation,candidate_supports)
 	if valid != ghost_valid: _tint_ghost(valid)
 	if candidate != null:
-		ghost.position = Vector3(candidate.x,terrain.sample_height(candidate),candidate.y)
+		ghost.position = Vector3(candidate.x,terrain.sample_height(candidate)+candidate_elevation,candidate.y)
 		ghost.rotation.y = angle
 	var destination := "the inner circle" if area == "courtyard" else "Garden 01"
-	hint.text = "%s · Free decorating · %s\nWASD: pan · Wheel: zoom" % [Catalog.by_id(item_id).name,"Click to place in "+destination if valid else "Choose open space; keep walking routes clear"]
+	hint.text = "%s · %s · %.2f m above ground\n%s · WASD: pan · Wheel: zoom" % [Catalog.by_id(item_id).name,"Stack" if stack_mode else "Ground",candidate_elevation,"Click to place in "+destination if valid else "Choose a supported top or open ground; keep routes clear"]
 
 func _unhandled_input(event: InputEvent) -> void:
 	if not active: return
 	if event is InputEventKey and event.pressed:
 		if event.keycode == KEY_ESCAPE: finish()
 		elif event.keycode == KEY_R: angle += PI/4
+		elif event.keycode == KEY_T and Stack.can_stack(item_id): _toggle_stack()
 		get_viewport().set_input_as_handled()
 	elif event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
-		if candidate != null: place_at(candidate)
+		if candidate != null: place_at(candidate,candidate_elevation,candidate_supports)
 		get_viewport().set_input_as_handled()
 	elif event is InputEventMouseButton and event.pressed and event.button_index in [MOUSE_BUTTON_WHEEL_UP,MOUSE_BUTTON_WHEEL_DOWN]:
 		world.distance = clampf(world.distance+(-3 if event.button_index == MOUSE_BUTTON_WHEEL_UP else 3),8,130)
