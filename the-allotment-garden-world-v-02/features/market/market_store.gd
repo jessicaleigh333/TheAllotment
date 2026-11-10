@@ -34,6 +34,7 @@ func _valid(value: Variant) -> bool:
 		seen[id] = true
 	for placement in value.placed:
 		if not placement is Dictionary or not Catalog.placeable(Catalog.by_id(str(placement.get("id","")))): return false
+		if placement.get("area","garden") not in ["garden","courtyard"]: return false
 		for key in ["x","z","angle"]:
 			var n = placement.get(key)
 			if not (n is int or n is float) or not is_finite(float(n)) or absf(float(n)) > 1000: return false
@@ -55,9 +56,7 @@ func buy(id: String) -> bool:
 	var item := Catalog.by_id(id)
 	if item.is_empty() or not item.get("available",true): return _fail("This item is not available yet.")
 	if count(id) >= 999: return _fail("Your backpack has enough of this item.")
-	if int(data.runes) < int(item.price): return _fail("Not enough Runes for this item.")
 	var next := data.duplicate(true)
-	next.runes -= int(item.price)
 	next.owned[id] = count(id)+1
 	return _commit(next)
 
@@ -69,12 +68,12 @@ func favorite(id: String) -> bool:
 	else: return _fail("Your six common-item slots are full. Unpin one first.")
 	return _commit(next)
 
-func place(id: String, point: Vector2, angle: float) -> bool:
-	if not Catalog.placeable(Catalog.by_id(id)) or count(id) <= 0: return _fail("Choose an owned plant or decoration.")
+func place(id: String, point: Vector2, angle: float, area: String = "garden") -> bool:
+	if not Catalog.placeable(Catalog.by_id(id)): return _fail("Choose a plant or decoration.")
 	if data.placed.size() >= 500: return _fail("This local garden has reached its item limit.")
 	var next := data.duplicate(true)
-	next.owned[id] = count(id)-1
-	next.placed.append({"id":id,"x":point.x,"z":point.y,"angle":angle})
+	next.owned[id] = maxi(0,count(id)-1)
+	next.placed.append({"id":id,"x":point.x,"z":point.y,"angle":angle,"area":area})
 	return _commit(next)
 
 func retrieve(index: int) -> bool:

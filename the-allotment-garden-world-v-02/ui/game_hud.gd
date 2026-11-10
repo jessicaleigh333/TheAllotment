@@ -161,9 +161,9 @@ func _open_market(id: String) -> void:
 	market_screen.world = get_parent()
 	add_child(market_screen)
 	market_screen.close_requested.connect(_close)
-	market_screen.placement_requested.connect(func(item_id: String) -> void:
+	market_screen.placement_requested.connect(func(item_id: String, area: String) -> void:
 		_close()
-		get_parent().market_garden.begin(item_id)
+		get_parent().market_garden.begin(item_id,area)
 	)
 	panel_visibility_changed.emit(true)
 	destination_opened.emit(id)
