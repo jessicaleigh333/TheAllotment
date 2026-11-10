@@ -1,6 +1,7 @@
 extends Control
 signal close_requested
 signal placement_requested(id: String, area: String)
+const Growth := preload("res://features/market/plant_growth.gd")
 const Catalog := preload("res://features/market/catalog.gd")
 const Store := preload("res://features/market/market_store.gd")
 const Model := preload("res://features/market/item_model.tscn")
@@ -23,6 +24,8 @@ var viewport: SubViewport
 var preview_model: Node3D
 var preview_camera: Camera3D
 var card_buttons: Dictionary = {}
+var shop_stage := 4
+var stage_choice: OptionButton
 
 func _ready() -> void:
 	store = Store.new()
@@ -114,6 +117,17 @@ func _build() -> void:
 	search.add_theme_color_override("font_placeholder_color",Color("68735b"))
 	search.text_changed.connect(func(value: String) -> void: query = value; _refresh_grid())
 	toolbar.add_child(search)
+	stage_choice = OptionButton.new()
+	stage_choice.name = "PlantStage"
+	for title in ["Seeds","Seedlings","Young plants","Mature plants"]: stage_choice.add_item(title)
+	stage_choice.select(3)
+	stage_choice.item_selected.connect(func(index: int) -> void:
+		stage_choice.select(index)
+		shop_stage = [0,2,3,4][index]
+		selected = Catalog.stage_id(selected,shop_stage)
+		refresh()
+	)
+	toolbar.add_child(stage_choice)
 	owned_toggle = CheckBox.new()
 	owned_toggle.text = "Owned only"
 	owned_toggle.add_theme_color_override("font_color",Color("fff2d5"))
@@ -191,6 +205,7 @@ func _set_mode(value: String) -> void:
 
 func refresh() -> void:
 	balance.text = "Free decorating"
+	stage_choice.disabled = mode == "backpack"
 	heading.text = "The Allotment · "+{"market":"MARKET","backpack":"BACKPACK","catalog":"BOTANICAL CATALOG"}[mode]
 	status.text = store.last_error if not store.readable else ("Everything is free to use. Choose an item and Decorate inner circle." if mode == "market" else "Choose an owned item to place, equip or pin." if mode == "backpack" else "Discover · Grow · Learn — browse the starter plant collection.")
 	_refresh_grid()
@@ -213,13 +228,27 @@ func _refresh_grid() -> void:
 	_clear(grid)
 	card_buttons.clear()
 	var matches := 0
-	for item in Catalog.ITEMS:
+	var entries: Array = []
+	if mode == "backpack":
+		for id in store.data.owned:
+			if store.count(id) > 0: entries.append(Catalog.by_id(id))
+	elif category == "Pinned":
+		for id in store.data.favorites: entries.append(Catalog.by_id(id))
+	else:
+		for source in Catalog.ITEMS:
+			if str(source.id).ends_with("_seeds"): continue
+			var id: String = source.id
+			if source.category == "Plants": id = Catalog.stage_id(id,0 if category == "Seeds" else shop_stage)
+			entries.append(Catalog.by_id(id))
+	for item in entries:
 		if mode == "catalog" and item.category not in ["Plants","Seeds"]: continue
 		if mode == "backpack" and store.count(item.id) <= 0: continue
 		if owned_only and store.total_owned(item.id) <= 0: continue
 		if category == "Featured" and not item.get("featured",false): continue
 		if category == "Pinned" and not store.data.favorites.has(item.id): continue
-		if category not in ["All","Featured","Pinned"] and item.category != category: continue
+		if category == "Seeds" and (not item.has("plant") or int(item.growth_stage) != 0): continue
+		if category == "Plants" and not item.has("plant"): continue
+		if category not in ["All","Featured","Pinned","Seeds","Plants"] and item.category != category: continue
 		if not query.is_empty() and (str(item.name)+" "+str(item.get("latin",""))).to_lower().find(query.to_lower()) < 0: continue
 		matches += 1
 		var card := _button("",_select.bind(item.id))
@@ -245,11 +274,15 @@ func _refresh_grid() -> void:
 		image.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 		image.mouse_filter = Control.MOUSE_FILTER_IGNORE
 		contents.add_child(image)
+		if item.has("plant") and int(item.growth_stage) < 4:
+			image.hide()
+			contents.add_child(_stage_thumbnail(item.id))
 		var name := _text(item.name,14)
 		name.text_overrun_behavior = TextServer.OVERRUN_TRIM_ELLIPSIS
 		name.mouse_filter = Control.MOUSE_FILTER_IGNORE
 		contents.add_child(name)
-		var tag := _text("Free  ·  ×%d in bag" % store.count(item.id) if item.get("available",true) else "Seed growing · coming later",12)
+		var tag_text: String = "Free · "+Growth.STAGES[int(item.growth_stage)] if item.has("plant") else "Free · ×%d in bag" % store.count(item.id)
+		var tag := _text(tag_text,12)
 		tag.mouse_filter = Control.MOUSE_FILTER_IGNORE
 		contents.add_child(tag)
 	if matches == 0:
@@ -275,7 +308,17 @@ func _refresh_details() -> void:
 	image.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
 	image.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
 	image.custom_minimum_size = Vector2(250,170)
+	image.visible = not item.has("plant")
 	details.add_child(image)
+	if item.has("plant"):
+		var info: Dictionary = Growth.PLANTS[item.plant]
+		var state := Growth.state(item.plant,_display_age(item.id))
+		var measurements := _text("%s · %.2f m tall now\nFull size: %.2f m tall × %.2f m across\nGrowth uses real days, including offline time." % [state.name,state.height,info.height,info.width],14,Color("425b3c"))
+		measurements.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+		details.add_child(measurements)
+		if int(state.stage) < 4:
+			var remaining: float = float(info.days[4])-_display_age(item.id)
+			details.add_child(_text("About %d days to full size.\nSpace is reserved for the grown plant." % int(remaining),13,Color("657058")))
 	var description := _text(item.description,15,Color("3c4935"))
 	description.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	description.custom_minimum_size.x = 260
@@ -315,6 +358,7 @@ func _refresh_details() -> void:
 		if placed_count > 0:
 			details.add_child(_text("Placed in garden: %d" % placed_count,13,Color("5a664a")))
 			details.add_child(_button("Browse placed items",_show_placed))
+	if item.has("plant"): _preview(item.id)
 
 func _buy(id: String) -> void:
 	var success: bool = store.buy(id)
@@ -336,7 +380,12 @@ func _show_placed() -> void:
 	_clear(details)
 	details.add_child(_text("In your garden",23,Color("334632")))
 	for index in range(store.data.placed.size()):
-		var item := Catalog.by_id(store.data.placed[index].id)
+		var placement: Dictionary = store.data.placed[index]
+		var item := Catalog.by_id(placement.id)
+		var plant := Growth.species(item.id)
+		if not plant.is_empty():
+			var state := Growth.state(plant,Growth.age_days(placement,Time.get_unix_time_from_system()))
+			details.add_child(_text("%s · %s · %.2f m" % [plant.capitalize(),state.name,state.height],14,Color("425b3c")))
 		details.add_child(_button("Return "+item.name,_retrieve.bind(index)))
 
 func _equip_hat() -> void:
@@ -374,11 +423,59 @@ func _preview(id: String) -> void:
 	viewport.add_child(sun)
 	preview_model = Model.instantiate()
 	preview_model.item_id = id
+	if not Growth.species(id).is_empty(): preview_model.growth_age_days = _display_age(id)
 	viewport.add_child(preview_model)
 	preview_camera = Camera3D.new()
 	viewport.add_child(preview_camera)
-	preview_camera.position = Vector3(3,2.4,3)
-	preview_camera.look_at(Vector3(0,1,0))
+	var bounds: AABB = preview_model.mesh_bounds()
+	var span := maxf(.04,maxf(bounds.size.x,maxf(bounds.size.y,bounds.size.z)))
+	var center := bounds.get_center()
+	preview_camera.near = .001
+	preview_camera.fov = 40
+	preview_camera.position = center+Vector3(span*1.2,span*.7,span*1.2)
+	preview_camera.look_at(center)
+
+func _display_age(id: String) -> float:
+	var bag: Dictionary = store.data.get("bag_growth",{})
+	if mode == "backpack" and bag.has(id) and not bag[id].is_empty(): return float(bag[id][0])
+	return Growth.starting_age(id)
+
+func _stage_thumbnail(id: String) -> SubViewportContainer:
+	var container := SubViewportContainer.new()
+	container.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	container.custom_minimum_size = Vector2(140,125)
+	container.stretch = true
+	var view := SubViewport.new()
+	view.size = Vector2i(160,140)
+	view.own_world_3d = true
+	view.render_target_update_mode = SubViewport.UPDATE_ONCE
+	container.add_child(view)
+	var environment := WorldEnvironment.new()
+	environment.environment = Environment.new()
+	environment.environment.background_mode = Environment.BG_COLOR
+	environment.environment.background_color = Color("c8c7a9")
+	environment.environment.ambient_light_source = Environment.AMBIENT_SOURCE_COLOR
+	environment.environment.ambient_light_color = Color("fff1d0")
+	environment.environment.ambient_light_energy = .85
+	view.add_child(environment)
+	var sun := DirectionalLight3D.new()
+	sun.rotation_degrees = Vector3(-50,-30,0)
+	view.add_child(sun)
+	var model := Model.instantiate()
+	model.item_id = id
+	view.add_child(model)
+	# Nodes are not in the tree yet, so build on the next ready notification.
+	view.ready.connect(func() -> void:
+		var bounds: AABB = model.mesh_bounds()
+		var span := maxf(.04,maxf(bounds.size.x,bounds.size.y))
+		var camera := Camera3D.new()
+		camera.near = .001
+		camera.fov = 40
+		view.add_child(camera)
+		camera.position = bounds.get_center()+Vector3(span*1.2,span*.7,span*1.2)
+		camera.look_at(bounds.get_center())
+	)
+	return container
 
 func _process(delta: float) -> void:
 	if is_instance_valid(preview_model): preview_model.rotation.y += delta*.35

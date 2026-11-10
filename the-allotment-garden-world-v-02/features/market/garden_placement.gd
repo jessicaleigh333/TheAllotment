@@ -1,4 +1,5 @@
 extends Node
+const Growth := preload("res://features/market/plant_growth.gd")
 const Store := preload("res://features/market/market_store.gd")
 const Catalog := preload("res://features/market/catalog.gd")
 const Model := preload("res://features/market/item_model.tscn")
@@ -22,6 +23,7 @@ var terrains := {}
 var roots := {}
 var ghost_materials: Array[StandardMaterial3D] = []
 var ghost_valid := false
+var growth_timer := 0.0
 
 func configure(target_world: Node3D) -> void:
 	world = target_world
@@ -55,6 +57,9 @@ func reload_items() -> void:
 		var item := Catalog.by_id(placement.id)
 		if not _terrain_allowed(item,point,scope): continue
 		var model := _model(placement.id)
+		if not Growth.species(placement.id).is_empty():
+			model.growth_age_days = Growth.age_days(placement,Time.get_unix_time_from_system())
+			model.set_meta("growth_record",placement)
 		model.position = Vector3(point.x,terrains[scope].sample_height(point),point.y)
 		model.rotation.y = placement.angle
 		roots[scope].add_child(model)
@@ -147,6 +152,10 @@ func place_at(point: Vector2) -> bool:
 	if not active or not allowed(item_id,point): return false
 	if not store.place(item_id,point,angle,area): return false
 	var model := _model(item_id)
+	if not Growth.species(item_id).is_empty():
+		var record: Dictionary = store.data.placed[-1]
+		model.growth_age_days = Growth.age_days(record,Time.get_unix_time_from_system())
+		model.set_meta("growth_record",record)
 	model.position = Vector3(point.x,terrain.sample_height(point),point.y)
 	model.rotation.y = angle
 	placed_root.add_child(model)
@@ -159,6 +168,10 @@ func _tint_ghost(valid: bool) -> void:
 		material.albedo_color = Color(.4,.85,.5,.5) if valid else Color(.95,.3,.25,.5)
 
 func _process(delta: float) -> void:
+	growth_timer += delta
+	if growth_timer >= 60:
+		growth_timer = 0
+		refresh_growth()
 	if not active: return
 	var move := Vector3(float(Input.is_key_pressed(KEY_D))-float(Input.is_key_pressed(KEY_A)),0,float(Input.is_key_pressed(KEY_S))-float(Input.is_key_pressed(KEY_W)))
 	world.focus += move.limit_length(1.0).rotated(Vector3.UP,world.orbit)*delta*world.distance*.5
@@ -199,3 +212,40 @@ func finish() -> void:
 	world.pitch = old_camera.pitch
 	world.orbit = old_camera.orbit
 	world._update_camera()
+
+func refresh_growth(now: float = -1.0) -> void:
+	var real_clock := now < 0
+	if now < 0: now = Time.get_unix_time_from_system()
+	for root in roots.values():
+		for model in root.get_children():
+			if not model.has_meta("growth_record"): continue
+			var record: Dictionary = model.get_meta("growth_record")
+			var age := maxf(model.growth_age_days,Growth.age_days(record,now))
+			if real_clock and record.has("growth"):
+				record.growth.observed_age_days = maxf(float(record.growth.observed_age_days),age)
+			if absf(age-model.growth_age_days) > .0005: model.rebuild(age)
+
+func _exit_tree() -> void:
+	# Preserve the greatest observed age on normal exit, without overwriting shop changes.
+	var latest := Store.new()
+	if not latest.readable: return
+	var next: Dictionary = latest.data.duplicate(true)
+	var changed := false
+	var now := Time.get_unix_time_from_system()
+	var observed := {}
+	for root in roots.values():
+		if not is_instance_valid(root): continue
+		for model in root.get_children():
+			if not model.has_meta("growth_record"): continue
+			var local_record: Dictionary = model.get_meta("growth_record")
+			if local_record.has("growth"): observed[_growth_key(local_record)] = local_record.growth.observed_age_days
+	for record in next.placed:
+		if not record.has("growth"): continue
+		var age := maxf(Growth.age_days(record,now),float(observed.get(_growth_key(record),0)))
+		if age > float(record.growth.observed_age_days):
+			record.growth.observed_age_days = age
+			changed = true
+	if changed: latest._commit(next)
+
+func _growth_key(record: Dictionary) -> String:
+	return "%s|%s|%s|%s|%s" % [record.id,record.get("area","garden"),record.x,record.z,record.growth.started_at]
