@@ -55,6 +55,11 @@ func _build_exploration_controls() -> void:
 	exploration_hint.add_theme_constant_override("shadow_offset_x",1)
 	exploration_hint.add_theme_constant_override("shadow_offset_y",2)
 	box.add_child(exploration_hint)
+	var plants := Button.new()
+	plants.text = "Flowers & shrubs · 3D catalog"
+	plants.pressed.connect(_open_plant_catalog)
+	box.add_child(plants)
+	box.offset_top = -120
 
 func set_walking_mode(enabled: bool) -> void:
 	if player == null: return
@@ -285,6 +290,45 @@ func _stone_link(start: Vector3, end: Vector3, width: float) -> void:
 	var stone := _box((start + end) * 0.5 + Vector3(0, 0.08, 0), Vector3(width, 0.12, start.distance_to(end) + 0.25), Color("bda88b"))
 	stone.name = "GardenApproach"
 	stone.rotation.y = atan2(end.x - start.x, end.z - start.z)
+	# Invisible slopes bridge the grass (-0.105) to paving (0.14).
+	# Overlap the paving slightly so capsule bodies cannot catch on a seam.
+	for side in [-1.0, 1.0]:
+		var ramp := preload("res://scenes/curb_ramp.tscn").instantiate()
+		ramp.rise = .245
+		ramp.run = .8
+		ramp.width = stone.mesh.size.z + .1
+		ramp.position = Vector3(side * width / 2.0, -.185, 0)
+		ramp.rotation.y = side * PI / 2.0
+		stone.add_child(ramp)
+
+func _open_plant_catalog() -> void:
+	if ui_panel_open: return
+	ui_panel_open = true
+	dragging = false
+	var layer := CanvasLayer.new()
+	layer.layer = 20
+	add_child(layer)
+	var container := SubViewportContainer.new()
+	container.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	container.stretch = true
+	layer.add_child(container)
+	var viewport := SubViewport.new()
+	viewport.size = Vector2i(1280,720)
+	viewport.own_world_3d = true
+	container.add_child(viewport)
+	viewport.add_child(preload("res://scenes/plant_catalog.tscn").instantiate())
+	var close := Button.new()
+	close.text = "Back to garden"
+	layer.add_child(close)
+	close.set_anchors_and_offsets_preset(Control.PRESET_TOP_RIGHT)
+	close.offset_left = -190
+	close.offset_right = -20
+	close.offset_top = 20
+	close.offset_bottom = 60
+	close.pressed.connect(func() -> void:
+		layer.queue_free()
+		ui_panel_open = false
+	)
 
 # Until account/claiming services exist, the trowel opens one explicitly local
 # demo scope. It never assigns ownership to another garden or account.
