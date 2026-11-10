@@ -1,5 +1,8 @@
 extends Control
 const ART := preload("res://features/title/garden_title.png")
+const PROFILES := preload("res://features/profiles/local_profiles.gd")
+const CALENDAR := preload("res://features/title/title_calendar.gd")
+const SEASON_ART := [ART,preload("res://features/title/summer.png"),preload("res://features/title/autumn.png"),preload("res://features/title/winter.png")]
 const AMBIENCE := preload("res://features/title/garden_ambience.gd")
 var canvas: Control
 var picture: TextureRect
@@ -10,6 +13,14 @@ var elapsed := 0.0
 var butterfly: Node2D
 var left_wing: Polygon2D
 var right_wing: Polygon2D
+var season_override := -1
+var time_override := -1
+var southern := false
+var current_season := -1
+var current_night := 0.0
+var calendar_timer := 0.0
+var profile_panel: PanelContainer
+var profile_store = PROFILES.new()
 
 func _ready() -> void:
 	var backdrop := ColorRect.new()
@@ -40,8 +51,8 @@ func _ready() -> void:
 	body.width = 2
 	body.default_color = Color("45351e")
 	butterfly.add_child(body)
-	_hotspot("Login",Rect2(946,523,386,105),_open_welcome)
-	_hotspot("Create Account",Rect2(946,639,386,106),_open_welcome)
+	_hotspot("Login",Rect2(946,523,386,105),_open_profiles.bind(false))
+	_hotspot("Create Account",Rect2(946,639,386,106),_open_profiles.bind(true))
 	_hotspot("Settings",Rect2(1406,29,103,104),func() -> void: settings.visible = not settings.visible)
 	ambience = AMBIENCE.new()
 	add_child(ambience)
@@ -53,9 +64,15 @@ func _ready() -> void:
 		ambience.volume = clampf(float(config.get_value("title","volume",.55)),0,1)
 		ambience.muted = bool(config.get_value("title","muted",false))
 		reduced_motion = bool(config.get_value("title","reduced_motion",false))
-	(settings.get_node("Options/Volume") as HSlider).value = ambience.volume
-	(settings.get_node("Options/Mute") as CheckBox).button_pressed = ambience.muted
-	(settings.get_node("Options/Motion") as CheckBox).button_pressed = reduced_motion
+		season_override = clampi(int(config.get_value("title","season",-1)),-1,3)
+		time_override = clampi(int(config.get_value("title","time",-1)),-1,1)
+		southern = bool(config.get_value("title","southern",false))
+	(settings.get_node("Options/Volume") as HSlider).set_value_no_signal(ambience.volume)
+	(settings.get_node("Options/Mute") as CheckBox).set_pressed_no_signal(ambience.muted)
+	(settings.get_node("Options/Motion") as CheckBox).set_pressed_no_signal(reduced_motion)
+	(settings.get_node("Options/Season") as OptionButton).select(season_override+1)
+	(settings.get_node("Options/Time") as OptionButton).select(time_override+1)
+	(settings.get_node("Options/Hemisphere") as OptionButton).select(1 if southern else 0)
 	_apply_settings()
 
 func _hotspot(label: String, rect: Rect2, action: Callable) -> void:
@@ -123,6 +140,13 @@ func _build_settings() -> void:
 		options.add_child(check)
 	(settings.get_node("Options/Mute") as CheckBox).toggled.connect(func(value: bool) -> void: ambience.muted = value; _apply_settings())
 	(settings.get_node("Options/Motion") as CheckBox).toggled.connect(func(value: bool) -> void: reduced_motion = value; _apply_settings())
+	for entry in [["Season",["Season: automatic","Spring","Summer","Autumn","Winter"]],["Time",["Time: automatic","Day","Night"]],["Hemisphere",["Northern Hemisphere","Southern Hemisphere"]]]:
+		var choice := OptionButton.new()
+		choice.name = entry[0]
+		choice.custom_minimum_size.y = 44
+		for text in entry[1]: choice.add_item(text)
+		options.add_child(choice)
+		choice.item_selected.connect(_choose_calendar.bind(str(entry[0])))
 	var close := Button.new()
 	close.text = "Done"
 	close.pressed.connect(func() -> void: settings.hide())
@@ -136,23 +160,127 @@ func _apply_settings() -> void:
 	config.set_value("title","volume",ambience.volume)
 	config.set_value("title","muted",ambience.muted)
 	config.set_value("title","reduced_motion",reduced_motion)
+	config.set_value("title","season",season_override)
+	config.set_value("title","time",time_override)
+	config.set_value("title","southern",southern)
 	config.save("user://title_settings.cfg")
+	_refresh_calendar()
 	queue_redraw()
 
-func _open_welcome() -> void:
+func _choose_calendar(index: int, field: String) -> void:
+	match field:
+		"Season": season_override = index-1
+		"Time": time_override = index-1
+		"Hemisphere": southern = index == 1
+	_apply_settings()
+
+func _refresh_calendar(date: Dictionary = {}) -> void:
+	if date.is_empty(): date = Time.get_datetime_dict_from_system(false)
+	var season: int = season_override if season_override >= 0 else CALENDAR.season_for_month(int(date.month),southern)
+	current_night = float(time_override) if time_override >= 0 else CALENDAR.night_for_hour(float(date.hour)+float(date.minute)/60.0)
+	if season != current_season:
+		current_season = season
+		picture.texture = SEASON_ART[season]
+	(picture.material as ShaderMaterial).set_shader_parameter("night",current_night)
+	ambience.set_season(season,current_night)
+
+func _open_profiles(create_new: bool) -> void:
 	settings.hide()
-	var welcome := preload("res://features/onboarding/welcome.tscn").instantiate()
-	add_child(welcome)
-	welcome.show_step(1)
+	if is_instance_valid(profile_panel):
+		canvas.remove_child(profile_panel)
+		profile_panel.queue_free()
+	profile_panel = PanelContainer.new()
+	profile_panel.name = "LocalProfiles"
+	profile_panel.position = Vector2(470,250)
+	profile_panel.custom_minimum_size.x = 600
+	var parchment := StyleBoxFlat.new()
+	parchment.bg_color = Color("f2e5ca")
+	parchment.border_color = Color("b79250")
+	parchment.set_border_width_all(3)
+	parchment.set_corner_radius_all(22)
+	parchment.content_margin_left = 28
+	parchment.content_margin_right = 28
+	parchment.content_margin_top = 24
+	parchment.content_margin_bottom = 24
+	profile_panel.add_theme_stylebox_override("panel",parchment)
+	canvas.add_child(profile_panel)
+	var column := VBoxContainer.new()
+	column.add_theme_constant_override("separation",14)
+	profile_panel.add_child(column)
+	var heading := Label.new()
+	heading.text = "Create your garden profile" if create_new else "Welcome back"
+	heading.add_theme_font_size_override("font_size",28)
+	heading.add_theme_color_override("font_color",Color("334632"))
+	column.add_child(heading)
+	var note := Label.new()
+	note.text = "Saved on this device"
+	note.add_theme_color_override("font_color",Color("334632"))
+	column.add_child(note)
+	var feedback := Label.new()
+	feedback.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	feedback.custom_minimum_size.x = 530
+	feedback.add_theme_color_override("font_color",Color("9a493d"))
+	var start := Button.new()
+	start.text = "Enter garden"
+	start.custom_minimum_size.y = 52
+	if create_new:
+		var name_field := LineEdit.new()
+		name_field.name = "ProfileName"
+		name_field.placeholder_text = "Your profile name"
+		name_field.max_length = 24
+		name_field.custom_minimum_size.y = 52
+		column.add_child(name_field)
+		var create := func() -> void:
+			var id: String = profile_store.create(name_field.text)
+			if id.is_empty(): feedback.text = profile_store.last_error
+			else: _enter_garden()
+		start.pressed.connect(create)
+		name_field.text_submitted.connect(func(_text: String) -> void: create.call())
+		name_field.grab_focus()
+	else:
+		var select := OptionButton.new()
+		select.name = "SavedProfiles"
+		select.custom_minimum_size.y = 52
+		column.add_child(select)
+		var data: Dictionary = profile_store.read()
+		if data.is_empty():
+			feedback.text = "The saved profile list could not be read. Your files have been kept."
+			start.disabled = true
+		else:
+			for profile in data.profiles:
+				select.add_item(profile.name)
+				select.set_item_metadata(select.item_count-1,profile.id)
+				if profile.id == data.active: select.select(select.item_count-1)
+			if data.profiles.is_empty():
+				feedback.text = "Create a profile to begin your garden story."
+				start.disabled = true
+		start.pressed.connect(func() -> void:
+			if select.selected < 0: return
+			if profile_store.activate(str(select.get_selected_metadata())): _enter_garden()
+			else: feedback.text = profile_store.last_error
+		)
+	column.add_child(feedback)
+	column.add_child(start)
+	var switch_mode := Button.new()
+	switch_mode.text = "Choose a saved profile" if create_new else "Create a new profile"
+	switch_mode.custom_minimum_size.y = 48
+	switch_mode.pressed.connect(_open_profiles.bind(not create_new))
+	column.add_child(switch_mode)
 	var back := Button.new()
 	back.text = "Back to title"
-	back.position = Vector2(20,20)
-	back.custom_minimum_size = Vector2(150,44)
-	welcome.add_child(back)
-	back.pressed.connect(func() -> void: welcome.queue_free())
+	back.custom_minimum_size.y = 48
+	back.pressed.connect(func() -> void: profile_panel.queue_free())
+	column.add_child(back)
+
+func _enter_garden() -> void:
+	get_tree().change_scene_to_file("res://main.tscn")
 
 func _process(delta: float) -> void:
-	butterfly.visible = not reduced_motion
+	calendar_timer += delta
+	if calendar_timer >= 30:
+		calendar_timer = 0
+		_refresh_calendar()
+	butterfly.visible = not reduced_motion and current_night < .5 and current_season != 3
 	if reduced_motion: return
 	elapsed += delta
 	butterfly.position = Vector2(922+sin(elapsed*.27)*78,85+sin(elapsed*.6)*22)

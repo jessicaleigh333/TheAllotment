@@ -26,7 +26,8 @@ static func validate(data: Variant) -> Dictionary:
 			result[key] = value
 	return result
 
-static func load_saved(path: String = PATH) -> Dictionary:
+static func load_saved(path: String = "") -> Dictionary:
+	if path.is_empty(): path = preload("res://features/profiles/local_profiles.gd").save_root()+"avatar/appearance.json"
 	if not FileAccess.file_exists(path): return defaults()
 	var file := FileAccess.open(path,FileAccess.READ)
 	if file == null or file.get_length() > 65536: return defaults()
@@ -35,7 +36,8 @@ static func load_saved(path: String = PATH) -> Dictionary:
 	var value := validate(data.get("appearance"))
 	return defaults() if value.is_empty() else value
 
-static func save(value: Dictionary, path: String = PATH) -> bool:
+static func save(value: Dictionary, path: String = "") -> bool:
+	if path.is_empty(): path = preload("res://features/profiles/local_profiles.gd").save_root()+"avatar/appearance.json"
 	var validated := validate(value)
 	if validated.is_empty(): return false
 	if DirAccess.make_dir_recursive_absolute(ProjectSettings.globalize_path(path.get_base_dir())) != OK: return false

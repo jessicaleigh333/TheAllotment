@@ -114,3 +114,12 @@ Asset status is **unverified** until inspected in the actual repository/project.
 - Do not assume all concepts above are already coded.
 - See `AGENTS.md` for Codex working instructions.
 - Update this document when the owner confirms new design decisions.
+
+## Seasonal title and local device profiles
+Owner-confirmed direction (2026-11-09). Status: local implementation integrated on the seasonal title feature branch; visual and sound review pending.
+
+- Illustrated title now supports four seasonal artworks and day/night lighting. Automatic mode uses local computer date/hour and meteorological seasons, with a Southern Hemisphere option and preview overrides. Twilight is an artistic fixed schedule rather than astronomical sunrise/sunset.
+- Gentle foliage motion, dog chest breathing, lantern flicker, an extra daylight butterfly, original synthesized breeze/insects and occasional distant chimes are implemented. Volume, mute and reduced motion are device settings.
+- For the current offline prototype, Login selects a saved local profile and Create Account creates one without passwords or remote services. This bypasses the earlier account/terms/neighborhood preview and enters the existing local Garden 01 demo. It does not establish account identity, legal consent, multiplayer access or ownership. Future online onboarding rules above remain planned.
+- Local profiles separate saved avatar appearance, landscaping and favorites. The first profile copies existing legacy saves while preserving the originals. Return to title allows switching profiles. Shop/inventory remain unimplemented; these profiles do not add those systems.
+- Implementation and validation: features/title/README.md and features/profiles/README.md in the Godot project.

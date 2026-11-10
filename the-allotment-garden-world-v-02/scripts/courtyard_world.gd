@@ -59,7 +59,11 @@ func _build_exploration_controls() -> void:
 	plants.text = "Flowers & shrubs · 3D catalog"
 	plants.pressed.connect(_open_plant_catalog)
 	box.add_child(plants)
-	box.offset_top = -120
+	var return_title := Button.new()
+	return_title.text = "Return to title"
+	return_title.pressed.connect(func() -> void: get_tree().change_scene_to_file("res://features/title/title_screen.tscn"))
+	box.add_child(return_title)
+	box.offset_top = -160
 
 func set_walking_mode(enabled: bool) -> void:
 	if player == null: return
