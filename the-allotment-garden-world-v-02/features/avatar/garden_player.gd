@@ -10,6 +10,7 @@ var requested_direction := Vector2.ZERO
 var use_requested_direction := false
 
 func _ready() -> void:
+	add_to_group("garden_players")
 	$Visual.apply_appearance(preload("res://features/avatar/appearance.gd").load_saved())
 	var height: float = $Visual.appearance.height
 	var build: float = $Visual.appearance.body_build

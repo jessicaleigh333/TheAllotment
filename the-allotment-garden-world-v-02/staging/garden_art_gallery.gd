@@ -2,7 +2,7 @@ extends Node3D
 const Art := preload("res://assets/garden_art/garden_library.gd")
 const Model := preload("res://features/market/item_model.tscn")
 const Growth := preload("res://features/market/plant_growth.gd")
-const COLLECTION := ["rose","sunflower","lavender","hydrangea","cosmos","daisy","basil","bench","rose_arch","fountain","lantern","trellis","planter","watering_can","straw_hat","tree","cypress","hedge","shrub","shed","greenhouse","stall","bed","central_planter"]
+const COLLECTION := ["rose","sunflower","lavender","hydrangea","cosmos","daisy","basil","bench","rose_arch","fountain","lantern","trellis","planter","watering_can","straw_hat","tree","cypress","hedge","shrub","shed","greenhouse","stall","bed","central_planter","garden_gate","timber_gate","rock_wall","rock_wall_corner","rock_wall_end"]
 var specimen: Node3D
 var camera: Camera3D
 var heading: Label
@@ -16,6 +16,7 @@ var selected := "rose"
 var stage := 4
 var asset_choice: OptionButton
 var stage_choice: OptionButton
+var gate_control: Button
 
 func _ready() -> void:
 	var environment := WorldEnvironment.new()
@@ -73,16 +74,24 @@ func _ready() -> void:
 	var instruction := Label.new()
 	instruction.text = "Right-drag: orbit · Wheel: zoom\nSource assets share metre scale."
 	layout.add_child(instruction)
+	var gate_button := Button.new()
+	gate_control = gate_button
+	gate_button.text = "Open / close gates"
+	gate_button.pressed.connect(func() -> void:
+		var controller := specimen.get_node_or_null("GateController")
+		if controller: controller.set_open(not controller.opened))
+	layout.add_child(gate_button)
 	show_asset(selected)
 
 func show_asset(id: String) -> void:
 	selected = id
+	if gate_control: gate_control.visible = id in ["garden_gate","timber_gate"]
 	if asset_choice: asset_choice.select(COLLECTION.find(id))
 	if stage_choice: stage_choice.visible = Growth.PLANTS.has(id)
 	if is_instance_valid(specimen):
 		remove_child(specimen)
 		specimen.queue_free()
-	if Growth.PLANTS.has(id) or Art.SIZES.has(id):
+	if Growth.PLANTS.has(id) or Art.SIZES.has(id) or Art.Boundary.SIZES.has(id):
 		specimen = Model.instantiate()
 		specimen.item_id = id
 		if Growth.PLANTS.has(id): specimen.growth_age_days = Growth.PLANTS[id].days[stage]
@@ -93,9 +102,10 @@ func show_asset(id: String) -> void:
 	var span := maxf(.2,maxf(bounds.size.x,maxf(bounds.size.y,bounds.size.z)))
 	distance = span*2.05
 	heading.text = id.replace("_"," ").capitalize()
-	var mesh: ArrayMesh = specimen.find_children("*","MeshInstance3D",true,false)[0].mesh
 	var triangles := 0
-	for surface in range(mesh.get_surface_count()): triangles += mesh.surface_get_array_index_len(surface)/3
+	for instance in specimen.find_children("NearDetail","MeshInstance3D",true,false):
+		var mesh: ArrayMesh = instance.mesh
+		for surface in range(mesh.get_surface_count()): triangles += mesh.surface_get_array_index_len(surface)/3
 	stats.text = "%.2f m wide · %.2f m tall\n%d triangles near · 3 detail levels" % [bounds.size.x,bounds.size.y,triangles]
 	_update_camera()
 

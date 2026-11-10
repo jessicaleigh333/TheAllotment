@@ -19,3 +19,5 @@ Free-resource sources, verified licenses and ready-to-copy credits: CREDITS.md. 
 ## Detailed 3D garden collection
 
 The Market and neighborhood now share the detailed plant, furniture and building library. For a close-up review, open `staging/garden_art_gallery.tscn` and press F6. See `assets/garden_art/README.md` for the full inventory, collisions, LODs and validation. Owner visual approval is pending.
+
+Garden gates and rock walls: Shop → Decor has five free boundary pieces. Walls snap at their ends; R rotates. Walk toward either gate to open it automatically. The 3D review gallery also has an Open / close gates button.
