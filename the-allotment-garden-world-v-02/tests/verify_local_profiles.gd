@@ -21,13 +21,17 @@ func verify() -> void:
  var legacy := Appearance.defaults()
  legacy.hair_style = "bob"
  assert(Appearance.save(legacy,Appearance.PATH))
+ var Market := preload("res://features/market/market_store.gd")
+ assert(Market.new().buy("rose"))
  a = live.create("First")
  assert(not a.is_empty())
  var a_root := Profiles.save_root()
+ assert(Market.new().count("rose") == 1,"Legacy market save must copy into first profile")
  assert(Appearance.load_saved().hair_style == "bob","Legacy appearance must copy into first profile")
  b = live.create("Second")
  assert(not b.is_empty() and Profiles.save_root() != a_root)
  assert(Appearance.load_saved().hair_style == "long","New profiles must not inherit another profile's appearance")
+ assert(Market.new().count("rose") == 0 and Market.new().data.runes == 1250)
  var second := Appearance.defaults()
  second.hair_style = "bun"
  assert(Appearance.save(second))

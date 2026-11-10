@@ -13,6 +13,7 @@ var content: VBoxContainer
 var last_button: Button
 var weather_button: Button
 var weather_provider
+var market_screen: Control
 
 func _ready() -> void:
 	var root := Control.new()
@@ -109,6 +110,9 @@ func _build_dialog(root: Control) -> void:
 
 func _open(id: String, button: Button) -> void:
 	last_button = button
+	if id in ["shop","inventory"]:
+		_open_market(id)
+		return
 	if id == "garden_editor" and get_parent().has_method("open_ground_editor"):
 		if dialog.visible: _close()
 		destination_opened.emit(id)
@@ -136,15 +140,33 @@ func _open(id: String, button: Button) -> void:
 	destination_opened.emit(id)
 
 func _close() -> void:
+	if is_instance_valid(market_screen):
+		market_screen.queue_free()
+		market_screen = null
+		get_child(0).show()
 	dialog.hide()
 	panel_visibility_changed.emit(false)
 	if is_instance_valid(last_button):
 		last_button.grab_focus()
 
 func _unhandled_input(event: InputEvent) -> void:
-	if dialog.visible and event.is_action_pressed("ui_cancel"):
+	if (dialog.visible or is_instance_valid(market_screen)) and event.is_action_pressed("ui_cancel"):
 		_close()
 		get_viewport().set_input_as_handled()
+
+func _open_market(id: String) -> void:
+	_close()
+	get_child(0).hide()
+	market_screen = load("res://features/%s/screen.tscn" % id).instantiate()
+	market_screen.world = get_parent()
+	add_child(market_screen)
+	market_screen.close_requested.connect(_close)
+	market_screen.placement_requested.connect(func(item_id: String) -> void:
+		_close()
+		get_parent().market_garden.begin(item_id)
+	)
+	panel_visibility_changed.emit(true)
+	destination_opened.emit(id)
 
 func _update_weather() -> void:
 	if weather_provider == null or weather_button == null: return
