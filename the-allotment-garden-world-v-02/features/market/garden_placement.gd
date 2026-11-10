@@ -23,6 +23,7 @@ var terrains := {}
 var roots := {}
 var ghost_materials: Array[StandardMaterial3D] = []
 var ghost_valid := false
+var ghost_shaders: Array[ShaderMaterial] = []
 var growth_timer := 0.0
 
 func configure(target_world: Node3D) -> void:
@@ -91,12 +92,18 @@ func begin(id: String, scope: String = "courtyard") -> bool:
 	garden.add_child(ghost)
 	ghost.hide()
 	ghost_materials.clear()
+	ghost_shaders.clear()
 	for mesh in ghost.find_children("*","MeshInstance3D",true,false):
 		if mesh.material_override is StandardMaterial3D:
 			mesh.material_override = mesh.material_override.duplicate()
 			mesh.material_override.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA
 			mesh.material_override.albedo_color.a = .5
 			ghost_materials.append(mesh.material_override)
+		else:
+			var material := ShaderMaterial.new()
+			material.shader = preload("res://assets/garden_art/placement_preview.gdshader")
+			mesh.material_override = material
+			ghost_shaders.append(material)
 	_tint_ghost(false)
 	active = true
 	_build_overlay()
@@ -164,6 +171,8 @@ func place_at(point: Vector2) -> bool:
 
 func _tint_ghost(valid: bool) -> void:
 	ghost_valid = valid
+	for material in ghost_shaders:
+		material.set_shader_parameter("tint",Color(.4,.85,.5,.45) if valid else Color(.95,.3,.25,.45))
 	for material in ghost_materials:
 		material.albedo_color = Color(.4,.85,.5,.5) if valid else Color(.95,.3,.25,.5)
 

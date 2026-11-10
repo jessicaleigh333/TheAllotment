@@ -154,6 +154,7 @@ func _build_settings() -> void:
 	settings.hide()
 
 func _apply_settings() -> void:
+	preload("res://assets/garden_art/mesh_builder.gd").set_reduced_motion(reduced_motion)
 	ambience.apply_volume()
 	(picture.material as ShaderMaterial).set_shader_parameter("motion",0.0 if reduced_motion else 1.0)
 	var config := ConfigFile.new()

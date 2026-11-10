@@ -2,6 +2,7 @@ extends Node3D
 ## The Allotment — first editable world. All objects are generated at startup.
 ## No paid assets, plugins, players, or network connection required.
 
+const GardenArt := preload("res://assets/garden_art/garden_library.gd")
 const PLOT_SPACING := 22.0
 const PLOT_SIZE := 18.0
 const COLOURS := [Color("df909d"), Color("f0c86b"), Color("a995d4"), Color("f3e5ce"), Color("c879ad"), Color("e7aa7f")]
@@ -218,8 +219,7 @@ func _build_plot(origin: Vector3, gx: int, gz: int) -> void:
 		_round_planter(plot, Vector3(-3.3, 0, 6.8), style)
 
 func _build_bed(parent: Node3D, p: Vector3, palette: int) -> void:
-	_box(p + Vector3(0, 0.16, 0), Vector3(3.2, 0.30, 3.5), Color("8a684d"), parent)
-	_box(p + Vector3(0, 0.33, 0), Vector3(2.9, 0.08, 3.2), Color("544536"), parent)
+	_garden_art(parent,"bed",p)
 	for x in range(3):
 		for z in range(3):
 			var fx := p.x - 0.95 + x * 0.95
@@ -227,75 +227,33 @@ func _build_bed(parent: Node3D, p: Vector3, palette: int) -> void:
 			_flower(parent, Vector3(fx, 0.38, fz), COLOURS[palette], (x + z) % 3)
 
 func _flower(parent: Node3D, p: Vector3, color: Color, variant: int) -> void:
-	var height := 0.8 + 0.17 * variant
-	_cylinder(p + Vector3(0, height * 0.5, 0), 0.04, height, Color("477c49"), parent)
-	_ball(p + Vector3(-0.18, height * 0.35, 0), 0.16, Color("568551"), parent)
-	_ball(p + Vector3(0.18, height * 0.55, 0), 0.17, Color("61915c"), parent)
-	var head := p + Vector3(0, height, 0)
-	for petal in range(5):
-		var angle := float(petal) * TAU / 5.0
-		_ball(head + Vector3(cos(angle) * 0.16, 0.0, sin(angle) * 0.16), 0.17, color, parent)
-	_ball(head + Vector3(0, 0.035, 0), 0.11, Color("d8a83e"), parent)
+	var model := preload("res://features/market/item_model.tscn").instantiate()
+	model.item_id = ["cosmos","daisy","rose"][posmod(variant,3)]
+	model.blossom_tint = color
+	model.position = p
+	parent.add_child(model)
 
 func _tree(parent: Node3D, p: Vector3, scale_factor: float) -> void:
-	_cylinder(p + Vector3(0, 1.4 * scale_factor, 0), 0.23 * scale_factor, 2.8 * scale_factor, Color("765138"), parent)
-	for v in [Vector3(0, 3.3, 0), Vector3(-0.8, 2.8, 0), Vector3(0.7, 2.9, 0.3)]:
-		_ball(p + v * scale_factor, 1.18 * scale_factor, Color("527b4d"), parent)
-	for v in [Vector3(-0.6, 3.15, 0.5), Vector3(0.7, 2.7, -0.3), Vector3(0.0, 3.8, 0.2)]:
-		_ball(p + v * scale_factor, 0.19, Color("d6ad69"), parent)
+	var id := "cypress" if posmod(int(p.x+p.z),4) == 0 else "tree"
+	_garden_art(parent,id,p,scale_factor)
 
 func _build_stall(parent: Node3D, p: Vector3, featured: bool) -> void:
-	var timber := Color("8f6346")
-	_box(p + Vector3(0, 0.62, 0), Vector3(3.0, 0.16, 1.5), Color("d6b68a"), parent)
-	for x in [-1.3, 1.3]:
-		for z in [-0.57, 0.57]:
-			_box(p + Vector3(x, 1.38, z), Vector3(0.12, 2.7, 0.12), timber, parent)
-	_box(p + Vector3(0, 2.74, 0), Vector3(3.4, 0.22, 2.1), Color("a76d60") if featured else Color("77896e"), parent)
-	_box(p + Vector3(0, 2.37, 0.79), Vector3(1.8, 0.43, 0.09), Color("e0c49b"), parent)
-	for x in [-0.8, 0, 0.8]:
-		_cylinder(p + Vector3(x, 0.82, 0), 0.25, 0.35, Color("ba7956"), parent)
-		_ball(p + Vector3(x, 1.13, 0), 0.28, Color("638c53"), parent)
+	_garden_art(parent,"stall",p,1.0,Color("ead9d8") if featured else Color.WHITE)
 
 func _build_greenhouse(parent: Node3D, p: Vector3) -> void:
-	var glass := Color(0.66, 0.79, 0.73, 0.33)
-	var frame := Color("d4e6d7")
-	_box(p + Vector3(0, 1.6, 0), Vector3(3.4, 3.15, 4.2), glass, parent, true)
-	for x in [-1.75, 1.75]:
-		for z in [-2.15, 2.15]:
-			_box(p + Vector3(x, 1.6, z), Vector3(0.10, 3.3, 0.1), frame, parent)
-	_box(p + Vector3(0, 3.25, 0), Vector3(3.8, 0.17, 4.5), frame, parent)
-	_box(p + Vector3(0, 0.2, 0), Vector3(3.6, 0.32, 4.4), Color("a3a58c"), parent)
+	_garden_art(parent,"greenhouse",p)
 
 func _build_shed(parent: Node3D, p: Vector3) -> void:
-	_box(p + Vector3(0, 1.35, 0), Vector3(3.2, 2.7, 3.5), Color("b39579"), parent)
-	_box(p + Vector3(0, 2.81, 0), Vector3(3.7, 0.26, 4.0), Color("5b695c"), parent)
-	_box(p + Vector3(0, 1.08, 1.79), Vector3(0.95, 1.92, 0.08), Color("6d856f"), parent)
+	_garden_art(parent,"shed",p)
 
 func _shrub(parent: Node3D, p: Vector3, size: float, seed_value: int) -> void:
-	var tones := [Color("416b46"), Color("557a4d"), Color("688658"), Color("607a51")]
-	_ball(p + Vector3(0, size * 0.6, 0), size * 0.75, tones[seed_value % tones.size()], parent)
-	_ball(p + Vector3(size * 0.4, size * 0.45, 0.15), size * 0.55, tones[(seed_value + 1) % tones.size()], parent)
-	if seed_value % 3 == 0:
-		for j in range(3):
-			_ball(p + Vector3(float(j - 1) * size * 0.35, size * 1.12, -0.1), size * 0.13, COLOURS[(seed_value + j) % COLOURS.size()], parent)
+	_garden_art(parent,"rose" if seed_value%3 == 0 else "shrub",p,size,COLOURS[posmod(seed_value,COLOURS.size())] if seed_value%3 == 0 else Color.WHITE)
 
 func _arch(parent: Node3D, p: Vector3) -> void:
-	var wood := Color("7a694e")
-	for x in [-1.1, 1.1]:
-		_cylinder(p + Vector3(x, 1.35, 0), 0.095, 2.7, wood, parent)
-	_box(p + Vector3(0, 2.75, 0), Vector3(2.5, 0.14, 0.25), wood, parent)
-	for i in range(7):
-		var xx := -1.15 + float(i) * 0.38
-		_ball(p + Vector3(xx, 2.75 + 0.25 * sin(float(i) * 0.5), 0), 0.30, Color("4e7751"), parent)
-		if i % 2 == 0:
-			_ball(p + Vector3(xx, 2.95, 0.15), 0.19, COLOURS[i % COLOURS.size()], parent)
+	_garden_art(parent,"rose_arch",p)
 
 func _round_planter(parent: Node3D, p: Vector3, seed_value: int) -> void:
-	_cylinder(p + Vector3(0, 0.30, 0), 0.82, 0.58, Color("ad8e70"), parent)
-	_ball(p + Vector3(0, 0.85, 0), 0.7, Color("63815a"), parent)
-	for i in range(5):
-		var a := float(i) * TAU / 5.0
-		_ball(p + Vector3(cos(a) * 0.46, 1.0, sin(a) * 0.46), 0.20, COLOURS[(seed_value + i) % COLOURS.size()], parent)
+	_garden_art(parent,"planter",p,2.2,COLOURS[posmod(seed_value,COLOURS.size())])
 
 func _build_common_garden() -> void:
 	for x in [-37.5, 37.5]:
@@ -316,3 +274,10 @@ func _build_common_garden() -> void:
 		var a := float(i) * TAU / 9.0
 		_shrub(self, Vector3(34.0 + cos(a) * 7.1, 0, -11.0 + sin(a) * 7.1), 0.8, i)
 	_tree(self, Vector3(34.0, 0, -11.0), 1.3)
+
+func _garden_art(parent: Node3D, id: String, position: Vector3, factor: float = 1.0, tint: Color = Color.WHITE) -> Node3D:
+	var model := GardenArt.instance(id,tint)
+	model.position = position
+	model.scale = Vector3.ONE*factor
+	parent.add_child(model)
+	return model
