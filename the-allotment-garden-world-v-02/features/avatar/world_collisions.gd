@@ -2,6 +2,8 @@ extends RefCounted
 ## Add physics to existing visuals without replacing or moving world content.
 static func install(node: Node) -> int:
 	var count := 0
+	if node is Node3D and node.has_meta("garden_asset"):
+		count += preload("res://assets/garden_art/garden_library.gd").add_collision(node)
 	for child in node.get_children(): count += install(child)
 	if not node is MeshInstance3D or node.has_node("PlayerCollision"): return count
 	var shape: Shape3D

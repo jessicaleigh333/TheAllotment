@@ -1,0 +1,123 @@
+extends Node3D
+const Art := preload("res://assets/garden_art/garden_library.gd")
+const Model := preload("res://features/market/item_model.tscn")
+const Growth := preload("res://features/market/plant_growth.gd")
+const COLLECTION := ["rose","sunflower","lavender","hydrangea","cosmos","daisy","basil","bench","rose_arch","fountain","lantern","trellis","planter","watering_can","straw_hat","tree","cypress","hedge","shrub","shed","greenhouse","stall","bed","central_planter"]
+var specimen: Node3D
+var camera: Camera3D
+var heading: Label
+var stats: Label
+var orbit := .5
+var pitch := .32
+var distance := 3.5
+var target := Vector3(0,.65,0)
+var dragging := false
+var selected := "rose"
+var stage := 4
+var asset_choice: OptionButton
+var stage_choice: OptionButton
+
+func _ready() -> void:
+	var environment := WorldEnvironment.new()
+	environment.environment = Environment.new()
+	environment.environment.background_mode = Environment.BG_COLOR
+	environment.environment.background_color = Color("bacac6")
+	environment.environment.ambient_light_source = Environment.AMBIENT_SOURCE_COLOR
+	environment.environment.ambient_light_color = Color("f4e9d4")
+	environment.environment.ambient_light_energy = .65
+	add_child(environment)
+	var sun := DirectionalLight3D.new()
+	sun.rotation_degrees = Vector3(-42,-30,0)
+	sun.light_color = Color("ffe9c5")
+	sun.light_energy = .8
+	sun.shadow_enabled = true
+	add_child(sun)
+	var floor := MeshInstance3D.new()
+	var plane := PlaneMesh.new()
+	plane.size = Vector2(200,200)
+	floor.mesh = plane
+	var material := StandardMaterial3D.new()
+	material.albedo_color = Color("8f9a80")
+	material.roughness = .95
+	floor.material_override = material
+	add_child(floor)
+	camera = Camera3D.new()
+	camera.fov = 42
+	camera.near = .005
+	camera.current = true
+	add_child(camera)
+	var layer := CanvasLayer.new()
+	add_child(layer)
+	var panel := PanelContainer.new()
+	panel.position = Vector2(18,18)
+	panel.custom_minimum_size.x = 285
+	layer.add_child(panel)
+	var layout := VBoxContainer.new()
+	panel.add_child(layout)
+	heading = Label.new()
+	heading.add_theme_font_size_override("font_size",23)
+	layout.add_child(heading)
+	var choose := OptionButton.new()
+	asset_choice = choose
+	for id in COLLECTION: choose.add_item(id.replace("_"," ").capitalize())
+	choose.item_selected.connect(func(index: int) -> void: selected = COLLECTION[index]; show_asset(selected))
+	layout.add_child(choose)
+	var stages := OptionButton.new()
+	stage_choice = stages
+	for value in Growth.STAGES: stages.add_item(value)
+	stages.select(4)
+	stages.item_selected.connect(func(index: int) -> void: stage = index; show_asset(selected))
+	layout.add_child(stages)
+	stats = Label.new()
+	layout.add_child(stats)
+	var instruction := Label.new()
+	instruction.text = "Right-drag: orbit · Wheel: zoom\nSource assets share metre scale."
+	layout.add_child(instruction)
+	show_asset(selected)
+
+func show_asset(id: String) -> void:
+	selected = id
+	if asset_choice: asset_choice.select(COLLECTION.find(id))
+	if stage_choice: stage_choice.visible = Growth.PLANTS.has(id)
+	if is_instance_valid(specimen):
+		remove_child(specimen)
+		specimen.queue_free()
+	if Growth.PLANTS.has(id) or Art.SIZES.has(id):
+		specimen = Model.instantiate()
+		specimen.item_id = id
+		if Growth.PLANTS.has(id): specimen.growth_age_days = Growth.PLANTS[id].days[stage]
+	else: specimen = Art.instance(id)
+	add_child(specimen)
+	var bounds := _bounds(specimen)
+	target = bounds.get_center()
+	var span := maxf(.2,maxf(bounds.size.x,maxf(bounds.size.y,bounds.size.z)))
+	distance = span*2.05
+	heading.text = id.replace("_"," ").capitalize()
+	var mesh: ArrayMesh = specimen.find_children("*","MeshInstance3D",true,false)[0].mesh
+	var triangles := 0
+	for surface in range(mesh.get_surface_count()): triangles += mesh.surface_get_array_index_len(surface)/3
+	stats.text = "%.2f m wide · %.2f m tall\n%d triangles near · 3 detail levels" % [bounds.size.x,bounds.size.y,triangles]
+	_update_camera()
+
+func _bounds(root: Node3D) -> AABB:
+	var result := AABB()
+	var first := true
+	for child in root.find_children("*","MeshInstance3D",true,false):
+		var box: AABB = (root.global_transform.affine_inverse()*child.global_transform)*child.get_aabb()
+		result = box if first else result.merge(box)
+		first = false
+	return result
+
+func _update_camera() -> void:
+	camera.position = target+Vector3(sin(orbit)*cos(pitch),sin(pitch),cos(orbit)*cos(pitch))*distance
+	camera.look_at(target)
+
+func _unhandled_input(event: InputEvent) -> void:
+	if event is InputEventMouseButton:
+		if event.button_index == MOUSE_BUTTON_RIGHT: dragging = event.pressed
+		elif event.pressed and event.button_index == MOUSE_BUTTON_WHEEL_UP: distance = maxf(.08,distance*.9)
+		elif event.pressed and event.button_index == MOUSE_BUTTON_WHEEL_DOWN: distance *= 1.1
+	elif event is InputEventMouseMotion and dragging:
+		orbit -= event.relative.x*.008
+		pitch = clampf(pitch+event.relative.y*.006,.05,1.35)
+	_update_camera()

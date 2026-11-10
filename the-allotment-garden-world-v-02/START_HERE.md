@@ -15,3 +15,7 @@ Controls: WASD/arrows stroll; Shift faster; right-drag or Q/E camera; mouse whee
 This update contains the revised hat, slimmer sleeves/arms, shared texture maps, continuous sculpted face, improved hair fitting and natural image-based lighting. Gameplay and appearance tests pass in Godot 4.6.3. Final character artwork is still under visual review.
 
 Free-resource sources, verified licenses and ready-to-copy credits: CREDITS.md. Technical preview and tests: features/avatar/README.md and TESTING.md. No Blender installation or internet connection is required to play; the rigged GLB and textures are included.
+
+## Detailed 3D garden collection
+
+The Market and neighborhood now share the detailed plant, furniture and building library. For a close-up review, open `staging/garden_art_gallery.tscn` and press F6. See `assets/garden_art/README.md` for the full inventory, collisions, LODs and validation. Owner visual approval is pending.

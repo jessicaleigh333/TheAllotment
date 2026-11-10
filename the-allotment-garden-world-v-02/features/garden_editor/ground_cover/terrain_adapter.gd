@@ -47,6 +47,16 @@ func from_garden(garden: Node3D) -> void:
 
 func _gather_obstacles(node: Node) -> void:
 	for child in node.get_children():
+		if child is Node3D and child.has_meta("asset_footprint"):
+			var footprint: Vector2 = child.get_meta("asset_footprint")
+			var low := Vector2(INF,INF)
+			var high := Vector2(-INF,-INF)
+			for x in [-.5,.5]:
+				for z in [-.5,.5]:
+					var p: Vector3 = target.to_local(child.to_global(Vector3(x*footprint.x,0,z*footprint.y)))
+					low = low.min(Vector2(p.x,p.z))
+					high = high.max(Vector2(p.x,p.z))
+			obstacles.append(Rect2(low,high-low).grow(.15))
 		if child is MeshInstance3D and child.mesh is BoxMesh:
 			var size: Vector3 = child.mesh.size
 			if minf(size.x, size.z) > 0.4 and size.y > 0.15:

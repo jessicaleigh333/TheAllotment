@@ -347,7 +347,7 @@ func _refresh_details() -> void:
 	details.add_child(pin)
 	if item.get("available",true):
 		details.add_child(_button("Inspect 3D model",_preview.bind(item.id)))
-		details.add_child(_text("Illustration above · 3D model is a prototype",11,Color("68735d")))
+		details.add_child(_text("Illustration above · View the garden model in 3D",11,Color("68735d")))
 	if mode == "backpack":
 		for index in range(store.data.placed.size()):
 			if store.data.placed[index].id == item.id:

@@ -287,8 +287,7 @@ func _build_courtyard() -> void:
 			var stone := _box((start + end) * 0.5, Vector3(0.12 if radius < 25 else 0.35, 0.045, start.distance_to(end) + 0.02), Color("ae9473"), courtyard)
 			stone.rotation.y = atan2(end.x - start.x, end.z - start.z)
 	# Reuse the established planted centerpiece; fountain art can replace it later.
-	_cylinder(Vector3(0, 0.3, 0), 3.2, 0.45, Color("b7a18a"), courtyard)
-	_cylinder(Vector3(0, 0.65, 0), 2.7, 0.35, Color("544536"), courtyard)
+	_garden_art(courtyard,"central_planter",Vector3.ZERO)
 	for i in range(18):
 		var angle := float(i) * TAU / 18.0
 		_flower(courtyard, Vector3(sin(angle) * 2.2, 0.85, cos(angle) * 2.2), COLOURS[i % COLOURS.size()], i % 3)
