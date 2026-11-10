@@ -14,6 +14,7 @@ const ARC_SEGMENTS := 64
 var outer_radius := sqrt(INNER_RADIUS * INNER_RADIUS + 2.0 * STANDARD_ACRES * ACRE_M2 / (ARC_SEGMENTS * sin(WEDGE_ANGLE / ARC_SEGMENTS)))
 
 var player
+var market_garden
 var walking_mode := true
 var exploration_button: Button
 var exploration_hint: Label
@@ -32,6 +33,10 @@ func _ready() -> void:
 	player.position = player.spawn_position
 	_build_exploration_controls()
 	set_walking_mode(true)
+	market_garden = preload("res://features/market/garden_placement.gd").new()
+	market_garden.name = "MarketGarden"
+	add_child(market_garden)
+	market_garden.configure(self)
 
 func _build_exploration_controls() -> void:
 	var layer := CanvasLayer.new()
@@ -306,6 +311,11 @@ func _stone_link(start: Vector3, end: Vector3, width: float) -> void:
 		stone.add_child(ramp)
 
 func _open_plant_catalog() -> void:
+	var hud := get_node("GameHUD")
+	hud._open_market("shop")
+	hud.market_screen._set_mode("catalog")
+
+func _open_legacy_plant_preview() -> void:
 	if ui_panel_open: return
 	ui_panel_open = true
 	dragging = false

@@ -59,6 +59,8 @@ func _copy_legacy(id: String) -> bool:
 	var files: Array[String] = []
 	if FileAccess.file_exists("user://avatar/appearance.json"):
 		files.append("avatar/appearance.json")
+	if FileAccess.file_exists("user://market.json"):
+		files.append("market.json")
 	if DirAccess.dir_exists_absolute("user://ground_cover"):
 		for file in DirAccess.get_files_at("user://ground_cover"):
 			if file.ends_with(".json"): files.append("ground_cover/"+file)
