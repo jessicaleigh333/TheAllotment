@@ -1,6 +1,6 @@
 # Backpack
 
-Inventory now opens the shared market UI in Backpack mode. It shows available owned stacks, item details, placement/equip actions and up to six pinned common items. Purchases, counts, pins and placed items persist per local profile. Browse placed items in the details column to return a placed object to the bag, including when all stacks have been placed. Profile saves are local only.
+Inventory now opens the shared market UI in Backpack mode. It shows available owned stacks, item details, placement/equip actions and up to six pinned common items. Free additions, counts, pins and placed items persist per local profile. Direct decoration can create repeated copies without stock; previous bag copies are used first. Browse placed items in the details column to return a placed object to the bag, including when all stacks have been placed. Profile saves are local only. Placed items may belong to the inner circle or Garden 01; their area is preserved when returning or reloading.
 
 The Botanical catalog tab browses six starter plant types and two seed previews, with care notes and a prototype 3D inspector. It is not yet an encyclopedia, growing simulator or the complete multi-region plant collection in the inspiration images. Growth stages, harvests, garden-plan lists, sales, storage chests, online trading and a full avatar shop are not implemented here.
 
