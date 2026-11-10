@@ -26,7 +26,7 @@ const BASE_ITEMS := [
 	{"id":"basil","name":"Sweet basil","latin":"Ocimum basilicum","category":"Plants","price":0,"icon":7,"radius":.3,"season":"Summer","sun":"Full sun","water":"Moderate","description":"A leafy culinary herb with branching stems and paired green leaves."},
 ]
 
-const ITEMS := BASE_ITEMS+preload("res://assets/garden_art/french_collection.gd").CATALOG+preload("res://assets/garden_art/roman_collection.gd").CATALOG
+const ITEMS := BASE_ITEMS+preload("res://assets/garden_art/french_collection.gd").CATALOG+preload("res://assets/garden_art/roman_collection.gd").CATALOG+preload("res://assets/garden_art/enchanted_collection.gd").CATALOG
 
 static func by_id(id: String) -> Dictionary:
 	if id.count("@") > 1: return {}
@@ -56,7 +56,7 @@ static func stage_id(id: String, stage: int) -> String:
 	return plant+{0:"@seed",2:"@seedling",3:"@young",4:""}.get(stage,"")
 
 static func icon(item: Dictionary) -> Texture2D:
-	if item.id in preload("res://assets/garden_art/garden_boundary.gd").IDS or preload("res://assets/garden_art/french_collection.gd").SIZES.has(item.id) or preload("res://assets/garden_art/roman_collection.gd").SIZES.has(item.id):
+	if item.id in preload("res://assets/garden_art/garden_boundary.gd").IDS or preload("res://assets/garden_art/french_collection.gd").SIZES.has(item.id) or preload("res://assets/garden_art/roman_collection.gd").SIZES.has(item.id) or preload("res://assets/garden_art/enchanted_collection.gd").SIZES.has(item.id):
 		return load("res://assets/garden_art/icons/"+str(item.id)+".svg")
 	var texture := AtlasTexture.new()
 	texture.atlas = ATLAS

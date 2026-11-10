@@ -25,3 +25,5 @@ Garden gates and rock walls: Shop → Decor has five free boundary pieces. Walls
 French garden collection: 22 new free pieces are under Shop → Decor. Search `pots`, `sculptures`, `structures` or `Villandry`, or open `staging/french_garden_showcase.tscn` and press F6 to browse them up close.
 
 Roman columns / vertical building: search `Roman` in Shop → Decor. Place a plinth, then point at its top to stack compatible column parts. Stack mode starts on for Roman pieces; T toggles it. R rotates; View ↑ / ↓ adjusts the camera. Upper pieces must be removed before their supports. Open `staging/roman_building_showcase.tscn` with F6 for a full stacked example.
+
+Witchy fairy night garden: search `witchy` or `fairy` in Shop → Decor for 18 free pieces. They glow automatically at night. The lower-right Garden lighting button cycles clock/day preview/night preview. Open `staging/enchanted_garden_showcase.tscn` with F6 for day/night close-ups.

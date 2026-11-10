@@ -1,5 +1,6 @@
 extends RefCounted
 ## Geometry-only assembly rules; heights are metres above each saved ground surface.
+const Enchanted := preload("res://assets/garden_art/enchanted_collection.gd")
 const Roman := preload("res://assets/garden_art/roman_collection.gd")
 const French := preload("res://assets/garden_art/french_collection.gd")
 const Old := preload("res://assets/garden_art/garden_boundary.gd")
@@ -8,6 +9,7 @@ const MAX_HEIGHT := 24.0
 const EPS := .018
 
 static func size(id: String) -> Vector3:
+ if Enchanted.SIZES.has(id): return Enchanted.SIZES[id]
  if Roman.SIZES.has(id): return Roman.SIZES[id]
  if French.SIZES.has(id): return French.SIZES[id]
  if Old.SIZES.has(id): return Old.SIZES[id]
@@ -27,6 +29,7 @@ static func top(id: String) -> Dictionary:
  return {}
 
 static func foot(id: String) -> Dictionary:
+ if Enchanted.FEET.has(id): return {"half":Vector2.ONE*float(Enchanted.FEET[id]),"round":true}
  if id.ends_with("_drum"): return {"half":Vector2(.30,.30),"round":true}
  if id.ends_with("_capital"): return {"half":Vector2(.285,.285),"round":true}
  if id == "attic_column_base": return {"half":Vector2(.425,.425),"round":false}
