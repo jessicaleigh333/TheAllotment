@@ -1,4 +1,5 @@
 extends RefCounted
+const Enchanted := preload("res://assets/garden_art/enchanted_collection.gd")
 const Roman := preload("res://assets/garden_art/roman_collection.gd")
 const French := preload("res://assets/garden_art/french_collection.gd")
 const Boundary := preload("res://assets/garden_art/garden_boundary.gd")
@@ -196,6 +197,9 @@ static func _plant(b: RefCounted, id: String, stage: int, tint: Color) -> void:
 				_leaves(b,p,height,.17,8,2)
 
 static func _object(b: RefCounted, id: String, tint: Color) -> void:
+	if Enchanted.SIZES.has(id):
+		Enchanted.build(b,id)
+		return
 	if Roman.SIZES.has(id):
 		Roman.build(b,id)
 		return
@@ -521,13 +525,14 @@ static func add_collision(root: Node3D) -> int:
 		if source_id == "ivy_wall": dimensions.y = 1.15
 		recipes = [[Vector3(0,dimensions.y*.5,0),dimensions,"box"]]
 	if Roman.SIZES.has(source_id): recipes = Roman.collision(source_id)
+	if Enchanted.SIZES.has(source_id): recipes = Enchanted.collision(source_id)
 	if recipes.is_empty(): return 0
 	var body := StaticBody3D.new()
 	body.name = "PlayerCollision"
 	body.collision_layer = 1
 	body.collision_mask = 2
 	var collision_parent: Node = root
-	if source_id in ["vine_pergola","iron_pavilion","espalier_screen","wall_fountain","stone_alcove"] and root.has_node("Geometry"):
+	if source_id in ["vine_pergola","iron_pavilion","espalier_screen","wall_fountain","stone_alcove","moon_arch","fairy_ring","enchanted_tree","moon_lantern","star_mobile"] and root.has_node("Geometry"):
 		collision_parent = root.get_node("Geometry")
 	collision_parent.add_child(body)
 	for recipe in recipes:

@@ -8,7 +8,7 @@ This is **simulated garden weather**, not a real-world forecast or location serv
 
 `weather_system.gd` generates each day deterministically from the exported neighborhood seed, UTC day index and a versioned generator identifier. Temperate seasonal baselines determine high/low temperatures. Today's temperature follows a daily curve between those values; the HUD refreshes hourly. The same daily generation drives the forecast and later current conditions, so reopening the module does not reroll weather and tomorrow's forecast matches tomorrow's generated weather.
 
-The default garden clock follows UTC system time. Future authoritative game-time integration can call `set_simulation_time(unix_seconds)`; all HUD/module subscribers refresh through `weather_changed`. A different persisted neighborhood can supply its own stable `neighborhood_seed` and display name. Weather does not yet change plant growth, water soil, spawn rain particles or override the existing day/night lighting.
+The default garden clock follows UTC system time. Future authoritative game-time integration can call `set_simulation_time(unix_seconds)`; all HUD/module subscribers refresh through `weather_changed`. A different persisted neighborhood can supply its own stable `neighborhood_seed` and display name. The shared UTC garden clock now also drives day/night lighting and enchanted decor emission. Generated weather conditions do not yet change plant growth, water soil or spawn rain particles. Lighting preview controls do not advance the weather clock or plant growth.
 
 Files:
 

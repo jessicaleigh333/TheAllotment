@@ -15,6 +15,8 @@ var outer_radius := sqrt(INNER_RADIUS * INNER_RADIUS + 2.0 * STANDARD_ACRES * AC
 
 var player
 var market_garden
+var lighting_button: Button
+var garden_lighting
 var walking_mode := true
 var exploration_button: Button
 var exploration_hint: Label
@@ -37,6 +39,14 @@ func _ready() -> void:
 	market_garden.name = "MarketGarden"
 	add_child(market_garden)
 	market_garden.configure(self)
+	garden_lighting = get_node_or_null("DayNightCycle")
+	if garden_lighting == null:
+		garden_lighting = preload("res://features/garden_editor/day_night.gd").new()
+		garden_lighting.name = "DayNightCycle"
+		add_child(garden_lighting)
+		garden_lighting.configure(self)
+	garden_lighting.phase_changed.connect(_update_lighting_label)
+	garden_lighting.follow_garden_clock(get_node("GardenWeather"))
 
 func _build_exploration_controls() -> void:
 	var layer := CanvasLayer.new()
@@ -68,7 +78,20 @@ func _build_exploration_controls() -> void:
 	return_title.text = "Return to title"
 	return_title.pressed.connect(func() -> void: get_tree().change_scene_to_file("res://features/title/title_screen.tscn"))
 	box.add_child(return_title)
-	box.offset_top = -184
+	lighting_button = Button.new()
+	lighting_button.custom_minimum_size.y = 34
+	lighting_button.text = "Garden lighting: clock"
+	lighting_button.pressed.connect(func() -> void:
+		if garden_lighting == null: return
+		if not garden_lighting.manual_override: garden_lighting.set_night_amount(0)
+		elif garden_lighting.night_amount < .5: garden_lighting.set_night_amount(1)
+		else: garden_lighting.resume_clock())
+	box.add_child(lighting_button)
+	box.offset_top = -224
+
+func _update_lighting_label(_amount: float) -> void:
+	if lighting_button == null or garden_lighting == null: return
+	lighting_button.text = "Garden lighting: clock" if not garden_lighting.manual_override else ("Garden lighting: day preview" if garden_lighting.night_amount < .5 else "Garden lighting: night preview")
 
 func set_walking_mode(enabled: bool) -> void:
 	if player == null: return

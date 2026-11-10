@@ -3,6 +3,7 @@ extends RefCounted
 var surfaces := {}
 var detail := 0
 static var materials := {}
+static var night_amount := 0.0
 
 func _init(level: int = 0) -> void:
 	detail = level
@@ -10,6 +11,10 @@ func _init(level: int = 0) -> void:
 static func set_reduced_motion(reduced: bool) -> void:
 	for value in materials.values():
 		if value is ShaderMaterial: value.set_shader_parameter("motion",0.0 if reduced else 1.0)
+
+static func set_night(value: float) -> void:
+	night_amount = clampf(value,0,1)
+	if materials.has(13): materials[13].set_shader_parameter("night_amount",night_amount)
 
 static func material(role: int) -> Material:
 	if materials.has(role): return materials[role]
@@ -24,6 +29,7 @@ static func material(role: int) -> Material:
 	var result := ShaderMaterial.new()
 	result.shader = preload("res://assets/garden_art/garden_surface.gdshader")
 	result.set_shader_parameter("kind",role)
+	result.set_shader_parameter("night_amount",night_amount)
 	var settings := ConfigFile.new()
 	settings.load("user://title_settings.cfg")
 	result.set_shader_parameter("motion",0.0 if settings.get_value("title","reduced_motion",false) else 1.0)

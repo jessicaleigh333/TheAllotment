@@ -2,6 +2,7 @@ shader_type spatial;
 render_mode cull_disabled;
 uniform int kind = 0;
 uniform float motion = 1.0;
+uniform float night_amount = 0.0;
 uniform float wind_strength = 0.012;
 uniform float roughness_value = 0.8;
 uniform float metallic_value = 0.0;
@@ -42,6 +43,10 @@ void fragment() {
  ALBEDO = color*detail;
  ROUGHNESS = roughness_value;
  METALLIC = metallic_value;
+ if (kind == 13) {
+  EMISSION = color*night_amount*(2.0+motion*.07*sin(TIME*.8+object_position.y*2.0));
+  ROUGHNESS = .35;
+ }
  if (kind == 8) { EMISSION = color*(1.8+motion*(.12*sin(TIME*7.0)+.06*sin(TIME*13.1))); ROUGHNESS = .35; }
  if (kind == 9) {
   float ripple = sin(UV.x*35.0+TIME*1.4*motion)*sin(UV.y*29.0-TIME*.9*motion);
