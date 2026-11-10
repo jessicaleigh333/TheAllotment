@@ -323,6 +323,8 @@ func _refresh_details() -> void:
 	description.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	description.custom_minimum_size.x = 260
 	details.add_child(description)
+	if Store.Stack.can_stack(item.id):
+		details.add_child(_text("Stack onto a flat support with Stack mode · T",12,Color("657058")))
 	if item.has("inspiration"):
 		var inspiration := _text("Inspired by "+str(item.inspiration),12,Color("657058"))
 		inspiration.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
@@ -354,7 +356,7 @@ func _refresh_details() -> void:
 		details.add_child(_button("Inspect 3D model",_preview.bind(item.id)))
 		details.add_child(_text("Illustration above · View the garden model in 3D",11,Color("68735d")))
 	if mode == "backpack":
-		for index in range(store.data.placed.size()):
+		for index in range(store.data.placed.size()-1,-1,-1):
 			if store.data.placed[index].id == item.id:
 				details.add_child(_button("Return one placed item to bag",_retrieve.bind(index)))
 				break
@@ -383,15 +385,17 @@ func _retrieve(index: int) -> void:
 
 func _show_placed() -> void:
 	_clear(details)
-	details.add_child(_text("In your garden",23,Color("334632")))
-	for index in range(store.data.placed.size()):
+	details.add_child(_text("In your garden · remove upper pieces first",19,Color("334632")))
+	var ordered: Array = range(store.data.placed.size())
+	ordered.sort_custom(func(a: int, b: int) -> bool: return Store.Stack.elevation(store.data.placed[a]) > Store.Stack.elevation(store.data.placed[b]))
+	for index in ordered:
 		var placement: Dictionary = store.data.placed[index]
 		var item := Catalog.by_id(placement.id)
 		var plant := Growth.species(item.id)
 		if not plant.is_empty():
 			var state := Growth.state(plant,Growth.age_days(placement,Time.get_unix_time_from_system()))
 			details.add_child(_text("%s · %s · %.2f m" % [plant.capitalize(),state.name,state.height],14,Color("425b3c")))
-		details.add_child(_button("Return "+item.name,_retrieve.bind(index)))
+		details.add_child(_button("Return %s · %.2f m up" % [item.name,Store.Stack.elevation(placement)],_retrieve.bind(index)))
 
 func _equip_hat() -> void:
 	var appearance := preload("res://features/avatar/appearance.gd")

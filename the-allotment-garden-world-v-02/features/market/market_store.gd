@@ -1,5 +1,6 @@
 extends RefCounted
 ## Atomic local economy/inventory/placement snapshot. No real-money purchases.
+const Stack := preload("res://features/market/stack_rules.gd")
 const Growth := preload("res://features/market/plant_growth.gd")
 const Catalog := preload("res://features/market/catalog.gd")
 const Profiles := preload("res://features/profiles/local_profiles.gd")
@@ -43,10 +44,14 @@ func _valid(value: Variant) -> bool:
 		if not placement is Dictionary or not Catalog.placeable(Catalog.by_id(str(placement.get("id","")))): return false
 		if placement.get("area","garden") not in ["garden","courtyard"]: return false
 		if placement.has("growth") and (Growth.species(placement.id).is_empty() or not Growth.valid_record(placement.growth)): return false
+		for key in ["elevation","ground_y"]:
+			if placement.has(key):
+				var value_at_key = placement[key]
+				if not (value_at_key is int or value_at_key is float) or not is_finite(float(value_at_key)): return false
 		for key in ["x","z","angle"]:
 			var n = placement.get(key)
 			if not (n is int or n is float) or not is_finite(float(n)) or absf(float(n)) > 1000: return false
-	return true
+	return Stack.valid_graph(value.placed)
 
 func _whole(value: Variant, low: int, high: int) -> bool:
 	return (value is int or value is float) and is_finite(float(value)) and float(value) == floor(float(value)) and value >= low and value <= high
@@ -76,12 +81,15 @@ func favorite(id: String) -> bool:
 	else: return _fail("Your six common-item slots are full. Unpin one first.")
 	return _commit(next)
 
-func place(id: String, point: Vector2, angle: float, area: String = "garden") -> bool:
+func place(id: String, point: Vector2, angle: float, area: String = "garden", elevation: float = 0.0, supports: Array = [], ground_y: float = 0.0) -> bool:
 	if not Catalog.placeable(Catalog.by_id(id)): return _fail("Choose a plant or decoration.")
 	if data.placed.size() >= 500: return _fail("This local garden has reached its item limit.")
 	var next := data.duplicate(true)
 	next.owned[id] = maxi(0,count(id)-1)
-	var placement := {"id":id,"x":point.x,"z":point.y,"angle":angle,"area":area}
+	var placement := {"id":id,"x":point.x,"z":point.y,"angle":angle,"area":area,"uid":Crypto.new().generate_random_bytes(12).hex_encode(),"ground_y":ground_y}
+	if elevation > 0:
+		placement.elevation = elevation
+		placement.supports = supports.duplicate()
 	var growth := Growth.new_record(id,Time.get_unix_time_from_system())
 	var bag: Dictionary = next.get("bag_growth",{}).duplicate(true)
 	if not growth.is_empty() and bag.has(id) and not bag[id].is_empty():
@@ -92,8 +100,24 @@ func place(id: String, point: Vector2, angle: float, area: String = "garden") ->
 	next.placed.append(placement)
 	return _commit(next)
 
+func ensure_placement_ids(sample_ground: Callable) -> bool:
+	var next: Dictionary = data.duplicate(true)
+	var changed := false
+	for record in next.placed:
+		if not record.has("uid"):
+			record.uid = Crypto.new().generate_random_bytes(12).hex_encode()
+			changed = true
+		if not record.has("ground_y"):
+			record.ground_y = sample_ground.call(record)
+			changed = true
+	return _commit(next) if changed else readable
+
 func retrieve(index: int) -> bool:
 	if index < 0 or index >= data.placed.size(): return false
+	var uid: String = data.placed[index].get("uid","")
+	for record in data.placed:
+		if not uid.is_empty() and record.get("supports",[]).has(uid):
+			return _fail("Remove the pieces above this support first.")
 	var id: String = data.placed[index].id
 	var plant := Growth.species(id)
 	var age := -1.0

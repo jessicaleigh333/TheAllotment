@@ -1,4 +1,5 @@
 extends RefCounted
+const Roman := preload("res://assets/garden_art/roman_collection.gd")
 const French := preload("res://assets/garden_art/french_collection.gd")
 const Boundary := preload("res://assets/garden_art/garden_boundary.gd")
 const Builder := preload("res://assets/garden_art/mesh_builder.gd")
@@ -195,6 +196,9 @@ static func _plant(b: RefCounted, id: String, stage: int, tint: Color) -> void:
 				_leaves(b,p,height,.17,8,2)
 
 static func _object(b: RefCounted, id: String, tint: Color) -> void:
+	if Roman.SIZES.has(id):
+		Roman.build(b,id)
+		return
 	if French.SIZES.has(id) or id in ["chateau_gate_leaf","potager_gate_leaf"]:
 		French.build(b,id)
 		return
@@ -516,6 +520,7 @@ static func add_collision(root: Node3D) -> int:
 		var dimensions: Vector3 = French.SIZES[source_id]
 		if source_id == "ivy_wall": dimensions.y = 1.15
 		recipes = [[Vector3(0,dimensions.y*.5,0),dimensions,"box"]]
+	if Roman.SIZES.has(source_id): recipes = Roman.collision(source_id)
 	if recipes.is_empty(): return 0
 	var body := StaticBody3D.new()
 	body.name = "PlayerCollision"

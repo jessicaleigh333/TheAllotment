@@ -23,7 +23,7 @@ func rebuild(age: float = -1.0) -> void:
   Art.attach(self,plant,current_stage,blossom_tint)
  else:
   Art.attach(self,item_id)
-  dimensions = Art.French.SIZES.get(item_id,Art.Boundary.SIZES.get(item_id,Art.SIZES.get(item_id,Vector3.ONE)))
+  dimensions = Art.Roman.SIZES.get(item_id,Art.French.SIZES.get(item_id,Art.Boundary.SIZES.get(item_id,Art.SIZES.get(item_id,Vector3.ONE))))
  _fit_dimensions(dimensions)
  if not plant.is_empty() and current_stage == 0:
   var marker := Label3D.new()
