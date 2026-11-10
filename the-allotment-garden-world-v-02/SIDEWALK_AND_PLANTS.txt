@@ -1,0 +1,25 @@
+SIDEWALK AND PLANT CATALOG UPDATE
+
+Extract this ZIP into a NEW folder. Keep your existing game folder as a backup.
+In Godot Project Manager choose Import and select project.godot in the new folder.
+Run the project (F5), then enter the garden as usual.
+
+Raised garden entrance paths now have invisible collision ramps along both sides.
+No character appearance, garden layout, grass or path visuals were replaced.
+
+Click Flowers & shrubs - 3D catalog near the bottom right while exploring.
+Choose from six flower palettes and three shrub configurations. Right-drag to
+orbit and use the wheel to zoom. Back to garden returns to your current position.
+These are previews of the existing procedural prototype models, not final
+botanical species models or a planting/inventory system. Art review is pending.
+
+Added: scenes/plant_catalog.tscn, scenes/plant_prototype.tscn,
+scenes/curb_ramp.tscn and their scripts. Changed scripts/courtyard_world.gd.
+Added tests/verify_sidewalk.gd. Original uploaded ZIPs remain unchanged.
+
+Checks: Godot 4.6.3 headless import and runtime; nine physical entrance and exit
+crossings and catalog opening. Project targets Godot 4.7; please preview in your
+4.7.2 editor before treating the visuals as approved.
+
+Existing verify_avatar.gd also passed: customization, animation, movement, UI
+pause, overview, all nine garden entrances and blocking hedge collisions.
