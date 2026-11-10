@@ -182,6 +182,7 @@ func _refresh_calendar(date: Dictionary = {}) -> void:
 		current_season = season
 		picture.texture = SEASON_ART[season]
 	(picture.material as ShaderMaterial).set_shader_parameter("night",current_night)
+	(picture.material as ShaderMaterial).set_shader_parameter("season",season)
 	ambience.set_season(season,current_night)
 
 func _open_profiles(create_new: bool) -> void:

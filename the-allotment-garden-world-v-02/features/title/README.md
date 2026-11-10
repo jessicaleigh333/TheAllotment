@@ -13,3 +13,5 @@ The painted Login plaque opens the local saved-profile chooser. Create Account c
 Validation in Godot 4.6.3: all eight seasonal/day-night combinations rendered under OpenGL Compatibility; seasonal/month/hemisphere/clock assertions, title controls and local-profile entry passed. The project targets Godot 4.7; owner visual/audio approval in 4.7.2 remains pending.
 
 Tests: `tests/verify_title.gd`, `tests/verify_local_profiles.gd`, `tests/verify_profile_entry.gd`. Run profile tests with a fresh isolated XDG_DATA_HOME to avoid using real profiles. See `features/profiles/README.md` for save behavior.
+
+Night glow update: the lantern has a warm halo; bright fountain water/edges catch cyan light; three small flower clusters have jewel-like accents; fourteen sparse drifting lights stay in the planting margins. Winter lights shift to icy blue. These effects fade with night lighting, leaving daytime art unchanged. Reduced motion freezes firefly drift/pulsing while retaining steady light. Soft halos are computed directly in the canvas shader, so Compatibility mode does not require bloom.
