@@ -68,7 +68,7 @@ func _build_exploration_controls() -> void:
 	return_title.text = "Return to title"
 	return_title.pressed.connect(func() -> void: get_tree().change_scene_to_file("res://features/title/title_screen.tscn"))
 	box.add_child(return_title)
-	box.offset_top = -160
+	box.offset_top = -184
 
 func set_walking_mode(enabled: bool) -> void:
 	if player == null: return
@@ -92,6 +92,7 @@ func set_walking_mode(enabled: bool) -> void:
 		orbit = overview_orbit
 	exploration_button.text = "Neighborhood overview  ·  Tab" if enabled else "Walk in the garden  ·  Tab"
 	exploration_hint.text = "WASD: stroll  •  Shift: faster  •  Right-drag: camera" if enabled else "WASD: pan  •  Wheel: zoom  •  Walk to explore up close"
+	if not enabled: exploration_hint.text += "\nEach garden: 1.84 acres · Central paving: 0.52 acre"
 	_update_camera()
 
 func _process(delta: float) -> void:

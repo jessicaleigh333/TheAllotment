@@ -1,10 +1,39 @@
 extends "res://scripts/world.gd"
 ## Reusable ground-pivot prototype meshes; illustrations remain art references.
 @export var item_id := "rose"
+@export var growth_age_days := -1.0
+const Growth := preload("res://features/market/plant_growth.gd")
+var current_stage := 4
 
 func _ready() -> void:
 	set_process(false)
 	set_process_unhandled_input(false)
+	rebuild(growth_age_days)
+
+func rebuild(age: float = -1.0) -> void:
+	for child in get_children(): child.free()
+	var original_id := item_id
+	var plant := Growth.species(item_id)
+	var dimensions := Vector3.ZERO
+	if not plant.is_empty():
+		if age < 0: age = Growth.starting_age(item_id)
+		growth_age_days = age
+		var state := Growth.state(plant,age)
+		current_stage = state.stage
+		dimensions = Vector3(state.width,state.height,state.width)
+		if current_stage < 4:
+			_build_immature(plant,state)
+			_fit_dimensions(dimensions)
+			return
+		item_id = plant
+	_build_mature()
+	item_id = original_id
+	if not plant.is_empty(): _fit_dimensions(dimensions)
+	else:
+		var sizes := {"bench":Vector3(1.8,.9,.65),"rose_arch":Vector3(2.4,2.5,.7),"fountain":Vector3(2.2,2.0,2.2),"lantern":Vector3(.22,.45,.22),"trellis":Vector3(1.6,2,.25),"planter":Vector3(.55,.75,.55),"watering_can":Vector3(.65,.4,.28),"straw_hat":Vector3(.42,.16,.42)}
+		if sizes.has(item_id): _fit_dimensions(sizes[item_id])
+
+func _build_mature() -> void:
 	match item_id:
 		"sunflower": _bloom(Vector3.ZERO,1.7,Color("e9b844"),12,.32)
 		"cosmos", "daisy":
@@ -31,6 +60,15 @@ func _ready() -> void:
 				_cylinder(p+Vector3(0,h/2,0),.018,h,Color("647d52"),self)
 				_ellipsoid(p+Vector3(0,.2,0),Vector3(.10,.25,.07),Color("69815a"))
 				for j in range(5): _ellipsoid(p+Vector3(0,h+float(j)*.045,0),Vector3(.045,.045,.045),Color("9b82b8"))
+		"basil":
+			for branch in range(5):
+				var a := float(branch)*TAU/5
+				var p := Vector3(cos(a)*.12,0,sin(a)*.12)
+				_cylinder(p+Vector3(0,.23,0),.018,.46,Color("5b8150"),self)
+				for j in range(4):
+					for side in [-1.0,1.0]:
+						var leaf := _ellipsoid(p+Vector3(side*.09,.12+float(j)*.085,0),Vector3(.11,.035,.06),Color("6c944e"))
+						leaf.rotation.z = side*.25
 		"rose_arch":
 			_arch(self,Vector3.ZERO)
 			for i in range(7): _rosette(Vector3(-1.1+float(i)*.36,2.92,.15),.13)
@@ -77,6 +115,53 @@ func _ready() -> void:
 			_cylinder(Vector3(0,.31,0),.36,.32,Color("cba76a"),self)
 			_cylinder(Vector3(0,.22,0),.37,.08,Color("b78683"),self)
 
+func _build_immature(plant: String, state: Dictionary) -> void:
+	if int(state.stage) == 0:
+		_ellipsoid(Vector3(0,.006,0),Vector3(.05,.006,.05),Color("66503a"))
+		var marker := Label3D.new()
+		marker.text = plant.capitalize()+" · Seed"
+		marker.billboard = BaseMaterial3D.BILLBOARD_ENABLED
+		marker.pixel_size = .002
+		marker.position.y = .18
+		marker.no_depth_test = false
+		add_child(marker)
+		return
+	var h: float = state.height
+	_cylinder(Vector3(0,h*.45,0),maxf(.002,h*.025),h*.9,Color("587b49"),self)
+	var leaves := 2 if int(state.stage) == 1 else (4 if int(state.stage) == 2 else 10)
+	for i in range(leaves):
+		var a := float(i)*2.4
+		var y := h*(.25+.65*float(i)/maxf(1,leaves-1))
+		var size := h*(.26 if int(state.stage) < 3 else .18)
+		var leaf := _ellipsoid(Vector3(cos(a)*size*.55,y,sin(a)*size*.55),Vector3(size,size*.18,size*.5),Color("719555"))
+		leaf.rotation.y = -a
+	if int(state.stage) == 3 and plant != "basil":
+		_ellipsoid(Vector3(0,h,0),Vector3(h*.055,h*.075,h*.055),Color("63864e"))
+
+func mesh_bounds() -> AABB:
+	var bounds := AABB()
+	var first := true
+	for mesh in find_children("*","MeshInstance3D",true,false):
+		var box: AABB = mesh.get_aabb()
+		var transform: Transform3D = global_transform.affine_inverse()*mesh.global_transform
+		var local: AABB = transform*box
+		bounds = local if first else bounds.merge(local)
+		first = false
+	return bounds
+
+func _fit_dimensions(target: Vector3) -> void:
+	var bounds := mesh_bounds()
+	if bounds.size.x <= 0 or bounds.size.y <= 0 or bounds.size.z <= 0: return
+	var factor := target/bounds.size
+	var children := get_children()
+	var geometry := Node3D.new()
+	geometry.name = "Geometry"
+	add_child(geometry)
+	for child in children:
+		if child is Node3D and not child is Label3D: child.reparent(geometry,true)
+	geometry.scale = factor
+	geometry.position.y = -bounds.position.y*factor.y
+
 func _ellipsoid(p: Vector3, size: Vector3, color: Color) -> MeshInstance3D:
 	var node := MeshInstance3D.new()
 	var mesh := SphereMesh.new()
@@ -97,11 +182,15 @@ func _bloom(p: Vector3, height: float, color: Color, petals: int, radius: float)
 		var leaf := _ellipsoid(p+Vector3(side*.13,height*.5,0),Vector3(.19,.06,.11),Color("638a51"))
 		leaf.rotation.z = side*.4
 	var head := p+Vector3(0,height,0)
+	var first_petals := get_child_count()
 	for i in range(petals):
 		var a := float(i)*TAU/petals
 		var petal := _ellipsoid(head+Vector3(cos(a)*radius,0,sin(a)*radius),Vector3(radius*.7,.045,radius*.3),color)
 		petal.rotation.y = -a
 	_ellipsoid(head+Vector3(0,.025,0),Vector3(radius*.55,.07,radius*.55),Color("70513a") if item_id == "sunflower" else Color("d7ac48"))
+	if item_id == "sunflower":
+		var turn := Transform3D(Basis(Vector3.RIGHT,PI/2),head)*Transform3D(Basis.IDENTITY,-head)
+		for i in range(first_petals,get_child_count()): get_child(i).transform = turn*get_child(i).transform
 
 func _rosette(p: Vector3, radius: float) -> void:
 	for i in range(8):

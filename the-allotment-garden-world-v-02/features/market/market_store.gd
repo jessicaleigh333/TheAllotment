@@ -1,5 +1,6 @@
 extends RefCounted
 ## Atomic local economy/inventory/placement snapshot. No real-money purchases.
+const Growth := preload("res://features/market/plant_growth.gd")
 const Catalog := preload("res://features/market/catalog.gd")
 const Profiles := preload("res://features/profiles/local_profiles.gd")
 const STARTING_RUNES := 1250
@@ -26,6 +27,12 @@ func _valid(value: Variant) -> bool:
 	if not _whole(value.get("runes"),0,10000000): return false
 	if not value.get("owned") is Dictionary or not value.get("placed") is Array or not value.get("favorites") is Array: return false
 	if value.placed.size() > 500 or value.favorites.size() > 6: return false
+	var bag = value.get("bag_growth",{})
+	if not bag is Dictionary: return false
+	for id in bag:
+		if Growth.species(id).is_empty() or not bag[id] is Array or bag[id].size() > int(value.owned.get(id,0)): return false
+		for age in bag[id]:
+			if not (age is int or age is float) or not is_finite(float(age)) or age < 0 or age >= 100000: return false
 	for id in value.owned:
 		if Catalog.by_id(id).is_empty() or not _whole(value.owned[id],0,999): return false
 	var seen := {}
@@ -35,6 +42,7 @@ func _valid(value: Variant) -> bool:
 	for placement in value.placed:
 		if not placement is Dictionary or not Catalog.placeable(Catalog.by_id(str(placement.get("id","")))): return false
 		if placement.get("area","garden") not in ["garden","courtyard"]: return false
+		if placement.has("growth") and (Growth.species(placement.id).is_empty() or not Growth.valid_record(placement.growth)): return false
 		for key in ["x","z","angle"]:
 			var n = placement.get(key)
 			if not (n is int or n is float) or not is_finite(float(n)) or absf(float(n)) > 1000: return false
@@ -73,16 +81,35 @@ func place(id: String, point: Vector2, angle: float, area: String = "garden") ->
 	if data.placed.size() >= 500: return _fail("This local garden has reached its item limit.")
 	var next := data.duplicate(true)
 	next.owned[id] = maxi(0,count(id)-1)
-	next.placed.append({"id":id,"x":point.x,"z":point.y,"angle":angle,"area":area})
+	var placement := {"id":id,"x":point.x,"z":point.y,"angle":angle,"area":area}
+	var growth := Growth.new_record(id,Time.get_unix_time_from_system())
+	var bag: Dictionary = next.get("bag_growth",{}).duplicate(true)
+	if not growth.is_empty() and bag.has(id) and not bag[id].is_empty():
+		growth.initial_age_days = bag[id].pop_front()
+		growth.observed_age_days = growth.initial_age_days
+	next.bag_growth = bag
+	if not growth.is_empty(): placement.growth = growth
+	next.placed.append(placement)
 	return _commit(next)
 
 func retrieve(index: int) -> bool:
 	if index < 0 or index >= data.placed.size(): return false
 	var id: String = data.placed[index].id
+	var plant := Growth.species(id)
+	var age := -1.0
+	if not plant.is_empty():
+		age = Growth.age_days(data.placed[index],Time.get_unix_time_from_system())
+		var stage: int = Growth.state(plant,age).stage
+		# Bag stacks preserve the achieved stage; young plants never become mature on pickup.
+		id = Catalog.stage_id(id,stage if stage != 1 else 0)
 	if count(id) >= 999: return _fail("This backpack stack is full.")
 	var next := data.duplicate(true)
 	next.placed.remove_at(index)
 	next.owned[id] = count(id)+1
+	if age >= 0:
+		next.bag_growth = next.get("bag_growth",{}).duplicate(true)
+		if not next.bag_growth.has(id): next.bag_growth[id] = []
+		next.bag_growth[id].append(age)
 	return _commit(next)
 
 func _fail(message: String) -> bool:

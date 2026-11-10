@@ -16,7 +16,8 @@ func verify() -> void:
  assert(store.data.runes == 1250 and store.count("rose") == 1)
  assert(Store.new().count("rose") == 1)
  var before := store.data.duplicate(true)
- assert(not store.buy("sunflower_seeds") and store.data == before)
+ assert(store.buy("sunflower_seeds"))
+ before = store.data.duplicate(true)
  assert(not store.buy("unknown") and store.data == before)
  assert(store.favorite("rose"))
  assert(store.data.favorites == ["rose"])
@@ -52,10 +53,10 @@ func verify() -> void:
  hud._open_market("shop")
  await process_frame
  var screen = hud.market_screen
- assert(screen.card_buttons.size() == Catalog.ITEMS.size())
+ assert(screen.card_buttons.size() == Catalog.ITEMS.size()-2)
  screen.category = "Plants"
  screen._refresh_grid()
- assert(screen.card_buttons.size() == 6)
+ assert(screen.card_buttons.size() == 7)
  screen.query = "lavendula"
  screen._refresh_grid()
  assert(screen.card_buttons.is_empty())
