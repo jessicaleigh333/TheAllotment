@@ -1,4 +1,5 @@
 extends Node
+const Boundary := preload("res://features/market/boundary_placement.gd")
 const Growth := preload("res://features/market/plant_growth.gd")
 const Store := preload("res://features/market/market_store.gd")
 const Catalog := preload("res://features/market/catalog.gd")
@@ -89,6 +90,7 @@ func begin(id: String, scope: String = "courtyard") -> bool:
 	world._update_camera()
 	world.get_node("GameHUD").hide()
 	ghost = _model(id)
+	ghost.set_meta("placement_preview",true)
 	garden.add_child(ghost)
 	ghost.hide()
 	ghost_materials.clear()
@@ -152,7 +154,9 @@ func allowed(id: String, point: Vector2) -> bool:
 	for placement in store.data.placed:
 		if placement.get("area","garden") != area: continue
 		var other := Catalog.by_id(placement.id)
-		if point.distance_to(Vector2(placement.x,placement.z)) < float(item.radius)+float(other.radius)+.15: return false
+		if id in Boundary.IDS and placement.id in Boundary.IDS:
+			if Boundary.overlap(id,point,angle,placement.id,Vector2(placement.x,placement.z),placement.angle): return false
+		elif point.distance_to(Vector2(placement.x,placement.z)) < float(item.radius)+float(other.radius)+.15: return false
 	return true
 
 func place_at(point: Vector2) -> bool:
@@ -186,6 +190,7 @@ func _process(delta: float) -> void:
 	world.focus += move.limit_length(1.0).rotated(Vector3.UP,world.orbit)*delta*world.distance*.5
 	world._update_camera()
 	candidate = terrain.pick(world.camera,get_viewport().get_mouse_position())
+	if candidate != null and item_id in Boundary.IDS: candidate = Boundary.snap(item_id,candidate,angle,store.data.placed,area)
 	ghost.visible = candidate != null
 	var valid := candidate != null and allowed(item_id,candidate)
 	if valid != ghost_valid: _tint_ghost(valid)

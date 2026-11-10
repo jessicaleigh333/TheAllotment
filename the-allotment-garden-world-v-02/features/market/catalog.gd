@@ -2,6 +2,11 @@ extends RefCounted
 const Growth := preload("res://features/market/plant_growth.gd")
 const ATLAS := preload("res://features/market/item_atlas.png")
 const ITEMS := [
+	{"id":"garden_gate","name":"Wrought-iron garden gates","category":"Decor","price":0,"icon":8,"radius":1.9,"featured":true,"description":"Paired scrolling iron gates on limestone piers. Opens automatically as the gardener approaches. 3 m wide, 2 m tall."},
+	{"id":"timber_gate","name":"Timber garden gates","category":"Decor","price":0,"icon":8,"radius":1.7,"description":"An arched pair of timber gates with metal hinges. Opens as the gardener approaches. 2.4 m wide, 1.3 m tall."},
+	{"id":"rock_wall","name":"Rock wall · straight","category":"Decor","price":0,"icon":10,"radius":1.05,"description":"A 2 m limestone and fieldstone border with staggered stones and a coping cap. Place near another wall end to connect."},
+	{"id":"rock_wall_corner","name":"Rock wall · corner","category":"Decor","price":0,"icon":10,"radius":1.45,"description":"An L-shaped 2 m corner with capped stone courses. Rotate to turn your border."},
+	{"id":"rock_wall_end","name":"Rock wall · end pier","category":"Decor","price":0,"icon":10,"radius":.45,"description":"A 0.6 m square stone end pier, 1.35 m tall. Finish a border or frame an opening."},
 	{"id":"sunflower","name":"Sunflower","latin":"Helianthus annuus","category":"Plants","price":25,"icon":0,"radius":.5,"season":"Summer","sun":"Full sun","water":"Moderate","description":"Golden faces and tall stems bring a sunny focal point to a border."},
 	{"id":"rose","name":"Rose bush","latin":"Rosa","category":"Plants","price":35,"icon":1,"radius":.75,"season":"Summer","sun":"Full sun","water":"Moderate","description":"Soft pink blooms and rounded foliage for a romantic cottage garden."},
 	{"id":"lavender","name":"Lavender","latin":"Lavandula angustifolia","category":"Plants","price":18,"icon":2,"radius":.5,"season":"Summer","sun":"Full sun","water":"Low","description":"Fragrant purple flower spikes suit sunny paths and dry borders."},
@@ -12,7 +17,7 @@ const ITEMS := [
 	{"id":"basil_seeds","name":"Basil seeds","category":"Seeds","price":5,"icon":7,"radius":.3,"description":"Sow sweet basil and watch it develop over real days and weeks."},
 	{"id":"rose_arch","name":"Climbing rose arch","category":"Decor","price":125,"icon":8,"radius":1.5,"featured":true,"description":"A timber entrance with climbing foliage and pink roses. Keep room around its posts."},
 	{"id":"bench","name":"Garden bench","category":"Decor","price":180,"icon":9,"radius":1.4,"featured":true,"description":"A simple timber bench for a peaceful corner of the garden."},
-	{"id":"fountain","name":"Stone garden fountain","category":"Decor","price":350,"icon":10,"radius":1.35,"featured":true,"description":"A tiered stone centerpiece with a still blue basin. Decorative; water effects are not included."},
+	{"id":"fountain","name":"Stone garden fountain","category":"Decor","price":350,"icon":10,"radius":1.35,"featured":true,"description":"A tiered stone centerpiece with flowing streams and rippling water."},
 	{"id":"lantern","name":"Garden lantern","category":"Decor","price":60,"icon":11,"radius":.35,"description":"A small brass garden lantern with a warm glowing center."},
 	{"id":"trellis","name":"Flower trellis","category":"Decor","price":45,"icon":12,"radius":1.0,"featured":true,"description":"A timber lattice with climbing flowers for an informal garden backdrop."},
 	{"id":"planter","name":"Terracotta planter","category":"Decor","price":28,"icon":13,"radius":.7,"description":"A warm terracotta pot filled with colorful flowers."},
@@ -48,7 +53,9 @@ static func stage_id(id: String, stage: int) -> String:
 	if plant.is_empty(): return id
 	return plant+{0:"@seed",2:"@seedling",3:"@young",4:""}.get(stage,"")
 
-static func icon(item: Dictionary) -> AtlasTexture:
+static func icon(item: Dictionary) -> Texture2D:
+	if item.id in preload("res://assets/garden_art/garden_boundary.gd").IDS:
+		return load("res://assets/garden_art/icons/"+str(item.id)+".svg")
 	var texture := AtlasTexture.new()
 	texture.atlas = ATLAS
 	var cell := Vector2(ATLAS.get_size())/4.0

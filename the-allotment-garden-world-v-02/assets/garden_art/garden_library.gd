@@ -1,4 +1,5 @@
 extends RefCounted
+const Boundary := preload("res://assets/garden_art/garden_boundary.gd")
 const Builder := preload("res://assets/garden_art/mesh_builder.gd")
 const GREEN := Color("547b45")
 const WOOD := Color("9a744e")
@@ -36,6 +37,19 @@ static func attach(root: Node3D, id: String, stage: int = 4, tint: Color = Color
 		node.visibility_range_end = [18,45,0][lod]
 		root.add_child(node)
 	root.set_meta("garden_asset",id)
+	if id in ["garden_gate","timber_gate"]:
+		for side in [-1,1]:
+			var hinge := Node3D.new()
+			hinge.name = "LeftHinge" if side == -1 else "RightHinge"
+			hinge.position.x = side*(1.05 if id == "garden_gate" else 1.0)
+			root.add_child(hinge)
+			attach(hinge,"iron_gate_leaf" if id == "garden_gate" else "timber_gate_leaf")
+			if side == 1:
+				for mesh in hinge.get_children():
+					if mesh is MeshInstance3D: mesh.scale.x *= -1
+		var controller := preload("res://assets/garden_art/gate_controller.gd").new()
+		controller.name = "GateController"
+		root.add_child(controller)
 	if id in ["shed","greenhouse","stall","bed"]:
 		root.set_meta("asset_footprint",{"shed":Vector2(3.8,4.5),"greenhouse":Vector2(3.8,4.5),"stall":Vector2(3.4,2.1),"bed":Vector2(3.2,3.5)}[id])
 
@@ -175,6 +189,9 @@ static func _plant(b: RefCounted, id: String, stage: int, tint: Color) -> void:
 				_leaves(b,p,height,.17,8,2)
 
 static func _object(b: RefCounted, id: String, tint: Color) -> void:
+	if id in Boundary.IDS or id in ["iron_gate_leaf","timber_gate_leaf"]:
+		Boundary.build(b,id)
+		return
 	match id:
 		"bench": _bench(b)
 		"rose_arch", "trellis": _trellis(b,id == "rose_arch",tint)
@@ -452,7 +469,17 @@ static func add_collision(root: Node3D) -> int:
 	if root.has_node("PlayerCollision"): return 0
 	var id: String = root.get_meta("garden_asset","")
 	var recipes: Array = []
+	if id in ["garden_gate","timber_gate"]:
+		var controller := root.get_node_or_null("GateController")
+		if controller: controller.install_leaf_collision()
 	match id:
+		"garden_gate":
+			for side in [-1,1]: recipes.append([Vector3(side*1.275,.95,0),Vector3(.45,1.9,.45),"box"])
+		"timber_gate":
+			for side in [-1,1]: recipes.append([Vector3(side*1.1,.65,0),Vector3(.20,1.3,.22),"box"])
+		"rock_wall": recipes = [[Vector3(0,.575,0),Vector3(2,1.15,.45),"box"]]
+		"rock_wall_corner": recipes = [[Vector3(0,.575,-.775),Vector3(2,1.15,.45),"box"],[Vector3(-.775,.575,0),Vector3(.45,1.15,2),"box"]]
+		"rock_wall_end": recipes = [[Vector3(0,.675,0),Vector3(.6,1.35,.6),"box"]]
 		"bench": recipes = [[Vector3(0,.45,0),Vector3(1.8,.12,.6),"box"],[Vector3(0,.73,-.28),Vector3(1.8,.4,.10),"box"]]
 		"rose_arch":
 			for side in [-1.0,1.0]: recipes.append([Vector3(side*1.0,1.0,0),Vector3(.17,2,.65),"box"])

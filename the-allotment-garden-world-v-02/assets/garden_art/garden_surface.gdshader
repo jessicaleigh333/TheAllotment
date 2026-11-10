@@ -29,6 +29,9 @@ void fragment() {
  } else if (kind == 4) {
   float fleck = hash(floor(object_position*160.0));
   detail = .91+.09*fleck;
+ } else if (kind == 11) {
+  float grain = sin(dot(object_position,vec3(31.0,37.0,29.0)))*sin(dot(object_position,vec3(51.0,23.0,43.0)));
+  detail = .96+.04*grain;
  } else if (kind == 5) {
   detail = .86+.10*sin(UV.x*17.0)*sin(UV.y*29.0);
  } else if (kind == 6) {

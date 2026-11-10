@@ -76,7 +76,10 @@ func lathe(profile: PackedVector2Array, center: Vector3, role: int, color: Color
 		for i in range(segments+1):
 			var angle := float(i)*TAU/segments
 			points.append(center+Vector3(cos(angle)*point.x*stretch.x,point.y,sin(angle)*point.x*stretch.y))
+	var first_vertex: int = surfaces[role].v.size() if surfaces.has(role) else 0
+	var first_index: int = surfaces[role].i.size() if surfaces.has(role) else 0
 	grid(points,profile.size(),segments+1,role,color)
+	_flip_surface(role,first_vertex,first_index)
 
 func leaf(origin: Vector3, direction: Vector3, length: float, width: float, color: Color, shape: int = 0) -> void:
 	var forward := direction.normalized()
@@ -121,13 +124,32 @@ func box(center: Vector3, size: Vector3, bevel: float, role: int, color: Color) 
 		var y: float = [-size.y*.5,-size.y*.5+b,size.y*.5-b,size.y*.5][row]
 		var taper := .96 if row in [0,3] else 1.0
 		for p in section: points.append(center+Vector3(p.x*taper,y,p.y*taper))
+	var first_vertex: int = surfaces[role].v.size() if surfaces.has(role) else 0
+	var first_index: int = surfaces[role].i.size() if surfaces.has(role) else 0
 	grid(points,4,section.size(),role,color)
+	_flip_surface(role,first_vertex,first_index)
 	for sign_y in [-1.0,1.0]:
 		var cap := PackedVector3Array()
 		for p in section:
 			cap.append(center+Vector3(0,sign_y*size.y*.5,0))
 			cap.append(center+Vector3(p.x*.96,sign_y*size.y*.5,p.y*.96))
+		var first_normal: int = surfaces[role].n.size()
+		var cap_first_index: int = surfaces[role].i.size()
 		grid(cap,section.size(),2,role,color)
+		for index in range(first_normal,surfaces[role].n.size()):
+			surfaces[role].n[index] = Vector3.UP*sign_y
+		if sign_y > 0:
+			for index in range(cap_first_index,surfaces[role].i.size(),3):
+				var previous: int = surfaces[role].i[index+1]
+				surfaces[role].i[index+1] = surfaces[role].i[index+2]
+				surfaces[role].i[index+2] = previous
+
+func _flip_surface(role: int, first_vertex: int, first_index: int) -> void:
+	for index in range(first_vertex,surfaces[role].n.size()): surfaces[role].n[index] *= -1
+	for index in range(first_index,surfaces[role].i.size(),3):
+		var previous: int = surfaces[role].i[index+1]
+		surfaces[role].i[index+1] = surfaces[role].i[index+2]
+		surfaces[role].i[index+2] = previous
 
 func mesh() -> ArrayMesh:
 	var result := ArrayMesh.new()

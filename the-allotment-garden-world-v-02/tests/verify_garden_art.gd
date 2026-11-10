@@ -6,6 +6,11 @@ const Plants := ["rose","sunflower","lavender","hydrangea","cosmos","daisy","bas
 func _initialize() -> void:
 	call_deferred("verify")
 func verify() -> void:
+	var builder := Builder.new()
+	builder.box(Vector3.ZERO,Vector3.ONE,.04,4,Color.WHITE)
+	var box_data := builder.mesh().surface_get_arrays(0)
+	for index in range(box_data[Mesh.ARRAY_VERTEX].size()):
+		assert(box_data[Mesh.ARRAY_VERTEX][index].dot(box_data[Mesh.ARRAY_NORMAL][index]) > .1,"Closed box normals must face outward")
 	var total := 0
 	for id in Gallery.COLLECTION:
 		for stage in range(5) if id in Plants else [4]:
