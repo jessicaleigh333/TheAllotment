@@ -1,5 +1,6 @@
 extends RefCounted
 ## Geometry-only assembly rules; heights are metres above each saved ground surface.
+const Woodland := preload("res://assets/garden_art/woodland_collection.gd")
 const Rustic := preload("res://assets/garden_art/rustic_collection.gd")
 const Enchanted := preload("res://assets/garden_art/enchanted_collection.gd")
 const Roman := preload("res://assets/garden_art/roman_collection.gd")
@@ -10,6 +11,7 @@ const MAX_HEIGHT := 24.0
 const EPS := .018
 
 static func size(id: String) -> Vector3:
+ if Woodland.SIZES.has(id): return Woodland.SIZES[id]
  if Rustic.SIZES.has(id): return Rustic.SIZES[id]
  if Enchanted.SIZES.has(id): return Enchanted.SIZES[id]
  if Roman.SIZES.has(id): return Roman.SIZES[id]
@@ -22,6 +24,7 @@ static func size(id: String) -> Vector3:
  return {"bench":Vector3(1.8,.9,.65),"rose_arch":Vector3(2.4,2.5,.7),"fountain":Vector3(2.2,2,2.2),"lantern":Vector3(.22,.45,.22),"trellis":Vector3(1.6,2,.25),"planter":Vector3(.55,.75,.55),"watering_can":Vector3(.65,.4,.28)}.get(id,Vector3.ONE)
 
 static func top(id: String) -> Dictionary:
+ if id == "forest_gathering_deck": return {"half":Vector2(2,2),"round":false,"offset":Vector2(0,-.45)}
  if id in ["plain_column_drum","fluted_column_drum","short_column_drum"]: return {"half":Vector2(.30,.30),"round":true}
  if id == "attic_column_base": return {"half":Vector2(.34,.34),"round":true}
  if Roman.SIZES.has(id):
@@ -31,6 +34,9 @@ static func top(id: String) -> Dictionary:
  return {}
 
 static func foot(id: String) -> Dictionary:
+ if Woodland.SIZES.has(id) and id not in ["forest_gathering_deck","stump_balance_trail"]:
+  var dimensions: Vector3 = Woodland.SIZES[id]
+  return {"half":Vector2(dimensions.x,dimensions.z)*.5,"round":false}
  if Enchanted.FEET.has(id): return {"half":Vector2.ONE*float(Enchanted.FEET[id]),"round":true}
  if id.ends_with("_drum"): return {"half":Vector2(.30,.30),"round":true}
  if id.ends_with("_capital"): return {"half":Vector2(.285,.285),"round":true}
@@ -55,7 +61,7 @@ static func top_y(record: Dictionary) -> float: return bottom_y(record)+size(rec
 static func inside(id: String, point: Vector2, center: Vector2, angle: float, margin: float = EPS) -> bool:
  var surface := top(id)
  if surface.is_empty(): return false
- var local := (point-center).rotated(angle)
+ var local: Vector2 = (point-center).rotated(angle)-Vector2(surface.get("offset",Vector2.ZERO))
  var half: Vector2 = surface.half
  if surface.round: return local.length() <= half.x+margin
  return absf(local.x) <= half.x+margin and absf(local.y) <= half.y+margin

@@ -1,4 +1,5 @@
 extends RefCounted
+const Woodland := preload("res://assets/garden_art/woodland_collection.gd")
 const Rustic := preload("res://assets/garden_art/rustic_collection.gd")
 const Enchanted := preload("res://assets/garden_art/enchanted_collection.gd")
 const Roman := preload("res://assets/garden_art/roman_collection.gd")
@@ -198,6 +199,9 @@ static func _plant(b: RefCounted, id: String, stage: int, tint: Color) -> void:
 				_leaves(b,p,height,.17,8,2)
 
 static func _object(b: RefCounted, id: String, tint: Color) -> void:
+	if Woodland.SIZES.has(id):
+		Woodland.build(b,id)
+		return
 	if Rustic.SIZES.has(id) or id == "branch_gate_leaf":
 		Rustic.build(b,id)
 		return
@@ -531,13 +535,14 @@ static func add_collision(root: Node3D) -> int:
 	if Roman.SIZES.has(source_id): recipes = Roman.collision(source_id)
 	if Enchanted.SIZES.has(source_id): recipes = Enchanted.collision(source_id)
 	if Rustic.SIZES.has(source_id): recipes = Rustic.collision(source_id)
+	if Woodland.SIZES.has(source_id): recipes = Woodland.collision(source_id)
 	if recipes.is_empty(): return 0
 	var body := StaticBody3D.new()
 	body.name = "PlayerCollision"
 	body.collision_layer = 1
 	body.collision_mask = 2
 	var collision_parent: Node = root
-	if (source_id in ["branch_gate","rustic_arbor","fairy_light_arbor","garden_chess_set","backyard_bowling_lane","formal_parterre"] or source_id in ["vine_pergola","iron_pavilion","espalier_screen","wall_fountain","stone_alcove","moon_arch","fairy_ring","enchanted_tree","moon_lantern","star_mobile"]) and root.has_node("Geometry"):
+	if (Woodland.SIZES.has(source_id) or source_id in ["branch_gate","rustic_arbor","fairy_light_arbor","garden_chess_set","backyard_bowling_lane","formal_parterre"] or source_id in ["vine_pergola","iron_pavilion","espalier_screen","wall_fountain","stone_alcove","moon_arch","fairy_ring","enchanted_tree","moon_lantern","star_mobile"]) and root.has_node("Geometry"):
 		collision_parent = root.get_node("Geometry")
 	collision_parent.add_child(body)
 	for recipe in recipes:
@@ -546,11 +551,17 @@ static func add_collision(root: Node3D) -> int:
 			var shape := BoxShape3D.new()
 			shape.size = recipe[1]
 			collision.shape = shape
+		elif recipe[2] == "ramp":
+			var shape := ConvexPolygonShape3D.new()
+			var half: Vector3 = recipe[1]*.5
+			shape.points = PackedVector3Array([Vector3(-half.x,-half.y,-half.z),Vector3(half.x,-half.y,-half.z),Vector3(-half.x,-half.y,half.z),Vector3(half.x,-half.y,half.z),Vector3(-half.x,half.y,-half.z),Vector3(half.x,half.y,-half.z)])
+			collision.shape = shape
 		else:
 			var shape := CylinderShape3D.new()
 			shape.radius = recipe[1].x*.5
 			shape.height = recipe[1].y
 			collision.shape = shape
 		collision.position = recipe[0]
+		if recipe.size() > 3: collision.rotation = recipe[3]
 		body.add_child(collision)
 	return recipes.size()

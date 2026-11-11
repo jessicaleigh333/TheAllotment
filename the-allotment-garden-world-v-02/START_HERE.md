@@ -29,3 +29,5 @@ Roman columns / vertical building: search `Roman` in Shop → Decor. Place a pli
 Witchy fairy night garden: search `witchy` or `fairy` in Shop → Decor for 18 free pieces. They glow automatically at night. The lower-right Garden lighting button cycles clock/day preview/night preview. Open `staging/enchanted_garden_showcase.tscn` with F6 for day/night close-ups.
 
 Campsite inspiration collection: Shop → Decor → search `Campsite` for 13 new rustic pieces based on the shared board screenshots. Includes woven willow planters, twig gates/arbors, a quilt rack and garden game displays. Run `staging/rustic_garden_showcase.tscn` with F6 for close-ups.
+
+Woodland gathering collection: Shop → Decor → search `Woodland` for log benches, stump stools, tables, lantern picnic setting, work stations, a walkable deck/balance trail and decorative swing/seesaw. Items are free. Sitting and riding are not connected. Open `staging/woodland_gathering_showcase.tscn` with F6 to review; art approval is pending.

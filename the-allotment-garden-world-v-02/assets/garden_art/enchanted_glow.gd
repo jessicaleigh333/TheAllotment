@@ -45,7 +45,7 @@ func _ready() -> void:
  lamp = OmniLight3D.new()
  lamp.name = "BudgetedGlowLight"
  lamp.light_color = color
- lamp.omni_range = 2.8 if item_id in ["enchanted_tree","moon_arch","fairy_well","fairy_light_arbor"] else 1.8
+ lamp.omni_range = 2.8 if item_id in ["enchanted_tree","moon_arch","fairy_well","fairy_light_arbor","lantern_picnic_canopy"] else 1.8
  lamp.omni_attenuation = 1.8
  lamp.shadow_enabled = false
  add_child(lamp)
