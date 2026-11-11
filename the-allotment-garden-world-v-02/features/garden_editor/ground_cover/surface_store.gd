@@ -378,4 +378,8 @@ func load_from(path: String = "") -> bool:
 	if file == null or file.get_length() > 32000000:
 		last_error = "The landscaping save cannot be read."
 		return false
-	return restore_snapshot(JSON.parse_string(file.get_as_text()))
+	var parser := JSON.new()
+	if parser.parse(file.get_as_text()) != OK:
+		last_error = "The landscaping save cannot be read."
+		return false
+	return restore_snapshot(parser.data)

@@ -22,6 +22,7 @@ var old_distance := 390.0
 var old_pitch := 1.05
 var old_orbit := 0.75
 var restore_camera := true
+var save_loaded_ok := true
 var status_prefix := "Local demo garden • "
 
 func configure(target_world: Node3D, target_garden: Node3D, context: String, actor: String, owner: String, seed: int = 0) -> void:
@@ -48,7 +49,11 @@ func configure(target_world: Node3D, target_garden: Node3D, context: String, act
 		if panel != null: panel.refresh_previews()
 	)
 	if FileAccess.file_exists(store.default_save_path()):
-		if not store.load_from(): panel.set_status(store.last_error)
+		if not store.load_from():
+			save_loaded_ok = false
+			panel.set_status(store.last_error)
+	store.operation_committed.connect(func(_operation: Dictionary) -> void:
+		if save_loaded_ok and not store.save_to(): panel.set_status(store.last_error))
 
 func configure_demo(target_world: Node3D, demo_store, terrain_adapter) -> void:
 	world = target_world

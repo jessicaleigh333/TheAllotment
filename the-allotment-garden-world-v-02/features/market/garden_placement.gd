@@ -1,4 +1,5 @@
 extends Node
+const Vines := preload("res://features/market/climbing_vines.gd")
 const Stack := preload("res://features/market/stack_rules.gd")
 const Picker := preload("res://features/market/stack_picker.gd")
 const Boundary := preload("res://features/market/boundary_placement.gd")
@@ -70,8 +71,14 @@ func reload_items() -> void:
 			model.set_meta("growth_record",placement)
 		model.position = Vector3(point.x,terrains[scope].sample_height(point)+Stack.elevation(placement),point.y)
 		model.rotation.y = placement.angle
+		model.set_meta("placement_record",placement)
 		roots[scope].add_child(model)
 		preload("res://features/avatar/world_collisions.gd").install(model)
+
+	refresh_vines()
+
+func refresh_vines() -> void:
+	Vines.refresh(roots,store.data.placed)
 
 func _model(id: String) -> Node3D:
 	var model := Model.instantiate()
@@ -182,8 +189,13 @@ func allowed(id: String, point: Vector2, elevation: float = 0.0, supports: Array
 		provided.sort()
 		if required.is_empty() or provided != required: return false
 	elif not supports.is_empty(): return false
+	var training := Vines.nearby_support(id,point,bottom,store.data.placed,area) if elevation == 0 else {}
 	for placement in store.data.placed:
 		if placement.get("area","garden") != area: continue
+		if not training.is_empty() and training.uid == placement.get("uid",""): continue
+		if Vines.is_vine(placement.id) and elevation == 0:
+			var prospective := {"id":id,"x":point.x,"z":point.y,"angle":angle,"ground_y":bottom,"area":area,"uid":"candidate"}
+			if not Vines.attachment(placement,[prospective]).is_empty(): continue
 		var other := Catalog.by_id(placement.id)
 		var other_bottom: float = terrain.sample_height(Vector2(placement.x,placement.z))+Stack.elevation(placement)
 		if bottom >= other_bottom+Stack.size(placement.id).y-Stack.EPS or other_bottom >= bottom+Stack.size(id).y-Stack.EPS: continue
@@ -205,8 +217,10 @@ func place_at(point: Vector2, elevation: float = 0.0, supports: Array = []) -> b
 		model.set_meta("growth_record",record)
 	model.position = Vector3(point.x,ground+elevation,point.y)
 	model.rotation.y = angle
+	model.set_meta("placement_record",store.data.placed[-1])
 	placed_root.add_child(model)
 	preload("res://features/avatar/world_collisions.gd").install(model)
+	refresh_vines()
 	if stack_mode:
 		world.focus.y = garden.to_global(Vector3(point.x,ground+elevation+Stack.size(item_id).y,point.y)).y
 		world._update_camera()
@@ -254,6 +268,9 @@ func _process(delta: float) -> void:
 		ghost.rotation.y = angle
 	var destination := "the inner circle" if area == "courtyard" else "Garden 01"
 	hint.text = "%s · %s · %.2f m above ground\n%s · WASD: pan · Wheel: zoom" % [Catalog.by_id(item_id).name,"Stack" if stack_mode else "Ground",candidate_elevation,"Click to place in "+destination if valid else "Choose a supported top or open ground; keep routes clear"]
+	if Vines.is_vine(item_id):
+		var training := Vines.nearby_support(item_id,candidate,terrain.sample_height(candidate),store.data.placed,area) if candidate != null else {}
+		hint.text += "\nWill climb "+str(Catalog.by_id(training.id).name)+" · real days and weeks" if not training.is_empty() else "\nPlant within 85 cm of a suitable post or trellis to climb"
 
 func _unhandled_input(event: InputEvent) -> void:
 	if not active: return
@@ -295,10 +312,12 @@ func refresh_growth(now: float = -1.0) -> void:
 				record.growth.observed_age_days = maxf(float(record.growth.observed_age_days),age)
 			if absf(age-model.growth_age_days) > .0005: model.rebuild(age)
 
-func _exit_tree() -> void:
+	refresh_vines()
+
+func save_growth_progress() -> bool:
 	# Preserve the greatest observed age on normal exit, without overwriting shop changes.
 	var latest := Store.new()
-	if not latest.readable: return
+	if not latest.readable: return false
 	var next: Dictionary = latest.data.duplicate(true)
 	var changed := false
 	var now := Time.get_unix_time_from_system()
@@ -315,7 +334,10 @@ func _exit_tree() -> void:
 		if age > float(record.growth.observed_age_days):
 			record.growth.observed_age_days = age
 			changed = true
-	if changed: latest._commit(next)
+	return latest._commit(next) if changed else true
+
+func _exit_tree() -> void:
+	save_growth_progress()
 
 func _growth_key(record: Dictionary) -> String:
 	return "%s|%s|%s|%s|%s" % [record.id,record.get("area","garden"),record.x,record.z,record.growth.started_at]

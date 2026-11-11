@@ -2,7 +2,7 @@ extends SceneTree
 const Art := preload("res://assets/garden_art/garden_library.gd")
 const Builder := preload("res://assets/garden_art/mesh_builder.gd")
 const Gallery := preload("res://staging/garden_art_gallery.gd")
-const Plants := ["rose","sunflower","lavender","hydrangea","cosmos","daisy","basil"]
+const Plants := ["rose","sunflower","lavender","hydrangea","cosmos","daisy","basil","climbing_rose","clematis","honeysuckle","ivy","wisteria"]
 func _initialize() -> void:
 	call_deferred("verify")
 func verify() -> void:
