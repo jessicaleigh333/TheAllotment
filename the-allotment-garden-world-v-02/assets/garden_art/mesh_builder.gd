@@ -171,3 +171,18 @@ func mesh() -> ArrayMesh:
 		result.add_surface_from_arrays(Mesh.PRIMITIVE_TRIANGLES,arrays)
 		result.surface_set_material(result.get_surface_count()-1,material(role))
 	return result
+
+
+func merge(other: RefCounted, transform: Transform3D) -> void:
+	var normals := transform.basis.inverse().transposed()
+	for role in other.surfaces:
+		if not surfaces.has(role):
+			surfaces[role] = {"v":PackedVector3Array(),"n":PackedVector3Array(),"uv":PackedVector2Array(),"c":PackedColorArray(),"i":PackedInt32Array()}
+		var source: Dictionary = other.surfaces[role]
+		var target: Dictionary = surfaces[role]
+		var offset: int = target.v.size()
+		for v in source.v: target.v.append(transform*v)
+		for n in source.n: target.n.append((normals*n).normalized())
+		target.uv.append_array(source.uv)
+		target.c.append_array(source.c)
+		for index in source.i: target.i.append(index+offset)
