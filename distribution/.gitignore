@@ -1,0 +1,11 @@
+private/
+release-assets/
+build/
+.godot/
+**/.godot/
+**/__pycache__/
+*.partial
+*.pck
+*.exe
+*.zip
+*-private.pem
