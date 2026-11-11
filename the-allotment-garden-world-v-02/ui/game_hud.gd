@@ -124,6 +124,7 @@ func _open(id: String, button: Button) -> void:
 	title.text = TITLES[id]
 	var screen: Control = load("res://features/%s/screen.tscn" % id).instantiate()
 	screen.add_theme_color_override("font_color", Color("334632"))
+	if id == "settings": screen.world = get_parent()
 	if id == "weather" and weather_provider != null: screen.configure(weather_provider)
 	content.add_child(screen)
 	# Give the forecast room for five readable rows; other destinations keep

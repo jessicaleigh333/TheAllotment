@@ -19,7 +19,7 @@ static func meshes(id: String, stage: int = 4, tint: Color = Color.WHITE) -> Arr
 	var result: Array[ArrayMesh] = []
 	for lod in range(3):
 		var builder := Builder.new(lod)
-		if id in ["sunflower","rose","lavender","hydrangea","cosmos","daisy","basil"]:
+		if id in ["sunflower","rose","lavender","hydrangea","cosmos","daisy","basil"] or preload("res://assets/garden_art/vine_art.gd").COLORS.has(id):
 			_plant(builder,id,stage,tint)
 		else:
 			_object(builder,id,tint)
@@ -132,6 +132,9 @@ static func _rose(b: RefCounted, center: Vector3, radius: float, color: Color) -
 	b.tube(curl,radii,2,color.darkened(.08),5)
 
 static func _plant(b: RefCounted, id: String, stage: int, tint: Color) -> void:
+	if preload("res://assets/garden_art/vine_art.gd").COLORS.has(id):
+		preload("res://assets/garden_art/vine_art.gd").standalone(b,id,stage)
+		return
 	if stage == 0:
 		b.lathe(PackedVector2Array([Vector2(0,0),Vector2(.05,0),Vector2(.05,.006),Vector2(0,.012)]),Vector3.ZERO,4,Color("69513c"),16)
 		return

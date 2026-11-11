@@ -12,7 +12,7 @@ This collection replaces the primitive plant/furnishing/building meshes used by 
 | Existing character | Gardener rig, face morphs, modular outfits/hair/accessories | Existing authored character retained. Importer LOD/shadow mesh generation and avatar regressions verified; this change does not replace the character or claim new character artwork. |
 | Existing terrain | Grass, paths, courtyard and 83 ground-cover materials | Working terrain geometry, dimensions and path arrangement retained. Ground-cover obstacle detection supports the new asset footprints. |
 
-The 109 collection entries comprise 137 asset/stage combinations and 411 mesh detail variants (plus shared gate-leaf meshes). Each instance selects one of three distance ranges (0–18 m, 18–45 m, 45+ m). Repeated instances share cached meshes/materials. Geometry batches by material role, avoiding a node/draw call per petal. Every individual variant is below 40,000 triangles; lower detail never increases triangle count. Scene-wide performance still depends on the device, visible content and shadows; there is no mobile certification claim.
+The 114 collection entries comprise 162 asset/stage combinations and 486 mesh detail variants (plus shared gate-leaf meshes). Each instance selects one of three distance ranges (0–18 m, 18–45 m, 45+ m). Repeated instances share cached meshes/materials. Geometry batches by material role, avoiding a node/draw call per petal. Every individual variant is below 40,000 triangles; lower detail never increases triangle count. Scene-wide performance still depends on the device, visible content and shadows; there is no mobile certification claim.
 
 ## Use and preview
 
@@ -24,7 +24,7 @@ World collision uses simple authored recipes, separate from detailed visual geom
 
 ## Validation and status
 
-`tests/verify_garden_art.gd` checks all 137 combinations, shared-resource reuse, UV/normal/vertex/index validity, three LODs, triangle budgets, collision recipes/idempotence and reduced motion. Shop, courtyard, growth, acreage, ground-cover, layout, sidewalk and avatar regressions were run. Graphical renders were inspected with Godot's Compatibility renderer under Mesa software rendering; Godot 4.6.3 was available here, while the owner's editor is 4.7.2.
+`tests/verify_garden_art.gd` checks all 162 combinations, shared-resource reuse, UV/normal/vertex/index validity, three LODs, triangle budgets, collision recipes/idempotence and reduced motion. Shop, courtyard, growth, acreage, ground-cover, layout, sidewalk and avatar regressions were run. Graphical renders were inspected with Godot's Compatibility renderer under Mesa software rendering; Godot 4.6.3 was available here, while the owner's editor is 4.7.2.
 
 The owner accepted the initial collection as a starting direction. The gates/walls addition is implemented and integrated, and ready for owner visual review. Per the project's AGENTS.md, art is not marked final until the owner approves the rendered style. These are softly stylized game models, not a recreation of every painted detail in the supplied UI inspiration images. Future unimplemented design-spec locations/assets are outside this inventory. Plant dormancy, weather-dependent growth and cultivar-specific simulation remain outside this art change.
 
@@ -63,3 +63,8 @@ Both gate leaves have hinge-mounted collision, open automatically as the gardene
 ## Woodland gathering and play scenery
 
 13 further free Decor entries add log/slab/paddle-back benches, a stump stool, branching table, lantern picnic setting, potting/work stations, tree counter, walkable deck and balance trail, and decorative seesaw/rope swing. Search `Woodland`; see `WOODLAND_GATHERING.md` for measured sizes and the distinction between walkable structures and decorative seating/play scenery. Preview `staging/woodland_gathering_showcase.tscn` with F6.
+
+
+## Real-time climbing plants
+
+Five free plant species add original staged vine art and automatic training onto nearby supports. See `features/market/CLIMBING_VINES.md` for real-day schedules, supported objects, placement rules and tests; review `staging/climbing_vine_showcase.tscn` with F6. New vine artwork remains pending visual approval.

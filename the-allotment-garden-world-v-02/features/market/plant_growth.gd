@@ -9,6 +9,11 @@ const PLANTS := {
 	"cosmos":{"height":1.0,"width":.6,"days":[0,10,21,35,90]},
 	"daisy":{"height":.7,"width":.6,"days":[0,14,35,90,365]},
 	"basil":{"height":.5,"width":.45,"days":[0,7,21,35,56]},
+ "climbing_rose":{"height":.70,"width":.60,"days":[0,120,180,365,1095]},
+ "clematis":{"height":.55,"width":.50,"days":[0,30,90,180,730]},
+ "honeysuckle":{"height":.65,"width":.60,"days":[0,30,90,180,730]},
+ "ivy":{"height":.45,"width":.55,"days":[0,28,90,365,1095]},
+ "wisteria":{"height":.75,"width":.65,"days":[0,21,90,365,1825]},
 }
 
 static func species(id: String) -> String:

@@ -79,5 +79,5 @@ func verify() -> void:
  hud._close()
  world.queue_free()
  await process_frame
- print("PASS: all seven species and stages, real/offline clock boundaries, metre bounds, legacy saves, stage inventory, age-preserving pickup/replant, live growth and Shop stages")
+ print("PASS: all 12 species and stages, real/offline clock boundaries, metre bounds, legacy saves, stage inventory, age-preserving pickup/replant, live growth and Shop stages")
  quit()

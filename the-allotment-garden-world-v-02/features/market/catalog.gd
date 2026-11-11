@@ -26,7 +26,9 @@ const BASE_ITEMS := [
 	{"id":"basil","name":"Sweet basil","latin":"Ocimum basilicum","category":"Plants","price":0,"icon":7,"radius":.3,"season":"Summer","sun":"Full sun","water":"Moderate","description":"A leafy culinary herb with branching stems and paired green leaves."},
 ]
 
-const ITEMS := BASE_ITEMS+preload("res://assets/garden_art/french_collection.gd").CATALOG+preload("res://assets/garden_art/roman_collection.gd").CATALOG+preload("res://assets/garden_art/enchanted_collection.gd").CATALOG+preload("res://assets/garden_art/rustic_collection.gd").CATALOG+preload("res://assets/garden_art/woodland_collection.gd").CATALOG
+const CLIMBING_ITEMS := [{"id": "climbing_rose", "name": "Climbing rose", "latin": "Rosa climbing cultivar", "category": "Plants", "price": 0, "icon": 1, "radius": 0.4, "family": "Climbing vines", "description": "Pink climbing roses; up to 5 m of trained stems. Plant beside a trellis, arbor, post or column. Real elapsed days, including offline time; establishment takes months to years."}, {"id": "clematis", "name": "Clematis", "latin": "Clematis", "category": "Plants", "price": 0, "icon": 4, "radius": 0.4, "family": "Climbing vines", "description": "Purple star flowers; up to 4 m of trained stems. Plant beside a trellis, arbor, post or column. Real elapsed days, including offline time; establishment takes months to years."}, {"id": "honeysuckle", "name": "Honeysuckle", "latin": "Lonicera periclymenum", "category": "Plants", "price": 0, "icon": 5, "radius": 0.4, "family": "Climbing vines", "description": "Cream-gold flowers; up to 6 m of trained stems. Plant beside a trellis, arbor, post or column. Real elapsed days, including offline time; establishment takes months to years."}, {"id": "ivy", "name": "Climbing ivy", "latin": "Hedera helix", "category": "Plants", "price": 0, "icon": 7, "radius": 0.4, "family": "Climbing vines", "description": "Evergreen climbing foliage; up to 6 m of trained stems. Plant beside a trellis, arbor, post or column. Real elapsed days, including offline time; establishment takes months to years."}, {"id": "wisteria", "name": "Wisteria", "latin": "Wisteria sinensis", "category": "Plants", "price": 0, "icon": 2, "radius": 0.4, "family": "Climbing vines", "description": "Hanging violet flowers; up to 8 m of trained stems. Plant beside a trellis, arbor, post or column. Real elapsed days, including offline time; establishment takes months to years."}]
+
+const ITEMS := BASE_ITEMS+CLIMBING_ITEMS+preload("res://assets/garden_art/french_collection.gd").CATALOG+preload("res://assets/garden_art/roman_collection.gd").CATALOG+preload("res://assets/garden_art/enchanted_collection.gd").CATALOG+preload("res://assets/garden_art/rustic_collection.gd").CATALOG+preload("res://assets/garden_art/woodland_collection.gd").CATALOG
 
 static func by_id(id: String) -> Dictionary:
 	if id.count("@") > 1: return {}
@@ -56,6 +58,8 @@ static func stage_id(id: String, stage: int) -> String:
 	return plant+{0:"@seed",2:"@seedling",3:"@young",4:""}.get(stage,"")
 
 static func icon(item: Dictionary) -> Texture2D:
+	if item.get("plant",item.id) in ["climbing_rose","clematis","honeysuckle","ivy","wisteria"]:
+		return load("res://assets/garden_art/icons/"+str(item.get("plant",item.id))+".svg")
 	if item.id in preload("res://assets/garden_art/garden_boundary.gd").IDS or preload("res://assets/garden_art/french_collection.gd").SIZES.has(item.id) or preload("res://assets/garden_art/roman_collection.gd").SIZES.has(item.id) or preload("res://assets/garden_art/enchanted_collection.gd").SIZES.has(item.id) or preload("res://assets/garden_art/rustic_collection.gd").SIZES.has(item.id) or preload("res://assets/garden_art/woodland_collection.gd").SIZES.has(item.id):
 		return load("res://assets/garden_art/icons/"+str(item.id)+".svg")
 	var texture := AtlasTexture.new()

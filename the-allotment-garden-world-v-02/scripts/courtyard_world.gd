@@ -14,6 +14,8 @@ const ARC_SEGMENTS := 64
 var outer_radius := sqrt(INNER_RADIUS * INNER_RADIUS + 2.0 * STANDARD_ACRES * ACRE_M2 / (ARC_SEGMENTS * sin(WEDGE_ANGLE / ARC_SEGMENTS)))
 
 var player
+var local_vault
+var vault_status: Label
 var market_garden
 var lighting_button: Button
 var garden_lighting
@@ -47,6 +49,12 @@ func _ready() -> void:
 		garden_lighting.configure(self)
 	garden_lighting.phase_changed.connect(_update_lighting_label)
 	garden_lighting.follow_garden_clock(get_node("GardenWeather"))
+	local_vault = preload("res://features/vault/local_vault.gd").new()
+	local_vault.name = "LocalSaveVault"
+	add_child(local_vault)
+	local_vault.configure(self)
+	local_vault.status_changed.connect(func(message: String) -> void: vault_status.text = message)
+	vault_status.text = local_vault.status
 
 func _build_exploration_controls() -> void:
 	var layer := CanvasLayer.new()
@@ -76,7 +84,8 @@ func _build_exploration_controls() -> void:
 	box.add_child(plants)
 	var return_title := Button.new()
 	return_title.text = "Return to title"
-	return_title.pressed.connect(func() -> void: get_tree().change_scene_to_file("res://features/title/title_screen.tscn"))
+	return_title.pressed.connect(func() -> void:
+		if local_vault.save(): get_tree().change_scene_to_file("res://features/title/title_screen.tscn"))
 	box.add_child(return_title)
 	lighting_button = Button.new()
 	lighting_button.custom_minimum_size.y = 34
@@ -88,6 +97,28 @@ func _build_exploration_controls() -> void:
 		else: garden_lighting.resume_clock())
 	box.add_child(lighting_button)
 	box.offset_top = -224
+	var save_layer := Control.new()
+	layer.add_child(save_layer)
+	save_layer.set_anchors_and_offsets_preset(Control.PRESET_CENTER_TOP)
+	save_layer.offset_left = -210
+	save_layer.offset_right = 210
+	save_layer.offset_top = 16
+	var save_box := VBoxContainer.new()
+	save_box.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	save_layer.add_child(save_box)
+	var save_button := Button.new()
+	save_button.name = "SaveGarden"
+	save_button.text = "Save garden · Local vault"
+	save_button.pressed.connect(func() -> void: local_vault.save())
+	save_box.add_child(save_button)
+	vault_status = Label.new()
+	vault_status.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	vault_status.add_theme_color_override("font_color",Color("fff1ce"))
+	vault_status.add_theme_color_override("font_shadow_color",Color("273a2a"))
+	vault_status.add_theme_constant_override("shadow_offset_x",1)
+	vault_status.add_theme_constant_override("shadow_offset_y",1)
+	vault_status.add_theme_font_size_override("font_size",13)
+	save_box.add_child(vault_status)
 
 func _update_lighting_label(_amount: float) -> void:
 	if lighting_button == null or garden_lighting == null: return
@@ -371,10 +402,13 @@ func _open_legacy_plant_preview() -> void:
 # demo scope. It never assigns ownership to another garden or account.
 var ground_editor_session
 
-func open_ground_editor() -> void:
+func ensure_ground_editor() -> void:
 	if ground_editor_session == null:
 		ground_editor_session = preload("res://features/garden_editor/editor_session.gd").new()
 		ground_editor_session.name = "GroundEditorSession"
 		add_child(ground_editor_session)
 		ground_editor_session.configure(self, $Garden_01, "local_demo_neighborhood_garden_01", "local-demo", "local-demo", 20261013)
+
+func open_ground_editor() -> void:
+	ensure_ground_editor()
 	ground_editor_session.open()
