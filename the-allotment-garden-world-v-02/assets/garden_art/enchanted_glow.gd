@@ -10,7 +10,7 @@ var phase := 0.0
 
 func _ready() -> void:
  add_to_group("enchanted_garden_fx")
- var color: Color = Collection.COLORS[item_id]
+ var color: Color = Collection.COLORS.get(item_id,Color("e2b66f"))
  var key := color.to_html()
  if not textures.has(key):
   var gradient := Gradient.new()
@@ -45,7 +45,7 @@ func _ready() -> void:
  lamp = OmniLight3D.new()
  lamp.name = "BudgetedGlowLight"
  lamp.light_color = color
- lamp.omni_range = 2.8 if item_id in ["enchanted_tree","moon_arch","fairy_well"] else 1.8
+ lamp.omni_range = 2.8 if item_id in ["enchanted_tree","moon_arch","fairy_well","fairy_light_arbor"] else 1.8
  lamp.omni_attenuation = 1.8
  lamp.shadow_enabled = false
  add_child(lamp)

@@ -12,7 +12,7 @@ This collection replaces the primitive plant/furnishing/building meshes used by 
 | Existing character | Gardener rig, face morphs, modular outfits/hair/accessories | Existing authored character retained. Importer LOD/shadow mesh generation and avatar regressions verified; this change does not replace the character or claim new character artwork. |
 | Existing terrain | Grass, paths, courtyard and 83 ground-cover materials | Working terrain geometry, dimensions and path arrangement retained. Ground-cover obstacle detection supports the new asset footprints. |
 
-The 83 collection entries comprise 111 asset/stage combinations and 333 mesh detail variants (plus shared gate-leaf meshes). Each instance selects one of three distance ranges (0–18 m, 18–45 m, 45+ m). Repeated instances share cached meshes/materials. Geometry batches by material role, avoiding a node/draw call per petal. Every individual variant is below 40,000 triangles; lower detail never increases triangle count. Scene-wide performance still depends on the device, visible content and shadows; there is no mobile certification claim.
+The 96 collection entries comprise 124 asset/stage combinations and 372 mesh detail variants (plus shared gate-leaf meshes). Each instance selects one of three distance ranges (0–18 m, 18–45 m, 45+ m). Repeated instances share cached meshes/materials. Geometry batches by material role, avoiding a node/draw call per petal. Every individual variant is below 40,000 triangles; lower detail never increases triangle count. Scene-wide performance still depends on the device, visible content and shadows; there is no mobile certification claim.
 
 ## Use and preview
 
@@ -24,7 +24,7 @@ World collision uses simple authored recipes, separate from detailed visual geom
 
 ## Validation and status
 
-`tests/verify_garden_art.gd` checks all 111 combinations, shared-resource reuse, UV/normal/vertex/index validity, three LODs, triangle budgets, collision recipes/idempotence and reduced motion. Shop, courtyard, growth, acreage, ground-cover, layout, sidewalk and avatar regressions were run. Graphical renders were inspected with Godot's Compatibility renderer under Mesa software rendering; Godot 4.6.3 was available here, while the owner's editor is 4.7.2.
+`tests/verify_garden_art.gd` checks all 124 combinations, shared-resource reuse, UV/normal/vertex/index validity, three LODs, triangle budgets, collision recipes/idempotence and reduced motion. Shop, courtyard, growth, acreage, ground-cover, layout, sidewalk and avatar regressions were run. Graphical renders were inspected with Godot's Compatibility renderer under Mesa software rendering; Godot 4.6.3 was available here, while the owner's editor is 4.7.2.
 
 The owner accepted the initial collection as a starting direction. The gates/walls addition is implemented and integrated, and ready for owner visual review. Per the project's AGENTS.md, art is not marked final until the owner approves the rendered style. These are softly stylized game models, not a recreation of every painted detail in the supplied UI inspiration images. Future unimplemented design-spec locations/assets are outside this inventory. Plant dormancy, weather-dependent growth and cultivar-specific simulation remain outside this art change.
 
@@ -53,3 +53,8 @@ Both gate leaves have hinge-mounted collision, open automatically as the gardene
 ## Witchy fairy night garden
 
 18 further free Decor entries add magical mushrooms, a fairy cottage/ring/door, crystals, moon lanterns, cauldron, hat planter, spellbook, moon sculpture, enchanted tree, stars, sigil stone, lotus lamp, firefly jar, wishing well, arch and potion shelf. `ENCHANTED_GARDEN.md` describes dimensions, behavior, UTC clock/night previews, Compatibility-safe glow, light budget and tests. Preview with `staging/enchanted_garden_showcase.tscn` (F6).
+
+
+## Owner board-inspired rustic gardens
+
+13 new free Decor entries interpret the supplied Campsite screenshots: woven willow baskets/cones, branch trellises/obelisk/arbors, an opening twig gate and fence, quilt rack, chess/checkerboard/bowling displays and a parterre module. See `RUSTIC_BOARD_COLLECTION.md`; preview `staging/rustic_garden_showcase.tscn` with F6. Search `Campsite` in the Shop.

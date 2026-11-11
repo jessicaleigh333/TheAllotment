@@ -1,4 +1,5 @@
 extends RefCounted
+const Rustic := preload("res://assets/garden_art/rustic_collection.gd")
 const Enchanted := preload("res://assets/garden_art/enchanted_collection.gd")
 const Roman := preload("res://assets/garden_art/roman_collection.gd")
 const French := preload("res://assets/garden_art/french_collection.gd")
@@ -40,15 +41,15 @@ static func attach(root: Node3D, id: String, stage: int = 4, tint: Color = Color
 		node.visibility_range_end = [18,45,0][lod]
 		root.add_child(node)
 	root.set_meta("garden_asset",id)
-	if id in ["garden_gate","timber_gate"] or French.GATES.has(id):
-		var gate_type: String = French.GATES.get(id,id)
+	if id in ["garden_gate","timber_gate"] or French.GATES.has(id) or Rustic.GATES.has(id):
+		var gate_type: String = Rustic.GATES.get(id,French.GATES.get(id,id))
 		root.set_meta("gate_timber",gate_type == "timber_gate")
 		for side in [-1,1]:
 			var hinge := Node3D.new()
 			hinge.name = "LeftHinge" if side == -1 else "RightHinge"
 			hinge.position.x = side*(1.05 if gate_type == "garden_gate" else 1.0)
 			root.add_child(hinge)
-			attach(hinge,{"chateau_gate":"chateau_gate_leaf","potager_gate":"potager_gate_leaf"}.get(id,"iron_gate_leaf" if gate_type == "garden_gate" else "timber_gate_leaf"))
+			attach(hinge,{"chateau_gate":"chateau_gate_leaf","potager_gate":"potager_gate_leaf","branch_gate":"branch_gate_leaf"}.get(id,"iron_gate_leaf" if gate_type == "garden_gate" else "timber_gate_leaf"))
 			if side == 1:
 				for mesh in hinge.get_children():
 					if mesh is MeshInstance3D: mesh.scale.x *= -1
@@ -197,6 +198,9 @@ static func _plant(b: RefCounted, id: String, stage: int, tint: Color) -> void:
 				_leaves(b,p,height,.17,8,2)
 
 static func _object(b: RefCounted, id: String, tint: Color) -> void:
+	if Rustic.SIZES.has(id) or id == "branch_gate_leaf":
+		Rustic.build(b,id)
+		return
 	if Enchanted.SIZES.has(id):
 		Enchanted.build(b,id)
 		return
@@ -485,7 +489,7 @@ static func _bed(b: RefCounted) -> void:
 static func add_collision(root: Node3D) -> int:
 	if root.has_node("PlayerCollision") or root.has_node("Geometry/PlayerCollision"): return 0
 	var source_id: String = root.get_meta("garden_asset","")
-	var id: String = French.ALIASES.get(source_id,source_id)
+	var id: String = Rustic.ALIASES.get(source_id,French.ALIASES.get(source_id,source_id))
 	var recipes: Array = French.collision(id) if French.SIZES.has(id) else []
 	if id in ["garden_gate","timber_gate"]:
 		var controller := root.get_node_or_null("GateController")
@@ -526,13 +530,14 @@ static func add_collision(root: Node3D) -> int:
 		recipes = [[Vector3(0,dimensions.y*.5,0),dimensions,"box"]]
 	if Roman.SIZES.has(source_id): recipes = Roman.collision(source_id)
 	if Enchanted.SIZES.has(source_id): recipes = Enchanted.collision(source_id)
+	if Rustic.SIZES.has(source_id): recipes = Rustic.collision(source_id)
 	if recipes.is_empty(): return 0
 	var body := StaticBody3D.new()
 	body.name = "PlayerCollision"
 	body.collision_layer = 1
 	body.collision_mask = 2
 	var collision_parent: Node = root
-	if source_id in ["vine_pergola","iron_pavilion","espalier_screen","wall_fountain","stone_alcove","moon_arch","fairy_ring","enchanted_tree","moon_lantern","star_mobile"] and root.has_node("Geometry"):
+	if (source_id in ["branch_gate","rustic_arbor","fairy_light_arbor","garden_chess_set","backyard_bowling_lane","formal_parterre"] or source_id in ["vine_pergola","iron_pavilion","espalier_screen","wall_fountain","stone_alcove","moon_arch","fairy_ring","enchanted_tree","moon_lantern","star_mobile"]) and root.has_node("Geometry"):
 		collision_parent = root.get_node("Geometry")
 	collision_parent.add_child(body)
 	for recipe in recipes:
