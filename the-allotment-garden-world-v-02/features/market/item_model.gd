@@ -23,13 +23,13 @@ func rebuild(age: float = -1.0) -> void:
   Art.attach(self,plant,current_stage,blossom_tint)
  else:
   Art.attach(self,item_id)
-  dimensions = Art.Enchanted.SIZES.get(item_id,Art.Roman.SIZES.get(item_id,Art.French.SIZES.get(item_id,Art.Boundary.SIZES.get(item_id,Art.SIZES.get(item_id,Vector3.ONE)))))
+  dimensions = Art.Rustic.SIZES.get(item_id,Art.Enchanted.SIZES.get(item_id,Art.Roman.SIZES.get(item_id,Art.French.SIZES.get(item_id,Art.Boundary.SIZES.get(item_id,Art.SIZES.get(item_id,Vector3.ONE))))))
  _fit_dimensions(dimensions)
- if Art.Enchanted.SIZES.has(item_id):
+ if Art.Enchanted.SIZES.has(item_id) or item_id == "fairy_light_arbor":
   var effect := preload("res://assets/garden_art/enchanted_glow.gd").new()
   effect.name = "EnchantedGlow"
   effect.item_id = item_id
-  effect.position = Art.Enchanted.ANCHORS[item_id]
+  effect.position = Art.Enchanted.ANCHORS.get(item_id,Vector3(0,2,.30))
   add_child(effect)
  if not plant.is_empty() and current_stage == 0:
   var marker := Label3D.new()

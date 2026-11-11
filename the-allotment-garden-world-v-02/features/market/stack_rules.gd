@@ -1,5 +1,6 @@
 extends RefCounted
 ## Geometry-only assembly rules; heights are metres above each saved ground surface.
+const Rustic := preload("res://assets/garden_art/rustic_collection.gd")
 const Enchanted := preload("res://assets/garden_art/enchanted_collection.gd")
 const Roman := preload("res://assets/garden_art/roman_collection.gd")
 const French := preload("res://assets/garden_art/french_collection.gd")
@@ -9,6 +10,7 @@ const MAX_HEIGHT := 24.0
 const EPS := .018
 
 static func size(id: String) -> Vector3:
+ if Rustic.SIZES.has(id): return Rustic.SIZES[id]
  if Enchanted.SIZES.has(id): return Enchanted.SIZES[id]
  if Roman.SIZES.has(id): return Roman.SIZES[id]
  if French.SIZES.has(id): return French.SIZES[id]
