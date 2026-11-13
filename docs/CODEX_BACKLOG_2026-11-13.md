@@ -10,6 +10,17 @@ Source of decisions: owner discussions during Codex usage pause, 2026-11-12–13
 - Before each change: document dependencies, snapshot known-good release, test relevant existing behavior, explain migration/rollback. Never overwrite sole valid save.
 - Prioritize Windows playable build and updater reliability before expanding gameplay. Do not infer the updater is secure or functioning because it was once described as working.
 
+## P0 — FIRST: Codex → ChatGPT development handoff bridge (owner's top priority)
+**Goal:** minimize duplicated explanations and Codex usage. Keep using existing Codex Cloud on iPad; publish a concise, authorized handoff to a GitHub location the user's ChatGPT assistant can read. This takes precedence over other backlog tasks because it improves coordination across subsequent work.
+- **Feasibility first, no plugin:** verify Codex Cloud can write a handoff to an accessible GitHub branch/location during or at the end of a task. Test with a small sample and verify ChatGPT can retrieve it. Do not assume background processes or minute-by-minute pushes are supported.
+- **Conversation context:** capture available owner instructions and Codex replies, decisions, clarifications, and outstanding questions accurately. Preserve speaker labels, sequence, and timestamps where available. Do not claim access to conversations/messages Codex cannot export; do not invent or reconstruct verbatim dialogue.
+- **Status report:** current task, recent actions, files changed, tests actually run/results, blockers, next steps, UTC last-updated time, task/session identifier and commit/PR references. Distinguish observed facts from summaries or estimates.
+- **Low-token design:** prefer a small structured `CHATGPT_HANDOFF.md` at milestones/end of task; optionally `status.json` and append-only `conversation.jsonl` when supported. Avoid repeated AI summarization, one-minute commit spam, or extra reasoning calls. Evaluate lightweight scripted heartbeat (1–5 minutes) only if the Cloud environment supports it without slowing coding or creating noisy Git history.
+- **Privacy/security:** TheAllotment repository is public. **Never publish private conversation transcripts, credentials, personal data, or unpublished sensitive details there.** Use an approved private, access-controlled repository/location for dialogue, verify ChatGPT connector access, and redact secrets. Public repo may contain only a deliberately sanitized status report.
+- **Non-disruption:** read-only feasibility check before changes; no game code, updater, release workflow, or default branch changes. Work on an isolated branch/PR and seek approval for external publishing or new credentials. Do not build a separate plugin unless this lightweight approach proves inadequate.
+- **Future scope:** apply the same reporting pattern to Scholarship Hunter in its own project after a successful Allotment pilot. A general-purpose ChatGPT Companion plugin/help-desk integration is deferred, not part of the current game implementation.
+**Acceptance:** owner can say “Chat, catch up on The Allotment,” and ChatGPT retrieves an up-to-date, authorized handoff with recent conversation context and verifiable development status; clearly display last-update time and acknowledge any lag. Start with end-of-task/milestone reporting, then assess more frequent updates. Owner will share any OpenAI support reply about official Codex Cloud access.
+
 ## P0 — Windows build, distribution and updater recovery
 **Goal:** reliably install and play on another Windows PC (including daughter's PC), and update safely.
 - Locate and diagnose broken/expired download link, export pipeline, packaged Godot runtime, install path, game vault/save path and existing auto-updater. Distinguish link hosting failure from updater failure.
@@ -95,12 +106,13 @@ Source of decisions: owner discussions during Codex usage pause, 2026-11-12–13
 - Preserve peaceful gardening, realistic learning, established art direction, and no real-money requirement. Avoid speculative monetization.
 
 ## Execution order and handoff protocol
-1. **Audit only:** inventory actual repository and current build/updater; report what exists, what's missing and severity.
-2. Fix Windows delivery/updater and establish reliable build + recovery checkpoint.
-3. Add baseline regression tests, save protections, migration strategy.
-4. Integrate shared time/environment/plant simulation, then full offline catch-up in small PRs.
-5. Integrate harvest/inventory and diary event stream.
-6. Expand sourced SQLite catalog, Louise and help content in staged batches.
-7. Performance, playtesting and release hardening.
+1. **First: handoff bridge feasibility and minimal pilot** on isolated branch/private storage as appropriate; verify ChatGPT can retrieve the report and dialogue safely. Do not spend Codex usage on a full plugin.
+2. **Audit only:** inventory actual repository and current build/updater; report what exists, what's missing and severity.
+3. Fix Windows delivery/updater and establish reliable build + recovery checkpoint.
+4. Add baseline regression tests, save protections, migration strategy.
+5. Integrate shared time/environment/plant simulation, then full offline catch-up in small PRs.
+6. Integrate harvest/inventory and diary event stream.
+7. Expand sourced SQLite catalog, Louise and help content in staged batches.
+8. Performance, playtesting and release hardening.
 
 For each PR report: existing functionality preserved; files touched; reason; tests actually run and results; save migration implications; manual steps to verify; screenshots when visual; rollback procedure; open risks. No automatic merge to main.
