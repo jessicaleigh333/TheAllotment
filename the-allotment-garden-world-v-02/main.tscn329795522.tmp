@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bbc3fuvtw6jpw"]
+
+[ext_resource type="Script" uid="uid://u5l675uwnym" path="res://scripts/world.gd" id="1_world"]
+
+[node name="TheAllotmentWorld" type="Node3D" unique_id=1941650533]
+script = ExtResource("1_world")
