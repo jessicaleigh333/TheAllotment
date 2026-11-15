@@ -1,5 +1,5 @@
 # The Allotment — Game Design
-Status: Living design reference. Updated 2026-10-11.
+Status: Living design reference. Updated 2026-10-14.
 
 ## Purpose
 The Allotment is a beautiful, welcoming, softly stylized 3D gardening and social game. Players should be able to create extraordinary gardens through time and effort, without needing to spend real money. This document records design decisions and intended features; it is **not** proof that a feature is already implemented.
@@ -12,12 +12,38 @@ The Allotment is a beautiful, welcoming, softly stylized 3D gardening and social
 
 ## Neighborhoods and plots
 - The French garden neighborhood is an early focus. Each neighborhood contains nine plots.
-- Standard plots are approximately 1.84 acres; premium plots approximately 3.67 acres (design targets; verify actual in-game scale).
+- Owner-approved permanent layout: a shared circular courtyard with nine wedge-shaped gardens arranged around it, each entrance facing inward. Adjoining wedges meet along shared green hedges (stone walls may also be used); there are no radial paths between gardens. `main.tscn` is the game entry point with the detailed side-navigation icons.
+- The previous 3×3 grid is reserved for asset staging and prototypes, including walls; run `staging/asset_staging.tscn` separately. Garden scale and art remain prototypes until reviewed.
+- Standard plots are approximately 1.84 acres (7,446.22 m²); premium plots approximately 3.67 acres. Main-scene standard wedge meshes now use one Godot unit per metre, with their ground surface area verified. Shared paths and the courtyard are excluded from plot acreage. Premium plot geometry is still planned.
 - Assign randomized terrain and special feature selections deterministically when a neighborhood is created, using saved seeds/metadata.
 - Players should not be able to preview or identify which plots have rare features before discovery.
 - Support spacious gardens with meaningful open planting space, accessible paths, and sensible terrain/collision rules.
 - Allow full-scale, substantial features (including major grottos, ruins and monumental landscape elements) even on standard plots where layout permits; do not arbitrarily reduce everything to tiny ornaments.
 - Players should be able to garden among and around substantial landmarks.
+
+## Garden selection, ownership and visiting
+Owner-confirmed rules (2026-10-13). Status: local avatar walking implemented; login, claiming and authoritative ownership enforcement remain planned.
+
+- After logging in, a new player can choose an empty, unclaimed garden. A garden already claimed by another player is unavailable for selection.
+- Before choosing, a new player can enter and walk around available gardens to inspect the space. Entering or viewing a garden does not claim it; selection is a separate deliberate action.
+- Every player can enter every garden in the game and look around, including gardens owned by other players. Owning a garden is not a prerequisite for visiting.
+- Only a garden's owner may add, remove or move its contents. Visitors cannot change another player's layout, plants, decorations or other placed objects.
+- Visitors will be able to perform specific permitted tasks later. Those tasks and their permissions will be defined separately; visiting alone does not grant editing permission.
+- Available gardens start without player-added plants, decorations or buildings. Existing sample furnishings in the prototype are demonstration assets, not a completed new-player starting state.
+- Exploring available spaces must preserve the existing rare-feature discovery rule: ordinary inspection must not expose hidden rare-feature metadata or reveal undiscovered features.
+- Implementation must persist ownership and enforce it on changes to garden contents. Availability must be checked when a player selects a garden so two players cannot claim the same space.
+
+## Account onboarding and neighborhood codes
+Owner-confirmed direction (2026-10-13). Status: specified; account services, terms acceptance, neighborhood lookup and this onboarding UI are not yet implemented.
+
+- New-player sequence: create an account / log in, complete required terms acceptance, choose a neighborhood, explore, then explicitly select an empty unclaimed garden.
+- The neighborhood step includes a text input labeled **Neighborhood code**, followed by a **Join neighborhood** button, so a player can enter a code shared by a friend.
+- Every neighborhood has a unique, persistent shareable ID/code. Players can view and copy their neighborhood's code to invite friends. The final code format is not yet decided.
+- A code identifies the neighborhood, not an individual garden. Joining through a code does not claim a garden or change editing permissions.
+- Players without a code need a route to find a neighborhood with available gardens; the field must not prevent them from continuing.
+- Invalid or unknown codes show a clear message and allow correction without losing onboarding progress.
+- A neighborhood with all nine gardens claimed remains open to visitors. Explain that no gardens are currently available there, and let the player visit or look for another neighborhood with an unclaimed space.
+- Garden availability is rechecked when a player chooses a space; a valid neighborhood code does not reserve a garden.
 
 ## French landscape authenticity
 Ground French-neighborhood designs in real French garden and landscape precedents rather than generic fantasy:
@@ -35,7 +61,37 @@ These are **inspirations**, not instructions to copy protected contemporary artw
 - Seasonal world events and themed decorations (Easter, Halloween, Christmas) may encourage return visits.
 - Daily login rewards can include decorative items. Players who do not spend real money must still have fair routes to attractive gardens and earnable decor.
 - Social/team activities and short, skill-based minigames are planned; make controls approachable on touch and desktop, with precise timing and meaningful mastery.
-- A detailed, inclusive avatar creator is planned, not an immediate implementation priority.
+- Owner requested a playable cozy garden character and an expandable avatar section on 2026-10-13. The initial workshop is implemented separately; main-menu access will be added later. A broader, inclusive appearance library remains planned.
+
+## Player character and avatar workshop
+Owner-requested direction (2026-10-13). Status: functional local prototype integrated; original character artwork ready for visual review.
+
+- A reusable animated gardener starts in the shared courtyard. Camera-relative strolling, brisk walking, physical floor/structure/hedge collision, all nine entrance routes and a switch to the neighborhood overview are implemented. Visiting does not claim or edit a plot.
+- Original editable Blender source and a rigged GLB provide idle/walk animations, four hair arrangements, dress/trousers, straw hat with flowers, satchel, apron, freckles and garden-inspired clothing details. The latest owner-supplied romantic gardener sheet guides almond eyes, sculpted face, fuller waves, a layered sage/ivory skirt, corset lacing, botanical embroidery and worn leather accessories; the requested first texture polish pass is now integrated. Original shared linen/embroidery, hair, leather, straw, skin and iris maps preserve player recoloring. Owner-requested slimmer biceps/sleeves, shorter chin, fuller cheeks and a gentle storybook smile are implemented. The hat correction adds a fitted crown, gently curved solid brim/rolled edge and attached flower band; final sculpt/animation/production polish remains planned.
+- Owner requested further reference-matching polish with free resources and credit tracking (2026-10-14). The character now adapts CC0 MakeHuman head anatomy, Microsoft/Khronos woven-fabric maps and Poly Haven sunrise illumination. Sources, license evidence, hashes and credit text are preserved in the project CREDITS.md/third-party manifest. Face controls include continuous nose/eyelid corrections and keep fitted features/headwear aligned.
+- The separate `features/avatar/screen.tscn` workshop has live preview, three palettes, eleven color controls, height/build controls and initial face morphs. A versioned local appearance save is loaded by the player. It is deliberately absent from the main navigation until later.
+- Additional hairstyles, clothing and accessories, wider body/face representation, production art polish/LOD, camera obstruction handling, touch/gamepad controls and multiplayer avatar synchronization remain future work. Starter proportions and options do not represent complete customization of every appearance detail.
+- Preview, architecture and testing: `the-allotment-garden-world-v-02/features/avatar/README.md` and `TESTING.md`.
+
+## Ground covers and pathway customization
+Owner-requested scope (2026-10-13). Status: functional local editor integrated; procedural surface artwork ready for review; account/multiplayer services still planned.
+
+- Garden Editor now includes a visual catalog of 83 ground-cover definitions across stone/cobblestone, brick/terracotta, decorative tiles, natural covers, wood/rustic surfaces, ornamental/specialty surfaces and luminous materials. Definitions share tileable procedural shader profiles and per-placement appearance data.
+- Starter materials are cobblestone, brick, moss, gravel, basic tile, ornate tile, glowing pebbles and glowing stepping stones. The rest of the catalog uses the same expandable system.
+- Player controls include a color wheel, HEX colors, presets/favorites, independent surface/grout/accent/glow colors, finish, pattern size/rotation, glow enable/intensity/scope and multiple glow colors. Borders have separate appearance and glow controls.
+- Functional tools include brush painting, straight/curved paths, circles, rectangles, erase, replace, recolor and sample. Whole-stroke undo/redo and owner/context/seed-scoped save/load are implemented.
+- The current trowel button opens an explicitly local demo editor for Garden 01. This is not a live account claim. Neighboring wedges and protected structure/hedge footprints cannot be painted. The original terrain and objects are preserved.
+- A separate sloped staging workshop provides day/night examples, layered details, edging and a luminous trail. A reusable day/night node drives material emission without per-stone lights. Compatibility has visible emission; renderer-supported bloom still requires Forward+/Mobile verification.
+- Logical placement uses 0.5-metre cells, chunk/material batching and metre-based tile UVs. Flush borders and feathered transitions are implemented; sculpted vegetation/crystal detail, raised curbs, final art, production performance tuning, mobile verification and authoritative multiplayer synchronization remain future work.
+- Implementation, preview and tests: `the-allotment-garden-world-v-02/features/garden_editor/README.md` and `TESTING.md`.
+
+## Neighborhood weather
+Owner-requested feature (2026-10-13). Status: functional simulated weather provider and forecast module integrated.
+
+- Clicking the main-screen weather information opens current conditions and the next five days, with conditions, high/low temperatures, rain chances and current wind speed. The module supports Fahrenheit/Celsius display.
+- Weather is simulated for the neighborhood, shared across its gardens and deterministic by persisted neighborhood seed and UTC date. Current conditions use the same daily generation as the forecast; hourly updates refresh the HUD/module. A game-clock override is available for future authoritative time integration.
+- Real-world weather services, visual rain/snow effects and effects on plant growth/watering are not connected.
+- Implementation and testing: `the-allotment-garden-world-v-02/features/weather/README.md`.
 
 ## Current asset-generation priorities
 Track each item as Planned / In progress / Ready for review / Approved / Integrated.
@@ -58,3 +114,109 @@ Asset status is **unverified** until inspected in the actual repository/project.
 - Do not assume all concepts above are already coded.
 - See `AGENTS.md` for Codex working instructions.
 - Update this document when the owner confirms new design decisions.
+
+## Seasonal title and local device profiles
+Owner-confirmed direction (2026-11-09). Status: local implementation integrated on the seasonal title feature branch; visual and sound review pending.
+
+- Illustrated title now supports four seasonal artworks and day/night lighting. Automatic mode uses local computer date/hour and meteorological seasons, with a Southern Hemisphere option and preview overrides. Twilight is an artistic fixed schedule rather than astronomical sunrise/sunset.
+- Gentle foliage motion, dog chest breathing, lantern flicker, an extra daylight butterfly, original synthesized breeze/insects and occasional distant chimes are implemented. Volume, mute and reduced motion are device settings.
+- For the current offline prototype, Login selects a saved local profile and Create Account creates one without passwords or remote services. This bypasses the earlier account/terms/neighborhood preview and enters the existing local Garden 01 demo. It does not establish account identity, legal consent, multiplayer access or ownership. Future online onboarding rules above remain planned.
+- Local profiles separate saved avatar appearance, landscaping and favorites. The first profile copies existing legacy saves while preserving the originals. Return to title allows switching profiles. Profile support itself does not add commerce; see the subsequent local market section for shop integration.
+- Implementation and validation: features/title/README.md and features/profiles/README.md in the Godot project.
+
+## Local garden market and backpack
+Owner-requested direction (2026-11-09), using supplied French-market, backpack and botanical-catalog reference images. Status: functional local starter market integrated on the market feature branch; UI artwork and prototype 3D models ready for visual review.
+
+- Shop and Inventory side buttons open a live full-screen illustrated market/backpack. Categories, common/Latin-name search, owned filtering, featured items, six pinned common-item slots and item details are implemented. The Botanical catalog tab contains seven starter plant types with seed, seedling, young and mature stages, not a complete encyclopedia.
+- Shop items are currently free, as requested. Existing Rune balances are preserved but ignored. Atomic saves include free bag additions, favorites and placed items. Seeds are available through the real-time growth stage selector; see the plant-growth section.
+- Seven growing plant forms, six decor items and a decorative watering can have reusable prototype 3D meshes and can be placed in the inner circle or local Garden 01 demo. Placement checks terrain bounds, protected structures, hedge margins and overlap with purchased objects. Rotation, camera pan/zoom, cancel, persistence and returning placed items to the backpack are supported. A straw hat item equips the existing avatar option.
+- Item card illustrations guide the intended art quality; in-game meshes remain simple prototypes. Harvest, garden-plan lists, avatar collections, online commerce and authoritative ownership are not claimed. Existing free ground editing remains available.
+- Sources, limitations and preview: features/shop/README.md and features/inventory/README.md in the Godot project. Validation includes market/save/placement tests, HUD navigation, legacy save migration, all prototype models, avatar and ground-cover regressions, and real OpenGL UI screenshots.
+
+## Free inner-circle decorating
+Owner-confirmed direction (2026-11-09). Status: functional local prototype, ready for visual review.
+
+- Shop items are free to use. Decorate inner circle starts placement directly without currency or bag-stock requirements. Repeated copies remain available until Done/Escape. The earlier Garden 01 destination remains selectable.
+- The paved central circle, raised approach-path edges and surrounding grass are decoratable. Placement samples their actual heights, rejects footprints that straddle a curb, and protects the center planting, existing planters, a continuous walking loop and all nine entrance routes. Green/red ghosts indicate valid/blocked space.
+- Placed items persist with a courtyard/garden area tag. Legacy untagged records still load in Garden 01. Existing balances and saves are not reset. Returning placed items to the backpack remains supported.
+- This applies to the local shared-space prototype. It does not grant editing rights in a future multiplayer neighborhood. Prototype model/art limitations remain unchanged.
+- Validation: free repeated placement and empty-wallet access, both surface heights, protected routes, overlap rejection, per-area persistence, legacy records, direct Shop entry, HUD navigation and existing avatar tests against a decorated courtyard passed.
+
+## Real-time plant growth and scale verification
+Owner-requested 2026-11-10; owner selected real days and weeks. Status: functional local growth and stage selection; prototype art ready for visual review.
+
+- Seven starter species now support seeds, seedlings, young and mature starter plants in the free Shop. Sprouts are an intermediate visible stage. Saved UTC timestamps advance planted plants while the game is closed, and live visuals refresh once a minute. Larger shop plants start at the appropriate age; old mature placements remain mature.
+- Growth schedules are representative ideal-condition real-time days. Full-size defaults range from 56 days for basil and 90 days for sunflower/cosmos to two or three years for established lavender/shrubs. These are explicit prototype assumptions, not exact botanical predictions. Weather, watering, dormancy, annual death and harvest do not yet affect growth. Decorative foliage on arches/planters remains fixed decor.
+- Pickup/backpack/replanting retains the achieved stage and exact accumulated age, with backpack time paused. Saved growth fields are validated and legacy placement files remain compatible. Mature footprints are reserved before planting to protect routes and neighboring objects.
+- Shop models have measured representative metre dimensions and actual stage previews. Examples: sunflower 1.8 m, hydrangea 1.5 m, rose 1.2 m tall. Shop decor prototypes also use explicit metre dimensions. These are chosen forms, not uniform sizes for every cultivar. The model studio includes 1 m and 1.65 m references.
+- Independent transformed world-space triangle measurements verify all nine garden wedges at 7,446.216 m² (1.84 acres) each, about 117.52 m radial depth and 102.28 m outer chord width. The stone courtyard is 2,122.202 m² (0.5244 acre). Plot acreage excludes the shared circle and approach paths. The approved geometry is unchanged; it is not exactly two acres per plot. Original 18 m staging bays are separate sample gardens.
+- Reproducible audit and horticultural sources: docs/SCALE_AUDIT.md and features/market/GROWTH.md. Validation covers all stage transitions, offline clocks, real mesh bounds, age-preserving inventory, legacy saves, the Shop, courtyard placement, HUD and avatar regression checks.
+
+
+## Detailed garden asset implementation — 2026-11-10
+
+The current playable collection now uses a shared authored procedural mesh library for seven plants with five visual growth stages, eight Market props, and nine neighborhood asset types (24 entries/52 stage combinations). These replace the former primitive plant, furniture and building forms in the live world, Market inspection and placement. Three shared distance-detail variants, UV/normal/vertex-color materials, simple collision recipes, terrain footprint protection, subtle wind/water/candle motion and reduced-motion support are implemented. Existing grass, paths, garden geometry and authored avatar are retained. The inventory and reproduction instructions are in assets/garden_art/README.md and staging/garden_art_gallery.tscn. All 52 variants have automated mesh/LOD/collision checks; applicable gameplay regressions and Compatibility renderer previews were checked. Owner visual approval is required before final art sign-off. Future planned assets and unimplemented horticultural simulation are not claimed complete by this collection.
+
+
+## Garden gates and rock wall additions — 2026-11-10
+
+The owner accepted the initial detailed collection as a starting direction and requested the earlier garden gates and rock walls be included. Prior model files could not be found in the available project/archive inventory, so matching original implementations were added: wrought-iron and timber double gates, capped rock wall straight/corner modules and an end pier. All five are free Decor shop entries with metre-scale live models, icons, rotation, placement/retrieval and local save restoration. Boundary sockets snap endpoints and oriented footprint checks permit touching joints while rejecting overlap; route protection and gate swing reservations remain enforced. Both gates open on gardener proximity and close after a clear delay, with moving hinge collision. Gallery previews include an open/close control. Automated tests verify dimensions, connections, saved placements and actual avatar passage through each gate; 57 asset/stage combinations pass the shared mesh audit. New gate/wall art is ready for visual review, not assumed identical to missing earlier models. Terrain/layout and the previously verified acreage are unchanged.
+
+
+## Expanded French garden collection — 2026-11-10
+
+The owner requested more French garden-inspired style variations, pots, sculptures and structures. Twenty-two original free Decor items are now integrated: château/potager gate variants; formal limestone, rustic fieldstone and ivy walls plus a stone balustrade; six open clay/stone vessels; dove, botanical relief, muse bust, armillary and sundial sculptures; vine pergola, iron pavilion, espalier screen, wall fountain and stone alcove. The designs draw on the existing Villandry/Giverny/Versailles vocabulary and Anduze pottery traditions rather than claiming historical replicas. Full inventory, exact metre bounds and inspiration notes are in assets/garden_art/FRENCH_COLLECTION.md.
+
+All additions use live Shop/Backpack placement, retrieval and local saves. New gate styles reuse proximity opening and moving collisions; boundaries reuse connection sockets and overlap rules. Structures use fitted post collision and preserve walk-through openings. Family/inspiration terms are searchable. Pots and sculpture are decorative; planting into purchased vessels, harvestable espalier fruit and a working astronomical sundial are not implemented by this art change. Water/foliage motion honors reduced cosmetic motion. Existing terrain, grass, stone paths and acreage are retained.
+
+The dedicated staging/french_garden_showcase.tscn previews all 22 additions; the full gallery now has 51 entries and 79 asset/stage combinations with three shared distance-detail variants. New collection, full mesh audit, Market, courtyard, original boundary and growth regression tests pass, with Godot import and rendered Compatibility previews inspected. New collection art is ready for owner visual review, not automatically final.
+
+
+## Roman garden architecture and vertical building — 2026-11-10
+
+The owner requested Roman columns and vertical construction, including stacked columns. Fourteen original free Decor modules are integrated: square plinth, Attic-style base, plain/fluted/half-height shaft sections, Doric/Ionic/Corinthian capitals, three complete columns, architrave beam, cornice slab and paneled pedestal. The Shop supports placement on compatible flat tops at saved elevations, with actual 3D height intervals and oriented horizontal overlap checks. Complete columns and individual shaft modules may be stacked. Beams align across level supports; a wide top allows more pieces at independently picked horizontal positions. Compatible existing pots/sculptures can sit on the new supports.
+
+Stack mode is enabled for Roman parts, toggled by T or the placement button. View up/down changes camera height; no unsupported floating placement is introduced. Terrain, grass, paths, acreage and protected-route footprints remain intact. Optional version-1 save fields store stable placement IDs, ground height, elevation and support IDs. Legacy records are migrated additively when placement opens. Missing/cyclic/foreign supports and invalid heights are rejected; dependent upper pieces must be retrieved before their supports. Construction reaches up to 24 m above sampled ground, within the existing 500-piece save limit. Support is geometric assembly, not a structural-load or gravity simulation.
+
+Inventory, metre dimensions, controls and limits: features/market/VERTICAL_BUILDING.md. The dedicated staging/roman_building_showcase.tscn includes a 12-piece, 5.15 m colonnade using the same support rules. New tests verify model bounds/icons, a persisted multilevel stack, legacy migration, support ray picking, building above a beam, two-column support, overlaps, height limits, retrieval order and real avatar passage under a beam. Shared mesh checks cover all 93 asset/stage combinations; Market, courtyard, growth, French collection, original gates/walls and sidewalk regressions pass. Godot import and real-world rendering were checked. New Roman art is ready for owner visual review before final sign-off.
+
+
+## Witchy fairy night garden — 2026-11-10
+
+The owner explicitly requested whimsical witchy/fairy decor with neon glow at night. Eighteen original free Decor entries are integrated: mushroom cluster/cottage/ring, crystal cluster, moon lantern, cauldron, witch-hat planter, spellbook, crescent sculpture, fairy door, enchanted tree, star mobile, sigil stone, lotus lamp, firefly jar, wishing well, moon arch and potion shelf. This fantasy collection sits alongside the established French/Roman designs and is not claimed as historical French ornament. Inventory and actual metre dimensions are in assets/garden_art/ENCHANTED_GARDEN.md.
+
+The existing day/night driver now follows the shared UTC garden/weather clock, with dawn/dusk fades. New luminous trim, cap freckles/windows, crystals, potion/water and stars use a shared night-emission material plus depth-tested soft halos. Up to six nearby shadow-free decor lights are enabled within 24 m of the camera. The effect is visible with the project's Compatibility renderer, without requiring post-process bloom. Reduced cosmetic motion freezes shimmer and foliage wind. A lower-right garden-lighting control cycles automatic clock/day preview/night preview; previews do not advance growth/weather or modify saves. Existing ground-editor manual lighting remains supported.
+
+All items use the working free Shop, placement/rotation/retrieval and local saves. Full visual footprint radii protect spacing/routes; the arch is walk-through and the fairy ring has entrance gaps. Compatible small ornaments can sit on Roman supports. The collection is decorative rather than potion crafting, spell casting, teleportation or entering miniature houses. Terrain, grass, paths, acreage, previous collections and saved vertical construction are retained.
+
+A dedicated staging/enchanted_garden_showcase.tscn provides day/night comparisons and a small assembled display. All 18 models/icons/bounds/footprints, save restoration, automatic/manual night phases, reduced motion, light budget, ghost suppression, raised ornaments and real avatar passage are tested. The full mesh audit passes 111 asset-stage combinations; Market, courtyard, vertical construction, weather, ground-cover/editor and layout regressions pass. Import, real-game day/night renders and existing ground-cover day/night pixel-contrast tests were checked. New art is ready for owner visual review before final sign-off.
+
+
+## Owner board-inspired rustic garden collection — 2026-11-11
+
+The owner supplied two Campsite-board screenshots after live Pinterest access was unavailable. Visible references include woven willow climbing planters, branch trellises/obelisks/gates, a quilt-drying rack, fairy-lit paths, giant chessboards, an outdoor bowling lane and a formal compartmented garden. Thirteen original free Decor interpretations are integrated into the Shop and existing placement/save system: branch trellis, twig obelisk, willow basket/cone planter, rustic arbor, opening twig gates/fence, quilt rack, chess display, grass/stone checkerboard insert, bowling display, parterre module and fairy-lit arbor. This is based on supplied images, not a claim of browsing the live boards or copying branded products.
+
+Branches are curved/tapered, joints lashed, willow strands interlace over/under stakes, quilt patches follow a draped shape, and the chess display includes 32 original pieces. The checkerboard's open squares reveal the existing lawn. The night arbor reuses the established glow/clock/light budget. New gates retain proximity opening and boundary sockets. All models have explicit metre bounds, full footprint spacing, shared material batches and three detail variants. Terrain, existing grass/path geometry, acreage and previous collections are retained. Chess and bowling remain decorative displays, without new game rules/scoring/physics; planting into wicker baskets and training live growth onto supports are not new mechanics.
+
+Inventory, dimensions and limitations: assets/garden_art/RUSTIC_BOARD_COLLECTION.md. The dedicated staging/rustic_garden_showcase.tscn previews all 13; search Campsite in Shop → Decor. Full gallery now has 96 entries / 124 asset-stage combinations. New collection tests pass catalog/icons/bounds/footprints/collision, all-item placement/save restore, gate motion, boundary compatibility, night hookup and actual walking through the gate/arbors/parterre cross path. Market, courtyard, vertical-building, enchanted-night and full shared mesh audits pass; import and graphical previews checked. Art is ready for owner visual review before final sign-off.
+
+
+## Woodland gathering and play scenery — 2026-11-11
+The owner supplied three additional Campsite board screenshots and requested continued additions to the free 3D decorating collection. Original interpretations add 13 items: live-edge, paddle-back and rounded-log benches; a stump stool; a branching table; a lantern picnic setting; potting station and sheltered workbench; tree-trunk counter; walkable gathering deck and stump balance trail; decorative log seesaw and rope-swing display. No external photographs, product branding or account identifiers are redistributed.
+
+The 4 × 4 m deck has a 0.24 m top and a 0.9 m entry ramp (4.9 m total depth); its flat support area is offset 0.45 m behind the origin and excludes the ramp. Furniture and compatible ornaments may stack on supported points. The 3 × 4.8 m balance trail has 0.45 m-high beams and an entry ramp/landing. Actual avatar ramp passage, collision, full model footprints, exact metre bounds, free Shop search/placement and save restoration are verified. Picnic lantern cores glow at night within the existing global light budget. Seating, riding, crafting, drinks service, music and yoga actions remain unimplemented; the Shop identifies decorative uses. Existing terrain, planting, grass, stone paths and protected routes are preserved. Review scene: `staging/woodland_gathering_showcase.tscn`. Art remains pending owner visual approval; this extends the authorized woodland direction rather than changing established plot design.
+
+
+## Real-time climbing plants and local save vault — 2026-11-11
+The owner approved the woodland collection's appearance, requested automatic climbing when vines are planted beside structures, specified that all growth remain in real time, and requested a local progress vault before any multiplayer/connected features.
+
+Five free climbing species (climbing rose, clematis, honeysuckle, ivy, wisteria) now use the existing real elapsed/offline plant clock and stage selector. Representative establishment ranges from two to five actual years; seeds/seedlings develop over real days/months and mature shop plants can start already trained. Supported authored routes follow trellises, arch crowns, pergola/pavilion beams, fixed piers, cones, posts and aligned Roman assemblies at metre scale. Roots within 0.85 m may share a compatible support footprint while remaining subject to terrain, lattice/column-interior and other-object restrictions. Saved positions, scope, IDs and biological age deterministically reconstruct vines. Removing a structure preserves its planted vine and age. Existing decorative foliage is retained. Pruning, invasive spread and structural damage remain future work. New vine artwork is ready for visual review; prior woodland approval does not automatically approve it.
+
+The device-local vault adds an explicit Save garden button and Settings controls, 60-second/focus-loss/title-return/window-close checkpoints, last-position and walking-camera restoration, immediate completed landscaping saves, and landscaping restoration on garden entry. Existing profile-scoped plants/ages, inventory, favorites, stacked decoration and avatar appearance retain their existing stores. Verified latest/previous ZIP backups rotate only after readback. Corrupt session/market/landscaping files are preserved and reported. The first named profile copies legacy session/backups as well as prior data. No account credentials, multiplayer, online ownership or cloud/device synchronization is added. Progress files and backups are excluded from source/distribution archives. Documentation: features/market/CLIMBING_VINES.md and features/vault/README.md. Godot 4.6.3 import, actual gameplay/save tests, full mesh audit and Compatibility-renderer previews are the verification basis; 4.7.2 was not available here.
+
+
+## Windows USB/CD edition and updater — 2026-11-11
+The owner requested the Windows update machine after choosing a shareable physical USB/CD game edition. A separate Godot launcher now installs an included, signed Windows starter game into the player's own account, checks a public GitHub release channel on startup and every 30 idle minutes, supports automatic or manual downloads, waits while the garden runs, and permits offline play and newer signed USB/CD upgrades. It verifies RSA/SHA-256 release signatures and archive/file hashes, rejects unsafe/oversized archives, activates immutable version folders through atomic pointers, retains a verified previous game version, and serializes installs/launcher sessions. Rolling back game code does not roll back garden saves; highest received builds prevent automatic reinstall of a deliberately rolled-back release.
+
+The game keeps its exact existing application/save identity, real-time device-clock growth and local vault paths; no accounts, multiplayer, clock-verification service or save upload is introduced. The launcher stores only its own installs/preferences/process state separately. Owner build/signing tools and a Windows GitHub Actions workflow prepare player packages and optionally draft releases. The production private signing key is only in a separate local owner kit, never in repository/player/source packages. A live update channel requires publishing the reviewed first release and later matching signed assets; this assignment does not publish a live release or merge main. The launcher itself is not self-updating. Microsoft code signing and native Windows desktop beta verification remain outstanding. Official Godot 4.6.3 exports, signed protocol/real HTTP failure tests, an exported-PCK save/reopen test, Linux release-runtime sidecar startup and graphical launcher review provide current evidence. Documentation: distribution/README.md.
+

@@ -1,0 +1,92 @@
+name: Windows garden beta
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: Game version (for example 0.3.1)
+        required: true
+        default: '0.3.1'
+      build:
+        description: Increasing release number (must exceed every previous build)
+        required: true
+        default: '2'
+      draft_release:
+        description: Also create a draft GitHub release for owner review
+        type: boolean
+        default: false
+permissions:
+  contents: read
+jobs:
+  windows-beta:
+    runs-on: windows-latest
+    timeout-minutes: 20
+    permissions:
+      contents: write
+    env:
+      GODOT_VERSION: 4.6.3
+      BETA_VERSION: ${{ inputs.version }}
+      BETA_BUILD: ${{ inputs.build }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install owner release tools
+        run: python -m pip install -r distribution/requirements-publisher.txt
+      - name: Fetch official Godot editor and templates
+        shell: pwsh
+        run: |
+          $editor = "Godot_v$env:GODOT_VERSION-stable_win64.exe.zip"
+          Invoke-WebRequest "https://github.com/godotengine/godot-builds/releases/download/$env:GODOT_VERSION-stable/$editor" -OutFile "$env:RUNNER_TEMP/godot.zip"
+          Expand-Archive "$env:RUNNER_TEMP/godot.zip" "$env:RUNNER_TEMP/godot"
+          $godot = (Get-ChildItem "$env:RUNNER_TEMP/godot/*console.exe").FullName
+          "GODOT_BIN=$godot" >> $env:GITHUB_ENV
+          Invoke-WebRequest "https://github.com/godotengine/godot-builds/releases/download/$env:GODOT_VERSION-stable/Godot_v$env:GODOT_VERSION-stable_export_templates.tpz" -OutFile "$env:RUNNER_TEMP/templates.zip"
+          python -c "import os,zipfile; z=zipfile.ZipFile(os.environ['RUNNER_TEMP']+'/templates.zip'); z.extract('templates/windows_release_x86_64.exe',os.environ['RUNNER_TEMP'])"
+      - name: Test signed updater on Windows
+        timeout-minutes: 3
+        shell: pwsh
+        run: |
+          python distribution/tests/create_fixtures.py "$env:RUNNER_TEMP/fixtures"
+          $env:APPDATA = "$env:RUNNER_TEMP/test-appdata"
+          & $env:GODOT_BIN --headless --path distribution/launcher --script res://tests/test_protocol.gd -- "$env:RUNNER_TEMP/fixtures"
+          if ($LASTEXITCODE -ne 0) { throw 'Updater tests failed' }
+      - name: Read owner release key
+        env:
+          ALLOTMENT_UPDATE_SIGNING_KEY: ${{ secrets.ALLOTMENT_UPDATE_SIGNING_KEY }}
+        run: |
+          python -c "import os,pathlib; k=os.environ.get('ALLOTMENT_UPDATE_SIGNING_KEY',''); assert k.strip(),'Set the owner release-key secret first'; pathlib.Path(os.environ['RUNNER_TEMP']+'/release-private.pem').write_text(k)"
+      - name: Build Windows USB package and signed release assets
+        shell: pwsh
+        run: |
+          & python distribution/tools/build_distribution.py --godot $env:GODOT_BIN --game-project the-allotment-garden-world-v-02 --templates "$env:RUNNER_TEMP/templates" --out "$env:RUNNER_TEMP/output" --key "$env:RUNNER_TEMP/release-private.pem" --version $env:BETA_VERSION --build $env:BETA_BUILD
+          if ($LASTEXITCODE -ne 0) { throw 'Windows export failed' }
+      - name: Smoke-test the Windows game
+        shell: pwsh
+        run: |
+          $game = Start-Process "$env:RUNNER_TEMP/output/exported-game/TheAllotment.exe" -ArgumentList '--headless','--quit-after','8' -PassThru
+          if (-not $game.WaitForExit(30000)) { $game.Kill(); throw 'Game did not exit its smoke test' }
+          if ($game.ExitCode -ne 0) { throw 'Game failed its smoke test' }
+      - uses: actions/upload-artifact@v4
+        with:
+          name: The-Allotment-Windows-USB
+          path: ${{ runner.temp }}/output/The_Allotment_Windows_USB.zip
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Signed-release-assets
+          path: ${{ runner.temp }}/output/release-assets/*
+      - name: Create draft release only
+        if: ${{ inputs.draft_release }}
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          $info = Get-Content "$env:RUNNER_TEMP/output/release-assets/release-info.json" | ConvertFrom-Json
+          gh release create $info.tag --draft --target $env:GITHUB_SHA --title "The Allotment $($info.version)" --notes "Windows garden beta. Review and test before publishing." "$env:RUNNER_TEMP/output/release-assets/$($info.archive)" "$env:RUNNER_TEMP/output/release-assets/update.json" "$env:RUNNER_TEMP/output/The_Allotment_Windows_USB.zip"
+          if ($LASTEXITCODE -ne 0) { throw 'Draft release creation failed' }
+      - name: Remove transient signing key
+        if: always()
+        shell: pwsh
+        run: Remove-Item "$env:RUNNER_TEMP/release-private.pem" -ErrorAction SilentlyContinue

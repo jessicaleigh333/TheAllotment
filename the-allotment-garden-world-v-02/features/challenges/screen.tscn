@@ -1,0 +1,7 @@
+[gd_scene format=3]
+
+[node name="ChallengesScreen" type="Label"]
+text = "Challenges is coming soon.
+
+Your garden is waiting while we prepare this feature."
+autowrap_mode = 2

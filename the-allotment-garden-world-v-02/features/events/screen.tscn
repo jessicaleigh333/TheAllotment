@@ -1,0 +1,7 @@
+[gd_scene format=3]
+
+[node name="EventsScreen" type="Label"]
+text = "Events is coming soon.
+
+Your garden is waiting while we prepare this feature."
+autowrap_mode = 2
