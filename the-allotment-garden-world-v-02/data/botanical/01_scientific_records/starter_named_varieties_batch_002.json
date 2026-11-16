@@ -1,0 +1,1309 @@
+{
+  "schema_version": "1.0",
+  "created": "2026-11-16",
+  "record_count": 50,
+  "scope": "50 starter varieties in 10 additional garden groups",
+  "quality_notice": "Unverified starter descriptions; do not infer hardiness, yield, timing or detailed cultivation thresholds without field-specific evidence",
+  "records": [
+    {
+      "id": "starter_peach_contender",
+      "category": "peach",
+      "common_name": "Contender",
+      "parent_scientific_name": "Prunus persica",
+      "family": "Rosaceae",
+      "cultivar_or_selection": "Contender",
+      "growth_habit": "spreading tree",
+      "visual_markers": "fuzzy yellow fruit with red blush",
+      "life_cycle": "deciduous fruit tree",
+      "sun": "full sun",
+      "soil_and_water": "well drained; irrigate during establishment",
+      "propagation": "grafted tree",
+      "harvest_or_display": "fruit",
+      "special_traits": "yellow flesh; freestone",
+      "reference": {
+        "url": "https://plants.ces.ncsu.edu/plants/prunus-persica/",
+        "scope": "species_or_genus_lead_not_individually_verified"
+      },
+      "research_status": "provisional_starter",
+      "codex": {
+        "prototype_visuals_allowed": true,
+        "accurate_numeric_simulation_allowed": false,
+        "notes": "Use broad growth archetype only; cultivar traits and phenology need verification"
+      }
+    },
+    {
+      "id": "starter_peach_carolina_belle",
+      "category": "peach",
+      "common_name": "Carolina Belle",
+      "parent_scientific_name": "Prunus persica",
+      "family": "Rosaceae",
+      "cultivar_or_selection": "Carolina Belle",
+      "growth_habit": "spreading tree",
+      "visual_markers": "red-blushed fuzzy fruit with pale flesh",
+      "life_cycle": "deciduous fruit tree",
+      "sun": "full sun",
+      "soil_and_water": "well drained; irrigate during establishment",
+      "propagation": "grafted tree",
+      "harvest_or_display": "fruit",
+      "special_traits": "white-fleshed freestone",
+      "reference": {
+        "url": "https://plants.ces.ncsu.edu/plants/prunus-persica/",
+        "scope": "species_or_genus_lead_not_individually_verified"
+      },
+      "research_status": "provisional_starter",
+      "codex": {
+        "prototype_visuals_allowed": true,
+        "accurate_numeric_simulation_allowed": false,
+        "notes": "Use broad growth archetype only; cultivar traits and phenology need verification"
+      }
+    },
+    {
+      "id": "starter_peach_redhaven",
+      "category": "peach",
+      "common_name": "Redhaven",
+      "parent_scientific_name": "Prunus persica",
+      "family": "Rosaceae",
+      "cultivar_or_selection": "Redhaven",
+      "growth_habit": "rounded spreading tree",
+      "visual_markers": "fuzzy yellow-and-red fruit",
+      "life_cycle": "deciduous fruit tree",
+      "sun": "full sun",
+      "soil_and_water": "well drained; irrigate during establishment",
+      "propagation": "grafted tree",
+      "harvest_or_display": "fruit",
+      "special_traits": "yellow-fleshed peach",
+      "reference": {
+        "url": "https://plants.ces.ncsu.edu/plants/prunus-persica/",
+        "scope": "species_or_genus_lead_not_individually_verified"
+      },
+      "research_status": "provisional_starter",
+      "codex": {
+        "prototype_visuals_allowed": true,
+        "accurate_numeric_simulation_allowed": false,
+        "notes": "Use broad growth archetype only; cultivar traits and phenology need verification"
+      }
+    },
+    {
+      "id": "starter_peach_cresthaven",
+      "category": "peach",
+      "common_name": "Cresthaven",
+      "parent_scientific_name": "Prunus persica",
+      "family": "Rosaceae",
+      "cultivar_or_selection": "Cresthaven",
+      "growth_habit": "rounded spreading tree",
+      "visual_markers": "large yellow fruit with red blush",
+      "life_cycle": "deciduous fruit tree",
+      "sun": "full sun",
+      "soil_and_water": "well drained; irrigate during establishment",
+      "propagation": "grafted tree",
+      "harvest_or_display": "fruit",
+      "special_traits": "yellow flesh",
+      "reference": {
+        "url": "https://plants.ces.ncsu.edu/plants/prunus-persica/",
+        "scope": "species_or_genus_lead_not_individually_verified"
+      },
+      "research_status": "provisional_starter",
+      "codex": {
+        "prototype_visuals_allowed": true,
+        "accurate_numeric_simulation_allowed": false,
+        "notes": "Use broad growth archetype only; cultivar traits and phenology need verification"
+      }
+    },
+    {
+      "id": "starter_peach_bonfire",
+      "category": "peach",
+      "common_name": "Bonfire",
+      "parent_scientific_name": "Prunus persica",
+      "family": "Rosaceae",
+      "cultivar_or_selection": "Bonfire",
+      "growth_habit": "dwarf ornamental tree",
+      "visual_markers": "purple-bronze leaves; pink flowers and small fruit",
+      "life_cycle": "deciduous fruit tree",
+      "sun": "full sun",
+      "soil_and_water": "well drained; irrigate during establishment",
+      "propagation": "grafted tree",
+      "harvest_or_display": "fruit",
+      "special_traits": "primarily ornamental",
+      "reference": {
+        "url": "https://plants.ces.ncsu.edu/plants/prunus-persica/",
+        "scope": "species_or_genus_lead_not_individually_verified"
+      },
+      "research_status": "provisional_starter",
+      "codex": {
+        "prototype_visuals_allowed": true,
+        "accurate_numeric_simulation_allowed": false,
+        "notes": "Use broad growth archetype only; cultivar traits and phenology need verification"
+      }
+    },
+    {
+      "id": "starter_fig_brown_turkey",
+      "category": "fig",
+      "common_name": "Brown Turkey",
+      "parent_scientific_name": "Ficus carica",
+      "family": "Moraceae",
+      "cultivar_or_selection": "Brown Turkey",
+      "growth_habit": "spreading multi-stem woody plant",
+      "visual_markers": "purple-brown figs with rosy pulp",
+      "life_cycle": "deciduous shrub or small tree",
+      "sun": "full sun",
+      "soil_and_water": "well drained; establish with moderate moisture",
+      "propagation": "cuttings",
+      "harvest_or_display": "fig syconium",
+      "special_traits": "common fig",
+      "reference": {
+        "url": "https://plants.ces.ncsu.edu/plants/ficus-carica/",
+        "scope": "species_or_genus_lead_not_individually_verified"
+      },
+      "research_status": "provisional_starter",
+      "codex": {
+        "prototype_visuals_allowed": true,
+        "accurate_numeric_simulation_allowed": false,
+        "notes": "Use broad growth archetype only; cultivar traits and phenology need verification"
+      }
+    },
+    {
+      "id": "starter_fig_celeste",
+      "category": "fig",
+      "common_name": "Celeste",
+      "parent_scientific_name": "Ficus carica",
+      "family": "Moraceae",
+      "cultivar_or_selection": "Celeste",
+      "growth_habit": "compact spreading woody plant",
+      "visual_markers": "small purplish-brown fruit",
+      "life_cycle": "deciduous shrub or small tree",
+      "sun": "full sun",
+      "soil_and_water": "well drained; establish with moderate moisture",
+      "propagation": "cuttings",
+      "harvest_or_display": "fig syconium",
+      "special_traits": "common fig",
+      "reference": {
+        "url": "https://plants.ces.ncsu.edu/plants/ficus-carica/",
+        "scope": "species_or_genus_lead_not_individually_verified"
+      },
+      "research_status": "provisional_starter",
+      "codex": {
+        "prototype_visuals_allowed": true,
+        "accurate_numeric_simulation_allowed": false,
+        "notes": "Use broad growth archetype only; cultivar traits and phenology need verification"
+      }
+    },
+    {
+      "id": "starter_fig_chicago_hardy",
+      "category": "fig",
+      "common_name": "Chicago Hardy",
+      "parent_scientific_name": "Ficus carica",
+      "family": "Moraceae",
+      "cultivar_or_selection": "Chicago Hardy",
+      "growth_habit": "multi-stem woody plant",
+      "visual_markers": "small purple-brown figs",
+      "life_cycle": "deciduous shrub or small tree",
+      "sun": "full sun",
+      "soil_and_water": "well drained; establish with moderate moisture",
+      "propagation": "cuttings",
+      "harvest_or_display": "fig syconium",
+      "special_traits": "may resprout after severe freezes",
+      "reference": {
+        "url": "https://plants.ces.ncsu.edu/plants/ficus-carica/",
+        "scope": "species_or_genus_lead_not_individually_verified"
+      },
+      "research_status": "provisional_starter",
+      "codex": {
+        "prototype_visuals_allowed": true,
+        "accurate_numeric_simulation_allowed": false,
+        "notes": "Use broad growth archetype only; cultivar traits and phenology need verification"
+      }
+    },
+    {
+      "id": "starter_fig_lsu_purple",
+      "category": "fig",
+      "common_name": "LSU Purple",
+      "parent_scientific_name": "Ficus carica",
+      "family": "Moraceae",
+      "cultivar_or_selection": "LSU Purple",
+      "growth_habit": "vigorous bushy tree",
+      "visual_markers": "glossy purple figs",
+      "life_cycle": "deciduous shrub or small tree",
+      "sun": "full sun",
+      "soil_and_water": "well drained; establish with moderate moisture",
+      "propagation": "cuttings",
+      "harvest_or_display": "fig syconium",
+      "special_traits": "extended ripening in favorable conditions",
+      "reference": {
+        "url": "https://plants.ces.ncsu.edu/plants/ficus-carica/",
+        "scope": "species_or_genus_lead_not_individually_verified"
+      },
+      "research_status": "provisional_starter",
+      "codex": {
+        "prototype_visuals_allowed": true,
+        "accurate_numeric_simulation_allowed": false,
+        "notes": "Use broad growth archetype only; cultivar traits and phenology need verification"
+      }
+    },
+    {
+      "id": "starter_fig_kadota",
+      "category": "fig",
+      "common_name": "Kadota",
+      "parent_scientific_name": "Ficus carica",
+      "family": "Moraceae",
+      "cultivar_or_selection": "Kadota",
+      "growth_habit": "spreading woody plant",
+      "visual_markers": "yellow-green figs",
+      "life_cycle": "deciduous shrub or small tree",
+      "sun": "full sun",
+      "soil_and_water": "well drained; establish with moderate moisture",
+      "propagation": "cuttings",
+      "harvest_or_display": "fig syconium",
+      "special_traits": "ripe fruits may stay greenish",
+      "reference": {
+        "url": "https://plants.ces.ncsu.edu/plants/ficus-carica/",
+        "scope": "species_or_genus_lead_not_individually_verified"
+      },
+      "research_status": "provisional_starter",
+      "codex": {
+        "prototype_visuals_allowed": true,
+        "accurate_numeric_simulation_allowed": false,
+        "notes": "Use broad growth archetype only; cultivar traits and phenology need verification"
+      }
+    },
+    {
+      "id": "starter_strawberry_chandler",
+      "category": "strawberry",
+      "common_name": "Chandler",
+      "parent_scientific_name": "Fragaria × ananassa",
+      "family": "Rosaceae",
+      "cultivar_or_selection": "Chandler",
+      "growth_habit": "low clonal rosette",
+      "visual_markers": "large red conical berries",
+      "life_cycle": "herbaceous runner-forming perennial",
+      "sun": "full sun",
+      "soil_and_water": "even moisture; well-drained soil",
+      "propagation": "runners or crowns",
+      "harvest_or_display": "aggregate accessory fruit",
+      "special_traits": "June-bearing type",
+      "reference": {
+        "url": "https://plants.ces.ncsu.edu/plants/fragaria-x-ananassa/",
+        "scope": "species_or_genus_lead_not_individually_verified"
+      },
+      "research_status": "provisional_starter",
+      "codex": {
+        "prototype_visuals_allowed": true,
+        "accurate_numeric_simulation_allowed": false,
+        "notes": "Use broad growth archetype only; cultivar traits and phenology need verification"
+      }
+    },
+    {
+      "id": "starter_strawberry_albion",
+      "category": "strawberry",
+      "common_name": "Albion",
+      "parent_scientific_name": "Fragaria × ananassa",
+      "family": "Rosaceae",
+      "cultivar_or_selection": "Albion",
+      "growth_habit": "low runner-forming rosette",
+      "visual_markers": "firm elongated red berries",
+      "life_cycle": "herbaceous runner-forming perennial",
+      "sun": "full sun",
+      "soil_and_water": "even moisture; well-drained soil",
+      "propagation": "runners or crowns",
+      "harvest_or_display": "aggregate accessory fruit",
+      "special_traits": "day-neutral type",
+      "reference": {
+        "url": "https://plants.ces.ncsu.edu/plants/fragaria-x-ananassa/",
+        "scope": "species_or_genus_lead_not_individually_verified"
+      },
+      "research_status": "provisional_starter",
+      "codex": {
+        "prototype_visuals_allowed": true,
+        "accurate_numeric_simulation_allowed": false,
+        "notes": "Use broad growth archetype only; cultivar traits and phenology need verification"
+      }
+    },
+    {
+      "id": "starter_strawberry_seascape",
+      "category": "strawberry",
+      "common_name": "Seascape",
+      "parent_scientific_name": "Fragaria × ananassa",
+      "family": "Rosaceae",
+      "cultivar_or_selection": "Seascape",
+      "growth_habit": "low clonal rosette",
+      "visual_markers": "conical red berries",
+      "life_cycle": "herbaceous runner-forming perennial",
+      "sun": "full sun",
+      "soil_and_water": "even moisture; well-drained soil",
+      "propagation": "runners or crowns",
+      "harvest_or_display": "aggregate accessory fruit",
+      "special_traits": "day-neutral type",
+      "reference": {
+        "url": "https://plants.ces.ncsu.edu/plants/fragaria-x-ananassa/",
+        "scope": "species_or_genus_lead_not_individually_verified"
+      },
+      "research_status": "provisional_starter",
+      "codex": {
+        "prototype_visuals_allowed": true,
+        "accurate_numeric_simulation_allowed": false,
+        "notes": "Use broad growth archetype only; cultivar traits and phenology need verification"
+      }
+    },
+    {
+      "id": "starter_strawberry_earliglow",
+      "category": "strawberry",
+      "common_name": "Earliglow",
+      "parent_scientific_name": "Fragaria × ananassa",
+      "family": "Rosaceae",
+      "cultivar_or_selection": "Earliglow",
+      "growth_habit": "low clonal rosette",
+      "visual_markers": "glossy smaller red berries",
+      "life_cycle": "herbaceous runner-forming perennial",
+      "sun": "full sun",
+      "soil_and_water": "even moisture; well-drained soil",
+      "propagation": "runners or crowns",
+      "harvest_or_display": "aggregate accessory fruit",
+      "special_traits": "early June-bearing type",
+      "reference": {
+        "url": "https://plants.ces.ncsu.edu/plants/fragaria-x-ananassa/",
+        "scope": "species_or_genus_lead_not_individually_verified"
+      },
+      "research_status": "provisional_starter",
+      "codex": {
+        "prototype_visuals_allowed": true,
+        "accurate_numeric_simulation_allowed": false,
+        "notes": "Use broad growth archetype only; cultivar traits and phenology need verification"
+      }
+    },
+    {
+      "id": "starter_strawberry_mara_des_bois",
+      "category": "strawberry",
+      "common_name": "Mara des Bois",
+      "parent_scientific_name": "Fragaria × ananassa",
+      "family": "Rosaceae",
+      "cultivar_or_selection": "Mara des Bois",
+      "growth_habit": "low clonal rosette",
+      "visual_markers": "small aromatic red berries",
+      "life_cycle": "herbaceous runner-forming perennial",
+      "sun": "full sun",
+      "soil_and_water": "even moisture; well-drained soil",
+      "propagation": "runners or crowns",
+      "harvest_or_display": "aggregate accessory fruit",
+      "special_traits": "extended season under suitable conditions",
+      "reference": {
+        "url": "https://plants.ces.ncsu.edu/plants/fragaria-x-ananassa/",
+        "scope": "species_or_genus_lead_not_individually_verified"
+      },
+      "research_status": "provisional_starter",
+      "codex": {
+        "prototype_visuals_allowed": true,
+        "accurate_numeric_simulation_allowed": false,
+        "notes": "Use broad growth archetype only; cultivar traits and phenology need verification"
+      }
+    },
+    {
+      "id": "starter_blackberry_ouachita",
+      "category": "blackberry",
+      "common_name": "Ouachita",
+      "parent_scientific_name": "Rubus subgenus Rubus",
+      "family": "Rosaceae",
+      "cultivar_or_selection": "Ouachita",
+      "growth_habit": "erect woody canes",
+      "visual_markers": "shiny black clustered drupelets",
+      "life_cycle": "perennial crown with canes",
+      "sun": "full sun",
+      "soil_and_water": "moist well-drained soil",
+      "propagation": "nursery plant or tip layers",
+      "harvest_or_display": "aggregate berry",
+      "special_traits": "thornless floricane-fruiting",
+      "reference": {
+        "url": "https://plants.ces.ncsu.edu/plants/rubus/",
+        "scope": "species_or_genus_lead_not_individually_verified"
+      },
+      "research_status": "provisional_starter",
+      "codex": {
+        "prototype_visuals_allowed": true,
+        "accurate_numeric_simulation_allowed": false,
+        "notes": "Use broad growth archetype only; cultivar traits and phenology need verification"
+      }
+    },
+    {
+      "id": "starter_blackberry_natchez",
+      "category": "blackberry",
+      "common_name": "Natchez",
+      "parent_scientific_name": "Rubus subgenus Rubus",
+      "family": "Rosaceae",
+      "cultivar_or_selection": "Natchez",
+      "growth_habit": "semi-erect woody canes",
+      "visual_markers": "elongated black berries",
+      "life_cycle": "perennial crown with canes",
+      "sun": "full sun",
+      "soil_and_water": "moist well-drained soil",
+      "propagation": "nursery plant or tip layers",
+      "harvest_or_display": "aggregate berry",
+      "special_traits": "thornless; trellis may help",
+      "reference": {
+        "url": "https://plants.ces.ncsu.edu/plants/rubus/",
+        "scope": "species_or_genus_lead_not_individually_verified"
+      },
+      "research_status": "provisional_starter",
+      "codex": {
+        "prototype_visuals_allowed": true,
+        "accurate_numeric_simulation_allowed": false,
+        "notes": "Use broad growth archetype only; cultivar traits and phenology need verification"
+      }
+    },
+    {
+      "id": "starter_blackberry_triple_crown",
+      "category": "blackberry",
+      "common_name": "Triple Crown",
+      "parent_scientific_name": "Rubus subgenus Rubus",
+      "family": "Rosaceae",
+      "cultivar_or_selection": "Triple Crown",
+      "growth_habit": "vigorous semi-erect canes",
+      "visual_markers": "large glossy black berries",
+      "life_cycle": "perennial crown with canes",
+      "sun": "full sun",
+      "soil_and_water": "moist well-drained soil",
+      "propagation": "nursery plant or tip layers",
+      "harvest_or_display": "aggregate berry",
+      "special_traits": "thornless; train canes",
+      "reference": {
+        "url": "https://plants.ces.ncsu.edu/plants/rubus/",
+        "scope": "species_or_genus_lead_not_individually_verified"
+      },
+      "research_status": "provisional_starter",
+      "codex": {
+        "prototype_visuals_allowed": true,
+        "accurate_numeric_simulation_allowed": false,
+        "notes": "Use broad growth archetype only; cultivar traits and phenology need verification"
+      }
+    },
+    {
+      "id": "starter_blackberry_prime_ark_freedom",
+      "category": "blackberry",
+      "common_name": "Prime-Ark Freedom",
+      "parent_scientific_name": "Rubus subgenus Rubus",
+      "family": "Rosaceae",
+      "cultivar_or_selection": "Prime-Ark Freedom",
+      "growth_habit": "upright canes",
+      "visual_markers": "large black berries",
+      "life_cycle": "perennial crown with canes",
+      "sun": "full sun",
+      "soil_and_water": "moist well-drained soil",
+      "propagation": "nursery plant or tip layers",
+      "harvest_or_display": "aggregate berry",
+      "special_traits": "thornless primocane-fruiting type",
+      "reference": {
+        "url": "https://plants.ces.ncsu.edu/plants/rubus/",
+        "scope": "species_or_genus_lead_not_individually_verified"
+      },
+      "research_status": "provisional_starter",
+      "codex": {
+        "prototype_visuals_allowed": true,
+        "accurate_numeric_simulation_allowed": false,
+        "notes": "Use broad growth archetype only; cultivar traits and phenology need verification"
+      }
+    },
+    {
+      "id": "starter_blackberry_apache",
+      "category": "blackberry",
+      "common_name": "Apache",
+      "parent_scientific_name": "Rubus subgenus Rubus",
+      "family": "Rosaceae",
+      "cultivar_or_selection": "Apache",
+      "growth_habit": "erect canes",
+      "visual_markers": "large shiny black berries",
+      "life_cycle": "perennial crown with canes",
+      "sun": "full sun",
+      "soil_and_water": "moist well-drained soil",
+      "propagation": "nursery plant or tip layers",
+      "harvest_or_display": "aggregate berry",
+      "special_traits": "thornless floricane-fruiting",
+      "reference": {
+        "url": "https://plants.ces.ncsu.edu/plants/rubus/",
+        "scope": "species_or_genus_lead_not_individually_verified"
+      },
+      "research_status": "provisional_starter",
+      "codex": {
+        "prototype_visuals_allowed": true,
+        "accurate_numeric_simulation_allowed": false,
+        "notes": "Use broad growth archetype only; cultivar traits and phenology need verification"
+      }
+    },
+    {
+      "id": "starter_raspberry_heritage",
+      "category": "raspberry",
+      "common_name": "Heritage",
+      "parent_scientific_name": "Rubus idaeus cultivar complex",
+      "family": "Rosaceae",
+      "cultivar_or_selection": "Heritage",
+      "growth_habit": "upright suckering canes",
+      "visual_markers": "medium red berries",
+      "life_cycle": "perennial crown with biennial canes",
+      "sun": "full sun",
+      "soil_and_water": "moist well-drained organic soil",
+      "propagation": "nursery canes or suckers",
+      "harvest_or_display": "aggregate berry",
+      "special_traits": "primocane-fruiting type",
+      "reference": {
+        "url": "https://plants.ces.ncsu.edu/plants/rubus-idaeus-subsp-idaeus/",
+        "scope": "species_or_genus_lead_not_individually_verified"
+      },
+      "research_status": "provisional_starter",
+      "codex": {
+        "prototype_visuals_allowed": true,
+        "accurate_numeric_simulation_allowed": false,
+        "notes": "Use broad growth archetype only; cultivar traits and phenology need verification"
+      }
+    },
+    {
+      "id": "starter_raspberry_caroline",
+      "category": "raspberry",
+      "common_name": "Caroline",
+      "parent_scientific_name": "Rubus idaeus cultivar complex",
+      "family": "Rosaceae",
+      "cultivar_or_selection": "Caroline",
+      "growth_habit": "upright suckering canes",
+      "visual_markers": "red berries",
+      "life_cycle": "perennial crown with biennial canes",
+      "sun": "full sun",
+      "soil_and_water": "moist well-drained organic soil",
+      "propagation": "nursery canes or suckers",
+      "harvest_or_display": "aggregate berry",
+      "special_traits": "primocane-fruiting type",
+      "reference": {
+        "url": "https://plants.ces.ncsu.edu/plants/rubus-idaeus-subsp-idaeus/",
+        "scope": "species_or_genus_lead_not_individually_verified"
+      },
+      "research_status": "provisional_starter",
+      "codex": {
+        "prototype_visuals_allowed": true,
+        "accurate_numeric_simulation_allowed": false,
+        "notes": "Use broad growth archetype only; cultivar traits and phenology need verification"
+      }
+    },
+    {
+      "id": "starter_raspberry_autumn_bliss",
+      "category": "raspberry",
+      "common_name": "Autumn Bliss",
+      "parent_scientific_name": "Rubus idaeus cultivar complex",
+      "family": "Rosaceae",
+      "cultivar_or_selection": "Autumn Bliss",
+      "growth_habit": "upright suckering canes",
+      "visual_markers": "bright red berries",
+      "life_cycle": "perennial crown with biennial canes",
+      "sun": "full sun",
+      "soil_and_water": "moist well-drained organic soil",
+      "propagation": "nursery canes or suckers",
+      "harvest_or_display": "aggregate berry",
+      "special_traits": "primocane-fruiting type",
+      "reference": {
+        "url": "https://plants.ces.ncsu.edu/plants/rubus-idaeus-subsp-idaeus/",
+        "scope": "species_or_genus_lead_not_individually_verified"
+      },
+      "research_status": "provisional_starter",
+      "codex": {
+        "prototype_visuals_allowed": true,
+        "accurate_numeric_simulation_allowed": false,
+        "notes": "Use broad growth archetype only; cultivar traits and phenology need verification"
+      }
+    },
+    {
+      "id": "starter_raspberry_anne",
+      "category": "raspberry",
+      "common_name": "Anne",
+      "parent_scientific_name": "Rubus idaeus cultivar complex",
+      "family": "Rosaceae",
+      "cultivar_or_selection": "Anne",
+      "growth_habit": "upright suckering canes",
+      "visual_markers": "yellow-gold berries",
+      "life_cycle": "perennial crown with biennial canes",
+      "sun": "full sun",
+      "soil_and_water": "moist well-drained organic soil",
+      "propagation": "nursery canes or suckers",
+      "harvest_or_display": "aggregate berry",
+      "special_traits": "yellow-fruited primocane type",
+      "reference": {
+        "url": "https://plants.ces.ncsu.edu/plants/rubus-idaeus-subsp-idaeus/",
+        "scope": "species_or_genus_lead_not_individually_verified"
+      },
+      "research_status": "provisional_starter",
+      "codex": {
+        "prototype_visuals_allowed": true,
+        "accurate_numeric_simulation_allowed": false,
+        "notes": "Use broad growth archetype only; cultivar traits and phenology need verification"
+      }
+    },
+    {
+      "id": "starter_raspberry_polka",
+      "category": "raspberry",
+      "common_name": "Polka",
+      "parent_scientific_name": "Rubus idaeus cultivar complex",
+      "family": "Rosaceae",
+      "cultivar_or_selection": "Polka",
+      "growth_habit": "upright suckering canes",
+      "visual_markers": "glossy red berries",
+      "life_cycle": "perennial crown with biennial canes",
+      "sun": "full sun",
+      "soil_and_water": "moist well-drained organic soil",
+      "propagation": "nursery canes or suckers",
+      "harvest_or_display": "aggregate berry",
+      "special_traits": "primocane-fruiting type",
+      "reference": {
+        "url": "https://plants.ces.ncsu.edu/plants/rubus-idaeus-subsp-idaeus/",
+        "scope": "species_or_genus_lead_not_individually_verified"
+      },
+      "research_status": "provisional_starter",
+      "codex": {
+        "prototype_visuals_allowed": true,
+        "accurate_numeric_simulation_allowed": false,
+        "notes": "Use broad growth archetype only; cultivar traits and phenology need verification"
+      }
+    },
+    {
+      "id": "starter_lavender_hidcote",
+      "category": "lavender",
+      "common_name": "Hidcote",
+      "parent_scientific_name": "Lavandula angustifolia",
+      "family": "Lamiaceae",
+      "cultivar_or_selection": "Hidcote",
+      "growth_habit": "compact mound",
+      "visual_markers": "dark violet flower spikes and gray-green leaves",
+      "life_cycle": "evergreen aromatic woody subshrub",
+      "sun": "full sun",
+      "soil_and_water": "very well-drained soil; avoid wet roots",
+      "propagation": "cuttings",
+      "harvest_or_display": "flower spikes",
+      "special_traits": "English lavender",
+      "reference": {
+        "url": "https://plants.ces.ncsu.edu/plants/lavandula-angustifolia/",
+        "scope": "species_or_genus_lead_not_individually_verified"
+      },
+      "research_status": "provisional_starter",
+      "codex": {
+        "prototype_visuals_allowed": true,
+        "accurate_numeric_simulation_allowed": false,
+        "notes": "Use broad growth archetype only; cultivar traits and phenology need verification"
+      }
+    },
+    {
+      "id": "starter_lavender_munstead",
+      "category": "lavender",
+      "common_name": "Munstead",
+      "parent_scientific_name": "Lavandula angustifolia",
+      "family": "Lamiaceae",
+      "cultivar_or_selection": "Munstead",
+      "growth_habit": "low compact mound",
+      "visual_markers": "blue-lilac spikes and gray-green leaves",
+      "life_cycle": "evergreen aromatic woody subshrub",
+      "sun": "full sun",
+      "soil_and_water": "very well-drained soil; avoid wet roots",
+      "propagation": "cuttings",
+      "harvest_or_display": "flower spikes",
+      "special_traits": "English lavender",
+      "reference": {
+        "url": "https://plants.ces.ncsu.edu/plants/lavandula-angustifolia/",
+        "scope": "species_or_genus_lead_not_individually_verified"
+      },
+      "research_status": "provisional_starter",
+      "codex": {
+        "prototype_visuals_allowed": true,
+        "accurate_numeric_simulation_allowed": false,
+        "notes": "Use broad growth archetype only; cultivar traits and phenology need verification"
+      }
+    },
+    {
+      "id": "starter_lavender_rosea",
+      "category": "lavender",
+      "common_name": "Rosea",
+      "parent_scientific_name": "Lavandula angustifolia",
+      "family": "Lamiaceae",
+      "cultivar_or_selection": "Rosea",
+      "growth_habit": "mounded subshrub",
+      "visual_markers": "soft pink flower spikes",
+      "life_cycle": "evergreen aromatic woody subshrub",
+      "sun": "full sun",
+      "soil_and_water": "very well-drained soil; avoid wet roots",
+      "propagation": "cuttings",
+      "harvest_or_display": "flower spikes",
+      "special_traits": "pink form",
+      "reference": {
+        "url": "https://plants.ces.ncsu.edu/plants/lavandula-angustifolia/",
+        "scope": "species_or_genus_lead_not_individually_verified"
+      },
+      "research_status": "provisional_starter",
+      "codex": {
+        "prototype_visuals_allowed": true,
+        "accurate_numeric_simulation_allowed": false,
+        "notes": "Use broad growth archetype only; cultivar traits and phenology need verification"
+      }
+    },
+    {
+      "id": "starter_lavender_nana_alba",
+      "category": "lavender",
+      "common_name": "Nana Alba",
+      "parent_scientific_name": "Lavandula angustifolia",
+      "family": "Lamiaceae",
+      "cultivar_or_selection": "Nana Alba",
+      "growth_habit": "small rounded mound",
+      "visual_markers": "white flower spikes",
+      "life_cycle": "evergreen aromatic woody subshrub",
+      "sun": "full sun",
+      "soil_and_water": "very well-drained soil; avoid wet roots",
+      "propagation": "cuttings",
+      "harvest_or_display": "flower spikes",
+      "special_traits": "compact white form",
+      "reference": {
+        "url": "https://plants.ces.ncsu.edu/plants/lavandula-angustifolia/",
+        "scope": "species_or_genus_lead_not_individually_verified"
+      },
+      "research_status": "provisional_starter",
+      "codex": {
+        "prototype_visuals_allowed": true,
+        "accurate_numeric_simulation_allowed": false,
+        "notes": "Use broad growth archetype only; cultivar traits and phenology need verification"
+      }
+    },
+    {
+      "id": "starter_lavender_folgate",
+      "category": "lavender",
+      "common_name": "Folgate",
+      "parent_scientific_name": "Lavandula angustifolia",
+      "family": "Lamiaceae",
+      "cultivar_or_selection": "Folgate",
+      "growth_habit": "bushy upright mound",
+      "visual_markers": "violet-blue flower spikes",
+      "life_cycle": "evergreen aromatic woody subshrub",
+      "sun": "full sun",
+      "soil_and_water": "very well-drained soil; avoid wet roots",
+      "propagation": "cuttings",
+      "harvest_or_display": "flower spikes",
+      "special_traits": "English lavender",
+      "reference": {
+        "url": "https://plants.ces.ncsu.edu/plants/lavandula-angustifolia/",
+        "scope": "species_or_genus_lead_not_individually_verified"
+      },
+      "research_status": "provisional_starter",
+      "codex": {
+        "prototype_visuals_allowed": true,
+        "accurate_numeric_simulation_allowed": false,
+        "notes": "Use broad growth archetype only; cultivar traits and phenology need verification"
+      }
+    },
+    {
+      "id": "starter_mint_peppermint",
+      "category": "mint",
+      "common_name": "Peppermint",
+      "parent_scientific_name": "Mentha spp.",
+      "family": "Lamiaceae",
+      "cultivar_or_selection": "Peppermint",
+      "growth_habit": "vigorous spreading herb",
+      "visual_markers": "dark-green serrated leaves; purple-tinged stems",
+      "life_cycle": "rhizomatous aromatic perennial",
+      "sun": "sun to part shade",
+      "soil_and_water": "even moisture; fertile soil",
+      "propagation": "divisions or cuttings",
+      "harvest_or_display": "leaves",
+      "special_traits": "Mentha × piperita",
+      "reference": {
+        "url": "https://plants.ces.ncsu.edu/plants/mentha/",
+        "scope": "species_or_genus_lead_not_individually_verified"
+      },
+      "research_status": "provisional_starter",
+      "codex": {
+        "prototype_visuals_allowed": true,
+        "accurate_numeric_simulation_allowed": false,
+        "notes": "Use broad growth archetype only; cultivar traits and phenology need verification"
+      }
+    },
+    {
+      "id": "starter_mint_spearmint",
+      "category": "mint",
+      "common_name": "Spearmint",
+      "parent_scientific_name": "Mentha spp.",
+      "family": "Lamiaceae",
+      "cultivar_or_selection": "Spearmint",
+      "growth_habit": "vigorous spreading herb",
+      "visual_markers": "bright-green pointed textured leaves",
+      "life_cycle": "rhizomatous aromatic perennial",
+      "sun": "sun to part shade",
+      "soil_and_water": "even moisture; fertile soil",
+      "propagation": "divisions or cuttings",
+      "harvest_or_display": "leaves",
+      "special_traits": "Mentha spicata",
+      "reference": {
+        "url": "https://plants.ces.ncsu.edu/plants/mentha/",
+        "scope": "species_or_genus_lead_not_individually_verified"
+      },
+      "research_status": "provisional_starter",
+      "codex": {
+        "prototype_visuals_allowed": true,
+        "accurate_numeric_simulation_allowed": false,
+        "notes": "Use broad growth archetype only; cultivar traits and phenology need verification"
+      }
+    },
+    {
+      "id": "starter_mint_apple_mint",
+      "category": "mint",
+      "common_name": "Apple Mint",
+      "parent_scientific_name": "Mentha spp.",
+      "family": "Lamiaceae",
+      "cultivar_or_selection": "Apple Mint",
+      "growth_habit": "spreading herb",
+      "visual_markers": "soft fuzzy rounded pale-green leaves",
+      "life_cycle": "rhizomatous aromatic perennial",
+      "sun": "sun to part shade",
+      "soil_and_water": "even moisture; fertile soil",
+      "propagation": "divisions or cuttings",
+      "harvest_or_display": "leaves",
+      "special_traits": "Mentha suaveolens",
+      "reference": {
+        "url": "https://plants.ces.ncsu.edu/plants/mentha/",
+        "scope": "species_or_genus_lead_not_individually_verified"
+      },
+      "research_status": "provisional_starter",
+      "codex": {
+        "prototype_visuals_allowed": true,
+        "accurate_numeric_simulation_allowed": false,
+        "notes": "Use broad growth archetype only; cultivar traits and phenology need verification"
+      }
+    },
+    {
+      "id": "starter_mint_chocolate_mint",
+      "category": "mint",
+      "common_name": "Chocolate Mint",
+      "parent_scientific_name": "Mentha spp.",
+      "family": "Lamiaceae",
+      "cultivar_or_selection": "Chocolate Mint",
+      "growth_habit": "spreading herb",
+      "visual_markers": "dark-tinted stems; green leaves",
+      "life_cycle": "rhizomatous aromatic perennial",
+      "sun": "sun to part shade",
+      "soil_and_water": "even moisture; fertile soil",
+      "propagation": "divisions or cuttings",
+      "harvest_or_display": "leaves",
+      "special_traits": "Mentha × piperita cultivar; identity requires cultivar verification",
+      "reference": {
+        "url": "https://plants.ces.ncsu.edu/plants/mentha/",
+        "scope": "species_or_genus_lead_not_individually_verified"
+      },
+      "research_status": "provisional_starter",
+      "codex": {
+        "prototype_visuals_allowed": true,
+        "accurate_numeric_simulation_allowed": false,
+        "notes": "Use broad growth archetype only; cultivar traits and phenology need verification"
+      }
+    },
+    {
+      "id": "starter_mint_pineapple_mint",
+      "category": "mint",
+      "common_name": "Pineapple Mint",
+      "parent_scientific_name": "Mentha spp.",
+      "family": "Lamiaceae",
+      "cultivar_or_selection": "Pineapple Mint",
+      "growth_habit": "spreading herb",
+      "visual_markers": "cream-edged variegated green leaves",
+      "life_cycle": "rhizomatous aromatic perennial",
+      "sun": "sun to part shade",
+      "soil_and_water": "even moisture; fertile soil",
+      "propagation": "divisions or cuttings",
+      "harvest_or_display": "leaves",
+      "special_traits": "Mentha suaveolens 'Variegata'",
+      "reference": {
+        "url": "https://plants.ces.ncsu.edu/plants/mentha/",
+        "scope": "species_or_genus_lead_not_individually_verified"
+      },
+      "research_status": "provisional_starter",
+      "codex": {
+        "prototype_visuals_allowed": true,
+        "accurate_numeric_simulation_allowed": false,
+        "notes": "Use broad growth archetype only; cultivar traits and phenology need verification"
+      }
+    },
+    {
+      "id": "starter_basil_genovese",
+      "category": "basil",
+      "common_name": "Genovese",
+      "parent_scientific_name": "Ocimum basilicum",
+      "family": "Lamiaceae",
+      "cultivar_or_selection": "Genovese",
+      "growth_habit": "upright branching herb",
+      "visual_markers": "large glossy deep-green aromatic leaves",
+      "life_cycle": "frost-tender aromatic annual/subshrub",
+      "sun": "full sun",
+      "soil_and_water": "even moisture; good drainage",
+      "propagation": "seed or cuttings",
+      "harvest_or_display": "leaves and flower spikes",
+      "special_traits": "culinary sweet basil",
+      "reference": {
+        "url": "https://plants.ces.ncsu.edu/plants/ocimum-basilicum/",
+        "scope": "species_or_genus_lead_not_individually_verified"
+      },
+      "research_status": "provisional_starter",
+      "codex": {
+        "prototype_visuals_allowed": true,
+        "accurate_numeric_simulation_allowed": false,
+        "notes": "Use broad growth archetype only; cultivar traits and phenology need verification"
+      }
+    },
+    {
+      "id": "starter_basil_dark_opal",
+      "category": "basil",
+      "common_name": "Dark Opal",
+      "parent_scientific_name": "Ocimum basilicum",
+      "family": "Lamiaceae",
+      "cultivar_or_selection": "Dark Opal",
+      "growth_habit": "upright branching herb",
+      "visual_markers": "deep purple leaves and pink-purple blossoms",
+      "life_cycle": "frost-tender aromatic annual/subshrub",
+      "sun": "full sun",
+      "soil_and_water": "even moisture; good drainage",
+      "propagation": "seed or cuttings",
+      "harvest_or_display": "leaves and flower spikes",
+      "special_traits": "purple-leaf form",
+      "reference": {
+        "url": "https://plants.ces.ncsu.edu/plants/ocimum-basilicum/",
+        "scope": "species_or_genus_lead_not_individually_verified"
+      },
+      "research_status": "provisional_starter",
+      "codex": {
+        "prototype_visuals_allowed": true,
+        "accurate_numeric_simulation_allowed": false,
+        "notes": "Use broad growth archetype only; cultivar traits and phenology need verification"
+      }
+    },
+    {
+      "id": "starter_basil_lettuce_leaf",
+      "category": "basil",
+      "common_name": "Lettuce Leaf",
+      "parent_scientific_name": "Ocimum basilicum",
+      "family": "Lamiaceae",
+      "cultivar_or_selection": "Lettuce Leaf",
+      "growth_habit": "bushy branching herb",
+      "visual_markers": "very large crinkled green leaves",
+      "life_cycle": "frost-tender aromatic annual/subshrub",
+      "sun": "full sun",
+      "soil_and_water": "even moisture; good drainage",
+      "propagation": "seed or cuttings",
+      "harvest_or_display": "leaves and flower spikes",
+      "special_traits": "leaf texture distinct",
+      "reference": {
+        "url": "https://plants.ces.ncsu.edu/plants/ocimum-basilicum/",
+        "scope": "species_or_genus_lead_not_individually_verified"
+      },
+      "research_status": "provisional_starter",
+      "codex": {
+        "prototype_visuals_allowed": true,
+        "accurate_numeric_simulation_allowed": false,
+        "notes": "Use broad growth archetype only; cultivar traits and phenology need verification"
+      }
+    },
+    {
+      "id": "starter_basil_cinnamon",
+      "category": "basil",
+      "common_name": "Cinnamon",
+      "parent_scientific_name": "Ocimum basilicum",
+      "family": "Lamiaceae",
+      "cultivar_or_selection": "Cinnamon",
+      "growth_habit": "upright branching herb",
+      "visual_markers": "green leaves; purple-tinted stems and flower spikes",
+      "life_cycle": "frost-tender aromatic annual/subshrub",
+      "sun": "full sun",
+      "soil_and_water": "even moisture; good drainage",
+      "propagation": "seed or cuttings",
+      "harvest_or_display": "leaves and flower spikes",
+      "special_traits": "cinnamon-like aroma",
+      "reference": {
+        "url": "https://plants.ces.ncsu.edu/plants/ocimum-basilicum/",
+        "scope": "species_or_genus_lead_not_individually_verified"
+      },
+      "research_status": "provisional_starter",
+      "codex": {
+        "prototype_visuals_allowed": true,
+        "accurate_numeric_simulation_allowed": false,
+        "notes": "Use broad growth archetype only; cultivar traits and phenology need verification"
+      }
+    },
+    {
+      "id": "starter_basil_greek_columnar",
+      "category": "basil",
+      "common_name": "Greek Columnar",
+      "parent_scientific_name": "Ocimum basilicum",
+      "family": "Lamiaceae",
+      "cultivar_or_selection": "Greek Columnar",
+      "growth_habit": "upright densely branching herb",
+      "visual_markers": "narrow green leaves on columnar plant",
+      "life_cycle": "frost-tender aromatic annual/subshrub",
+      "sun": "full sun",
+      "soil_and_water": "even moisture; good drainage",
+      "propagation": "seed or cuttings",
+      "harvest_or_display": "leaves and flower spikes",
+      "special_traits": "commercial naming varies; cultivar confirmation pending",
+      "reference": {
+        "url": "https://plants.ces.ncsu.edu/plants/ocimum-basilicum/",
+        "scope": "species_or_genus_lead_not_individually_verified"
+      },
+      "research_status": "provisional_starter",
+      "codex": {
+        "prototype_visuals_allowed": true,
+        "accurate_numeric_simulation_allowed": false,
+        "notes": "Use broad growth archetype only; cultivar traits and phenology need verification"
+      }
+    },
+    {
+      "id": "starter_dahlia_cafe_au_lait",
+      "category": "dahlia",
+      "common_name": "Cafe au Lait",
+      "parent_scientific_name": "Dahlia hybrid cultivar complex",
+      "family": "Asteraceae",
+      "cultivar_or_selection": "Cafe au Lait",
+      "growth_habit": "tall branching flowering stem",
+      "visual_markers": "large decorative blooms in creamy blush-tan tones",
+      "life_cycle": "tuberous herbaceous perennial",
+      "sun": "full sun",
+      "soil_and_water": "well-drained fertile soil; even moisture",
+      "propagation": "tuber division or cuttings",
+      "harvest_or_display": "flowers",
+      "special_traits": "cultivar color variable",
+      "reference": {
+        "url": "https://plants.ces.ncsu.edu/plants/dahlia/",
+        "scope": "species_or_genus_lead_not_individually_verified"
+      },
+      "research_status": "provisional_starter",
+      "codex": {
+        "prototype_visuals_allowed": true,
+        "accurate_numeric_simulation_allowed": false,
+        "notes": "Use broad growth archetype only; cultivar traits and phenology need verification"
+      }
+    },
+    {
+      "id": "starter_dahlia_bishop_of_llandaff",
+      "category": "dahlia",
+      "common_name": "Bishop of Llandaff",
+      "parent_scientific_name": "Dahlia hybrid cultivar complex",
+      "family": "Asteraceae",
+      "cultivar_or_selection": "Bishop of Llandaff",
+      "growth_habit": "upright branching herb",
+      "visual_markers": "dark bronze foliage and red single-to-semi-double blooms",
+      "life_cycle": "tuberous herbaceous perennial",
+      "sun": "full sun",
+      "soil_and_water": "well-drained fertile soil; even moisture",
+      "propagation": "tuber division or cuttings",
+      "harvest_or_display": "flowers",
+      "special_traits": "dark foliage distinctive",
+      "reference": {
+        "url": "https://plants.ces.ncsu.edu/plants/dahlia/",
+        "scope": "species_or_genus_lead_not_individually_verified"
+      },
+      "research_status": "provisional_starter",
+      "codex": {
+        "prototype_visuals_allowed": true,
+        "accurate_numeric_simulation_allowed": false,
+        "notes": "Use broad growth archetype only; cultivar traits and phenology need verification"
+      }
+    },
+    {
+      "id": "starter_dahlia_thomas_edison",
+      "category": "dahlia",
+      "common_name": "Thomas Edison",
+      "parent_scientific_name": "Dahlia hybrid cultivar complex",
+      "family": "Asteraceae",
+      "cultivar_or_selection": "Thomas Edison",
+      "growth_habit": "tall branching herb",
+      "visual_markers": "large deep purple decorative flowers",
+      "life_cycle": "tuberous herbaceous perennial",
+      "sun": "full sun",
+      "soil_and_water": "well-drained fertile soil; even moisture",
+      "propagation": "tuber division or cuttings",
+      "harvest_or_display": "flowers",
+      "special_traits": "decorative flower type",
+      "reference": {
+        "url": "https://plants.ces.ncsu.edu/plants/dahlia/",
+        "scope": "species_or_genus_lead_not_individually_verified"
+      },
+      "research_status": "provisional_starter",
+      "codex": {
+        "prototype_visuals_allowed": true,
+        "accurate_numeric_simulation_allowed": false,
+        "notes": "Use broad growth archetype only; cultivar traits and phenology need verification"
+      }
+    },
+    {
+      "id": "starter_dahlia_kelvin_floodlight",
+      "category": "dahlia",
+      "common_name": "Kelvin Floodlight",
+      "parent_scientific_name": "Dahlia hybrid cultivar complex",
+      "family": "Asteraceae",
+      "cultivar_or_selection": "Kelvin Floodlight",
+      "growth_habit": "tall branching herb",
+      "visual_markers": "very large bright yellow decorative blooms",
+      "life_cycle": "tuberous herbaceous perennial",
+      "sun": "full sun",
+      "soil_and_water": "well-drained fertile soil; even moisture",
+      "propagation": "tuber division or cuttings",
+      "harvest_or_display": "flowers",
+      "special_traits": "giant decorative type",
+      "reference": {
+        "url": "https://plants.ces.ncsu.edu/plants/dahlia/",
+        "scope": "species_or_genus_lead_not_individually_verified"
+      },
+      "research_status": "provisional_starter",
+      "codex": {
+        "prototype_visuals_allowed": true,
+        "accurate_numeric_simulation_allowed": false,
+        "notes": "Use broad growth archetype only; cultivar traits and phenology need verification"
+      }
+    },
+    {
+      "id": "starter_dahlia_cornel",
+      "category": "dahlia",
+      "common_name": "Cornel",
+      "parent_scientific_name": "Dahlia hybrid cultivar complex",
+      "family": "Asteraceae",
+      "cultivar_or_selection": "Cornel",
+      "growth_habit": "upright branching herb",
+      "visual_markers": "rounded red ball-shaped blooms",
+      "life_cycle": "tuberous herbaceous perennial",
+      "sun": "full sun",
+      "soil_and_water": "well-drained fertile soil; even moisture",
+      "propagation": "tuber division or cuttings",
+      "harvest_or_display": "flowers",
+      "special_traits": "ball dahlia type",
+      "reference": {
+        "url": "https://plants.ces.ncsu.edu/plants/dahlia/",
+        "scope": "species_or_genus_lead_not_individually_verified"
+      },
+      "research_status": "provisional_starter",
+      "codex": {
+        "prototype_visuals_allowed": true,
+        "accurate_numeric_simulation_allowed": false,
+        "notes": "Use broad growth archetype only; cultivar traits and phenology need verification"
+      }
+    },
+    {
+      "id": "starter_peony_sarah_bernhardt",
+      "category": "peony",
+      "common_name": "Sarah Bernhardt",
+      "parent_scientific_name": "Paeonia lactiflora cultivar complex",
+      "family": "Paeoniaceae",
+      "cultivar_or_selection": "Sarah Bernhardt",
+      "growth_habit": "upright leafy clump",
+      "visual_markers": "large fragrant double soft-pink flowers",
+      "life_cycle": "herbaceous clump-forming perennial",
+      "sun": "full sun to light shade",
+      "soil_and_water": "fertile well-drained soil; steady moisture",
+      "propagation": "root division",
+      "harvest_or_display": "flowers",
+      "special_traits": "herbaceous peony",
+      "reference": {
+        "url": "https://plants.ces.ncsu.edu/plants/paeonia-lactiflora/",
+        "scope": "species_or_genus_lead_not_individually_verified"
+      },
+      "research_status": "provisional_starter",
+      "codex": {
+        "prototype_visuals_allowed": true,
+        "accurate_numeric_simulation_allowed": false,
+        "notes": "Use broad growth archetype only; cultivar traits and phenology need verification"
+      }
+    },
+    {
+      "id": "starter_peony_festiva_maxima",
+      "category": "peony",
+      "common_name": "Festiva Maxima",
+      "parent_scientific_name": "Paeonia lactiflora cultivar complex",
+      "family": "Paeoniaceae",
+      "cultivar_or_selection": "Festiva Maxima",
+      "growth_habit": "upright leafy clump",
+      "visual_markers": "white double blooms with red flecks",
+      "life_cycle": "herbaceous clump-forming perennial",
+      "sun": "full sun to light shade",
+      "soil_and_water": "fertile well-drained soil; steady moisture",
+      "propagation": "root division",
+      "harvest_or_display": "flowers",
+      "special_traits": "herbaceous peony",
+      "reference": {
+        "url": "https://plants.ces.ncsu.edu/plants/paeonia-lactiflora/",
+        "scope": "species_or_genus_lead_not_individually_verified"
+      },
+      "research_status": "provisional_starter",
+      "codex": {
+        "prototype_visuals_allowed": true,
+        "accurate_numeric_simulation_allowed": false,
+        "notes": "Use broad growth archetype only; cultivar traits and phenology need verification"
+      }
+    },
+    {
+      "id": "starter_peony_karl_rosenfield",
+      "category": "peony",
+      "common_name": "Karl Rosenfield",
+      "parent_scientific_name": "Paeonia lactiflora cultivar complex",
+      "family": "Paeoniaceae",
+      "cultivar_or_selection": "Karl Rosenfield",
+      "growth_habit": "upright leafy clump",
+      "visual_markers": "large deep crimson double blooms",
+      "life_cycle": "herbaceous clump-forming perennial",
+      "sun": "full sun to light shade",
+      "soil_and_water": "fertile well-drained soil; steady moisture",
+      "propagation": "root division",
+      "harvest_or_display": "flowers",
+      "special_traits": "herbaceous peony",
+      "reference": {
+        "url": "https://plants.ces.ncsu.edu/plants/paeonia-lactiflora/",
+        "scope": "species_or_genus_lead_not_individually_verified"
+      },
+      "research_status": "provisional_starter",
+      "codex": {
+        "prototype_visuals_allowed": true,
+        "accurate_numeric_simulation_allowed": false,
+        "notes": "Use broad growth archetype only; cultivar traits and phenology need verification"
+      }
+    },
+    {
+      "id": "starter_peony_duchesse_de_nemours",
+      "category": "peony",
+      "common_name": "Duchesse de Nemours",
+      "parent_scientific_name": "Paeonia lactiflora cultivar complex",
+      "family": "Paeoniaceae",
+      "cultivar_or_selection": "Duchesse de Nemours",
+      "growth_habit": "upright leafy clump",
+      "visual_markers": "creamy-white full double fragrant blooms",
+      "life_cycle": "herbaceous clump-forming perennial",
+      "sun": "full sun to light shade",
+      "soil_and_water": "fertile well-drained soil; steady moisture",
+      "propagation": "root division",
+      "harvest_or_display": "flowers",
+      "special_traits": "herbaceous peony",
+      "reference": {
+        "url": "https://plants.ces.ncsu.edu/plants/paeonia-lactiflora/",
+        "scope": "species_or_genus_lead_not_individually_verified"
+      },
+      "research_status": "provisional_starter",
+      "codex": {
+        "prototype_visuals_allowed": true,
+        "accurate_numeric_simulation_allowed": false,
+        "notes": "Use broad growth archetype only; cultivar traits and phenology need verification"
+      }
+    },
+    {
+      "id": "starter_peony_bowl_of_beauty",
+      "category": "peony",
+      "common_name": "Bowl of Beauty",
+      "parent_scientific_name": "Paeonia lactiflora cultivar complex",
+      "family": "Paeoniaceae",
+      "cultivar_or_selection": "Bowl of Beauty",
+      "growth_habit": "upright leafy clump",
+      "visual_markers": "pink outer petals around creamy petaloid center",
+      "life_cycle": "herbaceous clump-forming perennial",
+      "sun": "full sun to light shade",
+      "soil_and_water": "fertile well-drained soil; steady moisture",
+      "propagation": "root division",
+      "harvest_or_display": "flowers",
+      "special_traits": "Japanese flower form",
+      "reference": {
+        "url": "https://plants.ces.ncsu.edu/plants/paeonia-lactiflora/",
+        "scope": "species_or_genus_lead_not_individually_verified"
+      },
+      "research_status": "provisional_starter",
+      "codex": {
+        "prototype_visuals_allowed": true,
+        "accurate_numeric_simulation_allowed": false,
+        "notes": "Use broad growth archetype only; cultivar traits and phenology need verification"
+      }
+    }
+  ]
+}

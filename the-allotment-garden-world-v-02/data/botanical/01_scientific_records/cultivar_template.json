@@ -1,0 +1,82 @@
+{
+  "schema_version": "1.0.0",
+  "role": "Reusable species-to-cultivar expansion template; NOT a real plant record",
+  "identifiers": {
+    "record_id": "cultivar_<genus>_<species>_<cultivar_slug>",
+    "parent_taxon_id": "taxon_<genus>_<species>_<common_slug>",
+    "family_id": "family_<name>",
+    "genus_id": "genus_<name>",
+    "accepted_scientific_name": null,
+    "registered_cultivar_epithet": null,
+    "breeder_code": null,
+    "synonyms": []
+  },
+  "identity": {
+    "plant_group_or_type": null,
+    "trade_name": null,
+    "patent_or_trademark_notes": null,
+    "origin_or_breeder": null
+  },
+  "phenotype": {
+    "habit": null,
+    "height_m": null,
+    "spread_m": null,
+    "fruit_shape": null,
+    "fruit_color_stages": [],
+    "flower_color": null,
+    "flower_form": null,
+    "fragrance": null,
+    "thorns_or_prickles": null
+  },
+  "physiology": {
+    "life_cycle": null,
+    "juvenile_period_days": null,
+    "chill_requirement": null,
+    "heat_requirement": null,
+    "flowering_and_fruiting_type": null,
+    "pollination_requirements": null,
+    "first_harvest_window": null,
+    "regrowth_or_dormancy": null
+  },
+  "site": {
+    "sun_hours": null,
+    "soil_ph": null,
+    "drainage": null,
+    "water_requirement": null,
+    "frost_tolerance_c": null,
+    "heat_tolerance_c": null,
+    "hardiness_zones": null
+  },
+  "cultivation": {
+    "spacing_m": null,
+    "training_support": null,
+    "pruning_group": null,
+    "propagation": null,
+    "average_yield": null,
+    "harvest_method": null
+  },
+  "ecology_and_safety": {
+    "pests": [],
+    "diseases": [],
+    "beneficial_interactions": [],
+    "edibility_and_toxicity": null,
+    "invasiveness_region": null,
+    "local_bans_or_restrictions": null
+  },
+  "evidence": [],
+  "review": {
+    "identity_status": "not_started",
+    "trait_status": "not_started",
+    "review_date": null,
+    "reviewer": null,
+    "source_conflicts": []
+  },
+  "codex_hand_off": {
+    "construction_spec_id": null,
+    "asset_requirements": [],
+    "unimplemented_behaviors": [],
+    "art_review": null,
+    "gameplay_assumptions": [],
+    "ready_for_build": false
+  }
+}

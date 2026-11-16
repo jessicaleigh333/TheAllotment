@@ -1,0 +1,2516 @@
+{
+  "schema_version": "1.0.0",
+  "family_count": 69,
+  "genus_count": 202,
+  "taxon_count": 273,
+  "families": [
+    {
+      "id": "family_solanaceae",
+      "name": "Solanaceae",
+      "child_genus_ids": [
+        "genus_solanum",
+        "genus_physalis",
+        "genus_capsicum"
+      ]
+    },
+    {
+      "id": "family_cucurbitaceae",
+      "name": "Cucurbitaceae",
+      "child_genus_ids": [
+        "genus_cucurbita",
+        "genus_citrullus",
+        "genus_cucumis",
+        "genus_lagenaria",
+        "genus_luffa",
+        "genus_momordica",
+        "genus_sechium"
+      ]
+    },
+    {
+      "id": "family_fabaceae",
+      "name": "Fabaceae",
+      "child_genus_ids": [
+        "genus_phaseolus",
+        "genus_vicia",
+        "genus_vigna",
+        "genus_glycine",
+        "genus_cicer",
+        "genus_lens",
+        "genus_arachis",
+        "genus_cajanus",
+        "genus_trifolium",
+        "genus_medicago",
+        "genus_cercis",
+        "genus_robinia",
+        "genus_wisteria"
+      ]
+    },
+    {
+      "id": "family_brassicaceae",
+      "name": "Brassicaceae",
+      "child_genus_ids": [
+        "genus_brassica",
+        "genus_eruca",
+        "genus_nasturtium"
+      ]
+    },
+    {
+      "id": "family_amaranthaceae",
+      "name": "Amaranthaceae",
+      "child_genus_ids": [
+        "genus_spinacia",
+        "genus_beta",
+        "genus_amaranthus",
+        "genus_chenopodium"
+      ]
+    },
+    {
+      "id": "family_asteraceae",
+      "name": "Asteraceae",
+      "child_genus_ids": [
+        "genus_cichorium",
+        "genus_helianthus",
+        "genus_cynara",
+        "genus_calendula",
+        "genus_echinacea",
+        "genus_rudbeckia",
+        "genus_gaillardia",
+        "genus_coreopsis",
+        "genus_symphyotrichum",
+        "genus_achillea",
+        "genus_xerochrysum",
+        "genus_chrysanthemum",
+        "genus_tithonia",
+        "genus_artemisia",
+        "genus_matricaria",
+        "genus_stevia"
+      ]
+    },
+    {
+      "id": "family_apiaceae",
+      "name": "Apiaceae",
+      "child_genus_ids": [
+        "genus_pastinaca",
+        "genus_apium",
+        "genus_foeniculum",
+        "genus_petroselinum",
+        "genus_coriandrum",
+        "genus_anethum",
+        "genus_carum"
+      ]
+    },
+    {
+      "id": "family_amaryllidaceae",
+      "name": "Amaryllidaceae",
+      "child_genus_ids": [
+        "genus_allium",
+        "genus_narcissus",
+        "genus_hippeastrum",
+        "genus_galanthus"
+      ]
+    },
+    {
+      "id": "family_convolvulaceae",
+      "name": "Convolvulaceae",
+      "child_genus_ids": [
+        "genus_ipomoea"
+      ]
+    },
+    {
+      "id": "family_euphorbiaceae",
+      "name": "Euphorbiaceae",
+      "child_genus_ids": [
+        "genus_manihot"
+      ]
+    },
+    {
+      "id": "family_araceae",
+      "name": "Araceae",
+      "child_genus_ids": [
+        "genus_colocasia",
+        "genus_lemna",
+        "genus_epipremnum",
+        "genus_monstera",
+        "genus_spathiphyllum",
+        "genus_philodendron"
+      ]
+    },
+    {
+      "id": "family_poaceae",
+      "name": "Poaceae",
+      "child_genus_ids": [
+        "genus_oryza",
+        "genus_triticum",
+        "genus_hordeum",
+        "genus_avena",
+        "genus_secale",
+        "genus_sorghum",
+        "genus_cenchrus",
+        "genus_saccharum",
+        "genus_cymbopogon",
+        "genus_cynodon",
+        "genus_poa",
+        "genus_festuca",
+        "genus_schizachyrium",
+        "genus_panicum",
+        "genus_muhlenbergia"
+      ]
+    },
+    {
+      "id": "family_rosaceae",
+      "name": "Rosaceae",
+      "child_genus_ids": [
+        "genus_pyrus",
+        "genus_cydonia",
+        "genus_prunus",
+        "genus_eriobotrya",
+        "genus_mespilus",
+        "genus_amelanchier",
+        "genus_rubus",
+        "genus_spiraea",
+        "genus_physocarpus",
+        "genus_chaenomeles"
+      ]
+    },
+    {
+      "id": "family_rutaceae",
+      "name": "Rutaceae",
+      "child_genus_ids": [
+        "genus_citrus"
+      ]
+    },
+    {
+      "id": "family_moraceae",
+      "name": "Moraceae",
+      "child_genus_ids": [
+        "genus_morus",
+        "genus_artocarpus",
+        "genus_ficus"
+      ]
+    },
+    {
+      "id": "family_anacardiaceae",
+      "name": "Anacardiaceae",
+      "child_genus_ids": [
+        "genus_mangifera",
+        "genus_anacardium",
+        "genus_pistacia"
+      ]
+    },
+    {
+      "id": "family_ebenaceae",
+      "name": "Ebenaceae",
+      "child_genus_ids": [
+        "genus_diospyros"
+      ]
+    },
+    {
+      "id": "family_lauraceae",
+      "name": "Lauraceae",
+      "child_genus_ids": [
+        "genus_persea",
+        "genus_laurus"
+      ]
+    },
+    {
+      "id": "family_myrtaceae",
+      "name": "Myrtaceae",
+      "child_genus_ids": [
+        "genus_psidium",
+        "genus_acca"
+      ]
+    },
+    {
+      "id": "family_lythraceae",
+      "name": "Lythraceae",
+      "child_genus_ids": [
+        "genus_punica"
+      ]
+    },
+    {
+      "id": "family_fagaceae",
+      "name": "Fagaceae",
+      "child_genus_ids": [
+        "genus_castanea",
+        "genus_quercus"
+      ]
+    },
+    {
+      "id": "family_juglandaceae",
+      "name": "Juglandaceae",
+      "child_genus_ids": [
+        "genus_carya",
+        "genus_juglans"
+      ]
+    },
+    {
+      "id": "family_ericaceae",
+      "name": "Ericaceae",
+      "child_genus_ids": [
+        "genus_vaccinium",
+        "genus_rhododendron",
+        "genus_kalmia",
+        "genus_pieris"
+      ]
+    },
+    {
+      "id": "family_grossulariaceae",
+      "name": "Grossulariaceae",
+      "child_genus_ids": [
+        "genus_ribes"
+      ]
+    },
+    {
+      "id": "family_caprifoliaceae",
+      "name": "Caprifoliaceae",
+      "child_genus_ids": [
+        "genus_lonicera",
+        "genus_sambucus",
+        "genus_weigela",
+        "genus_symphoricarpos"
+      ]
+    },
+    {
+      "id": "family_actinidiaceae",
+      "name": "Actinidiaceae",
+      "child_genus_ids": [
+        "genus_actinidia"
+      ]
+    },
+    {
+      "id": "family_passifloraceae",
+      "name": "Passifloraceae",
+      "child_genus_ids": [
+        "genus_passiflora"
+      ]
+    },
+    {
+      "id": "family_vitaceae",
+      "name": "Vitaceae",
+      "child_genus_ids": [
+        "genus_vitis"
+      ]
+    },
+    {
+      "id": "family_ranunculaceae",
+      "name": "Ranunculaceae",
+      "child_genus_ids": [
+        "genus_anemone",
+        "genus_ranunculus",
+        "genus_delphinium",
+        "genus_aquilegia",
+        "genus_helleborus",
+        "genus_nigella",
+        "genus_clematis"
+      ]
+    },
+    {
+      "id": "family_iridaceae",
+      "name": "Iridaceae",
+      "child_genus_ids": [
+        "genus_iris",
+        "genus_gladiolus",
+        "genus_crocus"
+      ]
+    },
+    {
+      "id": "family_liliaceae",
+      "name": "Liliaceae",
+      "child_genus_ids": [
+        "genus_lilium",
+        "genus_tulipa"
+      ]
+    },
+    {
+      "id": "family_asparagaceae",
+      "name": "Asparagaceae",
+      "child_genus_ids": [
+        "genus_hyacinthus",
+        "genus_muscari",
+        "genus_hosta",
+        "genus_dracaena",
+        "genus_chlorophytum"
+      ]
+    },
+    {
+      "id": "family_plantaginaceae",
+      "name": "Plantaginaceae",
+      "child_genus_ids": [
+        "genus_antirrhinum",
+        "genus_digitalis",
+        "genus_penstemon"
+      ]
+    },
+    {
+      "id": "family_malvaceae",
+      "name": "Malvaceae",
+      "child_genus_ids": [
+        "genus_alcea",
+        "genus_hibiscus"
+      ]
+    },
+    {
+      "id": "family_onagraceae",
+      "name": "Onagraceae",
+      "child_genus_ids": [
+        "genus_oenothera"
+      ]
+    },
+    {
+      "id": "family_polemoniaceae",
+      "name": "Polemoniaceae",
+      "child_genus_ids": [
+        "genus_phlox"
+      ]
+    },
+    {
+      "id": "family_lamiaceae",
+      "name": "Lamiaceae",
+      "child_genus_ids": [
+        "genus_monarda",
+        "genus_salvia",
+        "genus_nepeta",
+        "genus_origanum",
+        "genus_melissa",
+        "genus_ocimum",
+        "genus_agastache"
+      ]
+    },
+    {
+      "id": "family_violaceae",
+      "name": "Violaceae",
+      "child_genus_ids": [
+        "genus_viola"
+      ]
+    },
+    {
+      "id": "family_boraginaceae",
+      "name": "Boraginaceae",
+      "child_genus_ids": [
+        "genus_myosotis",
+        "genus_borago"
+      ]
+    },
+    {
+      "id": "family_papaveraceae",
+      "name": "Papaveraceae",
+      "child_genus_ids": [
+        "genus_papaver",
+        "genus_eschscholzia"
+      ]
+    },
+    {
+      "id": "family_verbenaceae",
+      "name": "Verbenaceae",
+      "child_genus_ids": [
+        "genus_aloysia"
+      ]
+    },
+    {
+      "id": "family_zingiberaceae",
+      "name": "Zingiberaceae",
+      "child_genus_ids": [
+        "genus_zingiber",
+        "genus_curcuma",
+        "genus_elettaria"
+      ]
+    },
+    {
+      "id": "family_sapindaceae",
+      "name": "Sapindaceae",
+      "child_genus_ids": [
+        "genus_acer"
+      ]
+    },
+    {
+      "id": "family_betulaceae",
+      "name": "Betulaceae",
+      "child_genus_ids": [
+        "genus_betula"
+      ]
+    },
+    {
+      "id": "family_magnoliaceae",
+      "name": "Magnoliaceae",
+      "child_genus_ids": [
+        "genus_magnolia"
+      ]
+    },
+    {
+      "id": "family_cornaceae",
+      "name": "Cornaceae",
+      "child_genus_ids": [
+        "genus_cornus"
+      ]
+    },
+    {
+      "id": "family_hamamelidaceae",
+      "name": "Hamamelidaceae",
+      "child_genus_ids": [
+        "genus_hamamelis"
+      ]
+    },
+    {
+      "id": "family_oleaceae",
+      "name": "Oleaceae",
+      "child_genus_ids": [
+        "genus_chionanthus",
+        "genus_syringa",
+        "genus_forsythia",
+        "genus_jasminum"
+      ]
+    },
+    {
+      "id": "family_pinaceae",
+      "name": "Pinaceae",
+      "child_genus_ids": [
+        "genus_pinus",
+        "genus_picea"
+      ]
+    },
+    {
+      "id": "family_cupressaceae",
+      "name": "Cupressaceae",
+      "child_genus_ids": [
+        "genus_juniperus",
+        "genus_taxodium"
+      ]
+    },
+    {
+      "id": "family_hydrangeaceae",
+      "name": "Hydrangeaceae",
+      "child_genus_ids": [
+        "genus_hydrangea",
+        "genus_philadelphus"
+      ]
+    },
+    {
+      "id": "family_adoxaceae",
+      "name": "Adoxaceae",
+      "child_genus_ids": [
+        "genus_viburnum"
+      ]
+    },
+    {
+      "id": "family_buxaceae",
+      "name": "Buxaceae",
+      "child_genus_ids": [
+        "genus_buxus"
+      ]
+    },
+    {
+      "id": "family_aquifoliaceae",
+      "name": "Aquifoliaceae",
+      "child_genus_ids": [
+        "genus_ilex"
+      ]
+    },
+    {
+      "id": "family_theaceae",
+      "name": "Theaceae",
+      "child_genus_ids": [
+        "genus_camellia"
+      ]
+    },
+    {
+      "id": "family_apocynaceae",
+      "name": "Apocynaceae",
+      "child_genus_ids": [
+        "genus_trachelospermum",
+        "genus_mandevilla",
+        "genus_asclepias"
+      ]
+    },
+    {
+      "id": "family_bignoniaceae",
+      "name": "Bignoniaceae",
+      "child_genus_ids": [
+        "genus_campsis",
+        "genus_bignonia"
+      ]
+    },
+    {
+      "id": "family_cyperaceae",
+      "name": "Cyperaceae",
+      "child_genus_ids": [
+        "genus_carex"
+      ]
+    },
+    {
+      "id": "family_araliaceae",
+      "name": "Araliaceae",
+      "child_genus_ids": [
+        "genus_panax"
+      ]
+    },
+    {
+      "id": "family_crassulaceae",
+      "name": "Crassulaceae",
+      "child_genus_ids": [
+        "genus_sedum",
+        "genus_crassula",
+        "genus_echeveria"
+      ]
+    },
+    {
+      "id": "family_dryopteridaceae",
+      "name": "Dryopteridaceae",
+      "child_genus_ids": [
+        "genus_dryopteris"
+      ]
+    },
+    {
+      "id": "family_aspleniaceae",
+      "name": "Aspleniaceae",
+      "child_genus_ids": [
+        "genus_asplenium"
+      ]
+    },
+    {
+      "id": "family_onocleaceae",
+      "name": "Onocleaceae",
+      "child_genus_ids": [
+        "genus_onoclea"
+      ]
+    },
+    {
+      "id": "family_nymphaeaceae",
+      "name": "Nymphaeaceae",
+      "child_genus_ids": [
+        "genus_nymphaea",
+        "genus_nelumbo"
+      ]
+    },
+    {
+      "id": "family_pontederiaceae",
+      "name": "Pontederiaceae",
+      "child_genus_ids": [
+        "genus_pontederia"
+      ]
+    },
+    {
+      "id": "family_cactaceae",
+      "name": "Cactaceae",
+      "child_genus_ids": [
+        "genus_opuntia",
+        "genus_schlumbergera",
+        "genus_kroenleinia"
+      ]
+    },
+    {
+      "id": "family_asphodelaceae",
+      "name": "Asphodelaceae",
+      "child_genus_ids": [
+        "genus_aloe",
+        "genus_haworthiopsis"
+      ]
+    },
+    {
+      "id": "family_marantaceae",
+      "name": "Marantaceae",
+      "child_genus_ids": [
+        "genus_maranta"
+      ]
+    },
+    {
+      "id": "family_orchidaceae",
+      "name": "Orchidaceae",
+      "child_genus_ids": [
+        "genus_phalaenopsis",
+        "genus_cypripedium"
+      ]
+    }
+  ],
+  "genera": [
+    {
+      "id": "genus_solanum",
+      "name": "Solanum",
+      "family": "Solanaceae",
+      "child_taxon_ids": [
+        "taxon_solanum_melongena_eggplant"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_physalis",
+      "name": "Physalis",
+      "family": "Solanaceae",
+      "child_taxon_ids": [
+        "taxon_physalis_pruinosa_ground_cherry",
+        "taxon_physalis_philadelphica_tomatillo"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_capsicum",
+      "name": "Capsicum",
+      "family": "Solanaceae",
+      "child_taxon_ids": [
+        "taxon_capsicum_chinense_habanero_pepper",
+        "taxon_capsicum_frutescens_tabasco_pepper",
+        "taxon_capsicum_pubescens_rocoto_pepper"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_cucurbita",
+      "name": "Cucurbita",
+      "family": "Cucurbitaceae",
+      "child_taxon_ids": [
+        "taxon_cucurbita_pepo_pumpkin",
+        "taxon_cucurbita_moschata_butternut_squash",
+        "taxon_cucurbita_maxima_winter_squash_hubbard"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_citrullus",
+      "name": "Citrullus",
+      "family": "Cucurbitaceae",
+      "child_taxon_ids": [
+        "taxon_citrullus_lanatus_watermelon"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_cucumis",
+      "name": "Cucumis",
+      "family": "Cucurbitaceae",
+      "child_taxon_ids": [
+        "taxon_cucumis_melo_muskmelon"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_lagenaria",
+      "name": "Lagenaria",
+      "family": "Cucurbitaceae",
+      "child_taxon_ids": [
+        "taxon_lagenaria_siceraria_bottle_gourd"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_luffa",
+      "name": "Luffa",
+      "family": "Cucurbitaceae",
+      "child_taxon_ids": [
+        "taxon_luffa_aegyptiaca_luffa"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_momordica",
+      "name": "Momordica",
+      "family": "Cucurbitaceae",
+      "child_taxon_ids": [
+        "taxon_momordica_charantia_bitter_melon"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_sechium",
+      "name": "Sechium",
+      "family": "Cucurbitaceae",
+      "child_taxon_ids": [
+        "taxon_sechium_edule_chayote"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_phaseolus",
+      "name": "Phaseolus",
+      "family": "Fabaceae",
+      "child_taxon_ids": [
+        "taxon_phaseolus_lunatus_lima_bean",
+        "taxon_phaseolus_coccineus_runner_bean"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_vicia",
+      "name": "Vicia",
+      "family": "Fabaceae",
+      "child_taxon_ids": [
+        "taxon_vicia_faba_fava_bean"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_vigna",
+      "name": "Vigna",
+      "family": "Fabaceae",
+      "child_taxon_ids": [
+        "taxon_vigna_unguiculata_cowpea"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_glycine",
+      "name": "Glycine",
+      "family": "Fabaceae",
+      "child_taxon_ids": [
+        "taxon_glycine_max_soybean"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_cicer",
+      "name": "Cicer",
+      "family": "Fabaceae",
+      "child_taxon_ids": [
+        "taxon_cicer_arietinum_chickpea"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_lens",
+      "name": "Lens",
+      "family": "Fabaceae",
+      "child_taxon_ids": [
+        "taxon_lens_culinaris_lentil"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_arachis",
+      "name": "Arachis",
+      "family": "Fabaceae",
+      "child_taxon_ids": [
+        "taxon_arachis_hypogaea_peanut"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_cajanus",
+      "name": "Cajanus",
+      "family": "Fabaceae",
+      "child_taxon_ids": [
+        "taxon_cajanus_cajan_pigeon_pea"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_trifolium",
+      "name": "Trifolium",
+      "family": "Fabaceae",
+      "child_taxon_ids": [
+        "taxon_trifolium_incarnatum_scarlet_clover",
+        "taxon_trifolium_repens_white_clover"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_medicago",
+      "name": "Medicago",
+      "family": "Fabaceae",
+      "child_taxon_ids": [
+        "taxon_medicago_sativa_alfalfa"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_brassica",
+      "name": "Brassica",
+      "family": "Brassicaceae",
+      "child_taxon_ids": [
+        "taxon_brassica_oleracea_cabbage",
+        "taxon_brassica_rapa_chinese_cabbage",
+        "taxon_brassica_rapa_turnip",
+        "taxon_brassica_napus_rutabaga",
+        "taxon_brassica_juncea_mustard_greens"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_eruca",
+      "name": "Eruca",
+      "family": "Brassicaceae",
+      "child_taxon_ids": [
+        "taxon_eruca_vesicaria_arugula"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_nasturtium",
+      "name": "Nasturtium",
+      "family": "Brassicaceae",
+      "child_taxon_ids": [
+        "taxon_nasturtium_officinale_watercress"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_spinacia",
+      "name": "Spinacia",
+      "family": "Amaranthaceae",
+      "child_taxon_ids": [
+        "taxon_spinacia_oleracea_spinach"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_beta",
+      "name": "Beta",
+      "family": "Amaranthaceae",
+      "child_taxon_ids": [
+        "taxon_beta_vulgaris_swiss_chard",
+        "taxon_beta_vulgaris_beetroot"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_amaranthus",
+      "name": "Amaranthus",
+      "family": "Amaranthaceae",
+      "child_taxon_ids": [
+        "taxon_amaranthus_tricolor_amaranth_greens"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_chenopodium",
+      "name": "Chenopodium",
+      "family": "Amaranthaceae",
+      "child_taxon_ids": [
+        "taxon_chenopodium_quinoa_quinoa"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_cichorium",
+      "name": "Cichorium",
+      "family": "Asteraceae",
+      "child_taxon_ids": [
+        "taxon_cichorium_endivia_endive",
+        "taxon_cichorium_intybus_chicory"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_helianthus",
+      "name": "Helianthus",
+      "family": "Asteraceae",
+      "child_taxon_ids": [
+        "taxon_helianthus_tuberosus_jerusalem_artichoke"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_cynara",
+      "name": "Cynara",
+      "family": "Asteraceae",
+      "child_taxon_ids": [
+        "taxon_cynara_cardunculus_artichoke"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_pastinaca",
+      "name": "Pastinaca",
+      "family": "Apiaceae",
+      "child_taxon_ids": [
+        "taxon_pastinaca_sativa_parsnip"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_apium",
+      "name": "Apium",
+      "family": "Apiaceae",
+      "child_taxon_ids": [
+        "taxon_apium_graveolens_celery",
+        "taxon_apium_graveolens_celeriac"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_foeniculum",
+      "name": "Foeniculum",
+      "family": "Apiaceae",
+      "child_taxon_ids": [
+        "taxon_foeniculum_vulgare_fennel"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_allium",
+      "name": "Allium",
+      "family": "Amaryllidaceae",
+      "child_taxon_ids": [
+        "taxon_allium_cepa_bulb_onion",
+        "taxon_allium_cepa_shallot",
+        "taxon_allium_sativum_garlic",
+        "taxon_allium_ampeloprasum_leek",
+        "taxon_allium_schoenoprasum_chives",
+        "taxon_allium_fistulosum_welsh_onion"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_ipomoea",
+      "name": "Ipomoea",
+      "family": "Convolvulaceae",
+      "child_taxon_ids": [
+        "taxon_ipomoea_batatas_sweet_potato",
+        "taxon_ipomoea_purpurea_morning_glory",
+        "taxon_ipomoea_alba_moonflower"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_manihot",
+      "name": "Manihot",
+      "family": "Euphorbiaceae",
+      "child_taxon_ids": [
+        "taxon_manihot_esculenta_cassava"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_colocasia",
+      "name": "Colocasia",
+      "family": "Araceae",
+      "child_taxon_ids": [
+        "taxon_colocasia_esculenta_taro"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_oryza",
+      "name": "Oryza",
+      "family": "Poaceae",
+      "child_taxon_ids": [
+        "taxon_oryza_sativa_rice"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_triticum",
+      "name": "Triticum",
+      "family": "Poaceae",
+      "child_taxon_ids": [
+        "taxon_triticum_aestivum_bread_wheat"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_hordeum",
+      "name": "Hordeum",
+      "family": "Poaceae",
+      "child_taxon_ids": [
+        "taxon_hordeum_vulgare_barley"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_avena",
+      "name": "Avena",
+      "family": "Poaceae",
+      "child_taxon_ids": [
+        "taxon_avena_sativa_oats"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_secale",
+      "name": "Secale",
+      "family": "Poaceae",
+      "child_taxon_ids": [
+        "taxon_secale_cereale_rye"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_sorghum",
+      "name": "Sorghum",
+      "family": "Poaceae",
+      "child_taxon_ids": [
+        "taxon_sorghum_bicolor_sorghum"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_cenchrus",
+      "name": "Cenchrus",
+      "family": "Poaceae",
+      "child_taxon_ids": [
+        "taxon_cenchrus_americanus_pearl_millet",
+        "taxon_cenchrus_alopecuroides_fountain_grass"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_saccharum",
+      "name": "Saccharum",
+      "family": "Poaceae",
+      "child_taxon_ids": [
+        "taxon_saccharum_officinarum_sugarcane"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_pyrus",
+      "name": "Pyrus",
+      "family": "Rosaceae",
+      "child_taxon_ids": [
+        "taxon_pyrus_communis_pear",
+        "taxon_pyrus_pyrifolia_asian_pear"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_cydonia",
+      "name": "Cydonia",
+      "family": "Rosaceae",
+      "child_taxon_ids": [
+        "taxon_cydonia_oblonga_quince"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_prunus",
+      "name": "Prunus",
+      "family": "Rosaceae",
+      "child_taxon_ids": [
+        "taxon_prunus_armeniaca_apricot",
+        "taxon_prunus_avium_sweet_cherry",
+        "taxon_prunus_cerasus_sour_cherry",
+        "taxon_prunus_salicina_japanese_plum",
+        "taxon_prunus_dulcis_almond"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_eriobotrya",
+      "name": "Eriobotrya",
+      "family": "Rosaceae",
+      "child_taxon_ids": [
+        "taxon_eriobotrya_japonica_loquat"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_mespilus",
+      "name": "Mespilus",
+      "family": "Rosaceae",
+      "child_taxon_ids": [
+        "taxon_mespilus_germanica_medlar"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_amelanchier",
+      "name": "Amelanchier",
+      "family": "Rosaceae",
+      "child_taxon_ids": [
+        "taxon_amelanchier_canadensis_serviceberry"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_citrus",
+      "name": "Citrus",
+      "family": "Rutaceae",
+      "child_taxon_ids": [
+        "taxon_citrus_sinensis_sweet_orange",
+        "taxon_citrus_limon_lemon",
+        "taxon_citrus_aurantiifolia_lime",
+        "taxon_citrus_reticulata_mandarin",
+        "taxon_citrus_paradisi_grapefruit",
+        "taxon_citrus_japonica_kumquat"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_morus",
+      "name": "Morus",
+      "family": "Moraceae",
+      "child_taxon_ids": [
+        "taxon_morus_alba_mulberry",
+        "taxon_morus_nigra_black_mulberry"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_artocarpus",
+      "name": "Artocarpus",
+      "family": "Moraceae",
+      "child_taxon_ids": [
+        "taxon_artocarpus_altilis_breadfruit",
+        "taxon_artocarpus_heterophyllus_jackfruit"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_mangifera",
+      "name": "Mangifera",
+      "family": "Anacardiaceae",
+      "child_taxon_ids": [
+        "taxon_mangifera_indica_mango"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_anacardium",
+      "name": "Anacardium",
+      "family": "Anacardiaceae",
+      "child_taxon_ids": [
+        "taxon_anacardium_occidentale_cashew"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_pistacia",
+      "name": "Pistacia",
+      "family": "Anacardiaceae",
+      "child_taxon_ids": [
+        "taxon_pistacia_vera_pistachio"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_diospyros",
+      "name": "Diospyros",
+      "family": "Ebenaceae",
+      "child_taxon_ids": [
+        "taxon_diospyros_virginiana_american_persimmon",
+        "taxon_diospyros_kaki_asian_persimmon"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_persea",
+      "name": "Persea",
+      "family": "Lauraceae",
+      "child_taxon_ids": [
+        "taxon_persea_americana_avocado"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_laurus",
+      "name": "Laurus",
+      "family": "Lauraceae",
+      "child_taxon_ids": [
+        "taxon_laurus_nobilis_bay_laurel"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_psidium",
+      "name": "Psidium",
+      "family": "Myrtaceae",
+      "child_taxon_ids": [
+        "taxon_psidium_guajava_guava"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_acca",
+      "name": "Acca",
+      "family": "Myrtaceae",
+      "child_taxon_ids": [
+        "taxon_acca_sellowiana_feijoa"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_punica",
+      "name": "Punica",
+      "family": "Lythraceae",
+      "child_taxon_ids": [
+        "taxon_punica_granatum_pomegranate"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_castanea",
+      "name": "Castanea",
+      "family": "Fagaceae",
+      "child_taxon_ids": [
+        "taxon_castanea_dentata_chestnut",
+        "taxon_castanea_mollissima_chinese_chestnut"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_carya",
+      "name": "Carya",
+      "family": "Juglandaceae",
+      "child_taxon_ids": [
+        "taxon_carya_illinoinensis_pecan"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_juglans",
+      "name": "Juglans",
+      "family": "Juglandaceae",
+      "child_taxon_ids": [
+        "taxon_juglans_nigra_black_walnut",
+        "taxon_juglans_regia_english_walnut"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_vaccinium",
+      "name": "Vaccinium",
+      "family": "Ericaceae",
+      "child_taxon_ids": [
+        "taxon_vaccinium_virgatum_rabbiteye_blueberry",
+        "taxon_vaccinium_angustifolium_lowbush_blueberry",
+        "taxon_vaccinium_macrocarpon_cranberry",
+        "taxon_vaccinium_vitis_idaea_lingonberry"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_rubus",
+      "name": "Rubus",
+      "family": "Rosaceae",
+      "child_taxon_ids": [
+        "taxon_rubus_occidentalis_black_raspberry",
+        "taxon_rubus_phoenicolasius_wineberry",
+        "taxon_rubus_parviflorus_thimbleberry"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_ribes",
+      "name": "Ribes",
+      "family": "Grossulariaceae",
+      "child_taxon_ids": [
+        "taxon_ribes_nigrum_blackcurrant",
+        "taxon_ribes_rubrum_redcurrant",
+        "taxon_ribes_uva_crispa_gooseberry"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_lonicera",
+      "name": "Lonicera",
+      "family": "Caprifoliaceae",
+      "child_taxon_ids": [
+        "taxon_lonicera_caerulea_blue_honeysuckle"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_sambucus",
+      "name": "Sambucus",
+      "family": "Caprifoliaceae",
+      "child_taxon_ids": [
+        "taxon_sambucus_canadensis_elderberry"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_actinidia",
+      "name": "Actinidia",
+      "family": "Actinidiaceae",
+      "child_taxon_ids": [
+        "taxon_actinidia_deliciosa_kiwifruit",
+        "taxon_actinidia_arguta_hardy_kiwi"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_passiflora",
+      "name": "Passiflora",
+      "family": "Passifloraceae",
+      "child_taxon_ids": [
+        "taxon_passiflora_edulis_passion_fruit",
+        "taxon_passiflora_incarnata_maypop",
+        "taxon_passiflora_caerulea_blue_passionflower"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_vitis",
+      "name": "Vitis",
+      "family": "Vitaceae",
+      "child_taxon_ids": [
+        "taxon_vitis_labrusca_fox_grape",
+        "taxon_vitis_riparia_riverbank_grape"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_calendula",
+      "name": "Calendula",
+      "family": "Asteraceae",
+      "child_taxon_ids": [
+        "taxon_calendula_officinalis_calendula"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_echinacea",
+      "name": "Echinacea",
+      "family": "Asteraceae",
+      "child_taxon_ids": [
+        "taxon_echinacea_purpurea_purple_coneflower"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_rudbeckia",
+      "name": "Rudbeckia",
+      "family": "Asteraceae",
+      "child_taxon_ids": [
+        "taxon_rudbeckia_hirta_black_eyed_susan"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_gaillardia",
+      "name": "Gaillardia",
+      "family": "Asteraceae",
+      "child_taxon_ids": [
+        "taxon_gaillardia_pulchella_blanket_flower"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_coreopsis",
+      "name": "Coreopsis",
+      "family": "Asteraceae",
+      "child_taxon_ids": [
+        "taxon_coreopsis_lanceolata_coreopsis"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_symphyotrichum",
+      "name": "Symphyotrichum",
+      "family": "Asteraceae",
+      "child_taxon_ids": [
+        "taxon_symphyotrichum_novae_angliae_aster"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_achillea",
+      "name": "Achillea",
+      "family": "Asteraceae",
+      "child_taxon_ids": [
+        "taxon_achillea_millefolium_yarrow"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_xerochrysum",
+      "name": "Xerochrysum",
+      "family": "Asteraceae",
+      "child_taxon_ids": [
+        "taxon_xerochrysum_bracteatum_strawflower"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_chrysanthemum",
+      "name": "Chrysanthemum",
+      "family": "Asteraceae",
+      "child_taxon_ids": [
+        "taxon_chrysanthemum_morifolium_chrysanthemum"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_tithonia",
+      "name": "Tithonia",
+      "family": "Asteraceae",
+      "child_taxon_ids": [
+        "taxon_tithonia_rotundifolia_mexican_sunflower"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_anemone",
+      "name": "Anemone",
+      "family": "Ranunculaceae",
+      "child_taxon_ids": [
+        "taxon_anemone_coronaria_anemone"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_ranunculus",
+      "name": "Ranunculus",
+      "family": "Ranunculaceae",
+      "child_taxon_ids": [
+        "taxon_ranunculus_asiaticus_buttercup"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_delphinium",
+      "name": "Delphinium",
+      "family": "Ranunculaceae",
+      "child_taxon_ids": [
+        "taxon_delphinium_elatum_delphinium"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_aquilegia",
+      "name": "Aquilegia",
+      "family": "Ranunculaceae",
+      "child_taxon_ids": [
+        "taxon_aquilegia_canadensis_columbine"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_helleborus",
+      "name": "Helleborus",
+      "family": "Ranunculaceae",
+      "child_taxon_ids": [
+        "taxon_helleborus_orientalis_hellebore"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_nigella",
+      "name": "Nigella",
+      "family": "Ranunculaceae",
+      "child_taxon_ids": [
+        "taxon_nigella_damascena_nigella"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_iris",
+      "name": "Iris",
+      "family": "Iridaceae",
+      "child_taxon_ids": [
+        "taxon_iris_germanica_bearded_iris",
+        "taxon_iris_hollandica_dutch_iris"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_gladiolus",
+      "name": "Gladiolus",
+      "family": "Iridaceae",
+      "child_taxon_ids": [
+        "taxon_gladiolus_hortulanus_gladiolus"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_crocus",
+      "name": "Crocus",
+      "family": "Iridaceae",
+      "child_taxon_ids": [
+        "taxon_crocus_vernus_crocus"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_lilium",
+      "name": "Lilium",
+      "family": "Liliaceae",
+      "child_taxon_ids": [
+        "taxon_lilium_longiflorum_easter_lily",
+        "taxon_lilium_asiatic_hybrids_asiatic_lily"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_tulipa",
+      "name": "Tulipa",
+      "family": "Liliaceae",
+      "child_taxon_ids": [
+        "taxon_tulipa_gesneriana_tulip"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_narcissus",
+      "name": "Narcissus",
+      "family": "Amaryllidaceae",
+      "child_taxon_ids": [
+        "taxon_narcissus_pseudonarcissus_daffodil"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_hippeastrum",
+      "name": "Hippeastrum",
+      "family": "Amaryllidaceae",
+      "child_taxon_ids": [
+        "taxon_hippeastrum_hybridum_amaryllis"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_galanthus",
+      "name": "Galanthus",
+      "family": "Amaryllidaceae",
+      "child_taxon_ids": [
+        "taxon_galanthus_nivalis_snowdrop"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_hyacinthus",
+      "name": "Hyacinthus",
+      "family": "Asparagaceae",
+      "child_taxon_ids": [
+        "taxon_hyacinthus_orientalis_hyacinth"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_muscari",
+      "name": "Muscari",
+      "family": "Asparagaceae",
+      "child_taxon_ids": [
+        "taxon_muscari_armeniacum_grape_hyacinth"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_hosta",
+      "name": "Hosta",
+      "family": "Asparagaceae",
+      "child_taxon_ids": [
+        "taxon_hosta_plantaginea_hosta"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_antirrhinum",
+      "name": "Antirrhinum",
+      "family": "Plantaginaceae",
+      "child_taxon_ids": [
+        "taxon_antirrhinum_majus_snapdragon"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_digitalis",
+      "name": "Digitalis",
+      "family": "Plantaginaceae",
+      "child_taxon_ids": [
+        "taxon_digitalis_purpurea_foxglove"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_penstemon",
+      "name": "Penstemon",
+      "family": "Plantaginaceae",
+      "child_taxon_ids": [
+        "taxon_penstemon_digitalis_penstemon"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_alcea",
+      "name": "Alcea",
+      "family": "Malvaceae",
+      "child_taxon_ids": [
+        "taxon_alcea_rosea_hollyhock"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_hibiscus",
+      "name": "Hibiscus",
+      "family": "Malvaceae",
+      "child_taxon_ids": [
+        "taxon_hibiscus_syriacus_rose_of_sharon",
+        "taxon_hibiscus_moscheutos_hardy_hibiscus"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_oenothera",
+      "name": "Oenothera",
+      "family": "Onagraceae",
+      "child_taxon_ids": [
+        "taxon_oenothera_biennis_evening_primrose",
+        "taxon_oenothera_lindheimeri_gaura"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_phlox",
+      "name": "Phlox",
+      "family": "Polemoniaceae",
+      "child_taxon_ids": [
+        "taxon_phlox_paniculata_garden_phlox",
+        "taxon_phlox_subulata_creeping_phlox"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_monarda",
+      "name": "Monarda",
+      "family": "Lamiaceae",
+      "child_taxon_ids": [
+        "taxon_monarda_didyma_bee_balm"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_salvia",
+      "name": "Salvia",
+      "family": "Lamiaceae",
+      "child_taxon_ids": [
+        "taxon_salvia_nemorosa_salvia",
+        "taxon_salvia_officinalis_sage"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_nepeta",
+      "name": "Nepeta",
+      "family": "Lamiaceae",
+      "child_taxon_ids": [
+        "taxon_nepeta_faassenii_catmint"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_viola",
+      "name": "Viola",
+      "family": "Violaceae",
+      "child_taxon_ids": [
+        "taxon_viola_odorata_sweet_violet",
+        "taxon_viola_wittrockiana_garden_pansy"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_myosotis",
+      "name": "Myosotis",
+      "family": "Boraginaceae",
+      "child_taxon_ids": [
+        "taxon_myosotis_sylvatica_forget_me_not"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_borago",
+      "name": "Borago",
+      "family": "Boraginaceae",
+      "child_taxon_ids": [
+        "taxon_borago_officinalis_borage"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_papaver",
+      "name": "Papaver",
+      "family": "Papaveraceae",
+      "child_taxon_ids": [
+        "taxon_papaver_orientale_oriental_poppy"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_eschscholzia",
+      "name": "Eschscholzia",
+      "family": "Papaveraceae",
+      "child_taxon_ids": [
+        "taxon_eschscholzia_californica_california_poppy"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_origanum",
+      "name": "Origanum",
+      "family": "Lamiaceae",
+      "child_taxon_ids": [
+        "taxon_origanum_vulgare_oregano",
+        "taxon_origanum_majorana_marjoram"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_melissa",
+      "name": "Melissa",
+      "family": "Lamiaceae",
+      "child_taxon_ids": [
+        "taxon_melissa_officinalis_lemon_balm"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_ocimum",
+      "name": "Ocimum",
+      "family": "Lamiaceae",
+      "child_taxon_ids": [
+        "taxon_ocimum_tenuiflorum_holy_basil",
+        "taxon_ocimum_basilicum_thai_basil"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_agastache",
+      "name": "Agastache",
+      "family": "Lamiaceae",
+      "child_taxon_ids": [
+        "taxon_agastache_foeniculum_anise_hyssop"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_petroselinum",
+      "name": "Petroselinum",
+      "family": "Apiaceae",
+      "child_taxon_ids": [
+        "taxon_petroselinum_crispum_parsley"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_coriandrum",
+      "name": "Coriandrum",
+      "family": "Apiaceae",
+      "child_taxon_ids": [
+        "taxon_coriandrum_sativum_cilantro"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_anethum",
+      "name": "Anethum",
+      "family": "Apiaceae",
+      "child_taxon_ids": [
+        "taxon_anethum_graveolens_dill"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_carum",
+      "name": "Carum",
+      "family": "Apiaceae",
+      "child_taxon_ids": [
+        "taxon_carum_carvi_caraway"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_artemisia",
+      "name": "Artemisia",
+      "family": "Asteraceae",
+      "child_taxon_ids": [
+        "taxon_artemisia_dracunculus_tarragon"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_matricaria",
+      "name": "Matricaria",
+      "family": "Asteraceae",
+      "child_taxon_ids": [
+        "taxon_matricaria_chamomilla_chamomile"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_stevia",
+      "name": "Stevia",
+      "family": "Asteraceae",
+      "child_taxon_ids": [
+        "taxon_stevia_rebaudiana_stevia"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_aloysia",
+      "name": "Aloysia",
+      "family": "Verbenaceae",
+      "child_taxon_ids": [
+        "taxon_aloysia_citrodora_lemon_verbena"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_cymbopogon",
+      "name": "Cymbopogon",
+      "family": "Poaceae",
+      "child_taxon_ids": [
+        "taxon_cymbopogon_citratus_lemongrass"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_zingiber",
+      "name": "Zingiber",
+      "family": "Zingiberaceae",
+      "child_taxon_ids": [
+        "taxon_zingiber_officinale_ginger"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_curcuma",
+      "name": "Curcuma",
+      "family": "Zingiberaceae",
+      "child_taxon_ids": [
+        "taxon_curcuma_longa_turmeric"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_elettaria",
+      "name": "Elettaria",
+      "family": "Zingiberaceae",
+      "child_taxon_ids": [
+        "taxon_elettaria_cardamomum_cardamom"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_quercus",
+      "name": "Quercus",
+      "family": "Fagaceae",
+      "child_taxon_ids": [
+        "taxon_quercus_alba_white_oak",
+        "taxon_quercus_rubra_red_oak",
+        "taxon_quercus_virginiana_live_oak"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_acer",
+      "name": "Acer",
+      "family": "Sapindaceae",
+      "child_taxon_ids": [
+        "taxon_acer_rubrum_red_maple",
+        "taxon_acer_saccharum_sugar_maple",
+        "taxon_acer_palmatum_japanese_maple"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_betula",
+      "name": "Betula",
+      "family": "Betulaceae",
+      "child_taxon_ids": [
+        "taxon_betula_nigra_river_birch",
+        "taxon_betula_papyrifera_paper_birch"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_magnolia",
+      "name": "Magnolia",
+      "family": "Magnoliaceae",
+      "child_taxon_ids": [
+        "taxon_magnolia_grandiflora_southern_magnolia",
+        "taxon_magnolia_soulangeana_saucer_magnolia"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_cornus",
+      "name": "Cornus",
+      "family": "Cornaceae",
+      "child_taxon_ids": [
+        "taxon_cornus_florida_flowering_dogwood"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_hamamelis",
+      "name": "Hamamelis",
+      "family": "Hamamelidaceae",
+      "child_taxon_ids": [
+        "taxon_hamamelis_virginiana_american_witch_hazel"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_cercis",
+      "name": "Cercis",
+      "family": "Fabaceae",
+      "child_taxon_ids": [
+        "taxon_cercis_canadensis_eastern_redbud"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_robinia",
+      "name": "Robinia",
+      "family": "Fabaceae",
+      "child_taxon_ids": [
+        "taxon_robinia_pseudoacacia_black_locust"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_chionanthus",
+      "name": "Chionanthus",
+      "family": "Oleaceae",
+      "child_taxon_ids": [
+        "taxon_chionanthus_virginicus_white_fringetree"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_pinus",
+      "name": "Pinus",
+      "family": "Pinaceae",
+      "child_taxon_ids": [
+        "taxon_pinus_strobus_eastern_white_pine",
+        "taxon_pinus_taeda_loblolly_pine"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_picea",
+      "name": "Picea",
+      "family": "Pinaceae",
+      "child_taxon_ids": [
+        "taxon_picea_abies_norway_spruce"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_juniperus",
+      "name": "Juniperus",
+      "family": "Cupressaceae",
+      "child_taxon_ids": [
+        "taxon_juniperus_virginiana_eastern_redcedar"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_taxodium",
+      "name": "Taxodium",
+      "family": "Cupressaceae",
+      "child_taxon_ids": [
+        "taxon_taxodium_distichum_bald_cypress"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_hydrangea",
+      "name": "Hydrangea",
+      "family": "Hydrangeaceae",
+      "child_taxon_ids": [
+        "taxon_hydrangea_paniculata_panicle_hydrangea",
+        "taxon_hydrangea_arborescens_smooth_hydrangea",
+        "taxon_hydrangea_quercifolia_oakleaf_hydrangea"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_philadelphus",
+      "name": "Philadelphus",
+      "family": "Hydrangeaceae",
+      "child_taxon_ids": [
+        "taxon_philadelphus_coronarius_mock_orange"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_rhododendron",
+      "name": "Rhododendron",
+      "family": "Ericaceae",
+      "child_taxon_ids": [
+        "taxon_rhododendron_canescens_azalea"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_kalmia",
+      "name": "Kalmia",
+      "family": "Ericaceae",
+      "child_taxon_ids": [
+        "taxon_kalmia_latifolia_mountain_laurel"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_pieris",
+      "name": "Pieris",
+      "family": "Ericaceae",
+      "child_taxon_ids": [
+        "taxon_pieris_japonica_pieris"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_weigela",
+      "name": "Weigela",
+      "family": "Caprifoliaceae",
+      "child_taxon_ids": [
+        "taxon_weigela_florida_weigela"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_symphoricarpos",
+      "name": "Symphoricarpos",
+      "family": "Caprifoliaceae",
+      "child_taxon_ids": [
+        "taxon_symphoricarpos_albus_snowberry"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_syringa",
+      "name": "Syringa",
+      "family": "Oleaceae",
+      "child_taxon_ids": [
+        "taxon_syringa_vulgaris_common_lilac"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_forsythia",
+      "name": "Forsythia",
+      "family": "Oleaceae",
+      "child_taxon_ids": [
+        "taxon_forsythia_intermedia_forsythia"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_spiraea",
+      "name": "Spiraea",
+      "family": "Rosaceae",
+      "child_taxon_ids": [
+        "taxon_spiraea_japonica_spirea"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_physocarpus",
+      "name": "Physocarpus",
+      "family": "Rosaceae",
+      "child_taxon_ids": [
+        "taxon_physocarpus_opulifolius_ninebark"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_chaenomeles",
+      "name": "Chaenomeles",
+      "family": "Rosaceae",
+      "child_taxon_ids": [
+        "taxon_chaenomeles_speciosa_flowering_quince"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_viburnum",
+      "name": "Viburnum",
+      "family": "Adoxaceae",
+      "child_taxon_ids": [
+        "taxon_viburnum_dentatum_viburnum"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_buxus",
+      "name": "Buxus",
+      "family": "Buxaceae",
+      "child_taxon_ids": [
+        "taxon_buxus_sempervirens_boxwood"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_ilex",
+      "name": "Ilex",
+      "family": "Aquifoliaceae",
+      "child_taxon_ids": [
+        "taxon_ilex_opaca_american_holly",
+        "taxon_ilex_verticillata_winterberry"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_camellia",
+      "name": "Camellia",
+      "family": "Theaceae",
+      "child_taxon_ids": [
+        "taxon_camellia_japonica_camellia"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_trachelospermum",
+      "name": "Trachelospermum",
+      "family": "Apocynaceae",
+      "child_taxon_ids": [
+        "taxon_trachelospermum_jasminoides_star_jasmine"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_mandevilla",
+      "name": "Mandevilla",
+      "family": "Apocynaceae",
+      "child_taxon_ids": [
+        "taxon_mandevilla_sanderi_mandevilla"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_jasminum",
+      "name": "Jasminum",
+      "family": "Oleaceae",
+      "child_taxon_ids": [
+        "taxon_jasminum_officinale_common_jasmine"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_campsis",
+      "name": "Campsis",
+      "family": "Bignoniaceae",
+      "child_taxon_ids": [
+        "taxon_campsis_radicans_trumpet_vine"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_bignonia",
+      "name": "Bignonia",
+      "family": "Bignoniaceae",
+      "child_taxon_ids": [
+        "taxon_bignonia_capreolata_crossvine"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_wisteria",
+      "name": "Wisteria",
+      "family": "Fabaceae",
+      "child_taxon_ids": [
+        "taxon_wisteria_frutescens_american_wisteria"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_clematis",
+      "name": "Clematis",
+      "family": "Ranunculaceae",
+      "child_taxon_ids": [
+        "taxon_clematis_terniflora_sweet_autumn_clematis"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_cynodon",
+      "name": "Cynodon",
+      "family": "Poaceae",
+      "child_taxon_ids": [
+        "taxon_cynodon_dactylon_bermudagrass"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_poa",
+      "name": "Poa",
+      "family": "Poaceae",
+      "child_taxon_ids": [
+        "taxon_poa_pratensis_kentucky_bluegrass"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_festuca",
+      "name": "Festuca",
+      "family": "Poaceae",
+      "child_taxon_ids": [
+        "taxon_festuca_arundinacea_tall_fescue"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_schizachyrium",
+      "name": "Schizachyrium",
+      "family": "Poaceae",
+      "child_taxon_ids": [
+        "taxon_schizachyrium_scoparium_little_bluestem"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_panicum",
+      "name": "Panicum",
+      "family": "Poaceae",
+      "child_taxon_ids": [
+        "taxon_panicum_virgatum_switchgrass"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_muhlenbergia",
+      "name": "Muhlenbergia",
+      "family": "Poaceae",
+      "child_taxon_ids": [
+        "taxon_muhlenbergia_capillaris_pink_muhly_grass"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_carex",
+      "name": "Carex",
+      "family": "Cyperaceae",
+      "child_taxon_ids": [
+        "taxon_carex_pensylvanica_pennsylvania_sedge",
+        "taxon_carex_muskingumensis_palm_sedge"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_panax",
+      "name": "Panax",
+      "family": "Araliaceae",
+      "child_taxon_ids": [
+        "taxon_panax_quinquefolius_ginseng"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_sedum",
+      "name": "Sedum",
+      "family": "Crassulaceae",
+      "child_taxon_ids": [
+        "taxon_sedum_acre_stonecrop"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_asclepias",
+      "name": "Asclepias",
+      "family": "Apocynaceae",
+      "child_taxon_ids": [
+        "taxon_asclepias_syriaca_common_milkweed",
+        "taxon_asclepias_tuberosa_butterfly_weed",
+        "taxon_asclepias_incarnata_swamp_milkweed"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_dryopteris",
+      "name": "Dryopteris",
+      "family": "Dryopteridaceae",
+      "child_taxon_ids": [
+        "taxon_dryopteris_erythrosora_autumn_fern",
+        "taxon_dryopteris_marginalis_marginal_wood_fern"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_asplenium",
+      "name": "Asplenium",
+      "family": "Aspleniaceae",
+      "child_taxon_ids": [
+        "taxon_asplenium_nidus_bird_nest_fern"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_onoclea",
+      "name": "Onoclea",
+      "family": "Onocleaceae",
+      "child_taxon_ids": [
+        "taxon_onoclea_sensibilis_sensitive_fern"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_nymphaea",
+      "name": "Nymphaea",
+      "family": "Nymphaeaceae",
+      "child_taxon_ids": [
+        "taxon_nymphaea_odorata_white_water_lily"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_nelumbo",
+      "name": "Nelumbo",
+      "family": "Nymphaeaceae",
+      "child_taxon_ids": [
+        "taxon_nelumbo_nucifera_sacred_lotus"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_pontederia",
+      "name": "Pontederia",
+      "family": "Pontederiaceae",
+      "child_taxon_ids": [
+        "taxon_pontederia_cordata_pickerelweed"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_lemna",
+      "name": "Lemna",
+      "family": "Araceae",
+      "child_taxon_ids": [
+        "taxon_lemna_minor_duckweed"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_opuntia",
+      "name": "Opuntia",
+      "family": "Cactaceae",
+      "child_taxon_ids": [
+        "taxon_opuntia_humifusa_prickly_pear"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_schlumbergera",
+      "name": "Schlumbergera",
+      "family": "Cactaceae",
+      "child_taxon_ids": [
+        "taxon_schlumbergera_buckleyi_christmas_cactus"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_kroenleinia",
+      "name": "Kroenleinia",
+      "family": "Cactaceae",
+      "child_taxon_ids": [
+        "taxon_kroenleinia_grusonii_golden_barrel_cactus"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_aloe",
+      "name": "Aloe",
+      "family": "Asphodelaceae",
+      "child_taxon_ids": [
+        "taxon_aloe_vera_aloe_vera"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_haworthiopsis",
+      "name": "Haworthiopsis",
+      "family": "Asphodelaceae",
+      "child_taxon_ids": [
+        "taxon_haworthiopsis_attenuata_haworthia"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_crassula",
+      "name": "Crassula",
+      "family": "Crassulaceae",
+      "child_taxon_ids": [
+        "taxon_crassula_ovata_jade_plant"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_echeveria",
+      "name": "Echeveria",
+      "family": "Crassulaceae",
+      "child_taxon_ids": [
+        "taxon_echeveria_elegans_echeveria"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_epipremnum",
+      "name": "Epipremnum",
+      "family": "Araceae",
+      "child_taxon_ids": [
+        "taxon_epipremnum_aureum_pothos"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_monstera",
+      "name": "Monstera",
+      "family": "Araceae",
+      "child_taxon_ids": [
+        "taxon_monstera_deliciosa_monstera"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_spathiphyllum",
+      "name": "Spathiphyllum",
+      "family": "Araceae",
+      "child_taxon_ids": [
+        "taxon_spathiphyllum_wallisii_peace_lily"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_philodendron",
+      "name": "Philodendron",
+      "family": "Araceae",
+      "child_taxon_ids": [
+        "taxon_philodendron_hederaceum_philodendron"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_dracaena",
+      "name": "Dracaena",
+      "family": "Asparagaceae",
+      "child_taxon_ids": [
+        "taxon_dracaena_trifasciata_snake_plant"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_chlorophytum",
+      "name": "Chlorophytum",
+      "family": "Asparagaceae",
+      "child_taxon_ids": [
+        "taxon_chlorophytum_comosum_spider_plant"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_ficus",
+      "name": "Ficus",
+      "family": "Moraceae",
+      "child_taxon_ids": [
+        "taxon_ficus_elastica_rubber_fig"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_maranta",
+      "name": "Maranta",
+      "family": "Marantaceae",
+      "child_taxon_ids": [
+        "taxon_maranta_leuconeura_prayer_plant"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_phalaenopsis",
+      "name": "Phalaenopsis",
+      "family": "Orchidaceae",
+      "child_taxon_ids": [
+        "taxon_phalaenopsis_amabilis_moth_orchid"
+      ],
+      "shared_traits_review_status": "not_started"
+    },
+    {
+      "id": "genus_cypripedium",
+      "name": "Cypripedium",
+      "family": "Orchidaceae",
+      "child_taxon_ids": [
+        "taxon_cypripedium_acaule_lady_slipper_orchid"
+      ],
+      "shared_traits_review_status": "not_started"
+    }
+  ],
+  "note": "Horticultural common-name categories can overlap taxa. Taxonomic names and genus placements provisional; some rows represent crop groups rather than species. Do not infer ecology/traits directly from taxonomy."
+}
