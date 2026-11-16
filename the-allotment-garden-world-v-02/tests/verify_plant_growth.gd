@@ -26,7 +26,7 @@ func verify() -> void:
    var state := Growth.state(plant,Growth.starting_age(model.item_id))
    var bounds: AABB = model.mesh_bounds()
    assert(absf(bounds.size.y-state.height) < .001,"Wrong plant height in metres")
-   assert(absf(bounds.size.x-state.width) < .001 and absf(bounds.size.z-state.width) < .001)
+   assert(absf(bounds.size.x-state.width) < .001 and absf(bounds.size.z-state.get("depth",state.width)) < .001)
    assert(absf(bounds.position.y) < .001,"Plant pivot must sit on the ground")
    model.free()
  assert(Growth.state("sunflower",6.99).stage == 0)
@@ -79,5 +79,5 @@ func verify() -> void:
  hud._close()
  world.queue_free()
  await process_frame
- print("PASS: all 12 species and stages, real/offline clock boundaries, metre bounds, legacy saves, stage inventory, age-preserving pickup/replant, live growth and Shop stages")
+ print("PASS: all 16 growing profiles and stages, real/offline clock boundaries, metre bounds, legacy saves, stage inventory, age-preserving pickup/replant, live growth and Shop stages")
  quit()

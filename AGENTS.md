@@ -29,3 +29,8 @@
 - Include screenshots or a preview scene when feasible; request visual approval before considering art assets final.
 - Ask a focused question when a missing decision would materially affect the work.
 - Never silently alter established design decisions; propose edits to the design document for owner review.
+
+## Permanent real-life growth and scale rule
+- Owner instruction, 2026-11-16: build every future living plant with its own real-world growth stages and metre-scale dimensions. Every future object must use realistic physical scale.
+- New plant profiles need scientific/cultivar identity, named visual phases, real elapsed-day age knots, height/width/depth curves, mature clearance, source URLs, and a clear distinction between referenced facts and calibrated estimates. Do not silently substitute accelerated growth or a generic adult mesh scaled through all stages.
+- Run all-profile growth/scale tests and the new-profile data contract before presenting additions as implemented. Count distinct plant profiles honestly; mesh detail variants and stages are not species. Preserve existing saves and mature scenery while extending living versions. See features/market/REAL_LIFE_GROWTH.md within the game project.

@@ -1,4 +1,5 @@
 extends RefCounted
+const WoodyArt := preload("res://assets/garden_art/woody_art.gd")
 const Woodland := preload("res://assets/garden_art/woodland_collection.gd")
 const Rustic := preload("res://assets/garden_art/rustic_collection.gd")
 const Enchanted := preload("res://assets/garden_art/enchanted_collection.gd")
@@ -13,13 +14,16 @@ const BRONZE := Color("8f713f")
 const SIZES := {"bench":Vector3(1.8,.9,.65),"rose_arch":Vector3(2.4,2.5,.7),"fountain":Vector3(2.2,2,2.2),"lantern":Vector3(.22,.45,.22),"trellis":Vector3(1.6,2,.25),"planter":Vector3(.55,.75,.55),"watering_can":Vector3(.65,.4,.28),"straw_hat":Vector3(.42,.16,.42)}
 static var cache := {}
 
-static func meshes(id: String, stage: int = 4, tint: Color = Color.WHITE) -> Array[ArrayMesh]:
+static func meshes(id: String, stage: int = 4, tint: Color = Color.WHITE, growth_state: Dictionary = {}) -> Array[ArrayMesh]:
 	var key := "%s:%d:%s" % [id,stage,tint.to_html()]
+	if not growth_state.is_empty(): key += ":%d:%d:%d:%d" % [roundi(growth_state.height*100),roundi(growth_state.width*100),roundi(growth_state.depth*100),roundi(growth_state.trunk*1000)]
 	if cache.has(key): return cache[key]
 	var result: Array[ArrayMesh] = []
 	for lod in range(3):
 		var builder := Builder.new(lod)
-		if id in ["sunflower","rose","lavender","hydrangea","cosmos","daisy","basil"] or preload("res://assets/garden_art/vine_art.gd").COLORS.has(id):
+		if id.ends_with("@growing") and WoodyArt.Data.PROFILES.has(id.get_slice("@",0)):
+			WoodyArt.build(builder,id.get_slice("@",0),stage,growth_state)
+		elif id in ["sunflower","rose","lavender","hydrangea","cosmos","daisy","basil"] or preload("res://assets/garden_art/vine_art.gd").COLORS.has(id):
 			_plant(builder,id,stage,tint)
 		else:
 			_object(builder,id,tint)
@@ -27,8 +31,8 @@ static func meshes(id: String, stage: int = 4, tint: Color = Color.WHITE) -> Arr
 	cache[key] = result
 	return result
 
-static func attach(root: Node3D, id: String, stage: int = 4, tint: Color = Color.WHITE) -> void:
-	var resources := meshes(id,stage,tint)
+static func attach(root: Node3D, id: String, stage: int = 4, tint: Color = Color.WHITE, growth_state: Dictionary = {}) -> void:
+	var resources := meshes(id,stage,tint,growth_state)
 	var reference: AABB = resources[0].get_aabb()
 	for lod in range(3):
 		var node := MeshInstance3D.new()
@@ -494,6 +498,7 @@ static func _bed(b: RefCounted) -> void:
 	b.box(Vector3(0,.31,0),Vector3(2.96,.10,3.24),.03,4,Color("584635"))
 
 static func add_collision(root: Node3D) -> int:
+	root.set_meta("art_collision_requested",true)
 	if root.has_node("PlayerCollision") or root.has_node("Geometry/PlayerCollision"): return 0
 	var source_id: String = root.get_meta("garden_asset","")
 	var id: String = Rustic.ALIASES.get(source_id,French.ALIASES.get(source_id,source_id))
@@ -539,6 +544,8 @@ static func add_collision(root: Node3D) -> int:
 	if Enchanted.SIZES.has(source_id): recipes = Enchanted.collision(source_id)
 	if Rustic.SIZES.has(source_id): recipes = Rustic.collision(source_id)
 	if Woodland.SIZES.has(source_id): recipes = Woodland.collision(source_id)
+	if root.has_meta("woody_growth_state"):
+		recipes = WoodyArt.Data.collisions(root.get_meta("woody_growth_id"),root.get_meta("woody_growth_state"))
 	if recipes.is_empty(): return 0
 	var body := StaticBody3D.new()
 	body.name = "PlayerCollision"

@@ -20,7 +20,7 @@ static func size(id: String) -> Vector3:
  var plant := Growth.species(id)
  if not plant.is_empty():
   var p: Dictionary = Growth.PLANTS[plant]
-  return Vector3(p.width,p.height,p.width)
+  return Vector3(p.width,p.height,p.get("depth",p.width))
  return {"bench":Vector3(1.8,.9,.65),"rose_arch":Vector3(2.4,2.5,.7),"fountain":Vector3(2.2,2,2.2),"lantern":Vector3(.22,.45,.22),"trellis":Vector3(1.6,2,.25),"planter":Vector3(.55,.75,.55),"watering_can":Vector3(.65,.4,.28)}.get(id,Vector3.ONE)
 
 static func top(id: String) -> Dictionary:
