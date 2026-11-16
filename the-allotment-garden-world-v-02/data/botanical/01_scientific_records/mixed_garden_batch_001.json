@@ -1,0 +1,1689 @@
+{
+  "schema_version": "1.0.0",
+  "collection": "Scientific library expansion 001",
+  "created": "2026-11-16",
+  "record_count": 30,
+  "warning": "These are provisional research-intake records, not fully verified numerical game specifications. Regional climate and cultivar-specific traits require source audits before simulation.",
+  "entries": [
+    {
+      "id": "tomato",
+      "identity": {
+        "common_name": "Tomato",
+        "scientific_name": "Solanum lycopersicum",
+        "family": "Solanaceae",
+        "rank": "species_or_cultivated_group",
+        "cultivar": null,
+        "category": "vegetables"
+      },
+      "biology": {
+        "life_cycle": "warm_season_tender_perennial_grown_annual",
+        "propagation": "seed",
+        "harvest_organ": "fruit",
+        "pollination_note": "Self-pollinating flowers benefit from vibration by wind or bees.",
+        "chronological_age_independent_of_dormancy": true
+      },
+      "environment": {
+        "light": "full_sun",
+        "water": "even_moisture",
+        "soil_and_drainage": "well_drained",
+        "ph_range": null,
+        "hardiness_range": null,
+        "temperature_thresholds_c": null
+      },
+      "health": {
+        "ecology_and_risk": "Fruit set can fall during extreme heat; irregular water can contribute to cracking or blossom-end rot.",
+        "diagnosis_requires_observation": true
+      },
+      "management": {
+        "field_guidance": "Determinate and indeterminate forms have different growth and harvest patterns.",
+        "days_to_germination": null,
+        "days_to_first_harvest": null,
+        "yearly_yield_range": null,
+        "spacing_cm": null
+      },
+      "sources": [
+        {
+          "url": "https://plants.ces.ncsu.edu/plants/solanum-lycopersicum/",
+          "scope": "plant_profile",
+          "field_review": "initial_intake",
+          "accessed_at": "2026-11-16"
+        }
+      ],
+      "quality": {
+        "status": "profile_found_partial_traits_to_verify",
+        "confidence": "provisional",
+        "requires_cultivar_for_precise_simulation": true
+      },
+      "game_build_link": {
+        "target_id": "tomato",
+        "legacy_item_id": null,
+        "construction_spec_status": "not_written",
+        "godot_live_status": "not_integrated"
+      }
+    },
+    {
+      "id": "pepper",
+      "identity": {
+        "common_name": "Sweet pepper",
+        "scientific_name": "Capsicum annuum",
+        "family": "Solanaceae",
+        "rank": "species_or_cultivated_group",
+        "cultivar": null,
+        "category": "vegetables"
+      },
+      "biology": {
+        "life_cycle": "warm_season_tender_perennial_grown_annual",
+        "propagation": "seed",
+        "harvest_organ": "fruit",
+        "pollination_note": "Mostly self-fertile flowers; insect visitation can occur.",
+        "chronological_age_independent_of_dormancy": true
+      },
+      "environment": {
+        "light": "full_sun",
+        "water": "even_moisture",
+        "soil_and_drainage": "well_drained",
+        "ph_range": null,
+        "hardiness_range": null,
+        "temperature_thresholds_c": null
+      },
+      "health": {
+        "ecology_and_risk": "Cold injury and excessive heat may disrupt flowering and fruit set.",
+        "diagnosis_requires_observation": true
+      },
+      "management": {
+        "field_guidance": "Variety determines heat, fruit color, size, and ripening.",
+        "days_to_germination": null,
+        "days_to_first_harvest": null,
+        "yearly_yield_range": null,
+        "spacing_cm": null
+      },
+      "sources": [
+        {
+          "url": "https://extension.umn.edu/garden-and-home/yard-and-garden/gardening-in-minnesota",
+          "scope": "general_extension_index",
+          "field_review": "initial_intake",
+          "accessed_at": "2026-11-16"
+        }
+      ],
+      "quality": {
+        "status": "research_lead_only",
+        "confidence": "provisional",
+        "requires_cultivar_for_precise_simulation": true
+      },
+      "game_build_link": {
+        "target_id": "pepper",
+        "legacy_item_id": null,
+        "construction_spec_status": "not_written",
+        "godot_live_status": "not_integrated"
+      }
+    },
+    {
+      "id": "cucumber",
+      "identity": {
+        "common_name": "Cucumber",
+        "scientific_name": "Cucumis sativus",
+        "family": "Cucurbitaceae",
+        "rank": "species_or_cultivated_group",
+        "cultivar": null,
+        "category": "vegetables"
+      },
+      "biology": {
+        "life_cycle": "warm_season_annual",
+        "propagation": "seed",
+        "harvest_organ": "fruit",
+        "pollination_note": "Many varieties bear separate male and female flowers; some are parthenocarpic.",
+        "chronological_age_independent_of_dormancy": true
+      },
+      "environment": {
+        "light": "full_sun",
+        "water": "even_moisture",
+        "soil_and_drainage": "well_drained",
+        "ph_range": null,
+        "hardiness_range": null,
+        "temperature_thresholds_c": null
+      },
+      "health": {
+        "ecology_and_risk": "Poor pollination can affect fruit shape in pollination-dependent cultivars.",
+        "diagnosis_requires_observation": true
+      },
+      "management": {
+        "field_guidance": "Bush versus vining habit requires cultivar-specific support rules.",
+        "days_to_germination": null,
+        "days_to_first_harvest": null,
+        "yearly_yield_range": null,
+        "spacing_cm": null
+      },
+      "sources": [
+        {
+          "url": "https://extension.umn.edu/garden-and-home/yard-and-garden/gardening-in-minnesota/growing-cucumbers",
+          "scope": "general_extension_index",
+          "field_review": "initial_intake",
+          "accessed_at": "2026-11-16"
+        }
+      ],
+      "quality": {
+        "status": "research_lead_only",
+        "confidence": "provisional",
+        "requires_cultivar_for_precise_simulation": true
+      },
+      "game_build_link": {
+        "target_id": "cucumber",
+        "legacy_item_id": null,
+        "construction_spec_status": "not_written",
+        "godot_live_status": "not_integrated"
+      }
+    },
+    {
+      "id": "pole_bean",
+      "identity": {
+        "common_name": "Common pole bean",
+        "scientific_name": "Phaseolus vulgaris",
+        "family": "Fabaceae",
+        "rank": "species_or_cultivated_group",
+        "cultivar": null,
+        "category": "vegetables"
+      },
+      "biology": {
+        "life_cycle": "warm_season_annual",
+        "propagation": "seed",
+        "harvest_organ": "pods",
+        "pollination_note": "Flowers are largely self-fertile.",
+        "chronological_age_independent_of_dormancy": true
+      },
+      "environment": {
+        "light": "full_sun",
+        "water": "moderate",
+        "soil_and_drainage": "well_drained",
+        "ph_range": null,
+        "hardiness_range": null,
+        "temperature_thresholds_c": null
+      },
+      "health": {
+        "ecology_and_risk": "Beans host nitrogen-fixing bacterial symbioses in appropriate soil conditions; that does not guarantee zero nutrient requirements.",
+        "diagnosis_requires_observation": true
+      },
+      "management": {
+        "field_guidance": "Vining pole forms require support; yield depends on cultivar and harvest frequency.",
+        "days_to_germination": null,
+        "days_to_first_harvest": null,
+        "yearly_yield_range": null,
+        "spacing_cm": null
+      },
+      "sources": [
+        {
+          "url": "https://extension.umn.edu/garden-and-home/yard-and-garden/gardening-in-minnesota",
+          "scope": "general_extension_index",
+          "field_review": "initial_intake",
+          "accessed_at": "2026-11-16"
+        }
+      ],
+      "quality": {
+        "status": "research_lead_only",
+        "confidence": "provisional",
+        "requires_cultivar_for_precise_simulation": true
+      },
+      "game_build_link": {
+        "target_id": "pole_bean",
+        "legacy_item_id": null,
+        "construction_spec_status": "not_written",
+        "godot_live_status": "not_integrated"
+      }
+    },
+    {
+      "id": "pea",
+      "identity": {
+        "common_name": "Garden pea",
+        "scientific_name": "Pisum sativum",
+        "family": "Fabaceae",
+        "rank": "species_or_cultivated_group",
+        "cultivar": null,
+        "category": "vegetables"
+      },
+      "biology": {
+        "life_cycle": "cool_season_annual",
+        "propagation": "seed",
+        "harvest_organ": "pods",
+        "pollination_note": "Predominantly self-pollinating.",
+        "chronological_age_independent_of_dormancy": true
+      },
+      "environment": {
+        "light": "full_sun",
+        "water": "moderate",
+        "soil_and_drainage": "well_drained",
+        "ph_range": null,
+        "hardiness_range": null,
+        "temperature_thresholds_c": null
+      },
+      "health": {
+        "ecology_and_risk": "Heat can shorten productive flowering; roots may associate with nitrogen-fixing bacteria.",
+        "diagnosis_requires_observation": true
+      },
+      "management": {
+        "field_guidance": "Distinguish shelling, snow and snap peas for edible harvest stage.",
+        "days_to_germination": null,
+        "days_to_first_harvest": null,
+        "yearly_yield_range": null,
+        "spacing_cm": null
+      },
+      "sources": [
+        {
+          "url": "https://extension.umn.edu/garden-and-home/yard-and-garden/gardening-in-minnesota",
+          "scope": "general_extension_index",
+          "field_review": "initial_intake",
+          "accessed_at": "2026-11-16"
+        }
+      ],
+      "quality": {
+        "status": "research_lead_only",
+        "confidence": "provisional",
+        "requires_cultivar_for_precise_simulation": true
+      },
+      "game_build_link": {
+        "target_id": "pea",
+        "legacy_item_id": null,
+        "construction_spec_status": "not_written",
+        "godot_live_status": "not_integrated"
+      }
+    },
+    {
+      "id": "carrot",
+      "identity": {
+        "common_name": "Carrot",
+        "scientific_name": "Daucus carota subsp. sativus",
+        "family": "Apiaceae",
+        "rank": "species_or_cultivated_group",
+        "cultivar": null,
+        "category": "vegetables"
+      },
+      "biology": {
+        "life_cycle": "biennial_grown_annual",
+        "propagation": "seed",
+        "harvest_organ": "storage_root",
+        "pollination_note": "Second-year flowering serves pollinators.",
+        "chronological_age_independent_of_dormancy": true
+      },
+      "environment": {
+        "light": "full_sun",
+        "water": "even_germination_moisture",
+        "soil_and_drainage": "loose_well_drained",
+        "ph_range": null,
+        "hardiness_range": null,
+        "temperature_thresholds_c": null
+      },
+      "health": {
+        "ecology_and_risk": "The edible enlarged taproot forms in the first growing season; flowering normally comes after vernalization.",
+        "diagnosis_requires_observation": true
+      },
+      "management": {
+        "field_guidance": "Root splitting and deformity have multiple causes; do not assume a pest.",
+        "days_to_germination": null,
+        "days_to_first_harvest": null,
+        "yearly_yield_range": null,
+        "spacing_cm": null
+      },
+      "sources": [
+        {
+          "url": "https://extension.umn.edu/garden-and-home/yard-and-garden/gardening-in-minnesota",
+          "scope": "general_extension_index",
+          "field_review": "initial_intake",
+          "accessed_at": "2026-11-16"
+        }
+      ],
+      "quality": {
+        "status": "research_lead_only",
+        "confidence": "provisional",
+        "requires_cultivar_for_precise_simulation": true
+      },
+      "game_build_link": {
+        "target_id": "carrot",
+        "legacy_item_id": null,
+        "construction_spec_status": "not_written",
+        "godot_live_status": "not_integrated"
+      }
+    },
+    {
+      "id": "lettuce",
+      "identity": {
+        "common_name": "Garden lettuce",
+        "scientific_name": "Lactuca sativa",
+        "family": "Asteraceae",
+        "rank": "species_or_cultivated_group",
+        "cultivar": null,
+        "category": "vegetables"
+      },
+      "biology": {
+        "life_cycle": "cool_season_annual",
+        "propagation": "seed",
+        "harvest_organ": "leaf",
+        "pollination_note": "Wind-pollinated or self-fertile flowering heads; usually harvested before flowering.",
+        "chronological_age_independent_of_dormancy": true
+      },
+      "environment": {
+        "light": "sun_to_part_shade",
+        "water": "consistent",
+        "soil_and_drainage": "well_drained",
+        "ph_range": null,
+        "hardiness_range": null,
+        "temperature_thresholds_c": null
+      },
+      "health": {
+        "ecology_and_risk": "High temperature and day length may cause bolting and bitter leaves.",
+        "diagnosis_requires_observation": true
+      },
+      "management": {
+        "field_guidance": "Head, leaf and romaine lettuce need different harvest interactions.",
+        "days_to_germination": null,
+        "days_to_first_harvest": null,
+        "yearly_yield_range": null,
+        "spacing_cm": null
+      },
+      "sources": [
+        {
+          "url": "https://extension.umn.edu/garden-and-home/yard-and-garden/gardening-in-minnesota",
+          "scope": "general_extension_index",
+          "field_review": "initial_intake",
+          "accessed_at": "2026-11-16"
+        }
+      ],
+      "quality": {
+        "status": "research_lead_only",
+        "confidence": "provisional",
+        "requires_cultivar_for_precise_simulation": true
+      },
+      "game_build_link": {
+        "target_id": "lettuce",
+        "legacy_item_id": null,
+        "construction_spec_status": "not_written",
+        "godot_live_status": "not_integrated"
+      }
+    },
+    {
+      "id": "kale",
+      "identity": {
+        "common_name": "Kale",
+        "scientific_name": "Brassica oleracea Acephala Group",
+        "family": "Brassicaceae",
+        "rank": "species_or_cultivated_group",
+        "cultivar": null,
+        "category": "vegetables"
+      },
+      "biology": {
+        "life_cycle": "biennial_grown_annual",
+        "propagation": "seed",
+        "harvest_organ": "leaf",
+        "pollination_note": "Flowering in second year may feed early insects.",
+        "chronological_age_independent_of_dormancy": true
+      },
+      "environment": {
+        "light": "full_sun_to_part_shade",
+        "water": "consistent",
+        "soil_and_drainage": "well_drained",
+        "ph_range": null,
+        "hardiness_range": null,
+        "temperature_thresholds_c": null
+      },
+      "health": {
+        "ecology_and_risk": "Leaf harvest can repeat without destroying the growing point; caterpillars may feed on healthy kale.",
+        "diagnosis_requires_observation": true
+      },
+      "management": {
+        "field_guidance": "Do not equate a caterpillar sighting with nutrient stress.",
+        "days_to_germination": null,
+        "days_to_first_harvest": null,
+        "yearly_yield_range": null,
+        "spacing_cm": null
+      },
+      "sources": [
+        {
+          "url": "https://extension.umn.edu/garden-and-home/yard-and-garden/gardening-in-minnesota",
+          "scope": "general_extension_index",
+          "field_review": "initial_intake",
+          "accessed_at": "2026-11-16"
+        }
+      ],
+      "quality": {
+        "status": "research_lead_only",
+        "confidence": "provisional",
+        "requires_cultivar_for_precise_simulation": true
+      },
+      "game_build_link": {
+        "target_id": "kale",
+        "legacy_item_id": null,
+        "construction_spec_status": "not_written",
+        "godot_live_status": "not_integrated"
+      }
+    },
+    {
+      "id": "radish",
+      "identity": {
+        "common_name": "Garden radish",
+        "scientific_name": "Raphanus sativus",
+        "family": "Brassicaceae",
+        "rank": "species_or_cultivated_group",
+        "cultivar": null,
+        "category": "vegetables"
+      },
+      "biology": {
+        "life_cycle": "cool_season_annual",
+        "propagation": "seed",
+        "harvest_organ": "storage_root",
+        "pollination_note": "Flowers can feed pollinators when plants bolt.",
+        "chronological_age_independent_of_dormancy": true
+      },
+      "environment": {
+        "light": "full_sun",
+        "water": "consistent",
+        "soil_and_drainage": "well_drained",
+        "ph_range": null,
+        "hardiness_range": null,
+        "temperature_thresholds_c": null
+      },
+      "health": {
+        "ecology_and_risk": "Warm weather or delayed harvest can make some roots woody or pithy.",
+        "diagnosis_requires_observation": true
+      },
+      "management": {
+        "field_guidance": "Seed pods are edible for some radish types but must be identified.",
+        "days_to_germination": null,
+        "days_to_first_harvest": null,
+        "yearly_yield_range": null,
+        "spacing_cm": null
+      },
+      "sources": [
+        {
+          "url": "https://extension.umn.edu/garden-and-home/yard-and-garden/gardening-in-minnesota",
+          "scope": "general_extension_index",
+          "field_review": "initial_intake",
+          "accessed_at": "2026-11-16"
+        }
+      ],
+      "quality": {
+        "status": "research_lead_only",
+        "confidence": "provisional",
+        "requires_cultivar_for_precise_simulation": true
+      },
+      "game_build_link": {
+        "target_id": "radish",
+        "legacy_item_id": null,
+        "construction_spec_status": "not_written",
+        "godot_live_status": "not_integrated"
+      }
+    },
+    {
+      "id": "potato",
+      "identity": {
+        "common_name": "Potato",
+        "scientific_name": "Solanum tuberosum",
+        "family": "Solanaceae",
+        "rank": "species_or_cultivated_group",
+        "cultivar": null,
+        "category": "vegetables"
+      },
+      "biology": {
+        "life_cycle": "herbaceous_perennial_grown_annual",
+        "propagation": "seed_tuber",
+        "harvest_organ": "tuber",
+        "pollination_note": "Flowers may form berries; berries are not edible.",
+        "chronological_age_independent_of_dormancy": true
+      },
+      "environment": {
+        "light": "full_sun",
+        "water": "consistent",
+        "soil_and_drainage": "well_drained",
+        "ph_range": null,
+        "hardiness_range": null,
+        "temperature_thresholds_c": null
+      },
+      "health": {
+        "ecology_and_risk": "Tubers grow underground on stolons; green potatoes and plant foliage contain toxic glycoalkaloids.",
+        "diagnosis_requires_observation": true
+      },
+      "management": {
+        "field_guidance": "Harvest tubers not aboveground berries; protect tubers from light.",
+        "days_to_germination": null,
+        "days_to_first_harvest": null,
+        "yearly_yield_range": null,
+        "spacing_cm": null
+      },
+      "sources": [
+        {
+          "url": "https://extension.umn.edu/garden-and-home/yard-and-garden/gardening-in-minnesota",
+          "scope": "general_extension_index",
+          "field_review": "initial_intake",
+          "accessed_at": "2026-11-16"
+        }
+      ],
+      "quality": {
+        "status": "research_lead_only",
+        "confidence": "provisional",
+        "requires_cultivar_for_precise_simulation": true
+      },
+      "game_build_link": {
+        "target_id": "potato",
+        "legacy_item_id": null,
+        "construction_spec_status": "not_written",
+        "godot_live_status": "not_integrated"
+      }
+    },
+    {
+      "id": "zucchini",
+      "identity": {
+        "common_name": "Zucchini",
+        "scientific_name": "Cucurbita pepo",
+        "family": "Cucurbitaceae",
+        "rank": "species_or_cultivated_group",
+        "cultivar": null,
+        "category": "vegetables"
+      },
+      "biology": {
+        "life_cycle": "warm_season_annual",
+        "propagation": "seed",
+        "harvest_organ": "immature_fruit",
+        "pollination_note": "Usually separate male and female flowers require pollen transfer.",
+        "chronological_age_independent_of_dormancy": true
+      },
+      "environment": {
+        "light": "full_sun",
+        "water": "consistent",
+        "soil_and_drainage": "well_drained",
+        "ph_range": null,
+        "hardiness_range": null,
+        "temperature_thresholds_c": null
+      },
+      "health": {
+        "ecology_and_risk": "Powdery mildew often affects older leaves; insect-pollination failure may reduce fruit set.",
+        "diagnosis_requires_observation": true
+      },
+      "management": {
+        "field_guidance": "Zucchini is harvested immature; winter squash of same species has different harvest criteria.",
+        "days_to_germination": null,
+        "days_to_first_harvest": null,
+        "yearly_yield_range": null,
+        "spacing_cm": null
+      },
+      "sources": [
+        {
+          "url": "https://extension.umn.edu/garden-and-home/yard-and-garden/gardening-in-minnesota",
+          "scope": "general_extension_index",
+          "field_review": "initial_intake",
+          "accessed_at": "2026-11-16"
+        }
+      ],
+      "quality": {
+        "status": "research_lead_only",
+        "confidence": "provisional",
+        "requires_cultivar_for_precise_simulation": true
+      },
+      "game_build_link": {
+        "target_id": "zucchini",
+        "legacy_item_id": null,
+        "construction_spec_status": "not_written",
+        "godot_live_status": "not_integrated"
+      }
+    },
+    {
+      "id": "sweet_corn",
+      "identity": {
+        "common_name": "Sweet corn",
+        "scientific_name": "Zea mays var. saccharata",
+        "family": "Poaceae",
+        "rank": "species_or_cultivated_group",
+        "cultivar": null,
+        "category": "vegetables"
+      },
+      "biology": {
+        "life_cycle": "warm_season_annual",
+        "propagation": "seed",
+        "harvest_organ": "ears",
+        "pollination_note": "Wind pollination of tassels and silks; grouped planting helps pollination.",
+        "chronological_age_independent_of_dormancy": true
+      },
+      "environment": {
+        "light": "full_sun",
+        "water": "consistent",
+        "soil_and_drainage": "well_drained",
+        "ph_range": null,
+        "hardiness_range": null,
+        "temperature_thresholds_c": null
+      },
+      "health": {
+        "ecology_and_risk": "Uneven kernel fill may indicate incomplete silk pollination, but several environmental factors matter.",
+        "diagnosis_requires_observation": true
+      },
+      "management": {
+        "field_guidance": "One silking ear is not a mature harvest; monitor milk stage.",
+        "days_to_germination": null,
+        "days_to_first_harvest": null,
+        "yearly_yield_range": null,
+        "spacing_cm": null
+      },
+      "sources": [
+        {
+          "url": "https://extension.umn.edu/garden-and-home/yard-and-garden/gardening-in-minnesota",
+          "scope": "general_extension_index",
+          "field_review": "initial_intake",
+          "accessed_at": "2026-11-16"
+        }
+      ],
+      "quality": {
+        "status": "research_lead_only",
+        "confidence": "provisional",
+        "requires_cultivar_for_precise_simulation": true
+      },
+      "game_build_link": {
+        "target_id": "sweet_corn",
+        "legacy_item_id": null,
+        "construction_spec_status": "not_written",
+        "godot_live_status": "not_integrated"
+      }
+    },
+    {
+      "id": "apple",
+      "identity": {
+        "common_name": "Apple tree",
+        "scientific_name": "Malus domestica",
+        "family": "Rosaceae",
+        "rank": "species_or_cultivated_group",
+        "cultivar": null,
+        "category": "fruit_trees"
+      },
+      "biology": {
+        "life_cycle": "perennial_deciduous_tree",
+        "propagation": "grafted_nursery_tree",
+        "harvest_organ": "pome_fruit",
+        "pollination_note": "Most cultivars benefit from compatible co-flowering pollen partners.",
+        "chronological_age_independent_of_dormancy": true
+      },
+      "environment": {
+        "light": "full_sun",
+        "water": "moderate",
+        "soil_and_drainage": "well_drained",
+        "ph_range": null,
+        "hardiness_range": null,
+        "temperature_thresholds_c": null
+      },
+      "health": {
+        "ecology_and_risk": "Chill requirement, rootstock vigor, juvenile period and fruiting age depend on cultivar and rootstock.",
+        "diagnosis_requires_observation": true
+      },
+      "management": {
+        "field_guidance": "Model multiyear growth, spring bloom, autumn leaf fall, and separate annual harvest totals.",
+        "days_to_germination": null,
+        "days_to_first_harvest": null,
+        "yearly_yield_range": null,
+        "spacing_cm": null
+      },
+      "sources": [
+        {
+          "url": "https://plants.ces.ncsu.edu/plants/malus-domestica/",
+          "scope": "plant_profile",
+          "field_review": "initial_intake",
+          "accessed_at": "2026-11-16"
+        }
+      ],
+      "quality": {
+        "status": "profile_found_partial_traits_to_verify",
+        "confidence": "provisional",
+        "requires_cultivar_for_precise_simulation": true
+      },
+      "game_build_link": {
+        "target_id": "apple",
+        "legacy_item_id": null,
+        "construction_spec_status": "not_written",
+        "godot_live_status": "not_integrated"
+      }
+    },
+    {
+      "id": "peach",
+      "identity": {
+        "common_name": "Peach tree",
+        "scientific_name": "Prunus persica",
+        "family": "Rosaceae",
+        "rank": "species_or_cultivated_group",
+        "cultivar": null,
+        "category": "fruit_trees"
+      },
+      "biology": {
+        "life_cycle": "perennial_deciduous_tree",
+        "propagation": "grafted_nursery_tree",
+        "harvest_organ": "stone_fruit",
+        "pollination_note": "Many peach cultivars are self-fertile; bee visits still occur.",
+        "chronological_age_independent_of_dormancy": true
+      },
+      "environment": {
+        "light": "full_sun",
+        "water": "moderate",
+        "soil_and_drainage": "well_drained",
+        "ph_range": null,
+        "hardiness_range": null,
+        "temperature_thresholds_c": null
+      },
+      "health": {
+        "ecology_and_risk": "Flower buds may be damaged by late frost; dormant chilling varies by cultivar.",
+        "diagnosis_requires_observation": true
+      },
+      "management": {
+        "field_guidance": "Fruiting wood renewal and thinning matter; do not give one universal yield.",
+        "days_to_germination": null,
+        "days_to_first_harvest": null,
+        "yearly_yield_range": null,
+        "spacing_cm": null
+      },
+      "sources": [
+        {
+          "url": "https://extensiongardener.ces.ncsu.edu/extension-gardener-plant-toolbox/",
+          "scope": "general_extension_index",
+          "field_review": "initial_intake",
+          "accessed_at": "2026-11-16"
+        }
+      ],
+      "quality": {
+        "status": "research_lead_only",
+        "confidence": "provisional",
+        "requires_cultivar_for_precise_simulation": true
+      },
+      "game_build_link": {
+        "target_id": "peach",
+        "legacy_item_id": null,
+        "construction_spec_status": "not_written",
+        "godot_live_status": "not_integrated"
+      }
+    },
+    {
+      "id": "plum",
+      "identity": {
+        "common_name": "European plum",
+        "scientific_name": "Prunus domestica",
+        "family": "Rosaceae",
+        "rank": "species_or_cultivated_group",
+        "cultivar": null,
+        "category": "fruit_trees"
+      },
+      "biology": {
+        "life_cycle": "perennial_deciduous_tree",
+        "propagation": "grafted_nursery_tree",
+        "harvest_organ": "stone_fruit",
+        "pollination_note": "Pollination compatibility depends on cultivar.",
+        "chronological_age_independent_of_dormancy": true
+      },
+      "environment": {
+        "light": "full_sun",
+        "water": "moderate",
+        "soil_and_drainage": "well_drained",
+        "ph_range": null,
+        "hardiness_range": null,
+        "temperature_thresholds_c": null
+      },
+      "health": {
+        "ecology_and_risk": "Spring blossoms may be damaged by frost; stone fruit requires ongoing disease monitoring.",
+        "diagnosis_requires_observation": true
+      },
+      "management": {
+        "field_guidance": "Do not mix European, Japanese, and native plum pollination assumptions.",
+        "days_to_germination": null,
+        "days_to_first_harvest": null,
+        "yearly_yield_range": null,
+        "spacing_cm": null
+      },
+      "sources": [
+        {
+          "url": "https://extensiongardener.ces.ncsu.edu/extension-gardener-plant-toolbox/",
+          "scope": "general_extension_index",
+          "field_review": "initial_intake",
+          "accessed_at": "2026-11-16"
+        }
+      ],
+      "quality": {
+        "status": "research_lead_only",
+        "confidence": "provisional",
+        "requires_cultivar_for_precise_simulation": true
+      },
+      "game_build_link": {
+        "target_id": "plum",
+        "legacy_item_id": null,
+        "construction_spec_status": "not_written",
+        "godot_live_status": "not_integrated"
+      }
+    },
+    {
+      "id": "fig",
+      "identity": {
+        "common_name": "Common fig",
+        "scientific_name": "Ficus carica",
+        "family": "Moraceae",
+        "rank": "species_or_cultivated_group",
+        "cultivar": null,
+        "category": "fruit_trees"
+      },
+      "biology": {
+        "life_cycle": "perennial_deciduous_shrub_or_tree",
+        "propagation": "cutting",
+        "harvest_organ": "syconium_fruit",
+        "pollination_note": "Common fig cultivars often set fruit without fig-wasp pollination; other fig groups differ.",
+        "chronological_age_independent_of_dormancy": true
+      },
+      "environment": {
+        "light": "full_sun",
+        "water": "moderate",
+        "soil_and_drainage": "well_drained",
+        "ph_range": null,
+        "hardiness_range": null,
+        "temperature_thresholds_c": null
+      },
+      "health": {
+        "ecology_and_risk": "Winter dieback can change next season's fruiting wood and production.",
+        "diagnosis_requires_observation": true
+      },
+      "management": {
+        "field_guidance": "Distinguish breba and main crops when the cultivar produces both.",
+        "days_to_germination": null,
+        "days_to_first_harvest": null,
+        "yearly_yield_range": null,
+        "spacing_cm": null
+      },
+      "sources": [
+        {
+          "url": "https://extensiongardener.ces.ncsu.edu/extension-gardener-plant-toolbox/",
+          "scope": "general_extension_index",
+          "field_review": "initial_intake",
+          "accessed_at": "2026-11-16"
+        }
+      ],
+      "quality": {
+        "status": "research_lead_only",
+        "confidence": "provisional",
+        "requires_cultivar_for_precise_simulation": true
+      },
+      "game_build_link": {
+        "target_id": "fig",
+        "legacy_item_id": null,
+        "construction_spec_status": "not_written",
+        "godot_live_status": "not_integrated"
+      }
+    },
+    {
+      "id": "blueberry",
+      "identity": {
+        "common_name": "Highbush blueberry",
+        "scientific_name": "Vaccinium corymbosum",
+        "family": "Ericaceae",
+        "rank": "species_or_cultivated_group",
+        "cultivar": null,
+        "category": "berries"
+      },
+      "biology": {
+        "life_cycle": "perennial_deciduous_shrub",
+        "propagation": "cutting_or_nursery_plant",
+        "harvest_organ": "berry",
+        "pollination_note": "Cross-pollination among compatible cultivars may increase fruit size or yield.",
+        "chronological_age_independent_of_dormancy": true
+      },
+      "environment": {
+        "light": "full_sun",
+        "water": "consistent",
+        "soil_and_drainage": "acidic_well_drained",
+        "ph_range": null,
+        "hardiness_range": null,
+        "temperature_thresholds_c": null
+      },
+      "health": {
+        "ecology_and_risk": "High pH can cause chlorosis; waterlogging risks root health.",
+        "diagnosis_requires_observation": true
+      },
+      "management": {
+        "field_guidance": "Cultivar chilling requirements and harvest windows require separate profiles.",
+        "days_to_germination": null,
+        "days_to_first_harvest": null,
+        "yearly_yield_range": null,
+        "spacing_cm": null
+      },
+      "sources": [
+        {
+          "url": "https://plants.ces.ncsu.edu/plants/vaccinium-corymbosum/",
+          "scope": "plant_profile",
+          "field_review": "initial_intake",
+          "accessed_at": "2026-11-16"
+        }
+      ],
+      "quality": {
+        "status": "profile_found_partial_traits_to_verify",
+        "confidence": "provisional",
+        "requires_cultivar_for_precise_simulation": true
+      },
+      "game_build_link": {
+        "target_id": "blueberry",
+        "legacy_item_id": null,
+        "construction_spec_status": "not_written",
+        "godot_live_status": "not_integrated"
+      }
+    },
+    {
+      "id": "strawberry",
+      "identity": {
+        "common_name": "Garden strawberry",
+        "scientific_name": "Fragaria × ananassa",
+        "family": "Rosaceae",
+        "rank": "species_or_cultivated_group",
+        "cultivar": null,
+        "category": "berries"
+      },
+      "biology": {
+        "life_cycle": "perennial_herbaceous",
+        "propagation": "runner_or_crown",
+        "harvest_organ": "aggregate_accessory_fruit",
+        "pollination_note": "Flowers benefit from insect visits for even fruit development.",
+        "chronological_age_independent_of_dormancy": true
+      },
+      "environment": {
+        "light": "full_sun",
+        "water": "consistent",
+        "soil_and_drainage": "well_drained",
+        "ph_range": null,
+        "hardiness_range": null,
+        "temperature_thresholds_c": null
+      },
+      "health": {
+        "ecology_and_risk": "Runners compete with fruit for resources; plantings need periodic renewal.",
+        "diagnosis_requires_observation": true
+      },
+      "management": {
+        "field_guidance": "June-bearing, day-neutral and everbearing types require distinct seasonal harvest rules.",
+        "days_to_germination": null,
+        "days_to_first_harvest": null,
+        "yearly_yield_range": null,
+        "spacing_cm": null
+      },
+      "sources": [
+        {
+          "url": "https://plants.ces.ncsu.edu/plants/fragaria-x-ananassa/",
+          "scope": "plant_profile",
+          "field_review": "initial_intake",
+          "accessed_at": "2026-11-16"
+        }
+      ],
+      "quality": {
+        "status": "profile_found_partial_traits_to_verify",
+        "confidence": "provisional",
+        "requires_cultivar_for_precise_simulation": true
+      },
+      "game_build_link": {
+        "target_id": "strawberry",
+        "legacy_item_id": null,
+        "construction_spec_status": "not_written",
+        "godot_live_status": "not_integrated"
+      }
+    },
+    {
+      "id": "raspberry",
+      "identity": {
+        "common_name": "Red raspberry",
+        "scientific_name": "Rubus idaeus",
+        "family": "Rosaceae",
+        "rank": "species_or_cultivated_group",
+        "cultivar": null,
+        "category": "berries"
+      },
+      "biology": {
+        "life_cycle": "perennial_root_system_biennial_canes",
+        "propagation": "root_sucker_or_nursery_cane",
+        "harvest_organ": "aggregate_drupelet",
+        "pollination_note": "Insect pollination supports well-formed fruit.",
+        "chronological_age_independent_of_dormancy": true
+      },
+      "environment": {
+        "light": "full_sun",
+        "water": "consistent",
+        "soil_and_drainage": "well_drained",
+        "ph_range": null,
+        "hardiness_range": null,
+        "temperature_thresholds_c": null
+      },
+      "health": {
+        "ecology_and_risk": "Floricane-fruiting and primocane-fruiting cultivars cannot share one pruning/harvest rule.",
+        "diagnosis_requires_observation": true
+      },
+      "management": {
+        "field_guidance": "Canes can die after fruiting while the crown remains alive.",
+        "days_to_germination": null,
+        "days_to_first_harvest": null,
+        "yearly_yield_range": null,
+        "spacing_cm": null
+      },
+      "sources": [
+        {
+          "url": "https://extensiongardener.ces.ncsu.edu/extension-gardener-plant-toolbox/",
+          "scope": "general_extension_index",
+          "field_review": "initial_intake",
+          "accessed_at": "2026-11-16"
+        }
+      ],
+      "quality": {
+        "status": "research_lead_only",
+        "confidence": "provisional",
+        "requires_cultivar_for_precise_simulation": true
+      },
+      "game_build_link": {
+        "target_id": "raspberry",
+        "legacy_item_id": null,
+        "construction_spec_status": "not_written",
+        "godot_live_status": "not_integrated"
+      }
+    },
+    {
+      "id": "blackberry",
+      "identity": {
+        "common_name": "Blackberry",
+        "scientific_name": "Rubus fruticosus agg.",
+        "family": "Rosaceae",
+        "rank": "species_or_cultivated_group",
+        "cultivar": null,
+        "category": "berries"
+      },
+      "biology": {
+        "life_cycle": "perennial_root_system_biennial_canes",
+        "propagation": "rooted_tips_or_nursery_cane",
+        "harvest_organ": "aggregate_drupelet",
+        "pollination_note": "Bee pollination contributes to complete fruit set.",
+        "chronological_age_independent_of_dormancy": true
+      },
+      "environment": {
+        "light": "full_sun",
+        "water": "consistent",
+        "soil_and_drainage": "well_drained",
+        "ph_range": null,
+        "hardiness_range": null,
+        "temperature_thresholds_c": null
+      },
+      "health": {
+        "ecology_and_risk": "Thornless and thorny, erect and trailing forms need different supports and visual models.",
+        "diagnosis_requires_observation": true
+      },
+      "management": {
+        "field_guidance": "Individual spent floricanes die; the planting persists.",
+        "days_to_germination": null,
+        "days_to_first_harvest": null,
+        "yearly_yield_range": null,
+        "spacing_cm": null
+      },
+      "sources": [
+        {
+          "url": "https://extensiongardener.ces.ncsu.edu/extension-gardener-plant-toolbox/",
+          "scope": "general_extension_index",
+          "field_review": "initial_intake",
+          "accessed_at": "2026-11-16"
+        }
+      ],
+      "quality": {
+        "status": "research_lead_only",
+        "confidence": "provisional",
+        "requires_cultivar_for_precise_simulation": true
+      },
+      "game_build_link": {
+        "target_id": "blackberry",
+        "legacy_item_id": null,
+        "construction_spec_status": "not_written",
+        "godot_live_status": "not_integrated"
+      }
+    },
+    {
+      "id": "grape",
+      "identity": {
+        "common_name": "Grape vine",
+        "scientific_name": "Vitis vinifera",
+        "family": "Vitaceae",
+        "rank": "species_or_cultivated_group",
+        "cultivar": null,
+        "category": "climbers"
+      },
+      "biology": {
+        "life_cycle": "perennial_deciduous_woody_vine",
+        "propagation": "cutting_or_grafted_vine",
+        "harvest_organ": "berry_cluster",
+        "pollination_note": "Most cultivated wine grape cultivars are self-fruitful, but species and varieties differ.",
+        "chronological_age_independent_of_dormancy": true
+      },
+      "environment": {
+        "light": "full_sun",
+        "water": "moderate",
+        "soil_and_drainage": "well_drained",
+        "ph_range": null,
+        "hardiness_range": null,
+        "temperature_thresholds_c": null
+      },
+      "health": {
+        "ecology_and_risk": "Dormant pruning regulates buds and fruiting wood; disease pressure varies by climate.",
+        "diagnosis_requires_observation": true
+      },
+      "management": {
+        "field_guidance": "Grape leaves drop in autumn; trellis and multi-year training are essential.",
+        "days_to_germination": null,
+        "days_to_first_harvest": null,
+        "yearly_yield_range": null,
+        "spacing_cm": null
+      },
+      "sources": [
+        {
+          "url": "https://extensiongardener.ces.ncsu.edu/extension-gardener-plant-toolbox/",
+          "scope": "general_extension_index",
+          "field_review": "initial_intake",
+          "accessed_at": "2026-11-16"
+        }
+      ],
+      "quality": {
+        "status": "research_lead_only",
+        "confidence": "provisional",
+        "requires_cultivar_for_precise_simulation": true
+      },
+      "game_build_link": {
+        "target_id": "grape",
+        "legacy_item_id": null,
+        "construction_spec_status": "not_written",
+        "godot_live_status": "not_integrated"
+      }
+    },
+    {
+      "id": "muscadine",
+      "identity": {
+        "common_name": "Muscadine grape",
+        "scientific_name": "Muscadinia rotundifolia",
+        "family": "Vitaceae",
+        "rank": "species_or_cultivated_group",
+        "cultivar": null,
+        "category": "climbers"
+      },
+      "biology": {
+        "life_cycle": "perennial_deciduous_woody_vine",
+        "propagation": "cutting_or_nursery_vine",
+        "harvest_organ": "berry",
+        "pollination_note": "Cultivars may have perfect flowers or be female and require a pollenizer.",
+        "chronological_age_independent_of_dormancy": true
+      },
+      "environment": {
+        "light": "full_sun",
+        "water": "moderate",
+        "soil_and_drainage": "well_drained",
+        "ph_range": null,
+        "hardiness_range": null,
+        "temperature_thresholds_c": null
+      },
+      "health": {
+        "ecology_and_risk": "Native southeastern grape; grape-cluster size and skins differ from bunch grapes.",
+        "diagnosis_requires_observation": true
+      },
+      "management": {
+        "field_guidance": "Do not use Vitis vinifera bloom or disease models unchanged.",
+        "days_to_germination": null,
+        "days_to_first_harvest": null,
+        "yearly_yield_range": null,
+        "spacing_cm": null
+      },
+      "sources": [
+        {
+          "url": "https://extensiongardener.ces.ncsu.edu/extension-gardener-plant-toolbox/",
+          "scope": "general_extension_index",
+          "field_review": "initial_intake",
+          "accessed_at": "2026-11-16"
+        }
+      ],
+      "quality": {
+        "status": "research_lead_only",
+        "confidence": "provisional",
+        "requires_cultivar_for_precise_simulation": true
+      },
+      "game_build_link": {
+        "target_id": "muscadine",
+        "legacy_item_id": null,
+        "construction_spec_status": "not_written",
+        "godot_live_status": "not_integrated"
+      }
+    },
+    {
+      "id": "dahlia",
+      "identity": {
+        "common_name": "Garden dahlia",
+        "scientific_name": "Dahlia × cultorum",
+        "family": "Asteraceae",
+        "rank": "species_or_cultivated_group",
+        "cultivar": null,
+        "category": "flowers"
+      },
+      "biology": {
+        "life_cycle": "tender_perennial",
+        "propagation": "tuberous_root_division",
+        "harvest_organ": "cut_flower",
+        "pollination_note": "Open-centered forms can offer pollen to bees; very double forms may be less accessible.",
+        "chronological_age_independent_of_dormancy": true
+      },
+      "environment": {
+        "light": "full_sun",
+        "water": "consistent",
+        "soil_and_drainage": "well_drained",
+        "ph_range": null,
+        "hardiness_range": null,
+        "temperature_thresholds_c": null
+      },
+      "health": {
+        "ecology_and_risk": "Frost kills exposed shoots; tuber survival varies with drainage and winter cold.",
+        "diagnosis_requires_observation": true
+      },
+      "management": {
+        "field_guidance": "Cut flowers and deadheading can promote repeat flowering.",
+        "days_to_germination": null,
+        "days_to_first_harvest": null,
+        "yearly_yield_range": null,
+        "spacing_cm": null
+      },
+      "sources": [
+        {
+          "url": "https://extensiongardener.ces.ncsu.edu/extension-gardener-plant-toolbox/",
+          "scope": "general_extension_index",
+          "field_review": "initial_intake",
+          "accessed_at": "2026-11-16"
+        }
+      ],
+      "quality": {
+        "status": "research_lead_only",
+        "confidence": "provisional",
+        "requires_cultivar_for_precise_simulation": true
+      },
+      "game_build_link": {
+        "target_id": "dahlia",
+        "legacy_item_id": null,
+        "construction_spec_status": "not_written",
+        "godot_live_status": "not_integrated"
+      }
+    },
+    {
+      "id": "peony",
+      "identity": {
+        "common_name": "Garden peony",
+        "scientific_name": "Paeonia lactiflora",
+        "family": "Paeoniaceae",
+        "rank": "species_or_cultivated_group",
+        "cultivar": null,
+        "category": "flowers"
+      },
+      "biology": {
+        "life_cycle": "perennial_herbaceous",
+        "propagation": "root_division",
+        "harvest_organ": "cut_flower",
+        "pollination_note": "Ants sometimes visit peony buds for nectar; they are not needed to open flowers.",
+        "chronological_age_independent_of_dormancy": true
+      },
+      "environment": {
+        "light": "full_sun",
+        "water": "moderate",
+        "soil_and_drainage": "well_drained",
+        "ph_range": null,
+        "hardiness_range": null,
+        "temperature_thresholds_c": null
+      },
+      "health": {
+        "ecology_and_risk": "Flower buds and crowns overwinter; deep planting may prevent blooms.",
+        "diagnosis_requires_observation": true
+      },
+      "management": {
+        "field_guidance": "Allow several years for establishment; seasonal dieback is normal.",
+        "days_to_germination": null,
+        "days_to_first_harvest": null,
+        "yearly_yield_range": null,
+        "spacing_cm": null
+      },
+      "sources": [
+        {
+          "url": "https://extensiongardener.ces.ncsu.edu/extension-gardener-plant-toolbox/",
+          "scope": "general_extension_index",
+          "field_review": "initial_intake",
+          "accessed_at": "2026-11-16"
+        }
+      ],
+      "quality": {
+        "status": "research_lead_only",
+        "confidence": "provisional",
+        "requires_cultivar_for_precise_simulation": true
+      },
+      "game_build_link": {
+        "target_id": "peony",
+        "legacy_item_id": null,
+        "construction_spec_status": "not_written",
+        "godot_live_status": "not_integrated"
+      }
+    },
+    {
+      "id": "zinnia",
+      "identity": {
+        "common_name": "Zinnia",
+        "scientific_name": "Zinnia elegans",
+        "family": "Asteraceae",
+        "rank": "species_or_cultivated_group",
+        "cultivar": null,
+        "category": "flowers"
+      },
+      "biology": {
+        "life_cycle": "warm_season_annual",
+        "propagation": "seed",
+        "harvest_organ": "cut_flower",
+        "pollination_note": "Open-flowered cultivars attract bees and butterflies.",
+        "chronological_age_independent_of_dormancy": true
+      },
+      "environment": {
+        "light": "full_sun",
+        "water": "moderate",
+        "soil_and_drainage": "well_drained",
+        "ph_range": null,
+        "hardiness_range": null,
+        "temperature_thresholds_c": null
+      },
+      "health": {
+        "ecology_and_risk": "Powdery mildew and leaf spotting may occur; spacing affects airflow.",
+        "diagnosis_requires_observation": true
+      },
+      "management": {
+        "field_guidance": "Frequent cutting/deadheading can sustain flowering until frost.",
+        "days_to_germination": null,
+        "days_to_first_harvest": null,
+        "yearly_yield_range": null,
+        "spacing_cm": null
+      },
+      "sources": [
+        {
+          "url": "https://extensiongardener.ces.ncsu.edu/extension-gardener-plant-toolbox/",
+          "scope": "general_extension_index",
+          "field_review": "initial_intake",
+          "accessed_at": "2026-11-16"
+        }
+      ],
+      "quality": {
+        "status": "research_lead_only",
+        "confidence": "provisional",
+        "requires_cultivar_for_precise_simulation": true
+      },
+      "game_build_link": {
+        "target_id": "zinnia",
+        "legacy_item_id": null,
+        "construction_spec_status": "not_written",
+        "godot_live_status": "not_integrated"
+      }
+    },
+    {
+      "id": "marigold",
+      "identity": {
+        "common_name": "French marigold",
+        "scientific_name": "Tagetes patula",
+        "family": "Asteraceae",
+        "rank": "species_or_cultivated_group",
+        "cultivar": null,
+        "category": "flowers"
+      },
+      "biology": {
+        "life_cycle": "warm_season_annual",
+        "propagation": "seed",
+        "harvest_organ": "cut_flower",
+        "pollination_note": "Pollinator value depends on floral form.",
+        "chronological_age_independent_of_dormancy": true
+      },
+      "environment": {
+        "light": "full_sun",
+        "water": "moderate",
+        "soil_and_drainage": "well_drained",
+        "ph_range": null,
+        "hardiness_range": null,
+        "temperature_thresholds_c": null
+      },
+      "health": {
+        "ecology_and_risk": "Not all marigolds repel every pest or eliminate nematodes; effects are crop and species dependent.",
+        "diagnosis_requires_observation": true
+      },
+      "management": {
+        "field_guidance": "Deadhead to extend flowers; avoid unsupported pest-control claims.",
+        "days_to_germination": null,
+        "days_to_first_harvest": null,
+        "yearly_yield_range": null,
+        "spacing_cm": null
+      },
+      "sources": [
+        {
+          "url": "https://extensiongardener.ces.ncsu.edu/extension-gardener-plant-toolbox/",
+          "scope": "general_extension_index",
+          "field_review": "initial_intake",
+          "accessed_at": "2026-11-16"
+        }
+      ],
+      "quality": {
+        "status": "research_lead_only",
+        "confidence": "provisional",
+        "requires_cultivar_for_precise_simulation": true
+      },
+      "game_build_link": {
+        "target_id": "marigold",
+        "legacy_item_id": null,
+        "construction_spec_status": "not_written",
+        "godot_live_status": "not_integrated"
+      }
+    },
+    {
+      "id": "nasturtium",
+      "identity": {
+        "common_name": "Garden nasturtium",
+        "scientific_name": "Tropaeolum majus",
+        "family": "Tropaeolaceae",
+        "rank": "species_or_cultivated_group",
+        "cultivar": null,
+        "category": "flowers"
+      },
+      "biology": {
+        "life_cycle": "annual_or_tender_perennial",
+        "propagation": "seed",
+        "harvest_organ": "edible_flower_leaf_seed",
+        "pollination_note": "Flowers can support pollinators.",
+        "chronological_age_independent_of_dormancy": true
+      },
+      "environment": {
+        "light": "full_sun_to_part_shade",
+        "water": "moderate",
+        "soil_and_drainage": "well_drained",
+        "ph_range": null,
+        "hardiness_range": null,
+        "temperature_thresholds_c": null
+      },
+      "health": {
+        "ecology_and_risk": "Rich soils can favor leaves over flowers; aphids may colonize otherwise healthy plants.",
+        "diagnosis_requires_observation": true
+      },
+      "management": {
+        "field_guidance": "Only properly identified untreated edible nasturtium tissues are for culinary use.",
+        "days_to_germination": null,
+        "days_to_first_harvest": null,
+        "yearly_yield_range": null,
+        "spacing_cm": null
+      },
+      "sources": [
+        {
+          "url": "https://extensiongardener.ces.ncsu.edu/extension-gardener-plant-toolbox/",
+          "scope": "general_extension_index",
+          "field_review": "initial_intake",
+          "accessed_at": "2026-11-16"
+        }
+      ],
+      "quality": {
+        "status": "research_lead_only",
+        "confidence": "provisional",
+        "requires_cultivar_for_precise_simulation": true
+      },
+      "game_build_link": {
+        "target_id": "nasturtium",
+        "legacy_item_id": null,
+        "construction_spec_status": "not_written",
+        "godot_live_status": "not_integrated"
+      }
+    },
+    {
+      "id": "rosemary",
+      "identity": {
+        "common_name": "Rosemary",
+        "scientific_name": "Salvia rosmarinus",
+        "family": "Lamiaceae",
+        "rank": "species_or_cultivated_group",
+        "cultivar": null,
+        "category": "herbs"
+      },
+      "biology": {
+        "life_cycle": "perennial_woody_shrub",
+        "propagation": "cutting",
+        "harvest_organ": "leaf",
+        "pollination_note": "Flowers provide nectar to bees.",
+        "chronological_age_independent_of_dormancy": true
+      },
+      "environment": {
+        "light": "full_sun",
+        "water": "low_when_established",
+        "soil_and_drainage": "sharp_drainage",
+        "ph_range": null,
+        "hardiness_range": null,
+        "temperature_thresholds_c": null
+      },
+      "health": {
+        "ecology_and_risk": "Wet winter roots are a major risk; cold tolerance differs among cultivars.",
+        "diagnosis_requires_observation": true
+      },
+      "management": {
+        "field_guidance": "Prune green growth conservatively; woody stems may not resprout reliably.",
+        "days_to_germination": null,
+        "days_to_first_harvest": null,
+        "yearly_yield_range": null,
+        "spacing_cm": null
+      },
+      "sources": [
+        {
+          "url": "https://extensiongardener.ces.ncsu.edu/extension-gardener-plant-toolbox/",
+          "scope": "general_extension_index",
+          "field_review": "initial_intake",
+          "accessed_at": "2026-11-16"
+        }
+      ],
+      "quality": {
+        "status": "research_lead_only",
+        "confidence": "provisional",
+        "requires_cultivar_for_precise_simulation": true
+      },
+      "game_build_link": {
+        "target_id": "rosemary",
+        "legacy_item_id": null,
+        "construction_spec_status": "not_written",
+        "godot_live_status": "not_integrated"
+      }
+    },
+    {
+      "id": "thyme",
+      "identity": {
+        "common_name": "Common thyme",
+        "scientific_name": "Thymus vulgaris",
+        "family": "Lamiaceae",
+        "rank": "species_or_cultivated_group",
+        "cultivar": null,
+        "category": "herbs"
+      },
+      "biology": {
+        "life_cycle": "perennial_woody_subshrub",
+        "propagation": "seed_or_cutting",
+        "harvest_organ": "leaf",
+        "pollination_note": "Flowering stems provide nectar for bees.",
+        "chronological_age_independent_of_dormancy": true
+      },
+      "environment": {
+        "light": "full_sun",
+        "water": "low_when_established",
+        "soil_and_drainage": "sharp_drainage",
+        "ph_range": null,
+        "hardiness_range": null,
+        "temperature_thresholds_c": null
+      },
+      "health": {
+        "ecology_and_risk": "Persistently wet soils can cause crown/root decline.",
+        "diagnosis_requires_observation": true
+      },
+      "management": {
+        "field_guidance": "Harvest leafy shoots while preserving enough growth for recovery.",
+        "days_to_germination": null,
+        "days_to_first_harvest": null,
+        "yearly_yield_range": null,
+        "spacing_cm": null
+      },
+      "sources": [
+        {
+          "url": "https://extensiongardener.ces.ncsu.edu/extension-gardener-plant-toolbox/",
+          "scope": "general_extension_index",
+          "field_review": "initial_intake",
+          "accessed_at": "2026-11-16"
+        }
+      ],
+      "quality": {
+        "status": "research_lead_only",
+        "confidence": "provisional",
+        "requires_cultivar_for_precise_simulation": true
+      },
+      "game_build_link": {
+        "target_id": "thyme",
+        "legacy_item_id": null,
+        "construction_spec_status": "not_written",
+        "godot_live_status": "not_integrated"
+      }
+    },
+    {
+      "id": "mint",
+      "identity": {
+        "common_name": "Spearmint",
+        "scientific_name": "Mentha spicata",
+        "family": "Lamiaceae",
+        "rank": "species_or_cultivated_group",
+        "cultivar": null,
+        "category": "herbs"
+      },
+      "biology": {
+        "life_cycle": "perennial_herbaceous",
+        "propagation": "division_or_cutting",
+        "harvest_organ": "leaf",
+        "pollination_note": "Flowers attract bees.",
+        "chronological_age_independent_of_dormancy": true
+      },
+      "environment": {
+        "light": "sun_to_part_shade",
+        "water": "consistent",
+        "soil_and_drainage": "moist_well_drained",
+        "ph_range": null,
+        "hardiness_range": null,
+        "temperature_thresholds_c": null
+      },
+      "health": {
+        "ecology_and_risk": "Underground runners can spread aggressively beyond a bed.",
+        "diagnosis_requires_observation": true
+      },
+      "management": {
+        "field_guidance": "Contain roots when garden design requires boundaries.",
+        "days_to_germination": null,
+        "days_to_first_harvest": null,
+        "yearly_yield_range": null,
+        "spacing_cm": null
+      },
+      "sources": [
+        {
+          "url": "https://extensiongardener.ces.ncsu.edu/extension-gardener-plant-toolbox/",
+          "scope": "general_extension_index",
+          "field_review": "initial_intake",
+          "accessed_at": "2026-11-16"
+        }
+      ],
+      "quality": {
+        "status": "research_lead_only",
+        "confidence": "provisional",
+        "requires_cultivar_for_precise_simulation": true
+      },
+      "game_build_link": {
+        "target_id": "mint",
+        "legacy_item_id": null,
+        "construction_spec_status": "not_written",
+        "godot_live_status": "not_integrated"
+      }
+    }
+  ]
+}
