@@ -59,3 +59,9 @@ Do **not** interpret the concept drawing as dimensionally certified. Before impl
 ## Ownership / artwork
 
 The architectural concept and its composition were expressly approved by the project owner. **That is not approval of any future implementation mesh or final texture quality**; require separate visual review for the finished 3D object.
+
+## Shop presentation artwork (supplemental)
+
+**Illustrated shop concept:** https://drive.google.com/file/d/1g_Zs4gDImxincf0lOs4e31z3sqVebs6T/view
+
+This illustration is intended for the eventual shop listing and aesthetic inspiration. **Use the original clean architectural illustration above as the primary geometry reference.** The shop illustration introduces decorative elements and a modified roof composition; those variations are not new owner-approved structural requirements. Any promotional claims about year-round growing, temperature control, or increased growing space describe **future intended gameplay**, not presently implemented mechanics.
