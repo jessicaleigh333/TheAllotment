@@ -56,7 +56,7 @@ func verify() -> void:
  assert(screen.card_buttons.size() == Catalog.ITEMS.size()-2)
  screen.category = "Plants"
  screen._refresh_grid()
- assert(screen.card_buttons.size() == 12)
+ assert(screen.card_buttons.size() == 16)
  screen.query = "lavendula"
  screen._refresh_grid()
  assert(screen.card_buttons.is_empty())

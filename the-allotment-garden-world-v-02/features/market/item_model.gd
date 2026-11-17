@@ -6,12 +6,16 @@ extends Node3D
 const Growth := preload("res://features/market/plant_growth.gd")
 const Art := preload("res://assets/garden_art/garden_library.gd")
 var current_stage := 4
+var current_growth_state := {}
 
 func _ready() -> void:
  rebuild(growth_age_days)
 
 func rebuild(age: float = -1.0) -> void:
  for child in get_children(): child.free()
+ for key in ["woody_growth_state","woody_growth_id"]:
+  if has_meta(key): remove_meta(key)
+ current_growth_state = {}
  var plant := Growth.species(item_id)
  var dimensions: Vector3
  if not plant.is_empty():
@@ -19,8 +23,12 @@ func rebuild(age: float = -1.0) -> void:
   growth_age_days = age
   var state := Growth.state(plant,age)
   current_stage = state.stage
-  dimensions = Vector3(state.width,state.height,state.width)
-  Art.attach(self,plant,current_stage,blossom_tint)
+  current_growth_state = state
+  dimensions = Vector3(state.width,state.height,state.get("depth",state.width))
+  if Growth.Woody.PROFILES.has(plant):
+   set_meta("woody_growth_state",state)
+   set_meta("woody_growth_id",plant)
+  Art.attach(self,plant+"@growing" if Growth.Woody.PROFILES.has(plant) else plant,current_stage,blossom_tint,state if Growth.Woody.PROFILES.has(plant) else {})
  else:
   Art.attach(self,item_id)
   dimensions = Art.Woodland.SIZES.get(item_id,Art.Rustic.SIZES.get(item_id,Art.Enchanted.SIZES.get(item_id,Art.Roman.SIZES.get(item_id,Art.French.SIZES.get(item_id,Art.Boundary.SIZES.get(item_id,Art.SIZES.get(item_id,Vector3.ONE)))))))
@@ -33,11 +41,13 @@ func rebuild(age: float = -1.0) -> void:
   add_child(effect)
  if not plant.is_empty() and current_stage == 0:
   var marker := Label3D.new()
-  marker.text = plant.capitalize()+" · Seed"
+  marker.text = (Growth.Woody.PROFILES[plant].name+" · "+str(current_growth_state.name)) if Growth.Woody.PROFILES.has(plant) else plant.capitalize()+" · Seed"
   marker.billboard = BaseMaterial3D.BILLBOARD_ENABLED
   marker.pixel_size = .002
   marker.position.y = .18
   add_child(marker)
+
+ if get_meta("art_collision_requested",false): Art.add_collision(self)
 
 func mesh_bounds() -> AABB:
  var bounds := AABB()

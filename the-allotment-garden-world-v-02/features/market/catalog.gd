@@ -28,7 +28,9 @@ const BASE_ITEMS := [
 
 const CLIMBING_ITEMS := [{"id": "climbing_rose", "name": "Climbing rose", "latin": "Rosa climbing cultivar", "category": "Plants", "price": 0, "icon": 1, "radius": 0.4, "family": "Climbing vines", "description": "Pink climbing roses; up to 5 m of trained stems. Plant beside a trellis, arbor, post or column. Real elapsed days, including offline time; establishment takes months to years."}, {"id": "clematis", "name": "Clematis", "latin": "Clematis", "category": "Plants", "price": 0, "icon": 4, "radius": 0.4, "family": "Climbing vines", "description": "Purple star flowers; up to 4 m of trained stems. Plant beside a trellis, arbor, post or column. Real elapsed days, including offline time; establishment takes months to years."}, {"id": "honeysuckle", "name": "Honeysuckle", "latin": "Lonicera periclymenum", "category": "Plants", "price": 0, "icon": 5, "radius": 0.4, "family": "Climbing vines", "description": "Cream-gold flowers; up to 6 m of trained stems. Plant beside a trellis, arbor, post or column. Real elapsed days, including offline time; establishment takes months to years."}, {"id": "ivy", "name": "Climbing ivy", "latin": "Hedera helix", "category": "Plants", "price": 0, "icon": 7, "radius": 0.4, "family": "Climbing vines", "description": "Evergreen climbing foliage; up to 6 m of trained stems. Plant beside a trellis, arbor, post or column. Real elapsed days, including offline time; establishment takes months to years."}, {"id": "wisteria", "name": "Wisteria", "latin": "Wisteria sinensis", "category": "Plants", "price": 0, "icon": 2, "radius": 0.4, "family": "Climbing vines", "description": "Hanging violet flowers; up to 8 m of trained stems. Plant beside a trellis, arbor, post or column. Real elapsed days, including offline time; establishment takes months to years."}]
 
-const ITEMS := BASE_ITEMS+CLIMBING_ITEMS+preload("res://assets/garden_art/french_collection.gd").CATALOG+preload("res://assets/garden_art/roman_collection.gd").CATALOG+preload("res://assets/garden_art/enchanted_collection.gd").CATALOG+preload("res://assets/garden_art/rustic_collection.gd").CATALOG+preload("res://assets/garden_art/woodland_collection.gd").CATALOG
+const WOODY_ITEMS := [{"id": "tree", "name": "English oak", "latin": "Quercus robur", "category": "Plants", "price": 0, "icon": 7, "radius": 11.5, "family": "Living trees and hedges", "description": "A spreading oak with acorn, seedling, sapling and mature stages. Representative mature size: 20 m high and 16 m wide after 50 real years. Seeds and nursery plants use the real elapsed/offline clock. Growth curves are representative estimates; conditions and cultivars vary."}, {"id": "cypress", "name": "Italian cypress", "latin": "Cupressus sempervirens", "category": "Plants", "price": 0, "icon": 7, "radius": 2.25, "family": "Living trees and hedges", "description": "A columnar evergreen with its own branching stages. Representative mature size: 15 m high and 3 m wide after 30 real years. Seeds and nursery plants use the real elapsed/offline clock. Growth curves are representative estimates; conditions and cultivars vary."}, {"id": "shrub", "name": "Common box shrub", "latin": "Buxus sempervirens", "category": "Plants", "price": 0, "icon": 7, "radius": 3.65, "family": "Living trees and hedges", "description": "An untrimmed evergreen shrub. Representative mature size: 5 m high and wide after 20 real years. Seeds and nursery plants use the real elapsed/offline clock. Growth curves are representative estimates; conditions and cultivars vary."}, {"id": "hedge", "name": "Dwarf-box hedge · five plants", "latin": "Buxus sempervirens Suffruticosa", "category": "Plants", "price": 0, "icon": 7, "radius": 1.75, "family": "Living trees and hedges", "description": "Five dwarf-box plants spaced 35 cm apart. Representative established size: 1 m high, 1.5 m across and 2.9 m along the row after 10 real years. Seeds and nursery plants use the real elapsed/offline clock. Growth curves are representative estimates; conditions and cultivars vary."}]
+
+const ITEMS := BASE_ITEMS+CLIMBING_ITEMS+WOODY_ITEMS+preload("res://assets/garden_art/french_collection.gd").CATALOG+preload("res://assets/garden_art/roman_collection.gd").CATALOG+preload("res://assets/garden_art/enchanted_collection.gd").CATALOG+preload("res://assets/garden_art/rustic_collection.gd").CATALOG+preload("res://assets/garden_art/woodland_collection.gd").CATALOG
 
 static func by_id(id: String) -> Dictionary:
 	if id.count("@") > 1: return {}
@@ -37,6 +39,7 @@ static func by_id(id: String) -> Dictionary:
 	if id.contains("@") and suffix not in ["seed","seedling","young"]: return {}
 	for source in ITEMS:
 		if source.id != base: continue
+		if Growth.PLANTS.has(base) and base not in Growth.Woody.LEGACY_IDS and not Growth.Woody.valid_profile(Growth.PLANTS[base]): return {}
 		if id.contains("@") and (not Growth.PLANTS.has(base) or source.category != "Plants"): return {}
 		var item: Dictionary = source.duplicate(true)
 		item.id = id
@@ -46,6 +49,7 @@ static func by_id(id: String) -> Dictionary:
 			item.plant = plant
 			item.growth_stage = stage
 			item.radius = maxf(float(item.radius),float(Growth.PLANTS[plant].width)*.5+.05)
+			if Growth.Woody.PROFILES.has(plant): item.radius = maxf(item.radius,Vector2(Growth.PLANTS[plant].width,Growth.PLANTS[plant].depth).length()*.55+.10)
 			if id.contains("@"):
 				item.name += " · "+Growth.STAGES[stage]
 				if stage == 0: item.category = "Seeds"
@@ -58,6 +62,8 @@ static func stage_id(id: String, stage: int) -> String:
 	return plant+{0:"@seed",2:"@seedling",3:"@young",4:""}.get(stage,"")
 
 static func icon(item: Dictionary) -> Texture2D:
+	if Growth.Woody.PROFILES.has(item.get("plant",item.id)):
+		return load("res://assets/garden_art/icons/"+str(item.get("plant",item.id))+"_growing.svg")
 	if item.get("plant",item.id) in ["climbing_rose","clematis","honeysuckle","ivy","wisteria"]:
 		return load("res://assets/garden_art/icons/"+str(item.get("plant",item.id))+".svg")
 	if item.id in preload("res://assets/garden_art/garden_boundary.gd").IDS or preload("res://assets/garden_art/french_collection.gd").SIZES.has(item.id) or preload("res://assets/garden_art/roman_collection.gd").SIZES.has(item.id) or preload("res://assets/garden_art/enchanted_collection.gd").SIZES.has(item.id) or preload("res://assets/garden_art/rustic_collection.gd").SIZES.has(item.id) or preload("res://assets/garden_art/woodland_collection.gd").SIZES.has(item.id):

@@ -241,6 +241,7 @@ func _refresh_grid() -> void:
 			if source.category == "Plants": id = Catalog.stage_id(id,0 if category == "Seeds" else shop_stage)
 			entries.append(Catalog.by_id(id))
 	for item in entries:
+		if item.is_empty(): continue
 		if mode == "catalog" and item.category not in ["Plants","Seeds"]: continue
 		if mode == "backpack" and store.count(item.id) <= 0: continue
 		if owned_only and store.total_owned(item.id) <= 0: continue
@@ -281,7 +282,7 @@ func _refresh_grid() -> void:
 		name.text_overrun_behavior = TextServer.OVERRUN_TRIM_ELLIPSIS
 		name.mouse_filter = Control.MOUSE_FILTER_IGNORE
 		contents.add_child(name)
-		var tag_text: String = "Free · "+Growth.STAGES[int(item.growth_stage)] if item.has("plant") else "Free · ×%d in bag" % store.count(item.id)
+		var tag_text: String = "Free · "+(Growth.Woody.PROFILES[item.plant].names[int(item.growth_stage)] if Growth.Woody.PROFILES.has(item.plant) else Growth.STAGES[int(item.growth_stage)]) if item.has("plant") else "Free · ×%d in bag" % store.count(item.id)
 		var tag := _text(tag_text,12)
 		tag.mouse_filter = Control.MOUSE_FILTER_IGNORE
 		contents.add_child(tag)
@@ -316,6 +317,8 @@ func _refresh_details() -> void:
 		var measurements := _text("%s · %.2f m tall now\nFull size: %.2f m tall × %.2f m across\nGrowth uses real days, including offline time." % [state.name,state.height,info.height,info.width],14,Color("425b3c"))
 		measurements.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 		details.add_child(measurements)
+		if Growth.Woody.PROFILES.has(item.plant):
+			details.add_child(_text("Full row/depth: %.2f m · typical age: %.1f real years" % [info.depth,float(info.days[4])/365.25],13,Color("425b3c")))
 		if int(state.stage) < 4:
 			var remaining: float = float(info.days[4])-_display_age(item.id)
 			details.add_child(_text("About %d days to full size.\nSpace is reserved for the grown plant." % int(remaining),13,Color("657058")))

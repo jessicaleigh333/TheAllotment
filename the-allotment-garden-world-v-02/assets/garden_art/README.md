@@ -68,3 +68,8 @@ Both gate leaves have hinge-mounted collision, open automatically as the gardene
 ## Real-time climbing plants
 
 Five free plant species add original staged vine art and automatic training onto nearby supports. See `features/market/CLIMBING_VINES.md` for real-day schedules, supported objects, placement rules and tests; review `staging/climbing_vine_showcase.tscn` with F6. New vine artwork remains pending visual approval.
+
+
+## Living woody plant stages
+
+Four growing profiles (English oak, Italian cypress, common box shrub and a five-plant dwarf-box hedge) add 20 phase geometries / 60 LOD variants using separate `@growing` cache keys. Old generic scenery meshes remain unchanged. See `features/market/REAL_LIFE_GROWTH.md` for realistic dimensions, real-year schedules, references and calibrated estimates. Preview `staging/woody_growth_showcase.tscn` with F6. `tests/verify_woody_growth.gd` audits all new phases and their live shop/placement/save integration. These 60 variants are additional to the prior 486 library variants; neither count denotes unique plant species. New artwork remains pending owner visual approval.

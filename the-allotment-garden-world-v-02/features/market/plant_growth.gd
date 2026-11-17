@@ -1,7 +1,9 @@
 extends RefCounted
 ## Real elapsed days, including offline time; representative ideal-condition schedules.
+const Woody := preload("res://features/market/woody_growth.gd")
 const STAGES := ["Seed","Sprout","Seedling","Young plant","Mature plant"]
 const PLANTS := {
+ "tree":Woody.PROFILES["tree"],"cypress":Woody.PROFILES["cypress"],"shrub":Woody.PROFILES["shrub"],"hedge":Woody.PROFILES["hedge"],
 	"sunflower":{"height":1.8,"width":.55,"days":[0,7,14,28,90]},
 	"rose":{"height":1.2,"width":1.2,"days":[0,120,180,365,1095]},
 	"lavender":{"height":.6,"width":.75,"days":[0,21,60,180,730]},
@@ -48,6 +50,7 @@ static func age_days(placement: Dictionary, now: float) -> float:
 	return minf(age,float(PLANTS[plant].days[4]))
 
 static func state(plant: String, age: float) -> Dictionary:
+	if Woody.PROFILES.has(plant): return Woody.state(Woody.PROFILES[plant],age)
 	var info: Dictionary = PLANTS[plant]
 	var stage := 0
 	for i in range(1,5):
@@ -66,3 +69,9 @@ static func valid_record(value: Variant) -> bool:
 		var number = value.get(key)
 		if not (number is int or number is float) or not is_finite(float(number)) or float(number) < 0: return false
 	return float(value.started_at) < 100000000000.0 and float(value.initial_age_days) < 100000 and float(value.observed_age_days) < 100000
+
+static func validate_profiles() -> bool:
+	for id in PLANTS:
+		if id in Woody.LEGACY_IDS: continue
+		if not Woody.valid_profile(PLANTS[id]): return false
+	return true
