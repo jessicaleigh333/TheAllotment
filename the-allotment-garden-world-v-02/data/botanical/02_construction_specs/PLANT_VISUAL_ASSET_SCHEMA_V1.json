@@ -1,0 +1,137 @@
+{
+  "schema_version": "1.0.0",
+  "purpose": "Reusable 3D life-stage visual asset linkage for botanical records; spec only, not generated assets",
+  "plant_record_id": "<existing botanical ID>",
+  "visual_asset_schema": {
+    "model_family_id": null,
+    "base_model_id": null,
+    "stages": [
+      {
+        "stage_id": "seed",
+        "applicability": "optional",
+        "stage_model_id": null,
+        "stage_render_path": null,
+        "animation_set_id": null,
+        "asset_status": "not_started",
+        "visual_review_notes": "",
+        "growth_parameters": {
+          "height_m": null,
+          "spread_m": null
+        },
+        "variant_overrides": {}
+      },
+      {
+        "stage_id": "germination",
+        "applicability": "optional",
+        "stage_model_id": null,
+        "stage_render_path": null,
+        "animation_set_id": null,
+        "asset_status": "not_started",
+        "visual_review_notes": "",
+        "growth_parameters": {
+          "height_m": null,
+          "spread_m": null
+        },
+        "variant_overrides": {}
+      },
+      {
+        "stage_id": "seedling",
+        "applicability": "conditional",
+        "stage_model_id": null,
+        "stage_render_path": null,
+        "animation_set_id": null,
+        "asset_status": "not_started",
+        "visual_review_notes": "",
+        "growth_parameters": {
+          "height_m": null,
+          "spread_m": null
+        },
+        "variant_overrides": {}
+      },
+      {
+        "stage_id": "juvenile",
+        "applicability": "conditional",
+        "stage_model_id": null,
+        "stage_render_path": null,
+        "animation_set_id": null,
+        "asset_status": "not_started",
+        "visual_review_notes": "",
+        "growth_parameters": {
+          "height_m": null,
+          "spread_m": null
+        },
+        "variant_overrides": {}
+      },
+      {
+        "stage_id": "vegetative_mature",
+        "applicability": "conditional",
+        "stage_model_id": null,
+        "stage_render_path": null,
+        "animation_set_id": null,
+        "asset_status": "not_started",
+        "visual_review_notes": "",
+        "growth_parameters": {
+          "height_m": null,
+          "spread_m": null
+        },
+        "variant_overrides": {}
+      },
+      {
+        "stage_id": "flowering",
+        "applicability": "conditional",
+        "stage_model_id": null,
+        "stage_render_path": null,
+        "animation_set_id": null,
+        "asset_status": "not_started",
+        "visual_review_notes": "",
+        "growth_parameters": {
+          "height_m": null,
+          "spread_m": null
+        },
+        "variant_overrides": {}
+      },
+      {
+        "stage_id": "fruiting",
+        "applicability": "conditional",
+        "stage_model_id": null,
+        "stage_render_path": null,
+        "animation_set_id": null,
+        "asset_status": "not_started",
+        "visual_review_notes": "",
+        "growth_parameters": {
+          "height_m": null,
+          "spread_m": null
+        },
+        "variant_overrides": {}
+      },
+      {
+        "stage_id": "dormancy",
+        "applicability": "optional",
+        "stage_model_id": null,
+        "stage_render_path": null,
+        "animation_set_id": null,
+        "asset_status": "not_started",
+        "visual_review_notes": "",
+        "growth_parameters": {
+          "height_m": null,
+          "spread_m": null
+        },
+        "variant_overrides": {}
+      }
+    ],
+    "review": {
+      "reviewer": null,
+      "last_reviewed": null,
+      "review_status": "not_reviewed"
+    }
+  },
+  "rules": [
+    "Store Godot asset identifiers/paths rather than binary mesh data in botanical JSON.",
+    "Re-use base models, rigs, materials and animations by reference; cultivar differences belong in variant_overrides or dedicated stage assets.",
+    "Stages are species-dependent; avoid forcing annual senescence or woody dormancy onto every taxon.",
+    "Keep chronological growth and phenological states distinct: flowering/fruiting may recur after maturity and can overlap.",
+    "Do not invent missing renders or mark assets approved without visual inspection.",
+    "Asset paths must be project-relative and validated before gameplay integration.",
+    "The spreadsheet is a review surface, not a live asset repository; integrate via audited import."
+  ]
+}

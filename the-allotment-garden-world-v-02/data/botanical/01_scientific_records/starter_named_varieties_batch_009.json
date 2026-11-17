@@ -1,0 +1,958 @@
+{
+  "schema_version": "1.0",
+  "record_count": 50,
+  "status": "provisional starter profiles",
+  "important": "Some entries are species types or seed mixes rather than formal cultivars. Numeric simulation, environmental sensitivity, regional risk and precise scientific claims require review.",
+  "records": [
+    {
+      "id": "starter_maples_bloodgood_japanese_maple",
+      "category": "maples",
+      "name": "Bloodgood Japanese Maple",
+      "parent_taxon": "Acer spp.",
+      "family": "Sapindaceae",
+      "growth_habit": "deciduous tree",
+      "light": "sun to part shade",
+      "soil_water": "well-drained soil",
+      "propagation": "grafted nursery tree",
+      "visual_markers": "deep burgundy palmate leaves",
+      "notes": "Acer palmatum",
+      "reference_lead": "https://plants.ces.ncsu.edu/",
+      "evidence_status": "provisional initial description; individual cultivar review pending",
+      "codex": {
+        "visual_archetype_allowed": true,
+        "verified_growth_simulation_allowed": false
+      }
+    },
+    {
+      "id": "starter_maples_sango_kaku_japanese_maple",
+      "category": "maples",
+      "name": "Sango Kaku Japanese Maple",
+      "parent_taxon": "Acer spp.",
+      "family": "Sapindaceae",
+      "growth_habit": "deciduous tree",
+      "light": "sun to part shade",
+      "soil_water": "well-drained soil",
+      "propagation": "grafted nursery tree",
+      "visual_markers": "coral-red twigs and pale green palmate leaves",
+      "notes": "Acer palmatum",
+      "reference_lead": "https://plants.ces.ncsu.edu/",
+      "evidence_status": "provisional initial description; individual cultivar review pending",
+      "codex": {
+        "visual_archetype_allowed": true,
+        "verified_growth_simulation_allowed": false
+      }
+    },
+    {
+      "id": "starter_maples_osakazuki_japanese_maple",
+      "category": "maples",
+      "name": "Osakazuki Japanese Maple",
+      "parent_taxon": "Acer spp.",
+      "family": "Sapindaceae",
+      "growth_habit": "deciduous tree",
+      "light": "sun to part shade",
+      "soil_water": "well-drained soil",
+      "propagation": "grafted nursery tree",
+      "visual_markers": "green palmate leaves turning scarlet",
+      "notes": "Acer palmatum",
+      "reference_lead": "https://plants.ces.ncsu.edu/",
+      "evidence_status": "provisional initial description; individual cultivar review pending",
+      "codex": {
+        "visual_archetype_allowed": true,
+        "verified_growth_simulation_allowed": false
+      }
+    },
+    {
+      "id": "starter_maples_october_glory_red_maple",
+      "category": "maples",
+      "name": "October Glory Red Maple",
+      "parent_taxon": "Acer spp.",
+      "family": "Sapindaceae",
+      "growth_habit": "deciduous tree",
+      "light": "sun to part shade",
+      "soil_water": "well-drained soil",
+      "propagation": "grafted nursery tree",
+      "visual_markers": "red fall foliage on large lobed leaves",
+      "notes": "Acer rubrum",
+      "reference_lead": "https://plants.ces.ncsu.edu/",
+      "evidence_status": "provisional initial description; individual cultivar review pending",
+      "codex": {
+        "visual_archetype_allowed": true,
+        "verified_growth_simulation_allowed": false
+      }
+    },
+    {
+      "id": "starter_maples_autumn_blaze_freeman_maple",
+      "category": "maples",
+      "name": "Autumn Blaze Freeman Maple",
+      "parent_taxon": "Acer spp.",
+      "family": "Sapindaceae",
+      "growth_habit": "deciduous tree",
+      "light": "sun to part shade",
+      "soil_water": "well-drained soil",
+      "propagation": "grafted nursery tree",
+      "visual_markers": "orange-red fall leaves",
+      "notes": "Acer × freemanii",
+      "reference_lead": "https://plants.ces.ncsu.edu/",
+      "evidence_status": "provisional initial description; individual cultivar review pending",
+      "codex": {
+        "visual_archetype_allowed": true,
+        "verified_growth_simulation_allowed": false
+      }
+    },
+    {
+      "id": "starter_oaks_northern_red_oak",
+      "category": "oaks",
+      "name": "Northern Red Oak",
+      "parent_taxon": "Quercus spp.",
+      "family": "Fagaceae",
+      "growth_habit": "large deciduous tree",
+      "light": "full sun",
+      "soil_water": "deep draining soil",
+      "propagation": "nursery tree",
+      "visual_markers": "pointed-lobed leaves and acorns",
+      "notes": "Quercus rubra species type",
+      "reference_lead": "https://plants.ces.ncsu.edu/",
+      "evidence_status": "provisional initial description; individual cultivar review pending",
+      "codex": {
+        "visual_archetype_allowed": true,
+        "verified_growth_simulation_allowed": false
+      }
+    },
+    {
+      "id": "starter_oaks_white_oak",
+      "category": "oaks",
+      "name": "White Oak",
+      "parent_taxon": "Quercus spp.",
+      "family": "Fagaceae",
+      "growth_habit": "large deciduous tree",
+      "light": "full sun",
+      "soil_water": "deep draining soil",
+      "propagation": "nursery tree",
+      "visual_markers": "rounded-lobed leaves, light bark and acorns",
+      "notes": "Quercus alba species type",
+      "reference_lead": "https://plants.ces.ncsu.edu/",
+      "evidence_status": "provisional initial description; individual cultivar review pending",
+      "codex": {
+        "visual_archetype_allowed": true,
+        "verified_growth_simulation_allowed": false
+      }
+    },
+    {
+      "id": "starter_oaks_willow_oak",
+      "category": "oaks",
+      "name": "Willow Oak",
+      "parent_taxon": "Quercus spp.",
+      "family": "Fagaceae",
+      "growth_habit": "large deciduous tree",
+      "light": "full sun",
+      "soil_water": "deep draining soil",
+      "propagation": "nursery tree",
+      "visual_markers": "narrow willow-like leaves and small acorns",
+      "notes": "Quercus phellos species type",
+      "reference_lead": "https://plants.ces.ncsu.edu/",
+      "evidence_status": "provisional initial description; individual cultivar review pending",
+      "codex": {
+        "visual_archetype_allowed": true,
+        "verified_growth_simulation_allowed": false
+      }
+    },
+    {
+      "id": "starter_oaks_swamp_white_oak",
+      "category": "oaks",
+      "name": "Swamp White Oak",
+      "parent_taxon": "Quercus spp.",
+      "family": "Fagaceae",
+      "growth_habit": "large deciduous tree",
+      "light": "full sun",
+      "soil_water": "deep draining soil",
+      "propagation": "nursery tree",
+      "visual_markers": "broad leaves with pale undersides and acorns",
+      "notes": "Quercus bicolor species type",
+      "reference_lead": "https://plants.ces.ncsu.edu/",
+      "evidence_status": "provisional initial description; individual cultivar review pending",
+      "codex": {
+        "visual_archetype_allowed": true,
+        "verified_growth_simulation_allowed": false
+      }
+    },
+    {
+      "id": "starter_oaks_overcup_oak",
+      "category": "oaks",
+      "name": "Overcup Oak",
+      "parent_taxon": "Quercus spp.",
+      "family": "Fagaceae",
+      "growth_habit": "large deciduous tree",
+      "light": "full sun",
+      "soil_water": "deep draining soil",
+      "propagation": "nursery tree",
+      "visual_markers": "acorns nearly enclosed by cup",
+      "notes": "Quercus lyrata species type",
+      "reference_lead": "https://plants.ces.ncsu.edu/",
+      "evidence_status": "provisional initial description; individual cultivar review pending",
+      "codex": {
+        "visual_archetype_allowed": true,
+        "verified_growth_simulation_allowed": false
+      }
+    },
+    {
+      "id": "starter_magnolias_little_gem",
+      "category": "magnolias",
+      "name": "Little Gem",
+      "parent_taxon": "Magnolia spp.",
+      "family": "Magnoliaceae",
+      "growth_habit": "deciduous or evergreen tree",
+      "light": "sun to light shade",
+      "soil_water": "rich draining soil",
+      "propagation": "nursery tree",
+      "visual_markers": "compact evergreen canopy, glossy leaves and white scented flowers",
+      "notes": "Magnolia grandiflora",
+      "reference_lead": "https://plants.ces.ncsu.edu/",
+      "evidence_status": "provisional initial description; individual cultivar review pending",
+      "codex": {
+        "visual_archetype_allowed": true,
+        "verified_growth_simulation_allowed": false
+      }
+    },
+    {
+      "id": "starter_magnolias_bracken_s_brown_beauty",
+      "category": "magnolias",
+      "name": "Bracken's Brown Beauty",
+      "parent_taxon": "Magnolia spp.",
+      "family": "Magnoliaceae",
+      "growth_habit": "deciduous or evergreen tree",
+      "light": "sun to light shade",
+      "soil_water": "rich draining soil",
+      "propagation": "nursery tree",
+      "visual_markers": "glossy leaves with rusty undersides and white flowers",
+      "notes": "Magnolia grandiflora",
+      "reference_lead": "https://plants.ces.ncsu.edu/",
+      "evidence_status": "provisional initial description; individual cultivar review pending",
+      "codex": {
+        "visual_archetype_allowed": true,
+        "verified_growth_simulation_allowed": false
+      }
+    },
+    {
+      "id": "starter_magnolias_jane",
+      "category": "magnolias",
+      "name": "Jane",
+      "parent_taxon": "Magnolia spp.",
+      "family": "Magnoliaceae",
+      "growth_habit": "deciduous or evergreen tree",
+      "light": "sun to light shade",
+      "soil_water": "rich draining soil",
+      "propagation": "nursery tree",
+      "visual_markers": "reddish-purple goblet flowers on deciduous shrub-tree",
+      "notes": "Magnolia hybrid",
+      "reference_lead": "https://plants.ces.ncsu.edu/",
+      "evidence_status": "provisional initial description; individual cultivar review pending",
+      "codex": {
+        "visual_archetype_allowed": true,
+        "verified_growth_simulation_allowed": false
+      }
+    },
+    {
+      "id": "starter_magnolias_ann",
+      "category": "magnolias",
+      "name": "Ann",
+      "parent_taxon": "Magnolia spp.",
+      "family": "Magnoliaceae",
+      "growth_habit": "deciduous or evergreen tree",
+      "light": "sun to light shade",
+      "soil_water": "rich draining soil",
+      "propagation": "nursery tree",
+      "visual_markers": "compact habit and purple-pink tulip flowers",
+      "notes": "Magnolia hybrid",
+      "reference_lead": "https://plants.ces.ncsu.edu/",
+      "evidence_status": "provisional initial description; individual cultivar review pending",
+      "codex": {
+        "visual_archetype_allowed": true,
+        "verified_growth_simulation_allowed": false
+      }
+    },
+    {
+      "id": "starter_magnolias_susan",
+      "category": "magnolias",
+      "name": "Susan",
+      "parent_taxon": "Magnolia spp.",
+      "family": "Magnoliaceae",
+      "growth_habit": "deciduous or evergreen tree",
+      "light": "sun to light shade",
+      "soil_water": "rich draining soil",
+      "propagation": "nursery tree",
+      "visual_markers": "slender purple-pink spring blossoms",
+      "notes": "Magnolia hybrid",
+      "reference_lead": "https://plants.ces.ncsu.edu/",
+      "evidence_status": "provisional initial description; individual cultivar review pending",
+      "codex": {
+        "visual_archetype_allowed": true,
+        "verified_growth_simulation_allowed": false
+      }
+    },
+    {
+      "id": "starter_hollies_nellie_r_stevens",
+      "category": "hollies",
+      "name": "Nellie R Stevens",
+      "parent_taxon": "Ilex spp.",
+      "family": "Aquifoliaceae",
+      "growth_habit": "evergreen or deciduous shrub",
+      "light": "sun to part shade",
+      "soil_water": "acidic draining soil",
+      "propagation": "cuttings",
+      "visual_markers": "glossy spiny leaves and red berries",
+      "notes": "Ilex hybrid",
+      "reference_lead": "https://plants.ces.ncsu.edu/",
+      "evidence_status": "provisional initial description; individual cultivar review pending",
+      "codex": {
+        "visual_archetype_allowed": true,
+        "verified_growth_simulation_allowed": false
+      }
+    },
+    {
+      "id": "starter_hollies_sky_pencil",
+      "category": "hollies",
+      "name": "Sky Pencil",
+      "parent_taxon": "Ilex spp.",
+      "family": "Aquifoliaceae",
+      "growth_habit": "evergreen or deciduous shrub",
+      "light": "sun to part shade",
+      "soil_water": "acidic draining soil",
+      "propagation": "cuttings",
+      "visual_markers": "very narrow upright column with small leaves",
+      "notes": "Ilex crenata",
+      "reference_lead": "https://plants.ces.ncsu.edu/",
+      "evidence_status": "provisional initial description; individual cultivar review pending",
+      "codex": {
+        "visual_archetype_allowed": true,
+        "verified_growth_simulation_allowed": false
+      }
+    },
+    {
+      "id": "starter_hollies_blue_princess",
+      "category": "hollies",
+      "name": "Blue Princess",
+      "parent_taxon": "Ilex spp.",
+      "family": "Aquifoliaceae",
+      "growth_habit": "evergreen or deciduous shrub",
+      "light": "sun to part shade",
+      "soil_water": "acidic draining soil",
+      "propagation": "cuttings",
+      "visual_markers": "blue-green spiny foliage and red berries",
+      "notes": "female Ilex × meserveae",
+      "reference_lead": "https://plants.ces.ncsu.edu/",
+      "evidence_status": "provisional initial description; individual cultivar review pending",
+      "codex": {
+        "visual_archetype_allowed": true,
+        "verified_growth_simulation_allowed": false
+      }
+    },
+    {
+      "id": "starter_hollies_blue_prince",
+      "category": "hollies",
+      "name": "Blue Prince",
+      "parent_taxon": "Ilex spp.",
+      "family": "Aquifoliaceae",
+      "growth_habit": "evergreen or deciduous shrub",
+      "light": "sun to part shade",
+      "soil_water": "acidic draining soil",
+      "propagation": "cuttings",
+      "visual_markers": "blue-green foliage and pollen-bearing flowers, no berries",
+      "notes": "male Ilex × meserveae",
+      "reference_lead": "https://plants.ces.ncsu.edu/",
+      "evidence_status": "provisional initial description; individual cultivar review pending",
+      "codex": {
+        "visual_archetype_allowed": true,
+        "verified_growth_simulation_allowed": false
+      }
+    },
+    {
+      "id": "starter_hollies_winter_red",
+      "category": "hollies",
+      "name": "Winter Red",
+      "parent_taxon": "Ilex spp.",
+      "family": "Aquifoliaceae",
+      "growth_habit": "evergreen or deciduous shrub",
+      "light": "sun to part shade",
+      "soil_water": "acidic draining soil",
+      "propagation": "cuttings",
+      "visual_markers": "bare winter twigs studded with red berries",
+      "notes": "female Ilex verticillata",
+      "reference_lead": "https://plants.ces.ncsu.edu/",
+      "evidence_status": "provisional initial description; individual cultivar review pending",
+      "codex": {
+        "visual_archetype_allowed": true,
+        "verified_growth_simulation_allowed": false
+      }
+    },
+    {
+      "id": "starter_hostas_sum_and_substance",
+      "category": "hostas",
+      "name": "Sum and Substance",
+      "parent_taxon": "Hosta cultivars",
+      "family": "Asparagaceae",
+      "growth_habit": "herbaceous clump perennial",
+      "light": "part to full shade",
+      "soil_water": "moist organic well-drained soil",
+      "propagation": "division",
+      "visual_markers": "giant chartreuse leaves",
+      "notes": "giant hosta",
+      "reference_lead": "https://plants.ces.ncsu.edu/",
+      "evidence_status": "provisional initial description; individual cultivar review pending",
+      "codex": {
+        "visual_archetype_allowed": true,
+        "verified_growth_simulation_allowed": false
+      }
+    },
+    {
+      "id": "starter_hostas_patriot",
+      "category": "hostas",
+      "name": "Patriot",
+      "parent_taxon": "Hosta cultivars",
+      "family": "Asparagaceae",
+      "growth_habit": "herbaceous clump perennial",
+      "light": "part to full shade",
+      "soil_water": "moist organic well-drained soil",
+      "propagation": "division",
+      "visual_markers": "green leaves with broad white edges",
+      "notes": "variegated hosta",
+      "reference_lead": "https://plants.ces.ncsu.edu/",
+      "evidence_status": "provisional initial description; individual cultivar review pending",
+      "codex": {
+        "visual_archetype_allowed": true,
+        "verified_growth_simulation_allowed": false
+      }
+    },
+    {
+      "id": "starter_hostas_june",
+      "category": "hostas",
+      "name": "June",
+      "parent_taxon": "Hosta cultivars",
+      "family": "Asparagaceae",
+      "growth_habit": "herbaceous clump perennial",
+      "light": "part to full shade",
+      "soil_water": "moist organic well-drained soil",
+      "propagation": "division",
+      "visual_markers": "blue-green margins and gold centers",
+      "notes": "variegated hosta",
+      "reference_lead": "https://plants.ces.ncsu.edu/",
+      "evidence_status": "provisional initial description; individual cultivar review pending",
+      "codex": {
+        "visual_archetype_allowed": true,
+        "verified_growth_simulation_allowed": false
+      }
+    },
+    {
+      "id": "starter_hostas_blue_angel",
+      "category": "hostas",
+      "name": "Blue Angel",
+      "parent_taxon": "Hosta cultivars",
+      "family": "Asparagaceae",
+      "growth_habit": "herbaceous clump perennial",
+      "light": "part to full shade",
+      "soil_water": "moist organic well-drained soil",
+      "propagation": "division",
+      "visual_markers": "large blue-gray heart-shaped leaves",
+      "notes": "blue hosta",
+      "reference_lead": "https://plants.ces.ncsu.edu/",
+      "evidence_status": "provisional initial description; individual cultivar review pending",
+      "codex": {
+        "visual_archetype_allowed": true,
+        "verified_growth_simulation_allowed": false
+      }
+    },
+    {
+      "id": "starter_hostas_empress_wu",
+      "category": "hostas",
+      "name": "Empress Wu",
+      "parent_taxon": "Hosta cultivars",
+      "family": "Asparagaceae",
+      "growth_habit": "herbaceous clump perennial",
+      "light": "part to full shade",
+      "soil_water": "moist organic well-drained soil",
+      "propagation": "division",
+      "visual_markers": "very large corrugated blue-green foliage",
+      "notes": "giant hosta",
+      "reference_lead": "https://plants.ces.ncsu.edu/",
+      "evidence_status": "provisional initial description; individual cultivar review pending",
+      "codex": {
+        "visual_archetype_allowed": true,
+        "verified_growth_simulation_allowed": false
+      }
+    },
+    {
+      "id": "starter_coral_bells_palace_purple",
+      "category": "coral_bells",
+      "name": "Palace Purple",
+      "parent_taxon": "Heuchera hybrids",
+      "family": "Saxifragaceae",
+      "growth_habit": "low leafy perennial rosette",
+      "light": "part shade",
+      "soil_water": "organic draining soil",
+      "propagation": "division",
+      "visual_markers": "deep purple-bronze scalloped leaves",
+      "notes": "dark foliage",
+      "reference_lead": "https://plants.ces.ncsu.edu/",
+      "evidence_status": "provisional initial description; individual cultivar review pending",
+      "codex": {
+        "visual_archetype_allowed": true,
+        "verified_growth_simulation_allowed": false
+      }
+    },
+    {
+      "id": "starter_coral_bells_caramel",
+      "category": "coral_bells",
+      "name": "Caramel",
+      "parent_taxon": "Heuchera hybrids",
+      "family": "Saxifragaceae",
+      "growth_habit": "low leafy perennial rosette",
+      "light": "part shade",
+      "soil_water": "organic draining soil",
+      "propagation": "division",
+      "visual_markers": "amber-caramel rounded leaves",
+      "notes": "warm foliage",
+      "reference_lead": "https://plants.ces.ncsu.edu/",
+      "evidence_status": "provisional initial description; individual cultivar review pending",
+      "codex": {
+        "visual_archetype_allowed": true,
+        "verified_growth_simulation_allowed": false
+      }
+    },
+    {
+      "id": "starter_coral_bells_lime_marmalade",
+      "category": "coral_bells",
+      "name": "Lime Marmalade",
+      "parent_taxon": "Heuchera hybrids",
+      "family": "Saxifragaceae",
+      "growth_habit": "low leafy perennial rosette",
+      "light": "part shade",
+      "soil_water": "organic draining soil",
+      "propagation": "division",
+      "visual_markers": "bright green ruffled foliage",
+      "notes": "chartreuse cultivar",
+      "reference_lead": "https://plants.ces.ncsu.edu/",
+      "evidence_status": "provisional initial description; individual cultivar review pending",
+      "codex": {
+        "visual_archetype_allowed": true,
+        "verified_growth_simulation_allowed": false
+      }
+    },
+    {
+      "id": "starter_coral_bells_obsidian",
+      "category": "coral_bells",
+      "name": "Obsidian",
+      "parent_taxon": "Heuchera hybrids",
+      "family": "Saxifragaceae",
+      "growth_habit": "low leafy perennial rosette",
+      "light": "part shade",
+      "soil_water": "organic draining soil",
+      "propagation": "division",
+      "visual_markers": "near-black glossy leaves",
+      "notes": "dark cultivar",
+      "reference_lead": "https://plants.ces.ncsu.edu/",
+      "evidence_status": "provisional initial description; individual cultivar review pending",
+      "codex": {
+        "visual_archetype_allowed": true,
+        "verified_growth_simulation_allowed": false
+      }
+    },
+    {
+      "id": "starter_coral_bells_berry_smoothie",
+      "category": "coral_bells",
+      "name": "Berry Smoothie",
+      "parent_taxon": "Heuchera hybrids",
+      "family": "Saxifragaceae",
+      "growth_habit": "low leafy perennial rosette",
+      "light": "part shade",
+      "soil_water": "organic draining soil",
+      "propagation": "division",
+      "visual_markers": "pink-purple rounded leaves",
+      "notes": "color shifts seasonally",
+      "reference_lead": "https://plants.ces.ncsu.edu/",
+      "evidence_status": "provisional initial description; individual cultivar review pending",
+      "codex": {
+        "visual_archetype_allowed": true,
+        "verified_growth_simulation_allowed": false
+      }
+    },
+    {
+      "id": "starter_astilbes_fanal",
+      "category": "astilbes",
+      "name": "Fanal",
+      "parent_taxon": "Astilbe hybrids",
+      "family": "Saxifragaceae",
+      "growth_habit": "clumping herbaceous perennial",
+      "light": "part shade",
+      "soil_water": "consistently moist organic soil",
+      "propagation": "division",
+      "visual_markers": "deep red feathery flowering panicles",
+      "notes": "red selection",
+      "reference_lead": "https://plants.ces.ncsu.edu/",
+      "evidence_status": "provisional initial description; individual cultivar review pending",
+      "codex": {
+        "visual_archetype_allowed": true,
+        "verified_growth_simulation_allowed": false
+      }
+    },
+    {
+      "id": "starter_astilbes_deutschland",
+      "category": "astilbes",
+      "name": "Deutschland",
+      "parent_taxon": "Astilbe hybrids",
+      "family": "Saxifragaceae",
+      "growth_habit": "clumping herbaceous perennial",
+      "light": "part shade",
+      "soil_water": "consistently moist organic soil",
+      "propagation": "division",
+      "visual_markers": "white feathery flower plumes",
+      "notes": "white selection",
+      "reference_lead": "https://plants.ces.ncsu.edu/",
+      "evidence_status": "provisional initial description; individual cultivar review pending",
+      "codex": {
+        "visual_archetype_allowed": true,
+        "verified_growth_simulation_allowed": false
+      }
+    },
+    {
+      "id": "starter_astilbes_rheinland",
+      "category": "astilbes",
+      "name": "Rheinland",
+      "parent_taxon": "Astilbe hybrids",
+      "family": "Saxifragaceae",
+      "growth_habit": "clumping herbaceous perennial",
+      "light": "part shade",
+      "soil_water": "consistently moist organic soil",
+      "propagation": "division",
+      "visual_markers": "rose-pink plumes",
+      "notes": "pink selection",
+      "reference_lead": "https://plants.ces.ncsu.edu/",
+      "evidence_status": "provisional initial description; individual cultivar review pending",
+      "codex": {
+        "visual_archetype_allowed": true,
+        "verified_growth_simulation_allowed": false
+      }
+    },
+    {
+      "id": "starter_astilbes_bridal_veil",
+      "category": "astilbes",
+      "name": "Bridal Veil",
+      "parent_taxon": "Astilbe hybrids",
+      "family": "Saxifragaceae",
+      "growth_habit": "clumping herbaceous perennial",
+      "light": "part shade",
+      "soil_water": "consistently moist organic soil",
+      "propagation": "division",
+      "visual_markers": "arching creamy-white plumes",
+      "notes": "white selection",
+      "reference_lead": "https://plants.ces.ncsu.edu/",
+      "evidence_status": "provisional initial description; individual cultivar review pending",
+      "codex": {
+        "visual_archetype_allowed": true,
+        "verified_growth_simulation_allowed": false
+      }
+    },
+    {
+      "id": "starter_astilbes_visions_in_pink",
+      "category": "astilbes",
+      "name": "Visions in Pink",
+      "parent_taxon": "Astilbe hybrids",
+      "family": "Saxifragaceae",
+      "growth_habit": "clumping herbaceous perennial",
+      "light": "part shade",
+      "soil_water": "consistently moist organic soil",
+      "propagation": "division",
+      "visual_markers": "dense pink upright panicles",
+      "notes": "chinensis-derived cultivar",
+      "reference_lead": "https://plants.ces.ncsu.edu/",
+      "evidence_status": "provisional initial description; individual cultivar review pending",
+      "codex": {
+        "visual_archetype_allowed": true,
+        "verified_growth_simulation_allowed": false
+      }
+    },
+    {
+      "id": "starter_perennial_salvias_may_night",
+      "category": "perennial_salvias",
+      "name": "May Night",
+      "parent_taxon": "Salvia spp.",
+      "family": "Lamiaceae",
+      "growth_habit": "herbaceous perennial or subshrub",
+      "light": "full sun",
+      "soil_water": "draining soil",
+      "propagation": "cuttings or division",
+      "visual_markers": "violet-blue spikes above green textured leaves",
+      "notes": "Salvia × sylvestris",
+      "reference_lead": "https://plants.ces.ncsu.edu/",
+      "evidence_status": "provisional initial description; individual cultivar review pending",
+      "codex": {
+        "visual_archetype_allowed": true,
+        "verified_growth_simulation_allowed": false
+      }
+    },
+    {
+      "id": "starter_perennial_salvias_caradonna",
+      "category": "perennial_salvias",
+      "name": "Caradonna",
+      "parent_taxon": "Salvia spp.",
+      "family": "Lamiaceae",
+      "growth_habit": "herbaceous perennial or subshrub",
+      "light": "full sun",
+      "soil_water": "draining soil",
+      "propagation": "cuttings or division",
+      "visual_markers": "violet flowers on purple stems",
+      "notes": "Salvia nemorosa",
+      "reference_lead": "https://plants.ces.ncsu.edu/",
+      "evidence_status": "provisional initial description; individual cultivar review pending",
+      "codex": {
+        "visual_archetype_allowed": true,
+        "verified_growth_simulation_allowed": false
+      }
+    },
+    {
+      "id": "starter_perennial_salvias_blue_hill",
+      "category": "perennial_salvias",
+      "name": "Blue Hill",
+      "parent_taxon": "Salvia spp.",
+      "family": "Lamiaceae",
+      "growth_habit": "herbaceous perennial or subshrub",
+      "light": "full sun",
+      "soil_water": "draining soil",
+      "propagation": "cuttings or division",
+      "visual_markers": "clear pale-blue flowering spikes",
+      "notes": "Salvia nemorosa",
+      "reference_lead": "https://plants.ces.ncsu.edu/",
+      "evidence_status": "provisional initial description; individual cultivar review pending",
+      "codex": {
+        "visual_archetype_allowed": true,
+        "verified_growth_simulation_allowed": false
+      }
+    },
+    {
+      "id": "starter_perennial_salvias_hot_lips",
+      "category": "perennial_salvias",
+      "name": "Hot Lips",
+      "parent_taxon": "Salvia spp.",
+      "family": "Lamiaceae",
+      "growth_habit": "herbaceous perennial or subshrub",
+      "light": "full sun",
+      "soil_water": "draining soil",
+      "propagation": "cuttings or division",
+      "visual_markers": "red and white tubular bicolor flowers",
+      "notes": "Salvia microphylla hybrid",
+      "reference_lead": "https://plants.ces.ncsu.edu/",
+      "evidence_status": "provisional initial description; individual cultivar review pending",
+      "codex": {
+        "visual_archetype_allowed": true,
+        "verified_growth_simulation_allowed": false
+      }
+    },
+    {
+      "id": "starter_perennial_salvias_amistad",
+      "category": "perennial_salvias",
+      "name": "Amistad",
+      "parent_taxon": "Salvia spp.",
+      "family": "Lamiaceae",
+      "growth_habit": "herbaceous perennial or subshrub",
+      "light": "full sun",
+      "soil_water": "draining soil",
+      "propagation": "cuttings or division",
+      "visual_markers": "saturated purple tubular blooms with dark calyces",
+      "notes": "tender Salvia hybrid",
+      "reference_lead": "https://plants.ces.ncsu.edu/",
+      "evidence_status": "provisional initial description; individual cultivar review pending",
+      "codex": {
+        "visual_archetype_allowed": true,
+        "verified_growth_simulation_allowed": false
+      }
+    },
+    {
+      "id": "starter_bee_balms_jacob_cline",
+      "category": "bee_balms",
+      "name": "Jacob Cline",
+      "parent_taxon": "Monarda spp.",
+      "family": "Lamiaceae",
+      "growth_habit": "rhizomatous perennial",
+      "light": "sun to part shade",
+      "soil_water": "moist draining soil",
+      "propagation": "division",
+      "visual_markers": "scarlet shaggy flower whorls",
+      "notes": "Monarda didyma",
+      "reference_lead": "https://plants.ces.ncsu.edu/",
+      "evidence_status": "provisional initial description; individual cultivar review pending",
+      "codex": {
+        "visual_archetype_allowed": true,
+        "verified_growth_simulation_allowed": false
+      }
+    },
+    {
+      "id": "starter_bee_balms_raspberry_wine",
+      "category": "bee_balms",
+      "name": "Raspberry Wine",
+      "parent_taxon": "Monarda spp.",
+      "family": "Lamiaceae",
+      "growth_habit": "rhizomatous perennial",
+      "light": "sun to part shade",
+      "soil_water": "moist draining soil",
+      "propagation": "division",
+      "visual_markers": "raspberry-red tufted blossoms",
+      "notes": "Monarda hybrid",
+      "reference_lead": "https://plants.ces.ncsu.edu/",
+      "evidence_status": "provisional initial description; individual cultivar review pending",
+      "codex": {
+        "visual_archetype_allowed": true,
+        "verified_growth_simulation_allowed": false
+      }
+    },
+    {
+      "id": "starter_bee_balms_balmy_purple",
+      "category": "bee_balms",
+      "name": "Balmy Purple",
+      "parent_taxon": "Monarda spp.",
+      "family": "Lamiaceae",
+      "growth_habit": "rhizomatous perennial",
+      "light": "sun to part shade",
+      "soil_water": "moist draining soil",
+      "propagation": "division",
+      "visual_markers": "compact purple flower clusters",
+      "notes": "Monarda hybrid",
+      "reference_lead": "https://plants.ces.ncsu.edu/",
+      "evidence_status": "provisional initial description; individual cultivar review pending",
+      "codex": {
+        "visual_archetype_allowed": true,
+        "verified_growth_simulation_allowed": false
+      }
+    },
+    {
+      "id": "starter_bee_balms_gardenview_scarlet",
+      "category": "bee_balms",
+      "name": "Gardenview Scarlet",
+      "parent_taxon": "Monarda spp.",
+      "family": "Lamiaceae",
+      "growth_habit": "rhizomatous perennial",
+      "light": "sun to part shade",
+      "soil_water": "moist draining soil",
+      "propagation": "division",
+      "visual_markers": "bright red shaggy flowerheads",
+      "notes": "Monarda hybrid",
+      "reference_lead": "https://plants.ces.ncsu.edu/",
+      "evidence_status": "provisional initial description; individual cultivar review pending",
+      "codex": {
+        "visual_archetype_allowed": true,
+        "verified_growth_simulation_allowed": false
+      }
+    },
+    {
+      "id": "starter_bee_balms_petite_delight",
+      "category": "bee_balms",
+      "name": "Petite Delight",
+      "parent_taxon": "Monarda spp.",
+      "family": "Lamiaceae",
+      "growth_habit": "rhizomatous perennial",
+      "light": "sun to part shade",
+      "soil_water": "moist draining soil",
+      "propagation": "division",
+      "visual_markers": "short stems with lavender-pink flowers",
+      "notes": "Monarda didyma",
+      "reference_lead": "https://plants.ces.ncsu.edu/",
+      "evidence_status": "provisional initial description; individual cultivar review pending",
+      "codex": {
+        "visual_archetype_allowed": true,
+        "verified_growth_simulation_allowed": false
+      }
+    },
+    {
+      "id": "starter_yarrow_moonshine",
+      "category": "yarrow",
+      "name": "Moonshine",
+      "parent_taxon": "Achillea spp.",
+      "family": "Asteraceae",
+      "growth_habit": "herbaceous perennial",
+      "light": "full sun",
+      "soil_water": "free-draining soil",
+      "propagation": "division",
+      "visual_markers": "lemon-yellow flowerheads and silvery foliage",
+      "notes": "Achillea hybrid",
+      "reference_lead": "https://plants.ces.ncsu.edu/",
+      "evidence_status": "provisional initial description; individual cultivar review pending",
+      "codex": {
+        "visual_archetype_allowed": true,
+        "verified_growth_simulation_allowed": false
+      }
+    },
+    {
+      "id": "starter_yarrow_paprika",
+      "category": "yarrow",
+      "name": "Paprika",
+      "parent_taxon": "Achillea spp.",
+      "family": "Asteraceae",
+      "growth_habit": "herbaceous perennial",
+      "light": "full sun",
+      "soil_water": "free-draining soil",
+      "propagation": "division",
+      "visual_markers": "red flower clusters aging orange",
+      "notes": "Achillea millefolium",
+      "reference_lead": "https://plants.ces.ncsu.edu/",
+      "evidence_status": "provisional initial description; individual cultivar review pending",
+      "codex": {
+        "visual_archetype_allowed": true,
+        "verified_growth_simulation_allowed": false
+      }
+    },
+    {
+      "id": "starter_yarrow_terracotta",
+      "category": "yarrow",
+      "name": "Terracotta",
+      "parent_taxon": "Achillea spp.",
+      "family": "Asteraceae",
+      "growth_habit": "herbaceous perennial",
+      "light": "full sun",
+      "soil_water": "free-draining soil",
+      "propagation": "division",
+      "visual_markers": "orange flower clusters aging peach",
+      "notes": "Achillea hybrid",
+      "reference_lead": "https://plants.ces.ncsu.edu/",
+      "evidence_status": "provisional initial description; individual cultivar review pending",
+      "codex": {
+        "visual_archetype_allowed": true,
+        "verified_growth_simulation_allowed": false
+      }
+    },
+    {
+      "id": "starter_yarrow_summer_pastels_mix",
+      "category": "yarrow",
+      "name": "Summer Pastels Mix",
+      "parent_taxon": "Achillea spp.",
+      "family": "Asteraceae",
+      "growth_habit": "herbaceous perennial",
+      "light": "full sun",
+      "soil_water": "free-draining soil",
+      "propagation": "division",
+      "visual_markers": "multicolored flat flower clusters",
+      "notes": "seed mix not stable cultivar",
+      "reference_lead": "https://plants.ces.ncsu.edu/",
+      "evidence_status": "provisional initial description; individual cultivar review pending",
+      "codex": {
+        "visual_archetype_allowed": true,
+        "verified_growth_simulation_allowed": false
+      }
+    },
+    {
+      "id": "starter_yarrow_strawberry_seduction",
+      "category": "yarrow",
+      "name": "Strawberry Seduction",
+      "parent_taxon": "Achillea spp.",
+      "family": "Asteraceae",
+      "growth_habit": "herbaceous perennial",
+      "light": "full sun",
+      "soil_water": "free-draining soil",
+      "propagation": "division",
+      "visual_markers": "red flowerheads with yellow centers",
+      "notes": "Achillea millefolium",
+      "reference_lead": "https://plants.ces.ncsu.edu/",
+      "evidence_status": "provisional initial description; individual cultivar review pending",
+      "codex": {
+        "visual_archetype_allowed": true,
+        "verified_growth_simulation_allowed": false
+      }
+    }
+  ]
+}

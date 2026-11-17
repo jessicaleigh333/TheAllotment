@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:the-allotment:botanical:profile:1.0.0",
+  "title": "Future biological profile; no live simulation implied",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "profile_id", "profile_version", "plant_id", "chronological_age_continues", "propagation_method", "developmental_stages", "size_knots", "seasonal_rules", "evidence", "calibration_basis", "capabilities"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "profile_id": {"type": "string", "minLength": 1},
+    "profile_version": {"type": "string", "minLength": 1},
+    "plant_id": {"type": "string", "minLength": 1},
+    "propagation_method": {"type": ["string", "null"]},
+    "rootstock_id": {"type": ["string", "null"]},
+    "life_cycle": {"enum": ["annual", "biennial", "perennial", "context_dependent", "unknown"]},
+    "chronological_age_continues": {"const": true},
+    "developmental_stages": {"type": "array", "items": {"type": "string", "minLength": 1}, "uniqueItems": true},
+    "size_knots": {
+      "type": "array",
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["age_days", "height_m", "width_m", "depth_m", "basis", "evidence_ids"],
+        "properties": {
+          "age_days": {"type": "number", "minimum": 0},
+          "height_m": {"type": "number", "exclusiveMinimum": 0},
+          "width_m": {"type": "number", "exclusiveMinimum": 0},
+          "depth_m": {"type": "number", "exclusiveMinimum": 0},
+          "basis": {"enum": ["referenced", "calibrated_estimate"]},
+          "evidence_ids": {"type": "array", "items": {"type": "string"}, "minItems": 1}
+        }
+      }
+    },
+    "seasonal_rules": {"type": "array", "items": {"type": "object", "required": ["state", "recurrence", "conditions", "evidence_ids"], "properties": {
+      "state": {"type": "string"}, "recurrence": {"enum": ["once", "seasonal", "repeat", "conditional"]},
+      "conditions": {"type": "object"}, "evidence_ids": {"type": "array", "items": {"type": "string"}}
+    }}},
+    "environment_requirements": {"type": ["object", "null"]},
+    "health_rules": {"type": "array", "items": {"type": "object"}},
+    "propagation_rules": {"type": "array", "items": {"type": "object"}},
+    "pollination_rules": {"type": "array", "items": {"type": "object"}},
+    "harvest_rules": {"type": "array", "items": {"type": "object"}},
+    "evidence": {"type": "array", "items": {"type": "object", "required": ["evidence_id", "scope", "review_status"]}},
+    "calibration_basis": {"type": ["string", "null"]},
+    "capabilities": {"type": "array", "items": {"enum": ["identity", "size_growth", "phenology", "environment", "health", "propagation", "breeding", "harvest"]}, "uniqueItems": true}
+  }
+}

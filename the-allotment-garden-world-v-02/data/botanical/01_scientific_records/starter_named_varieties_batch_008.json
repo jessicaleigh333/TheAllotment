@@ -1,0 +1,959 @@
+{
+  "schema_version": "1.0",
+  "record_count": 50,
+  "scope": "10 ornamental shrub and small-tree groups",
+  "status": "provisional; not cultivar verified",
+  "alert": "Do not infer cultivar-specific invasiveness, toxicity, numeric growth performance, or local climate suitability from starter descriptions.",
+  "records": [
+    {
+      "id": "starter_azaleas_george_l_taber",
+      "category": "azaleas",
+      "name": "George L. Taber",
+      "parent_taxon": "Rhododendron spp.",
+      "family": "Ericaceae",
+      "growth_habit": "evergreen or deciduous flowering shrub",
+      "light": "part shade",
+      "soil_water": "acidic moist well-drained soil",
+      "propagation": "cuttings",
+      "visual_markers": "large pale lavender-pink blooms",
+      "trait_note": "Southern Indica azalea",
+      "source_lead": "https://plants.ces.ncsu.edu/",
+      "identity_review": "pending cultivar-specific audit",
+      "codex": {
+        "prototype_appearance": true,
+        "realistic_numeric_simulation": false
+      }
+    },
+    {
+      "id": "starter_azaleas_formosa",
+      "category": "azaleas",
+      "name": "Formosa",
+      "parent_taxon": "Rhododendron spp.",
+      "family": "Ericaceae",
+      "growth_habit": "evergreen or deciduous flowering shrub",
+      "light": "part shade",
+      "soil_water": "acidic moist well-drained soil",
+      "propagation": "cuttings",
+      "visual_markers": "magenta-purple funnel-shaped blossoms",
+      "trait_note": "evergreen Indica type",
+      "source_lead": "https://plants.ces.ncsu.edu/",
+      "identity_review": "pending cultivar-specific audit",
+      "codex": {
+        "prototype_appearance": true,
+        "realistic_numeric_simulation": false
+      }
+    },
+    {
+      "id": "starter_azaleas_gumpo_white",
+      "category": "azaleas",
+      "name": "Gumpo White",
+      "parent_taxon": "Rhododendron spp.",
+      "family": "Ericaceae",
+      "growth_habit": "evergreen or deciduous flowering shrub",
+      "light": "part shade",
+      "soil_water": "acidic moist well-drained soil",
+      "propagation": "cuttings",
+      "visual_markers": "compact dwarf shrub with large white flowers",
+      "trait_note": "Satsuki azalea",
+      "source_lead": "https://plants.ces.ncsu.edu/",
+      "identity_review": "pending cultivar-specific audit",
+      "codex": {
+        "prototype_appearance": true,
+        "realistic_numeric_simulation": false
+      }
+    },
+    {
+      "id": "starter_azaleas_hino_crimson",
+      "category": "azaleas",
+      "name": "Hino Crimson",
+      "parent_taxon": "Rhododendron spp.",
+      "family": "Ericaceae",
+      "growth_habit": "evergreen or deciduous flowering shrub",
+      "light": "part shade",
+      "soil_water": "acidic moist well-drained soil",
+      "propagation": "cuttings",
+      "visual_markers": "compact evergreen shrub with red flowers",
+      "trait_note": "Kurume type",
+      "source_lead": "https://plants.ces.ncsu.edu/",
+      "identity_review": "pending cultivar-specific audit",
+      "codex": {
+        "prototype_appearance": true,
+        "realistic_numeric_simulation": false
+      }
+    },
+    {
+      "id": "starter_azaleas_encore_autumn_royalty",
+      "category": "azaleas",
+      "name": "Encore Autumn Royalty",
+      "parent_taxon": "Rhododendron spp.",
+      "family": "Ericaceae",
+      "growth_habit": "evergreen or deciduous flowering shrub",
+      "light": "part shade",
+      "soil_water": "acidic moist well-drained soil",
+      "propagation": "cuttings",
+      "visual_markers": "deep-purple blooms on evergreen foliage",
+      "trait_note": "repeat-blooming hybrid",
+      "source_lead": "https://plants.ces.ncsu.edu/",
+      "identity_review": "pending cultivar-specific audit",
+      "codex": {
+        "prototype_appearance": true,
+        "realistic_numeric_simulation": false
+      }
+    },
+    {
+      "id": "starter_rhododendrons_roseum_elegans",
+      "category": "rhododendrons",
+      "name": "Roseum Elegans",
+      "parent_taxon": "Rhododendron spp.",
+      "family": "Ericaceae",
+      "growth_habit": "evergreen flowering shrub",
+      "light": "part shade",
+      "soil_water": "acidic organic well-drained soil",
+      "propagation": "layered or cuttings",
+      "visual_markers": "large lilac-pink trusses",
+      "trait_note": "vigorous evergreen hybrid",
+      "source_lead": "https://plants.ces.ncsu.edu/",
+      "identity_review": "pending cultivar-specific audit",
+      "codex": {
+        "prototype_appearance": true,
+        "realistic_numeric_simulation": false
+      }
+    },
+    {
+      "id": "starter_rhododendrons_catawbiense_grandiflorum",
+      "category": "rhododendrons",
+      "name": "Catawbiense Grandiflorum",
+      "parent_taxon": "Rhododendron spp.",
+      "family": "Ericaceae",
+      "growth_habit": "evergreen flowering shrub",
+      "light": "part shade",
+      "soil_water": "acidic organic well-drained soil",
+      "propagation": "layered or cuttings",
+      "visual_markers": "purple-lavender flower clusters",
+      "trait_note": "large broadleaf hybrid",
+      "source_lead": "https://plants.ces.ncsu.edu/",
+      "identity_review": "pending cultivar-specific audit",
+      "codex": {
+        "prototype_appearance": true,
+        "realistic_numeric_simulation": false
+      }
+    },
+    {
+      "id": "starter_rhododendrons_nova_zembla",
+      "category": "rhododendrons",
+      "name": "Nova Zembla",
+      "parent_taxon": "Rhododendron spp.",
+      "family": "Ericaceae",
+      "growth_habit": "evergreen flowering shrub",
+      "light": "part shade",
+      "soil_water": "acidic organic well-drained soil",
+      "propagation": "layered or cuttings",
+      "visual_markers": "red-pink flower clusters",
+      "trait_note": "evergreen hybrid",
+      "source_lead": "https://plants.ces.ncsu.edu/",
+      "identity_review": "pending cultivar-specific audit",
+      "codex": {
+        "prototype_appearance": true,
+        "realistic_numeric_simulation": false
+      }
+    },
+    {
+      "id": "starter_rhododendrons_pjm_elite",
+      "category": "rhododendrons",
+      "name": "PJM Elite",
+      "parent_taxon": "Rhododendron spp.",
+      "family": "Ericaceae",
+      "growth_habit": "evergreen flowering shrub",
+      "light": "part shade",
+      "soil_water": "acidic organic well-drained soil",
+      "propagation": "layered or cuttings",
+      "visual_markers": "small lavender-purple blooms; small glossy leaves",
+      "trait_note": "compact evergreen hybrid",
+      "source_lead": "https://plants.ces.ncsu.edu/",
+      "identity_review": "pending cultivar-specific audit",
+      "codex": {
+        "prototype_appearance": true,
+        "realistic_numeric_simulation": false
+      }
+    },
+    {
+      "id": "starter_rhododendrons_english_roseum",
+      "category": "rhododendrons",
+      "name": "English Roseum",
+      "parent_taxon": "Rhododendron spp.",
+      "family": "Ericaceae",
+      "growth_habit": "evergreen flowering shrub",
+      "light": "part shade",
+      "soil_water": "acidic organic well-drained soil",
+      "propagation": "layered or cuttings",
+      "visual_markers": "rose-pink flower trusses",
+      "trait_note": "broadleaf hybrid",
+      "source_lead": "https://plants.ces.ncsu.edu/",
+      "identity_review": "pending cultivar-specific audit",
+      "codex": {
+        "prototype_appearance": true,
+        "realistic_numeric_simulation": false
+      }
+    },
+    {
+      "id": "starter_lilacs_sensation",
+      "category": "lilacs",
+      "name": "Sensation",
+      "parent_taxon": "Syringa spp.",
+      "family": "Oleaceae",
+      "growth_habit": "deciduous woody flowering shrub",
+      "light": "full sun",
+      "soil_water": "well-drained soil",
+      "propagation": "cuttings or nursery shrub",
+      "visual_markers": "purple florets with crisp white margins",
+      "trait_note": "Syringa vulgaris",
+      "source_lead": "https://plants.ces.ncsu.edu/",
+      "identity_review": "pending cultivar-specific audit",
+      "codex": {
+        "prototype_appearance": true,
+        "realistic_numeric_simulation": false
+      }
+    },
+    {
+      "id": "starter_lilacs_charles_joly",
+      "category": "lilacs",
+      "name": "Charles Joly",
+      "parent_taxon": "Syringa spp.",
+      "family": "Oleaceae",
+      "growth_habit": "deciduous woody flowering shrub",
+      "light": "full sun",
+      "soil_water": "well-drained soil",
+      "propagation": "cuttings or nursery shrub",
+      "visual_markers": "double deep-purple flower panicles",
+      "trait_note": "Syringa vulgaris",
+      "source_lead": "https://plants.ces.ncsu.edu/",
+      "identity_review": "pending cultivar-specific audit",
+      "codex": {
+        "prototype_appearance": true,
+        "realistic_numeric_simulation": false
+      }
+    },
+    {
+      "id": "starter_lilacs_miss_kim",
+      "category": "lilacs",
+      "name": "Miss Kim",
+      "parent_taxon": "Syringa spp.",
+      "family": "Oleaceae",
+      "growth_habit": "deciduous woody flowering shrub",
+      "light": "full sun",
+      "soil_water": "well-drained soil",
+      "propagation": "cuttings or nursery shrub",
+      "visual_markers": "lavender flower panicles aging pale",
+      "trait_note": "Syringa pubescens subsp. patula",
+      "source_lead": "https://plants.ces.ncsu.edu/",
+      "identity_review": "pending cultivar-specific audit",
+      "codex": {
+        "prototype_appearance": true,
+        "realistic_numeric_simulation": false
+      }
+    },
+    {
+      "id": "starter_lilacs_bloomerang_dark_purple",
+      "category": "lilacs",
+      "name": "Bloomerang Dark Purple",
+      "parent_taxon": "Syringa spp.",
+      "family": "Oleaceae",
+      "growth_habit": "deciduous woody flowering shrub",
+      "light": "full sun",
+      "soil_water": "well-drained soil",
+      "propagation": "cuttings or nursery shrub",
+      "visual_markers": "purple repeat blooms",
+      "trait_note": "hybrid lilac",
+      "source_lead": "https://plants.ces.ncsu.edu/",
+      "identity_review": "pending cultivar-specific audit",
+      "codex": {
+        "prototype_appearance": true,
+        "realistic_numeric_simulation": false
+      }
+    },
+    {
+      "id": "starter_lilacs_president_lincoln",
+      "category": "lilacs",
+      "name": "President Lincoln",
+      "parent_taxon": "Syringa spp.",
+      "family": "Oleaceae",
+      "growth_habit": "deciduous woody flowering shrub",
+      "light": "full sun",
+      "soil_water": "well-drained soil",
+      "propagation": "cuttings or nursery shrub",
+      "visual_markers": "single clear-blue lavender flower panicles",
+      "trait_note": "Syringa vulgaris",
+      "source_lead": "https://plants.ces.ncsu.edu/",
+      "identity_review": "pending cultivar-specific audit",
+      "codex": {
+        "prototype_appearance": true,
+        "realistic_numeric_simulation": false
+      }
+    },
+    {
+      "id": "starter_viburnums_snowball",
+      "category": "viburnums",
+      "name": "Snowball",
+      "parent_taxon": "Viburnum spp.",
+      "family": "Adoxaceae",
+      "growth_habit": "deciduous or evergreen woody shrub",
+      "light": "sun to part shade",
+      "soil_water": "well-drained soil; moderate moisture",
+      "propagation": "cuttings",
+      "visual_markers": "round white sterile flower balls",
+      "trait_note": "Viburnum opulus Roseum type",
+      "source_lead": "https://plants.ces.ncsu.edu/",
+      "identity_review": "pending cultivar-specific audit",
+      "codex": {
+        "prototype_appearance": true,
+        "realistic_numeric_simulation": false
+      }
+    },
+    {
+      "id": "starter_viburnums_blue_muffin",
+      "category": "viburnums",
+      "name": "Blue Muffin",
+      "parent_taxon": "Viburnum spp.",
+      "family": "Adoxaceae",
+      "growth_habit": "deciduous or evergreen woody shrub",
+      "light": "sun to part shade",
+      "soil_water": "well-drained soil; moderate moisture",
+      "propagation": "cuttings",
+      "visual_markers": "white spring blooms and blue fruits",
+      "trait_note": "Viburnum dentatum; fruiting partner may be needed",
+      "source_lead": "https://plants.ces.ncsu.edu/",
+      "identity_review": "pending cultivar-specific audit",
+      "codex": {
+        "prototype_appearance": true,
+        "realistic_numeric_simulation": false
+      }
+    },
+    {
+      "id": "starter_viburnums_summer_snowflake",
+      "category": "viburnums",
+      "name": "Summer Snowflake",
+      "parent_taxon": "Viburnum spp.",
+      "family": "Adoxaceae",
+      "growth_habit": "deciduous or evergreen woody shrub",
+      "light": "sun to part shade",
+      "soil_water": "well-drained soil; moderate moisture",
+      "propagation": "cuttings",
+      "visual_markers": "white lacecap flowers along layered branches",
+      "trait_note": "Viburnum plicatum f. tomentosum",
+      "source_lead": "https://plants.ces.ncsu.edu/",
+      "identity_review": "pending cultivar-specific audit",
+      "codex": {
+        "prototype_appearance": true,
+        "realistic_numeric_simulation": false
+      }
+    },
+    {
+      "id": "starter_viburnums_burkwood",
+      "category": "viburnums",
+      "name": "Burkwood",
+      "parent_taxon": "Viburnum spp.",
+      "family": "Adoxaceae",
+      "growth_habit": "deciduous or evergreen woody shrub",
+      "light": "sun to part shade",
+      "soil_water": "well-drained soil; moderate moisture",
+      "propagation": "cuttings",
+      "visual_markers": "fragrant pale pink buds opening white",
+      "trait_note": "Viburnum × burkwoodii",
+      "source_lead": "https://plants.ces.ncsu.edu/",
+      "identity_review": "pending cultivar-specific audit",
+      "codex": {
+        "prototype_appearance": true,
+        "realistic_numeric_simulation": false
+      }
+    },
+    {
+      "id": "starter_viburnums_mohawk",
+      "category": "viburnums",
+      "name": "Mohawk",
+      "parent_taxon": "Viburnum spp.",
+      "family": "Adoxaceae",
+      "growth_habit": "deciduous or evergreen woody shrub",
+      "light": "sun to part shade",
+      "soil_water": "well-drained soil; moderate moisture",
+      "propagation": "cuttings",
+      "visual_markers": "red buds opening fragrant white flowers",
+      "trait_note": "Viburnum × burkwoodii",
+      "source_lead": "https://plants.ces.ncsu.edu/",
+      "identity_review": "pending cultivar-specific audit",
+      "codex": {
+        "prototype_appearance": true,
+        "realistic_numeric_simulation": false
+      }
+    },
+    {
+      "id": "starter_butterfly_bushes_black_knight",
+      "category": "butterfly_bushes",
+      "name": "Black Knight",
+      "parent_taxon": "Buddleja davidii hybrids",
+      "family": "Scrophulariaceae",
+      "growth_habit": "deciduous or semi-evergreen shrub",
+      "light": "full sun",
+      "soil_water": "well-drained soil",
+      "propagation": "cuttings",
+      "visual_markers": "long deep-purple flowering panicles",
+      "trait_note": "Buddleja davidii cultivar",
+      "source_lead": "https://plants.ces.ncsu.edu/",
+      "identity_review": "pending cultivar-specific audit",
+      "codex": {
+        "prototype_appearance": true,
+        "realistic_numeric_simulation": false
+      }
+    },
+    {
+      "id": "starter_butterfly_bushes_nanho_blue",
+      "category": "butterfly_bushes",
+      "name": "Nanho Blue",
+      "parent_taxon": "Buddleja davidii hybrids",
+      "family": "Scrophulariaceae",
+      "growth_habit": "deciduous or semi-evergreen shrub",
+      "light": "full sun",
+      "soil_water": "well-drained soil",
+      "propagation": "cuttings",
+      "visual_markers": "airy lavender-blue flower sprays",
+      "trait_note": "Buddleja davidii selection",
+      "source_lead": "https://plants.ces.ncsu.edu/",
+      "identity_review": "pending cultivar-specific audit",
+      "codex": {
+        "prototype_appearance": true,
+        "realistic_numeric_simulation": false
+      }
+    },
+    {
+      "id": "starter_butterfly_bushes_white_profusion",
+      "category": "butterfly_bushes",
+      "name": "White Profusion",
+      "parent_taxon": "Buddleja davidii hybrids",
+      "family": "Scrophulariaceae",
+      "growth_habit": "deciduous or semi-evergreen shrub",
+      "light": "full sun",
+      "soil_water": "well-drained soil",
+      "propagation": "cuttings",
+      "visual_markers": "long white conical panicles",
+      "trait_note": "Buddleja davidii",
+      "source_lead": "https://plants.ces.ncsu.edu/",
+      "identity_review": "pending cultivar-specific audit",
+      "codex": {
+        "prototype_appearance": true,
+        "realistic_numeric_simulation": false
+      }
+    },
+    {
+      "id": "starter_butterfly_bushes_miss_molly",
+      "category": "butterfly_bushes",
+      "name": "Miss Molly",
+      "parent_taxon": "Buddleja davidii hybrids",
+      "family": "Scrophulariaceae",
+      "growth_habit": "deciduous or semi-evergreen shrub",
+      "light": "full sun",
+      "soil_water": "well-drained soil",
+      "propagation": "cuttings",
+      "visual_markers": "rich reddish-pink flower spikes",
+      "trait_note": "hybrid buddleja",
+      "source_lead": "https://plants.ces.ncsu.edu/",
+      "identity_review": "pending cultivar-specific audit",
+      "codex": {
+        "prototype_appearance": true,
+        "realistic_numeric_simulation": false
+      }
+    },
+    {
+      "id": "starter_butterfly_bushes_pugster_blue",
+      "category": "butterfly_bushes",
+      "name": "Pugster Blue",
+      "parent_taxon": "Buddleja davidii hybrids",
+      "family": "Scrophulariaceae",
+      "growth_habit": "deciduous or semi-evergreen shrub",
+      "light": "full sun",
+      "soil_water": "well-drained soil",
+      "propagation": "cuttings",
+      "visual_markers": "compact habit with dense blue-purple panicles",
+      "trait_note": "hybrid buddleja",
+      "source_lead": "https://plants.ces.ncsu.edu/",
+      "identity_review": "pending cultivar-specific audit",
+      "codex": {
+        "prototype_appearance": true,
+        "realistic_numeric_simulation": false
+      }
+    },
+    {
+      "id": "starter_weigelas_wine_and_roses",
+      "category": "weigelas",
+      "name": "Wine and Roses",
+      "parent_taxon": "Weigela florida hybrids",
+      "family": "Caprifoliaceae",
+      "growth_habit": "deciduous arching shrub",
+      "light": "full sun to light shade",
+      "soil_water": "well-drained moderate-moisture soil",
+      "propagation": "cuttings",
+      "visual_markers": "dark burgundy foliage; deep pink flowers",
+      "trait_note": "Weigela florida",
+      "source_lead": "https://plants.ces.ncsu.edu/",
+      "identity_review": "pending cultivar-specific audit",
+      "codex": {
+        "prototype_appearance": true,
+        "realistic_numeric_simulation": false
+      }
+    },
+    {
+      "id": "starter_weigelas_midnight_wine",
+      "category": "weigelas",
+      "name": "Midnight Wine",
+      "parent_taxon": "Weigela florida hybrids",
+      "family": "Caprifoliaceae",
+      "growth_habit": "deciduous arching shrub",
+      "light": "full sun to light shade",
+      "soil_water": "well-drained moderate-moisture soil",
+      "propagation": "cuttings",
+      "visual_markers": "very low dark-purple foliage and pink flowers",
+      "trait_note": "dwarf cultivar",
+      "source_lead": "https://plants.ces.ncsu.edu/",
+      "identity_review": "pending cultivar-specific audit",
+      "codex": {
+        "prototype_appearance": true,
+        "realistic_numeric_simulation": false
+      }
+    },
+    {
+      "id": "starter_weigelas_spilled_wine",
+      "category": "weigelas",
+      "name": "Spilled Wine",
+      "parent_taxon": "Weigela florida hybrids",
+      "family": "Caprifoliaceae",
+      "growth_habit": "deciduous arching shrub",
+      "light": "full sun to light shade",
+      "soil_water": "well-drained moderate-moisture soil",
+      "propagation": "cuttings",
+      "visual_markers": "low spreading burgundy leaves with pink trumpets",
+      "trait_note": "compact cultivar",
+      "source_lead": "https://plants.ces.ncsu.edu/",
+      "identity_review": "pending cultivar-specific audit",
+      "codex": {
+        "prototype_appearance": true,
+        "realistic_numeric_simulation": false
+      }
+    },
+    {
+      "id": "starter_weigelas_red_prince",
+      "category": "weigelas",
+      "name": "Red Prince",
+      "parent_taxon": "Weigela florida hybrids",
+      "family": "Caprifoliaceae",
+      "growth_habit": "deciduous arching shrub",
+      "light": "full sun to light shade",
+      "soil_water": "well-drained moderate-moisture soil",
+      "propagation": "cuttings",
+      "visual_markers": "green leaves and bright red trumpet flowers",
+      "trait_note": "red cultivar",
+      "source_lead": "https://plants.ces.ncsu.edu/",
+      "identity_review": "pending cultivar-specific audit",
+      "codex": {
+        "prototype_appearance": true,
+        "realistic_numeric_simulation": false
+      }
+    },
+    {
+      "id": "starter_weigelas_sonic_bloom_pink",
+      "category": "weigelas",
+      "name": "Sonic Bloom Pink",
+      "parent_taxon": "Weigela florida hybrids",
+      "family": "Caprifoliaceae",
+      "growth_habit": "deciduous arching shrub",
+      "light": "full sun to light shade",
+      "soil_water": "well-drained moderate-moisture soil",
+      "propagation": "cuttings",
+      "visual_markers": "rich pink trumpet flowers",
+      "trait_note": "repeat flowering in suitable conditions",
+      "source_lead": "https://plants.ces.ncsu.edu/",
+      "identity_review": "pending cultivar-specific audit",
+      "codex": {
+        "prototype_appearance": true,
+        "realistic_numeric_simulation": false
+      }
+    },
+    {
+      "id": "starter_spiraeas_goldmound",
+      "category": "spiraeas",
+      "name": "Goldmound",
+      "parent_taxon": "Spiraea spp.",
+      "family": "Rosaceae",
+      "growth_habit": "deciduous flowering shrub",
+      "light": "full sun",
+      "soil_water": "well-drained soil; moderate moisture",
+      "propagation": "cuttings",
+      "visual_markers": "golden chartreuse foliage with pink summer flowers",
+      "trait_note": "Spiraea japonica",
+      "source_lead": "https://plants.ces.ncsu.edu/",
+      "identity_review": "pending cultivar-specific audit",
+      "codex": {
+        "prototype_appearance": true,
+        "realistic_numeric_simulation": false
+      }
+    },
+    {
+      "id": "starter_spiraeas_goldflame",
+      "category": "spiraeas",
+      "name": "Goldflame",
+      "parent_taxon": "Spiraea spp.",
+      "family": "Rosaceae",
+      "growth_habit": "deciduous flowering shrub",
+      "light": "full sun",
+      "soil_water": "well-drained soil; moderate moisture",
+      "propagation": "cuttings",
+      "visual_markers": "bronze-red spring leaves turning yellow-green",
+      "trait_note": "Spiraea japonica",
+      "source_lead": "https://plants.ces.ncsu.edu/",
+      "identity_review": "pending cultivar-specific audit",
+      "codex": {
+        "prototype_appearance": true,
+        "realistic_numeric_simulation": false
+      }
+    },
+    {
+      "id": "starter_spiraeas_little_princess",
+      "category": "spiraeas",
+      "name": "Little Princess",
+      "parent_taxon": "Spiraea spp.",
+      "family": "Rosaceae",
+      "growth_habit": "deciduous flowering shrub",
+      "light": "full sun",
+      "soil_water": "well-drained soil; moderate moisture",
+      "propagation": "cuttings",
+      "visual_markers": "compact green shrub and flat pink flower clusters",
+      "trait_note": "Spiraea japonica",
+      "source_lead": "https://plants.ces.ncsu.edu/",
+      "identity_review": "pending cultivar-specific audit",
+      "codex": {
+        "prototype_appearance": true,
+        "realistic_numeric_simulation": false
+      }
+    },
+    {
+      "id": "starter_spiraeas_anthony_waterer",
+      "category": "spiraeas",
+      "name": "Anthony Waterer",
+      "parent_taxon": "Spiraea spp.",
+      "family": "Rosaceae",
+      "growth_habit": "deciduous flowering shrub",
+      "light": "full sun",
+      "soil_water": "well-drained soil; moderate moisture",
+      "propagation": "cuttings",
+      "visual_markers": "pink-red clustered flowerheads",
+      "trait_note": "Spiraea japonica",
+      "source_lead": "https://plants.ces.ncsu.edu/",
+      "identity_review": "pending cultivar-specific audit",
+      "codex": {
+        "prototype_appearance": true,
+        "realistic_numeric_simulation": false
+      }
+    },
+    {
+      "id": "starter_spiraeas_bridal_wreath",
+      "category": "spiraeas",
+      "name": "Bridal Wreath",
+      "parent_taxon": "Spiraea spp.",
+      "family": "Rosaceae",
+      "growth_habit": "deciduous flowering shrub",
+      "light": "full sun",
+      "soil_water": "well-drained soil; moderate moisture",
+      "propagation": "cuttings",
+      "visual_markers": "arching stems lined with tiny white spring flowers",
+      "trait_note": "Spiraea prunifolia type",
+      "source_lead": "https://plants.ces.ncsu.edu/",
+      "identity_review": "pending cultivar-specific audit",
+      "codex": {
+        "prototype_appearance": true,
+        "realistic_numeric_simulation": false
+      }
+    },
+    {
+      "id": "starter_ninebarks_diabolo",
+      "category": "ninebarks",
+      "name": "Diabolo",
+      "parent_taxon": "Physocarpus opulifolius",
+      "family": "Rosaceae",
+      "growth_habit": "deciduous arching shrub",
+      "light": "full sun to part shade",
+      "soil_water": "adaptable well-drained soil",
+      "propagation": "cuttings",
+      "visual_markers": "deep purple foliage; white-pink flower clusters",
+      "trait_note": "dark-leaf cultivar",
+      "source_lead": "https://plants.ces.ncsu.edu/",
+      "identity_review": "pending cultivar-specific audit",
+      "codex": {
+        "prototype_appearance": true,
+        "realistic_numeric_simulation": false
+      }
+    },
+    {
+      "id": "starter_ninebarks_summer_wine",
+      "category": "ninebarks",
+      "name": "Summer Wine",
+      "parent_taxon": "Physocarpus opulifolius",
+      "family": "Rosaceae",
+      "growth_habit": "deciduous arching shrub",
+      "light": "full sun to part shade",
+      "soil_water": "adaptable well-drained soil",
+      "propagation": "cuttings",
+      "visual_markers": "wine-red leaves and arching branches",
+      "trait_note": "compact cultivar",
+      "source_lead": "https://plants.ces.ncsu.edu/",
+      "identity_review": "pending cultivar-specific audit",
+      "codex": {
+        "prototype_appearance": true,
+        "realistic_numeric_simulation": false
+      }
+    },
+    {
+      "id": "starter_ninebarks_little_devil",
+      "category": "ninebarks",
+      "name": "Little Devil",
+      "parent_taxon": "Physocarpus opulifolius",
+      "family": "Rosaceae",
+      "growth_habit": "deciduous arching shrub",
+      "light": "full sun to part shade",
+      "soil_water": "adaptable well-drained soil",
+      "propagation": "cuttings",
+      "visual_markers": "compact maroon foliage",
+      "trait_note": "dwarf selection",
+      "source_lead": "https://plants.ces.ncsu.edu/",
+      "identity_review": "pending cultivar-specific audit",
+      "codex": {
+        "prototype_appearance": true,
+        "realistic_numeric_simulation": false
+      }
+    },
+    {
+      "id": "starter_ninebarks_amber_jubilee",
+      "category": "ninebarks",
+      "name": "Amber Jubilee",
+      "parent_taxon": "Physocarpus opulifolius",
+      "family": "Rosaceae",
+      "growth_habit": "deciduous arching shrub",
+      "light": "full sun to part shade",
+      "soil_water": "adaptable well-drained soil",
+      "propagation": "cuttings",
+      "visual_markers": "copper-orange-gold foliage",
+      "trait_note": "colorful-leaf cultivar",
+      "source_lead": "https://plants.ces.ncsu.edu/",
+      "identity_review": "pending cultivar-specific audit",
+      "codex": {
+        "prototype_appearance": true,
+        "realistic_numeric_simulation": false
+      }
+    },
+    {
+      "id": "starter_ninebarks_dart_s_gold",
+      "category": "ninebarks",
+      "name": "Dart's Gold",
+      "parent_taxon": "Physocarpus opulifolius",
+      "family": "Rosaceae",
+      "growth_habit": "deciduous arching shrub",
+      "light": "full sun to part shade",
+      "soil_water": "adaptable well-drained soil",
+      "propagation": "cuttings",
+      "visual_markers": "brilliant yellow foliage",
+      "trait_note": "gold-leaf cultivar",
+      "source_lead": "https://plants.ces.ncsu.edu/",
+      "identity_review": "pending cultivar-specific audit",
+      "codex": {
+        "prototype_appearance": true,
+        "realistic_numeric_simulation": false
+      }
+    },
+    {
+      "id": "starter_flowering_dogwoods_cherokee_chief",
+      "category": "flowering_dogwoods",
+      "name": "Cherokee Chief",
+      "parent_taxon": "Cornus florida",
+      "family": "Cornaceae",
+      "growth_habit": "deciduous small flowering tree",
+      "light": "part sun to filtered shade",
+      "soil_water": "acidic moist well-drained soil",
+      "propagation": "grafted nursery tree",
+      "visual_markers": "deep rosy-red spring bracts",
+      "trait_note": "red-bract selection",
+      "source_lead": "https://plants.ces.ncsu.edu/",
+      "identity_review": "pending cultivar-specific audit",
+      "codex": {
+        "prototype_appearance": true,
+        "realistic_numeric_simulation": false
+      }
+    },
+    {
+      "id": "starter_flowering_dogwoods_cherokee_princess",
+      "category": "flowering_dogwoods",
+      "name": "Cherokee Princess",
+      "parent_taxon": "Cornus florida",
+      "family": "Cornaceae",
+      "growth_habit": "deciduous small flowering tree",
+      "light": "part sun to filtered shade",
+      "soil_water": "acidic moist well-drained soil",
+      "propagation": "grafted nursery tree",
+      "visual_markers": "large bright white spring bracts",
+      "trait_note": "white cultivar",
+      "source_lead": "https://plants.ces.ncsu.edu/",
+      "identity_review": "pending cultivar-specific audit",
+      "codex": {
+        "prototype_appearance": true,
+        "realistic_numeric_simulation": false
+      }
+    },
+    {
+      "id": "starter_flowering_dogwoods_cloud_9",
+      "category": "flowering_dogwoods",
+      "name": "Cloud 9",
+      "parent_taxon": "Cornus florida",
+      "family": "Cornaceae",
+      "growth_habit": "deciduous small flowering tree",
+      "light": "part sun to filtered shade",
+      "soil_water": "acidic moist well-drained soil",
+      "propagation": "grafted nursery tree",
+      "visual_markers": "dense white spring bracts",
+      "trait_note": "flowering dogwood",
+      "source_lead": "https://plants.ces.ncsu.edu/",
+      "identity_review": "pending cultivar-specific audit",
+      "codex": {
+        "prototype_appearance": true,
+        "realistic_numeric_simulation": false
+      }
+    },
+    {
+      "id": "starter_flowering_dogwoods_rubra",
+      "category": "flowering_dogwoods",
+      "name": "Rubra",
+      "parent_taxon": "Cornus florida",
+      "family": "Cornaceae",
+      "growth_habit": "deciduous small flowering tree",
+      "light": "part sun to filtered shade",
+      "soil_water": "acidic moist well-drained soil",
+      "propagation": "grafted nursery tree",
+      "visual_markers": "pink spring bracts",
+      "trait_note": "pink-bract botanical selection",
+      "source_lead": "https://plants.ces.ncsu.edu/",
+      "identity_review": "pending cultivar-specific audit",
+      "codex": {
+        "prototype_appearance": true,
+        "realistic_numeric_simulation": false
+      }
+    },
+    {
+      "id": "starter_flowering_dogwoods_appalachian_spring",
+      "category": "flowering_dogwoods",
+      "name": "Appalachian Spring",
+      "parent_taxon": "Cornus florida",
+      "family": "Cornaceae",
+      "growth_habit": "deciduous small flowering tree",
+      "light": "part sun to filtered shade",
+      "soil_water": "acidic moist well-drained soil",
+      "propagation": "grafted nursery tree",
+      "visual_markers": "white spring bracts",
+      "trait_note": "relative disease resistance must be evaluated locally",
+      "source_lead": "https://plants.ces.ncsu.edu/",
+      "identity_review": "pending cultivar-specific audit",
+      "codex": {
+        "prototype_appearance": true,
+        "realistic_numeric_simulation": false
+      }
+    },
+    {
+      "id": "starter_redbuds_forest_pansy",
+      "category": "redbuds",
+      "name": "Forest Pansy",
+      "parent_taxon": "Cercis canadensis",
+      "family": "Fabaceae",
+      "growth_habit": "deciduous small flowering tree",
+      "light": "full sun to part shade",
+      "soil_water": "well-drained soil; water to establish",
+      "propagation": "grafted tree",
+      "visual_markers": "purple-red heart-shaped leaves and magenta flowers",
+      "trait_note": "purple foliage type",
+      "source_lead": "https://plants.ces.ncsu.edu/",
+      "identity_review": "pending cultivar-specific audit",
+      "codex": {
+        "prototype_appearance": true,
+        "realistic_numeric_simulation": false
+      }
+    },
+    {
+      "id": "starter_redbuds_the_rising_sun",
+      "category": "redbuds",
+      "name": "The Rising Sun",
+      "parent_taxon": "Cercis canadensis",
+      "family": "Fabaceae",
+      "growth_habit": "deciduous small flowering tree",
+      "light": "full sun to part shade",
+      "soil_water": "well-drained soil; water to establish",
+      "propagation": "grafted tree",
+      "visual_markers": "golden-orange new heart-shaped foliage",
+      "trait_note": "gold-leaf selection",
+      "source_lead": "https://plants.ces.ncsu.edu/",
+      "identity_review": "pending cultivar-specific audit",
+      "codex": {
+        "prototype_appearance": true,
+        "realistic_numeric_simulation": false
+      }
+    },
+    {
+      "id": "starter_redbuds_ruby_falls",
+      "category": "redbuds",
+      "name": "Ruby Falls",
+      "parent_taxon": "Cercis canadensis",
+      "family": "Fabaceae",
+      "growth_habit": "deciduous small flowering tree",
+      "light": "full sun to part shade",
+      "soil_water": "well-drained soil; water to establish",
+      "propagation": "grafted tree",
+      "visual_markers": "weeping purple-leaf canopy and pink flowers",
+      "trait_note": "pendulous cultivar",
+      "source_lead": "https://plants.ces.ncsu.edu/",
+      "identity_review": "pending cultivar-specific audit",
+      "codex": {
+        "prototype_appearance": true,
+        "realistic_numeric_simulation": false
+      }
+    },
+    {
+      "id": "starter_redbuds_hearts_of_gold",
+      "category": "redbuds",
+      "name": "Hearts of Gold",
+      "parent_taxon": "Cercis canadensis",
+      "family": "Fabaceae",
+      "growth_habit": "deciduous small flowering tree",
+      "light": "full sun to part shade",
+      "soil_water": "well-drained soil; water to establish",
+      "propagation": "grafted tree",
+      "visual_markers": "bright golden heart-shaped leaves",
+      "trait_note": "gold-leaf selection",
+      "source_lead": "https://plants.ces.ncsu.edu/",
+      "identity_review": "pending cultivar-specific audit",
+      "codex": {
+        "prototype_appearance": true,
+        "realistic_numeric_simulation": false
+      }
+    },
+    {
+      "id": "starter_redbuds_merlot",
+      "category": "redbuds",
+      "name": "Merlot",
+      "parent_taxon": "Cercis canadensis",
+      "family": "Fabaceae",
+      "growth_habit": "deciduous small flowering tree",
+      "light": "full sun to part shade",
+      "soil_water": "well-drained soil; water to establish",
+      "propagation": "grafted tree",
+      "visual_markers": "dark burgundy glossy foliage and rosy blossoms",
+      "trait_note": "hybrid ancestry needs review",
+      "source_lead": "https://plants.ces.ncsu.edu/",
+      "identity_review": "pending cultivar-specific audit",
+      "codex": {
+        "prototype_appearance": true,
+        "realistic_numeric_simulation": false
+      }
+    }
+  ]
+}

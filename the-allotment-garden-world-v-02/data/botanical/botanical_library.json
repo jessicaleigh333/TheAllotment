@@ -1,0 +1,908 @@
+{
+  "schema_version": "1.0.0",
+  "title": "The Allotment botanical knowledge library",
+  "scope": "Existing twelve species/group IDs in the Godot growth system; extension-ready",
+  "principles": [
+    "Keep species, hybrids, varieties and cultivars distinct.",
+    "Never call calibrated gameplay timing a universal botanical fact.",
+    "No causal diagnosis from an isolated symptom or a single pest sighting.",
+    "Plant death can be an expected annual life cycle, a stress outcome, or an uncertain cause.",
+    "Keep a real-life elapsed clock; model seasons and conditions independently.",
+    "Cultivar-specific yield, cold tolerance and pruning are unknown until supported.",
+    "Flag regional invasiveness and toxicity; avoid unsafe advice.",
+    "No growth or harvest bonus for deliberately killing plants."
+  ],
+  "entries": [
+    {
+      "id": "sunflower",
+      "identity": {
+        "common_name": "Sunflower",
+        "scientific_name": "Helianthus annuus",
+        "family": "Asteraceae",
+        "cultivar": null,
+        "identification_level": "species_or_hybrid"
+      },
+      "biology": {
+        "life_cycle": "annual",
+        "propagation": "seed",
+        "flowering_window": "summer",
+        "pollinator_relationships": [
+          "bees",
+          "seed_eating_birds"
+        ]
+      },
+      "environment": {
+        "light": "full_sun",
+        "water": "moderate",
+        "drainage": "well_drained",
+        "soil_ph_range": null,
+        "hardiness_zone_range": null,
+        "temperature_c_range": null,
+        "nutrient_demand": null,
+        "shade_tolerance_note": null
+      },
+      "health": {
+        "risk_tags": [
+          "aphids",
+          "downy_mildew"
+        ],
+        "diagnosis_rule": "Symptoms alone are not proof of a cause; inspect conditions, pests, signs, season and history before concluding.",
+        "stress_recovery": "Recovery depends on severity, living tissue and environmental correction."
+      },
+      "management": {
+        "guidance": "Harvest mature dry seed heads; some cultivars branch and bloom repeatedly.",
+        "harvest_quantity_model": null,
+        "pruning_calendar": null
+      },
+      "gameplay": {
+        "existing_shop_id": "sunflower",
+        "legacy_growth_stage_days": [
+          0,
+          7,
+          14,
+          28,
+          90
+        ],
+        "legacy_visual_height_m": 1.8,
+        "legacy_visual_spread_m": 0.55,
+        "legacy_growth_values_are_game_assumptions": true,
+        "real_time_clock": true,
+        "environmental_simulation_status": "not_yet_connected",
+        "production_yield_status": "needs_cultivar_and_calibration"
+      },
+      "louise": {
+        "lesson": "Annuals finish their life cycle after producing seed; their death is not necessarily a care failure.",
+        "loss_is_learning": true,
+        "diary_tags": [
+          "sunflower",
+          "plant_health",
+          "field_observations"
+        ]
+      },
+      "evidence": {
+        "references": [
+          "https://extension.missouri.edu/publications/ym102",
+          "https://extension.oregonstate.edu/catalog/em-9866-grow-your-own-sunflowers"
+        ],
+        "review_status": "initial_reference_mapping; horticultural details require source-by-source verification",
+        "last_compiled": "2026-11-16"
+      }
+    },
+    {
+      "id": "rose",
+      "identity": {
+        "common_name": "Garden rose",
+        "scientific_name": "Rosa spp. and horticultural hybrids",
+        "family": "Rosaceae",
+        "cultivar": null,
+        "identification_level": "group"
+      },
+      "biology": {
+        "life_cycle": "perennial_woody",
+        "propagation": "cuttings_or_grafted",
+        "flowering_window": "cultivar_dependent",
+        "pollinator_relationships": [
+          "bees"
+        ]
+      },
+      "environment": {
+        "light": "full_sun",
+        "water": "moderate",
+        "drainage": "well_drained",
+        "soil_ph_range": null,
+        "hardiness_zone_range": null,
+        "temperature_c_range": null,
+        "nutrient_demand": null,
+        "shade_tolerance_note": null
+      },
+      "health": {
+        "risk_tags": [
+          "black_spot",
+          "powdery_mildew",
+          "aphids"
+        ],
+        "diagnosis_rule": "Symptoms alone are not proof of a cause; inspect conditions, pests, signs, season and history before concluding.",
+        "stress_recovery": "Recovery depends on severity, living tissue and environmental correction."
+      },
+      "management": {
+        "guidance": "Repeat bloom, hip formation and pruning depend strongly on cultivar; graft union and rootstock matter.",
+        "harvest_quantity_model": null,
+        "pruning_calendar": null
+      },
+      "gameplay": {
+        "existing_shop_id": "rose",
+        "legacy_growth_stage_days": [
+          0,
+          120,
+          180,
+          365,
+          1095
+        ],
+        "legacy_visual_height_m": 1.2,
+        "legacy_visual_spread_m": 1.2,
+        "legacy_growth_values_are_game_assumptions": true,
+        "real_time_clock": true,
+        "environmental_simulation_status": "not_yet_connected",
+        "production_yield_status": "needs_cultivar_and_calibration"
+      },
+      "louise": {
+        "lesson": "The 'rose' shop item is a generic ornamental; precise cultivar is required for bloom, disease resistance and mature dimensions.",
+        "loss_is_learning": true,
+        "diary_tags": [
+          "rose",
+          "plant_health",
+          "field_observations"
+        ]
+      },
+      "evidence": {
+        "references": [
+          "https://www.rhs.org.uk/plants/roses/growing-guide"
+        ],
+        "review_status": "initial_reference_mapping; horticultural details require source-by-source verification",
+        "last_compiled": "2026-11-16"
+      }
+    },
+    {
+      "id": "lavender",
+      "identity": {
+        "common_name": "English lavender",
+        "scientific_name": "Lavandula angustifolia",
+        "family": "Lamiaceae",
+        "cultivar": null,
+        "identification_level": "species_or_hybrid"
+      },
+      "biology": {
+        "life_cycle": "perennial_woody",
+        "propagation": "seed_or_cuttings",
+        "flowering_window": "summer",
+        "pollinator_relationships": [
+          "bees"
+        ]
+      },
+      "environment": {
+        "light": "full_sun",
+        "water": "low_when_established",
+        "drainage": "very_well_drained",
+        "soil_ph_range": null,
+        "hardiness_zone_range": null,
+        "temperature_c_range": null,
+        "nutrient_demand": null,
+        "shade_tolerance_note": null
+      },
+      "health": {
+        "risk_tags": [
+          "root_rot",
+          "winter_wet"
+        ],
+        "diagnosis_rule": "Symptoms alone are not proof of a cause; inspect conditions, pests, signs, season and history before concluding.",
+        "stress_recovery": "Recovery depends on severity, living tissue and environmental correction."
+      },
+      "management": {
+        "guidance": "Flowers can be harvested when open; avoid pruning into old leafless woody tissue.",
+        "harvest_quantity_model": null,
+        "pruning_calendar": null
+      },
+      "gameplay": {
+        "existing_shop_id": "lavender",
+        "legacy_growth_stage_days": [
+          0,
+          21,
+          60,
+          180,
+          730
+        ],
+        "legacy_visual_height_m": 0.6,
+        "legacy_visual_spread_m": 0.75,
+        "legacy_growth_values_are_game_assumptions": true,
+        "real_time_clock": true,
+        "environmental_simulation_status": "not_yet_connected",
+        "production_yield_status": "needs_cultivar_and_calibration"
+      },
+      "louise": {
+        "lesson": "Soggy soil can harm lavender more than moderate short-term dryness.",
+        "loss_is_learning": true,
+        "diary_tags": [
+          "lavender",
+          "plant_health",
+          "field_observations"
+        ]
+      },
+      "evidence": {
+        "references": [
+          "https://www.rhs.org.uk/plants/lavender/growing-guide",
+          "https://extension.umd.edu/resource/care-herbs-and-starting-herbs-seed"
+        ],
+        "review_status": "initial_reference_mapping; horticultural details require source-by-source verification",
+        "last_compiled": "2026-11-16"
+      }
+    },
+    {
+      "id": "hydrangea",
+      "identity": {
+        "common_name": "Bigleaf hydrangea",
+        "scientific_name": "Hydrangea macrophylla",
+        "family": "Hydrangeaceae",
+        "cultivar": null,
+        "identification_level": "species_or_hybrid"
+      },
+      "biology": {
+        "life_cycle": "perennial_shrub",
+        "propagation": "cuttings",
+        "flowering_window": "summer",
+        "pollinator_relationships": [
+          "pollinators_cultivar_dependent"
+        ]
+      },
+      "environment": {
+        "light": "part_sun",
+        "water": "consistent",
+        "drainage": "moist_well_drained",
+        "soil_ph_range": null,
+        "hardiness_zone_range": null,
+        "temperature_c_range": null,
+        "nutrient_demand": null,
+        "shade_tolerance_note": null
+      },
+      "health": {
+        "risk_tags": [
+          "drought_stress",
+          "leaf_spot",
+          "late_frost_bud_damage"
+        ],
+        "diagnosis_rule": "Symptoms alone are not proof of a cause; inspect conditions, pests, signs, season and history before concluding.",
+        "stress_recovery": "Recovery depends on severity, living tissue and environmental correction."
+      },
+      "management": {
+        "guidance": "Flowers often form on old wood, though reblooming cultivars can also flower on new wood; pruning must follow cultivar.",
+        "harvest_quantity_model": null,
+        "pruning_calendar": null
+      },
+      "gameplay": {
+        "existing_shop_id": "hydrangea",
+        "legacy_growth_stage_days": [
+          0,
+          21,
+          60,
+          365,
+          1095
+        ],
+        "legacy_visual_height_m": 1.5,
+        "legacy_visual_spread_m": 1.5,
+        "legacy_growth_values_are_game_assumptions": true,
+        "real_time_clock": true,
+        "environmental_simulation_status": "not_yet_connected",
+        "production_yield_status": "needs_cultivar_and_calibration"
+      },
+      "louise": {
+        "lesson": "Flower color response to soil aluminum/pH is cultivar-dependent, not a universal color switch.",
+        "loss_is_learning": true,
+        "diary_tags": [
+          "hydrangea",
+          "plant_health",
+          "field_observations"
+        ]
+      },
+      "evidence": {
+        "references": [
+          "https://www.rhs.org.uk/plants/hydrangea/growing-guide"
+        ],
+        "review_status": "initial_reference_mapping; horticultural details require source-by-source verification",
+        "last_compiled": "2026-11-16"
+      }
+    },
+    {
+      "id": "cosmos",
+      "identity": {
+        "common_name": "Garden cosmos",
+        "scientific_name": "Cosmos bipinnatus",
+        "family": "Asteraceae",
+        "cultivar": null,
+        "identification_level": "species_or_hybrid"
+      },
+      "biology": {
+        "life_cycle": "annual",
+        "propagation": "seed",
+        "flowering_window": "summer_autumn",
+        "pollinator_relationships": [
+          "bees",
+          "butterflies"
+        ]
+      },
+      "environment": {
+        "light": "full_sun",
+        "water": "moderate_to_low_when_established",
+        "drainage": "well_drained",
+        "soil_ph_range": null,
+        "hardiness_zone_range": null,
+        "temperature_c_range": null,
+        "nutrient_demand": null,
+        "shade_tolerance_note": null
+      },
+      "health": {
+        "risk_tags": [
+          "aphids",
+          "powdery_mildew"
+        ],
+        "diagnosis_rule": "Symptoms alone are not proof of a cause; inspect conditions, pests, signs, season and history before concluding.",
+        "stress_recovery": "Recovery depends on severity, living tissue and environmental correction."
+      },
+      "management": {
+        "guidance": "Deadheading can prolong flowering; seed heads allow self-sowing where conditions permit.",
+        "harvest_quantity_model": null,
+        "pruning_calendar": null
+      },
+      "gameplay": {
+        "existing_shop_id": "cosmos",
+        "legacy_growth_stage_days": [
+          0,
+          10,
+          21,
+          35,
+          90
+        ],
+        "legacy_visual_height_m": 1,
+        "legacy_visual_spread_m": 0.6,
+        "legacy_growth_values_are_game_assumptions": true,
+        "real_time_clock": true,
+        "environmental_simulation_status": "not_yet_connected",
+        "production_yield_status": "needs_cultivar_and_calibration"
+      },
+      "louise": {
+        "lesson": "Excess nitrogen may favor foliage over flowers.",
+        "loss_is_learning": true,
+        "diary_tags": [
+          "cosmos",
+          "plant_health",
+          "field_observations"
+        ]
+      },
+      "evidence": {
+        "references": [
+          "https://www.rhs.org.uk/plants/30717/cosmos-bipinnatus/details"
+        ],
+        "review_status": "initial_reference_mapping; horticultural details require source-by-source verification",
+        "last_compiled": "2026-11-16"
+      }
+    },
+    {
+      "id": "daisy",
+      "identity": {
+        "common_name": "Shasta daisy",
+        "scientific_name": "Leucanthemum × superbum",
+        "family": "Asteraceae",
+        "cultivar": null,
+        "identification_level": "species_or_hybrid"
+      },
+      "biology": {
+        "life_cycle": "perennial_herbaceous",
+        "propagation": "division_or_cuttings",
+        "flowering_window": "summer",
+        "pollinator_relationships": [
+          "bees",
+          "hoverflies"
+        ]
+      },
+      "environment": {
+        "light": "full_sun",
+        "water": "moderate",
+        "drainage": "well_drained",
+        "soil_ph_range": null,
+        "hardiness_zone_range": null,
+        "temperature_c_range": null,
+        "nutrient_demand": null,
+        "shade_tolerance_note": null
+      },
+      "health": {
+        "risk_tags": [
+          "leaf_spot",
+          "root_rot"
+        ],
+        "diagnosis_rule": "Symptoms alone are not proof of a cause; inspect conditions, pests, signs, season and history before concluding.",
+        "stress_recovery": "Recovery depends on severity, living tissue and environmental correction."
+      },
+      "management": {
+        "guidance": "Divide aging congested clumps; deadhead for tidy display and possible rebloom.",
+        "harvest_quantity_model": null,
+        "pruning_calendar": null
+      },
+      "gameplay": {
+        "existing_shop_id": "daisy",
+        "legacy_growth_stage_days": [
+          0,
+          14,
+          35,
+          90,
+          365
+        ],
+        "legacy_visual_height_m": 0.7,
+        "legacy_visual_spread_m": 0.6,
+        "legacy_growth_values_are_game_assumptions": true,
+        "real_time_clock": true,
+        "environmental_simulation_status": "not_yet_connected",
+        "production_yield_status": "needs_cultivar_and_calibration"
+      },
+      "louise": {
+        "lesson": "Often dies back above ground in winter while the crown remains alive.",
+        "loss_is_learning": true,
+        "diary_tags": [
+          "daisy",
+          "plant_health",
+          "field_observations"
+        ]
+      },
+      "evidence": {
+        "references": [
+          "https://www.rhs.org.uk/plants/98781/leucanthemum-%C3%97-superbum/details"
+        ],
+        "review_status": "initial_reference_mapping; horticultural details require source-by-source verification",
+        "last_compiled": "2026-11-16"
+      }
+    },
+    {
+      "id": "basil",
+      "identity": {
+        "common_name": "Sweet basil",
+        "scientific_name": "Ocimum basilicum",
+        "family": "Lamiaceae",
+        "cultivar": null,
+        "identification_level": "species_or_hybrid"
+      },
+      "biology": {
+        "life_cycle": "annual_tender",
+        "propagation": "seed_or_cuttings",
+        "flowering_window": "warm_season",
+        "pollinator_relationships": [
+          "bees_when_flowering"
+        ]
+      },
+      "environment": {
+        "light": "full_sun",
+        "water": "consistent",
+        "drainage": "moist_well_drained",
+        "soil_ph_range": null,
+        "hardiness_zone_range": null,
+        "temperature_c_range": null,
+        "nutrient_demand": null,
+        "shade_tolerance_note": null
+      },
+      "health": {
+        "risk_tags": [
+          "downy_mildew",
+          "cold_injury",
+          "aphids"
+        ],
+        "diagnosis_rule": "Symptoms alone are not proof of a cause; inspect conditions, pests, signs, season and history before concluding.",
+        "stress_recovery": "Recovery depends on severity, living tissue and environmental correction."
+      },
+      "management": {
+        "guidance": "Harvest tender leaves and pinch tips to encourage branching; flowering may reduce leaf-production focus.",
+        "harvest_quantity_model": null,
+        "pruning_calendar": null
+      },
+      "gameplay": {
+        "existing_shop_id": "basil",
+        "legacy_growth_stage_days": [
+          0,
+          7,
+          21,
+          35,
+          56
+        ],
+        "legacy_visual_height_m": 0.5,
+        "legacy_visual_spread_m": 0.45,
+        "legacy_growth_values_are_game_assumptions": true,
+        "real_time_clock": true,
+        "environmental_simulation_status": "not_yet_connected",
+        "production_yield_status": "needs_cultivar_and_calibration"
+      },
+      "louise": {
+        "lesson": "Protect from frost; yellowing and gray growth beneath leaves can suggest downy mildew, not simply lack of fertilizer.",
+        "loss_is_learning": true,
+        "diary_tags": [
+          "basil",
+          "plant_health",
+          "field_observations"
+        ]
+      },
+      "evidence": {
+        "references": [
+          "https://extension.umd.edu/resource/growing-basil-home-garden",
+          "https://extension.umd.edu/resource/downy-mildew-basil-home-garden"
+        ],
+        "review_status": "initial_reference_mapping; horticultural details require source-by-source verification",
+        "last_compiled": "2026-11-16"
+      }
+    },
+    {
+      "id": "climbing_rose",
+      "identity": {
+        "common_name": "Climbing garden rose",
+        "scientific_name": "Rosa climbing cultivars",
+        "family": "Rosaceae",
+        "cultivar": null,
+        "identification_level": "group"
+      },
+      "biology": {
+        "life_cycle": "perennial_woody_climber",
+        "propagation": "cuttings_or_grafted",
+        "flowering_window": "cultivar_dependent",
+        "pollinator_relationships": [
+          "bees"
+        ]
+      },
+      "environment": {
+        "light": "full_sun",
+        "water": "moderate",
+        "drainage": "well_drained",
+        "soil_ph_range": null,
+        "hardiness_zone_range": null,
+        "temperature_c_range": null,
+        "nutrient_demand": null,
+        "shade_tolerance_note": null
+      },
+      "health": {
+        "risk_tags": [
+          "black_spot",
+          "aphids",
+          "powdery_mildew"
+        ],
+        "diagnosis_rule": "Symptoms alone are not proof of a cause; inspect conditions, pests, signs, season and history before concluding.",
+        "stress_recovery": "Recovery depends on severity, living tissue and environmental correction."
+      },
+      "management": {
+        "guidance": "Climbing roses have long canes that should be tied and trained; most do not twine like wisteria.",
+        "harvest_quantity_model": null,
+        "pruning_calendar": null
+      },
+      "gameplay": {
+        "existing_shop_id": "climbing_rose",
+        "legacy_growth_stage_days": [
+          0,
+          120,
+          180,
+          365,
+          1095
+        ],
+        "legacy_visual_height_m": 0.7,
+        "legacy_visual_spread_m": 0.6,
+        "legacy_growth_values_are_game_assumptions": true,
+        "real_time_clock": true,
+        "environmental_simulation_status": "not_yet_connected",
+        "production_yield_status": "needs_cultivar_and_calibration"
+      },
+      "louise": {
+        "lesson": "Support and training change flowering display but do not magically accelerate biological maturation.",
+        "loss_is_learning": true,
+        "diary_tags": [
+          "climbing_rose",
+          "plant_health",
+          "field_observations"
+        ]
+      },
+      "evidence": {
+        "references": [
+          "https://www.rhs.org.uk/plants/roses/climbing/growing-guide"
+        ],
+        "review_status": "initial_reference_mapping; horticultural details require source-by-source verification",
+        "last_compiled": "2026-11-16"
+      }
+    },
+    {
+      "id": "clematis",
+      "identity": {
+        "common_name": "Clematis",
+        "scientific_name": "Clematis spp. and hybrids",
+        "family": "Ranunculaceae",
+        "cultivar": null,
+        "identification_level": "group"
+      },
+      "biology": {
+        "life_cycle": "perennial_climber",
+        "propagation": "seed_or_cuttings",
+        "flowering_window": "cultivar_dependent",
+        "pollinator_relationships": [
+          "bees"
+        ]
+      },
+      "environment": {
+        "light": "sun_or_part_shade",
+        "water": "consistent",
+        "drainage": "moist_well_drained",
+        "soil_ph_range": null,
+        "hardiness_zone_range": null,
+        "temperature_c_range": null,
+        "nutrient_demand": null,
+        "shade_tolerance_note": null
+      },
+      "health": {
+        "risk_tags": [
+          "clematis_wilt",
+          "slugs"
+        ],
+        "diagnosis_rule": "Symptoms alone are not proof of a cause; inspect conditions, pests, signs, season and history before concluding.",
+        "stress_recovery": "Recovery depends on severity, living tissue and environmental correction."
+      },
+      "management": {
+        "guidance": "Pruning group 1, 2 or 3 must be specified by cultivar or species.",
+        "harvest_quantity_model": null,
+        "pruning_calendar": null
+      },
+      "gameplay": {
+        "existing_shop_id": "clematis",
+        "legacy_growth_stage_days": [
+          0,
+          30,
+          90,
+          180,
+          730
+        ],
+        "legacy_visual_height_m": 0.55,
+        "legacy_visual_spread_m": 0.5,
+        "legacy_growth_values_are_game_assumptions": true,
+        "real_time_clock": true,
+        "environmental_simulation_status": "not_yet_connected",
+        "production_yield_status": "needs_cultivar_and_calibration"
+      },
+      "louise": {
+        "lesson": "A generic clematis cannot be given one universal pruning schedule.",
+        "loss_is_learning": true,
+        "diary_tags": [
+          "clematis",
+          "plant_health",
+          "field_observations"
+        ]
+      },
+      "evidence": {
+        "references": [
+          "https://www.rhs.org.uk/plants/clematis/growing-guide"
+        ],
+        "review_status": "initial_reference_mapping; horticultural details require source-by-source verification",
+        "last_compiled": "2026-11-16"
+      }
+    },
+    {
+      "id": "honeysuckle",
+      "identity": {
+        "common_name": "Woodbine honeysuckle",
+        "scientific_name": "Lonicera periclymenum",
+        "family": "Caprifoliaceae",
+        "cultivar": null,
+        "identification_level": "species_or_hybrid"
+      },
+      "biology": {
+        "life_cycle": "perennial_woody_climber",
+        "propagation": "seed_or_cuttings",
+        "flowering_window": "summer",
+        "pollinator_relationships": [
+          "moths",
+          "bees",
+          "birds"
+        ]
+      },
+      "environment": {
+        "light": "sun_or_part_shade",
+        "water": "moderate",
+        "drainage": "moist_well_drained",
+        "soil_ph_range": null,
+        "hardiness_zone_range": null,
+        "temperature_c_range": null,
+        "nutrient_demand": null,
+        "shade_tolerance_note": null
+      },
+      "health": {
+        "risk_tags": [
+          "aphids",
+          "powdery_mildew"
+        ],
+        "diagnosis_rule": "Symptoms alone are not proof of a cause; inspect conditions, pests, signs, season and history before concluding.",
+        "stress_recovery": "Recovery depends on severity, living tissue and environmental correction."
+      },
+      "management": {
+        "guidance": "Fragrant flowers can support moths; berries are wildlife food, not a human food harvest.",
+        "harvest_quantity_model": null,
+        "pruning_calendar": null
+      },
+      "gameplay": {
+        "existing_shop_id": "honeysuckle",
+        "legacy_growth_stage_days": [
+          0,
+          30,
+          90,
+          180,
+          730
+        ],
+        "legacy_visual_height_m": 0.65,
+        "legacy_visual_spread_m": 0.6,
+        "legacy_growth_values_are_game_assumptions": true,
+        "real_time_clock": true,
+        "environmental_simulation_status": "not_yet_connected",
+        "production_yield_status": "needs_cultivar_and_calibration"
+      },
+      "louise": {
+        "lesson": "The existing in-game honeysuckle is L. periclymenum; do not treat all honeysuckle species as equally benign or edible.",
+        "loss_is_learning": true,
+        "diary_tags": [
+          "honeysuckle",
+          "plant_health",
+          "field_observations"
+        ]
+      },
+      "evidence": {
+        "references": [
+          "https://www.rhs.org.uk/plants/honeysuckle/climbing/growing-guide"
+        ],
+        "review_status": "initial_reference_mapping; horticultural details require source-by-source verification",
+        "last_compiled": "2026-11-16"
+      }
+    },
+    {
+      "id": "ivy",
+      "identity": {
+        "common_name": "English ivy",
+        "scientific_name": "Hedera helix",
+        "family": "Araliaceae",
+        "cultivar": null,
+        "identification_level": "species_or_hybrid"
+      },
+      "biology": {
+        "life_cycle": "perennial_evergreen_climber",
+        "propagation": "cuttings",
+        "flowering_window": "autumn_mature_only",
+        "pollinator_relationships": [
+          "late_season_pollinators",
+          "birds"
+        ]
+      },
+      "environment": {
+        "light": "shade_to_sun",
+        "water": "moderate_when_establishing",
+        "drainage": "well_drained",
+        "soil_ph_range": null,
+        "hardiness_zone_range": null,
+        "temperature_c_range": null,
+        "nutrient_demand": null,
+        "shade_tolerance_note": null
+      },
+      "health": {
+        "risk_tags": [
+          "leaf_spot",
+          "root_rot"
+        ],
+        "diagnosis_rule": "Symptoms alone are not proof of a cause; inspect conditions, pests, signs, season and history before concluding.",
+        "stress_recovery": "Recovery depends on severity, living tissue and environmental correction."
+      },
+      "management": {
+        "guidance": "Adventitious rootlets cling to surfaces; mature flowering growth differs from juvenile climbing foliage.",
+        "harvest_quantity_model": null,
+        "pruning_calendar": null
+      },
+      "gameplay": {
+        "existing_shop_id": "ivy",
+        "legacy_growth_stage_days": [
+          0,
+          28,
+          90,
+          365,
+          1095
+        ],
+        "legacy_visual_height_m": 0.45,
+        "legacy_visual_spread_m": 0.55,
+        "legacy_growth_values_are_game_assumptions": true,
+        "real_time_clock": true,
+        "environmental_simulation_status": "not_yet_connected",
+        "production_yield_status": "needs_cultivar_and_calibration"
+      },
+      "louise": {
+        "lesson": "Can spread aggressively and is invasive in some regions; never present planting outdoors as universally safe.",
+        "loss_is_learning": true,
+        "diary_tags": [
+          "ivy",
+          "plant_health",
+          "field_observations"
+        ]
+      },
+      "evidence": {
+        "references": [
+          "https://www.rhs.org.uk/plants/ivy/growing-guide"
+        ],
+        "review_status": "initial_reference_mapping; horticultural details require source-by-source verification",
+        "last_compiled": "2026-11-16"
+      }
+    },
+    {
+      "id": "wisteria",
+      "identity": {
+        "common_name": "Chinese wisteria",
+        "scientific_name": "Wisteria sinensis",
+        "family": "Fabaceae",
+        "cultivar": null,
+        "identification_level": "species_or_hybrid"
+      },
+      "biology": {
+        "life_cycle": "perennial_woody_climber",
+        "propagation": "grafted_or_layered",
+        "flowering_window": "spring",
+        "pollinator_relationships": [
+          "bees"
+        ]
+      },
+      "environment": {
+        "light": "full_sun",
+        "water": "moderate",
+        "drainage": "moist_well_drained",
+        "soil_ph_range": null,
+        "hardiness_zone_range": null,
+        "temperature_c_range": null,
+        "nutrient_demand": null,
+        "shade_tolerance_note": null
+      },
+      "health": {
+        "risk_tags": [
+          "aphids",
+          "scale",
+          "root_rot"
+        ],
+        "diagnosis_rule": "Symptoms alone are not proof of a cause; inspect conditions, pests, signs, season and history before concluding.",
+        "stress_recovery": "Recovery depends on severity, living tissue and environmental correction."
+      },
+      "management": {
+        "guidance": "Woody twining climber requires robust support; seed-grown vines may take many years to flower; seeds/pods are toxic.",
+        "harvest_quantity_model": null,
+        "pruning_calendar": null
+      },
+      "gameplay": {
+        "existing_shop_id": "wisteria",
+        "legacy_growth_stage_days": [
+          0,
+          21,
+          90,
+          365,
+          1825
+        ],
+        "legacy_visual_height_m": 0.75,
+        "legacy_visual_spread_m": 0.65,
+        "legacy_growth_values_are_game_assumptions": true,
+        "real_time_clock": true,
+        "environmental_simulation_status": "not_yet_connected",
+        "production_yield_status": "needs_cultivar_and_calibration"
+      },
+      "louise": {
+        "lesson": "Chinese wisteria can be invasive in parts of the United States, and flowers, pods and seeds are not edible.",
+        "loss_is_learning": true,
+        "diary_tags": [
+          "wisteria",
+          "plant_health",
+          "field_observations"
+        ]
+      },
+      "evidence": {
+        "references": [
+          "https://www.rhs.org.uk/plants/19126/wisteria-sinensis/details",
+          "https://www.rhs.org.uk/plants/wisteria"
+        ],
+        "review_status": "initial_reference_mapping; horticultural details require source-by-source verification",
+        "last_compiled": "2026-11-16"
+      }
+    }
+  ]
+}

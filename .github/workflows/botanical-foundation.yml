@@ -1,0 +1,26 @@
+name: Botanical foundation
+on:
+  pull_request:
+    paths:
+      - 'tools/botanical/**'
+      - 'the-allotment-garden-world-v-02/data/botanical/**'
+      - '.github/workflows/botanical-foundation.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  integrity:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r tools/botanical/requirements-dev.txt
+      - run: python -m unittest tools.botanical.test_foundation -v
+      - run: python -m tools.botanical.foundation build --out .botanical-build/review
+      - run: python -m tools.botanical.workbook --build .botanical-build/review --out .botanical-build/BotanicalReview.xlsx
+      - uses: actions/upload-artifact@v4
+        with:
+          name: botanical-review
+          path: .botanical-build/
