@@ -1,0 +1,31 @@
+Issue type,Normalized name,Record IDs / sources,Disposition
+same_record_id_multiple_sources,,rose-rosa-mundi | 01_scientific_records/roses/recovered_rose_cultivars.json,Source overlap retained; audit
+same_record_id_multiple_sources,,rose-old-blush | 01_scientific_records/roses/recovered_rose_cultivars.json,Source overlap retained; audit
+same_record_id_multiple_sources,,rose-malmaison | 01_scientific_records/roses/recovered_rose_cultivars.json,Source overlap retained; audit
+same_record_id_multiple_sources,,rose-gertrude | 01_scientific_records/roses/recovered_rose_cultivars.json,Source overlap retained; audit
+same_record_id_multiple_sources,,rose-graham | 01_scientific_records/roses/recovered_rose_cultivars.json,Source overlap retained; audit
+same_record_id_multiple_sources,,rose-golden | 01_scientific_records/roses/recovered_rose_cultivars.json,Source overlap retained; audit
+same_record_id_multiple_sources,,rose-charles-de-mills | 01_scientific_records/roses/recovered_rose_cultivars.json,Source overlap retained; audit
+same_record_id_multiple_sources,,rose-celsiana | 01_scientific_records/roses/recovered_rose_cultivars.json,Source overlap retained; audit
+same_record_id_multiple_sources,,rose-fantin-latour | 01_scientific_records/roses/recovered_rose_cultivars.json,Source overlap retained; audit
+same_record_id_multiple_sources,,rose-louise-odier | 01_scientific_records/roses/recovered_rose_cultivars.json,Source overlap retained; audit
+same_record_id_multiple_sources,,rose-mary-rose | 01_scientific_records/roses/recovered_rose_cultivars.json,Source overlap retained; audit
+same_record_id_multiple_sources,,rose-heritage | 01_scientific_records/roses/recovered_rose_cultivars.json,Source overlap retained; audit
+same_record_id_multiple_sources,,rose-munstead-wood | 01_scientific_records/roses/recovered_rose_cultivars.json,Source overlap retained; audit
+same_record_id_multiple_sources,,rose-the-pilgrim | 01_scientific_records/roses/recovered_rose_cultivars.json,Source overlap retained; audit
+same_record_id_multiple_sources,,rose-abraham-darby | 01_scientific_records/roses/recovered_rose_cultivars.json,Source overlap retained; audit
+same_record_id_multiple_sources,,rose-jude-the-obscure | 01_scientific_records/roses/recovered_rose_cultivars.json,Source overlap retained; audit
+same_record_id_multiple_sources,,rose-reine-des-violettes | 01_scientific_records/roses/recovered_rose_cultivars.json,Source overlap retained; audit
+same_record_id_multiple_sources,,rose-lady-of-shalott | 01_scientific_records/roses/recovered_rose_cultivars.json,Source overlap retained; audit
+possible_name_overlap,spearmint,mint | starter_mint_spearmint,Candidate only; no automatic merge
+possible_name_overlap,heritage,rose-heritage | starter_raspberry_heritage,Candidate only; no automatic merge
+possible_name_overlap,chandler,starter_blueberries_chandler | starter_strawberry_chandler | starter_walnuts_chandler,Candidate only; no automatic merge
+possible_name_overlap,patriot,starter_blueberries_patriot | starter_hostas_patriot,Candidate only; no automatic merge
+possible_name_overlap,peppermint,starter_chard_peppermint | starter_mint_peppermint,Candidate only; no automatic merge
+possible_name_overlap,littlegem,starter_lettuces_little_gem | starter_magnolias_little_gem,Candidate only; no automatic merge
+possible_name_overlap,ambrosia,starter_muskmelons_ambrosia | starter_sweet_corn_ambrosia,Candidate only; no automatic merge
+possible_name_overlap,whiteoak,starter_oaks_white_oak | taxon_quercus_alba_white_oak,Candidate only; no automatic merge
+possible_name_overlap,sunflower,starter_pawpaws_sunflower | sunflower,Candidate only; no automatic merge
+possible_name_overlap,watermelon,starter_radishes_watermelon | taxon_citrullus_lanatus_watermelon,Candidate only; no automatic merge
+possible_name_overlap,silverqueen,starter_sweet_corn_silver_queen | starter_thyme_silver_queen,Candidate only; no automatic merge
+possible_name_overlap,commonthyme,starter_thyme_common_thyme | thyme,Candidate only; no automatic merge
