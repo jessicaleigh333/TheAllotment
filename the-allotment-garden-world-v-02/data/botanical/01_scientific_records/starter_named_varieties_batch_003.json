@@ -1,0 +1,1310 @@
+{
+  "schema_version": "1.0",
+  "batch": "starter_named_varieties_003",
+  "created": "2026-11-16",
+  "record_count": 50,
+  "status": "provisional_starter_records_not_field_verified",
+  "notes": "These entries support basic prototype visual and growth archetypes; species placement, exact cultivar identity and cultivar-specific conditions require scientific review. The five listed marigolds and five listed thymes include horticultural types or seed mixes, not all formal named cultivars.",
+  "records": [
+    {
+      "id": "starter_european_pears_moonglow",
+      "category": "european_pears",
+      "common_name": "Moonglow",
+      "scientific_parent": "Pyrus communis",
+      "family": "Rosaceae",
+      "record_rank": "named_cultivar_or_horticultural_type",
+      "growth_habit": "upright spreading tree",
+      "visual_markers": "yellow-green pear with slight blush",
+      "life_cycle": "deciduous perennial fruit tree",
+      "sun": "full sun",
+      "soil_and_water": "fertile well-drained soil; water during establishment",
+      "propagation": "grafted nursery tree",
+      "harvest_or_display_organ": "pome fruit",
+      "cultivar_notes": "pollination compatibility requires matching bloom windows",
+      "evidence": {
+        "url": "https://content.ces.ncsu.edu/extension-gardener-handbook/15-tree-fruit-and-nuts",
+        "scope": "general_source_or_group_reference",
+        "cultivar_field_verification": "pending"
+      },
+      "codex": {
+        "starter_archetype_usable": true,
+        "accurate_cultivar_simulation_ready": false,
+        "limits": "Do not invent numeric phenology, yield, susceptibility, zone or height values"
+      }
+    },
+    {
+      "id": "starter_european_pears_magness",
+      "category": "european_pears",
+      "common_name": "Magness",
+      "scientific_parent": "Pyrus communis",
+      "family": "Rosaceae",
+      "record_rank": "named_cultivar_or_horticultural_type",
+      "growth_habit": "spreading tree",
+      "visual_markers": "greenish-yellow fruit, sometimes russeted",
+      "life_cycle": "deciduous perennial fruit tree",
+      "sun": "full sun",
+      "soil_and_water": "fertile well-drained soil; water during establishment",
+      "propagation": "grafted nursery tree",
+      "harvest_or_display_organ": "pome fruit",
+      "cultivar_notes": "poor pollen donor despite fruit production",
+      "evidence": {
+        "url": "https://content.ces.ncsu.edu/extension-gardener-handbook/15-tree-fruit-and-nuts",
+        "scope": "general_source_or_group_reference",
+        "cultivar_field_verification": "pending"
+      },
+      "codex": {
+        "starter_archetype_usable": true,
+        "accurate_cultivar_simulation_ready": false,
+        "limits": "Do not invent numeric phenology, yield, susceptibility, zone or height values"
+      }
+    },
+    {
+      "id": "starter_european_pears_kieffer",
+      "category": "european_pears",
+      "common_name": "Kieffer",
+      "scientific_parent": "Pyrus communis",
+      "family": "Rosaceae",
+      "record_rank": "named_cultivar_or_horticultural_type",
+      "growth_habit": "vigorous upright tree",
+      "visual_markers": "green-yellow fruit with coarse russeting",
+      "life_cycle": "deciduous perennial fruit tree",
+      "sun": "full sun",
+      "soil_and_water": "fertile well-drained soil; water during establishment",
+      "propagation": "grafted nursery tree",
+      "harvest_or_display_organ": "pome fruit",
+      "cultivar_notes": "often used for cooking or preserving",
+      "evidence": {
+        "url": "https://content.ces.ncsu.edu/extension-gardener-handbook/15-tree-fruit-and-nuts",
+        "scope": "general_source_or_group_reference",
+        "cultivar_field_verification": "pending"
+      },
+      "codex": {
+        "starter_archetype_usable": true,
+        "accurate_cultivar_simulation_ready": false,
+        "limits": "Do not invent numeric phenology, yield, susceptibility, zone or height values"
+      }
+    },
+    {
+      "id": "starter_european_pears_harrow_delight",
+      "category": "european_pears",
+      "common_name": "Harrow Delight",
+      "scientific_parent": "Pyrus communis",
+      "family": "Rosaceae",
+      "record_rank": "named_cultivar_or_horticultural_type",
+      "growth_habit": "upright moderately spreading tree",
+      "visual_markers": "yellow-green fruit with red blush",
+      "life_cycle": "deciduous perennial fruit tree",
+      "sun": "full sun",
+      "soil_and_water": "fertile well-drained soil; water during establishment",
+      "propagation": "grafted nursery tree",
+      "harvest_or_display_organ": "pome fruit",
+      "cultivar_notes": "select pollinizer with overlapping bloom",
+      "evidence": {
+        "url": "https://content.ces.ncsu.edu/extension-gardener-handbook/15-tree-fruit-and-nuts",
+        "scope": "general_source_or_group_reference",
+        "cultivar_field_verification": "pending"
+      },
+      "codex": {
+        "starter_archetype_usable": true,
+        "accurate_cultivar_simulation_ready": false,
+        "limits": "Do not invent numeric phenology, yield, susceptibility, zone or height values"
+      }
+    },
+    {
+      "id": "starter_european_pears_seckel",
+      "category": "european_pears",
+      "common_name": "Seckel",
+      "scientific_parent": "Pyrus communis",
+      "family": "Rosaceae",
+      "record_rank": "named_cultivar_or_horticultural_type",
+      "growth_habit": "compact tree relative to vigorous standards",
+      "visual_markers": "small yellow-brown russeted sweet pears",
+      "life_cycle": "deciduous perennial fruit tree",
+      "sun": "full sun",
+      "soil_and_water": "fertile well-drained soil; water during establishment",
+      "propagation": "grafted nursery tree",
+      "harvest_or_display_organ": "pome fruit",
+      "cultivar_notes": "fruit smaller than many European pears",
+      "evidence": {
+        "url": "https://content.ces.ncsu.edu/extension-gardener-handbook/15-tree-fruit-and-nuts",
+        "scope": "general_source_or_group_reference",
+        "cultivar_field_verification": "pending"
+      },
+      "codex": {
+        "starter_archetype_usable": true,
+        "accurate_cultivar_simulation_ready": false,
+        "limits": "Do not invent numeric phenology, yield, susceptibility, zone or height values"
+      }
+    },
+    {
+      "id": "starter_asian_pears_shinseiki",
+      "category": "asian_pears",
+      "common_name": "Shinseiki",
+      "scientific_parent": "Pyrus pyrifolia",
+      "family": "Rosaceae",
+      "record_rank": "named_cultivar_or_horticultural_type",
+      "growth_habit": "upright spreading tree",
+      "visual_markers": "round pale yellow crisp fruit",
+      "life_cycle": "deciduous perennial fruit tree",
+      "sun": "full sun",
+      "soil_and_water": "well-drained fertile soil; even moisture",
+      "propagation": "grafted nursery tree",
+      "harvest_or_display_organ": "pome fruit",
+      "cultivar_notes": "cross-pollination generally recommended",
+      "evidence": {
+        "url": "https://content.ces.ncsu.edu/extension-gardener-handbook/15-tree-fruit-and-nuts",
+        "scope": "general_source_or_group_reference",
+        "cultivar_field_verification": "pending"
+      },
+      "codex": {
+        "starter_archetype_usable": true,
+        "accurate_cultivar_simulation_ready": false,
+        "limits": "Do not invent numeric phenology, yield, susceptibility, zone or height values"
+      }
+    },
+    {
+      "id": "starter_asian_pears_nijisseiki",
+      "category": "asian_pears",
+      "common_name": "Nijisseiki",
+      "scientific_parent": "Pyrus pyrifolia",
+      "family": "Rosaceae",
+      "record_rank": "named_cultivar_or_horticultural_type",
+      "growth_habit": "spreading tree",
+      "visual_markers": "round yellow-green crisp juicy fruit",
+      "life_cycle": "deciduous perennial fruit tree",
+      "sun": "full sun",
+      "soil_and_water": "well-drained fertile soil; even moisture",
+      "propagation": "grafted nursery tree",
+      "harvest_or_display_organ": "pome fruit",
+      "cultivar_notes": "also called 20th Century",
+      "evidence": {
+        "url": "https://content.ces.ncsu.edu/extension-gardener-handbook/15-tree-fruit-and-nuts",
+        "scope": "general_source_or_group_reference",
+        "cultivar_field_verification": "pending"
+      },
+      "codex": {
+        "starter_archetype_usable": true,
+        "accurate_cultivar_simulation_ready": false,
+        "limits": "Do not invent numeric phenology, yield, susceptibility, zone or height values"
+      }
+    },
+    {
+      "id": "starter_asian_pears_chojuro",
+      "category": "asian_pears",
+      "common_name": "Chojuro",
+      "scientific_parent": "Pyrus pyrifolia",
+      "family": "Rosaceae",
+      "record_rank": "named_cultivar_or_horticultural_type",
+      "growth_habit": "spreading deciduous tree",
+      "visual_markers": "round brown-russeted crisp fruit",
+      "life_cycle": "deciduous perennial fruit tree",
+      "sun": "full sun",
+      "soil_and_water": "well-drained fertile soil; even moisture",
+      "propagation": "grafted nursery tree",
+      "harvest_or_display_organ": "pome fruit",
+      "cultivar_notes": "bronze-brown skin stands out",
+      "evidence": {
+        "url": "https://content.ces.ncsu.edu/extension-gardener-handbook/15-tree-fruit-and-nuts",
+        "scope": "general_source_or_group_reference",
+        "cultivar_field_verification": "pending"
+      },
+      "codex": {
+        "starter_archetype_usable": true,
+        "accurate_cultivar_simulation_ready": false,
+        "limits": "Do not invent numeric phenology, yield, susceptibility, zone or height values"
+      }
+    },
+    {
+      "id": "starter_asian_pears_hosui",
+      "category": "asian_pears",
+      "common_name": "Hosui",
+      "scientific_parent": "Pyrus pyrifolia",
+      "family": "Rosaceae",
+      "record_rank": "named_cultivar_or_horticultural_type",
+      "growth_habit": "spreading deciduous tree",
+      "visual_markers": "large bronze-russeted round fruit",
+      "life_cycle": "deciduous perennial fruit tree",
+      "sun": "full sun",
+      "soil_and_water": "well-drained fertile soil; even moisture",
+      "propagation": "grafted nursery tree",
+      "harvest_or_display_organ": "pome fruit",
+      "cultivar_notes": "needs compatible pollen for reliable fruit",
+      "evidence": {
+        "url": "https://content.ces.ncsu.edu/extension-gardener-handbook/15-tree-fruit-and-nuts",
+        "scope": "general_source_or_group_reference",
+        "cultivar_field_verification": "pending"
+      },
+      "codex": {
+        "starter_archetype_usable": true,
+        "accurate_cultivar_simulation_ready": false,
+        "limits": "Do not invent numeric phenology, yield, susceptibility, zone or height values"
+      }
+    },
+    {
+      "id": "starter_asian_pears_kosui",
+      "category": "asian_pears",
+      "common_name": "Kosui",
+      "scientific_parent": "Pyrus pyrifolia",
+      "family": "Rosaceae",
+      "record_rank": "named_cultivar_or_horticultural_type",
+      "growth_habit": "moderately spreading tree",
+      "visual_markers": "small-to-medium golden russeted round fruit",
+      "life_cycle": "deciduous perennial fruit tree",
+      "sun": "full sun",
+      "soil_and_water": "well-drained fertile soil; even moisture",
+      "propagation": "grafted nursery tree",
+      "harvest_or_display_organ": "pome fruit",
+      "cultivar_notes": "Asian pear texture distinct from European pear",
+      "evidence": {
+        "url": "https://content.ces.ncsu.edu/extension-gardener-handbook/15-tree-fruit-and-nuts",
+        "scope": "general_source_or_group_reference",
+        "cultivar_field_verification": "pending"
+      },
+      "codex": {
+        "starter_archetype_usable": true,
+        "accurate_cultivar_simulation_ready": false,
+        "limits": "Do not invent numeric phenology, yield, susceptibility, zone or height values"
+      }
+    },
+    {
+      "id": "starter_japanese_plums_methley",
+      "category": "japanese_plums",
+      "common_name": "Methley",
+      "scientific_parent": "Prunus salicina cultivar complex",
+      "family": "Rosaceae",
+      "record_rank": "named_cultivar_or_horticultural_type",
+      "growth_habit": "small spreading tree",
+      "visual_markers": "small rounded purple-red fruit with red flesh",
+      "life_cycle": "deciduous perennial fruit tree",
+      "sun": "full sun",
+      "soil_and_water": "draining fertile soil; water during establishment",
+      "propagation": "grafted nursery tree",
+      "harvest_or_display_organ": "stone fruit",
+      "cultivar_notes": "often partly self-fruitful; early flowering",
+      "evidence": {
+        "url": "https://content.ces.ncsu.edu/extension-gardener-handbook/15-tree-fruit-and-nuts",
+        "scope": "general_source_or_group_reference",
+        "cultivar_field_verification": "pending"
+      },
+      "codex": {
+        "starter_archetype_usable": true,
+        "accurate_cultivar_simulation_ready": false,
+        "limits": "Do not invent numeric phenology, yield, susceptibility, zone or height values"
+      }
+    },
+    {
+      "id": "starter_japanese_plums_burbank",
+      "category": "japanese_plums",
+      "common_name": "Burbank",
+      "scientific_parent": "Prunus salicina cultivar complex",
+      "family": "Rosaceae",
+      "record_rank": "named_cultivar_or_horticultural_type",
+      "growth_habit": "rounded spreading tree",
+      "visual_markers": "red-over-yellow medium fruit",
+      "life_cycle": "deciduous perennial fruit tree",
+      "sun": "full sun",
+      "soil_and_water": "draining fertile soil; water during establishment",
+      "propagation": "grafted nursery tree",
+      "harvest_or_display_organ": "stone fruit",
+      "cultivar_notes": "pollination needs depend on partner and site",
+      "evidence": {
+        "url": "https://content.ces.ncsu.edu/extension-gardener-handbook/15-tree-fruit-and-nuts",
+        "scope": "general_source_or_group_reference",
+        "cultivar_field_verification": "pending"
+      },
+      "codex": {
+        "starter_archetype_usable": true,
+        "accurate_cultivar_simulation_ready": false,
+        "limits": "Do not invent numeric phenology, yield, susceptibility, zone or height values"
+      }
+    },
+    {
+      "id": "starter_japanese_plums_ozark_premier",
+      "category": "japanese_plums",
+      "common_name": "Ozark Premier",
+      "scientific_parent": "Prunus salicina cultivar complex",
+      "family": "Rosaceae",
+      "record_rank": "named_cultivar_or_horticultural_type",
+      "growth_habit": "spreading tree",
+      "visual_markers": "large red-skinned yellow-fleshed fruit",
+      "life_cycle": "deciduous perennial fruit tree",
+      "sun": "full sun",
+      "soil_and_water": "draining fertile soil; water during establishment",
+      "propagation": "grafted nursery tree",
+      "harvest_or_display_organ": "stone fruit",
+      "cultivar_notes": "hybrid ancestry; provisional species placement",
+      "evidence": {
+        "url": "https://content.ces.ncsu.edu/extension-gardener-handbook/15-tree-fruit-and-nuts",
+        "scope": "general_source_or_group_reference",
+        "cultivar_field_verification": "pending"
+      },
+      "codex": {
+        "starter_archetype_usable": true,
+        "accurate_cultivar_simulation_ready": false,
+        "limits": "Do not invent numeric phenology, yield, susceptibility, zone or height values"
+      }
+    },
+    {
+      "id": "starter_japanese_plums_santa_rosa",
+      "category": "japanese_plums",
+      "common_name": "Santa Rosa",
+      "scientific_parent": "Prunus salicina cultivar complex",
+      "family": "Rosaceae",
+      "record_rank": "named_cultivar_or_horticultural_type",
+      "growth_habit": "upright spreading tree",
+      "visual_markers": "reddish-purple skin with yellow flesh",
+      "life_cycle": "deciduous perennial fruit tree",
+      "sun": "full sun",
+      "soil_and_water": "draining fertile soil; water during establishment",
+      "propagation": "grafted nursery tree",
+      "harvest_or_display_organ": "stone fruit",
+      "cultivar_notes": "Japanese-type plum with complex ancestry",
+      "evidence": {
+        "url": "https://content.ces.ncsu.edu/extension-gardener-handbook/15-tree-fruit-and-nuts",
+        "scope": "general_source_or_group_reference",
+        "cultivar_field_verification": "pending"
+      },
+      "codex": {
+        "starter_archetype_usable": true,
+        "accurate_cultivar_simulation_ready": false,
+        "limits": "Do not invent numeric phenology, yield, susceptibility, zone or height values"
+      }
+    },
+    {
+      "id": "starter_japanese_plums_shiro",
+      "category": "japanese_plums",
+      "common_name": "Shiro",
+      "scientific_parent": "Prunus salicina cultivar complex",
+      "family": "Rosaceae",
+      "record_rank": "named_cultivar_or_horticultural_type",
+      "growth_habit": "upright spreading tree",
+      "visual_markers": "round yellow fruit",
+      "life_cycle": "deciduous perennial fruit tree",
+      "sun": "full sun",
+      "soil_and_water": "draining fertile soil; water during establishment",
+      "propagation": "grafted nursery tree",
+      "harvest_or_display_organ": "stone fruit",
+      "cultivar_notes": "Japanese-type plum selection",
+      "evidence": {
+        "url": "https://content.ces.ncsu.edu/extension-gardener-handbook/15-tree-fruit-and-nuts",
+        "scope": "general_source_or_group_reference",
+        "cultivar_field_verification": "pending"
+      },
+      "codex": {
+        "starter_archetype_usable": true,
+        "accurate_cultivar_simulation_ready": false,
+        "limits": "Do not invent numeric phenology, yield, susceptibility, zone or height values"
+      }
+    },
+    {
+      "id": "starter_european_plums_stanley",
+      "category": "european_plums",
+      "common_name": "Stanley",
+      "scientific_parent": "Prunus domestica",
+      "family": "Rosaceae",
+      "record_rank": "named_cultivar_or_horticultural_type",
+      "growth_habit": "upright spreading tree",
+      "visual_markers": "oval deep-purple prune-type fruit",
+      "life_cycle": "deciduous perennial fruit tree",
+      "sun": "full sun",
+      "soil_and_water": "draining fertile soil; moderate moisture",
+      "propagation": "grafted nursery tree",
+      "harvest_or_display_organ": "stone fruit",
+      "cultivar_notes": "freestone prune-plum type",
+      "evidence": {
+        "url": "https://content.ces.ncsu.edu/extension-gardener-handbook/15-tree-fruit-and-nuts",
+        "scope": "general_source_or_group_reference",
+        "cultivar_field_verification": "pending"
+      },
+      "codex": {
+        "starter_archetype_usable": true,
+        "accurate_cultivar_simulation_ready": false,
+        "limits": "Do not invent numeric phenology, yield, susceptibility, zone or height values"
+      }
+    },
+    {
+      "id": "starter_european_plums_bluefre",
+      "category": "european_plums",
+      "common_name": "Bluefre",
+      "scientific_parent": "Prunus domestica",
+      "family": "Rosaceae",
+      "record_rank": "named_cultivar_or_horticultural_type",
+      "growth_habit": "spreading tree",
+      "visual_markers": "large dark-blue-purple oval fruit",
+      "life_cycle": "deciduous perennial fruit tree",
+      "sun": "full sun",
+      "soil_and_water": "draining fertile soil; moderate moisture",
+      "propagation": "grafted nursery tree",
+      "harvest_or_display_organ": "stone fruit",
+      "cultivar_notes": "European plum type",
+      "evidence": {
+        "url": "https://content.ces.ncsu.edu/extension-gardener-handbook/15-tree-fruit-and-nuts",
+        "scope": "general_source_or_group_reference",
+        "cultivar_field_verification": "pending"
+      },
+      "codex": {
+        "starter_archetype_usable": true,
+        "accurate_cultivar_simulation_ready": false,
+        "limits": "Do not invent numeric phenology, yield, susceptibility, zone or height values"
+      }
+    },
+    {
+      "id": "starter_european_plums_shropshire_damson",
+      "category": "european_plums",
+      "common_name": "Shropshire Damson",
+      "scientific_parent": "Prunus domestica",
+      "family": "Rosaceae",
+      "record_rank": "named_cultivar_or_horticultural_type",
+      "growth_habit": "compact spreading tree",
+      "visual_markers": "small dark blue-black oval fruit",
+      "life_cycle": "deciduous perennial fruit tree",
+      "sun": "full sun",
+      "soil_and_water": "draining fertile soil; moderate moisture",
+      "propagation": "grafted nursery tree",
+      "harvest_or_display_organ": "stone fruit",
+      "cultivar_notes": "damson group; tart fruit",
+      "evidence": {
+        "url": "https://content.ces.ncsu.edu/extension-gardener-handbook/15-tree-fruit-and-nuts",
+        "scope": "general_source_or_group_reference",
+        "cultivar_field_verification": "pending"
+      },
+      "codex": {
+        "starter_archetype_usable": true,
+        "accurate_cultivar_simulation_ready": false,
+        "limits": "Do not invent numeric phenology, yield, susceptibility, zone or height values"
+      }
+    },
+    {
+      "id": "starter_european_plums_italian_prune",
+      "category": "european_plums",
+      "common_name": "Italian Prune",
+      "scientific_parent": "Prunus domestica",
+      "family": "Rosaceae",
+      "record_rank": "named_cultivar_or_horticultural_type",
+      "growth_habit": "upright tree",
+      "visual_markers": "oval purple-blue prune-type fruit",
+      "life_cycle": "deciduous perennial fruit tree",
+      "sun": "full sun",
+      "soil_and_water": "draining fertile soil; moderate moisture",
+      "propagation": "grafted nursery tree",
+      "harvest_or_display_organ": "stone fruit",
+      "cultivar_notes": "cultivar nomenclature needs confirmation",
+      "evidence": {
+        "url": "https://content.ces.ncsu.edu/extension-gardener-handbook/15-tree-fruit-and-nuts",
+        "scope": "general_source_or_group_reference",
+        "cultivar_field_verification": "pending"
+      },
+      "codex": {
+        "starter_archetype_usable": true,
+        "accurate_cultivar_simulation_ready": false,
+        "limits": "Do not invent numeric phenology, yield, susceptibility, zone or height values"
+      }
+    },
+    {
+      "id": "starter_european_plums_green_gage",
+      "category": "european_plums",
+      "common_name": "Green Gage",
+      "scientific_parent": "Prunus domestica",
+      "family": "Rosaceae",
+      "record_rank": "named_cultivar_or_horticultural_type",
+      "growth_habit": "spreading tree",
+      "visual_markers": "round green to yellow-green sweet fruit",
+      "life_cycle": "deciduous perennial fruit tree",
+      "sun": "full sun",
+      "soil_and_water": "draining fertile soil; moderate moisture",
+      "propagation": "grafted nursery tree",
+      "harvest_or_display_organ": "stone fruit",
+      "cultivar_notes": "historic greengage group; specific clone identity variable",
+      "evidence": {
+        "url": "https://content.ces.ncsu.edu/extension-gardener-handbook/15-tree-fruit-and-nuts",
+        "scope": "general_source_or_group_reference",
+        "cultivar_field_verification": "pending"
+      },
+      "codex": {
+        "starter_archetype_usable": true,
+        "accurate_cultivar_simulation_ready": false,
+        "limits": "Do not invent numeric phenology, yield, susceptibility, zone or height values"
+      }
+    },
+    {
+      "id": "starter_muscadines_carlos",
+      "category": "muscadines",
+      "common_name": "Carlos",
+      "scientific_parent": "Muscadinia rotundifolia (syn. Vitis rotundifolia)",
+      "family": "Vitaceae",
+      "record_rank": "named_cultivar_or_horticultural_type",
+      "growth_habit": "vigorous climbing vine",
+      "visual_markers": "clusters of bronze round muscadine berries",
+      "life_cycle": "deciduous woody perennial climbing vine",
+      "sun": "full sun",
+      "soil_and_water": "well drained; no standing water",
+      "propagation": "rooted cutting or nursery vine",
+      "harvest_or_display_organ": "berry",
+      "cultivar_notes": "self-fertile; processing type",
+      "evidence": {
+        "url": "https://content.ces.ncsu.edu/muscadine-grapes-in-the-home-garden",
+        "scope": "general_source_or_group_reference",
+        "cultivar_field_verification": "pending"
+      },
+      "codex": {
+        "starter_archetype_usable": true,
+        "accurate_cultivar_simulation_ready": false,
+        "limits": "Do not invent numeric phenology, yield, susceptibility, zone or height values"
+      }
+    },
+    {
+      "id": "starter_muscadines_noble",
+      "category": "muscadines",
+      "common_name": "Noble",
+      "scientific_parent": "Muscadinia rotundifolia (syn. Vitis rotundifolia)",
+      "family": "Vitaceae",
+      "record_rank": "named_cultivar_or_horticultural_type",
+      "growth_habit": "vigorous climbing vine",
+      "visual_markers": "clusters of small dark-purple berries",
+      "life_cycle": "deciduous woody perennial climbing vine",
+      "sun": "full sun",
+      "soil_and_water": "well drained; no standing water",
+      "propagation": "rooted cutting or nursery vine",
+      "harvest_or_display_organ": "berry",
+      "cultivar_notes": "self-fertile; processing type",
+      "evidence": {
+        "url": "https://content.ces.ncsu.edu/muscadine-grapes-in-the-home-garden",
+        "scope": "general_source_or_group_reference",
+        "cultivar_field_verification": "pending"
+      },
+      "codex": {
+        "starter_archetype_usable": true,
+        "accurate_cultivar_simulation_ready": false,
+        "limits": "Do not invent numeric phenology, yield, susceptibility, zone or height values"
+      }
+    },
+    {
+      "id": "starter_muscadines_magnolia",
+      "category": "muscadines",
+      "common_name": "Magnolia",
+      "scientific_parent": "Muscadinia rotundifolia (syn. Vitis rotundifolia)",
+      "family": "Vitaceae",
+      "record_rank": "named_cultivar_or_horticultural_type",
+      "growth_habit": "vigorous climbing vine",
+      "visual_markers": "bronze berries with waxy surface",
+      "life_cycle": "deciduous woody perennial climbing vine",
+      "sun": "full sun",
+      "soil_and_water": "well drained; no standing water",
+      "propagation": "rooted cutting or nursery vine",
+      "harvest_or_display_organ": "berry",
+      "cultivar_notes": "self-fertile; moderately cold-tolerant for muscadine",
+      "evidence": {
+        "url": "https://content.ces.ncsu.edu/muscadine-grapes-in-the-home-garden",
+        "scope": "general_source_or_group_reference",
+        "cultivar_field_verification": "pending"
+      },
+      "codex": {
+        "starter_archetype_usable": true,
+        "accurate_cultivar_simulation_ready": false,
+        "limits": "Do not invent numeric phenology, yield, susceptibility, zone or height values"
+      }
+    },
+    {
+      "id": "starter_muscadines_nesbitt",
+      "category": "muscadines",
+      "common_name": "Nesbitt",
+      "scientific_parent": "Muscadinia rotundifolia (syn. Vitis rotundifolia)",
+      "family": "Vitaceae",
+      "record_rank": "named_cultivar_or_horticultural_type",
+      "growth_habit": "vigorous climbing vine",
+      "visual_markers": "medium-to-large dark fruit",
+      "life_cycle": "deciduous woody perennial climbing vine",
+      "sun": "full sun",
+      "soil_and_water": "well drained; no standing water",
+      "propagation": "rooted cutting or nursery vine",
+      "harvest_or_display_organ": "berry",
+      "cultivar_notes": "self-fertile fresh-market selection",
+      "evidence": {
+        "url": "https://content.ces.ncsu.edu/muscadine-grapes-in-the-home-garden",
+        "scope": "general_source_or_group_reference",
+        "cultivar_field_verification": "pending"
+      },
+      "codex": {
+        "starter_archetype_usable": true,
+        "accurate_cultivar_simulation_ready": false,
+        "limits": "Do not invent numeric phenology, yield, susceptibility, zone or height values"
+      }
+    },
+    {
+      "id": "starter_muscadines_scuppernong",
+      "category": "muscadines",
+      "common_name": "Scuppernong",
+      "scientific_parent": "Muscadinia rotundifolia (syn. Vitis rotundifolia)",
+      "family": "Vitaceae",
+      "record_rank": "named_cultivar_or_horticultural_type",
+      "growth_habit": "vigorous climbing vine",
+      "visual_markers": "bronze berries",
+      "life_cycle": "deciduous woody perennial climbing vine",
+      "sun": "full sun",
+      "soil_and_water": "well drained; no standing water",
+      "propagation": "rooted cutting or nursery vine",
+      "harvest_or_display_organ": "berry",
+      "cultivar_notes": "female flowering; needs perfect-flowered pollinizer",
+      "evidence": {
+        "url": "https://content.ces.ncsu.edu/muscadine-grapes-in-the-home-garden",
+        "scope": "general_source_or_group_reference",
+        "cultivar_field_verification": "pending"
+      },
+      "codex": {
+        "starter_archetype_usable": true,
+        "accurate_cultivar_simulation_ready": false,
+        "limits": "Do not invent numeric phenology, yield, susceptibility, zone or height values"
+      }
+    },
+    {
+      "id": "starter_bunch_grapes_concord",
+      "category": "bunch_grapes",
+      "common_name": "Concord",
+      "scientific_parent": "Vitis spp. cultivated bunch grape complex",
+      "family": "Vitaceae",
+      "record_rank": "named_cultivar_or_horticultural_type",
+      "growth_habit": "vigorous climbing vine",
+      "visual_markers": "blue-black round berries in tight bunches",
+      "life_cycle": "deciduous woody perennial climbing vine",
+      "sun": "full sun",
+      "soil_and_water": "deep well-drained soil; water to establish",
+      "propagation": "dormant rooted cuttings or grafted vine",
+      "harvest_or_display_organ": "berry",
+      "cultivar_notes": "American labrusca-type hybrid; seeded",
+      "evidence": {
+        "url": "https://content.ces.ncsu.edu/north-carolina-winegrape-growers-guide/chapter-3-choice-of-varieties",
+        "scope": "general_source_or_group_reference",
+        "cultivar_field_verification": "pending"
+      },
+      "codex": {
+        "starter_archetype_usable": true,
+        "accurate_cultivar_simulation_ready": false,
+        "limits": "Do not invent numeric phenology, yield, susceptibility, zone or height values"
+      }
+    },
+    {
+      "id": "starter_bunch_grapes_niagara",
+      "category": "bunch_grapes",
+      "common_name": "Niagara",
+      "scientific_parent": "Vitis spp. cultivated bunch grape complex",
+      "family": "Vitaceae",
+      "record_rank": "named_cultivar_or_horticultural_type",
+      "growth_habit": "vigorous climbing vine",
+      "visual_markers": "green-gold berries in hanging bunches",
+      "life_cycle": "deciduous woody perennial climbing vine",
+      "sun": "full sun",
+      "soil_and_water": "deep well-drained soil; water to establish",
+      "propagation": "dormant rooted cuttings or grafted vine",
+      "harvest_or_display_organ": "berry",
+      "cultivar_notes": "American labrusca-type grape; seeded",
+      "evidence": {
+        "url": "https://content.ces.ncsu.edu/north-carolina-winegrape-growers-guide/chapter-3-choice-of-varieties",
+        "scope": "general_source_or_group_reference",
+        "cultivar_field_verification": "pending"
+      },
+      "codex": {
+        "starter_archetype_usable": true,
+        "accurate_cultivar_simulation_ready": false,
+        "limits": "Do not invent numeric phenology, yield, susceptibility, zone or height values"
+      }
+    },
+    {
+      "id": "starter_bunch_grapes_catawba",
+      "category": "bunch_grapes",
+      "common_name": "Catawba",
+      "scientific_parent": "Vitis spp. cultivated bunch grape complex",
+      "family": "Vitaceae",
+      "record_rank": "named_cultivar_or_horticultural_type",
+      "growth_habit": "vigorous climbing vine",
+      "visual_markers": "pinkish-red to copper clusters",
+      "life_cycle": "deciduous woody perennial climbing vine",
+      "sun": "full sun",
+      "soil_and_water": "deep well-drained soil; water to establish",
+      "propagation": "dormant rooted cuttings or grafted vine",
+      "harvest_or_display_organ": "berry",
+      "cultivar_notes": "American hybrid type; seeded",
+      "evidence": {
+        "url": "https://content.ces.ncsu.edu/north-carolina-winegrape-growers-guide/chapter-3-choice-of-varieties",
+        "scope": "general_source_or_group_reference",
+        "cultivar_field_verification": "pending"
+      },
+      "codex": {
+        "starter_archetype_usable": true,
+        "accurate_cultivar_simulation_ready": false,
+        "limits": "Do not invent numeric phenology, yield, susceptibility, zone or height values"
+      }
+    },
+    {
+      "id": "starter_bunch_grapes_chambourcin",
+      "category": "bunch_grapes",
+      "common_name": "Chambourcin",
+      "scientific_parent": "Vitis spp. cultivated bunch grape complex",
+      "family": "Vitaceae",
+      "record_rank": "named_cultivar_or_horticultural_type",
+      "growth_habit": "climbing woody vine",
+      "visual_markers": "small dark blue-black wine-grape bunches",
+      "life_cycle": "deciduous woody perennial climbing vine",
+      "sun": "full sun",
+      "soil_and_water": "deep well-drained soil; water to establish",
+      "propagation": "dormant rooted cuttings or grafted vine",
+      "harvest_or_display_organ": "berry",
+      "cultivar_notes": "complex French-American hybrid",
+      "evidence": {
+        "url": "https://content.ces.ncsu.edu/north-carolina-winegrape-growers-guide/chapter-3-choice-of-varieties",
+        "scope": "general_source_or_group_reference",
+        "cultivar_field_verification": "pending"
+      },
+      "codex": {
+        "starter_archetype_usable": true,
+        "accurate_cultivar_simulation_ready": false,
+        "limits": "Do not invent numeric phenology, yield, susceptibility, zone or height values"
+      }
+    },
+    {
+      "id": "starter_bunch_grapes_norton",
+      "category": "bunch_grapes",
+      "common_name": "Norton",
+      "scientific_parent": "Vitis spp. cultivated bunch grape complex",
+      "family": "Vitaceae",
+      "record_rank": "named_cultivar_or_horticultural_type",
+      "growth_habit": "vigorous climbing vine",
+      "visual_markers": "small dark-purple clusters",
+      "life_cycle": "deciduous woody perennial climbing vine",
+      "sun": "full sun",
+      "soil_and_water": "deep well-drained soil; water to establish",
+      "propagation": "dormant rooted cuttings or grafted vine",
+      "harvest_or_display_organ": "berry",
+      "cultivar_notes": "American grape; Vitis aestivalis-derived",
+      "evidence": {
+        "url": "https://content.ces.ncsu.edu/north-carolina-winegrape-growers-guide/chapter-3-choice-of-varieties",
+        "scope": "general_source_or_group_reference",
+        "cultivar_field_verification": "pending"
+      },
+      "codex": {
+        "starter_archetype_usable": true,
+        "accurate_cultivar_simulation_ready": false,
+        "limits": "Do not invent numeric phenology, yield, susceptibility, zone or height values"
+      }
+    },
+    {
+      "id": "starter_rosemary_arp",
+      "category": "rosemary",
+      "common_name": "Arp",
+      "scientific_parent": "Salvia rosmarinus",
+      "family": "Lamiaceae",
+      "record_rank": "named_cultivar_or_horticultural_type",
+      "growth_habit": "upright woody shrub",
+      "visual_markers": "needle-like gray-green leaves and pale-blue blooms",
+      "life_cycle": "evergreen woody aromatic perennial shrub",
+      "sun": "full sun",
+      "soil_and_water": "very good drainage; avoid persistently wet soil",
+      "propagation": "cuttings or nursery plant",
+      "harvest_or_display_organ": "aromatic leaves and flowers",
+      "cultivar_notes": "known for relatively good cold tolerance",
+      "evidence": {
+        "url": "https://plants.ces.ncsu.edu/plants/salvia-rosmarinus/",
+        "scope": "general_source_or_group_reference",
+        "cultivar_field_verification": "pending"
+      },
+      "codex": {
+        "starter_archetype_usable": true,
+        "accurate_cultivar_simulation_ready": false,
+        "limits": "Do not invent numeric phenology, yield, susceptibility, zone or height values"
+      }
+    },
+    {
+      "id": "starter_rosemary_tuscan_blue",
+      "category": "rosemary",
+      "common_name": "Tuscan Blue",
+      "scientific_parent": "Salvia rosmarinus",
+      "family": "Lamiaceae",
+      "record_rank": "named_cultivar_or_horticultural_type",
+      "growth_habit": "upright tall woody shrub",
+      "visual_markers": "narrow strongly aromatic leaves and deep-blue flowers",
+      "life_cycle": "evergreen woody aromatic perennial shrub",
+      "sun": "full sun",
+      "soil_and_water": "very good drainage; avoid persistently wet soil",
+      "propagation": "cuttings or nursery plant",
+      "harvest_or_display_organ": "aromatic leaves and flowers",
+      "cultivar_notes": "upright ornamental culinary type",
+      "evidence": {
+        "url": "https://plants.ces.ncsu.edu/plants/salvia-rosmarinus/",
+        "scope": "general_source_or_group_reference",
+        "cultivar_field_verification": "pending"
+      },
+      "codex": {
+        "starter_archetype_usable": true,
+        "accurate_cultivar_simulation_ready": false,
+        "limits": "Do not invent numeric phenology, yield, susceptibility, zone or height values"
+      }
+    },
+    {
+      "id": "starter_rosemary_prostratus",
+      "category": "rosemary",
+      "common_name": "Prostratus",
+      "scientific_parent": "Salvia rosmarinus",
+      "family": "Lamiaceae",
+      "record_rank": "named_cultivar_or_horticultural_type",
+      "growth_habit": "trailing woody shrub",
+      "visual_markers": "cascading arching branches and blue flowers",
+      "life_cycle": "evergreen woody aromatic perennial shrub",
+      "sun": "full sun",
+      "soil_and_water": "very good drainage; avoid persistently wet soil",
+      "propagation": "cuttings or nursery plant",
+      "harvest_or_display_organ": "aromatic leaves and flowers",
+      "cultivar_notes": "trailing rosemary type; naming may represent group",
+      "evidence": {
+        "url": "https://plants.ces.ncsu.edu/plants/salvia-rosmarinus/",
+        "scope": "general_source_or_group_reference",
+        "cultivar_field_verification": "pending"
+      },
+      "codex": {
+        "starter_archetype_usable": true,
+        "accurate_cultivar_simulation_ready": false,
+        "limits": "Do not invent numeric phenology, yield, susceptibility, zone or height values"
+      }
+    },
+    {
+      "id": "starter_rosemary_miss_jessopp_s_upright",
+      "category": "rosemary",
+      "common_name": "Miss Jessopp's Upright",
+      "scientific_parent": "Salvia rosmarinus",
+      "family": "Lamiaceae",
+      "record_rank": "named_cultivar_or_horticultural_type",
+      "growth_habit": "strongly upright shrub",
+      "visual_markers": "vertical gray-green aromatic branches and blue blooms",
+      "life_cycle": "evergreen woody aromatic perennial shrub",
+      "sun": "full sun",
+      "soil_and_water": "very good drainage; avoid persistently wet soil",
+      "propagation": "cuttings or nursery plant",
+      "harvest_or_display_organ": "aromatic leaves and flowers",
+      "cultivar_notes": "columnar habit",
+      "evidence": {
+        "url": "https://plants.ces.ncsu.edu/plants/salvia-rosmarinus/",
+        "scope": "general_source_or_group_reference",
+        "cultivar_field_verification": "pending"
+      },
+      "codex": {
+        "starter_archetype_usable": true,
+        "accurate_cultivar_simulation_ready": false,
+        "limits": "Do not invent numeric phenology, yield, susceptibility, zone or height values"
+      }
+    },
+    {
+      "id": "starter_rosemary_blue_spires",
+      "category": "rosemary",
+      "common_name": "Blue Spires",
+      "scientific_parent": "Salvia rosmarinus",
+      "family": "Lamiaceae",
+      "record_rank": "named_cultivar_or_horticultural_type",
+      "growth_habit": "upright woody shrub",
+      "visual_markers": "slender foliage and violet-blue flowers",
+      "life_cycle": "evergreen woody aromatic perennial shrub",
+      "sun": "full sun",
+      "soil_and_water": "very good drainage; avoid persistently wet soil",
+      "propagation": "cuttings or nursery plant",
+      "harvest_or_display_organ": "aromatic leaves and flowers",
+      "cultivar_notes": "cultivar identity requires nursery-source audit",
+      "evidence": {
+        "url": "https://plants.ces.ncsu.edu/plants/salvia-rosmarinus/",
+        "scope": "general_source_or_group_reference",
+        "cultivar_field_verification": "pending"
+      },
+      "codex": {
+        "starter_archetype_usable": true,
+        "accurate_cultivar_simulation_ready": false,
+        "limits": "Do not invent numeric phenology, yield, susceptibility, zone or height values"
+      }
+    },
+    {
+      "id": "starter_thyme_common_thyme",
+      "category": "thyme",
+      "common_name": "Common Thyme",
+      "scientific_parent": "Thymus vulgaris",
+      "family": "Lamiaceae",
+      "record_rank": "named_cultivar_or_horticultural_type",
+      "growth_habit": "mounded low woody subshrub",
+      "visual_markers": "tiny gray-green aromatic leaves, pale flowers",
+      "life_cycle": "evergreen or semi-evergreen aromatic perennial subshrub",
+      "sun": "full sun",
+      "soil_and_water": "free-draining low-to-moderate fertility soil",
+      "propagation": "cuttings, divisions or nursery plant",
+      "harvest_or_display_organ": "aromatic leaves and flowers",
+      "cultivar_notes": "Thymus vulgaris culinary type",
+      "evidence": {
+        "url": "https://plants.ces.ncsu.edu/plants/thymus-vulgaris/",
+        "scope": "general_source_or_group_reference",
+        "cultivar_field_verification": "pending"
+      },
+      "codex": {
+        "starter_archetype_usable": true,
+        "accurate_cultivar_simulation_ready": false,
+        "limits": "Do not invent numeric phenology, yield, susceptibility, zone or height values"
+      }
+    },
+    {
+      "id": "starter_thyme_lemon_thyme",
+      "category": "thyme",
+      "common_name": "Lemon Thyme",
+      "scientific_parent": "Thymus × citriodorus",
+      "family": "Lamiaceae",
+      "record_rank": "named_cultivar_or_horticultural_type",
+      "growth_habit": "low bushy subshrub",
+      "visual_markers": "small lemon-scented green leaves",
+      "life_cycle": "evergreen or semi-evergreen aromatic perennial subshrub",
+      "sun": "full sun",
+      "soil_and_water": "free-draining low-to-moderate fertility soil",
+      "propagation": "cuttings, divisions or nursery plant",
+      "harvest_or_display_organ": "aromatic leaves and flowers",
+      "cultivar_notes": "Thymus × citriodorus hybrid",
+      "evidence": {
+        "url": "https://plants.ces.ncsu.edu/plants/thymus-vulgaris/",
+        "scope": "general_source_or_group_reference",
+        "cultivar_field_verification": "pending"
+      },
+      "codex": {
+        "starter_archetype_usable": true,
+        "accurate_cultivar_simulation_ready": false,
+        "limits": "Do not invent numeric phenology, yield, susceptibility, zone or height values"
+      }
+    },
+    {
+      "id": "starter_thyme_silver_queen",
+      "category": "thyme",
+      "common_name": "Silver Queen",
+      "scientific_parent": "Thymus × citriodorus",
+      "family": "Lamiaceae",
+      "record_rank": "named_cultivar_or_horticultural_type",
+      "growth_habit": "low bushy subshrub",
+      "visual_markers": "variegated white-edged small green leaves",
+      "life_cycle": "evergreen or semi-evergreen aromatic perennial subshrub",
+      "sun": "full sun",
+      "soil_and_water": "free-draining low-to-moderate fertility soil",
+      "propagation": "cuttings, divisions or nursery plant",
+      "harvest_or_display_organ": "aromatic leaves and flowers",
+      "cultivar_notes": "variegated lemon thyme",
+      "evidence": {
+        "url": "https://plants.ces.ncsu.edu/plants/thymus-vulgaris/",
+        "scope": "general_source_or_group_reference",
+        "cultivar_field_verification": "pending"
+      },
+      "codex": {
+        "starter_archetype_usable": true,
+        "accurate_cultivar_simulation_ready": false,
+        "limits": "Do not invent numeric phenology, yield, susceptibility, zone or height values"
+      }
+    },
+    {
+      "id": "starter_thyme_creeping_thyme",
+      "category": "thyme",
+      "common_name": "Creeping Thyme",
+      "scientific_parent": "Thymus serpyllum",
+      "family": "Lamiaceae",
+      "record_rank": "named_cultivar_or_horticultural_type",
+      "growth_habit": "low spreading mat",
+      "visual_markers": "tiny leaves and pink-purple flowers",
+      "life_cycle": "evergreen or semi-evergreen aromatic perennial subshrub",
+      "sun": "full sun",
+      "soil_and_water": "free-draining low-to-moderate fertility soil",
+      "propagation": "cuttings, divisions or nursery plant",
+      "harvest_or_display_organ": "aromatic leaves and flowers",
+      "cultivar_notes": "groundcover type, cultivar unspecified",
+      "evidence": {
+        "url": "https://plants.ces.ncsu.edu/plants/thymus-vulgaris/",
+        "scope": "general_source_or_group_reference",
+        "cultivar_field_verification": "pending"
+      },
+      "codex": {
+        "starter_archetype_usable": true,
+        "accurate_cultivar_simulation_ready": false,
+        "limits": "Do not invent numeric phenology, yield, susceptibility, zone or height values"
+      }
+    },
+    {
+      "id": "starter_thyme_woolly_thyme",
+      "category": "thyme",
+      "common_name": "Woolly Thyme",
+      "scientific_parent": "Thymus pseudolanuginosus",
+      "family": "Lamiaceae",
+      "record_rank": "named_cultivar_or_horticultural_type",
+      "growth_habit": "very low dense mat",
+      "visual_markers": "soft fuzzy silvery foliage",
+      "life_cycle": "evergreen or semi-evergreen aromatic perennial subshrub",
+      "sun": "full sun",
+      "soil_and_water": "free-draining low-to-moderate fertility soil",
+      "propagation": "cuttings, divisions or nursery plant",
+      "harvest_or_display_organ": "aromatic leaves and flowers",
+      "cultivar_notes": "ornamental groundcover",
+      "evidence": {
+        "url": "https://plants.ces.ncsu.edu/plants/thymus-vulgaris/",
+        "scope": "general_source_or_group_reference",
+        "cultivar_field_verification": "pending"
+      },
+      "codex": {
+        "starter_archetype_usable": true,
+        "accurate_cultivar_simulation_ready": false,
+        "limits": "Do not invent numeric phenology, yield, susceptibility, zone or height values"
+      }
+    },
+    {
+      "id": "starter_marigolds_bonanza_orange",
+      "category": "marigolds",
+      "common_name": "Bonanza Orange",
+      "scientific_parent": "Tagetes patula",
+      "family": "Asteraceae",
+      "record_rank": "named_cultivar_or_horticultural_type",
+      "growth_habit": "compact bushy annual",
+      "visual_markers": "frilled double orange flower heads",
+      "life_cycle": "warm-season annual",
+      "sun": "full sun",
+      "soil_and_water": "well-drained soil; moderate moisture",
+      "propagation": "seed/transplant",
+      "harvest_or_display_organ": "flower heads",
+      "cultivar_notes": "French marigold",
+      "evidence": {
+        "url": "https://plants.ces.ncsu.edu/plants/tagetes-patula/",
+        "scope": "general_source_or_group_reference",
+        "cultivar_field_verification": "pending"
+      },
+      "codex": {
+        "starter_archetype_usable": true,
+        "accurate_cultivar_simulation_ready": false,
+        "limits": "Do not invent numeric phenology, yield, susceptibility, zone or height values"
+      }
+    },
+    {
+      "id": "starter_marigolds_durango_red",
+      "category": "marigolds",
+      "common_name": "Durango Red",
+      "scientific_parent": "Tagetes patula",
+      "family": "Asteraceae",
+      "record_rank": "named_cultivar_or_horticultural_type",
+      "growth_habit": "compact branching annual",
+      "visual_markers": "red-mahogany double flower heads with yellow edges",
+      "life_cycle": "warm-season annual",
+      "sun": "full sun",
+      "soil_and_water": "well-drained soil; moderate moisture",
+      "propagation": "seed/transplant",
+      "harvest_or_display_organ": "flower heads",
+      "cultivar_notes": "French marigold",
+      "evidence": {
+        "url": "https://plants.ces.ncsu.edu/plants/tagetes-patula/",
+        "scope": "general_source_or_group_reference",
+        "cultivar_field_verification": "pending"
+      },
+      "codex": {
+        "starter_archetype_usable": true,
+        "accurate_cultivar_simulation_ready": false,
+        "limits": "Do not invent numeric phenology, yield, susceptibility, zone or height values"
+      }
+    },
+    {
+      "id": "starter_marigolds_safari_yellow",
+      "category": "marigolds",
+      "common_name": "Safari Yellow",
+      "scientific_parent": "Tagetes patula",
+      "family": "Asteraceae",
+      "record_rank": "named_cultivar_or_horticultural_type",
+      "growth_habit": "compact branching annual",
+      "visual_markers": "large golden-yellow double flowers",
+      "life_cycle": "warm-season annual",
+      "sun": "full sun",
+      "soil_and_water": "well-drained soil; moderate moisture",
+      "propagation": "seed/transplant",
+      "harvest_or_display_organ": "flower heads",
+      "cultivar_notes": "French marigold",
+      "evidence": {
+        "url": "https://plants.ces.ncsu.edu/plants/tagetes-patula/",
+        "scope": "general_source_or_group_reference",
+        "cultivar_field_verification": "pending"
+      },
+      "codex": {
+        "starter_archetype_usable": true,
+        "accurate_cultivar_simulation_ready": false,
+        "limits": "Do not invent numeric phenology, yield, susceptibility, zone or height values"
+      }
+    },
+    {
+      "id": "starter_marigolds_lemon_gem",
+      "category": "marigolds",
+      "common_name": "Lemon Gem",
+      "scientific_parent": "Tagetes tenuifolia",
+      "family": "Asteraceae",
+      "record_rank": "named_cultivar_or_horticultural_type",
+      "growth_habit": "airy fine-leaved bush",
+      "visual_markers": "small single lemon-yellow flowers",
+      "life_cycle": "warm-season annual",
+      "sun": "full sun",
+      "soil_and_water": "well-drained soil; moderate moisture",
+      "propagation": "seed/transplant",
+      "harvest_or_display_organ": "flower heads",
+      "cultivar_notes": "signet marigold",
+      "evidence": {
+        "url": "https://plants.ces.ncsu.edu/plants/tagetes-patula/",
+        "scope": "general_source_or_group_reference",
+        "cultivar_field_verification": "pending"
+      },
+      "codex": {
+        "starter_archetype_usable": true,
+        "accurate_cultivar_simulation_ready": false,
+        "limits": "Do not invent numeric phenology, yield, susceptibility, zone or height values"
+      }
+    },
+    {
+      "id": "starter_marigolds_crackerjack_mix",
+      "category": "marigolds",
+      "common_name": "Crackerjack Mix",
+      "scientific_parent": "Tagetes erecta",
+      "family": "Asteraceae",
+      "record_rank": "named_seed_mix",
+      "growth_habit": "tall upright annual",
+      "visual_markers": "large golden-yellow and orange double flowers",
+      "life_cycle": "warm-season annual",
+      "sun": "full sun",
+      "soil_and_water": "well-drained soil; moderate moisture",
+      "propagation": "seed/transplant",
+      "harvest_or_display_organ": "flower heads",
+      "cultivar_notes": "African marigold seed mix; colors vary",
+      "evidence": {
+        "url": "https://plants.ces.ncsu.edu/plants/tagetes-patula/",
+        "scope": "general_source_or_group_reference",
+        "cultivar_field_verification": "pending"
+      },
+      "codex": {
+        "starter_archetype_usable": true,
+        "accurate_cultivar_simulation_ready": false,
+        "limits": "Do not invent numeric phenology, yield, susceptibility, zone or height values"
+      }
+    },
+    {
+      "id": "starter_camellias_yuletide",
+      "category": "camellias",
+      "common_name": "Yuletide",
+      "scientific_parent": "Camellia sasanqua",
+      "family": "Theaceae",
+      "record_rank": "named_cultivar_or_horticultural_type",
+      "growth_habit": "compact spreading evergreen shrub",
+      "visual_markers": "red single flowers with golden stamens",
+      "life_cycle": "evergreen broadleaf woody shrub",
+      "sun": "part shade; protect from harsh afternoon exposure",
+      "soil_and_water": "acidic organic well-drained soil; steady moisture",
+      "propagation": "cuttings or nursery plant",
+      "harvest_or_display_organ": "ornamental flowers",
+      "cultivar_notes": "sasanqua-type winter-flowering camellia",
+      "evidence": {
+        "url": "https://plants.ces.ncsu.edu/plants/camellia/",
+        "scope": "general_source_or_group_reference",
+        "cultivar_field_verification": "pending"
+      },
+      "codex": {
+        "starter_archetype_usable": true,
+        "accurate_cultivar_simulation_ready": false,
+        "limits": "Do not invent numeric phenology, yield, susceptibility, zone or height values"
+      }
+    },
+    {
+      "id": "starter_camellias_setsugekka",
+      "category": "camellias",
+      "common_name": "Setsugekka",
+      "scientific_parent": "Camellia sasanqua",
+      "family": "Theaceae",
+      "record_rank": "named_cultivar_or_horticultural_type",
+      "growth_habit": "upright spreading evergreen shrub",
+      "visual_markers": "large white semi-double ruffled flowers",
+      "life_cycle": "evergreen broadleaf woody shrub",
+      "sun": "part shade; protect from harsh afternoon exposure",
+      "soil_and_water": "acidic organic well-drained soil; steady moisture",
+      "propagation": "cuttings or nursery plant",
+      "harvest_or_display_organ": "ornamental flowers",
+      "cultivar_notes": "sasanqua cultivar",
+      "evidence": {
+        "url": "https://plants.ces.ncsu.edu/plants/camellia/",
+        "scope": "general_source_or_group_reference",
+        "cultivar_field_verification": "pending"
+      },
+      "codex": {
+        "starter_archetype_usable": true,
+        "accurate_cultivar_simulation_ready": false,
+        "limits": "Do not invent numeric phenology, yield, susceptibility, zone or height values"
+      }
+    },
+    {
+      "id": "starter_camellias_debutante",
+      "category": "camellias",
+      "common_name": "Debutante",
+      "scientific_parent": "Camellia japonica",
+      "family": "Theaceae",
+      "record_rank": "named_cultivar_or_horticultural_type",
+      "growth_habit": "upright rounded evergreen shrub",
+      "visual_markers": "soft-pink peony-form double flowers",
+      "life_cycle": "evergreen broadleaf woody shrub",
+      "sun": "part shade; protect from harsh afternoon exposure",
+      "soil_and_water": "acidic organic well-drained soil; steady moisture",
+      "propagation": "cuttings or nursery plant",
+      "harvest_or_display_organ": "ornamental flowers",
+      "cultivar_notes": "japonica cultivar",
+      "evidence": {
+        "url": "https://plants.ces.ncsu.edu/plants/camellia/",
+        "scope": "general_source_or_group_reference",
+        "cultivar_field_verification": "pending"
+      },
+      "codex": {
+        "starter_archetype_usable": true,
+        "accurate_cultivar_simulation_ready": false,
+        "limits": "Do not invent numeric phenology, yield, susceptibility, zone or height values"
+      }
+    },
+    {
+      "id": "starter_camellias_kramer_s_supreme",
+      "category": "camellias",
+      "common_name": "Kramer's Supreme",
+      "scientific_parent": "Camellia japonica",
+      "family": "Theaceae",
+      "record_rank": "named_cultivar_or_horticultural_type",
+      "growth_habit": "upright evergreen shrub",
+      "visual_markers": "deep red peony-form double blooms",
+      "life_cycle": "evergreen broadleaf woody shrub",
+      "sun": "part shade; protect from harsh afternoon exposure",
+      "soil_and_water": "acidic organic well-drained soil; steady moisture",
+      "propagation": "cuttings or nursery plant",
+      "harvest_or_display_organ": "ornamental flowers",
+      "cultivar_notes": "japonica cultivar",
+      "evidence": {
+        "url": "https://plants.ces.ncsu.edu/plants/camellia/",
+        "scope": "general_source_or_group_reference",
+        "cultivar_field_verification": "pending"
+      },
+      "codex": {
+        "starter_archetype_usable": true,
+        "accurate_cultivar_simulation_ready": false,
+        "limits": "Do not invent numeric phenology, yield, susceptibility, zone or height values"
+      }
+    },
+    {
+      "id": "starter_camellias_april_remembered",
+      "category": "camellias",
+      "common_name": "April Remembered",
+      "scientific_parent": "Camellia hybrid cultivar",
+      "family": "Theaceae",
+      "record_rank": "named_cultivar_or_horticultural_type",
+      "growth_habit": "upright evergreen shrub",
+      "visual_markers": "semi-double soft-pink flowers",
+      "life_cycle": "evergreen broadleaf woody shrub",
+      "sun": "part shade; protect from harsh afternoon exposure",
+      "soil_and_water": "acidic organic well-drained soil; steady moisture",
+      "propagation": "cuttings or nursery plant",
+      "harvest_or_display_organ": "ornamental flowers",
+      "cultivar_notes": "cold-hardy hybrid camellia",
+      "evidence": {
+        "url": "https://plants.ces.ncsu.edu/plants/camellia/",
+        "scope": "general_source_or_group_reference",
+        "cultivar_field_verification": "pending"
+      },
+      "codex": {
+        "starter_archetype_usable": true,
+        "accurate_cultivar_simulation_ready": false,
+        "limits": "Do not invent numeric phenology, yield, susceptibility, zone or height values"
+      }
+    }
+  ]
+}

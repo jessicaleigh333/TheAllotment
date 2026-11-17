@@ -1,0 +1,1930 @@
+{
+  "schema_version": "1.0",
+  "batch": "starter_named_varieties_001",
+  "created": "2026-11-16",
+  "count": 60,
+  "purpose": "60 starter named varieties for Codex prototyping; taxonomy and cultivar traits require field-level source audit before factual simulations",
+  "policy": "Do not extrapolate numeric growth days, hardiness, yield, toxicity or cultivar-specific pest resistance. Use scientific species ancestry and broad habits as provisional prototype scaffolding. Mixed seed strains must not be treated as a uniform cultivar.",
+  "records": [
+    {
+      "id": "starter_tomatoes_cherokee_purple",
+      "parent_taxon": {
+        "scientific_name": "Solanum lycopersicum",
+        "family": "Solanaceae"
+      },
+      "cultivar_or_selection": "Cherokee Purple",
+      "record_type": "cultivar_or_named_selection",
+      "category": "tomatoes",
+      "appearance": {
+        "growth_habit": "indeterminate climbing vine",
+        "distinguishing_features": "large flattened dusky-purple-red slicer"
+      },
+      "basic_biology": {
+        "life_cycle": "tender perennial grown as annual",
+        "light": "full sun",
+        "water_and_soil": "consistent moisture and good drainage",
+        "propagation": "seed/transplant",
+        "harvest_or_display_organ": "fruit"
+      },
+      "specific_notes": "trellis or cage; harvest ripe fruit",
+      "source_lead": {
+        "url": "https://plants.ces.ncsu.edu/plants/solanum-lycopersicum/",
+        "status": "general_species_reference_not_cultivar_verified"
+      },
+      "evidence_status": "provisional_starter_description_cultivar_traits_pending_source_audit",
+      "codex": {
+        "use_for": "prototype visual differentiation and broad growth archetype",
+        "numeric_growth_model_approved": false,
+        "ready_for_faithful_cultivar_simulation": false
+      }
+    },
+    {
+      "id": "starter_tomatoes_roma_vf",
+      "parent_taxon": {
+        "scientific_name": "Solanum lycopersicum",
+        "family": "Solanaceae"
+      },
+      "cultivar_or_selection": "Roma VF",
+      "record_type": "cultivar_or_named_selection",
+      "category": "tomatoes",
+      "appearance": {
+        "growth_habit": "determinate bush",
+        "distinguishing_features": "firm elongated red plum-shaped paste fruit"
+      },
+      "basic_biology": {
+        "life_cycle": "tender perennial grown as annual",
+        "light": "full sun",
+        "water_and_soil": "consistent moisture and good drainage",
+        "propagation": "seed/transplant",
+        "harvest_or_display_organ": "fruit"
+      },
+      "specific_notes": "support if heavily laden; concentrated harvest",
+      "source_lead": {
+        "url": "https://plants.ces.ncsu.edu/plants/solanum-lycopersicum/",
+        "status": "general_species_reference_not_cultivar_verified"
+      },
+      "evidence_status": "provisional_starter_description_cultivar_traits_pending_source_audit",
+      "codex": {
+        "use_for": "prototype visual differentiation and broad growth archetype",
+        "numeric_growth_model_approved": false,
+        "ready_for_faithful_cultivar_simulation": false
+      }
+    },
+    {
+      "id": "starter_tomatoes_sungold",
+      "parent_taxon": {
+        "scientific_name": "Solanum lycopersicum",
+        "family": "Solanaceae"
+      },
+      "cultivar_or_selection": "Sungold",
+      "record_type": "cultivar_or_named_selection",
+      "category": "tomatoes",
+      "appearance": {
+        "growth_habit": "indeterminate climbing vine",
+        "distinguishing_features": "clusters of small golden-orange cherry fruit"
+      },
+      "basic_biology": {
+        "life_cycle": "tender perennial grown as annual",
+        "light": "full sun",
+        "water_and_soil": "consistent moisture and good drainage",
+        "propagation": "seed/transplant",
+        "harvest_or_display_organ": "fruit"
+      },
+      "specific_notes": "support vigorous vines; frequent harvest",
+      "source_lead": {
+        "url": "https://plants.ces.ncsu.edu/plants/solanum-lycopersicum/",
+        "status": "general_species_reference_not_cultivar_verified"
+      },
+      "evidence_status": "provisional_starter_description_cultivar_traits_pending_source_audit",
+      "codex": {
+        "use_for": "prototype visual differentiation and broad growth archetype",
+        "numeric_growth_model_approved": false,
+        "ready_for_faithful_cultivar_simulation": false
+      }
+    },
+    {
+      "id": "starter_tomatoes_brandywine",
+      "parent_taxon": {
+        "scientific_name": "Solanum lycopersicum",
+        "family": "Solanaceae"
+      },
+      "cultivar_or_selection": "Brandywine",
+      "record_type": "cultivar_or_named_selection",
+      "category": "tomatoes",
+      "appearance": {
+        "growth_habit": "indeterminate vine",
+        "distinguishing_features": "large flattened irregular pink-red beefsteak fruit"
+      },
+      "basic_biology": {
+        "life_cycle": "tender perennial grown as annual",
+        "light": "full sun",
+        "water_and_soil": "consistent moisture and good drainage",
+        "propagation": "seed/transplant",
+        "harvest_or_display_organ": "fruit"
+      },
+      "specific_notes": "support large vines and fruit",
+      "source_lead": {
+        "url": "https://plants.ces.ncsu.edu/plants/solanum-lycopersicum/",
+        "status": "general_species_reference_not_cultivar_verified"
+      },
+      "evidence_status": "provisional_starter_description_cultivar_traits_pending_source_audit",
+      "codex": {
+        "use_for": "prototype visual differentiation and broad growth archetype",
+        "numeric_growth_model_approved": false,
+        "ready_for_faithful_cultivar_simulation": false
+      }
+    },
+    {
+      "id": "starter_tomatoes_tiny_tim",
+      "parent_taxon": {
+        "scientific_name": "Solanum lycopersicum",
+        "family": "Solanaceae"
+      },
+      "cultivar_or_selection": "Tiny Tim",
+      "record_type": "cultivar_or_named_selection",
+      "category": "tomatoes",
+      "appearance": {
+        "growth_habit": "dwarf compact bush",
+        "distinguishing_features": "small red cherry fruit on a very short plant"
+      },
+      "basic_biology": {
+        "life_cycle": "tender perennial grown as annual",
+        "light": "full sun",
+        "water_and_soil": "consistent moisture and good drainage",
+        "propagation": "seed/transplant",
+        "harvest_or_display_organ": "fruit"
+      },
+      "specific_notes": "suited to containers",
+      "source_lead": {
+        "url": "https://plants.ces.ncsu.edu/plants/solanum-lycopersicum/",
+        "status": "general_species_reference_not_cultivar_verified"
+      },
+      "evidence_status": "provisional_starter_description_cultivar_traits_pending_source_audit",
+      "codex": {
+        "use_for": "prototype visual differentiation and broad growth archetype",
+        "numeric_growth_model_approved": false,
+        "ready_for_faithful_cultivar_simulation": false
+      }
+    },
+    {
+      "id": "starter_peppers_california_wonder",
+      "parent_taxon": {
+        "scientific_name": "Capsicum annuum",
+        "family": "Solanaceae"
+      },
+      "cultivar_or_selection": "California Wonder",
+      "record_type": "cultivar_or_named_selection",
+      "category": "peppers",
+      "appearance": {
+        "growth_habit": "upright branching bush",
+        "distinguishing_features": "large blocky sweet fruit green before ripening red"
+      },
+      "basic_biology": {
+        "life_cycle": "tender perennial grown as annual",
+        "light": "full sun",
+        "water_and_soil": "consistent moisture and good drainage",
+        "propagation": "seed/transplant",
+        "harvest_or_display_organ": "fruit"
+      },
+      "specific_notes": "sweet bell cultivar",
+      "source_lead": {
+        "url": "https://plants.ces.ncsu.edu/plants/capsicum-annuum/",
+        "status": "general_species_reference_not_cultivar_verified"
+      },
+      "evidence_status": "provisional_starter_description_cultivar_traits_pending_source_audit",
+      "codex": {
+        "use_for": "prototype visual differentiation and broad growth archetype",
+        "numeric_growth_model_approved": false,
+        "ready_for_faithful_cultivar_simulation": false
+      }
+    },
+    {
+      "id": "starter_peppers_early_jalape_o",
+      "parent_taxon": {
+        "scientific_name": "Capsicum annuum",
+        "family": "Solanaceae"
+      },
+      "cultivar_or_selection": "Early Jalapeño",
+      "record_type": "cultivar_or_named_selection",
+      "category": "peppers",
+      "appearance": {
+        "growth_habit": "upright branching bush",
+        "distinguishing_features": "thick tapered green fruit maturing red"
+      },
+      "basic_biology": {
+        "life_cycle": "tender perennial grown as annual",
+        "light": "full sun",
+        "water_and_soil": "consistent moisture and good drainage",
+        "propagation": "seed/transplant",
+        "harvest_or_display_organ": "fruit"
+      },
+      "specific_notes": "pungent fruit",
+      "source_lead": {
+        "url": "https://plants.ces.ncsu.edu/plants/capsicum-annuum/",
+        "status": "general_species_reference_not_cultivar_verified"
+      },
+      "evidence_status": "provisional_starter_description_cultivar_traits_pending_source_audit",
+      "codex": {
+        "use_for": "prototype visual differentiation and broad growth archetype",
+        "numeric_growth_model_approved": false,
+        "ready_for_faithful_cultivar_simulation": false
+      }
+    },
+    {
+      "id": "starter_peppers_purple_beauty",
+      "parent_taxon": {
+        "scientific_name": "Capsicum annuum",
+        "family": "Solanaceae"
+      },
+      "cultivar_or_selection": "Purple Beauty",
+      "record_type": "cultivar_or_named_selection",
+      "category": "peppers",
+      "appearance": {
+        "growth_habit": "upright branching bush",
+        "distinguishing_features": "blocky bell fruit with deep purple immature skin"
+      },
+      "basic_biology": {
+        "life_cycle": "tender perennial grown as annual",
+        "light": "full sun",
+        "water_and_soil": "consistent moisture and good drainage",
+        "propagation": "seed/transplant",
+        "harvest_or_display_organ": "fruit"
+      },
+      "specific_notes": "sweet pepper; purple stage distinct from full ripeness",
+      "source_lead": {
+        "url": "https://plants.ces.ncsu.edu/plants/capsicum-annuum/",
+        "status": "general_species_reference_not_cultivar_verified"
+      },
+      "evidence_status": "provisional_starter_description_cultivar_traits_pending_source_audit",
+      "codex": {
+        "use_for": "prototype visual differentiation and broad growth archetype",
+        "numeric_growth_model_approved": false,
+        "ready_for_faithful_cultivar_simulation": false
+      }
+    },
+    {
+      "id": "starter_peppers_shishito",
+      "parent_taxon": {
+        "scientific_name": "Capsicum annuum",
+        "family": "Solanaceae"
+      },
+      "cultivar_or_selection": "Shishito",
+      "record_type": "cultivar_or_named_selection",
+      "category": "peppers",
+      "appearance": {
+        "growth_habit": "upright branching bush",
+        "distinguishing_features": "thin wrinkled elongated green fruit maturing red"
+      },
+      "basic_biology": {
+        "life_cycle": "tender perennial grown as annual",
+        "light": "full sun",
+        "water_and_soil": "consistent moisture and good drainage",
+        "propagation": "seed/transplant",
+        "harvest_or_display_organ": "fruit"
+      },
+      "specific_notes": "usually mild; variable pungency",
+      "source_lead": {
+        "url": "https://plants.ces.ncsu.edu/plants/capsicum-annuum/",
+        "status": "general_species_reference_not_cultivar_verified"
+      },
+      "evidence_status": "provisional_starter_description_cultivar_traits_pending_source_audit",
+      "codex": {
+        "use_for": "prototype visual differentiation and broad growth archetype",
+        "numeric_growth_model_approved": false,
+        "ready_for_faithful_cultivar_simulation": false
+      }
+    },
+    {
+      "id": "starter_peppers_sweet_banana",
+      "parent_taxon": {
+        "scientific_name": "Capsicum annuum",
+        "family": "Solanaceae"
+      },
+      "cultivar_or_selection": "Sweet Banana",
+      "record_type": "cultivar_or_named_selection",
+      "category": "peppers",
+      "appearance": {
+        "growth_habit": "upright branching bush",
+        "distinguishing_features": "long slender curved pale-yellow fruit ripening orange-red"
+      },
+      "basic_biology": {
+        "life_cycle": "tender perennial grown as annual",
+        "light": "full sun",
+        "water_and_soil": "consistent moisture and good drainage",
+        "propagation": "seed/transplant",
+        "harvest_or_display_organ": "fruit"
+      },
+      "specific_notes": "sweet nonpungent type",
+      "source_lead": {
+        "url": "https://plants.ces.ncsu.edu/plants/capsicum-annuum/",
+        "status": "general_species_reference_not_cultivar_verified"
+      },
+      "evidence_status": "provisional_starter_description_cultivar_traits_pending_source_audit",
+      "codex": {
+        "use_for": "prototype visual differentiation and broad growth archetype",
+        "numeric_growth_model_approved": false,
+        "ready_for_faithful_cultivar_simulation": false
+      }
+    },
+    {
+      "id": "starter_snap_beans_kentucky_wonder",
+      "parent_taxon": {
+        "scientific_name": "Phaseolus vulgaris",
+        "family": "Fabaceae"
+      },
+      "cultivar_or_selection": "Kentucky Wonder",
+      "record_type": "cultivar_or_named_selection",
+      "category": "snap_beans",
+      "appearance": {
+        "growth_habit": "twining pole vine",
+        "distinguishing_features": "long green pods hanging along climbing stems"
+      },
+      "basic_biology": {
+        "life_cycle": "warm-season annual",
+        "light": "full sun",
+        "water_and_soil": "moderate consistent moisture; well-drained soil",
+        "propagation": "direct seed",
+        "harvest_or_display_organ": "immature pod"
+      },
+      "specific_notes": "requires support",
+      "source_lead": {
+        "url": "https://plants.ces.ncsu.edu/plants/phaseolus-vulgaris/",
+        "status": "general_species_reference_not_cultivar_verified"
+      },
+      "evidence_status": "provisional_starter_description_cultivar_traits_pending_source_audit",
+      "codex": {
+        "use_for": "prototype visual differentiation and broad growth archetype",
+        "numeric_growth_model_approved": false,
+        "ready_for_faithful_cultivar_simulation": false
+      }
+    },
+    {
+      "id": "starter_snap_beans_provider",
+      "parent_taxon": {
+        "scientific_name": "Phaseolus vulgaris",
+        "family": "Fabaceae"
+      },
+      "cultivar_or_selection": "Provider",
+      "record_type": "cultivar_or_named_selection",
+      "category": "snap_beans",
+      "appearance": {
+        "growth_habit": "compact bush",
+        "distinguishing_features": "smooth green pods on low foliage"
+      },
+      "basic_biology": {
+        "life_cycle": "warm-season annual",
+        "light": "full sun",
+        "water_and_soil": "moderate consistent moisture; well-drained soil",
+        "propagation": "direct seed",
+        "harvest_or_display_organ": "immature pod"
+      },
+      "specific_notes": "generally self-supporting",
+      "source_lead": {
+        "url": "https://plants.ces.ncsu.edu/plants/phaseolus-vulgaris/",
+        "status": "general_species_reference_not_cultivar_verified"
+      },
+      "evidence_status": "provisional_starter_description_cultivar_traits_pending_source_audit",
+      "codex": {
+        "use_for": "prototype visual differentiation and broad growth archetype",
+        "numeric_growth_model_approved": false,
+        "ready_for_faithful_cultivar_simulation": false
+      }
+    },
+    {
+      "id": "starter_snap_beans_royal_burgundy",
+      "parent_taxon": {
+        "scientific_name": "Phaseolus vulgaris",
+        "family": "Fabaceae"
+      },
+      "cultivar_or_selection": "Royal Burgundy",
+      "record_type": "cultivar_or_named_selection",
+      "category": "snap_beans",
+      "appearance": {
+        "growth_habit": "compact bush",
+        "distinguishing_features": "deep purple pods and green trifoliate foliage"
+      },
+      "basic_biology": {
+        "life_cycle": "warm-season annual",
+        "light": "full sun",
+        "water_and_soil": "moderate consistent moisture; well-drained soil",
+        "propagation": "direct seed",
+        "harvest_or_display_organ": "immature pod"
+      },
+      "specific_notes": "pods turn green on cooking",
+      "source_lead": {
+        "url": "https://plants.ces.ncsu.edu/plants/phaseolus-vulgaris/",
+        "status": "general_species_reference_not_cultivar_verified"
+      },
+      "evidence_status": "provisional_starter_description_cultivar_traits_pending_source_audit",
+      "codex": {
+        "use_for": "prototype visual differentiation and broad growth archetype",
+        "numeric_growth_model_approved": false,
+        "ready_for_faithful_cultivar_simulation": false
+      }
+    },
+    {
+      "id": "starter_snap_beans_dragon_tongue",
+      "parent_taxon": {
+        "scientific_name": "Phaseolus vulgaris",
+        "family": "Fabaceae"
+      },
+      "cultivar_or_selection": "Dragon Tongue",
+      "record_type": "cultivar_or_named_selection",
+      "category": "snap_beans",
+      "appearance": {
+        "growth_habit": "compact bush",
+        "distinguishing_features": "broad creamy-yellow pods streaked purple"
+      },
+      "basic_biology": {
+        "life_cycle": "warm-season annual",
+        "light": "full sun",
+        "water_and_soil": "moderate consistent moisture; well-drained soil",
+        "propagation": "direct seed",
+        "harvest_or_display_organ": "immature pod"
+      },
+      "specific_notes": "immature pods harvested young",
+      "source_lead": {
+        "url": "https://plants.ces.ncsu.edu/plants/phaseolus-vulgaris/",
+        "status": "general_species_reference_not_cultivar_verified"
+      },
+      "evidence_status": "provisional_starter_description_cultivar_traits_pending_source_audit",
+      "codex": {
+        "use_for": "prototype visual differentiation and broad growth archetype",
+        "numeric_growth_model_approved": false,
+        "ready_for_faithful_cultivar_simulation": false
+      }
+    },
+    {
+      "id": "starter_snap_beans_blue_lake_274",
+      "parent_taxon": {
+        "scientific_name": "Phaseolus vulgaris",
+        "family": "Fabaceae"
+      },
+      "cultivar_or_selection": "Blue Lake 274",
+      "record_type": "cultivar_or_named_selection",
+      "category": "snap_beans",
+      "appearance": {
+        "growth_habit": "compact bush",
+        "distinguishing_features": "smooth round green pods"
+      },
+      "basic_biology": {
+        "life_cycle": "warm-season annual",
+        "light": "full sun",
+        "water_and_soil": "moderate consistent moisture; well-drained soil",
+        "propagation": "direct seed",
+        "harvest_or_display_organ": "immature pod"
+      },
+      "specific_notes": "bush snap bean",
+      "source_lead": {
+        "url": "https://plants.ces.ncsu.edu/plants/phaseolus-vulgaris/",
+        "status": "general_species_reference_not_cultivar_verified"
+      },
+      "evidence_status": "provisional_starter_description_cultivar_traits_pending_source_audit",
+      "codex": {
+        "use_for": "prototype visual differentiation and broad growth archetype",
+        "numeric_growth_model_approved": false,
+        "ready_for_faithful_cultivar_simulation": false
+      }
+    },
+    {
+      "id": "starter_brassicas_lacinato_kale",
+      "parent_taxon": {
+        "scientific_name": "Brassica oleracea",
+        "family": "Brassicaceae"
+      },
+      "cultivar_or_selection": "Lacinato Kale",
+      "record_type": "cultivar_or_named_selection",
+      "category": "brassicas",
+      "appearance": {
+        "growth_habit": "upright leafy rosette",
+        "distinguishing_features": "long dark blue-green savoyed leaves"
+      },
+      "basic_biology": {
+        "life_cycle": "cool-season biennial usually harvested in first year",
+        "light": "full sun",
+        "water_and_soil": "consistent moisture; fertile well-drained soil",
+        "propagation": "seed/transplant",
+        "harvest_or_display_organ": "leaves or inflorescence depending on cultivar"
+      },
+      "specific_notes": "leaf harvest; Acephala group",
+      "source_lead": {
+        "url": "https://plants.ces.ncsu.edu/plants/brassica-oleracea/",
+        "status": "general_species_reference_not_cultivar_verified"
+      },
+      "evidence_status": "provisional_starter_description_cultivar_traits_pending_source_audit",
+      "codex": {
+        "use_for": "prototype visual differentiation and broad growth archetype",
+        "numeric_growth_model_approved": false,
+        "ready_for_faithful_cultivar_simulation": false
+      }
+    },
+    {
+      "id": "starter_brassicas_redbor_kale",
+      "parent_taxon": {
+        "scientific_name": "Brassica oleracea",
+        "family": "Brassicaceae"
+      },
+      "cultivar_or_selection": "Redbor Kale",
+      "record_type": "cultivar_or_named_selection",
+      "category": "brassicas",
+      "appearance": {
+        "growth_habit": "upright leafy rosette",
+        "distinguishing_features": "strongly curled burgundy-purple leaves"
+      },
+      "basic_biology": {
+        "life_cycle": "cool-season biennial usually harvested in first year",
+        "light": "full sun",
+        "water_and_soil": "consistent moisture; fertile well-drained soil",
+        "propagation": "seed/transplant",
+        "harvest_or_display_organ": "leaves or inflorescence depending on cultivar"
+      },
+      "specific_notes": "leaf harvest; Acephala group",
+      "source_lead": {
+        "url": "https://plants.ces.ncsu.edu/plants/brassica-oleracea/",
+        "status": "general_species_reference_not_cultivar_verified"
+      },
+      "evidence_status": "provisional_starter_description_cultivar_traits_pending_source_audit",
+      "codex": {
+        "use_for": "prototype visual differentiation and broad growth archetype",
+        "numeric_growth_model_approved": false,
+        "ready_for_faithful_cultivar_simulation": false
+      }
+    },
+    {
+      "id": "starter_brassicas_waltham_29_broccoli",
+      "parent_taxon": {
+        "scientific_name": "Brassica oleracea",
+        "family": "Brassicaceae"
+      },
+      "cultivar_or_selection": "Waltham 29 Broccoli",
+      "record_type": "cultivar_or_named_selection",
+      "category": "brassicas",
+      "appearance": {
+        "growth_habit": "upright stem with broad leaves",
+        "distinguishing_features": "green clustered immature flower buds in central head"
+      },
+      "basic_biology": {
+        "life_cycle": "cool-season biennial usually harvested in first year",
+        "light": "full sun",
+        "water_and_soil": "consistent moisture; fertile well-drained soil",
+        "propagation": "seed/transplant",
+        "harvest_or_display_organ": "leaves or inflorescence depending on cultivar"
+      },
+      "specific_notes": "harvest unopened inflorescence; Italica group",
+      "source_lead": {
+        "url": "https://plants.ces.ncsu.edu/plants/brassica-oleracea/",
+        "status": "general_species_reference_not_cultivar_verified"
+      },
+      "evidence_status": "provisional_starter_description_cultivar_traits_pending_source_audit",
+      "codex": {
+        "use_for": "prototype visual differentiation and broad growth archetype",
+        "numeric_growth_model_approved": false,
+        "ready_for_faithful_cultivar_simulation": false
+      }
+    },
+    {
+      "id": "starter_brassicas_snowball_y_cauliflower",
+      "parent_taxon": {
+        "scientific_name": "Brassica oleracea",
+        "family": "Brassicaceae"
+      },
+      "cultivar_or_selection": "Snowball Y Cauliflower",
+      "record_type": "cultivar_or_named_selection",
+      "category": "brassicas",
+      "appearance": {
+        "growth_habit": "upright leafy frame",
+        "distinguishing_features": "dense white curd enclosed by green leaves"
+      },
+      "basic_biology": {
+        "life_cycle": "cool-season biennial usually harvested in first year",
+        "light": "full sun",
+        "water_and_soil": "consistent moisture; fertile well-drained soil",
+        "propagation": "seed/transplant",
+        "harvest_or_display_organ": "leaves or inflorescence depending on cultivar"
+      },
+      "specific_notes": "harvest curd; Botrytis group",
+      "source_lead": {
+        "url": "https://plants.ces.ncsu.edu/plants/brassica-oleracea/",
+        "status": "general_species_reference_not_cultivar_verified"
+      },
+      "evidence_status": "provisional_starter_description_cultivar_traits_pending_source_audit",
+      "codex": {
+        "use_for": "prototype visual differentiation and broad growth archetype",
+        "numeric_growth_model_approved": false,
+        "ready_for_faithful_cultivar_simulation": false
+      }
+    },
+    {
+      "id": "starter_brassicas_red_acre_cabbage",
+      "parent_taxon": {
+        "scientific_name": "Brassica oleracea",
+        "family": "Brassicaceae"
+      },
+      "cultivar_or_selection": "Red Acre Cabbage",
+      "record_type": "cultivar_or_named_selection",
+      "category": "brassicas",
+      "appearance": {
+        "growth_habit": "compact heading rosette",
+        "distinguishing_features": "rounded dense purplish-red leaf head"
+      },
+      "basic_biology": {
+        "life_cycle": "cool-season biennial usually harvested in first year",
+        "light": "full sun",
+        "water_and_soil": "consistent moisture; fertile well-drained soil",
+        "propagation": "seed/transplant",
+        "harvest_or_display_organ": "leaves or inflorescence depending on cultivar"
+      },
+      "specific_notes": "harvest head; Capitata group",
+      "source_lead": {
+        "url": "https://plants.ces.ncsu.edu/plants/brassica-oleracea/",
+        "status": "general_species_reference_not_cultivar_verified"
+      },
+      "evidence_status": "provisional_starter_description_cultivar_traits_pending_source_audit",
+      "codex": {
+        "use_for": "prototype visual differentiation and broad growth archetype",
+        "numeric_growth_model_approved": false,
+        "ready_for_faithful_cultivar_simulation": false
+      }
+    },
+    {
+      "id": "starter_cucurbits_marketmore_76_cucumber",
+      "parent_taxon": {
+        "scientific_name": "Cucumis sativus",
+        "family": "Cucurbitaceae"
+      },
+      "cultivar_or_selection": "Marketmore 76 Cucumber",
+      "record_type": "cultivar_or_named_selection",
+      "category": "cucurbits",
+      "appearance": {
+        "growth_habit": "climbing or sprawling vine",
+        "distinguishing_features": "long dark-green cylindrical slicer"
+      },
+      "basic_biology": {
+        "life_cycle": "warm-season frost-tender annual",
+        "light": "full sun",
+        "water_and_soil": "consistent moisture; fertile draining soil",
+        "propagation": "seed/transplant",
+        "harvest_or_display_organ": "fruit"
+      },
+      "specific_notes": "trellis optional; harvest immature fruit",
+      "source_lead": {
+        "url": "https://plants.ces.ncsu.edu/",
+        "status": "general_species_reference_not_cultivar_verified"
+      },
+      "evidence_status": "provisional_starter_description_cultivar_traits_pending_source_audit",
+      "codex": {
+        "use_for": "prototype visual differentiation and broad growth archetype",
+        "numeric_growth_model_approved": false,
+        "ready_for_faithful_cultivar_simulation": false
+      }
+    },
+    {
+      "id": "starter_cucurbits_lemon_cucumber",
+      "parent_taxon": {
+        "scientific_name": "Cucumis sativus",
+        "family": "Cucurbitaceae"
+      },
+      "cultivar_or_selection": "Lemon Cucumber",
+      "record_type": "cultivar_or_named_selection",
+      "category": "cucurbits",
+      "appearance": {
+        "growth_habit": "climbing or sprawling vine",
+        "distinguishing_features": "small round pale-yellow fruit"
+      },
+      "basic_biology": {
+        "life_cycle": "warm-season frost-tender annual",
+        "light": "full sun",
+        "water_and_soil": "consistent moisture; fertile draining soil",
+        "propagation": "seed/transplant",
+        "harvest_or_display_organ": "fruit"
+      },
+      "specific_notes": "cucumber, not citrus",
+      "source_lead": {
+        "url": "https://plants.ces.ncsu.edu/",
+        "status": "general_species_reference_not_cultivar_verified"
+      },
+      "evidence_status": "provisional_starter_description_cultivar_traits_pending_source_audit",
+      "codex": {
+        "use_for": "prototype visual differentiation and broad growth archetype",
+        "numeric_growth_model_approved": false,
+        "ready_for_faithful_cultivar_simulation": false
+      }
+    },
+    {
+      "id": "starter_cucurbits_black_beauty_zucchini",
+      "parent_taxon": {
+        "scientific_name": "Cucurbita pepo",
+        "family": "Cucurbitaceae"
+      },
+      "cultivar_or_selection": "Black Beauty Zucchini",
+      "record_type": "cultivar_or_named_selection",
+      "category": "cucurbits",
+      "appearance": {
+        "growth_habit": "bushy large-leaf rosette",
+        "distinguishing_features": "elongated dark-green summer squash"
+      },
+      "basic_biology": {
+        "life_cycle": "warm-season frost-tender annual",
+        "light": "full sun",
+        "water_and_soil": "consistent moisture; fertile draining soil",
+        "propagation": "seed/transplant",
+        "harvest_or_display_organ": "fruit"
+      },
+      "specific_notes": "pick young fruit repeatedly",
+      "source_lead": {
+        "url": "https://plants.ces.ncsu.edu/",
+        "status": "general_species_reference_not_cultivar_verified"
+      },
+      "evidence_status": "provisional_starter_description_cultivar_traits_pending_source_audit",
+      "codex": {
+        "use_for": "prototype visual differentiation and broad growth archetype",
+        "numeric_growth_model_approved": false,
+        "ready_for_faithful_cultivar_simulation": false
+      }
+    },
+    {
+      "id": "starter_cucurbits_jack_be_little_pumpkin",
+      "parent_taxon": {
+        "scientific_name": "Cucurbita pepo",
+        "family": "Cucurbitaceae"
+      },
+      "cultivar_or_selection": "Jack Be Little Pumpkin",
+      "record_type": "cultivar_or_named_selection",
+      "category": "cucurbits",
+      "appearance": {
+        "growth_habit": "trailing vine",
+        "distinguishing_features": "tiny flattened ribbed orange pumpkins"
+      },
+      "basic_biology": {
+        "life_cycle": "warm-season frost-tender annual",
+        "light": "full sun",
+        "water_and_soil": "consistent moisture; fertile draining soil",
+        "propagation": "seed/transplant",
+        "harvest_or_display_organ": "fruit"
+      },
+      "specific_notes": "harvest mature fully colored fruit",
+      "source_lead": {
+        "url": "https://plants.ces.ncsu.edu/",
+        "status": "general_species_reference_not_cultivar_verified"
+      },
+      "evidence_status": "provisional_starter_description_cultivar_traits_pending_source_audit",
+      "codex": {
+        "use_for": "prototype visual differentiation and broad growth archetype",
+        "numeric_growth_model_approved": false,
+        "ready_for_faithful_cultivar_simulation": false
+      }
+    },
+    {
+      "id": "starter_cucurbits_waltham_butternut",
+      "parent_taxon": {
+        "scientific_name": "Cucurbita moschata",
+        "family": "Cucurbitaceae"
+      },
+      "cultivar_or_selection": "Waltham Butternut",
+      "record_type": "cultivar_or_named_selection",
+      "category": "cucurbits",
+      "appearance": {
+        "growth_habit": "sprawling vine",
+        "distinguishing_features": "tan pear-shaped winter squash with orange flesh"
+      },
+      "basic_biology": {
+        "life_cycle": "warm-season frost-tender annual",
+        "light": "full sun",
+        "water_and_soil": "consistent moisture; fertile draining soil",
+        "propagation": "seed/transplant",
+        "harvest_or_display_organ": "fruit"
+      },
+      "specific_notes": "harvest mature fruit; cure appropriately",
+      "source_lead": {
+        "url": "https://plants.ces.ncsu.edu/",
+        "status": "general_species_reference_not_cultivar_verified"
+      },
+      "evidence_status": "provisional_starter_description_cultivar_traits_pending_source_audit",
+      "codex": {
+        "use_for": "prototype visual differentiation and broad growth archetype",
+        "numeric_growth_model_approved": false,
+        "ready_for_faithful_cultivar_simulation": false
+      }
+    },
+    {
+      "id": "starter_carrots_danvers_126",
+      "parent_taxon": {
+        "scientific_name": "Daucus carota",
+        "family": "Apiaceae"
+      },
+      "cultivar_or_selection": "Danvers 126",
+      "record_type": "cultivar_or_named_selection",
+      "category": "carrots",
+      "appearance": {
+        "growth_habit": "basal finely divided leaf rosette",
+        "distinguishing_features": "medium-length tapered orange storage root"
+      },
+      "basic_biology": {
+        "life_cycle": "biennial root crop usually harvested first year",
+        "light": "full sun to light shade",
+        "water_and_soil": "even moisture; loose non-compacted soil",
+        "propagation": "direct seed",
+        "harvest_or_display_organ": "storage root"
+      },
+      "specific_notes": "tolerates somewhat heavier soils",
+      "source_lead": {
+        "url": "https://plants.ces.ncsu.edu/plants/daucus-carota/",
+        "status": "general_species_reference_not_cultivar_verified"
+      },
+      "evidence_status": "provisional_starter_description_cultivar_traits_pending_source_audit",
+      "codex": {
+        "use_for": "prototype visual differentiation and broad growth archetype",
+        "numeric_growth_model_approved": false,
+        "ready_for_faithful_cultivar_simulation": false
+      }
+    },
+    {
+      "id": "starter_carrots_nantes_coreless",
+      "parent_taxon": {
+        "scientific_name": "Daucus carota",
+        "family": "Apiaceae"
+      },
+      "cultivar_or_selection": "Nantes Coreless",
+      "record_type": "cultivar_or_named_selection",
+      "category": "carrots",
+      "appearance": {
+        "growth_habit": "basal leaf rosette",
+        "distinguishing_features": "blunt-ended cylindrical bright-orange storage root"
+      },
+      "basic_biology": {
+        "life_cycle": "biennial root crop usually harvested first year",
+        "light": "full sun to light shade",
+        "water_and_soil": "even moisture; loose non-compacted soil",
+        "propagation": "direct seed",
+        "harvest_or_display_organ": "storage root"
+      },
+      "specific_notes": "requires stone-free soil for straight roots",
+      "source_lead": {
+        "url": "https://plants.ces.ncsu.edu/plants/daucus-carota/",
+        "status": "general_species_reference_not_cultivar_verified"
+      },
+      "evidence_status": "provisional_starter_description_cultivar_traits_pending_source_audit",
+      "codex": {
+        "use_for": "prototype visual differentiation and broad growth archetype",
+        "numeric_growth_model_approved": false,
+        "ready_for_faithful_cultivar_simulation": false
+      }
+    },
+    {
+      "id": "starter_carrots_purple_haze",
+      "parent_taxon": {
+        "scientific_name": "Daucus carota",
+        "family": "Apiaceae"
+      },
+      "cultivar_or_selection": "Purple Haze",
+      "record_type": "cultivar_or_named_selection",
+      "category": "carrots",
+      "appearance": {
+        "growth_habit": "basal leaf rosette",
+        "distinguishing_features": "purple exterior and orange interior root"
+      },
+      "basic_biology": {
+        "life_cycle": "biennial root crop usually harvested first year",
+        "light": "full sun to light shade",
+        "water_and_soil": "even moisture; loose non-compacted soil",
+        "propagation": "direct seed",
+        "harvest_or_display_organ": "storage root"
+      },
+      "specific_notes": "cultivar coloring varies with growth",
+      "source_lead": {
+        "url": "https://plants.ces.ncsu.edu/plants/daucus-carota/",
+        "status": "general_species_reference_not_cultivar_verified"
+      },
+      "evidence_status": "provisional_starter_description_cultivar_traits_pending_source_audit",
+      "codex": {
+        "use_for": "prototype visual differentiation and broad growth archetype",
+        "numeric_growth_model_approved": false,
+        "ready_for_faithful_cultivar_simulation": false
+      }
+    },
+    {
+      "id": "starter_carrots_parisian",
+      "parent_taxon": {
+        "scientific_name": "Daucus carota",
+        "family": "Apiaceae"
+      },
+      "cultivar_or_selection": "Parisian",
+      "record_type": "cultivar_or_named_selection",
+      "category": "carrots",
+      "appearance": {
+        "growth_habit": "compact leaf rosette",
+        "distinguishing_features": "short round orange storage root"
+      },
+      "basic_biology": {
+        "life_cycle": "biennial root crop usually harvested first year",
+        "light": "full sun to light shade",
+        "water_and_soil": "even moisture; loose non-compacted soil",
+        "propagation": "direct seed",
+        "harvest_or_display_organ": "storage root"
+      },
+      "specific_notes": "suitable for shallower soils",
+      "source_lead": {
+        "url": "https://plants.ces.ncsu.edu/plants/daucus-carota/",
+        "status": "general_species_reference_not_cultivar_verified"
+      },
+      "evidence_status": "provisional_starter_description_cultivar_traits_pending_source_audit",
+      "codex": {
+        "use_for": "prototype visual differentiation and broad growth archetype",
+        "numeric_growth_model_approved": false,
+        "ready_for_faithful_cultivar_simulation": false
+      }
+    },
+    {
+      "id": "starter_carrots_little_finger",
+      "parent_taxon": {
+        "scientific_name": "Daucus carota",
+        "family": "Apiaceae"
+      },
+      "cultivar_or_selection": "Little Finger",
+      "record_type": "cultivar_or_named_selection",
+      "category": "carrots",
+      "appearance": {
+        "growth_habit": "compact leaf rosette",
+        "distinguishing_features": "short slender orange fingerlike root"
+      },
+      "basic_biology": {
+        "life_cycle": "biennial root crop usually harvested first year",
+        "light": "full sun to light shade",
+        "water_and_soil": "even moisture; loose non-compacted soil",
+        "propagation": "direct seed",
+        "harvest_or_display_organ": "storage root"
+      },
+      "specific_notes": "harvest young small roots",
+      "source_lead": {
+        "url": "https://plants.ces.ncsu.edu/plants/daucus-carota/",
+        "status": "general_species_reference_not_cultivar_verified"
+      },
+      "evidence_status": "provisional_starter_description_cultivar_traits_pending_source_audit",
+      "codex": {
+        "use_for": "prototype visual differentiation and broad growth archetype",
+        "numeric_growth_model_approved": false,
+        "ready_for_faithful_cultivar_simulation": false
+      }
+    },
+    {
+      "id": "starter_lettuces_black_seeded_simpson",
+      "parent_taxon": {
+        "scientific_name": "Lactuca sativa",
+        "family": "Asteraceae"
+      },
+      "cultivar_or_selection": "Black Seeded Simpson",
+      "record_type": "cultivar_or_named_selection",
+      "category": "lettuces",
+      "appearance": {
+        "growth_habit": "looseleaf rosette",
+        "distinguishing_features": "ruffled light-green leaves without tight head"
+      },
+      "basic_biology": {
+        "life_cycle": "cool-season annual",
+        "light": "full sun to part shade",
+        "water_and_soil": "consistent moisture; fertile draining soil",
+        "propagation": "seed/transplant",
+        "harvest_or_display_organ": "leaves"
+      },
+      "specific_notes": "cut-and-come-again leaf harvest",
+      "source_lead": {
+        "url": "https://plants.ces.ncsu.edu/plants/lactuca-sativa/",
+        "status": "general_species_reference_not_cultivar_verified"
+      },
+      "evidence_status": "provisional_starter_description_cultivar_traits_pending_source_audit",
+      "codex": {
+        "use_for": "prototype visual differentiation and broad growth archetype",
+        "numeric_growth_model_approved": false,
+        "ready_for_faithful_cultivar_simulation": false
+      }
+    },
+    {
+      "id": "starter_lettuces_buttercrunch",
+      "parent_taxon": {
+        "scientific_name": "Lactuca sativa",
+        "family": "Asteraceae"
+      },
+      "cultivar_or_selection": "Buttercrunch",
+      "record_type": "cultivar_or_named_selection",
+      "category": "lettuces",
+      "appearance": {
+        "growth_habit": "butterhead rosette",
+        "distinguishing_features": "tender green leaves forming loose soft head"
+      },
+      "basic_biology": {
+        "life_cycle": "cool-season annual",
+        "light": "full sun to part shade",
+        "water_and_soil": "consistent moisture; fertile draining soil",
+        "propagation": "seed/transplant",
+        "harvest_or_display_organ": "leaves"
+      },
+      "specific_notes": "harvest head or outer leaves",
+      "source_lead": {
+        "url": "https://plants.ces.ncsu.edu/plants/lactuca-sativa/",
+        "status": "general_species_reference_not_cultivar_verified"
+      },
+      "evidence_status": "provisional_starter_description_cultivar_traits_pending_source_audit",
+      "codex": {
+        "use_for": "prototype visual differentiation and broad growth archetype",
+        "numeric_growth_model_approved": false,
+        "ready_for_faithful_cultivar_simulation": false
+      }
+    },
+    {
+      "id": "starter_lettuces_parris_island_cos",
+      "parent_taxon": {
+        "scientific_name": "Lactuca sativa",
+        "family": "Asteraceae"
+      },
+      "cultivar_or_selection": "Parris Island Cos",
+      "record_type": "cultivar_or_named_selection",
+      "category": "lettuces",
+      "appearance": {
+        "growth_habit": "upright romaine",
+        "distinguishing_features": "tall elongated green leaves with pale ribs"
+      },
+      "basic_biology": {
+        "life_cycle": "cool-season annual",
+        "light": "full sun to part shade",
+        "water_and_soil": "consistent moisture; fertile draining soil",
+        "propagation": "seed/transplant",
+        "harvest_or_display_organ": "leaves"
+      },
+      "specific_notes": "harvest romaine head",
+      "source_lead": {
+        "url": "https://plants.ces.ncsu.edu/plants/lactuca-sativa/",
+        "status": "general_species_reference_not_cultivar_verified"
+      },
+      "evidence_status": "provisional_starter_description_cultivar_traits_pending_source_audit",
+      "codex": {
+        "use_for": "prototype visual differentiation and broad growth archetype",
+        "numeric_growth_model_approved": false,
+        "ready_for_faithful_cultivar_simulation": false
+      }
+    },
+    {
+      "id": "starter_lettuces_red_sails",
+      "parent_taxon": {
+        "scientific_name": "Lactuca sativa",
+        "family": "Asteraceae"
+      },
+      "cultivar_or_selection": "Red Sails",
+      "record_type": "cultivar_or_named_selection",
+      "category": "lettuces",
+      "appearance": {
+        "growth_habit": "looseleaf rosette",
+        "distinguishing_features": "bronze-red frilled leaf margins and green bases"
+      },
+      "basic_biology": {
+        "life_cycle": "cool-season annual",
+        "light": "full sun to part shade",
+        "water_and_soil": "consistent moisture; fertile draining soil",
+        "propagation": "seed/transplant",
+        "harvest_or_display_organ": "leaves"
+      },
+      "specific_notes": "red pigmentation varies with light",
+      "source_lead": {
+        "url": "https://plants.ces.ncsu.edu/plants/lactuca-sativa/",
+        "status": "general_species_reference_not_cultivar_verified"
+      },
+      "evidence_status": "provisional_starter_description_cultivar_traits_pending_source_audit",
+      "codex": {
+        "use_for": "prototype visual differentiation and broad growth archetype",
+        "numeric_growth_model_approved": false,
+        "ready_for_faithful_cultivar_simulation": false
+      }
+    },
+    {
+      "id": "starter_lettuces_little_gem",
+      "parent_taxon": {
+        "scientific_name": "Lactuca sativa",
+        "family": "Asteraceae"
+      },
+      "cultivar_or_selection": "Little Gem",
+      "record_type": "cultivar_or_named_selection",
+      "category": "lettuces",
+      "appearance": {
+        "growth_habit": "compact upright romaine",
+        "distinguishing_features": "small tight green romaine-like heads"
+      },
+      "basic_biology": {
+        "life_cycle": "cool-season annual",
+        "light": "full sun to part shade",
+        "water_and_soil": "consistent moisture; fertile draining soil",
+        "propagation": "seed/transplant",
+        "harvest_or_display_organ": "leaves"
+      },
+      "specific_notes": "compact head harvest",
+      "source_lead": {
+        "url": "https://plants.ces.ncsu.edu/plants/lactuca-sativa/",
+        "status": "general_species_reference_not_cultivar_verified"
+      },
+      "evidence_status": "provisional_starter_description_cultivar_traits_pending_source_audit",
+      "codex": {
+        "use_for": "prototype visual differentiation and broad growth archetype",
+        "numeric_growth_model_approved": false,
+        "ready_for_faithful_cultivar_simulation": false
+      }
+    },
+    {
+      "id": "starter_sunflowers_mammoth_russian",
+      "parent_taxon": {
+        "scientific_name": "Helianthus annuus",
+        "family": "Asteraceae"
+      },
+      "cultivar_or_selection": "Mammoth Russian",
+      "record_type": "cultivar_or_named_selection",
+      "category": "sunflowers",
+      "appearance": {
+        "growth_habit": "very tall erect stalk",
+        "distinguishing_features": "huge yellow ray flowers around dark seed-bearing disc"
+      },
+      "basic_biology": {
+        "life_cycle": "warm-season annual",
+        "light": "full sun",
+        "water_and_soil": "moderate moisture; well-drained soil",
+        "propagation": "direct seed",
+        "harvest_or_display_organ": "flowers or seeds"
+      },
+      "specific_notes": "seed and wildlife type; may need wind protection",
+      "source_lead": {
+        "url": "https://plants.ces.ncsu.edu/plants/helianthus-annuus/",
+        "status": "general_species_reference_not_cultivar_verified"
+      },
+      "evidence_status": "provisional_starter_description_cultivar_traits_pending_source_audit",
+      "codex": {
+        "use_for": "prototype visual differentiation and broad growth archetype",
+        "numeric_growth_model_approved": false,
+        "ready_for_faithful_cultivar_simulation": false
+      }
+    },
+    {
+      "id": "starter_sunflowers_teddy_bear",
+      "parent_taxon": {
+        "scientific_name": "Helianthus annuus",
+        "family": "Asteraceae"
+      },
+      "cultivar_or_selection": "Teddy Bear",
+      "record_type": "cultivar_or_named_selection",
+      "category": "sunflowers",
+      "appearance": {
+        "growth_habit": "compact branching annual",
+        "distinguishing_features": "dense fluffy double golden-yellow flowerheads"
+      },
+      "basic_biology": {
+        "life_cycle": "warm-season annual",
+        "light": "full sun",
+        "water_and_soil": "moderate moisture; well-drained soil",
+        "propagation": "direct seed",
+        "harvest_or_display_organ": "flowers or seeds"
+      },
+      "specific_notes": "ornamental pollen visibility varies",
+      "source_lead": {
+        "url": "https://plants.ces.ncsu.edu/plants/helianthus-annuus/",
+        "status": "general_species_reference_not_cultivar_verified"
+      },
+      "evidence_status": "provisional_starter_description_cultivar_traits_pending_source_audit",
+      "codex": {
+        "use_for": "prototype visual differentiation and broad growth archetype",
+        "numeric_growth_model_approved": false,
+        "ready_for_faithful_cultivar_simulation": false
+      }
+    },
+    {
+      "id": "starter_sunflowers_autumn_beauty",
+      "parent_taxon": {
+        "scientific_name": "Helianthus annuus",
+        "family": "Asteraceae"
+      },
+      "cultivar_or_selection": "Autumn Beauty",
+      "record_type": "seed_mix_or_strain",
+      "category": "sunflowers",
+      "appearance": {
+        "growth_habit": "branching tall annual",
+        "distinguishing_features": "mixed yellow bronze and rusty-red rays around dark centers"
+      },
+      "basic_biology": {
+        "life_cycle": "warm-season annual",
+        "light": "full sun",
+        "water_and_soil": "moderate moisture; well-drained soil",
+        "propagation": "direct seed",
+        "harvest_or_display_organ": "flowers or seeds"
+      },
+      "specific_notes": "mixed-color seed strain; phenotypes vary",
+      "source_lead": {
+        "url": "https://plants.ces.ncsu.edu/plants/helianthus-annuus/",
+        "status": "general_species_reference_not_cultivar_verified"
+      },
+      "evidence_status": "provisional_starter_description_cultivar_traits_pending_source_audit",
+      "codex": {
+        "use_for": "prototype visual differentiation and broad growth archetype",
+        "numeric_growth_model_approved": false,
+        "ready_for_faithful_cultivar_simulation": false
+      }
+    },
+    {
+      "id": "starter_sunflowers_lemon_queen_annual",
+      "parent_taxon": {
+        "scientific_name": "Helianthus annuus",
+        "family": "Asteraceae"
+      },
+      "cultivar_or_selection": "Lemon Queen Annual",
+      "record_type": "cultivar_or_named_selection",
+      "category": "sunflowers",
+      "appearance": {
+        "growth_habit": "branching tall annual",
+        "distinguishing_features": "pale lemon-yellow rays around dark central disc"
+      },
+      "basic_biology": {
+        "life_cycle": "warm-season annual",
+        "light": "full sun",
+        "water_and_soil": "moderate moisture; well-drained soil",
+        "propagation": "direct seed",
+        "harvest_or_display_organ": "flowers or seeds"
+      },
+      "specific_notes": "verify seller naming; distinct from perennial Lemon Queen",
+      "source_lead": {
+        "url": "https://plants.ces.ncsu.edu/plants/helianthus-annuus/",
+        "status": "general_species_reference_not_cultivar_verified"
+      },
+      "evidence_status": "provisional_starter_description_cultivar_traits_pending_source_audit",
+      "codex": {
+        "use_for": "prototype visual differentiation and broad growth archetype",
+        "numeric_growth_model_approved": false,
+        "ready_for_faithful_cultivar_simulation": false
+      }
+    },
+    {
+      "id": "starter_sunflowers_velvet_queen",
+      "parent_taxon": {
+        "scientific_name": "Helianthus annuus",
+        "family": "Asteraceae"
+      },
+      "cultivar_or_selection": "Velvet Queen",
+      "record_type": "cultivar_or_named_selection",
+      "category": "sunflowers",
+      "appearance": {
+        "growth_habit": "branching annual",
+        "distinguishing_features": "deep burgundy-red ray petals surrounding dark disc"
+      },
+      "basic_biology": {
+        "life_cycle": "warm-season annual",
+        "light": "full sun",
+        "water_and_soil": "moderate moisture; well-drained soil",
+        "propagation": "direct seed",
+        "harvest_or_display_organ": "flowers or seeds"
+      },
+      "specific_notes": "flower coloration varies",
+      "source_lead": {
+        "url": "https://plants.ces.ncsu.edu/plants/helianthus-annuus/",
+        "status": "general_species_reference_not_cultivar_verified"
+      },
+      "evidence_status": "provisional_starter_description_cultivar_traits_pending_source_audit",
+      "codex": {
+        "use_for": "prototype visual differentiation and broad growth archetype",
+        "numeric_growth_model_approved": false,
+        "ready_for_faithful_cultivar_simulation": false
+      }
+    },
+    {
+      "id": "starter_zinnias_benary_s_giant_scarlet",
+      "parent_taxon": {
+        "scientific_name": "Zinnia elegans",
+        "family": "Asteraceae"
+      },
+      "cultivar_or_selection": "Benary's Giant Scarlet",
+      "record_type": "cultivar_or_named_selection",
+      "category": "zinnias",
+      "appearance": {
+        "growth_habit": "upright branching annual",
+        "distinguishing_features": "large double scarlet flowerheads"
+      },
+      "basic_biology": {
+        "life_cycle": "frost-tender annual",
+        "light": "full sun",
+        "water_and_soil": "water soil; avoid prolonged wet foliage; good drainage",
+        "propagation": "direct seed/transplant",
+        "harvest_or_display_organ": "flower"
+      },
+      "specific_notes": "cut-flower cultivar",
+      "source_lead": {
+        "url": "https://plants.ces.ncsu.edu/plants/zinnia-elegans/",
+        "status": "general_species_reference_not_cultivar_verified"
+      },
+      "evidence_status": "provisional_starter_description_cultivar_traits_pending_source_audit",
+      "codex": {
+        "use_for": "prototype visual differentiation and broad growth archetype",
+        "numeric_growth_model_approved": false,
+        "ready_for_faithful_cultivar_simulation": false
+      }
+    },
+    {
+      "id": "starter_zinnias_benary_s_giant_lime",
+      "parent_taxon": {
+        "scientific_name": "Zinnia elegans",
+        "family": "Asteraceae"
+      },
+      "cultivar_or_selection": "Benary's Giant Lime",
+      "record_type": "cultivar_or_named_selection",
+      "category": "zinnias",
+      "appearance": {
+        "growth_habit": "upright branching annual",
+        "distinguishing_features": "large double lime-green flowerheads"
+      },
+      "basic_biology": {
+        "life_cycle": "frost-tender annual",
+        "light": "full sun",
+        "water_and_soil": "water soil; avoid prolonged wet foliage; good drainage",
+        "propagation": "direct seed/transplant",
+        "harvest_or_display_organ": "flower"
+      },
+      "specific_notes": "cut-flower cultivar",
+      "source_lead": {
+        "url": "https://plants.ces.ncsu.edu/plants/zinnia-elegans/",
+        "status": "general_species_reference_not_cultivar_verified"
+      },
+      "evidence_status": "provisional_starter_description_cultivar_traits_pending_source_audit",
+      "codex": {
+        "use_for": "prototype visual differentiation and broad growth archetype",
+        "numeric_growth_model_approved": false,
+        "ready_for_faithful_cultivar_simulation": false
+      }
+    },
+    {
+      "id": "starter_zinnias_queen_red_lime",
+      "parent_taxon": {
+        "scientific_name": "Zinnia elegans",
+        "family": "Asteraceae"
+      },
+      "cultivar_or_selection": "Queen Red Lime",
+      "record_type": "cultivar_or_named_selection",
+      "category": "zinnias",
+      "appearance": {
+        "growth_habit": "upright branching annual",
+        "distinguishing_features": "muted red-pink outer petals blending into chartreuse centers"
+      },
+      "basic_biology": {
+        "life_cycle": "frost-tender annual",
+        "light": "full sun",
+        "water_and_soil": "water soil; avoid prolonged wet foliage; good drainage",
+        "propagation": "direct seed/transplant",
+        "harvest_or_display_organ": "flower"
+      },
+      "specific_notes": "antique-toned cut flower",
+      "source_lead": {
+        "url": "https://plants.ces.ncsu.edu/plants/zinnia-elegans/",
+        "status": "general_species_reference_not_cultivar_verified"
+      },
+      "evidence_status": "provisional_starter_description_cultivar_traits_pending_source_audit",
+      "codex": {
+        "use_for": "prototype visual differentiation and broad growth archetype",
+        "numeric_growth_model_approved": false,
+        "ready_for_faithful_cultivar_simulation": false
+      }
+    },
+    {
+      "id": "starter_zinnias_oklahoma_salmon",
+      "parent_taxon": {
+        "scientific_name": "Zinnia elegans",
+        "family": "Asteraceae"
+      },
+      "cultivar_or_selection": "Oklahoma Salmon",
+      "record_type": "cultivar_or_named_selection",
+      "category": "zinnias",
+      "appearance": {
+        "growth_habit": "upright branching annual",
+        "distinguishing_features": "smaller salmon-colored double blooms"
+      },
+      "basic_biology": {
+        "life_cycle": "frost-tender annual",
+        "light": "full sun",
+        "water_and_soil": "water soil; avoid prolonged wet foliage; good drainage",
+        "propagation": "direct seed/transplant",
+        "harvest_or_display_organ": "flower"
+      },
+      "specific_notes": "branching cut-flower cultivar",
+      "source_lead": {
+        "url": "https://plants.ces.ncsu.edu/plants/zinnia-elegans/",
+        "status": "general_species_reference_not_cultivar_verified"
+      },
+      "evidence_status": "provisional_starter_description_cultivar_traits_pending_source_audit",
+      "codex": {
+        "use_for": "prototype visual differentiation and broad growth archetype",
+        "numeric_growth_model_approved": false,
+        "ready_for_faithful_cultivar_simulation": false
+      }
+    },
+    {
+      "id": "starter_zinnias_california_giants_mix",
+      "parent_taxon": {
+        "scientific_name": "Zinnia elegans",
+        "family": "Asteraceae"
+      },
+      "cultivar_or_selection": "California Giants Mix",
+      "record_type": "seed_mix_or_strain",
+      "category": "zinnias",
+      "appearance": {
+        "growth_habit": "tall branching annual",
+        "distinguishing_features": "large multicolored dahlia-type blooms"
+      },
+      "basic_biology": {
+        "life_cycle": "frost-tender annual",
+        "light": "full sun",
+        "water_and_soil": "water soil; avoid prolonged wet foliage; good drainage",
+        "propagation": "direct seed/transplant",
+        "harvest_or_display_organ": "flower"
+      },
+      "specific_notes": "seed mixture; individual colors variable",
+      "source_lead": {
+        "url": "https://plants.ces.ncsu.edu/plants/zinnia-elegans/",
+        "status": "general_species_reference_not_cultivar_verified"
+      },
+      "evidence_status": "provisional_starter_description_cultivar_traits_pending_source_audit",
+      "codex": {
+        "use_for": "prototype visual differentiation and broad growth archetype",
+        "numeric_growth_model_approved": false,
+        "ready_for_faithful_cultivar_simulation": false
+      }
+    },
+    {
+      "id": "starter_apple_trees_gala",
+      "parent_taxon": {
+        "scientific_name": "Malus domestica",
+        "family": "Rosaceae"
+      },
+      "cultivar_or_selection": "Gala",
+      "record_type": "cultivar_or_named_selection",
+      "category": "apple_trees",
+      "appearance": {
+        "growth_habit": "deciduous small-to-medium grafted tree",
+        "distinguishing_features": "medium red-orange striped apples over yellow ground"
+      },
+      "basic_biology": {
+        "life_cycle": "temperate deciduous perennial tree",
+        "light": "full sun",
+        "water_and_soil": "consistent establishment moisture; draining soil",
+        "propagation": "grafted tree",
+        "harvest_or_display_organ": "fruit"
+      },
+      "specific_notes": "rootstock determines size; usually requires compatible pollen",
+      "source_lead": {
+        "url": "https://plants.ces.ncsu.edu/plants/malus-domestica/",
+        "status": "general_species_reference_not_cultivar_verified"
+      },
+      "evidence_status": "provisional_starter_description_cultivar_traits_pending_source_audit",
+      "codex": {
+        "use_for": "prototype visual differentiation and broad growth archetype",
+        "numeric_growth_model_approved": false,
+        "ready_for_faithful_cultivar_simulation": false
+      }
+    },
+    {
+      "id": "starter_apple_trees_granny_smith",
+      "parent_taxon": {
+        "scientific_name": "Malus domestica",
+        "family": "Rosaceae"
+      },
+      "cultivar_or_selection": "Granny Smith",
+      "record_type": "cultivar_or_named_selection",
+      "category": "apple_trees",
+      "appearance": {
+        "growth_habit": "deciduous grafted tree",
+        "distinguishing_features": "green-skinned firm tart apples"
+      },
+      "basic_biology": {
+        "life_cycle": "temperate deciduous perennial tree",
+        "light": "full sun",
+        "water_and_soil": "consistent establishment moisture; draining soil",
+        "propagation": "grafted tree",
+        "harvest_or_display_organ": "fruit"
+      },
+      "specific_notes": "chill and harvest timing location-dependent",
+      "source_lead": {
+        "url": "https://plants.ces.ncsu.edu/plants/malus-domestica/",
+        "status": "general_species_reference_not_cultivar_verified"
+      },
+      "evidence_status": "provisional_starter_description_cultivar_traits_pending_source_audit",
+      "codex": {
+        "use_for": "prototype visual differentiation and broad growth archetype",
+        "numeric_growth_model_approved": false,
+        "ready_for_faithful_cultivar_simulation": false
+      }
+    },
+    {
+      "id": "starter_apple_trees_honeycrisp",
+      "parent_taxon": {
+        "scientific_name": "Malus domestica",
+        "family": "Rosaceae"
+      },
+      "cultivar_or_selection": "Honeycrisp",
+      "record_type": "cultivar_or_named_selection",
+      "category": "apple_trees",
+      "appearance": {
+        "growth_habit": "deciduous grafted tree",
+        "distinguishing_features": "red-blushed crisp apples over pale background"
+      },
+      "basic_biology": {
+        "life_cycle": "temperate deciduous perennial tree",
+        "light": "full sun",
+        "water_and_soil": "consistent establishment moisture; draining soil",
+        "propagation": "grafted tree",
+        "harvest_or_display_organ": "fruit"
+      },
+      "specific_notes": "disease and climate suitability depend on region",
+      "source_lead": {
+        "url": "https://plants.ces.ncsu.edu/plants/malus-domestica/",
+        "status": "general_species_reference_not_cultivar_verified"
+      },
+      "evidence_status": "provisional_starter_description_cultivar_traits_pending_source_audit",
+      "codex": {
+        "use_for": "prototype visual differentiation and broad growth archetype",
+        "numeric_growth_model_approved": false,
+        "ready_for_faithful_cultivar_simulation": false
+      }
+    },
+    {
+      "id": "starter_apple_trees_fuji",
+      "parent_taxon": {
+        "scientific_name": "Malus domestica",
+        "family": "Rosaceae"
+      },
+      "cultivar_or_selection": "Fuji",
+      "record_type": "cultivar_or_named_selection",
+      "category": "apple_trees",
+      "appearance": {
+        "growth_habit": "deciduous grafted tree",
+        "distinguishing_features": "round red-pink-striped sweet apples"
+      },
+      "basic_biology": {
+        "life_cycle": "temperate deciduous perennial tree",
+        "light": "full sun",
+        "water_and_soil": "consistent establishment moisture; draining soil",
+        "propagation": "grafted tree",
+        "harvest_or_display_organ": "fruit"
+      },
+      "specific_notes": "requires compatible pollination",
+      "source_lead": {
+        "url": "https://plants.ces.ncsu.edu/plants/malus-domestica/",
+        "status": "general_species_reference_not_cultivar_verified"
+      },
+      "evidence_status": "provisional_starter_description_cultivar_traits_pending_source_audit",
+      "codex": {
+        "use_for": "prototype visual differentiation and broad growth archetype",
+        "numeric_growth_model_approved": false,
+        "ready_for_faithful_cultivar_simulation": false
+      }
+    },
+    {
+      "id": "starter_apple_trees_golden_delicious",
+      "parent_taxon": {
+        "scientific_name": "Malus domestica",
+        "family": "Rosaceae"
+      },
+      "cultivar_or_selection": "Golden Delicious",
+      "record_type": "cultivar_or_named_selection",
+      "category": "apple_trees",
+      "appearance": {
+        "growth_habit": "deciduous grafted tree",
+        "distinguishing_features": "yellow-gold rounded ripe apples"
+      },
+      "basic_biology": {
+        "life_cycle": "temperate deciduous perennial tree",
+        "light": "full sun",
+        "water_and_soil": "consistent establishment moisture; draining soil",
+        "propagation": "grafted tree",
+        "harvest_or_display_organ": "fruit"
+      },
+      "specific_notes": "potential pollen partner for compatible bloom periods",
+      "source_lead": {
+        "url": "https://plants.ces.ncsu.edu/plants/malus-domestica/",
+        "status": "general_species_reference_not_cultivar_verified"
+      },
+      "evidence_status": "provisional_starter_description_cultivar_traits_pending_source_audit",
+      "codex": {
+        "use_for": "prototype visual differentiation and broad growth archetype",
+        "numeric_growth_model_approved": false,
+        "ready_for_faithful_cultivar_simulation": false
+      }
+    },
+    {
+      "id": "starter_blueberries_bluecrop",
+      "parent_taxon": {
+        "scientific_name": "Vaccinium corymbosum",
+        "family": "Ericaceae"
+      },
+      "cultivar_or_selection": "Bluecrop",
+      "record_type": "cultivar_or_named_selection",
+      "category": "blueberries",
+      "appearance": {
+        "growth_habit": "upright multi-stem shrub",
+        "distinguishing_features": "medium blue berries with pale waxy bloom"
+      },
+      "basic_biology": {
+        "life_cycle": "deciduous woody perennial shrub",
+        "light": "full sun to part shade",
+        "water_and_soil": "steady moisture; acidic, well-drained organic soil",
+        "propagation": "vegetative nursery plant",
+        "harvest_or_display_organ": "berries"
+      },
+      "specific_notes": "northern highbush; climate adaptation review",
+      "source_lead": {
+        "url": "https://plants.ces.ncsu.edu/plants/vaccinium-corymbosum/",
+        "status": "general_species_reference_not_cultivar_verified"
+      },
+      "evidence_status": "provisional_starter_description_cultivar_traits_pending_source_audit",
+      "codex": {
+        "use_for": "prototype visual differentiation and broad growth archetype",
+        "numeric_growth_model_approved": false,
+        "ready_for_faithful_cultivar_simulation": false
+      }
+    },
+    {
+      "id": "starter_blueberries_duke",
+      "parent_taxon": {
+        "scientific_name": "Vaccinium corymbosum",
+        "family": "Ericaceae"
+      },
+      "cultivar_or_selection": "Duke",
+      "record_type": "cultivar_or_named_selection",
+      "category": "blueberries",
+      "appearance": {
+        "growth_habit": "upright multi-stem shrub",
+        "distinguishing_features": "firm light-blue berries in clusters"
+      },
+      "basic_biology": {
+        "life_cycle": "deciduous woody perennial shrub",
+        "light": "full sun to part shade",
+        "water_and_soil": "steady moisture; acidic, well-drained organic soil",
+        "propagation": "vegetative nursery plant",
+        "harvest_or_display_organ": "berries"
+      },
+      "specific_notes": "northern highbush; climate adaptation review",
+      "source_lead": {
+        "url": "https://plants.ces.ncsu.edu/plants/vaccinium-corymbosum/",
+        "status": "general_species_reference_not_cultivar_verified"
+      },
+      "evidence_status": "provisional_starter_description_cultivar_traits_pending_source_audit",
+      "codex": {
+        "use_for": "prototype visual differentiation and broad growth archetype",
+        "numeric_growth_model_approved": false,
+        "ready_for_faithful_cultivar_simulation": false
+      }
+    },
+    {
+      "id": "starter_blueberries_legacy",
+      "parent_taxon": {
+        "scientific_name": "Vaccinium corymbosum",
+        "family": "Ericaceae"
+      },
+      "cultivar_or_selection": "Legacy",
+      "record_type": "cultivar_or_named_selection",
+      "category": "blueberries",
+      "appearance": {
+        "growth_habit": "upright multi-stem shrub",
+        "distinguishing_features": "blue fruit clusters; foliage may persist in mild winter"
+      },
+      "basic_biology": {
+        "life_cycle": "deciduous woody perennial shrub",
+        "light": "full sun to part shade",
+        "water_and_soil": "steady moisture; acidic, well-drained organic soil",
+        "propagation": "vegetative nursery plant",
+        "harvest_or_display_organ": "berries"
+      },
+      "specific_notes": "mostly northern highbush ancestry; regional behavior varies",
+      "source_lead": {
+        "url": "https://plants.ces.ncsu.edu/plants/vaccinium-corymbosum/",
+        "status": "general_species_reference_not_cultivar_verified"
+      },
+      "evidence_status": "provisional_starter_description_cultivar_traits_pending_source_audit",
+      "codex": {
+        "use_for": "prototype visual differentiation and broad growth archetype",
+        "numeric_growth_model_approved": false,
+        "ready_for_faithful_cultivar_simulation": false
+      }
+    },
+    {
+      "id": "starter_blueberries_patriot",
+      "parent_taxon": {
+        "scientific_name": "Vaccinium corymbosum",
+        "family": "Ericaceae"
+      },
+      "cultivar_or_selection": "Patriot",
+      "record_type": "cultivar_or_named_selection",
+      "category": "blueberries",
+      "appearance": {
+        "growth_habit": "compact upright shrub",
+        "distinguishing_features": "large blue fruit with waxy bloom"
+      },
+      "basic_biology": {
+        "life_cycle": "deciduous woody perennial shrub",
+        "light": "full sun to part shade",
+        "water_and_soil": "steady moisture; acidic, well-drained organic soil",
+        "propagation": "vegetative nursery plant",
+        "harvest_or_display_organ": "berries"
+      },
+      "specific_notes": "northern highbush; suitability depends on climate",
+      "source_lead": {
+        "url": "https://plants.ces.ncsu.edu/plants/vaccinium-corymbosum/",
+        "status": "general_species_reference_not_cultivar_verified"
+      },
+      "evidence_status": "provisional_starter_description_cultivar_traits_pending_source_audit",
+      "codex": {
+        "use_for": "prototype visual differentiation and broad growth archetype",
+        "numeric_growth_model_approved": false,
+        "ready_for_faithful_cultivar_simulation": false
+      }
+    },
+    {
+      "id": "starter_blueberries_chandler",
+      "parent_taxon": {
+        "scientific_name": "Vaccinium corymbosum",
+        "family": "Ericaceae"
+      },
+      "cultivar_or_selection": "Chandler",
+      "record_type": "cultivar_or_named_selection",
+      "category": "blueberries",
+      "appearance": {
+        "growth_habit": "upright shrub",
+        "distinguishing_features": "very large blue berries"
+      },
+      "basic_biology": {
+        "life_cycle": "deciduous woody perennial shrub",
+        "light": "full sun to part shade",
+        "water_and_soil": "steady moisture; acidic, well-drained organic soil",
+        "propagation": "vegetative nursery plant",
+        "harvest_or_display_organ": "berries"
+      },
+      "specific_notes": "northern highbush; prolonged ripening can occur",
+      "source_lead": {
+        "url": "https://plants.ces.ncsu.edu/plants/vaccinium-corymbosum/",
+        "status": "general_species_reference_not_cultivar_verified"
+      },
+      "evidence_status": "provisional_starter_description_cultivar_traits_pending_source_audit",
+      "codex": {
+        "use_for": "prototype visual differentiation and broad growth archetype",
+        "numeric_growth_model_approved": false,
+        "ready_for_faithful_cultivar_simulation": false
+      }
+    },
+    {
+      "id": "starter_hydrangeas_annabelle",
+      "parent_taxon": {
+        "scientific_name": "Hydrangea arborescens",
+        "family": "Hydrangeaceae"
+      },
+      "cultivar_or_selection": "Annabelle",
+      "record_type": "cultivar_or_named_selection",
+      "category": "hydrangeas",
+      "appearance": {
+        "growth_habit": "rounded multi-stem shrub",
+        "distinguishing_features": "large spherical white sterile-floret heads maturing greenish"
+      },
+      "basic_biology": {
+        "life_cycle": "perennial deciduous woody shrub",
+        "light": "morning sun/afternoon shade often useful; varies by species",
+        "water_and_soil": "regular moisture; organic well-drained soil",
+        "propagation": "cuttings or nursery plant",
+        "harvest_or_display_organ": "ornamental inflorescence"
+      },
+      "specific_notes": "smooth hydrangea; flowers on new wood",
+      "source_lead": {
+        "url": "https://plants.ces.ncsu.edu/",
+        "status": "general_species_reference_not_cultivar_verified"
+      },
+      "evidence_status": "provisional_starter_description_cultivar_traits_pending_source_audit",
+      "codex": {
+        "use_for": "prototype visual differentiation and broad growth archetype",
+        "numeric_growth_model_approved": false,
+        "ready_for_faithful_cultivar_simulation": false
+      }
+    },
+    {
+      "id": "starter_hydrangeas_incrediball",
+      "parent_taxon": {
+        "scientific_name": "Hydrangea arborescens",
+        "family": "Hydrangeaceae"
+      },
+      "cultivar_or_selection": "Incrediball",
+      "record_type": "cultivar_or_named_selection",
+      "category": "hydrangeas",
+      "appearance": {
+        "growth_habit": "rounded multi-stem shrub",
+        "distinguishing_features": "very large round white inflorescences"
+      },
+      "basic_biology": {
+        "life_cycle": "perennial deciduous woody shrub",
+        "light": "morning sun/afternoon shade often useful; varies by species",
+        "water_and_soil": "regular moisture; organic well-drained soil",
+        "propagation": "cuttings or nursery plant",
+        "harvest_or_display_organ": "ornamental inflorescence"
+      },
+      "specific_notes": "smooth hydrangea selection; flowers on new wood",
+      "source_lead": {
+        "url": "https://plants.ces.ncsu.edu/",
+        "status": "general_species_reference_not_cultivar_verified"
+      },
+      "evidence_status": "provisional_starter_description_cultivar_traits_pending_source_audit",
+      "codex": {
+        "use_for": "prototype visual differentiation and broad growth archetype",
+        "numeric_growth_model_approved": false,
+        "ready_for_faithful_cultivar_simulation": false
+      }
+    },
+    {
+      "id": "starter_hydrangeas_limelight",
+      "parent_taxon": {
+        "scientific_name": "Hydrangea paniculata",
+        "family": "Hydrangeaceae"
+      },
+      "cultivar_or_selection": "Limelight",
+      "record_type": "cultivar_or_named_selection",
+      "category": "hydrangeas",
+      "appearance": {
+        "growth_habit": "upright shrub or small trained tree",
+        "distinguishing_features": "conical lime-white panicles aging pink"
+      },
+      "basic_biology": {
+        "life_cycle": "perennial deciduous woody shrub",
+        "light": "morning sun/afternoon shade often useful; varies by species",
+        "water_and_soil": "regular moisture; organic well-drained soil",
+        "propagation": "cuttings or nursery plant",
+        "harvest_or_display_organ": "ornamental inflorescence"
+      },
+      "specific_notes": "panicle hydrangea; flowers on new wood",
+      "source_lead": {
+        "url": "https://plants.ces.ncsu.edu/",
+        "status": "general_species_reference_not_cultivar_verified"
+      },
+      "evidence_status": "provisional_starter_description_cultivar_traits_pending_source_audit",
+      "codex": {
+        "use_for": "prototype visual differentiation and broad growth archetype",
+        "numeric_growth_model_approved": false,
+        "ready_for_faithful_cultivar_simulation": false
+      }
+    },
+    {
+      "id": "starter_hydrangeas_pinky_winky",
+      "parent_taxon": {
+        "scientific_name": "Hydrangea paniculata",
+        "family": "Hydrangeaceae"
+      },
+      "cultivar_or_selection": "Pinky Winky",
+      "record_type": "cultivar_or_named_selection",
+      "category": "hydrangeas",
+      "appearance": {
+        "growth_habit": "upright shrub",
+        "distinguishing_features": "conical flower panicles transitioning white to pink"
+      },
+      "basic_biology": {
+        "life_cycle": "perennial deciduous woody shrub",
+        "light": "morning sun/afternoon shade often useful; varies by species",
+        "water_and_soil": "regular moisture; organic well-drained soil",
+        "propagation": "cuttings or nursery plant",
+        "harvest_or_display_organ": "ornamental inflorescence"
+      },
+      "specific_notes": "panicle hydrangea; flowers on new wood",
+      "source_lead": {
+        "url": "https://plants.ces.ncsu.edu/",
+        "status": "general_species_reference_not_cultivar_verified"
+      },
+      "evidence_status": "provisional_starter_description_cultivar_traits_pending_source_audit",
+      "codex": {
+        "use_for": "prototype visual differentiation and broad growth archetype",
+        "numeric_growth_model_approved": false,
+        "ready_for_faithful_cultivar_simulation": false
+      }
+    },
+    {
+      "id": "starter_hydrangeas_nikko_blue",
+      "parent_taxon": {
+        "scientific_name": "Hydrangea macrophylla",
+        "family": "Hydrangeaceae"
+      },
+      "cultivar_or_selection": "Nikko Blue",
+      "record_type": "cultivar_or_named_selection",
+      "category": "hydrangeas",
+      "appearance": {
+        "growth_habit": "rounded broadleaf shrub",
+        "distinguishing_features": "rounded mophead flowers often blue in acidic aluminum-available soils, pinker otherwise"
+      },
+      "basic_biology": {
+        "life_cycle": "perennial deciduous woody shrub",
+        "light": "morning sun/afternoon shade often useful; varies by species",
+        "water_and_soil": "regular moisture; organic well-drained soil",
+        "propagation": "cuttings or nursery plant",
+        "harvest_or_display_organ": "ornamental inflorescence"
+      },
+      "specific_notes": "bigleaf hydrangea; old-wood buds often important",
+      "source_lead": {
+        "url": "https://plants.ces.ncsu.edu/",
+        "status": "general_species_reference_not_cultivar_verified"
+      },
+      "evidence_status": "provisional_starter_description_cultivar_traits_pending_source_audit",
+      "codex": {
+        "use_for": "prototype visual differentiation and broad growth archetype",
+        "numeric_growth_model_approved": false,
+        "ready_for_faithful_cultivar_simulation": false
+      }
+    }
+  ]
+}

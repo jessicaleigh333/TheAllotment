@@ -1,0 +1,1690 @@
+{
+  "schema_version": "1.0",
+  "batch": "starter_named_varieties_005",
+  "record_count": 70,
+  "status": "provisional",
+  "scope": "14 crop and flower groups with 5 horticultural selections each",
+  "warning": "Some entries are cultivated groups, mixes or species types, not verified formal cultivars; numerical growth models and precise varietal claims need source review.",
+  "records": [
+    {
+      "id": "starter_squash_costata_romanesco",
+      "category": "squash",
+      "name": "Costata Romanesco",
+      "parent_scientific_name": "Cucurbita pepo",
+      "family": "Cucurbitaceae",
+      "life_cycle": "frost-tender annual",
+      "sun": "full sun",
+      "soil_water": "fertile well-drained soil; even water",
+      "propagation": "seed/transplant",
+      "harvest_or_display": "fruit",
+      "visual_markers": "ribbed medium-green striped elongated zucchini",
+      "starter_growth_habit": "vining or bush depending on cultivar",
+      "distinctive_note": "vining bush form and prominent ribs",
+      "evidence": {
+        "url": "https://plants.ces.ncsu.edu/",
+        "status": "research_lead_only"
+      },
+      "status": "provisional_starter; cultivar trait verification pending",
+      "codex": {
+        "basic_visual_prototype": true,
+        "accurate_numeric_simulation": false
+      }
+    },
+    {
+      "id": "starter_squash_golden_zucchini",
+      "category": "squash",
+      "name": "Golden Zucchini",
+      "parent_scientific_name": "Cucurbita pepo",
+      "family": "Cucurbitaceae",
+      "life_cycle": "frost-tender annual",
+      "sun": "full sun",
+      "soil_water": "fertile well-drained soil; even water",
+      "propagation": "seed/transplant",
+      "harvest_or_display": "fruit",
+      "visual_markers": "bright golden-yellow slender summer squash",
+      "starter_growth_habit": "vining or bush depending on cultivar",
+      "distinctive_note": "yellow skin, green foliage",
+      "evidence": {
+        "url": "https://plants.ces.ncsu.edu/",
+        "status": "research_lead_only"
+      },
+      "status": "provisional_starter; cultivar trait verification pending",
+      "codex": {
+        "basic_visual_prototype": true,
+        "accurate_numeric_simulation": false
+      }
+    },
+    {
+      "id": "starter_squash_pattypan_white",
+      "category": "squash",
+      "name": "Pattypan White",
+      "parent_scientific_name": "Cucurbita pepo",
+      "family": "Cucurbitaceae",
+      "life_cycle": "frost-tender annual",
+      "sun": "full sun",
+      "soil_water": "fertile well-drained soil; even water",
+      "propagation": "seed/transplant",
+      "harvest_or_display": "fruit",
+      "visual_markers": "flattened scalloped ivory-white summer squash",
+      "starter_growth_habit": "vining or bush depending on cultivar",
+      "distinctive_note": "scalloped edge fruit",
+      "evidence": {
+        "url": "https://plants.ces.ncsu.edu/",
+        "status": "research_lead_only"
+      },
+      "status": "provisional_starter; cultivar trait verification pending",
+      "codex": {
+        "basic_visual_prototype": true,
+        "accurate_numeric_simulation": false
+      }
+    },
+    {
+      "id": "starter_squash_table_queen_acorn",
+      "category": "squash",
+      "name": "Table Queen Acorn",
+      "parent_scientific_name": "Cucurbita pepo",
+      "family": "Cucurbitaceae",
+      "life_cycle": "frost-tender annual",
+      "sun": "full sun",
+      "soil_water": "fertile well-drained soil; even water",
+      "propagation": "seed/transplant",
+      "harvest_or_display": "fruit",
+      "visual_markers": "ribbed dark-green acorn-shaped winter squash",
+      "starter_growth_habit": "vining or bush depending on cultivar",
+      "distinctive_note": "vining, mature fruit harvest",
+      "evidence": {
+        "url": "https://plants.ces.ncsu.edu/",
+        "status": "research_lead_only"
+      },
+      "status": "provisional_starter; cultivar trait verification pending",
+      "codex": {
+        "basic_visual_prototype": true,
+        "accurate_numeric_simulation": false
+      }
+    },
+    {
+      "id": "starter_squash_delicata",
+      "category": "squash",
+      "name": "Delicata",
+      "parent_scientific_name": "Cucurbita pepo",
+      "family": "Cucurbitaceae",
+      "life_cycle": "frost-tender annual",
+      "sun": "full sun",
+      "soil_water": "fertile well-drained soil; even water",
+      "propagation": "seed/transplant",
+      "harvest_or_display": "fruit",
+      "visual_markers": "cream cylindrical winter squash with green stripes",
+      "starter_growth_habit": "vining or bush depending on cultivar",
+      "distinctive_note": "thin-skinned mature squash",
+      "evidence": {
+        "url": "https://plants.ces.ncsu.edu/",
+        "status": "research_lead_only"
+      },
+      "status": "provisional_starter; cultivar trait verification pending",
+      "codex": {
+        "basic_visual_prototype": true,
+        "accurate_numeric_simulation": false
+      }
+    },
+    {
+      "id": "starter_pumpkins_howden",
+      "category": "pumpkins",
+      "name": "Howden",
+      "parent_scientific_name": "Cucurbita spp.",
+      "family": "Cucurbitaceae",
+      "life_cycle": "frost-tender annual vines",
+      "sun": "full sun",
+      "soil_water": "well-drained fertile soil, consistent moisture",
+      "propagation": "seed/transplant",
+      "harvest_or_display": "mature fruit",
+      "visual_markers": "large round orange deeply ribbed pumpkins",
+      "starter_growth_habit": "vining or bush depending on cultivar",
+      "distinctive_note": "Cucurbita pepo jack-o-lantern type",
+      "evidence": {
+        "url": "https://plants.ces.ncsu.edu/",
+        "status": "research_lead_only"
+      },
+      "status": "provisional_starter; cultivar trait verification pending",
+      "codex": {
+        "basic_visual_prototype": true,
+        "accurate_numeric_simulation": false
+      }
+    },
+    {
+      "id": "starter_pumpkins_connecticut_field",
+      "category": "pumpkins",
+      "name": "Connecticut Field",
+      "parent_scientific_name": "Cucurbita spp.",
+      "family": "Cucurbitaceae",
+      "life_cycle": "frost-tender annual vines",
+      "sun": "full sun",
+      "soil_water": "well-drained fertile soil, consistent moisture",
+      "propagation": "seed/transplant",
+      "harvest_or_display": "mature fruit",
+      "visual_markers": "large orange slightly flattened pumpkins",
+      "starter_growth_habit": "vining or bush depending on cultivar",
+      "distinctive_note": "Cucurbita pepo heirloom type",
+      "evidence": {
+        "url": "https://plants.ces.ncsu.edu/",
+        "status": "research_lead_only"
+      },
+      "status": "provisional_starter; cultivar trait verification pending",
+      "codex": {
+        "basic_visual_prototype": true,
+        "accurate_numeric_simulation": false
+      }
+    },
+    {
+      "id": "starter_pumpkins_long_island_cheese",
+      "category": "pumpkins",
+      "name": "Long Island Cheese",
+      "parent_scientific_name": "Cucurbita spp.",
+      "family": "Cucurbitaceae",
+      "life_cycle": "frost-tender annual vines",
+      "sun": "full sun",
+      "soil_water": "well-drained fertile soil, consistent moisture",
+      "propagation": "seed/transplant",
+      "harvest_or_display": "mature fruit",
+      "visual_markers": "flattened buff-tan ribbed fruit",
+      "starter_growth_habit": "vining or bush depending on cultivar",
+      "distinctive_note": "Cucurbita moschata",
+      "evidence": {
+        "url": "https://plants.ces.ncsu.edu/",
+        "status": "research_lead_only"
+      },
+      "status": "provisional_starter; cultivar trait verification pending",
+      "codex": {
+        "basic_visual_prototype": true,
+        "accurate_numeric_simulation": false
+      }
+    },
+    {
+      "id": "starter_pumpkins_jarrahdale",
+      "category": "pumpkins",
+      "name": "Jarrahdale",
+      "parent_scientific_name": "Cucurbita spp.",
+      "family": "Cucurbitaceae",
+      "life_cycle": "frost-tender annual vines",
+      "sun": "full sun",
+      "soil_water": "well-drained fertile soil, consistent moisture",
+      "propagation": "seed/transplant",
+      "harvest_or_display": "mature fruit",
+      "visual_markers": "squat blue-gray ribbed mature fruit",
+      "starter_growth_habit": "vining or bush depending on cultivar",
+      "distinctive_note": "Cucurbita maxima",
+      "evidence": {
+        "url": "https://plants.ces.ncsu.edu/",
+        "status": "research_lead_only"
+      },
+      "status": "provisional_starter; cultivar trait verification pending",
+      "codex": {
+        "basic_visual_prototype": true,
+        "accurate_numeric_simulation": false
+      }
+    },
+    {
+      "id": "starter_pumpkins_atlantic_giant",
+      "category": "pumpkins",
+      "name": "Atlantic Giant",
+      "parent_scientific_name": "Cucurbita spp.",
+      "family": "Cucurbitaceae",
+      "life_cycle": "frost-tender annual vines",
+      "sun": "full sun",
+      "soil_water": "well-drained fertile soil, consistent moisture",
+      "propagation": "seed/transplant",
+      "harvest_or_display": "mature fruit",
+      "visual_markers": "very large orange pale pumpkins",
+      "starter_growth_habit": "vining or bush depending on cultivar",
+      "distinctive_note": "Cucurbita maxima giant type",
+      "evidence": {
+        "url": "https://plants.ces.ncsu.edu/",
+        "status": "research_lead_only"
+      },
+      "status": "provisional_starter; cultivar trait verification pending",
+      "codex": {
+        "basic_visual_prototype": true,
+        "accurate_numeric_simulation": false
+      }
+    },
+    {
+      "id": "starter_spinach_bloomsdale_long_standing",
+      "category": "spinach",
+      "name": "Bloomsdale Long Standing",
+      "parent_scientific_name": "Spinacia oleracea",
+      "family": "Amaranthaceae",
+      "life_cycle": "cool-season annual",
+      "sun": "full sun to part shade",
+      "soil_water": "cool fertile draining soil; steady moisture",
+      "propagation": "direct seed",
+      "harvest_or_display": "leaves",
+      "visual_markers": "crinkled dark-green leaves in rosette",
+      "starter_growth_habit": null,
+      "distinctive_note": "savoy spinach",
+      "evidence": {
+        "url": "https://plants.ces.ncsu.edu/",
+        "status": "research_lead_only"
+      },
+      "status": "provisional_starter; cultivar trait verification pending",
+      "codex": {
+        "basic_visual_prototype": true,
+        "accurate_numeric_simulation": false
+      }
+    },
+    {
+      "id": "starter_spinach_giant_winter",
+      "category": "spinach",
+      "name": "Giant Winter",
+      "parent_scientific_name": "Spinacia oleracea",
+      "family": "Amaranthaceae",
+      "life_cycle": "cool-season annual",
+      "sun": "full sun to part shade",
+      "soil_water": "cool fertile draining soil; steady moisture",
+      "propagation": "direct seed",
+      "harvest_or_display": "leaves",
+      "visual_markers": "large broad green leaves",
+      "starter_growth_habit": null,
+      "distinctive_note": "cold-season spinach",
+      "evidence": {
+        "url": "https://plants.ces.ncsu.edu/",
+        "status": "research_lead_only"
+      },
+      "status": "provisional_starter; cultivar trait verification pending",
+      "codex": {
+        "basic_visual_prototype": true,
+        "accurate_numeric_simulation": false
+      }
+    },
+    {
+      "id": "starter_spinach_space",
+      "category": "spinach",
+      "name": "Space",
+      "parent_scientific_name": "Spinacia oleracea",
+      "family": "Amaranthaceae",
+      "life_cycle": "cool-season annual",
+      "sun": "full sun to part shade",
+      "soil_water": "cool fertile draining soil; steady moisture",
+      "propagation": "direct seed",
+      "harvest_or_display": "leaves",
+      "visual_markers": "smooth oval green leaves",
+      "starter_growth_habit": null,
+      "distinctive_note": "smooth-leaved spinach",
+      "evidence": {
+        "url": "https://plants.ces.ncsu.edu/",
+        "status": "research_lead_only"
+      },
+      "status": "provisional_starter; cultivar trait verification pending",
+      "codex": {
+        "basic_visual_prototype": true,
+        "accurate_numeric_simulation": false
+      }
+    },
+    {
+      "id": "starter_spinach_tyee",
+      "category": "spinach",
+      "name": "Tyee",
+      "parent_scientific_name": "Spinacia oleracea",
+      "family": "Amaranthaceae",
+      "life_cycle": "cool-season annual",
+      "sun": "full sun to part shade",
+      "soil_water": "cool fertile draining soil; steady moisture",
+      "propagation": "direct seed",
+      "harvest_or_display": "leaves",
+      "visual_markers": "thick dark-green semi-savoy leaves",
+      "starter_growth_habit": null,
+      "distinctive_note": "compact rosette",
+      "evidence": {
+        "url": "https://plants.ces.ncsu.edu/",
+        "status": "research_lead_only"
+      },
+      "status": "provisional_starter; cultivar trait verification pending",
+      "codex": {
+        "basic_visual_prototype": true,
+        "accurate_numeric_simulation": false
+      }
+    },
+    {
+      "id": "starter_spinach_red_kitten",
+      "category": "spinach",
+      "name": "Red Kitten",
+      "parent_scientific_name": "Spinacia oleracea",
+      "family": "Amaranthaceae",
+      "life_cycle": "cool-season annual",
+      "sun": "full sun to part shade",
+      "soil_water": "cool fertile draining soil; steady moisture",
+      "propagation": "direct seed",
+      "harvest_or_display": "leaves",
+      "visual_markers": "green foliage with red-tinted petioles",
+      "starter_growth_habit": null,
+      "distinctive_note": "red-veined spinach hybrid",
+      "evidence": {
+        "url": "https://plants.ces.ncsu.edu/",
+        "status": "research_lead_only"
+      },
+      "status": "provisional_starter; cultivar trait verification pending",
+      "codex": {
+        "basic_visual_prototype": true,
+        "accurate_numeric_simulation": false
+      }
+    },
+    {
+      "id": "starter_chard_bright_lights",
+      "category": "chard",
+      "name": "Bright Lights",
+      "parent_scientific_name": "Beta vulgaris Cicla Group",
+      "family": "Amaranthaceae",
+      "life_cycle": "biennial grown for leaves",
+      "sun": "sun to part shade",
+      "soil_water": "fertile draining soil, even moisture",
+      "propagation": "direct seed/transplant",
+      "harvest_or_display": "leaves and petioles",
+      "visual_markers": "rainbow-colored stems beneath glossy green leaves",
+      "starter_growth_habit": null,
+      "distinctive_note": "mixed chard strain",
+      "evidence": {
+        "url": "https://plants.ces.ncsu.edu/",
+        "status": "research_lead_only"
+      },
+      "status": "provisional_starter; cultivar trait verification pending",
+      "codex": {
+        "basic_visual_prototype": true,
+        "accurate_numeric_simulation": false
+      }
+    },
+    {
+      "id": "starter_chard_fordhook_giant",
+      "category": "chard",
+      "name": "Fordhook Giant",
+      "parent_scientific_name": "Beta vulgaris Cicla Group",
+      "family": "Amaranthaceae",
+      "life_cycle": "biennial grown for leaves",
+      "sun": "sun to part shade",
+      "soil_water": "fertile draining soil, even moisture",
+      "propagation": "direct seed/transplant",
+      "harvest_or_display": "leaves and petioles",
+      "visual_markers": "broad crinkled leaves with thick white ribs",
+      "starter_growth_habit": null,
+      "distinctive_note": "white-stem chard",
+      "evidence": {
+        "url": "https://plants.ces.ncsu.edu/",
+        "status": "research_lead_only"
+      },
+      "status": "provisional_starter; cultivar trait verification pending",
+      "codex": {
+        "basic_visual_prototype": true,
+        "accurate_numeric_simulation": false
+      }
+    },
+    {
+      "id": "starter_chard_ruby_red",
+      "category": "chard",
+      "name": "Ruby Red",
+      "parent_scientific_name": "Beta vulgaris Cicla Group",
+      "family": "Amaranthaceae",
+      "life_cycle": "biennial grown for leaves",
+      "sun": "sun to part shade",
+      "soil_water": "fertile draining soil, even moisture",
+      "propagation": "direct seed/transplant",
+      "harvest_or_display": "leaves and petioles",
+      "visual_markers": "deep-red petioles and veins; green-red leaves",
+      "starter_growth_habit": null,
+      "distinctive_note": "red-stem type",
+      "evidence": {
+        "url": "https://plants.ces.ncsu.edu/",
+        "status": "research_lead_only"
+      },
+      "status": "provisional_starter; cultivar trait verification pending",
+      "codex": {
+        "basic_visual_prototype": true,
+        "accurate_numeric_simulation": false
+      }
+    },
+    {
+      "id": "starter_chard_orange_fantasia",
+      "category": "chard",
+      "name": "Orange Fantasia",
+      "parent_scientific_name": "Beta vulgaris Cicla Group",
+      "family": "Amaranthaceae",
+      "life_cycle": "biennial grown for leaves",
+      "sun": "sun to part shade",
+      "soil_water": "fertile draining soil, even moisture",
+      "propagation": "direct seed/transplant",
+      "harvest_or_display": "leaves and petioles",
+      "visual_markers": "orange petioles and broad green leaves",
+      "starter_growth_habit": null,
+      "distinctive_note": "colored-stem chard",
+      "evidence": {
+        "url": "https://plants.ces.ncsu.edu/",
+        "status": "research_lead_only"
+      },
+      "status": "provisional_starter; cultivar trait verification pending",
+      "codex": {
+        "basic_visual_prototype": true,
+        "accurate_numeric_simulation": false
+      }
+    },
+    {
+      "id": "starter_chard_peppermint",
+      "category": "chard",
+      "name": "Peppermint",
+      "parent_scientific_name": "Beta vulgaris Cicla Group",
+      "family": "Amaranthaceae",
+      "life_cycle": "biennial grown for leaves",
+      "sun": "sun to part shade",
+      "soil_water": "fertile draining soil, even moisture",
+      "propagation": "direct seed/transplant",
+      "harvest_or_display": "leaves and petioles",
+      "visual_markers": "white petioles streaked bright pink-red",
+      "starter_growth_habit": null,
+      "distinctive_note": "two-tone stalk chard",
+      "evidence": {
+        "url": "https://plants.ces.ncsu.edu/",
+        "status": "research_lead_only"
+      },
+      "status": "provisional_starter; cultivar trait verification pending",
+      "codex": {
+        "basic_visual_prototype": true,
+        "accurate_numeric_simulation": false
+      }
+    },
+    {
+      "id": "starter_collards_georgia_southern",
+      "category": "collards",
+      "name": "Georgia Southern",
+      "parent_scientific_name": "Brassica oleracea Acephala Group",
+      "family": "Brassicaceae",
+      "life_cycle": "cool-season biennial cultivated as annual",
+      "sun": "full sun",
+      "soil_water": "fertile well-drained soil, even moisture",
+      "propagation": "seed/transplant",
+      "harvest_or_display": "leaves",
+      "visual_markers": "large flat blue-green leaves",
+      "starter_growth_habit": null,
+      "distinctive_note": "traditional nonheading collard",
+      "evidence": {
+        "url": "https://plants.ces.ncsu.edu/",
+        "status": "research_lead_only"
+      },
+      "status": "provisional_starter; cultivar trait verification pending",
+      "codex": {
+        "basic_visual_prototype": true,
+        "accurate_numeric_simulation": false
+      }
+    },
+    {
+      "id": "starter_collards_vates",
+      "category": "collards",
+      "name": "Vates",
+      "parent_scientific_name": "Brassica oleracea Acephala Group",
+      "family": "Brassicaceae",
+      "life_cycle": "cool-season biennial cultivated as annual",
+      "sun": "full sun",
+      "soil_water": "fertile well-drained soil, even moisture",
+      "propagation": "seed/transplant",
+      "harvest_or_display": "leaves",
+      "visual_markers": "compact upright rosette with dark-green leaves",
+      "starter_growth_habit": null,
+      "distinctive_note": "slow-bolting selection",
+      "evidence": {
+        "url": "https://plants.ces.ncsu.edu/",
+        "status": "research_lead_only"
+      },
+      "status": "provisional_starter; cultivar trait verification pending",
+      "codex": {
+        "basic_visual_prototype": true,
+        "accurate_numeric_simulation": false
+      }
+    },
+    {
+      "id": "starter_collards_morris_heading",
+      "category": "collards",
+      "name": "Morris Heading",
+      "parent_scientific_name": "Brassica oleracea Acephala Group",
+      "family": "Brassicaceae",
+      "life_cycle": "cool-season biennial cultivated as annual",
+      "sun": "full sun",
+      "soil_water": "fertile well-drained soil, even moisture",
+      "propagation": "seed/transplant",
+      "harvest_or_display": "leaves",
+      "visual_markers": "large somewhat cupped green leaves",
+      "starter_growth_habit": null,
+      "distinctive_note": "loose-heading tendency",
+      "evidence": {
+        "url": "https://plants.ces.ncsu.edu/",
+        "status": "research_lead_only"
+      },
+      "status": "provisional_starter; cultivar trait verification pending",
+      "codex": {
+        "basic_visual_prototype": true,
+        "accurate_numeric_simulation": false
+      }
+    },
+    {
+      "id": "starter_collards_champion",
+      "category": "collards",
+      "name": "Champion",
+      "parent_scientific_name": "Brassica oleracea Acephala Group",
+      "family": "Brassicaceae",
+      "life_cycle": "cool-season biennial cultivated as annual",
+      "sun": "full sun",
+      "soil_water": "fertile well-drained soil, even moisture",
+      "propagation": "seed/transplant",
+      "harvest_or_display": "leaves",
+      "visual_markers": "broad smooth blue-green leaves",
+      "starter_growth_habit": null,
+      "distinctive_note": "cold-season collard",
+      "evidence": {
+        "url": "https://plants.ces.ncsu.edu/",
+        "status": "research_lead_only"
+      },
+      "status": "provisional_starter; cultivar trait verification pending",
+      "codex": {
+        "basic_visual_prototype": true,
+        "accurate_numeric_simulation": false
+      }
+    },
+    {
+      "id": "starter_collards_top_bunch",
+      "category": "collards",
+      "name": "Top Bunch",
+      "parent_scientific_name": "Brassica oleracea Acephala Group",
+      "family": "Brassicaceae",
+      "life_cycle": "cool-season biennial cultivated as annual",
+      "sun": "full sun",
+      "soil_water": "fertile well-drained soil, even moisture",
+      "propagation": "seed/transplant",
+      "harvest_or_display": "leaves",
+      "visual_markers": "upright dark-green broad leaves",
+      "starter_growth_habit": null,
+      "distinctive_note": "hybrid collard",
+      "evidence": {
+        "url": "https://plants.ces.ncsu.edu/",
+        "status": "research_lead_only"
+      },
+      "status": "provisional_starter; cultivar trait verification pending",
+      "codex": {
+        "basic_visual_prototype": true,
+        "accurate_numeric_simulation": false
+      }
+    },
+    {
+      "id": "starter_celery_tall_utah_52_70",
+      "category": "celery",
+      "name": "Tall Utah 52-70",
+      "parent_scientific_name": "Apium graveolens",
+      "family": "Apiaceae",
+      "life_cycle": "biennial grown annual",
+      "sun": "full sun to part shade",
+      "soil_water": "moist rich fertile soil; do not dry out",
+      "propagation": "seed/transplant",
+      "harvest_or_display": "leaf stalks",
+      "visual_markers": "upright bunch of green long leaf stalks",
+      "starter_growth_habit": null,
+      "distinctive_note": "green celery",
+      "evidence": {
+        "url": "https://plants.ces.ncsu.edu/",
+        "status": "research_lead_only"
+      },
+      "status": "provisional_starter; cultivar trait verification pending",
+      "codex": {
+        "basic_visual_prototype": true,
+        "accurate_numeric_simulation": false
+      }
+    },
+    {
+      "id": "starter_celery_golden_self_blanching",
+      "category": "celery",
+      "name": "Golden Self Blanching",
+      "parent_scientific_name": "Apium graveolens",
+      "family": "Apiaceae",
+      "life_cycle": "biennial grown annual",
+      "sun": "full sun to part shade",
+      "soil_water": "moist rich fertile soil; do not dry out",
+      "propagation": "seed/transplant",
+      "harvest_or_display": "leaf stalks",
+      "visual_markers": "pale golden-yellow leaf stalks",
+      "starter_growth_habit": null,
+      "distinctive_note": "self-blanching type",
+      "evidence": {
+        "url": "https://plants.ces.ncsu.edu/",
+        "status": "research_lead_only"
+      },
+      "status": "provisional_starter; cultivar trait verification pending",
+      "codex": {
+        "basic_visual_prototype": true,
+        "accurate_numeric_simulation": false
+      }
+    },
+    {
+      "id": "starter_celery_conquistador",
+      "category": "celery",
+      "name": "Conquistador",
+      "parent_scientific_name": "Apium graveolens",
+      "family": "Apiaceae",
+      "life_cycle": "biennial grown annual",
+      "sun": "full sun to part shade",
+      "soil_water": "moist rich fertile soil; do not dry out",
+      "propagation": "seed/transplant",
+      "harvest_or_display": "leaf stalks",
+      "visual_markers": "upright dark-green sturdy stalks",
+      "starter_growth_habit": null,
+      "distinctive_note": "green hybrid celery",
+      "evidence": {
+        "url": "https://plants.ces.ncsu.edu/",
+        "status": "research_lead_only"
+      },
+      "status": "provisional_starter; cultivar trait verification pending",
+      "codex": {
+        "basic_visual_prototype": true,
+        "accurate_numeric_simulation": false
+      }
+    },
+    {
+      "id": "starter_celery_tango",
+      "category": "celery",
+      "name": "Tango",
+      "parent_scientific_name": "Apium graveolens",
+      "family": "Apiaceae",
+      "life_cycle": "biennial grown annual",
+      "sun": "full sun to part shade",
+      "soil_water": "moist rich fertile soil; do not dry out",
+      "propagation": "seed/transplant",
+      "harvest_or_display": "leaf stalks",
+      "visual_markers": "upright green stalks",
+      "starter_growth_habit": null,
+      "distinctive_note": "green celery with compact habit",
+      "evidence": {
+        "url": "https://plants.ces.ncsu.edu/",
+        "status": "research_lead_only"
+      },
+      "status": "provisional_starter; cultivar trait verification pending",
+      "codex": {
+        "basic_visual_prototype": true,
+        "accurate_numeric_simulation": false
+      }
+    },
+    {
+      "id": "starter_celery_redventure",
+      "category": "celery",
+      "name": "Redventure",
+      "parent_scientific_name": "Apium graveolens",
+      "family": "Apiaceae",
+      "life_cycle": "biennial grown annual",
+      "sun": "full sun to part shade",
+      "soil_water": "moist rich fertile soil; do not dry out",
+      "propagation": "seed/transplant",
+      "harvest_or_display": "leaf stalks",
+      "visual_markers": "reddish-purple tinted slender leaf stalks",
+      "starter_growth_habit": null,
+      "distinctive_note": "red-stalked leaf celery type",
+      "evidence": {
+        "url": "https://plants.ces.ncsu.edu/",
+        "status": "research_lead_only"
+      },
+      "status": "provisional_starter; cultivar trait verification pending",
+      "codex": {
+        "basic_visual_prototype": true,
+        "accurate_numeric_simulation": false
+      }
+    },
+    {
+      "id": "starter_parsley_giant_of_italy",
+      "category": "parsley",
+      "name": "Giant of Italy",
+      "parent_scientific_name": "Petroselinum crispum",
+      "family": "Apiaceae",
+      "life_cycle": "biennial usually harvested first year",
+      "sun": "full sun to part shade",
+      "soil_water": "fertile moist well-drained soil",
+      "propagation": "seed/transplant",
+      "harvest_or_display": "leaves",
+      "visual_markers": "broad flat dark-green leaves",
+      "starter_growth_habit": null,
+      "distinctive_note": "Italian flat-leaf type",
+      "evidence": {
+        "url": "https://plants.ces.ncsu.edu/",
+        "status": "research_lead_only"
+      },
+      "status": "provisional_starter; cultivar trait verification pending",
+      "codex": {
+        "basic_visual_prototype": true,
+        "accurate_numeric_simulation": false
+      }
+    },
+    {
+      "id": "starter_parsley_moss_curled",
+      "category": "parsley",
+      "name": "Moss Curled",
+      "parent_scientific_name": "Petroselinum crispum",
+      "family": "Apiaceae",
+      "life_cycle": "biennial usually harvested first year",
+      "sun": "full sun to part shade",
+      "soil_water": "fertile moist well-drained soil",
+      "propagation": "seed/transplant",
+      "harvest_or_display": "leaves",
+      "visual_markers": "densely curled bright-green leaves",
+      "starter_growth_habit": null,
+      "distinctive_note": "curly parsley",
+      "evidence": {
+        "url": "https://plants.ces.ncsu.edu/",
+        "status": "research_lead_only"
+      },
+      "status": "provisional_starter; cultivar trait verification pending",
+      "codex": {
+        "basic_visual_prototype": true,
+        "accurate_numeric_simulation": false
+      }
+    },
+    {
+      "id": "starter_parsley_forest_green",
+      "category": "parsley",
+      "name": "Forest Green",
+      "parent_scientific_name": "Petroselinum crispum",
+      "family": "Apiaceae",
+      "life_cycle": "biennial usually harvested first year",
+      "sun": "full sun to part shade",
+      "soil_water": "fertile moist well-drained soil",
+      "propagation": "seed/transplant",
+      "harvest_or_display": "leaves",
+      "visual_markers": "finely curled dark-green foliage",
+      "starter_growth_habit": null,
+      "distinctive_note": "curly selection",
+      "evidence": {
+        "url": "https://plants.ces.ncsu.edu/",
+        "status": "research_lead_only"
+      },
+      "status": "provisional_starter; cultivar trait verification pending",
+      "codex": {
+        "basic_visual_prototype": true,
+        "accurate_numeric_simulation": false
+      }
+    },
+    {
+      "id": "starter_parsley_hamburg_rooted",
+      "category": "parsley",
+      "name": "Hamburg Rooted",
+      "parent_scientific_name": "Petroselinum crispum",
+      "family": "Apiaceae",
+      "life_cycle": "biennial usually harvested first year",
+      "sun": "full sun to part shade",
+      "soil_water": "fertile moist well-drained soil",
+      "propagation": "seed/transplant",
+      "harvest_or_display": "leaves",
+      "visual_markers": "fernlike leaves above long pale taproot",
+      "starter_growth_habit": null,
+      "distinctive_note": "root parsley",
+      "evidence": {
+        "url": "https://plants.ces.ncsu.edu/",
+        "status": "research_lead_only"
+      },
+      "status": "provisional_starter; cultivar trait verification pending",
+      "codex": {
+        "basic_visual_prototype": true,
+        "accurate_numeric_simulation": false
+      }
+    },
+    {
+      "id": "starter_parsley_darki",
+      "category": "parsley",
+      "name": "Darki",
+      "parent_scientific_name": "Petroselinum crispum",
+      "family": "Apiaceae",
+      "life_cycle": "biennial usually harvested first year",
+      "sun": "full sun to part shade",
+      "soil_water": "fertile moist well-drained soil",
+      "propagation": "seed/transplant",
+      "harvest_or_display": "leaves",
+      "visual_markers": "very dark-green curled leaves",
+      "starter_growth_habit": null,
+      "distinctive_note": "curly parsley cultivar",
+      "evidence": {
+        "url": "https://plants.ces.ncsu.edu/",
+        "status": "research_lead_only"
+      },
+      "status": "provisional_starter; cultivar trait verification pending",
+      "codex": {
+        "basic_visual_prototype": true,
+        "accurate_numeric_simulation": false
+      }
+    },
+    {
+      "id": "starter_cilantro_santo",
+      "category": "cilantro",
+      "name": "Santo",
+      "parent_scientific_name": "Coriandrum sativum",
+      "family": "Apiaceae",
+      "life_cycle": "cool-season annual",
+      "sun": "sun to part shade",
+      "soil_water": "draining soil, even moisture",
+      "propagation": "direct seed",
+      "harvest_or_display": "leaves and dry seeds",
+      "visual_markers": "broad green lobed leaves",
+      "starter_growth_habit": null,
+      "distinctive_note": "leaf cilantro selection",
+      "evidence": {
+        "url": "https://plants.ces.ncsu.edu/",
+        "status": "research_lead_only"
+      },
+      "status": "provisional_starter; cultivar trait verification pending",
+      "codex": {
+        "basic_visual_prototype": true,
+        "accurate_numeric_simulation": false
+      }
+    },
+    {
+      "id": "starter_cilantro_slow_bolt",
+      "category": "cilantro",
+      "name": "Slow Bolt",
+      "parent_scientific_name": "Coriandrum sativum",
+      "family": "Apiaceae",
+      "life_cycle": "cool-season annual",
+      "sun": "sun to part shade",
+      "soil_water": "draining soil, even moisture",
+      "propagation": "direct seed",
+      "harvest_or_display": "leaves and dry seeds",
+      "visual_markers": "flat lobed leaves on branching stems",
+      "starter_growth_habit": null,
+      "distinctive_note": "bolting resistance relative, temperature-dependent",
+      "evidence": {
+        "url": "https://plants.ces.ncsu.edu/",
+        "status": "research_lead_only"
+      },
+      "status": "provisional_starter; cultivar trait verification pending",
+      "codex": {
+        "basic_visual_prototype": true,
+        "accurate_numeric_simulation": false
+      }
+    },
+    {
+      "id": "starter_cilantro_calypso",
+      "category": "cilantro",
+      "name": "Calypso",
+      "parent_scientific_name": "Coriandrum sativum",
+      "family": "Apiaceae",
+      "life_cycle": "cool-season annual",
+      "sun": "sun to part shade",
+      "soil_water": "draining soil, even moisture",
+      "propagation": "direct seed",
+      "harvest_or_display": "leaves and dry seeds",
+      "visual_markers": "compact leafy green stems",
+      "starter_growth_habit": null,
+      "distinctive_note": "slow-bolting cultivar",
+      "evidence": {
+        "url": "https://plants.ces.ncsu.edu/",
+        "status": "research_lead_only"
+      },
+      "status": "provisional_starter; cultivar trait verification pending",
+      "codex": {
+        "basic_visual_prototype": true,
+        "accurate_numeric_simulation": false
+      }
+    },
+    {
+      "id": "starter_cilantro_leisure",
+      "category": "cilantro",
+      "name": "Leisure",
+      "parent_scientific_name": "Coriandrum sativum",
+      "family": "Apiaceae",
+      "life_cycle": "cool-season annual",
+      "sun": "sun to part shade",
+      "soil_water": "draining soil, even moisture",
+      "propagation": "direct seed",
+      "harvest_or_display": "leaves and dry seeds",
+      "visual_markers": "bushy green leaf production",
+      "starter_growth_habit": null,
+      "distinctive_note": "leaf cilantro",
+      "evidence": {
+        "url": "https://plants.ces.ncsu.edu/",
+        "status": "research_lead_only"
+      },
+      "status": "provisional_starter; cultivar trait verification pending",
+      "codex": {
+        "basic_visual_prototype": true,
+        "accurate_numeric_simulation": false
+      }
+    },
+    {
+      "id": "starter_cilantro_confetti",
+      "category": "cilantro",
+      "name": "Confetti",
+      "parent_scientific_name": "Coriandrum sativum",
+      "family": "Apiaceae",
+      "life_cycle": "cool-season annual",
+      "sun": "sun to part shade",
+      "soil_water": "draining soil, even moisture",
+      "propagation": "direct seed",
+      "harvest_or_display": "leaves and dry seeds",
+      "visual_markers": "finely divided lacy foliage",
+      "starter_growth_habit": null,
+      "distinctive_note": "unusually narrow leaf segments",
+      "evidence": {
+        "url": "https://plants.ces.ncsu.edu/",
+        "status": "research_lead_only"
+      },
+      "status": "provisional_starter; cultivar trait verification pending",
+      "codex": {
+        "basic_visual_prototype": true,
+        "accurate_numeric_simulation": false
+      }
+    },
+    {
+      "id": "starter_oregano_greek_oregano",
+      "category": "oregano",
+      "name": "Greek Oregano",
+      "parent_scientific_name": "Origanum spp.",
+      "family": "Lamiaceae",
+      "life_cycle": "aromatic perennial subshrub",
+      "sun": "full sun",
+      "soil_water": "free-draining soil, moderate to low moisture",
+      "propagation": "cuttings/division",
+      "harvest_or_display": "leaves and flowers",
+      "visual_markers": "small dark-green strongly aromatic leaves",
+      "starter_growth_habit": null,
+      "distinctive_note": "Origanum vulgare subsp. hirtum",
+      "evidence": {
+        "url": "https://plants.ces.ncsu.edu/",
+        "status": "research_lead_only"
+      },
+      "status": "provisional_starter; cultivar trait verification pending",
+      "codex": {
+        "basic_visual_prototype": true,
+        "accurate_numeric_simulation": false
+      }
+    },
+    {
+      "id": "starter_oregano_italian_oregano",
+      "category": "oregano",
+      "name": "Italian Oregano",
+      "parent_scientific_name": "Origanum spp.",
+      "family": "Lamiaceae",
+      "life_cycle": "aromatic perennial subshrub",
+      "sun": "full sun",
+      "soil_water": "free-draining soil, moderate to low moisture",
+      "propagation": "cuttings/division",
+      "harvest_or_display": "leaves and flowers",
+      "visual_markers": "soft aromatic green foliage",
+      "starter_growth_habit": null,
+      "distinctive_note": "commonly Origanum × majoricum; naming varies",
+      "evidence": {
+        "url": "https://plants.ces.ncsu.edu/",
+        "status": "research_lead_only"
+      },
+      "status": "provisional_starter; cultivar trait verification pending",
+      "codex": {
+        "basic_visual_prototype": true,
+        "accurate_numeric_simulation": false
+      }
+    },
+    {
+      "id": "starter_oregano_kent_beauty",
+      "category": "oregano",
+      "name": "Kent Beauty",
+      "parent_scientific_name": "Origanum spp.",
+      "family": "Lamiaceae",
+      "life_cycle": "aromatic perennial subshrub",
+      "sun": "full sun",
+      "soil_water": "free-draining soil, moderate to low moisture",
+      "propagation": "cuttings/division",
+      "harvest_or_display": "leaves and flowers",
+      "visual_markers": "trailing stems with showy pink-purple bracts",
+      "starter_growth_habit": null,
+      "distinctive_note": "ornamental hybrid oregano",
+      "evidence": {
+        "url": "https://plants.ces.ncsu.edu/",
+        "status": "research_lead_only"
+      },
+      "status": "provisional_starter; cultivar trait verification pending",
+      "codex": {
+        "basic_visual_prototype": true,
+        "accurate_numeric_simulation": false
+      }
+    },
+    {
+      "id": "starter_oregano_hot_and_spicy",
+      "category": "oregano",
+      "name": "Hot and Spicy",
+      "parent_scientific_name": "Origanum spp.",
+      "family": "Lamiaceae",
+      "life_cycle": "aromatic perennial subshrub",
+      "sun": "full sun",
+      "soil_water": "free-draining soil, moderate to low moisture",
+      "propagation": "cuttings/division",
+      "harvest_or_display": "leaves and flowers",
+      "visual_markers": "compact spreading herb with pungent foliage",
+      "starter_growth_habit": null,
+      "distinctive_note": "culinary Origanum vulgare selection",
+      "evidence": {
+        "url": "https://plants.ces.ncsu.edu/",
+        "status": "research_lead_only"
+      },
+      "status": "provisional_starter; cultivar trait verification pending",
+      "codex": {
+        "basic_visual_prototype": true,
+        "accurate_numeric_simulation": false
+      }
+    },
+    {
+      "id": "starter_oregano_golden_oregano",
+      "category": "oregano",
+      "name": "Golden Oregano",
+      "parent_scientific_name": "Origanum spp.",
+      "family": "Lamiaceae",
+      "life_cycle": "aromatic perennial subshrub",
+      "sun": "full sun",
+      "soil_water": "free-draining soil, moderate to low moisture",
+      "propagation": "cuttings/division",
+      "harvest_or_display": "leaves and flowers",
+      "visual_markers": "spreading mound with chartreuse-gold leaves",
+      "starter_growth_habit": null,
+      "distinctive_note": "golden-leaf Origanum vulgare type",
+      "evidence": {
+        "url": "https://plants.ces.ncsu.edu/",
+        "status": "research_lead_only"
+      },
+      "status": "provisional_starter; cultivar trait verification pending",
+      "codex": {
+        "basic_visual_prototype": true,
+        "accurate_numeric_simulation": false
+      }
+    },
+    {
+      "id": "starter_sage_common_garden_sage",
+      "category": "sage",
+      "name": "Common Garden Sage",
+      "parent_scientific_name": "Salvia officinalis",
+      "family": "Lamiaceae",
+      "life_cycle": "evergreen or semi-evergreen woody perennial",
+      "sun": "full sun",
+      "soil_water": "free-draining soil; avoid persistently wet roots",
+      "propagation": "cuttings",
+      "harvest_or_display": "aromatic leaves",
+      "visual_markers": "oval gray-green textured leaves",
+      "starter_growth_habit": null,
+      "distinctive_note": "culinary sage",
+      "evidence": {
+        "url": "https://plants.ces.ncsu.edu/",
+        "status": "research_lead_only"
+      },
+      "status": "provisional_starter; cultivar trait verification pending",
+      "codex": {
+        "basic_visual_prototype": true,
+        "accurate_numeric_simulation": false
+      }
+    },
+    {
+      "id": "starter_sage_purpurascens",
+      "category": "sage",
+      "name": "Purpurascens",
+      "parent_scientific_name": "Salvia officinalis",
+      "family": "Lamiaceae",
+      "life_cycle": "evergreen or semi-evergreen woody perennial",
+      "sun": "full sun",
+      "soil_water": "free-draining soil; avoid persistently wet roots",
+      "propagation": "cuttings",
+      "harvest_or_display": "aromatic leaves",
+      "visual_markers": "purple-flushed gray-green leaves",
+      "starter_growth_habit": null,
+      "distinctive_note": "purple sage selection",
+      "evidence": {
+        "url": "https://plants.ces.ncsu.edu/",
+        "status": "research_lead_only"
+      },
+      "status": "provisional_starter; cultivar trait verification pending",
+      "codex": {
+        "basic_visual_prototype": true,
+        "accurate_numeric_simulation": false
+      }
+    },
+    {
+      "id": "starter_sage_tricolor",
+      "category": "sage",
+      "name": "Tricolor",
+      "parent_scientific_name": "Salvia officinalis",
+      "family": "Lamiaceae",
+      "life_cycle": "evergreen or semi-evergreen woody perennial",
+      "sun": "full sun",
+      "soil_water": "free-draining soil; avoid persistently wet roots",
+      "propagation": "cuttings",
+      "harvest_or_display": "aromatic leaves",
+      "visual_markers": "green-gray leaves with white and pink margins",
+      "starter_growth_habit": null,
+      "distinctive_note": "variegated sage",
+      "evidence": {
+        "url": "https://plants.ces.ncsu.edu/",
+        "status": "research_lead_only"
+      },
+      "status": "provisional_starter; cultivar trait verification pending",
+      "codex": {
+        "basic_visual_prototype": true,
+        "accurate_numeric_simulation": false
+      }
+    },
+    {
+      "id": "starter_sage_icterina",
+      "category": "sage",
+      "name": "Icterina",
+      "parent_scientific_name": "Salvia officinalis",
+      "family": "Lamiaceae",
+      "life_cycle": "evergreen or semi-evergreen woody perennial",
+      "sun": "full sun",
+      "soil_water": "free-draining soil; avoid persistently wet roots",
+      "propagation": "cuttings",
+      "harvest_or_display": "aromatic leaves",
+      "visual_markers": "yellow-edged green leaves",
+      "starter_growth_habit": null,
+      "distinctive_note": "golden variegated sage",
+      "evidence": {
+        "url": "https://plants.ces.ncsu.edu/",
+        "status": "research_lead_only"
+      },
+      "status": "provisional_starter; cultivar trait verification pending",
+      "codex": {
+        "basic_visual_prototype": true,
+        "accurate_numeric_simulation": false
+      }
+    },
+    {
+      "id": "starter_sage_berggarten",
+      "category": "sage",
+      "name": "Berggarten",
+      "parent_scientific_name": "Salvia officinalis",
+      "family": "Lamiaceae",
+      "life_cycle": "evergreen or semi-evergreen woody perennial",
+      "sun": "full sun",
+      "soil_water": "free-draining soil; avoid persistently wet roots",
+      "propagation": "cuttings",
+      "harvest_or_display": "aromatic leaves",
+      "visual_markers": "broad rounded silver-gray leaves",
+      "starter_growth_habit": null,
+      "distinctive_note": "large-leaved compact sage",
+      "evidence": {
+        "url": "https://plants.ces.ncsu.edu/",
+        "status": "research_lead_only"
+      },
+      "status": "provisional_starter; cultivar trait verification pending",
+      "codex": {
+        "basic_visual_prototype": true,
+        "accurate_numeric_simulation": false
+      }
+    },
+    {
+      "id": "starter_coneflowers_magnus",
+      "category": "coneflowers",
+      "name": "Magnus",
+      "parent_scientific_name": "Echinacea spp.",
+      "family": "Asteraceae",
+      "life_cycle": "herbaceous perennial",
+      "sun": "full sun to part shade",
+      "soil_water": "well-drained soil; moderately drought-tolerant once established",
+      "propagation": "seed or division",
+      "harvest_or_display": "composite flowers",
+      "visual_markers": "pink-purple rays around orange-brown cone",
+      "starter_growth_habit": "upright flowering herb",
+      "distinctive_note": "Echinacea purpurea",
+      "evidence": {
+        "url": "https://plants.ces.ncsu.edu/",
+        "status": "research_lead_only"
+      },
+      "status": "provisional_starter; cultivar trait verification pending",
+      "codex": {
+        "basic_visual_prototype": true,
+        "accurate_numeric_simulation": false
+      }
+    },
+    {
+      "id": "starter_coneflowers_white_swan",
+      "category": "coneflowers",
+      "name": "White Swan",
+      "parent_scientific_name": "Echinacea spp.",
+      "family": "Asteraceae",
+      "life_cycle": "herbaceous perennial",
+      "sun": "full sun to part shade",
+      "soil_water": "well-drained soil; moderately drought-tolerant once established",
+      "propagation": "seed or division",
+      "harvest_or_display": "composite flowers",
+      "visual_markers": "white rays around orange cone",
+      "starter_growth_habit": "upright flowering herb",
+      "distinctive_note": "Echinacea purpurea",
+      "evidence": {
+        "url": "https://plants.ces.ncsu.edu/",
+        "status": "research_lead_only"
+      },
+      "status": "provisional_starter; cultivar trait verification pending",
+      "codex": {
+        "basic_visual_prototype": true,
+        "accurate_numeric_simulation": false
+      }
+    },
+    {
+      "id": "starter_coneflowers_powwow_wild_berry",
+      "category": "coneflowers",
+      "name": "PowWow Wild Berry",
+      "parent_scientific_name": "Echinacea spp.",
+      "family": "Asteraceae",
+      "life_cycle": "herbaceous perennial",
+      "sun": "full sun to part shade",
+      "soil_water": "well-drained soil; moderately drought-tolerant once established",
+      "propagation": "seed or division",
+      "harvest_or_display": "composite flowers",
+      "visual_markers": "magenta-pink ray flowers",
+      "starter_growth_habit": "upright flowering herb",
+      "distinctive_note": "Echinacea purpurea compact series",
+      "evidence": {
+        "url": "https://plants.ces.ncsu.edu/",
+        "status": "research_lead_only"
+      },
+      "status": "provisional_starter; cultivar trait verification pending",
+      "codex": {
+        "basic_visual_prototype": true,
+        "accurate_numeric_simulation": false
+      }
+    },
+    {
+      "id": "starter_coneflowers_green_jewel",
+      "category": "coneflowers",
+      "name": "Green Jewel",
+      "parent_scientific_name": "Echinacea spp.",
+      "family": "Asteraceae",
+      "life_cycle": "herbaceous perennial",
+      "sun": "full sun to part shade",
+      "soil_water": "well-drained soil; moderately drought-tolerant once established",
+      "propagation": "seed or division",
+      "harvest_or_display": "composite flowers",
+      "visual_markers": "green rays surrounding a green cone",
+      "starter_growth_habit": "upright flowering herb",
+      "distinctive_note": "Echinacea purpurea hybrid cultivar",
+      "evidence": {
+        "url": "https://plants.ces.ncsu.edu/",
+        "status": "research_lead_only"
+      },
+      "status": "provisional_starter; cultivar trait verification pending",
+      "codex": {
+        "basic_visual_prototype": true,
+        "accurate_numeric_simulation": false
+      }
+    },
+    {
+      "id": "starter_coneflowers_cheyenne_spirit",
+      "category": "coneflowers",
+      "name": "Cheyenne Spirit",
+      "parent_scientific_name": "Echinacea spp.",
+      "family": "Asteraceae",
+      "life_cycle": "herbaceous perennial",
+      "sun": "full sun to part shade",
+      "soil_water": "well-drained soil; moderately drought-tolerant once established",
+      "propagation": "seed or division",
+      "harvest_or_display": "composite flowers",
+      "visual_markers": "mixed gold red orange and purple flowerheads",
+      "starter_growth_habit": "upright flowering herb",
+      "distinctive_note": "seed strain, multiple phenotypes",
+      "evidence": {
+        "url": "https://plants.ces.ncsu.edu/",
+        "status": "research_lead_only"
+      },
+      "status": "provisional_starter; cultivar trait verification pending",
+      "codex": {
+        "basic_visual_prototype": true,
+        "accurate_numeric_simulation": false
+      }
+    },
+    {
+      "id": "starter_rudbeckia_goldsturm",
+      "category": "rudbeckia",
+      "name": "Goldsturm",
+      "parent_scientific_name": "Rudbeckia spp.",
+      "family": "Asteraceae",
+      "life_cycle": "annual, biennial or perennial by taxon",
+      "sun": "full sun",
+      "soil_water": "moderately fertile draining soil",
+      "propagation": "seed/division",
+      "harvest_or_display": "composite flowers",
+      "visual_markers": "golden-yellow rays with dark central cone",
+      "starter_growth_habit": "upright flowering herb",
+      "distinctive_note": "Rudbeckia fulgida var. sullivantii",
+      "evidence": {
+        "url": "https://plants.ces.ncsu.edu/",
+        "status": "research_lead_only"
+      },
+      "status": "provisional_starter; cultivar trait verification pending",
+      "codex": {
+        "basic_visual_prototype": true,
+        "accurate_numeric_simulation": false
+      }
+    },
+    {
+      "id": "starter_rudbeckia_indian_summer",
+      "category": "rudbeckia",
+      "name": "Indian Summer",
+      "parent_scientific_name": "Rudbeckia spp.",
+      "family": "Asteraceae",
+      "life_cycle": "annual, biennial or perennial by taxon",
+      "sun": "full sun",
+      "soil_water": "moderately fertile draining soil",
+      "propagation": "seed/division",
+      "harvest_or_display": "composite flowers",
+      "visual_markers": "large golden rays around dark brown disc",
+      "starter_growth_habit": "upright flowering herb",
+      "distinctive_note": "Rudbeckia hirta strain",
+      "evidence": {
+        "url": "https://plants.ces.ncsu.edu/",
+        "status": "research_lead_only"
+      },
+      "status": "provisional_starter; cultivar trait verification pending",
+      "codex": {
+        "basic_visual_prototype": true,
+        "accurate_numeric_simulation": false
+      }
+    },
+    {
+      "id": "starter_rudbeckia_prairie_sun",
+      "category": "rudbeckia",
+      "name": "Prairie Sun",
+      "parent_scientific_name": "Rudbeckia spp.",
+      "family": "Asteraceae",
+      "life_cycle": "annual, biennial or perennial by taxon",
+      "sun": "full sun",
+      "soil_water": "moderately fertile draining soil",
+      "propagation": "seed/division",
+      "harvest_or_display": "composite flowers",
+      "visual_markers": "gold petals with lighter tips and green center",
+      "starter_growth_habit": "upright flowering herb",
+      "distinctive_note": "Rudbeckia hirta",
+      "evidence": {
+        "url": "https://plants.ces.ncsu.edu/",
+        "status": "research_lead_only"
+      },
+      "status": "provisional_starter; cultivar trait verification pending",
+      "codex": {
+        "basic_visual_prototype": true,
+        "accurate_numeric_simulation": false
+      }
+    },
+    {
+      "id": "starter_rudbeckia_cherry_brandy",
+      "category": "rudbeckia",
+      "name": "Cherry Brandy",
+      "parent_scientific_name": "Rudbeckia spp.",
+      "family": "Asteraceae",
+      "life_cycle": "annual, biennial or perennial by taxon",
+      "sun": "full sun",
+      "soil_water": "moderately fertile draining soil",
+      "propagation": "seed/division",
+      "harvest_or_display": "composite flowers",
+      "visual_markers": "deep burgundy-red rays and dark disc",
+      "starter_growth_habit": "upright flowering herb",
+      "distinctive_note": "Rudbeckia hirta",
+      "evidence": {
+        "url": "https://plants.ces.ncsu.edu/",
+        "status": "research_lead_only"
+      },
+      "status": "provisional_starter; cultivar trait verification pending",
+      "codex": {
+        "basic_visual_prototype": true,
+        "accurate_numeric_simulation": false
+      }
+    },
+    {
+      "id": "starter_rudbeckia_little_goldstar",
+      "category": "rudbeckia",
+      "name": "Little Goldstar",
+      "parent_scientific_name": "Rudbeckia spp.",
+      "family": "Asteraceae",
+      "life_cycle": "annual, biennial or perennial by taxon",
+      "sun": "full sun",
+      "soil_water": "moderately fertile draining soil",
+      "propagation": "seed/division",
+      "harvest_or_display": "composite flowers",
+      "visual_markers": "compact plant with yellow rays dark cone",
+      "starter_growth_habit": "upright flowering herb",
+      "distinctive_note": "Rudbeckia fulgida selection",
+      "evidence": {
+        "url": "https://plants.ces.ncsu.edu/",
+        "status": "research_lead_only"
+      },
+      "status": "provisional_starter; cultivar trait verification pending",
+      "codex": {
+        "basic_visual_prototype": true,
+        "accurate_numeric_simulation": false
+      }
+    },
+    {
+      "id": "starter_daylilies_stella_de_oro",
+      "category": "daylilies",
+      "name": "Stella de Oro",
+      "parent_scientific_name": "Hemerocallis hybrid cultivars",
+      "family": "Asphodelaceae",
+      "life_cycle": "clump-forming herbaceous perennial",
+      "sun": "full sun to part shade",
+      "soil_water": "well-drained soil; regular establishment water",
+      "propagation": "division",
+      "harvest_or_display": "flowers",
+      "visual_markers": "compact grassy clump with golden-yellow trumpet flowers",
+      "starter_growth_habit": "herbaceous clump",
+      "distinctive_note": "repeat-blooming dwarf type",
+      "evidence": {
+        "url": "https://plants.ces.ncsu.edu/",
+        "status": "research_lead_only"
+      },
+      "status": "provisional_starter; cultivar trait verification pending",
+      "codex": {
+        "basic_visual_prototype": true,
+        "accurate_numeric_simulation": false
+      }
+    },
+    {
+      "id": "starter_daylilies_happy_returns",
+      "category": "daylilies",
+      "name": "Happy Returns",
+      "parent_scientific_name": "Hemerocallis hybrid cultivars",
+      "family": "Asphodelaceae",
+      "life_cycle": "clump-forming herbaceous perennial",
+      "sun": "full sun to part shade",
+      "soil_water": "well-drained soil; regular establishment water",
+      "propagation": "division",
+      "harvest_or_display": "flowers",
+      "visual_markers": "grassy clump with clear lemon-yellow flowers",
+      "starter_growth_habit": "herbaceous clump",
+      "distinctive_note": "repeat-flowering type",
+      "evidence": {
+        "url": "https://plants.ces.ncsu.edu/",
+        "status": "research_lead_only"
+      },
+      "status": "provisional_starter; cultivar trait verification pending",
+      "codex": {
+        "basic_visual_prototype": true,
+        "accurate_numeric_simulation": false
+      }
+    },
+    {
+      "id": "starter_daylilies_pardon_me",
+      "category": "daylilies",
+      "name": "Pardon Me",
+      "parent_scientific_name": "Hemerocallis hybrid cultivars",
+      "family": "Asphodelaceae",
+      "life_cycle": "clump-forming herbaceous perennial",
+      "sun": "full sun to part shade",
+      "soil_water": "well-drained soil; regular establishment water",
+      "propagation": "division",
+      "harvest_or_display": "flowers",
+      "visual_markers": "grasslike foliage and deep-red flowers with yellow throat",
+      "starter_growth_habit": "herbaceous clump",
+      "distinctive_note": "compact repeat bloomer",
+      "evidence": {
+        "url": "https://plants.ces.ncsu.edu/",
+        "status": "research_lead_only"
+      },
+      "status": "provisional_starter; cultivar trait verification pending",
+      "codex": {
+        "basic_visual_prototype": true,
+        "accurate_numeric_simulation": false
+      }
+    },
+    {
+      "id": "starter_daylilies_chicago_apache",
+      "category": "daylilies",
+      "name": "Chicago Apache",
+      "parent_scientific_name": "Hemerocallis hybrid cultivars",
+      "family": "Asphodelaceae",
+      "life_cycle": "clump-forming herbaceous perennial",
+      "sun": "full sun to part shade",
+      "soil_water": "well-drained soil; regular establishment water",
+      "propagation": "division",
+      "harvest_or_display": "flowers",
+      "visual_markers": "arching straplike leaves with rich scarlet-red flowers",
+      "starter_growth_habit": "herbaceous clump",
+      "distinctive_note": "large red bloom",
+      "evidence": {
+        "url": "https://plants.ces.ncsu.edu/",
+        "status": "research_lead_only"
+      },
+      "status": "provisional_starter; cultivar trait verification pending",
+      "codex": {
+        "basic_visual_prototype": true,
+        "accurate_numeric_simulation": false
+      }
+    },
+    {
+      "id": "starter_daylilies_frans_hals",
+      "category": "daylilies",
+      "name": "Frans Hals",
+      "parent_scientific_name": "Hemerocallis hybrid cultivars",
+      "family": "Asphodelaceae",
+      "life_cycle": "clump-forming herbaceous perennial",
+      "sun": "full sun to part shade",
+      "soil_water": "well-drained soil; regular establishment water",
+      "propagation": "division",
+      "harvest_or_display": "flowers",
+      "visual_markers": "grasslike foliage with orange-yellow bicolored flowers",
+      "starter_growth_habit": "herbaceous clump",
+      "distinctive_note": "contrasting petal colors",
+      "evidence": {
+        "url": "https://plants.ces.ncsu.edu/",
+        "status": "research_lead_only"
+      },
+      "status": "provisional_starter; cultivar trait verification pending",
+      "codex": {
+        "basic_visual_prototype": true,
+        "accurate_numeric_simulation": false
+      }
+    },
+    {
+      "id": "starter_irises_immortality",
+      "category": "irises",
+      "name": "Immortality",
+      "parent_scientific_name": "Iris spp.",
+      "family": "Iridaceae",
+      "life_cycle": "rhizomatous or bulbous perennial",
+      "sun": "full sun for bearded irises; species dependent",
+      "soil_water": "draining soil; water needs differ by species",
+      "propagation": "rhizome division",
+      "harvest_or_display": "flowers",
+      "visual_markers": "tall sword-leaf fan with white ruffled blooms",
+      "starter_growth_habit": "herbaceous clump",
+      "distinctive_note": "bearded iris reblooming selection",
+      "evidence": {
+        "url": "https://plants.ces.ncsu.edu/",
+        "status": "research_lead_only"
+      },
+      "status": "provisional_starter; cultivar trait verification pending",
+      "codex": {
+        "basic_visual_prototype": true,
+        "accurate_numeric_simulation": false
+      }
+    },
+    {
+      "id": "starter_irises_beverly_sills",
+      "category": "irises",
+      "name": "Beverly Sills",
+      "parent_scientific_name": "Iris spp.",
+      "family": "Iridaceae",
+      "life_cycle": "rhizomatous or bulbous perennial",
+      "sun": "full sun for bearded irises; species dependent",
+      "soil_water": "draining soil; water needs differ by species",
+      "propagation": "rhizome division",
+      "harvest_or_display": "flowers",
+      "visual_markers": "upright leaf fans with coral-pink ruffled blooms",
+      "starter_growth_habit": "herbaceous clump",
+      "distinctive_note": "tall bearded iris",
+      "evidence": {
+        "url": "https://plants.ces.ncsu.edu/",
+        "status": "research_lead_only"
+      },
+      "status": "provisional_starter; cultivar trait verification pending",
+      "codex": {
+        "basic_visual_prototype": true,
+        "accurate_numeric_simulation": false
+      }
+    },
+    {
+      "id": "starter_irises_stepping_out",
+      "category": "irises",
+      "name": "Stepping Out",
+      "parent_scientific_name": "Iris spp.",
+      "family": "Iridaceae",
+      "life_cycle": "rhizomatous or bulbous perennial",
+      "sun": "full sun for bearded irises; species dependent",
+      "soil_water": "draining soil; water needs differ by species",
+      "propagation": "rhizome division",
+      "harvest_or_display": "flowers",
+      "visual_markers": "upright sword foliage with white and purple-edged blooms",
+      "starter_growth_habit": "herbaceous clump",
+      "distinctive_note": "tall bearded iris",
+      "evidence": {
+        "url": "https://plants.ces.ncsu.edu/",
+        "status": "research_lead_only"
+      },
+      "status": "provisional_starter; cultivar trait verification pending",
+      "codex": {
+        "basic_visual_prototype": true,
+        "accurate_numeric_simulation": false
+      }
+    },
+    {
+      "id": "starter_irises_caesar_s_brother",
+      "category": "irises",
+      "name": "Caesar's Brother",
+      "parent_scientific_name": "Iris spp.",
+      "family": "Iridaceae",
+      "life_cycle": "rhizomatous or bulbous perennial",
+      "sun": "full sun for bearded irises; species dependent",
+      "soil_water": "draining soil; water needs differ by species",
+      "propagation": "rhizome division",
+      "harvest_or_display": "flowers",
+      "visual_markers": "narrow arching foliage with deep purple flowers",
+      "starter_growth_habit": "herbaceous clump",
+      "distinctive_note": "Siberian iris Iris sibirica cultivar",
+      "evidence": {
+        "url": "https://plants.ces.ncsu.edu/",
+        "status": "research_lead_only"
+      },
+      "status": "provisional_starter; cultivar trait verification pending",
+      "codex": {
+        "basic_visual_prototype": true,
+        "accurate_numeric_simulation": false
+      }
+    },
+    {
+      "id": "starter_irises_blue_flag",
+      "category": "irises",
+      "name": "Blue Flag",
+      "parent_scientific_name": "Iris spp.",
+      "family": "Iridaceae",
+      "life_cycle": "rhizomatous or bulbous perennial",
+      "sun": "full sun for bearded irises; species dependent",
+      "soil_water": "draining soil; water needs differ by species",
+      "propagation": "rhizome division",
+      "harvest_or_display": "flowers",
+      "visual_markers": "upright sword leaves and blue-violet flowers",
+      "starter_growth_habit": "herbaceous clump",
+      "distinctive_note": "Iris versicolor common type not fixed cultivar",
+      "evidence": {
+        "url": "https://plants.ces.ncsu.edu/",
+        "status": "research_lead_only"
+      },
+      "status": "provisional_starter; cultivar trait verification pending",
+      "codex": {
+        "basic_visual_prototype": true,
+        "accurate_numeric_simulation": false
+      }
+    }
+  ]
+}

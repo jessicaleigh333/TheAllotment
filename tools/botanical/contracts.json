@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0.0",
+  "status": "data_contract_only_not_live_simulation",
+  "unknown_semantics": ["not_researched", "unknown", "disputed", "not_applicable"],
+  "identity_relationships": ["cultivar_of", "hybrid_parent", "synonym_of", "possible_same_identity", "trade_name_for"],
+  "asset_roles": ["original_illustration", "field_guide", "shop_thumbnail", "icon", "construction_reference", "base_model", "stage_model", "stage_preview", "animation", "material", "editable_source"],
+  "asset_fields": ["asset_id", "revision_hash", "path", "license", "attribution", "model_family_id", "base_model_id", "stage_id", "phenology_conditions", "cultivar_overrides", "height_m", "width_m", "depth_m", "pivot_m", "collision_asset_id", "lod_assets", "materials", "animations", "review_decisions"],
+  "profile_fields": ["profile_id", "profile_version", "botanical_id", "propagation_method", "rootstock_id", "developmental_stages", "real_day_size_knots", "phenology_rules", "environment_requirements", "health_rules", "propagation_rules", "pollination_rules", "harvest_rules", "evidence", "calibration_basis", "capabilities"],
+  "instance_fields": ["instance_uid", "legacy_item_id", "botanical_id", "profile_version", "chronological_age_days", "developmental_stage", "seasonal_states", "started_at_utc", "last_simulated_at_utc", "dimensions_m", "health_state", "reserves", "environment_id", "propagation_lot_id", "lineage", "care_events", "harvest_event_ids", "random_seed", "simulation_version", "group_members"],
+  "invariants": [
+    "Chronological age continues beyond maturity; size curves may plateau.",
+    "Seasonal states recur and may overlap independently of developmental age.",
+    "One real elapsed day is 86400 seconds including offline time.",
+    "All dimensions use metres and every calibrated number has provenance.",
+    "Symptoms support hypotheses rather than definitive diagnoses.",
+    "Seed offspring are not automatically true-to-type cultivars.",
+    "Retrieval preserves instance history, not just age.",
+    "Harvest events are idempotent atomic inventory transactions.",
+    "Unverified profiles cannot become live simulation through a review export."
+  ]
+}

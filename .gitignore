@@ -1,0 +1,3 @@
+.botanical-build/
+__pycache__/
+*.pyc
