@@ -5,7 +5,7 @@
 **Category:** Buildings / Greenhouses / Conservatories  
 **Owner direction:** Concept approved for inclusion in The Allotment on November 17, 2026.  
 **Publication status:** SPECIFICATION / REQUEST ONLY — NOT a released shop item, mesh, Godot scene, or functional building.  
-**Source:** Owner-selected greenhouse-atrium Pinterest screenshot and assistant architectural study in the project conversation, November 17, 2026. These images are **not currently committed as Godot assets**; do not invent `res://` references.
+**Source:** Owner-selected greenhouse-atrium Pinterest screenshot and assistant architectural study in the project conversation, November 17, 2026. **Approved architectural illustration:** https://drive.google.com/file/d/1DZNbQ0QDnBeG1KiBKojYmnmJx7-4at1G/view?usp=drivesdk (owner's Google Drive; access may require permission). The image is **not committed as a Godot asset**; do not invent `res://` references. The item also appears on the Google Sheets **New Item Requests** tab, row 3.
 
 ## Visual design
 
