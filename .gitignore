@@ -1,3 +1,4 @@
 .botanical-build/
+.item-build/
 __pycache__/
 *.pyc

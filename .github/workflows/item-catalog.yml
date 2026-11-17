@@ -1,0 +1,41 @@
+name: Master item catalog
+on:
+  pull_request:
+    paths:
+      - 'tools/item_catalog/**'
+      - 'the-allotment-garden-world-v-02/features/item_catalog/**'
+      - 'the-allotment-garden-world-v-02/features/market/**'
+      - 'the-allotment-garden-world-v-02/assets/**'
+      - 'the-allotment-garden-world-v-02/data/items/**'
+      - 'the-allotment-garden-world-v-02/tests/verify_item_catalog.gd'
+      - '.github/workflows/item-catalog.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r tools/item_catalog/requirements-dev.txt
+      - run: python -m unittest tools.item_catalog.test_catalog tools.botanical.test_foundation -v
+      - run: python -m tools.item_catalog.catalog build --out .item-build/review
+      - run: python -m tools.item_catalog.workbook --build .item-build/review --out .item-build/MasterItems.xlsx
+      - name: Install the tested Godot runtime
+        run: |
+          curl --fail --location --retry 2 https://github.com/godotengine/godot/releases/download/4.6.3-stable/Godot_v4.6.3-stable_linux.x86_64.zip -o "$RUNNER_TEMP/godot.zip"
+          mkdir -p "$RUNNER_TEMP/godot"
+          unzip -q "$RUNNER_TEMP/godot.zip" -d "$RUNNER_TEMP/godot"
+          mv "$RUNNER_TEMP/godot/Godot_v4.6.3-stable_linux.x86_64" "$RUNNER_TEMP/godot/godot"
+          chmod +x "$RUNNER_TEMP/godot/godot"
+          echo "$RUNNER_TEMP/godot" >> "$GITHUB_PATH"
+      - run: godot --headless --path the-allotment-garden-world-v-02 --editor --import --quit
+      - run: python -m tools.item_catalog.check_godot --out .item-build/godot-tests
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: master-item-catalog-review
+          path: .item-build/
