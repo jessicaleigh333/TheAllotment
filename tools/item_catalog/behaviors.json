@@ -1,0 +1,22 @@
+{
+  "schema_version":"1.0.0",
+  "behaviors":[
+    {"behavior_id":"market.acquire","status":"implemented_local_free","script_path":"features/market/market_store.gd","method":"buy","save_contract":"existing market version 1 atomic snapshot; no currency spent"},
+    {"behavior_id":"inventory.retrieve","status":"implemented_local","script_path":"features/market/market_store.gd","method":"retrieve","save_contract":"preserve stage/age, support graph and bag limits"},
+    {"behavior_id":"placement.world","status":"implemented_local","script_path":"features/market/garden_placement.gd","method":"begin","save_contract":"existing uid/area/transform/supports; legacy untagged area is garden"},
+    {"behavior_id":"construction.support","status":"implemented_geometry","script_path":"features/market/stack_rules.gd","method":"valid_graph","save_contract":"ordered acyclic support graph; dependent items removed first"},
+    {"behavior_id":"gate.proximity","status":"implemented_local","script_path":"assets/garden_art/gate_controller.gd","method":"set_open","save_contract":"transient proximity/hinge state; no persistent open flag"},
+    {"behavior_id":"lighting.day_night","status":"implemented_visual","script_path":"assets/garden_art/enchanted_glow.gd","method":"set_phase","save_contract":"transient, budgeted, shadow-free light; previews disabled"},
+    {"behavior_id":"growth.real_time","status":"implemented_size_age","script_path":"features/market/plant_growth.gd","method":"state","save_contract":"existing timestamps/observed ages; biology remains botanical authority"},
+    {"behavior_id":"surface.paint","status":"implemented_local","script_path":"features/garden_editor/editor_session.gd","method":null,"save_contract":"existing 0.5 m cells, style/seed/context and undo transactions"},
+    {"behavior_id":"avatar.equip_hat","status":"implemented_local","script_path":"features/avatar/appearance.gd","method":null,"save_contract":"existing hat_enabled appearance option"},
+    {"behavior_id":"fountain.water_visual","status":"implemented_visual_only","script_path":"assets/garden_art/garden_surface.gdshader","method":null,"save_contract":"shader motion; not fluid simulation or on/off operation"},
+    {"behavior_id":"furniture.sit","status":"contract_only","script_path":null,"method":null,"save_contract":"future animation anchors, occupancy, approach/navigation and avatar alignment"},
+    {"behavior_id":"light.manual_switch","status":"contract_only","script_path":null,"method":null,"save_contract":"future saved state and owner action"},
+    {"behavior_id":"plant.water","status":"contract_only","script_path":null,"method":null,"save_contract":"requires reviewed botanical moisture/care model"},
+    {"behavior_id":"plant.harvest","status":"contract_only","script_path":null,"method":null,"save_contract":"botanical product, instance UID, event idempotency, atomic yield/inventory"},
+    {"behavior_id":"item.sell","status":"contract_only","script_path":null,"method":null,"save_contract":"owner-approved economy and atomic inventory/currency transfer"},
+    {"behavior_id":"item.repair","status":"contract_only","script_path":null,"method":null,"save_contract":"optional durability profile and repair inputs; no global invented wear"},
+    {"behavior_id":"item.craft","status":"contract_only","script_path":null,"method":null,"save_contract":"future recipe inputs/outputs and atomic transaction"}
+  ]
+}

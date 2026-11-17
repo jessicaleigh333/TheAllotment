@@ -30,3 +30,15 @@ Status: **REVIEW ONLY — DO NOT MERGE TO main UNTIL CHECKS PASS**.
 Codex should start each new feature branch from the current approved integration/main baseline, commit/push, report exact branch + SHA + test commands/results, and open a draft PR. Preserve branch history and save evidence; do not claim an update reached the installed game until rebuilt/released and verified.
 
 This document is a tracking and handoff checklist, **not** test evidence or an approval to release.
+
+## Master world catalog milestone — 2026-11-17
+
+Dedicated branch `codex/master-item-catalog`, based on main `6dddc20`, audits 262
+existing shop/surface/scenery/avatar definitions without merging or releasing.
+SQLite, shared asset/behavior references, botanical ID links, revision-checked review
+overlays, native Google Sheets review and a compatible Godot source-index/metadata
+adapter are implemented. Live acquisition remains free and save formats are unchanged.
+Forty-eight Python tests and fourteen isolated Godot suites passed locally; owner art
+review, scientific identity decisions and future mechanic publication remain distinct.
+See `tools/item_catalog/HANDOFF.md` for exact scope, evidence, workbook link and remaining
+work, and `tools/item_catalog/README.md` for the architecture and reproduction workflow.

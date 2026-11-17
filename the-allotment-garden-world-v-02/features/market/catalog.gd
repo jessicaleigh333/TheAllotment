@@ -1,5 +1,7 @@
 extends RefCounted
 const Growth := preload("res://features/market/plant_growth.gd")
+const MasterIndex := preload("res://features/item_catalog/master_catalog.gd")
+static var _source_index := {}
 const ATLAS := preload("res://features/market/item_atlas.png")
 const BASE_ITEMS := [
 	{"id":"garden_gate","name":"Wrought-iron garden gates","category":"Decor","price":0,"icon":8,"radius":1.9,"featured":true,"description":"Paired scrolling iron gates on limestone piers. Opens automatically as the gardener approaches. 3 m wide, 2 m tall."},
@@ -37,8 +39,8 @@ static func by_id(id: String) -> Dictionary:
 	var base := id.get_slice("@",0)
 	var suffix := id.get_slice("@",1)
 	if id.contains("@") and suffix not in ["seed","seedling","young"]: return {}
-	for source in ITEMS:
-		if source.id != base: continue
+	if _source_index.is_empty(): _source_index = MasterIndex.index_sources(ITEMS)
+	for source in [_source_index[base]] if _source_index.has(base) else []:
 		if Growth.PLANTS.has(base) and base not in Growth.Woody.LEGACY_IDS and not Growth.Woody.valid_profile(Growth.PLANTS[base]): return {}
 		if id.contains("@") and (not Growth.PLANTS.has(base) or source.category != "Plants"): return {}
 		var item: Dictionary = source.duplicate(true)
@@ -55,6 +57,9 @@ static func by_id(id: String) -> Dictionary:
 				if stage == 0: item.category = "Seeds"
 		return item
 	return {}
+
+static func master_record(id: String) -> Dictionary:
+	return MasterIndex.shared().by_id(id)
 
 static func stage_id(id: String, stage: int) -> String:
 	var plant := Growth.species(id)

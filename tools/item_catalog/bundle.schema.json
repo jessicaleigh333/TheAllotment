@@ -1,0 +1,26 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "type":"object",
+  "required":["schema_version","source_hash","content_hash","items","assets","behaviors","categories","asset_components","save_compatibility"],
+  "properties":{
+    "schema_version":{"const":"1.0.0"},
+    "source_hash":{"type":"string","pattern":"^[a-f0-9]{64}$"},
+    "content_hash":{"type":"string","pattern":"^[a-f0-9]{64}$"},
+    "items":{"type":"array","items":{"type":"object","required":["item_id","name","domain","category_id","source_path","revision","implementation_status","asset_bindings","behavior_ids"],"properties":{
+      "item_id":{"type":"string","minLength":1},"name":{"type":"string","minLength":1},
+      "domain":{"enum":["shop","surface","scenery","avatar_option"]},
+      "parent_id":{"type":["string","null"]},"category_id":{"type":"string","minLength":1},
+      "revision":{"type":"string","pattern":"^[a-f0-9]{64}$"},
+      "asset_bindings":{"type":"array","items":{"type":"object","required":["asset_id","role","parameters"]}},
+      "behavior_ids":{"type":"array","items":{"type":"string"},"uniqueItems":true},
+      "botanical_link":{"type":["object","null"]},
+      "shop_listing":{"type":["object","null"]},
+      "physical":{"type":"object","properties":{"dimensions_m":{"type":"array","minItems":3,"maxItems":3,"items":{"type":"number","exclusiveMinimum":0}}}}
+    }}},
+    "assets":{"type":"array","items":{"type":"object","required":["asset_id","path","kind","exists"],"properties":{"exists":{"type":"boolean"}}}},
+    "behaviors":{"type":"array","items":{"type":"object","required":["behavior_id","status","save_contract"]}},
+    "categories":{"type":"array","items":{"type":"object","required":["category_id","label"]}},
+    "asset_components":{"type":"array","items":{"type":"object","required":["parent_asset_id","child_asset_id","role"]}},
+    "save_compatibility":{"type":"object"}
+  }
+}
