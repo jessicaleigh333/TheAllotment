@@ -1,0 +1,28 @@
+{
+  "title": "Development handoff requested",
+  "status": "planned",
+  "summary": "The owner prioritized a durable GitHub handoff ahead of other backlog development.",
+  "conversation": [
+    "Owner, 2026-11-22: requested milestone reports covering instructions, changes, verification, decisions, issues, screenshots and next priorities. Authorized implementation, testing and sanitized development reporting through the existing GitHub workflow.",
+    "Codex: inspected the GitHub baseline and isolated the work on a task branch for draft review. Available chat is summarized; older project context is linked to its repository source."
+  ],
+  "backlog": {
+    "ai-handoff": "P0 · planned · implement, verify and publish the reporting route.",
+    "windows-release": "P0 · open · verify Windows export, fresh install, updater, save preservation and rollback.",
+    "architecture-audit": "P0 · open · inventory the current architecture and regression gaps before refactoring.",
+    "lawn-and-paths": "Open · compare overlapping lawn and cobblestone branches against current main. See [integration review](../INTEGRATION_REVIEW_2026-11.md).",
+    "plant-health": "P1 · open · reconcile current plant implementation before broadening health and survival.",
+    "offline-simulation": "P1 · open · verify real-time and offline equivalence plus save recovery.",
+    "environment": "P1 · open · scope seasonal weather and soil behavior against existing mechanics.",
+    "harvesting": "P1 · open · verify the harvest, inventory and save round trip.",
+    "botanical-library": "P2 · foundation merged in [#20](https://github.com/jessicaleigh333/TheAllotment/pull/20) · verify remaining offline reference-library work.",
+    "item-catalog": "Master catalog merged in [#21](https://github.com/jessicaleigh333/TheAllotment/pull/21) · owner art and identity review remain open.",
+    "game-guides": "P2 · open · review Louise, Growing Guide, How to Play and Garden Diary against the current game.",
+    "quality-and-platforms": "P3 · planned · review playtesting and later platform scope in the [original backlog](https://github.com/jessicaleigh333/TheAllotment/blob/2d05b7d6b4800706c6954b58387035120c5446e3/docs/CODEX_BACKLOG_2026-11-13.md)."
+  },
+  "id": "ai-handoff-request",
+  "timestamp": "2026-11-22T03:31:34Z",
+  "branch": "codex/ai-handoff",
+  "commit": null,
+  "files": []
+}
