@@ -1,0 +1,54 @@
+{
+  "title": "Handoff implementation tested and submitted",
+  "status": "tested",
+  "summary": "Milestone reporting is implemented and locally verified. Draft PR #28 tracks GitHub validation and review. The observed main baseline includes the botanical foundation and master item catalog.",
+  "pr": 28,
+  "conversation": [
+    "Codex: implemented milestone reporting, tested generation and failure recovery, and opened draft PR #28. Future sessions summarize available exchanges and use GitHub for live review status."
+  ],
+  "changes": [
+    "Adds eight generated Markdown views, an operator guide, an append-only event directory and a read-only GitHub Actions validation workflow.",
+    "Adds instructions in AGENTS.md so future sessions discover and publish milestone reports through existing task PRs."
+  ],
+  "tests": [
+    "PASS — python -m unittest tools.ai_handoff.test_handoff -v (2 integration tests). Covers file generation, missing fields and test evidence, idempotent retry, preserved history, accurate branch/SHA/PR and changed path references, stale reports, a rejected push and successful retry, and credential pattern rejection.",
+    "PASS — python -m tools.ai_handoff check and git diff --check.",
+    "PASS — published the implementation branch to GitHub and opened draft PR #28 through the connector."
+  ],
+  "decisions": [
+    "Use append-only JSON milestones and deterministic Markdown projections to retain history across sessions.",
+    "Publish at milestones on existing task branches. GitHub Actions validates reports with read-only permissions, so reporting adds no automated pushes or recursive CI.",
+    "Use sanitized conversation summaries on the public repository and actual PR/commit links for live review and merge evidence."
+  ],
+  "issues": [
+    "Resolved — direct shell PR tooling could not authenticate. Git transport successfully pushed the branch and the GitHub connector created the draft PR.",
+    "Open limitation — private conversation history has no automatic export feed. Sessions supply reviewed summaries."
+  ],
+  "next": [
+    "Check the AI handoff workflow and review draft PR #28 before merge.",
+    "After handoff review, resume the P0 Windows distribution/updater verification and architecture audit from the current baseline."
+  ],
+  "backlog": {
+    "ai-handoff": "P0 · tested locally and published on the draft PR · GitHub check and owner review tracked in [#28](https://github.com/jessicaleigh333/TheAllotment/pull/28)."
+  },
+  "id": "ai-handoff-tested",
+  "timestamp": "2026-11-22T03:32:16Z",
+  "branch": "codex/ai-handoff",
+  "commit": "0e33a90c12447aa77d7149a9c06f3386587c20a2",
+  "files": [
+    ".github/workflows/ai-handoff.yml",
+    "AGENTS.md",
+    "docs/ai-handoff/BACKLOG.md",
+    "docs/ai-handoff/CHANGELOG.md",
+    "docs/ai-handoff/CONVERSATION_LOG.md",
+    "docs/ai-handoff/DECISIONS.md",
+    "docs/ai-handoff/HANDOFF_GUIDE.md",
+    "docs/ai-handoff/ISSUES.md",
+    "docs/ai-handoff/LATEST.md",
+    "docs/ai-handoff/SCREENSHOTS.md",
+    "docs/ai-handoff/TEST_RESULTS.md",
+    "docs/ai-handoff/events/ai-handoff-request.json",
+    "tools/ai_handoff/__main__.py",
+    "tools/ai_handoff/test_handoff.py"
+  ]
+}
