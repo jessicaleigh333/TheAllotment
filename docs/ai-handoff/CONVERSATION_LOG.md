@@ -12,3 +12,9 @@
 - Codex: implemented milestone reporting, tested generation and failure recovery, and opened draft PR #28. Future sessions summarize available exchanges and use GitHub for live review status.
 
 [Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/0e33a90c12447aa77d7149a9c06f3386587c20a2)
+
+## [2026-11-24T01:47:23Z · Architecture audit started](events/architecture-audit-started.json)
+
+- Owner requested current main, the shared backlog and a start on issue #29 with published milestones.
+
+[Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/0223df04a678ea01e04c145c412e98d26c4903f8)

@@ -16,3 +16,10 @@
 - PASS — GitHub remote branch SHA matched the local publish commit. The GitHub connector read both reports on the published branch.
 
 [Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/c28bb80e26552b2834a00f941bbe1b41b4f9cff7)
+
+## [2026-11-24T01:47:23Z · Architecture audit started](events/architecture-audit-started.json)
+
+- GitHub resolved current main to 861f686a688e4e45172e2c6e859f94f96860f007 and supplied pinned source files for inspection.
+- Local Godot reports 4.6.3. The pinned project declares 4.7 Compatibility. No game regression results recorded yet.
+
+[Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/0223df04a678ea01e04c145c412e98d26c4903f8)

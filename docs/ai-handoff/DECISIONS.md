@@ -9,3 +9,9 @@
 - Use sanitized conversation summaries on the public repository and actual PR/commit links for live review and merge evidence.
 
 [Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/0e33a90c12447aa77d7149a9c06f3386587c20a2)
+
+## [2026-11-24T01:47:23Z · Architecture audit started](events/architecture-audit-started.json)
+
+- Coordinate Windows release verification with #16 and compare current branches before porting older gameplay changes.
+
+[Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/0223df04a678ea01e04c145c412e98d26c4903f8)

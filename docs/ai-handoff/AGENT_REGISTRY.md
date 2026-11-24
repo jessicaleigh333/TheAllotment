@@ -9,6 +9,12 @@ No individual subagent identities or assignments have been verified in the publi
 | Agent ID | Display name | Specialty | Parent/delegator | Assignment ID | Status | Evidence |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 
+## Issue #29 contribution
+
+| UTC date | Agent | Assignment and contribution | Status | Evidence | Verification |
+| --- | --- | --- | --- | --- | --- |
+| 2026-11-24 | Codex (primary session) | Started the architecture audit, regression inventory and PR triage. No subagents were delegated. | Active | [Issue #29](https://github.com/jessicaleigh333/TheAllotment/issues/29), [draft PR #32](https://github.com/jessicaleigh333/TheAllotment/pull/32) | Reviewed source pinned to main. Runtime baseline remains pending. |
+
 ## Assignment and contribution history
 
 Append one entry per material assignment or status transition. Preserve prior entries; correct errors with a linked follow-up.
