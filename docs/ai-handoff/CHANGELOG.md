@@ -14,3 +14,9 @@
 - Published the [initial architecture audit](../ARCHITECTURE_AUDIT_29.md) and recorded the contribution in the [agent registry](AGENT_REGISTRY.md).
 
 [Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/0223df04a678ea01e04c145c412e98d26c4903f8)
+
+## [2026-11-24T01:49:24Z · Verified Windows and terrain branch ancestry](events/architecture-audit-branch-comparison.json)
+
+- Added verified branch comparisons to the [architecture audit](../ARCHITECTURE_AUDIT_29.md). Updated the [agent registry](AGENT_REGISTRY.md).
+
+[Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/14f8db816103fddcfa36a566e3c7d8b3f60e52f7)

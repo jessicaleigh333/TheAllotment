@@ -15,3 +15,9 @@
 - Coordinate Windows release verification with #16 and compare current branches before porting older gameplay changes.
 
 [Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/0223df04a678ea01e04c145c412e98d26c4903f8)
+
+## [2026-11-24T01:49:24Z · Verified Windows and terrain branch ancestry](events/architecture-audit-branch-comparison.json)
+
+- Coordinate native Windows checks with #16. Review the two diverged terrain branches together for changes still needed.
+
+[Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/14f8db816103fddcfa36a566e3c7d8b3f60e52f7)

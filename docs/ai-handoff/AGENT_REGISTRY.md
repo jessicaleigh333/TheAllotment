@@ -13,7 +13,7 @@ No individual subagent identities or assignments have been verified in the publi
 
 | UTC date | Agent | Assignment and contribution | Status | Evidence | Verification |
 | --- | --- | --- | --- | --- | --- |
-| 2026-11-24 | Codex (primary session) | Started the architecture audit, regression inventory and PR triage. No subagents were delegated. | Active | [Issue #29](https://github.com/jessicaleigh333/TheAllotment/issues/29), [draft PR #32](https://github.com/jessicaleigh333/TheAllotment/pull/32) | Reviewed source pinned to main. Runtime baseline remains pending. |
+| 2026-11-24 | Codex (primary session) | Started the architecture audit, regression inventory and PR triage. No subagents were delegated. | Active | [Issue #29](https://github.com/jessicaleigh333/TheAllotment/issues/29), [draft PR #32](https://github.com/jessicaleigh333/TheAllotment/pull/32) | Reviewed source pinned to main. GitHub verified Windows and terrain ancestry. Runtime baseline remains pending. |
 
 ## Assignment and contribution history
 

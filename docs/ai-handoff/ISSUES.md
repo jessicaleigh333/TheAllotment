@@ -14,3 +14,9 @@
 - The local checkout predates the pinned baseline. Initial Git transport failed under the default sandbox, and the network-enabled fetch had not finished when this milestone was recorded.
 
 [Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/0223df04a678ea01e04c145c412e98d26c4903f8)
+
+## [2026-11-24T01:49:24Z · Verified Windows and terrain branch ancestry](events/architecture-audit-branch-comparison.json)
+
+- Fresh Godot import and runtime regression checks remain pending. The local fetch had yet to finish at this milestone.
+
+[Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/14f8db816103fddcfa36a566e3c7d8b3f60e52f7)

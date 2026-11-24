@@ -23,3 +23,11 @@
 - Local Godot reports 4.6.3. The pinned project declares 4.7 Compatibility. No game regression results recorded yet.
 
 [Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/0223df04a678ea01e04c145c412e98d26c4903f8)
+
+## [2026-11-24T01:49:24Z · Verified Windows and terrain branch ancestry](events/architecture-audit-branch-comparison.json)
+
+- PASS — local handoff generator check and two handoff integration tests.
+- PASS — [GitHub AI handoff run 45307726241](https://github.com/jessicaleigh333/TheAllotment/actions/runs/45307726241) validated the start milestone.
+- PASS — GitHub comparison against 861f686 verified Windows 0 ahead / 14 behind, cobblestone 3 / 33 and soft grass 1 / 33.
+
+[Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/14f8db816103fddcfa36a566e3c7d8b3f60e52f7)
