@@ -25,19 +25,28 @@ Issue [#29](https://github.com/jessicaleigh333/TheAllotment/issues/29). Initial 
 
 ## Open pull requests and order
 
-GitHub listed #1–#16, #18, #22–#27 and #31 open at review. Changed filenames show substantial overlap across the older gameplay PRs. The November integration review identifies the Windows branch as the historical cumulative branch and #16 describes a dependency on #15, itself stacked on #14. Current main already contains the Windows workflow, vault, profile flow and climbing documentation. Check merge bases and remaining diffs before applying anything from that stack. Coordinate Windows verification with [#16](https://github.com/jessicaleigh333/TheAllotment/pull/16).
+GitHub listed #1–#16, #18, #22–#27 and #31 open at review. Changed filenames show substantial overlap across the older gameplay PRs. The November integration review identifies the Windows branch as the historical cumulative branch and #16 describes a dependency on #15, itself stacked on #14. Current main already contains the Windows workflow, vault, profile flow and climbing documentation. GitHub comparison confirms `codex/windows-launcher-updater` is 0 ahead and 14 behind current main. Its tip `473e2ab` is the merge base. No gameplay stack port is needed from that tip. Coordinate Windows verification with [#16](https://github.com/jessicaleigh333/TheAllotment/pull/16).
 
 - [#18](https://github.com/jessicaleigh333/TheAllotment/pull/18) changes botanical paths. Compare its remaining delta with the foundation tracked under #20 before porting records or loaders.
 - #22–#27 each changed one item concept document. Review individually as design proposals.
 - [#31](https://github.com/jessicaleigh333/TheAllotment/pull/31) changes `AGENTS.md` and can be reviewed independently. [#28](https://github.com/jessicaleigh333/TheAllotment/pull/28) is already merged at the pinned baseline, despite the historical backlog entry.
 - Verify current main first, then compare branch ancestry and overlapping terrain changes. Review only the remaining gameplay deltas. Gate Windows readiness on native evidence and keep design reviews independent.
 
+## Terrain branch comparisons
+
+| Branch | Ahead / behind main | Remaining review |
+| --- | --- | --- |
+| `codex/cobblestone-garden-paths` | 3 / 33 | Adds cobblestone script/shader alongside lawn changes and includes a temporary scene and generated editor files. |
+| `codex/soft-grass-ground` | 1 / 33 | Changes the same lawn script, both grass shaders, world script and project settings. |
+
+Both diverged from `607ccc3`. Compare the shared lawn files with each other and port only any desired behavior still absent from current main. Verify terrain and interaction regressions on a fresh baseline before integration.
+
 ## Verification at this milestone
 
-GitHub resolved the current main SHA and served the inspected source files at that revision. The workspace reports Godot 4.6.3. The local Git checkout is older, and the main fetch has yet to finish. Godot import, runtime tests, full tree inventory, exact branch ancestry and native Windows checks remain open. Treat earlier PR test results as historical evidence.
+GitHub resolved the current main SHA and served the inspected source files at that revision. The workspace reports Godot 4.6.3. The local Git checkout is older, and the main fetch has yet to finish. Godot import, runtime tests, full tree inventory, remaining PR ancestry and native Windows checks remain open. Treat earlier PR test results as historical evidence.
 
 ## Next priorities
 
 1. Finish getting the pinned tree locally. Inventory existing test and build entry points and record exact commands and results with isolated save directories.
-2. Compare current merge bases, PR tips and remaining changes, focusing first on the older gameplay stack and then on lawn/cobblestone overlaps.
+2. Compare remaining PR tips and terrain implementation overlaps. Use the verified Windows branch ancestry to avoid duplicate gameplay work.
 3. Use the verified results to order remediation. Prioritize save continuity and the engine/export baseline before gameplay changes.
