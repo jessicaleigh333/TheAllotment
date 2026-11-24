@@ -34,3 +34,9 @@
 - Owner instruction, 2026-11-16: build every future living plant with its own real-world growth stages and metre-scale dimensions. Every future object must use realistic physical scale.
 - New plant profiles need scientific/cultivar identity, named visual phases, real elapsed-day age knots, height/width/depth curves, mature clearance, source URLs, and a clear distinction between referenced facts and calibrated estimates. Do not silently substitute accelerated growth or a generic adult mesh scaled through all stages.
 - Run all-profile growth/scale tests and the new-profile data contract before presenting additions as implemented. Count distinct plant profiles honestly; mesh detail variants and stages are not species. Preserve existing saves and mature scenery while extending living versions. See features/market/REAL_LIFE_GROWTH.md within the game project.
+
+## Development reporting
+
+- Read `docs/ai-handoff/LATEST.md` and `docs/ai-handoff/BACKLOG.md` when resuming work.
+- Record material milestones using `docs/ai-handoff/HANDOFF_GUIDE.md` and publish the records with the task's branch and pull request. Use reviewed development summaries in the public repository.
+- Maintain `docs/ai-handoff/AGENT_REGISTRY.md` for actual delegated agents and their assignments, deliverables, status and verification. Update it alongside milestone reports, preserve history, and explicitly disclose unavailable agent information rather than guessing.

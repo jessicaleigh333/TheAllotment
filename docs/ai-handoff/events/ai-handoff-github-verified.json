@@ -1,0 +1,31 @@
+{
+  "title": "GitHub handoff verified end to end",
+  "status": "tested",
+  "summary": "The tested milestone is published on the task branch. GitHub's AI handoff check passed, and the GitHub connector retrieved LATEST.md and BACKLOG.md from the branch. Draft PR #28 awaits owner review.",
+  "pr": 28,
+  "tests": [
+    "PASS — GitHub ran the integration tests and verified generated Markdown and append-only history for the published milestone in [Actions run 44981098597](https://github.com/jessicaleigh333/TheAllotment/actions/runs/44981098597).",
+    "PASS — GitHub remote branch SHA matched the local publish commit. The GitHub connector read both reports on the published branch."
+  ],
+  "next": [
+    "Review draft PR #28. Once merged, use main as the shared reporting baseline.",
+    "Resume the P0 Windows verification and architecture audit after handoff review."
+  ],
+  "backlog": {
+    "ai-handoff": "P0 · implemented, tested in GitHub Actions and published · owner review and merge pending in [#28](https://github.com/jessicaleigh333/TheAllotment/pull/28)."
+  },
+  "id": "ai-handoff-github-verified",
+  "timestamp": "2026-11-22T03:33:02Z",
+  "branch": "codex/ai-handoff",
+  "commit": "c28bb80e26552b2834a00f941bbe1b41b4f9cff7",
+  "files": [
+    "docs/ai-handoff/BACKLOG.md",
+    "docs/ai-handoff/CHANGELOG.md",
+    "docs/ai-handoff/CONVERSATION_LOG.md",
+    "docs/ai-handoff/DECISIONS.md",
+    "docs/ai-handoff/ISSUES.md",
+    "docs/ai-handoff/LATEST.md",
+    "docs/ai-handoff/TEST_RESULTS.md",
+    "docs/ai-handoff/events/ai-handoff-tested.json"
+  ]
+}
