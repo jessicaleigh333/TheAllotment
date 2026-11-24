@@ -39,3 +39,4 @@
 
 - Read `docs/ai-handoff/LATEST.md` and `docs/ai-handoff/BACKLOG.md` when resuming work.
 - Record material milestones using `docs/ai-handoff/HANDOFF_GUIDE.md` and publish the records with the task's branch and pull request. Use reviewed development summaries in the public repository.
+- Maintain `docs/ai-handoff/AGENT_REGISTRY.md` for actual delegated agents and their assignments, deliverables, status and verification. Update it alongside milestone reports, preserve history, and explicitly disclose unavailable agent information rather than guessing.
