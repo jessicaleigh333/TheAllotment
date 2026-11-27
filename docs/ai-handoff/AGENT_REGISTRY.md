@@ -46,3 +46,7 @@ Append one entry per material assignment or status transition. Preserve prior en
 | UTC date | Agent | Assignment and contribution | Status | Evidence |
 | --- | --- | --- | --- | --- |
 | 2026-11-27 | Codex (primary session) | Rechecked Windows release gates, fixed and tested the HUD Settings regression, reconciled the three reporting branches and exercised the dispatch claim race. This session had no delegated assignments. | Locally tested and awaiting review. Native Windows evidence remains open. | [#34](https://github.com/jessicaleigh333/TheAllotment/issues/34), [HUD PR #35](https://github.com/jessicaleigh333/TheAllotment/pull/35) |
+
+| UTC date/time | Agent ID | Assignment ID | Task and outcome | Status | Deliverables / PR / commit | Verification / reviewer | Next action |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 2026-11-27 | Codex (primary session) | issue-34 | Adapted courtyard surfaces, verified botanical intake and UTC growth, implemented the starter care and harvest loop, and connected the guide and diary. No subagents were delegated. | Tested on focused and combined review branches | [#37](https://github.com/jessicaleigh333/TheAllotment/pull/37), [#38](https://github.com/jessicaleigh333/TheAllotment/pull/38), [#39](https://github.com/jessicaleigh333/TheAllotment/pull/39), [#40](https://github.com/jessicaleigh333/TheAllotment/pull/40) | Godot targeted integration suites and 52 Python tests passed | Owner review of focused PRs; courtyard visual approval pending |

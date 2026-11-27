@@ -92,3 +92,11 @@
 - PASS — reviewed matched OpenGL Compatibility renders.
 
 [Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/c0683f4d8b29b5d2655143f1f868e2041a9bbd12)
+
+## [2026-11-27T20:47:52Z · Issue #34 combined integration checks](events/issue-34-combined-verification.json)
+
+- PASS — eight combined Godot 4.6.3 suites with isolated data: HUD, Guide/Diary, watering, harvest and sale, growth, local vault, nine sidewalk passages, and courtyard placement.
+- PASS — 52 Python tests including handoff/dispatch, botanical pipeline and item catalog.
+- PASS — append-only handoff comparison to main.
+
+[Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/beafb32d4499276cc7c288ec1ce06ffaa1fe67b9)

@@ -1,0 +1,59 @@
+{
+  "title": "Issue #34 combined integration checks",
+  "status": "tested",
+  "summary": "A separate review branch combines reporting, HUD, courtyard, botanical/UTC verification, care/harvest and guide changes. Focused PRs remain available for individual review.",
+  "changes": [
+    "Preserved event files from all six focused PRs and regenerated the Markdown. Used the combined HUD assertions for Settings, Guide and Diary controls.",
+    "Recorded actual primary-session contributions and review evidence in the registry."
+  ],
+  "tests": [
+    "PASS — eight combined Godot 4.6.3 suites with isolated data: HUD, Guide/Diary, watering, harvest and sale, growth, local vault, nine sidewalk passages, and courtyard placement.",
+    "PASS — 52 Python tests including handoff/dispatch, botanical pipeline and item catalog.",
+    "PASS — append-only handoff comparison to main."
+  ],
+  "issues": [
+    "Windows native signing/installation, production update-channel verification and courtyard visual acceptance remain open."
+  ],
+  "next": [
+    "Review #35–#40 individually. Preserve append-only JSON and render the shared reports again if branches are merged separately."
+  ],
+  "id": "issue-34-combined-verification",
+  "timestamp": "2026-11-27T20:47:52Z",
+  "branch": "codex/34-integration-check",
+  "commit": "beafb32d4499276cc7c288ec1ce06ffaa1fe67b9",
+  "files": [
+    "docs/ai-handoff/BACKLOG.md",
+    "docs/ai-handoff/CHANGELOG.md",
+    "docs/ai-handoff/DECISIONS.md",
+    "docs/ai-handoff/ISSUES.md",
+    "docs/ai-handoff/LATEST.md",
+    "docs/ai-handoff/SCREENSHOTS.md",
+    "docs/ai-handoff/TEST_RESULTS.md",
+    "docs/ai-handoff/events/issue-34-garden-guides.json",
+    "docs/ai-handoff/events/issue-34-starter-care.json",
+    "docs/ai-handoff/evidence/guides-34/after-help.png",
+    "docs/ai-handoff/evidence/guides-34/after-journal.png",
+    "docs/ai-handoff/evidence/guides-34/before-help.png",
+    "docs/ai-handoff/evidence/guides-34/before-journal.png",
+    "docs/ai-handoff/evidence/plant-care-34/after.png",
+    "docs/ai-handoff/evidence/plant-care-34/before.png",
+    "the-allotment-garden-world-v-02/features/help/screen.gd",
+    "the-allotment-garden-world-v-02/features/help/screen.gd.uid",
+    "the-allotment-garden-world-v-02/features/help/screen.tscn",
+    "the-allotment-garden-world-v-02/features/journal/screen.gd",
+    "the-allotment-garden-world-v-02/features/journal/screen.gd.uid",
+    "the-allotment-garden-world-v-02/features/journal/screen.tscn",
+    "the-allotment-garden-world-v-02/features/market/market_screen.gd",
+    "the-allotment-garden-world-v-02/features/market/market_store.gd",
+    "the-allotment-garden-world-v-02/features/market/plant_harvest.gd",
+    "the-allotment-garden-world-v-02/features/market/plant_harvest.gd.uid",
+    "the-allotment-garden-world-v-02/tests/verify_garden_guides.gd",
+    "the-allotment-garden-world-v-02/tests/verify_garden_guides.gd.uid",
+    "the-allotment-garden-world-v-02/tests/verify_plant_care.gd",
+    "the-allotment-garden-world-v-02/tests/verify_plant_care.gd.uid",
+    "the-allotment-garden-world-v-02/tests/verify_plant_harvest.gd",
+    "the-allotment-garden-world-v-02/tests/verify_plant_harvest.gd.uid",
+    "the-allotment-garden-world-v-02/ui/game_hud.gd",
+    "the-allotment-garden-world-v-02/ui/verify_hud.gd"
+  ]
+}

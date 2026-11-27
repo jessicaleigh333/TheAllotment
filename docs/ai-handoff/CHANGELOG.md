@@ -79,3 +79,10 @@
 - The Diary lists up to 200 recorded observations per profile. Events survive returning plants to the Backpack.
 
 [Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/c0683f4d8b29b5d2655143f1f868e2041a9bbd12)
+
+## [2026-11-27T20:47:52Z · Issue #34 combined integration checks](events/issue-34-combined-verification.json)
+
+- Preserved event files from all six focused PRs and regenerated the Markdown. Used the combined HUD assertions for Settings, Guide and Diary controls.
+- Recorded actual primary-session contributions and review evidence in the registry.
+
+[Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/beafb32d4499276cc7c288ec1ce06ffaa1fe67b9)
