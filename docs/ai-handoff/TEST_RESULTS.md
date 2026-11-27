@@ -16,3 +16,10 @@
 - PASS — GitHub remote branch SHA matched the local publish commit. The GitHub connector read both reports on the published branch.
 
 [Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/c28bb80e26552b2834a00f941bbe1b41b4f9cff7)
+
+## [2026-11-27T20:35:44Z · Radial courtyard turf and limestone surface preview](events/issue-34-courtyard-surfaces.json)
+
+- PASS — Godot 4.6.3 layout, sidewalk walking through all nine entrances, courtyard decor/floor heights/protected routes/persistence, ground-cover editor and local vault.
+- PASS — OpenGL Compatibility renders in Xvfb with llvmpipe. Reviewed matched day and night previews.
+
+[Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/f1642c0b476b53faac25aa866dc390bc424c3cd9)

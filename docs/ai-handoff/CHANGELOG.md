@@ -8,3 +8,10 @@
 - Adds instructions in AGENTS.md so future sessions discover and publish milestone reports through existing task PRs.
 
 [Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/0e33a90c12447aa77d7149a9c06f3386587c20a2)
+
+## [2026-11-27T20:35:44Z · Radial courtyard turf and limestone surface preview](events/issue-34-courtyard-surfaces.json)
+
+- Reused the original turf shader and limestone mesh and shader on the current radial courtyard.
+- Setts follow the nine approach transforms and remain decorative. The existing courtyard ring and approach surface heights remain authoritative for collisions and placement.
+
+[Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/f1642c0b476b53faac25aa866dc390bc424c3cd9)
