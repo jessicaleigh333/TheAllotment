@@ -1,0 +1,41 @@
+{
+  "title": "Windows updater fixtures and exported game saves verified on Linux",
+  "status": "in progress",
+  "summary": "At main 861f686, disposable signed launcher and local HTTP suites passed, and both Windows-preset PCKs started on Linux. Exported-game profile, vault and vine regressions passed. Native Windows, production artifact integrity and live distribution remain open.",
+  "pr": 33,
+  "conversation": [
+    "Owner requested Windows verification using the implementation in PR #16 and preserving existing saves and gameplay.",
+    "Codex verified the existing launcher with fixtures and recorded what still needs native evidence."
+  ],
+  "changes": [
+    "[Windows verification report](../WINDOWS_VERIFICATION_30.md) records reproduction steps, export hashes and the native checklist.",
+    "[Agent registry](AGENT_REGISTRY.md) records actual work completed by the primary session."
+  ],
+  "tests": [
+    "PASS — Godot 4.6.3 signed protocol fixture suite, including save sentinels and recovery.",
+    "PASS — Godot 4.6.3 local HTTP suite, including upgrade, failure, cancellation and running-game protection.",
+    "PASS — Game and launcher Windows-preset PCKs exported and started under Linux Godot. Exported game profile entry, vault and climbing-vine suites passed.",
+    "BLOCKED — The public update.json returned HTTP 404. Native Windows execution, publisher-signed artifacts and their live integrity were not verified."
+  ],
+  "decisions": [
+    "Verified current main because the implementation tip of PR #16 is already an ancestor. Used disposable profiles, fixture keys and installation directories."
+  ],
+  "issues": [
+    "[#30](https://github.com/jessicaleigh333/TheAllotment/issues/30) remains open pending native Windows verification and the published feed.",
+    "No Windows executable or Windows screenshots were produced. The official template requests failed in this environment."
+  ],
+  "next": [
+    "Run the existing Windows workflow on an authorized Windows environment and verify clean install, update, rollback, and copied-profile save continuity.",
+    "Verify manifest, archive and per-file hashes against the approved package before testing the live channel."
+  ],
+  "backlog": {
+    "windows-release": "P0 · fixture and exported-save tests passed on Linux in [#33](https://github.com/jessicaleigh333/TheAllotment/pull/33) · native Windows and live channel pending in [#30](https://github.com/jessicaleigh333/TheAllotment/issues/30)"
+  },
+  "id": "windows-verification-fixtures-tested",
+  "timestamp": "2026-11-27T20:11:53Z",
+  "branch": "codex/30-windows-verification",
+  "commit": "53d77101e0b2170c75a71464f2fdc0029774384b",
+  "files": [
+    "docs/WINDOWS_VERIFICATION_30.md"
+  ]
+}

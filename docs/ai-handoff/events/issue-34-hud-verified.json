@@ -1,0 +1,29 @@
+{
+  "title": "HUD navigation and Settings regression verified",
+  "status": "tested",
+  "summary": "Issue #34 HUD regression fixed and verified in Godot 4.6.3 using disposable profiles.",
+  "changes": [
+    "Exercise all 12 HUD destinations, send Escape through the viewport, check focus restoration and verify the Settings button writes a real vault checkpoint.",
+    "Open my save folder now creates the active profile directory if needed and reports filesystem or shell errors."
+  ],
+  "tests": [
+    "PASS — HUD, local profiles, profile entry, vault and weather on Godot 4.6.3. Profile entry emitted an ObjectDB warning at shutdown."
+  ],
+  "issues": [
+    "The headless suite checks the folder control and its signal wiring. Desktop file-manager launch remains unverified."
+  ],
+  "next": [
+    "Review the focused HUD fix for issue #34."
+  ],
+  "backlog": {
+    "hud-regression": "P0 · tested locally · awaiting review"
+  },
+  "id": "issue-34-hud-verified",
+  "timestamp": "2026-11-27T20:29:10Z",
+  "branch": "codex/34-hud",
+  "commit": "5e19fc0f337db1b1597da7eb60464b173a7e0140",
+  "files": [
+    "the-allotment-garden-world-v-02/features/settings/screen.gd",
+    "the-allotment-garden-world-v-02/ui/verify_hud.gd"
+  ]
+}

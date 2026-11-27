@@ -40,3 +40,10 @@
 - Read `docs/ai-handoff/LATEST.md` and `docs/ai-handoff/BACKLOG.md` when resuming work.
 - Record material milestones using `docs/ai-handoff/HANDOFF_GUIDE.md` and publish the records with the task's branch and pull request. Use reviewed development summaries in the public repository.
 - Maintain `docs/ai-handoff/AGENT_REGISTRY.md` for actual delegated agents and their assignments, deliverables, status and verification. Update it alongside milestone reports, preserve history, and explicitly disclose unavailable agent information rather than guessing.
+
+## Backlog execution
+
+- When the owner asks to work the backlog, fetch current main, read the generated backlog and inspect open GitHub issues and pull requests. Use matching issues as actionable task briefs; live PR status supersedes stale milestone status. Do not edit generated reports manually.
+- Start with architecture audit issue #29, then coordinate Windows verification issue #30 with existing PR #16, unless a newer owner direction or documented dependency changes the order. Check for existing work before starting; use separate focused branches and link the issue in each PR.
+- For machine-routed assignments, use the claim commands in the handoff guide. For existing work PRs, coordinate with the current owner. Record a milestone and report blockers and actual checks. Keep issues open until acceptance criteria are verified and review is complete. Update the agent registry and generated backlog through the existing milestone process. Do not automatically merge or make destructive changes.
+- This queue supplies work to active sessions; it does not launch agents automatically.
