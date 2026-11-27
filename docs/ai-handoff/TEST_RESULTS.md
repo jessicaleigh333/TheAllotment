@@ -107,3 +107,11 @@
 - PASS — visual review of OpenGL staging captures.
 
 [Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/751654235fa7f523d93247e10778d441831ca80e)
+
+## [2026-11-27T20:51:26Z · Greenhouse staging and first-run Settings verified](events/issue-34-final-review.json)
+
+- PASS — combined greenhouse avatar entrance, both stair flights, landing and guardrail.
+- PASS — first-run Settings folder button created the disposable profile directory and passed the exact path to an Xvfb Linux shell-opener fixture.
+- PASS — GitHub AI handoff checks on #35–#41. Botanical foundation passed on #38, and Master item catalog passed on #39 and #40.
+
+[Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/f32068af0264908c135f7578a9bafc6326c5ec70)

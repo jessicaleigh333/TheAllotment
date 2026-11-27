@@ -93,3 +93,10 @@
 - Built a staging shell, modular framing, stair visuals, continuous collision transitions and guardrails.
 
 [Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/751654235fa7f523d93247e10778d441831ca80e)
+
+## [2026-11-27T20:51:26Z · Greenhouse staging and first-run Settings verified](events/issue-34-final-review.json)
+
+- Linked the approved atrium staging prototype and the remaining Market publication work in issues #34 and #42.
+- Preserved earlier milestone events and added the primary-session greenhouse contribution to the registry.
+
+[Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/f32068af0264908c135f7578a9bafc6326c5ec70)

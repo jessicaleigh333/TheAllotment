@@ -76,3 +76,10 @@
 - Acquisition rule awaits owner decision. Final arched bays, camera clearance in the real garden, catalog extraction, thumbnail, placement permissions and save/reopen still need implementation or acceptance.
 
 [Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/751654235fa7f523d93247e10778d441831ca80e)
+
+## [2026-11-27T20:51:26Z · Greenhouse staging and first-run Settings verified](events/issue-34-final-review.json)
+
+- Folder dispatch was observed with a shell-opener fixture. Native desktop file manager behavior remains environment-dependent.
+- Windows beta workflow history through GitHub API returned HTTP 403. The public updater manifest returned HTTP 404.
+
+[Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/f32068af0264908c135f7578a9bafc6326c5ec70)

@@ -1,0 +1,45 @@
+{
+  "title": "Greenhouse staging and first-run Settings verified",
+  "status": "tested",
+  "summary": "The combined review branch preserves all queue handoffs and includes the tested greenhouse staging prototype. Native Windows evidence and owner gates remain open.",
+  "changes": [
+    "Linked the approved atrium staging prototype and the remaining Market publication work in issues #34 and #42.",
+    "Preserved earlier milestone events and added the primary-session greenhouse contribution to the registry."
+  ],
+  "tests": [
+    "PASS — combined greenhouse avatar entrance, both stair flights, landing and guardrail.",
+    "PASS — first-run Settings folder button created the disposable profile directory and passed the exact path to an Xvfb Linux shell-opener fixture.",
+    "PASS — GitHub AI handoff checks on #35–#41. Botanical foundation passed on #38, and Master item catalog passed on #39 and #40."
+  ],
+  "issues": [
+    "Folder dispatch was observed with a shell-opener fixture. Native desktop file manager behavior remains environment-dependent.",
+    "Windows beta workflow history through GitHub API returned HTTP 403. The public updater manifest returned HTTP 404."
+  ],
+  "next": [
+    "Review the focused PRs. Owner visual approval for the courtyard and acquisition decision for the greenhouse remain open."
+  ],
+  "backlog": {
+    "greenhouse-atrium": "P2 · staging tested in #41 · acquisition decision and Market integration tracked in #42"
+  },
+  "id": "issue-34-final-review",
+  "timestamp": "2026-11-27T20:51:26Z",
+  "branch": "codex/34-integration-check",
+  "commit": "f32068af0264908c135f7578a9bafc6326c5ec70",
+  "files": [
+    "docs/ai-handoff/BACKLOG.md",
+    "docs/ai-handoff/CHANGELOG.md",
+    "docs/ai-handoff/ISSUES.md",
+    "docs/ai-handoff/LATEST.md",
+    "docs/ai-handoff/SCREENSHOTS.md",
+    "docs/ai-handoff/TEST_RESULTS.md",
+    "docs/ai-handoff/events/issue-34-greenhouse-staging.json",
+    "docs/ai-handoff/evidence/greenhouse-34/exterior.png",
+    "docs/ai-handoff/evidence/greenhouse-34/stairs.png",
+    "docs/item_concepts/GREENHOUSE_ATRIUM_BUILD_STUDY.md",
+    "the-allotment-garden-world-v-02/staging/greenhouse_atrium_study.gd",
+    "the-allotment-garden-world-v-02/staging/greenhouse_atrium_study.gd.uid",
+    "the-allotment-garden-world-v-02/staging/greenhouse_atrium_study.tscn",
+    "the-allotment-garden-world-v-02/tests/verify_greenhouse_study.gd",
+    "the-allotment-garden-world-v-02/tests/verify_greenhouse_study.gd.uid"
+  ]
+}
