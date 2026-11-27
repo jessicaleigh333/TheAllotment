@@ -1,0 +1,42 @@
+{
+  "title": "Windows gates rechecked and reporting branches reconciled",
+  "status": "tested",
+  "summary": "Issue #34 preserves both reporting histories and adds tested single-winner claims. Native Windows and public production artifact verification remain open.",
+  "changes": [
+    "Preserved all #32 and #33 events and registry entries and regenerated the handoff after integrating #31.",
+    "Added machine-readable routing and compare-and-swap Git claims for the existing actionable issues.",
+    "Verified all tips for PRs #1–#16 are reachable from main at 861f686."
+  ],
+  "tests": [
+    "PASS — four handoff and dispatch tests, including two concurrent pushes with exactly one winner, owner-only release and re-acquisition.",
+    "PASS — rendered handoff matches append-only history from main.",
+    "The live public update manifest returned HTTP 404."
+  ],
+  "decisions": [
+    "Expired claims require coordinated release after the old writer stops. The queue routes active sessions without launching agents."
+  ],
+  "issues": [
+    "Windows native install/update/rollback and production artifact checks require an approved Windows and signing run. The project declares 4.7 while the build pins 4.6.3."
+  ],
+  "next": [
+    "Review the reconciliation before using unattended claims. Verify native release gates in the approved owner environment."
+  ],
+  "backlog": {
+    "windows-release": "P0 · native Windows and signed production verification blocked · public manifest returned HTTP 404",
+    "backlog-dispatch": "P0 · concurrent claim and routing checks passed · awaiting review"
+  },
+  "id": "issue-34-reporting-reconciled",
+  "timestamp": "2026-11-27T20:31:06Z",
+  "branch": "codex/34-handoff-reconciliation",
+  "commit": "bde6df3253de5f44225d08350be89b8f22d8f730",
+  "files": [
+    ".github/workflows/ai-handoff.yml",
+    "AGENTS.md",
+    "docs/WINDOWS_VERIFICATION_30.md",
+    "docs/ai-handoff/AGENT_REGISTRY.md",
+    "docs/ai-handoff/HANDOFF_GUIDE.md",
+    "docs/ai-handoff/dispatch.json",
+    "tools/ai_handoff/dispatch.py",
+    "tools/ai_handoff/test_dispatch.py"
+  ]
+}

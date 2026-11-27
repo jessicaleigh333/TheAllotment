@@ -12,3 +12,23 @@
 - Codex: implemented milestone reporting, tested generation and failure recovery, and opened draft PR #28. Future sessions summarize available exchanges and use GitHub for live review status.
 
 [Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/0e33a90c12447aa77d7149a9c06f3386587c20a2)
+
+## [2026-11-24T01:47:23Z · Architecture audit started](events/architecture-audit-started.json)
+
+- Owner requested current main, the shared backlog and a start on issue #29 with published milestones.
+
+[Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/0223df04a678ea01e04c145c412e98d26c4903f8)
+
+## [2026-11-27T20:09:17Z · Architecture and regression audit ready for review](events/architecture-audit-baseline-verified.json)
+
+- Owner requested a complete architecture audit, integrated regression inventory, PR #31 review, and Windows verification coordinated with PR #16.
+- Codex completed the audit and reviewed PR #31 for unattended assignment discovery and claiming.
+
+[Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/9447b3cfdb4714e4d16b1e8f15fa192fefbe8be2)
+
+## [2026-11-27T20:11:53Z · Windows updater fixtures and exported game saves verified on Linux](events/windows-verification-fixtures-tested.json)
+
+- Owner requested Windows verification using the implementation in PR #16 and preserving existing saves and gameplay.
+- Codex verified the existing launcher with fixtures and recorded what still needs native evidence.
+
+[Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/53d77101e0b2170c75a71464f2fdc0029774384b)
