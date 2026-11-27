@@ -56,3 +56,18 @@ Use **planned** for intended work, **in progress** for implementation or unresol
 The repository has no supported feed for private Codex or ChatGPT conversations. Sessions contribute summaries from messages they can actually see. GitHub Actions cannot observe local edits or chat, and this workflow creates no timer-based commits. A future session should use this guide to record material milestones even when it cannot access earlier chats.
 
 When visual evidence is relevant and the environment can render the game, capture a screenshot after running the affected scene, review it, and attach it to the PR or commit it in an appropriate repository location. Add a link and scene/revision context to `screenshots`. Use a stable GitHub link for evidence that must outlive CI artifact retention. Record any inability to capture a screenshot in the milestone. Reporting-only work has no game screen to capture.
+
+## Route active sessions
+
+[dispatch.json](dispatch.json) maps the actionable backlog issues to priority, prerequisites and existing work PRs. Extend it when a separate actionable issue exists. Run these commands from a current checkout with authenticated GitHub CLI read access and Git write access to the canonical repository.
+
+```sh
+python -m tools.ai_handoff.dispatch route
+python -m tools.ai_handoff.dispatch claim-next
+python -m tools.ai_handoff.dispatch verify ISSUE RUN_ID
+python -m tools.ai_handoff.dispatch release ISSUE RUN_ID
+```
+
+Routing reads live issue state, blocked labels, mapped PR state and shared claim refs. A prerequisite must be closed as completed. Reports remain historical context. Existing open work PRs are routed for manual coordination. A human-authorized takeover resumes the existing branch after the previous writer is confirmed stopped. The stale PRs #1–#16 have reachable tips on main and do not act as work claims.
+
+Each acquisition creates an issue-specific branch ref using a lease that requires the ref to be absent. Two simultaneous acquisitions can produce only one owner. Verify ownership before editing and before publishing. Release after publishing the linked PR or stopping work. A claim expires after 24 hours and becomes ineligible for automated dispatch until the previous writer stops and the owner coordinates release using that run ID. This avoids overlapping sessions if an expired worker is still alive. This command does not launch agents.
