@@ -26,7 +26,10 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - run: python -m unittest tools.ai_handoff.test_handoff -v
+      - run: |
+          git config user.name "Allotment claim fixture"
+          git config user.email "fixture@example.invalid"
+      - run: python -m unittest tools.ai_handoff.test_handoff tools.ai_handoff.test_dispatch -v
       - name: Verify published Markdown and history
         env:
           BASE: ${{ github.event.pull_request.base.sha || github.event.before }}

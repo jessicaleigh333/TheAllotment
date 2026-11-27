@@ -68,3 +68,7 @@ Confirm both exit status and PASS output for scripted checks. Game pack exports 
 5. Verify the public channel only after owner-approved publication. Fetch the public manifest and its named archive, match the signed hashes against the tested package and verify updater behavior from an older build. Until then the public-channel gate stays open.
 
 Keep the game identity `The Allotment - Garden World v0.2`, the Windows game data root `%APPDATA%\Godot\app_userdata\The Allotment - Garden World v0.2\` and the separate launcher data root stable. Fixture success does not establish compatibility of future save schema changes with rollback.
+
+## November 27 queue follow-up
+
+Rechecked the public manifest at main `861f686` for [issue #34](https://github.com/jessicaleigh333/TheAllotment/issues/34). It still returned HTTP 404. The project descriptor declares 4.7 while the Windows workflow and distribution instructions pin official Godot 4.6.3. Linux import and the #33 fixture and pack evidence establish compatibility for those tested paths on 4.6.3. Native exports and two-build Windows save continuity still require an approved Windows workflow or owner-operated Windows machine and signed packages. Use an agreed editor and matching templates before accepting a release. No project version change was made during verification.

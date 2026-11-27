@@ -40,3 +40,9 @@ Append one entry per material assignment or status transition. Preserve prior en
 | UTC date | Agent | Assignment and contribution | Status | Evidence |
 | --- | --- | --- | --- | --- |
 | 2026-11-27 | Codex (primary session) | Ran production-code launcher fixture suites, Windows-preset pack exports and isolated exported-game save/play checks. Recorded native acceptance steps. No subagents were delegated. | Linux checks complete, native and live release verification blocked | [Report](../WINDOWS_VERIFICATION_30.md), [#30](https://github.com/jessicaleigh333/TheAllotment/issues/30), [#33](https://github.com/jessicaleigh333/TheAllotment/pull/33) |
+
+## Issue #34 execution
+
+| UTC date | Agent | Assignment and contribution | Status | Evidence |
+| --- | --- | --- | --- | --- |
+| 2026-11-27 | Codex (primary session) | Rechecked Windows release gates, fixed and tested the HUD Settings regression, reconciled the three reporting branches and exercised the dispatch claim race. This session had no delegated assignments. | Locally tested and awaiting review. Native Windows evidence remains open. | [#34](https://github.com/jessicaleigh333/TheAllotment/issues/34), [HUD PR #35](https://github.com/jessicaleigh333/TheAllotment/pull/35) |
