@@ -9,6 +9,12 @@ No individual subagent identities or assignments have been verified in the publi
 | Agent ID | Display name | Specialty | Parent/delegator | Assignment ID | Status | Evidence |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 
+## Issue #29 contribution
+
+| UTC date | Agent | Assignment and contribution | Status | Evidence | Verification |
+| --- | --- | --- | --- | --- | --- |
+| 2026-11-24 | Codex (primary session) | Started the architecture audit, regression inventory and PR triage. No subagents were delegated. | Active | [Issue #29](https://github.com/jessicaleigh333/TheAllotment/issues/29), [draft PR #32](https://github.com/jessicaleigh333/TheAllotment/pull/32) | Reviewed source pinned to main. GitHub verified Windows and terrain ancestry. Runtime baseline remains pending. |
+
 ## Assignment and contribution history
 
 Append one entry per material assignment or status transition. Preserve prior entries; correct errors with a linked follow-up.
@@ -23,3 +29,9 @@ Append one entry per material assignment or status transition. Preserve prior en
 - Update this registry alongside the existing milestone event and task PR; include a registry reference in the milestone changes or decisions. Preserve concurrent entries when integrating branches.
 - Public repository: exclude private transcripts, credentials, personal data, internal sensitive identifiers and private links. Use reviewed project-local aliases where appropriate.
 - The parent session is responsible for checking delegated work and reporting failures or unverified claims. The registry does not replace existing code review, test evidence, or owner approval.
+
+## 2026-11-27 audit handoff
+
+| UTC date | Agent | Assignment and contribution | Status | Evidence |
+| --- | --- | --- | --- | --- |
+| 2026-11-27 | Codex (primary session) | Finished all remote branch comparisons, ran isolated Godot/Python regressions, captured graphical evidence and reviewed #31 claim behavior. No subagents were delegated. | Completed audit, awaiting owner review | [Audit and evidence](../ARCHITECTURE_AUDIT_29.md), [#32](https://github.com/jessicaleigh333/TheAllotment/pull/32), [#31 review](https://github.com/jessicaleigh333/TheAllotment/pull/31#issuecomment-7227173966) |

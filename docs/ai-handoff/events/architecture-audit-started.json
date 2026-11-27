@@ -1,0 +1,36 @@
+{
+  "title": "Architecture audit started",
+  "status": "in progress",
+  "summary": "Opened draft PR #32 with the initial architecture map, regression inventory and integration triage at current main. Godot runtime verification and exact branch comparisons remain open.",
+  "pr": 32,
+  "conversation": [
+    "Owner requested current main, the shared backlog and a start on issue #29 with published milestones."
+  ],
+  "changes": [
+    "Published the [initial architecture audit](../ARCHITECTURE_AUDIT_29.md) and recorded the contribution in the [agent registry](AGENT_REGISTRY.md)."
+  ],
+  "tests": [
+    "GitHub resolved current main to 861f686a688e4e45172e2c6e859f94f96860f007 and supplied pinned source files for inspection.",
+    "Local Godot reports 4.6.3. The pinned project declares 4.7 Compatibility. No game regression results recorded yet."
+  ],
+  "decisions": [
+    "Coordinate Windows release verification with #16 and compare current branches before porting older gameplay changes."
+  ],
+  "issues": [
+    "The local checkout predates the pinned baseline. Initial Git transport failed under the default sandbox, and the network-enabled fetch had not finished when this milestone was recorded."
+  ],
+  "next": [
+    "Finish the local baseline fetch and run fresh import and isolated regression checks.",
+    "Verify merge bases and review the remaining Windows-stack and lawn/cobblestone deltas."
+  ],
+  "backlog": {
+    "architecture-audit": "P0 · in progress · [#29](https://github.com/jessicaleigh333/TheAllotment/issues/29) · initial inventory in [draft #32](https://github.com/jessicaleigh333/TheAllotment/pull/32)."
+  },
+  "id": "architecture-audit-started",
+  "timestamp": "2026-11-24T01:47:23Z",
+  "branch": "codex/29-architecture-audit",
+  "commit": "0223df04a678ea01e04c145c412e98d26c4903f8",
+  "files": [
+    "docs/ARCHITECTURE_AUDIT_29.md"
+  ]
+}

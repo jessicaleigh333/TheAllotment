@@ -9,3 +9,21 @@
 - Use sanitized conversation summaries on the public repository and actual PR/commit links for live review and merge evidence.
 
 [Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/0e33a90c12447aa77d7149a9c06f3386587c20a2)
+
+## [2026-11-24T01:47:23Z · Architecture audit started](events/architecture-audit-started.json)
+
+- Coordinate Windows release verification with #16 and compare current branches before porting older gameplay changes.
+
+[Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/0223df04a678ea01e04c145c412e98d26c4903f8)
+
+## [2026-11-24T01:49:24Z · Verified Windows and terrain branch ancestry](events/architecture-audit-branch-comparison.json)
+
+- Coordinate native Windows checks with #16. Review the two diverged terrain branches together for changes still needed.
+
+[Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/14f8db816103fddcfa36a566e3c7d8b3f60e52f7)
+
+## [2026-11-27T20:09:17Z · Architecture and regression audit ready for review](events/architecture-audit-baseline-verified.json)
+
+- PRs #1–#16 already reachable from main. Port desired terrain rendering to the current radial layout only after review. Audit changes are documentation and screenshots.
+
+[Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/9447b3cfdb4714e4d16b1e8f15fa192fefbe8be2)

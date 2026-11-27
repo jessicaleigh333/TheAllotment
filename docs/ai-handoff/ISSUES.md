@@ -8,3 +8,22 @@
 - Open limitation — private conversation history has no automatic export feed. Sessions supply reviewed summaries.
 
 [Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/0e33a90c12447aa77d7149a9c06f3386587c20a2)
+
+## [2026-11-24T01:47:23Z · Architecture audit started](events/architecture-audit-started.json)
+
+- The local checkout predates the pinned baseline. Initial Git transport failed under the default sandbox, and the network-enabled fetch had not finished when this milestone was recorded.
+
+[Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/0223df04a678ea01e04c145c412e98d26c4903f8)
+
+## [2026-11-24T01:49:24Z · Verified Windows and terrain branch ancestry](events/architecture-audit-branch-comparison.json)
+
+- Fresh Godot import and runtime regression checks remain pending. The local fetch had yet to finish at this milestone.
+
+[Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/14f8db816103fddcfa36a566e3c7d8b3f60e52f7)
+
+## [2026-11-27T20:09:17Z · Architecture and regression audit ready for review](events/architecture-audit-baseline-verified.json)
+
+- [#29](https://github.com/jessicaleigh333/TheAllotment/issues/29) ready for acceptance review.
+- [#31 review](https://github.com/jessicaleigh333/TheAllotment/pull/31#issuecomment-7227173966) requests concurrent claim arbitration and structured routing.
+
+[Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/9447b3cfdb4714e4d16b1e8f15fa192fefbe8be2)

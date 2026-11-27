@@ -8,3 +8,22 @@
 - Adds instructions in AGENTS.md so future sessions discover and publish milestone reports through existing task PRs.
 
 [Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/0e33a90c12447aa77d7149a9c06f3386587c20a2)
+
+## [2026-11-24T01:47:23Z · Architecture audit started](events/architecture-audit-started.json)
+
+- Published the [initial architecture audit](../ARCHITECTURE_AUDIT_29.md) and recorded the contribution in the [agent registry](AGENT_REGISTRY.md).
+
+[Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/0223df04a678ea01e04c145c412e98d26c4903f8)
+
+## [2026-11-24T01:49:24Z · Verified Windows and terrain branch ancestry](events/architecture-audit-branch-comparison.json)
+
+- Added verified branch comparisons to the [architecture audit](../ARCHITECTURE_AUDIT_29.md). Updated the [agent registry](AGENT_REGISTRY.md).
+
+[Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/14f8db816103fddcfa36a566e3c7d8b3f60e52f7)
+
+## [2026-11-27T20:09:17Z · Architecture and regression audit ready for review](events/architecture-audit-baseline-verified.json)
+
+- Architecture map, complete branch matrix, conflict details, prioritized integration plan and gameplay recommendations are in docs/ARCHITECTURE_AUDIT_29.md.
+- [Agent registry](AGENT_REGISTRY.md) records the primary session contribution.
+
+[Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/9447b3cfdb4714e4d16b1e8f15fa192fefbe8be2)
