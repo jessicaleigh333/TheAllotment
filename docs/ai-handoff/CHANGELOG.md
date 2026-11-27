@@ -86,3 +86,10 @@
 - Recorded actual primary-session contributions and review evidence in the registry.
 
 [Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/beafb32d4499276cc7c288ec1ce06ffaa1fe67b9)
+
+## [2026-11-27T20:49:33Z · Multi-level greenhouse staging collision tested](events/issue-34-greenhouse-staging.json)
+
+- Documented plan, section, elevations, tread geometry, landings and upper-edge clearance.
+- Built a staging shell, modular framing, stair visuals, continuous collision transitions and guardrails.
+
+[Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/751654235fa7f523d93247e10778d441831ca80e)

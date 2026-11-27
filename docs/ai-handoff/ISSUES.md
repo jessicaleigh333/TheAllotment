@@ -70,3 +70,9 @@
 - Windows native signing/installation, production update-channel verification and courtyard visual acceptance remain open.
 
 [Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/beafb32d4499276cc7c288ec1ce06ffaa1fe67b9)
+
+## [2026-11-27T20:49:33Z · Multi-level greenhouse staging collision tested](events/issue-34-greenhouse-staging.json)
+
+- Acquisition rule awaits owner decision. Final arched bays, camera clearance in the real garden, catalog extraction, thumbnail, placement permissions and save/reopen still need implementation or acceptance.
+
+[Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/751654235fa7f523d93247e10778d441831ca80e)

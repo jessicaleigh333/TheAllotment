@@ -1,0 +1,40 @@
+{
+  "title": "Multi-level greenhouse staging collision tested",
+  "status": "tested",
+  "summary": "PR #22's approved architectural reference informed a dimensioned structural study. The existing avatar passed the entrance and mezzanine route in staging.",
+  "changes": [
+    "Documented plan, section, elevations, tread geometry, landings and upper-edge clearance.",
+    "Built a staging shell, modular framing, stair visuals, continuous collision transitions and guardrails."
+  ],
+  "tests": [
+    "PASS — Godot 4.6.3 avatar traversal through front door, both flights, turn landing and upper railing test.",
+    "PASS — visual review of OpenGL staging captures."
+  ],
+  "screenshots": [
+    "[Exterior](https://github.com/jessicaleigh333/TheAllotment/blob/codex/34-greenhouse-atrium/docs/ai-handoff/evidence/greenhouse-34/exterior.png)",
+    "[Stairs](https://github.com/jessicaleigh333/TheAllotment/blob/codex/34-greenhouse-atrium/docs/ai-handoff/evidence/greenhouse-34/stairs.png)"
+  ],
+  "issues": [
+    "Acquisition rule awaits owner decision. Final arched bays, camera clearance in the real garden, catalog extraction, thumbnail, placement permissions and save/reopen still need implementation or acceptance."
+  ],
+  "next": [
+    "Confirm greenhouse acquisition and review staging before live item integration. Confirm which other greenhouse/conservatory designs have owner approval."
+  ],
+  "backlog": {
+    "greenhouse-atrium": "P2 · staging shell and traversal tested · await owner acquisition and art review"
+  },
+  "id": "issue-34-greenhouse-staging",
+  "timestamp": "2026-11-27T20:49:33Z",
+  "branch": "codex/34-greenhouse-atrium",
+  "commit": "751654235fa7f523d93247e10778d441831ca80e",
+  "files": [
+    "docs/ai-handoff/evidence/greenhouse-34/exterior.png",
+    "docs/ai-handoff/evidence/greenhouse-34/stairs.png",
+    "docs/item_concepts/GREENHOUSE_ATRIUM_BUILD_STUDY.md",
+    "the-allotment-garden-world-v-02/staging/greenhouse_atrium_study.gd",
+    "the-allotment-garden-world-v-02/staging/greenhouse_atrium_study.gd.uid",
+    "the-allotment-garden-world-v-02/staging/greenhouse_atrium_study.tscn",
+    "the-allotment-garden-world-v-02/tests/verify_greenhouse_study.gd",
+    "the-allotment-garden-world-v-02/tests/verify_greenhouse_study.gd.uid"
+  ]
+}
