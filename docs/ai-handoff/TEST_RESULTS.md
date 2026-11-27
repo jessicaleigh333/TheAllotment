@@ -124,3 +124,12 @@
 - PASS — fresh botanical intake preserved 851 rows, 833 plant IDs and 805 evidence occurrences; approved runtime export remains empty.
 
 [Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/0c322350eb75293f14f119f5b205726ac23d8e93)
+
+## [2026-11-27T21:29:26Z · Queue 34 merged and verified](events/issue-34-reviewed-integration-merged.json)
+
+- PASS — exact final main: 13 Godot 4.6.3 suites (HUD, Guides, care, harvest, real-time growth, Market, vault, weather, greenhouse staging, layouts, nine sidewalk entries, courtyard persistence and ground cover), 52 Python tests and generated reports validation.
+- PASS — refreshed GitHub handoff checks on reconciled heads. Botanical foundation passed on #38; Master item catalog passed on #39 and #40.
+- PASS — Windows updater protocol and HTTP fixture tests under Linux using disposable keys; draft #43 imported, exported and booted a Windows-preset PCK under Linux.
+- PASS — draft #44 Guide, HUD, Market, Weather and Plant Care checks; Backpack forecast matched the neighborhood provider.
+
+[Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/e9cb3f1410dcb2265ff0e2ad734ad5288e418baf)

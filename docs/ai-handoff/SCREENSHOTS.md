@@ -41,3 +41,10 @@
 - [Stairs](https://github.com/jessicaleigh333/TheAllotment/blob/codex/34-greenhouse-atrium/docs/ai-handoff/evidence/greenhouse-34/stairs.png)
 
 [Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/751654235fa7f523d93247e10778d441831ca80e)
+
+## [2026-11-27T21:29:26Z · Queue 34 merged and verified](events/issue-34-reviewed-integration-merged.json)
+
+- [Owner-approved courtyard evidence](https://github.com/jessicaleigh333/TheAllotment/tree/codex/34-courtyard-surfaces/docs/ai-handoff/evidence/courtyard-34)
+- [Staging atrium evidence](https://github.com/jessicaleigh333/TheAllotment/tree/codex/34-greenhouse-atrium/docs/ai-handoff/evidence/greenhouse-34)
+
+[Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/e9cb3f1410dcb2265ff0e2ad734ad5288e418baf)

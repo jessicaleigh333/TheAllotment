@@ -91,3 +91,10 @@
 - Greenhouse #42 requires acquisition and final visual decisions before Market acceptance. No new screenshots were captured for the integration run.
 
 [Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/0c322350eb75293f14f119f5b205726ac23d8e93)
+
+## [2026-11-27T21:29:26Z · Queue 34 merged and verified](events/issue-34-reviewed-integration-merged.json)
+
+- No production signing or release occurred. Live manifest returned HTTP 404. Native Windows approval and two signed builds remain needed under #30.
+- Field-level provenance checked for basil and cosmos. Approved runtime export remains empty. Soil and pest simulation remain open.
+
+[Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/e9cb3f1410dcb2265ff0e2ad734ad5288e418baf)

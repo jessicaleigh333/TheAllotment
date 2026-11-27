@@ -108,3 +108,12 @@
 - PR #43 proposes aligning the project descriptor with the existing official Windows Godot 4.6.3 pin.
 
 [Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/0c322350eb75293f14f119f5b205726ac23d8e93)
+
+## [2026-11-27T21:29:26Z · Queue 34 merged and verified](events/issue-34-reviewed-integration-merged.json)
+
+- #36 d2a82952ffd3af99de76886d1968361c4855c085; #35 c89146858c0fe139b62b69d9bf88a0980760327e; #38 ade98f88286dbd75fff262911d1c5538f97880e4; #39 b019a9306852d0c92dcbba032711a233e84fd55c.
+- #40 b7bb2a50aee761f4bdd0b4acfc8d217dfa19ccd9 was retargeted only after #39 merged; signed-off tree comparison and ancestry showed no duplicate care-loop changes.
+- #41 c7e43687947045aba8612934d604d2407bdedffe integrates the staging scene only; #37 e9cb3f1410dcb2265ff0e2ad734ad5288e418baf followed owner visual and merge approval.
+- Added reviewed integration to the existing agent registry. No agent delegation occurred.
+
+[Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/e9cb3f1410dcb2265ff0e2ad734ad5288e418baf)

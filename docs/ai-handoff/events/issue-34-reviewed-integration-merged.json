@@ -1,0 +1,64 @@
+{
+  "title": "Queue 34 merged and verified",
+  "status": "merged",
+  "pr": 37,
+  "summary": "All seven approved PRs are merged. The final main SHA e9cb3f1410dcb2265ff0e2ad734ad5288e418baf passed the combined game and Python suites.",
+  "changes": [
+    "#36 d2a82952ffd3af99de76886d1968361c4855c085; #35 c89146858c0fe139b62b69d9bf88a0980760327e; #38 ade98f88286dbd75fff262911d1c5538f97880e4; #39 b019a9306852d0c92dcbba032711a233e84fd55c.",
+    "#40 b7bb2a50aee761f4bdd0b4acfc8d217dfa19ccd9 was retargeted only after #39 merged; signed-off tree comparison and ancestry showed no duplicate care-loop changes.",
+    "#41 c7e43687947045aba8612934d604d2407bdedffe integrates the staging scene only; #37 e9cb3f1410dcb2265ff0e2ad734ad5288e418baf followed owner visual and merge approval.",
+    "Added reviewed integration to the existing agent registry. No agent delegation occurred."
+  ],
+  "tests": [
+    "PASS — exact final main: 13 Godot 4.6.3 suites (HUD, Guides, care, harvest, real-time growth, Market, vault, weather, greenhouse staging, layouts, nine sidewalk entries, courtyard persistence and ground cover), 52 Python tests and generated reports validation.",
+    "PASS — refreshed GitHub handoff checks on reconciled heads. Botanical foundation passed on #38; Master item catalog passed on #39 and #40.",
+    "PASS — Windows updater protocol and HTTP fixture tests under Linux using disposable keys; draft #43 imported, exported and booted a Windows-preset PCK under Linux.",
+    "PASS — draft #44 Guide, HUD, Market, Weather and Plant Care checks; Backpack forecast matched the neighborhood provider."
+  ],
+  "decisions": [
+    "Owner confirmed a Rune purchase for #42. Unattended dispatch remains disabled."
+  ],
+  "issues": [
+    "No production signing or release occurred. Live manifest returned HTTP 404. Native Windows approval and two signed builds remain needed under #30.",
+    "Field-level provenance checked for basil and cosmos. Approved runtime export remains empty. Soil and pest simulation remain open."
+  ],
+  "screenshots": [
+    "[Owner-approved courtyard evidence](https://github.com/jessicaleigh333/TheAllotment/tree/codex/34-courtyard-surfaces/docs/ai-handoff/evidence/courtyard-34)",
+    "[Staging atrium evidence](https://github.com/jessicaleigh333/TheAllotment/tree/codex/34-greenhouse-atrium/docs/ai-handoff/evidence/greenhouse-34)"
+  ],
+  "next": [
+    "Continue Windows acceptance and greenhouse Market review. Review the next botanical provenance batch before any runtime publication."
+  ],
+  "backlog": {
+    "hud-regression": "merged via #35",
+    "lawn-and-paths": "owner approved and merged via #37",
+    "offline-simulation": "UTC equivalence regression merged via #38",
+    "harvesting": "starter basil and cosmos loop merged via #39",
+    "game-guides": "Guide and Diary merged via #40; expanded observations in draft #44",
+    "greenhouse-atrium": "staging merged via #41; Rune purchase and playable Market work tracked in #42",
+    "windows-release": "Godot pin alignment in draft #43; native signed verification and publication open",
+    "botanical-library": "basil and cosmos sources checked in draft #44; runtime export remains empty"
+  },
+  "id": "issue-34-reviewed-integration-merged",
+  "timestamp": "2026-11-27T21:29:26Z",
+  "branch": "queue34-handoff",
+  "commit": "e9cb3f1410dcb2265ff0e2ad734ad5288e418baf",
+  "files": [
+    "docs/ai-handoff/BACKLOG.md",
+    "docs/ai-handoff/CHANGELOG.md",
+    "docs/ai-handoff/SCREENSHOTS.md",
+    "docs/ai-handoff/TEST_RESULTS.md",
+    "docs/ai-handoff/events/issue-34-courtyard-surfaces.json",
+    "docs/ai-handoff/evidence/courtyard-34/after-day.png",
+    "docs/ai-handoff/evidence/courtyard-34/after-night.png",
+    "docs/ai-handoff/evidence/courtyard-34/before-day.png",
+    "docs/ai-handoff/evidence/courtyard-34/before-night.png",
+    "the-allotment-garden-world-v-02/scripts/courtyard_cobbles.gd",
+    "the-allotment-garden-world-v-02/scripts/courtyard_cobbles.gd.uid",
+    "the-allotment-garden-world-v-02/scripts/courtyard_world.gd",
+    "the-allotment-garden-world-v-02/shaders/cobblestone.gdshader",
+    "the-allotment-garden-world-v-02/shaders/cobblestone.gdshader.uid",
+    "the-allotment-garden-world-v-02/shaders/lawn.gdshader",
+    "the-allotment-garden-world-v-02/shaders/lawn.gdshader.uid"
+  ]
+}

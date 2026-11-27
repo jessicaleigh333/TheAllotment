@@ -51,3 +51,9 @@
 - Courtyard #37 is excluded pending owner visual approval. Greenhouse #41 is staging only. Unattended dispatch remains disabled.
 
 [Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/0c322350eb75293f14f119f5b205726ac23d8e93)
+
+## [2026-11-27T21:29:26Z · Queue 34 merged and verified](events/issue-34-reviewed-integration-merged.json)
+
+- Owner confirmed a Rune purchase for #42. Unattended dispatch remains disabled.
+
+[Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/e9cb3f1410dcb2265ff0e2ad734ad5288e418baf)

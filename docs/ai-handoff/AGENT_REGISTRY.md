@@ -51,3 +51,9 @@ Append one entry per material assignment or status transition. Preserve prior en
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | 2026-11-27 | Codex (primary session) | issue-34 | Adapted courtyard surfaces, verified botanical intake and UTC growth, implemented the starter care and harvest loop, and connected the guide and diary. No subagents were delegated. | Tested on focused and combined review branches | [#37](https://github.com/jessicaleigh333/TheAllotment/pull/37), [#38](https://github.com/jessicaleigh333/TheAllotment/pull/38), [#39](https://github.com/jessicaleigh333/TheAllotment/pull/39), [#40](https://github.com/jessicaleigh333/TheAllotment/pull/40) | Godot targeted integration suites and 52 Python tests passed | Owner review of focused PRs; courtyard visual approval pending |
 | 2026-11-27 | Codex (primary session) | greenhouse-atrium | Reviewed the owner reference, modeled a dimensional staging shell, and verified the existing avatar traversal. No subagents were delegated. | Staging tested; publication blocked | [#41](https://github.com/jessicaleigh333/TheAllotment/pull/41), [#42](https://github.com/jessicaleigh333/TheAllotment/issues/42) | Entrance, stair flights, turn landing and upper guardrail passed on the focused and combined branches | Owner acquisition and art decision, then live placement and catalog checks |
+
+## Issue #34 reviewed integration
+
+| UTC date | Agent | Assignment and contribution | Status | Evidence |
+| --- | --- | --- | --- | --- |
+| 2026-11-27 | Codex (primary session) | Reconciled the approved PRs against current main, preserved the reporting history and reran the combined suites on the final merge. No subagents were delegated. | Integration verified. Windows release and playable atrium remain tracked separately. | [Issue #34](https://github.com/jessicaleigh333/TheAllotment/issues/34), [tested main](https://github.com/jessicaleigh333/TheAllotment/commit/e9cb3f1410dcb2265ff0e2ad734ad5288e418baf) |
