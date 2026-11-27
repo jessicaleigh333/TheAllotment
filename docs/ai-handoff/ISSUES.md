@@ -35,6 +35,12 @@
 
 [Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/53d77101e0b2170c75a71464f2fdc0029774384b)
 
+## [2026-11-27T20:29:10Z · HUD navigation and Settings regression verified](events/issue-34-hud-verified.json)
+
+- The headless suite checks the folder control and its signal wiring. Desktop file-manager launch remains unverified.
+
+[Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/5e19fc0f337db1b1597da7eb60464b173a7e0140)
+
 ## [2026-11-27T20:31:06Z · Windows gates rechecked and reporting branches reconciled](events/issue-34-reporting-reconciled.json)
 
 - Windows native install/update/rollback and production artifact checks require an approved Windows and signing run. The project declares 4.7 while the build pins 4.6.3.
