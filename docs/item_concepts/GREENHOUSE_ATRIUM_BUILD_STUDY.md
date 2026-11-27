@@ -15,7 +15,7 @@ Prototype for issue #34 and [the approved concept in PR #22](https://github.com/
 
 Open `staging/greenhouse_atrium_study.tscn` in Godot. This is a structural preview with ground, stair and upper-deck collision. The sky-facing cover and glazing are visual. Confirm the owner-approved acquisition route, test the in-garden camera and clearance through the walking controls, author finalized glazing/door/thumbnail modules, and extract the stable ID through the existing catalog pipeline before publishing a playable Shop item.
 
-The proposed ID `greenhouse_atrium_multilevel_01` is absent from the existing runtime catalog. The draft has no pricing or gameplay publication.
+The standalone staging scene has no Market listing or acquisition cost.
 
 ## Garden 01 Market draft
 
