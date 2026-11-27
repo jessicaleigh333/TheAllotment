@@ -9,9 +9,80 @@
 
 [Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/0e33a90c12447aa77d7149a9c06f3386587c20a2)
 
+## [2026-11-24T01:47:23Z · Architecture audit started](events/architecture-audit-started.json)
+
+- Published the [initial architecture audit](../ARCHITECTURE_AUDIT_29.md) and recorded the contribution in the [agent registry](AGENT_REGISTRY.md).
+
+[Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/0223df04a678ea01e04c145c412e98d26c4903f8)
+
+## [2026-11-24T01:49:24Z · Verified Windows and terrain branch ancestry](events/architecture-audit-branch-comparison.json)
+
+- Added verified branch comparisons to the [architecture audit](../ARCHITECTURE_AUDIT_29.md). Updated the [agent registry](AGENT_REGISTRY.md).
+
+[Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/14f8db816103fddcfa36a566e3c7d8b3f60e52f7)
+
+## [2026-11-27T20:09:17Z · Architecture and regression audit ready for review](events/architecture-audit-baseline-verified.json)
+
+- Architecture map, complete branch matrix, conflict details, prioritized integration plan and gameplay recommendations are in docs/ARCHITECTURE_AUDIT_29.md.
+- [Agent registry](AGENT_REGISTRY.md) records the primary session contribution.
+
+[Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/9447b3cfdb4714e4d16b1e8f15fa192fefbe8be2)
+
+## [2026-11-27T20:11:53Z · Windows updater fixtures and exported game saves verified on Linux](events/windows-verification-fixtures-tested.json)
+
+- [Windows verification report](../WINDOWS_VERIFICATION_30.md) records reproduction steps, export hashes and the native checklist.
+- [Agent registry](AGENT_REGISTRY.md) records actual work completed by the primary session.
+
+[Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/53d77101e0b2170c75a71464f2fdc0029774384b)
+
+## [2026-11-27T20:29:10Z · HUD navigation and Settings regression verified](events/issue-34-hud-verified.json)
+
+- Exercise all 12 HUD destinations, send Escape through the viewport, check focus restoration and verify the Settings button writes a real vault checkpoint.
+- Open my save folder now creates the active profile directory if needed and reports filesystem or shell errors.
+
+[Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/5e19fc0f337db1b1597da7eb60464b173a7e0140)
+
+## [2026-11-27T20:31:06Z · Windows gates rechecked and reporting branches reconciled](events/issue-34-reporting-reconciled.json)
+
+- Preserved all #32 and #33 events and registry entries and regenerated the handoff after integrating #31.
+- Added machine-readable routing and compare-and-swap Git claims for the existing actionable issues.
+- Verified all tips for PRs #1–#16 are reachable from main at 861f686.
+
+[Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/bde6df3253de5f44225d08350be89b8f22d8f730)
+
 ## [2026-11-27T20:35:44Z · Radial courtyard turf and limestone surface preview](events/issue-34-courtyard-surfaces.json)
 
 - Reused the original turf shader and limestone mesh and shader on the current radial courtyard.
 - Setts follow the nine approach transforms and remain decorative. The existing courtyard ring and approach surface heights remain authoritative for collisions and placement.
 
 [Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/f1642c0b476b53faac25aa866dc390bc424c3cd9)
+
+## [2026-11-27T20:36:33Z · Botanical intake and elapsed UTC growth verified](events/issue-34-plant-verification.json)
+
+- Compared PR #18 originals with current main and documented stable IDs, overlap, unverified provenance and runtime publication boundary.
+- Compared actively observed and reopened growth at UTC stage boundaries, including a rollback after observation.
+
+[Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/2f4c55d0c0d751e740c37d98a2c9d42b8c04be23)
+
+## [2026-11-27T20:41:44Z · Starter care, harvest and sale verified](events/issue-34-starter-care.json)
+
+- Backpack → Plants and harvest shows living plants, accepts watering, exposes harvest readiness and offers one-unit produce sales.
+- Basil and cosmos yields, sale values and the 14-day picking interval are prototype tuning. A new planting must establish before harvest, including after pickup/replant.
+- The garden can continue growing after harvest. The existing free Market remains free.
+
+[Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/557dede47225180eab0b75d1eb8e5416bceb19aa)
+
+## [2026-11-27T20:44:44Z · Louise, Growing Guide and Garden Diary verified](events/issue-34-garden-guides.json)
+
+- Louise describes the playable loop and suggests observing damage and soil before choosing a cause.
+- Growing Guide links to directly verified University of Maryland Extension basil and Royal Horticultural Society cosmos guidance.
+- The Diary lists up to 200 recorded observations per profile. Events survive returning plants to the Backpack.
+
+[Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/c0683f4d8b29b5d2655143f1f868e2041a9bbd12)
+
+## [2026-11-27T20:49:33Z · Multi-level greenhouse staging collision tested](events/issue-34-greenhouse-staging.json)
+
+- Documented plan, section, elevations, tread geometry, landings and upper-edge clearance.
+- Built a staging shell, modular framing, stair visuals, continuous collision transitions and guardrails.
+
+[Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/751654235fa7f523d93247e10778d441831ca80e)

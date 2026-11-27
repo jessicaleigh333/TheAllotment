@@ -8,3 +8,65 @@
 - Open limitation — private conversation history has no automatic export feed. Sessions supply reviewed summaries.
 
 [Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/0e33a90c12447aa77d7149a9c06f3386587c20a2)
+
+## [2026-11-24T01:47:23Z · Architecture audit started](events/architecture-audit-started.json)
+
+- The local checkout predates the pinned baseline. Initial Git transport failed under the default sandbox, and the network-enabled fetch had not finished when this milestone was recorded.
+
+[Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/0223df04a678ea01e04c145c412e98d26c4903f8)
+
+## [2026-11-24T01:49:24Z · Verified Windows and terrain branch ancestry](events/architecture-audit-branch-comparison.json)
+
+- Fresh Godot import and runtime regression checks remain pending. The local fetch had yet to finish at this milestone.
+
+[Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/14f8db816103fddcfa36a566e3c7d8b3f60e52f7)
+
+## [2026-11-27T20:09:17Z · Architecture and regression audit ready for review](events/architecture-audit-baseline-verified.json)
+
+- [#29](https://github.com/jessicaleigh333/TheAllotment/issues/29) ready for acceptance review.
+- [#31 review](https://github.com/jessicaleigh333/TheAllotment/pull/31#issuecomment-7227173966) requests concurrent claim arbitration and structured routing.
+
+[Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/9447b3cfdb4714e4d16b1e8f15fa192fefbe8be2)
+
+## [2026-11-27T20:11:53Z · Windows updater fixtures and exported game saves verified on Linux](events/windows-verification-fixtures-tested.json)
+
+- [#30](https://github.com/jessicaleigh333/TheAllotment/issues/30) remains open pending native Windows verification and the published feed.
+- No Windows executable or Windows screenshots were produced. The official template requests failed in this environment.
+
+[Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/53d77101e0b2170c75a71464f2fdc0029774384b)
+
+## [2026-11-27T20:29:10Z · HUD navigation and Settings regression verified](events/issue-34-hud-verified.json)
+
+- The headless suite checks the folder control and its signal wiring. Desktop file-manager launch remains unverified.
+
+[Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/5e19fc0f337db1b1597da7eb60464b173a7e0140)
+
+## [2026-11-27T20:31:06Z · Windows gates rechecked and reporting branches reconciled](events/issue-34-reporting-reconciled.json)
+
+- Windows native install/update/rollback and production artifact checks require an approved Windows and signing run. The project declares 4.7 while the build pins 4.6.3.
+
+[Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/bde6df3253de5f44225d08350be89b8f22d8f730)
+
+## [2026-11-27T20:36:33Z · Botanical intake and elapsed UTC growth verified](events/issue-34-plant-verification.json)
+
+- No record met the existing runtime approval boundary. Future authoritative care hints need vetted field-level overlays.
+
+[Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/2f4c55d0c0d751e740c37d98a2c9d42b8c04be23)
+
+## [2026-11-27T20:41:44Z · Starter care, harvest and sale verified](events/issue-34-starter-care.json)
+
+- Harvest implementations for other species and a validated plant-health model remain open.
+
+[Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/557dede47225180eab0b75d1eb8e5416bceb19aa)
+
+## [2026-11-27T20:44:44Z · Louise, Growing Guide and Garden Diary verified](events/issue-34-garden-guides.json)
+
+- Broader reference entries need field-level validation. The game records care and harvest events and supplies no diagnosis of pest damage.
+
+[Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/c0683f4d8b29b5d2655143f1f868e2041a9bbd12)
+
+## [2026-11-27T20:49:33Z · Multi-level greenhouse staging collision tested](events/issue-34-greenhouse-staging.json)
+
+- Acquisition rule awaits owner decision. Final arched bays, camera clearance in the real garden, catalog extraction, thumbnail, placement permissions and save/reopen still need implementation or acceptance.
+
+[Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/751654235fa7f523d93247e10778d441831ca80e)

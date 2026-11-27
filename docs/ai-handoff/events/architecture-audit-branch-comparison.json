@@ -1,0 +1,34 @@
+{
+  "title": "Verified Windows and terrain branch ancestry",
+  "status": "in progress",
+  "summary": "The Windows launcher branch tip is already an ancestor of current main. The two terrain branches diverged and share lawn changes. The audit now records these comparisons and the remaining regression checks.",
+  "pr": 32,
+  "changes": [
+    "Added verified branch comparisons to the [architecture audit](../ARCHITECTURE_AUDIT_29.md). Updated the [agent registry](AGENT_REGISTRY.md)."
+  ],
+  "tests": [
+    "PASS — local handoff generator check and two handoff integration tests.",
+    "PASS — [GitHub AI handoff run 45307726241](https://github.com/jessicaleigh333/TheAllotment/actions/runs/45307726241) validated the start milestone.",
+    "PASS — GitHub comparison against 861f686 verified Windows 0 ahead / 14 behind, cobblestone 3 / 33 and soft grass 1 / 33."
+  ],
+  "decisions": [
+    "Coordinate native Windows checks with #16. Review the two diverged terrain branches together for changes still needed."
+  ],
+  "issues": [
+    "Fresh Godot import and runtime regression checks remain pending. The local fetch had yet to finish at this milestone."
+  ],
+  "next": [
+    "Run the pinned Godot baseline with isolated profile data.",
+    "Review terrain implementation overlap and verify the remaining open PR deltas."
+  ],
+  "backlog": {
+    "architecture-audit": "P0 · in progress · Windows and terrain ancestry verified · fresh Godot checks pending in [draft #32](https://github.com/jessicaleigh333/TheAllotment/pull/32)."
+  },
+  "id": "architecture-audit-branch-comparison",
+  "timestamp": "2026-11-24T01:49:24Z",
+  "branch": "codex/29-architecture-audit",
+  "commit": "14f8db816103fddcfa36a566e3c7d8b3f60e52f7",
+  "files": [
+    "docs/ARCHITECTURE_AUDIT_29.md"
+  ]
+}
