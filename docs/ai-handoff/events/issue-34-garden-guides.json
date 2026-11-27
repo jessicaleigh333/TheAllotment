@@ -1,0 +1,36 @@
+{
+  "title": "Louise, Growing Guide and Garden Diary verified",
+  "status": "tested",
+  "summary": "Issue #34 connects garden help to the starter care loop and the Diary to saved watering and harvest observations.",
+  "changes": [
+    "Louise describes the playable loop and suggests observing damage and soil before choosing a cause.",
+    "Growing Guide links to directly verified University of Maryland Extension basil and Royal Horticultural Society cosmos guidance.",
+    "The Diary lists up to 200 recorded observations per profile. Events survive returning plants to the Backpack."
+  ],
+  "tests": [
+    "PASS — HUD, Guide tab and source links, Diary save/reopen and Escape, care, harvest and vault checks with Godot 4.6.3.",
+    "PASS — reviewed matched OpenGL Compatibility renders."
+  ],
+  "screenshots": [
+    "[Before Help](https://github.com/jessicaleigh333/TheAllotment/blob/codex/34-garden-guides/docs/ai-handoff/evidence/guides-34/before-help.png)",
+    "[After Help](https://github.com/jessicaleigh333/TheAllotment/blob/codex/34-garden-guides/docs/ai-handoff/evidence/guides-34/after-help.png)",
+    "[Before Journal](https://github.com/jessicaleigh333/TheAllotment/blob/codex/34-garden-guides/docs/ai-handoff/evidence/guides-34/before-journal.png)",
+    "[After Journal](https://github.com/jessicaleigh333/TheAllotment/blob/codex/34-garden-guides/docs/ai-handoff/evidence/guides-34/after-journal.png)"
+  ],
+  "issues": [
+    "Broader reference entries need field-level validation. The game records care and harvest events and supplies no diagnosis of pest damage."
+  ],
+  "backlog": {
+    "game-guides": "P2 · starter Louise, Growing Guide and Garden Diary tested · awaiting review"
+  },
+  "id": "issue-34-garden-guides",
+  "timestamp": "2026-11-27T20:44:44Z",
+  "branch": "codex/34-garden-guides",
+  "commit": "c0683f4d8b29b5d2655143f1f868e2041a9bbd12",
+  "files": [
+    "docs/ai-handoff/evidence/guides-34/after-help.png",
+    "docs/ai-handoff/evidence/guides-34/after-journal.png",
+    "docs/ai-handoff/evidence/guides-34/before-help.png",
+    "docs/ai-handoff/evidence/guides-34/before-journal.png"
+  ]
+}

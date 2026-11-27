@@ -64,3 +64,11 @@
 - The garden can continue growing after harvest. The existing free Market remains free.
 
 [Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/557dede47225180eab0b75d1eb8e5416bceb19aa)
+
+## [2026-11-27T20:44:44Z · Louise, Growing Guide and Garden Diary verified](events/issue-34-garden-guides.json)
+
+- Louise describes the playable loop and suggests observing damage and soil before choosing a cause.
+- Growing Guide links to directly verified University of Maryland Extension basil and Royal Horticultural Society cosmos guidance.
+- The Diary lists up to 200 recorded observations per profile. Events survive returning plants to the Backpack.
+
+[Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/c0683f4d8b29b5d2655143f1f868e2041a9bbd12)

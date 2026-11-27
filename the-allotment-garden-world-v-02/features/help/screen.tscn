@@ -1,7 +1,6 @@
-[gd_scene format=3]
+[gd_scene load_steps=2 format=3]
 
-[node name="HelpScreen" type="Label"]
-text = "Help is coming soon.
+[ext_resource type="Script" path="res://features/help/screen.gd" id="1"]
 
-Your garden is waiting while we prepare this feature."
-autowrap_mode = 2
+[node name="HelpScreen" type="VBoxContainer"]
+script = ExtResource("1")
