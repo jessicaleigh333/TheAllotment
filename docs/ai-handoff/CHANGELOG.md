@@ -100,3 +100,11 @@
 - Preserved earlier milestone events and added the primary-session greenhouse contribution to the registry.
 
 [Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/f32068af0264908c135f7578a9bafc6326c5ec70)
+
+## [2026-11-27T21:15:33Z · Queue 34 integration candidate verified](events/issue-34-integration-candidate-tested.json)
+
+- Candidate preserves merge parents in order #36 fad9f6b, #35 0378a0c, #38 8f0d9e4, #39 f5e0c73, #40 2142a78, #41 0c32235.
+- Regenerated reports from both milestone histories and preserved both the Settings and Guide/Diary HUD assertions. The #40 merge contains #39 in its first parent; the #40 tree diff contains no second care-loop addition.
+- PR #43 proposes aligning the project descriptor with the existing official Windows Godot 4.6.3 pin.
+
+[Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/0c322350eb75293f14f119f5b205726ac23d8e93)

@@ -83,3 +83,11 @@
 - Windows beta workflow history through GitHub API returned HTTP 403. The public updater manifest returned HTTP 404.
 
 [Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/f32068af0264908c135f7578a9bafc6326c5ec70)
+
+## [2026-11-27T21:15:33Z · Queue 34 integration candidate verified](events/issue-34-integration-candidate-tested.json)
+
+- Automatic approval review rejected the #36 main merge and requires explicit approval for the specific PR. No merges or target changes were made.
+- Native Windows runner evidence still requires an approved Windows run, matching templates, the owner signing environment, and two signed builds for update, interrupted update, rollback and save continuity. A reviewed public release is needed to populate the configured feed.
+- Greenhouse #42 requires acquisition and final visual decisions before Market acceptance. No new screenshots were captured for the integration run.
+
+[Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/0c322350eb75293f14f119f5b205726ac23d8e93)

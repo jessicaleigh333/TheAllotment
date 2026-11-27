@@ -45,3 +45,9 @@
 - Watering is recorded as care for the current planting. No weather, moisture or pest inference modifies growth or yield.
 
 [Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/557dede47225180eab0b75d1eb8e5416bceb19aa)
+
+## [2026-11-27T21:15:33Z · Queue 34 integration candidate verified](events/issue-34-integration-candidate-tested.json)
+
+- Courtyard #37 is excluded pending owner visual approval. Greenhouse #41 is staging only. Unattended dispatch remains disabled.
+
+[Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/0c322350eb75293f14f119f5b205726ac23d8e93)

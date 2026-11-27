@@ -1,0 +1,55 @@
+{
+  "title": "Queue 34 integration candidate verified",
+  "status": "tested",
+  "summary": "Tested merge candidate 0c322350eb75293f14f119f5b205726ac23d8e93. Main remained at 861f686a688e4e45172e2c6e859f94f96860f007 during this run.",
+  "changes": [
+    "Candidate preserves merge parents in order #36 fad9f6b, #35 0378a0c, #38 8f0d9e4, #39 f5e0c73, #40 2142a78, #41 0c32235.",
+    "Regenerated reports from both milestone histories and preserved both the Settings and Guide/Diary HUD assertions. The #40 merge contains #39 in its first parent; the #40 tree diff contains no second care-loop addition.",
+    "PR #43 proposes aligning the project descriptor with the existing official Windows Godot 4.6.3 pin."
+  ],
+  "tests": [
+    "PASS — Godot 4.6.3 import, HUD, Garden Guides, plant care, harvest, UTC growth, Market, local vault, weather and greenhouse staging traversal with disposable profiles.",
+    "PASS — all 52 Python tests across handoff, dispatch, botanical foundation and item catalog after installing the catalog's declared CairoSVG dependency; generated reports validated.",
+    "PASS — PR #43 Windows Desktop PCK export and Linux Godot headless startup. Manifest request returned HTTP 404 and the latest-release URL redirected to the release listing.",
+    "PASS — fresh botanical intake preserved 851 rows, 833 plant IDs and 805 evidence occurrences; approved runtime export remains empty."
+  ],
+  "decisions": [
+    "Courtyard #37 is excluded pending owner visual approval. Greenhouse #41 is staging only. Unattended dispatch remains disabled."
+  ],
+  "issues": [
+    "Automatic approval review rejected the #36 main merge and requires explicit approval for the specific PR. No merges or target changes were made.",
+    "Native Windows runner evidence still requires an approved Windows run, matching templates, the owner signing environment, and two signed builds for update, interrupted update, rollback and save continuity. A reviewed public release is needed to populate the configured feed.",
+    "Greenhouse #42 requires acquisition and final visual decisions before Market acceptance. No new screenshots were captured for the integration run."
+  ],
+  "next": [
+    "Resolve the merge approval and courtyard visual review. Run native Windows acceptance before publication. Continue greenhouse, starter plant care and botanical review on their own branches."
+  ],
+  "backlog": {
+    "hud-regression": "P0 · tested in combined candidate · merge approval pending",
+    "backlog-dispatch": "P0 · single-winner fixture passed · unattended dispatch disabled",
+    "windows-release": "P0 · Godot pin alignment proposed in #43 · native signed verification and publication pending",
+    "greenhouse-atrium": "P2 · staging traversal passed in combined candidate · #42 acquisition and visual decisions pending",
+    "botanical-library": "P1 · intake rebuilt and checked · runtime export empty"
+  },
+  "id": "issue-34-integration-candidate-tested",
+  "timestamp": "2026-11-27T21:15:33Z",
+  "branch": "queue34-handoff",
+  "commit": "0c322350eb75293f14f119f5b205726ac23d8e93",
+  "files": [
+    "docs/ai-handoff/BACKLOG.md",
+    "docs/ai-handoff/CHANGELOG.md",
+    "docs/ai-handoff/ISSUES.md",
+    "docs/ai-handoff/LATEST.md",
+    "docs/ai-handoff/SCREENSHOTS.md",
+    "docs/ai-handoff/TEST_RESULTS.md",
+    "docs/ai-handoff/events/issue-34-greenhouse-staging.json",
+    "docs/ai-handoff/evidence/greenhouse-34/exterior.png",
+    "docs/ai-handoff/evidence/greenhouse-34/stairs.png",
+    "docs/item_concepts/GREENHOUSE_ATRIUM_BUILD_STUDY.md",
+    "the-allotment-garden-world-v-02/staging/greenhouse_atrium_study.gd",
+    "the-allotment-garden-world-v-02/staging/greenhouse_atrium_study.gd.uid",
+    "the-allotment-garden-world-v-02/staging/greenhouse_atrium_study.tscn",
+    "the-allotment-garden-world-v-02/tests/verify_greenhouse_study.gd",
+    "the-allotment-garden-world-v-02/tests/verify_greenhouse_study.gd.uid"
+  ]
+}

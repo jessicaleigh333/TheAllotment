@@ -115,3 +115,12 @@
 - PASS — GitHub AI handoff checks on #35–#41. Botanical foundation passed on #38, and Master item catalog passed on #39 and #40.
 
 [Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/f32068af0264908c135f7578a9bafc6326c5ec70)
+
+## [2026-11-27T21:15:33Z · Queue 34 integration candidate verified](events/issue-34-integration-candidate-tested.json)
+
+- PASS — Godot 4.6.3 import, HUD, Garden Guides, plant care, harvest, UTC growth, Market, local vault, weather and greenhouse staging traversal with disposable profiles.
+- PASS — all 52 Python tests across handoff, dispatch, botanical foundation and item catalog after installing the catalog's declared CairoSVG dependency; generated reports validated.
+- PASS — PR #43 Windows Desktop PCK export and Linux Godot headless startup. Manifest request returned HTTP 404 and the latest-release URL redirected to the release listing.
+- PASS — fresh botanical intake preserved 851 rows, 833 plant IDs and 805 evidence occurrences; approved runtime export remains empty.
+
+[Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/0c322350eb75293f14f119f5b205726ac23d8e93)
