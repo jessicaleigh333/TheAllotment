@@ -1,0 +1,39 @@
+{
+  "title": "Radial courtyard turf and limestone surface preview",
+  "status": "tested",
+  "summary": "Issue #34 surface adaptation uses the existing terrain and approach collision geometry. Ready for owner visual review.",
+  "changes": [
+    "Reused the original turf shader and limestone mesh and shader on the current radial courtyard.",
+    "Setts follow the nine approach transforms and remain decorative. The existing courtyard ring and approach surface heights remain authoritative for collisions and placement."
+  ],
+  "tests": [
+    "PASS — Godot 4.6.3 layout, sidewalk walking through all nine entrances, courtyard decor/floor heights/protected routes/persistence, ground-cover editor and local vault.",
+    "PASS — OpenGL Compatibility renders in Xvfb with llvmpipe. Reviewed matched day and night previews."
+  ],
+  "screenshots": [
+    "[Before Day](https://github.com/jessicaleigh333/TheAllotment/blob/codex/34-courtyard-surfaces/docs/ai-handoff/evidence/courtyard-34/before-day.png)",
+    "[After Day](https://github.com/jessicaleigh333/TheAllotment/blob/codex/34-courtyard-surfaces/docs/ai-handoff/evidence/courtyard-34/after-day.png)",
+    "[Before Night](https://github.com/jessicaleigh333/TheAllotment/blob/codex/34-courtyard-surfaces/docs/ai-handoff/evidence/courtyard-34/before-night.png)",
+    "[After Night](https://github.com/jessicaleigh333/TheAllotment/blob/codex/34-courtyard-surfaces/docs/ai-handoff/evidence/courtyard-34/after-night.png)"
+  ],
+  "next": [
+    "Owner visual approval for the lawn and nine limestone approaches."
+  ],
+  "backlog": {
+    "lawn-and-paths": "P1 · implemented and tested · awaiting owner visual approval"
+  },
+  "id": "issue-34-courtyard-surfaces",
+  "timestamp": "2026-11-27T20:35:44Z",
+  "branch": "codex/34-courtyard-surfaces",
+  "commit": "f1642c0b476b53faac25aa866dc390bc424c3cd9",
+  "files": [
+    "docs/ai-handoff/evidence/courtyard-34/after-day.png",
+    "docs/ai-handoff/evidence/courtyard-34/after-night.png",
+    "docs/ai-handoff/evidence/courtyard-34/before-day.png",
+    "docs/ai-handoff/evidence/courtyard-34/before-night.png",
+    "the-allotment-garden-world-v-02/scripts/courtyard_cobbles.gd",
+    "the-allotment-garden-world-v-02/scripts/courtyard_world.gd",
+    "the-allotment-garden-world-v-02/shaders/cobblestone.gdshader",
+    "the-allotment-garden-world-v-02/shaders/lawn.gdshader"
+  ]
+}
