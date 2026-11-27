@@ -50,6 +50,13 @@
 
 [Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/bde6df3253de5f44225d08350be89b8f22d8f730)
 
+## [2026-11-27T20:35:44Z · Radial courtyard turf and limestone surface preview](events/issue-34-courtyard-surfaces.json)
+
+- Reused the original turf shader and limestone mesh and shader on the current radial courtyard.
+- Setts follow the nine approach transforms and remain decorative. The existing courtyard ring and approach surface heights remain authoritative for collisions and placement.
+
+[Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/f1642c0b476b53faac25aa866dc390bc424c3cd9)
+
 ## [2026-11-27T20:36:33Z · Botanical intake and elapsed UTC growth verified](events/issue-34-plant-verification.json)
 
 - Compared PR #18 originals with current main and documented stable IDs, overlap, unverified provenance and runtime publication boundary.
