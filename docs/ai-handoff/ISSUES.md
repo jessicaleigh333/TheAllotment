@@ -8,3 +8,9 @@
 - Open limitation — private conversation history has no automatic export feed. Sessions supply reviewed summaries.
 
 [Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/0e33a90c12447aa77d7149a9c06f3386587c20a2)
+
+## [2026-11-27T20:49:33Z · Multi-level greenhouse staging collision tested](events/issue-34-greenhouse-staging.json)
+
+- Acquisition rule awaits owner decision. Final arched bays, camera clearance in the real garden, catalog extraction, thumbnail, placement permissions and save/reopen still need implementation or acceptance.
+
+[Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/751654235fa7f523d93247e10778d441831ca80e)

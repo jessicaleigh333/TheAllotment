@@ -8,3 +8,10 @@
 - Adds instructions in AGENTS.md so future sessions discover and publish milestone reports through existing task PRs.
 
 [Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/0e33a90c12447aa77d7149a9c06f3386587c20a2)
+
+## [2026-11-27T20:49:33Z · Multi-level greenhouse staging collision tested](events/issue-34-greenhouse-staging.json)
+
+- Documented plan, section, elevations, tread geometry, landings and upper-edge clearance.
+- Built a staging shell, modular framing, stair visuals, continuous collision transitions and guardrails.
+
+[Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/751654235fa7f523d93247e10778d441831ca80e)

@@ -7,6 +7,7 @@
 - `botanical-library` — P2 · foundation merged in [#20](https://github.com/jessicaleigh333/TheAllotment/pull/20) · verify remaining offline reference-library work. ([2026-11-22T03:31:34Z · Development handoff requested](events/ai-handoff-request.json))
 - `environment` — P1 · open · scope seasonal weather and soil behavior against existing mechanics. ([2026-11-22T03:31:34Z · Development handoff requested](events/ai-handoff-request.json))
 - `game-guides` — P2 · open · review Louise, Growing Guide, How to Play and Garden Diary against the current game. ([2026-11-22T03:31:34Z · Development handoff requested](events/ai-handoff-request.json))
+- `greenhouse-atrium` — P2 · staging shell and traversal tested · await owner acquisition and art review ([2026-11-27T20:49:33Z · Multi-level greenhouse staging collision tested](events/issue-34-greenhouse-staging.json))
 - `harvesting` — P1 · open · verify the harvest, inventory and save round trip. ([2026-11-22T03:31:34Z · Development handoff requested](events/ai-handoff-request.json))
 - `item-catalog` — Master catalog merged in [#21](https://github.com/jessicaleigh333/TheAllotment/pull/21) · owner art and identity review remain open. ([2026-11-22T03:31:34Z · Development handoff requested](events/ai-handoff-request.json))
 - `lawn-and-paths` — Open · compare overlapping lawn and cobblestone branches against current main. See [integration review](../INTEGRATION_REVIEW_2026-11.md). ([2026-11-22T03:31:34Z · Development handoff requested](events/ai-handoff-request.json))
