@@ -86,7 +86,10 @@ func buy(id: String) -> bool:
 	var item := Catalog.by_id(id)
 	if item.is_empty() or not item.get("available",true): return _fail("This item is not available yet.")
 	if count(id) >= 999: return _fail("Your backpack has enough of this item.")
+	var cost := Catalog.rune_cost(item)
+	if int(data.runes) < cost: return _fail("You need %d Runes for this item." % cost)
 	var next := data.duplicate(true)
+	next.runes -= cost
 	next.owned[id] = count(id)+1
 	return _commit(next)
 
@@ -99,7 +102,11 @@ func favorite(id: String) -> bool:
 	return _commit(next)
 
 func place(id: String, point: Vector2, angle: float, area: String = "garden", elevation: float = 0.0, supports: Array = [], ground_y: float = 0.0) -> bool:
-	if not Catalog.placeable(Catalog.by_id(id)): return _fail("Choose a plant or decoration.")
+	var item := Catalog.by_id(id)
+	if not Catalog.placeable(item): return _fail("Choose a plant or decoration.")
+	if Catalog.rune_cost(item) > 0 and count(id) == 0: return _fail("Buy this item before placing it.")
+	if id == Catalog.ATRIUM.ID and (area != "garden" or elevation != 0 or not supports.is_empty()):
+		return _fail("Place the greenhouse on level ground in Garden 01.")
 	if data.placed.size() >= 500: return _fail("This local garden has reached its item limit.")
 	var next := data.duplicate(true)
 	next.owned[id] = maxi(0,count(id)-1)

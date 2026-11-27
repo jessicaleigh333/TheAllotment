@@ -188,8 +188,11 @@ def ingest(db,project,snapshot):
         item["related_item_ids"]=[]
         add_item(db,item)
         available=source.get("available",True)
-        db.execute("INSERT INTO listing VALUES(?,?,?,?,?,?,?,?,?,?,?)",("listing:local:"+iid,iid,source.get("price"),0,"Runes",int(available),999,None,None,
-            canonical({"local_demo_only":True,"free_direct_placement":True}),"Historical source price preserved; current acquisition is free. No sale mechanic."))
+        rune_purchase = source.get("rune_purchase", False)
+        effective_price = source["price"] if rune_purchase else 0
+        acquisition_note = "Purchase consumes Runes before placement." if rune_purchase else "Historical source price preserved; current acquisition is free. No sale mechanic."
+        db.execute("INSERT INTO listing VALUES(?,?,?,?,?,?,?,?,?,?,?)",("listing:local:"+iid,iid,source.get("price"),effective_price,"Runes",int(available),999,None,None,
+            canonical({"local_demo_only":True,"free_direct_placement":not rune_purchase}),acquisition_note))
         model=procedural_asset(db,row["model_recipe"]);bind(db,iid,model,"primary_model",item["variant_parameters"])
         icon="asset:"+row["icon"]["path"].removeprefix("res://")
         bind(db,iid,icon,"shop_thumbnail",{"atlas_region":row["icon"].get("region")})

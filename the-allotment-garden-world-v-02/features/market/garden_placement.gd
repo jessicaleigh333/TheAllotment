@@ -168,6 +168,7 @@ func _terrain_allowed(item: Dictionary, point: Vector2, scope: String = "") -> b
 	if scope.is_empty(): scope = area
 	var surface = terrains[scope]
 	if not Catalog.placeable(item) or not surface.contains(point): return false
+	if item.id == Catalog.ATRIUM.ID and scope != "garden": return false
 	var radius := float(item.radius)+.2
 	if surface.has_method("fits") and not surface.fits(point,radius): return false
 	var height: float = surface.sample_height(point)
@@ -181,6 +182,7 @@ func _terrain_allowed(item: Dictionary, point: Vector2, scope: String = "") -> b
 func allowed(id: String, point: Vector2, elevation: float = 0.0, supports: Array = []) -> bool:
 	var item := Catalog.by_id(id)
 	if not _terrain_allowed(item,point) or not is_finite(elevation) or elevation < 0 or elevation+Stack.size(id).y > Stack.MAX_HEIGHT: return false
+	if Catalog.rune_cost(item) > 0 and store.count(id) == 0: return false
 	var bottom: float = terrain.sample_height(point)+elevation
 	if elevation > 0:
 		var required := Stack.supports_for(id,point,angle,bottom,store.data.placed,area)

@@ -43,7 +43,7 @@ def create(build,out):
         ["How to review","Filter by domain/status. Shop, surface editor, scenery and avatar options are distinct."],
         ["Correct a record","Use Owner Corrections with the item ID and revision from Master Item Catalog."],
         ["Add an item","Use New Item Requests. A request is a proposal, not a live shop listing."],
-        ["Current shop","Items remain free; historical source prices are not current charges."],
+        ["Current shop","Effective price shows current Rune charges. Legacy prices without a Rune purchase remain free."],
         ["Artwork","Thumbnails render existing icons/atlas cells only; not approved model previews."],
         ["Publication","Review creates an overlay; no direct write to verified game scripts or saves."],
         ["Not implemented","Contracts for sitting, watering, harvesting, repairs, crafting and selling are not functional."],

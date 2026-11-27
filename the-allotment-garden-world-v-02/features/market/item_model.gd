@@ -16,6 +16,12 @@ func rebuild(age: float = -1.0) -> void:
  for key in ["woody_growth_state","woody_growth_id"]:
   if has_meta(key): remove_meta(key)
  current_growth_state = {}
+ if item_id == preload("res://assets/garden_art/greenhouse_atrium.gd").ID:
+  var atrium := preload("res://assets/garden_art/greenhouse_atrium.gd").new()
+  atrium.walking_collision = has_meta("placement_record")
+  atrium.set_meta("authored_player_collision",true)
+  add_child(atrium)
+  return
  var plant := Growth.species(item_id)
  var dimensions: Vector3
  if not plant.is_empty():

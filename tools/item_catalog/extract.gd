@@ -54,6 +54,7 @@ func extract() -> void:
 				var resolved: Dictionary = Catalog.by_id(id)
 				var model = Model.instantiate()
 				model.item_id = id
+				if id == Catalog.ATRIUM.ID: model.set_meta("placement_record",{})
 				root.add_child(model)
 				var bounds: AABB = model.mesh_bounds()
 				var icon: Texture2D = Catalog.icon(resolved)
