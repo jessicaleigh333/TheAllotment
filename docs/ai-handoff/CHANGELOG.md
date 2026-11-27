@@ -34,3 +34,11 @@
 - [Agent registry](AGENT_REGISTRY.md) records actual work completed by the primary session.
 
 [Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/53d77101e0b2170c75a71464f2fdc0029774384b)
+
+## [2026-11-27T20:31:06Z · Windows gates rechecked and reporting branches reconciled](events/issue-34-reporting-reconciled.json)
+
+- Preserved all #32 and #33 events and registry entries and regenerated the handoff after integrating #31.
+- Added machine-readable routing and compare-and-swap Git claims for the existing actionable issues.
+- Verified all tips for PRs #1–#16 are reachable from main at 861f686.
+
+[Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/bde6df3253de5f44225d08350be89b8f22d8f730)

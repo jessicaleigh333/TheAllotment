@@ -49,3 +49,11 @@
 - BLOCKED — The public update.json returned HTTP 404. Native Windows execution, publisher-signed artifacts and their live integrity were not verified.
 
 [Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/53d77101e0b2170c75a71464f2fdc0029774384b)
+
+## [2026-11-27T20:31:06Z · Windows gates rechecked and reporting branches reconciled](events/issue-34-reporting-reconciled.json)
+
+- PASS — four handoff and dispatch tests, including two concurrent pushes with exactly one winner, owner-only release and re-acquisition.
+- PASS — rendered handoff matches append-only history from main.
+- The live public update manifest returned HTTP 404.
+
+[Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/bde6df3253de5f44225d08350be89b8f22d8f730)
