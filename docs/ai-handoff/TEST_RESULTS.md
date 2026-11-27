@@ -70,3 +70,11 @@
 - PASS — OpenGL Compatibility renders in Xvfb with llvmpipe. Reviewed matched day and night previews.
 
 [Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/f1642c0b476b53faac25aa866dc390bc424c3cd9)
+
+## [2026-11-27T20:36:33Z · Botanical intake and elapsed UTC growth verified](events/issue-34-plant-verification.json)
+
+- PASS — 28 botanical tests, pipeline build and Godot read-only bundle check (833 research records and zero approved).
+- PASS — 20 catalog tests after supplying CairoSVG for workbook rendering.
+- PASS — growth and stage transitions, woody growth, vines, market and vault in isolated runs.
+
+[Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/2f4c55d0c0d751e740c37d98a2c9d42b8c04be23)
