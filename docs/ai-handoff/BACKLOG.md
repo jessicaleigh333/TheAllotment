@@ -7,7 +7,7 @@
 - `backlog-dispatch` — P0 · concurrent claim and routing checks passed · awaiting review ([2026-11-27T20:31:06Z · Windows gates rechecked and reporting branches reconciled](events/issue-34-reporting-reconciled.json))
 - `botanical-library` — P1 · verified existing research ingestion · zero approved runtime records ([2026-11-27T20:36:33Z · Botanical intake and elapsed UTC growth verified](events/issue-34-plant-verification.json))
 - `environment` — P1 · open · scope seasonal weather and soil behavior against existing mechanics. ([2026-11-22T03:31:34Z · Development handoff requested](events/ai-handoff-request.json))
-- `game-guides` — P2 · open · review Louise, Growing Guide, How to Play and Garden Diary against the current game. ([2026-11-22T03:31:34Z · Development handoff requested](events/ai-handoff-request.json))
+- `game-guides` — P2 · starter Louise, Growing Guide and Garden Diary tested · awaiting review ([2026-11-27T20:44:44Z · Louise, Growing Guide and Garden Diary verified](events/issue-34-garden-guides.json))
 - `harvesting` — P1 · starter basil/cosmos playable loop tested · awaiting review ([2026-11-27T20:41:44Z · Starter care, harvest and sale verified](events/issue-34-starter-care.json))
 - `hud-regression` — P0 · tested locally · awaiting review ([2026-11-27T20:29:10Z · HUD navigation and Settings regression verified](events/issue-34-hud-verified.json))
 - `item-catalog` — Master catalog merged in [#21](https://github.com/jessicaleigh333/TheAllotment/pull/21) · owner art and identity review remain open. ([2026-11-22T03:31:34Z · Development handoff requested](events/ai-handoff-request.json))
