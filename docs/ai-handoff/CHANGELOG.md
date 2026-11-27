@@ -72,3 +72,10 @@
 - The Diary lists up to 200 recorded observations per profile. Events survive returning plants to the Backpack.
 
 [Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/c0683f4d8b29b5d2655143f1f868e2041a9bbd12)
+
+## [2026-11-27T20:49:33Z · Multi-level greenhouse staging collision tested](events/issue-34-greenhouse-staging.json)
+
+- Documented plan, section, elevations, tread geometry, landings and upper-edge clearance.
+- Built a staging shell, modular framing, stair visuals, continuous collision transitions and guardrails.
+
+[Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/751654235fa7f523d93247e10778d441831ca80e)

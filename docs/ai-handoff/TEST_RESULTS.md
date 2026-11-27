@@ -85,3 +85,10 @@
 - PASS — reviewed matched OpenGL Compatibility renders.
 
 [Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/c0683f4d8b29b5d2655143f1f868e2041a9bbd12)
+
+## [2026-11-27T20:49:33Z · Multi-level greenhouse staging collision tested](events/issue-34-greenhouse-staging.json)
+
+- PASS — Godot 4.6.3 avatar traversal through front door, both flights, turn landing and upper railing test.
+- PASS — visual review of OpenGL staging captures.
+
+[Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/751654235fa7f523d93247e10778d441831ca80e)

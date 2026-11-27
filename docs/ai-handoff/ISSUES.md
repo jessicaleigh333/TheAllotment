@@ -64,3 +64,9 @@
 - Broader reference entries need field-level validation. The game records care and harvest events and supplies no diagnosis of pest damage.
 
 [Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/c0683f4d8b29b5d2655143f1f868e2041a9bbd12)
+
+## [2026-11-27T20:49:33Z · Multi-level greenhouse staging collision tested](events/issue-34-greenhouse-staging.json)
+
+- Acquisition rule awaits owner decision. Final arched bays, camera clearance in the real garden, catalog extraction, thumbnail, placement permissions and save/reopen still need implementation or acceptance.
+
+[Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/751654235fa7f523d93247e10778d441831ca80e)
