@@ -16,3 +16,10 @@
 - PASS — GitHub remote branch SHA matched the local publish commit. The GitHub connector read both reports on the published branch.
 
 [Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/c28bb80e26552b2834a00f941bbe1b41b4f9cff7)
+
+## [2026-11-27T20:41:44Z · Starter care, harvest and sale verified](events/issue-34-starter-care.json)
+
+- PASS — Godot 4.6.3 care, harvest, growth, market and local vault. Coverage includes exact per-crop inventory delta, sale Rune delta, repeat harvest refusal and preserved save state.
+- PASS — matched OpenGL Compatibility Backpack renders reviewed.
+
+[Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/557dede47225180eab0b75d1eb8e5416bceb19aa)

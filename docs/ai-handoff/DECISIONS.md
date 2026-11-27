@@ -9,3 +9,9 @@
 - Use sanitized conversation summaries on the public repository and actual PR/commit links for live review and merge evidence.
 
 [Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/0e33a90c12447aa77d7149a9c06f3386587c20a2)
+
+## [2026-11-27T20:41:44Z · Starter care, harvest and sale verified](events/issue-34-starter-care.json)
+
+- Watering is recorded as care for the current planting. No weather, moisture or pest inference modifies growth or yield.
+
+[Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/557dede47225180eab0b75d1eb8e5416bceb19aa)

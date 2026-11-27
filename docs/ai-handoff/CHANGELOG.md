@@ -8,3 +8,11 @@
 - Adds instructions in AGENTS.md so future sessions discover and publish milestone reports through existing task PRs.
 
 [Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/0e33a90c12447aa77d7149a9c06f3386587c20a2)
+
+## [2026-11-27T20:41:44Z · Starter care, harvest and sale verified](events/issue-34-starter-care.json)
+
+- Backpack → Plants and harvest shows living plants, accepts watering, exposes harvest readiness and offers one-unit produce sales.
+- Basil and cosmos yields, sale values and the 14-day picking interval are prototype tuning. A new planting must establish before harvest, including after pickup/replant.
+- The garden can continue growing after harvest. The existing free Market remains free.
+
+[Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/557dede47225180eab0b75d1eb8e5416bceb19aa)
