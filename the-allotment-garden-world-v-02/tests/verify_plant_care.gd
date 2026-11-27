@@ -24,7 +24,8 @@ func _verify() -> void:
 	assert(not screen.store.water(1), "Decorative tools cannot be watered")
 	var original: Dictionary = screen.store.data.placed[0].growth.duplicate()
 	var runes: int = screen.store.data.runes
-	screen._show_placed()
+	assert(screen.planted_items_button.visible)
+	screen.planted_items_button.pressed.emit()
 	var water: Button
 	for child in screen.details.get_children():
 		if child is Button and child.text.begins_with("Water Sweet basil"):
