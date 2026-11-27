@@ -10,6 +10,15 @@
 
 [Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/9447b3cfdb4714e4d16b1e8f15fa192fefbe8be2)
 
+## [2026-11-27T20:35:44Z · Radial courtyard turf and limestone surface preview](events/issue-34-courtyard-surfaces.json)
+
+- [Before Day](https://github.com/jessicaleigh333/TheAllotment/blob/codex/34-courtyard-surfaces/docs/ai-handoff/evidence/courtyard-34/before-day.png)
+- [After Day](https://github.com/jessicaleigh333/TheAllotment/blob/codex/34-courtyard-surfaces/docs/ai-handoff/evidence/courtyard-34/after-day.png)
+- [Before Night](https://github.com/jessicaleigh333/TheAllotment/blob/codex/34-courtyard-surfaces/docs/ai-handoff/evidence/courtyard-34/before-night.png)
+- [After Night](https://github.com/jessicaleigh333/TheAllotment/blob/codex/34-courtyard-surfaces/docs/ai-handoff/evidence/courtyard-34/after-night.png)
+
+[Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/f1642c0b476b53faac25aa866dc390bc424c3cd9)
+
 ## [2026-11-27T20:41:44Z · Starter care, harvest and sale verified](events/issue-34-starter-care.json)
 
 - [Before](https://github.com/jessicaleigh333/TheAllotment/blob/codex/34-plant-care/docs/ai-handoff/evidence/plant-care-34/before.png)
