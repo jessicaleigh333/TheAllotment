@@ -17,6 +17,61 @@
 
 [Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/c28bb80e26552b2834a00f941bbe1b41b4f9cff7)
 
+## [2026-11-24T01:47:23Z · Architecture audit started](events/architecture-audit-started.json)
+
+- GitHub resolved current main to 861f686a688e4e45172e2c6e859f94f96860f007 and supplied pinned source files for inspection.
+- Local Godot reports 4.6.3. The pinned project declares 4.7 Compatibility. No game regression results recorded yet.
+
+[Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/0223df04a678ea01e04c145c412e98d26c4903f8)
+
+## [2026-11-24T01:49:24Z · Verified Windows and terrain branch ancestry](events/architecture-audit-branch-comparison.json)
+
+- PASS — local handoff generator check and two handoff integration tests.
+- PASS — [GitHub AI handoff run 45307726241](https://github.com/jessicaleigh333/TheAllotment/actions/runs/45307726241) validated the start milestone.
+- PASS — GitHub comparison against 861f686 verified Windows 0 ahead / 14 behind, cobblestone 3 / 33 and soft grass 1 / 33.
+
+[Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/14f8db816103fddcfa36a566e3c7d8b3f60e52f7)
+
+## [2026-11-27T20:09:17Z · Architecture and regression audit ready for review](events/architecture-audit-baseline-verified.json)
+
+- PASS — Godot 4.6.3 fresh import and title smoke exited 0, with editor TCP/HDR and shutdown warnings documented in the audit.
+- PASS — 24 isolated headless game suites and one OpenGL graphical suite passed at main 861f686.
+- FAIL — ui/verify_hud.gd:35 rejects the current Settings control tree and times out; dedicated vault and profile suites pass.
+- PASS — all 50 Python tests passed after installing CairoSVG into a local dependency directory.
+
+[Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/9447b3cfdb4714e4d16b1e8f15fa192fefbe8be2)
+
+## [2026-11-27T20:11:53Z · Windows updater fixtures and exported game saves verified on Linux](events/windows-verification-fixtures-tested.json)
+
+- PASS — Godot 4.6.3 signed protocol fixture suite, including save sentinels and recovery.
+- PASS — Godot 4.6.3 local HTTP suite, including upgrade, failure, cancellation and running-game protection.
+- PASS — Game and launcher Windows-preset PCKs exported and started under Linux Godot. Exported game profile entry, vault and climbing-vine suites passed.
+- BLOCKED — The public update.json returned HTTP 404. Native Windows execution, publisher-signed artifacts and their live integrity were not verified.
+
+[Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/53d77101e0b2170c75a71464f2fdc0029774384b)
+
+## [2026-11-27T20:29:10Z · HUD navigation and Settings regression verified](events/issue-34-hud-verified.json)
+
+- PASS — HUD, local profiles, profile entry, vault and weather on Godot 4.6.3. Profile entry emitted an ObjectDB warning at shutdown.
+
+[Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/5e19fc0f337db1b1597da7eb60464b173a7e0140)
+
+## [2026-11-27T20:31:06Z · Windows gates rechecked and reporting branches reconciled](events/issue-34-reporting-reconciled.json)
+
+- PASS — four handoff and dispatch tests, including two concurrent pushes with exactly one winner, owner-only release and re-acquisition.
+- PASS — rendered handoff matches append-only history from main.
+- The live public update manifest returned HTTP 404.
+
+[Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/bde6df3253de5f44225d08350be89b8f22d8f730)
+
+## [2026-11-27T20:36:33Z · Botanical intake and elapsed UTC growth verified](events/issue-34-plant-verification.json)
+
+- PASS — 28 botanical tests, pipeline build and Godot read-only bundle check (833 research records and zero approved).
+- PASS — 20 catalog tests after supplying CairoSVG for workbook rendering.
+- PASS — growth and stage transitions, woody growth, vines, market and vault in isolated runs.
+
+[Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/2f4c55d0c0d751e740c37d98a2c9d42b8c04be23)
+
 ## [2026-11-27T20:41:44Z · Starter care, harvest and sale verified](events/issue-34-starter-care.json)
 
 - PASS — Godot 4.6.3 care, harvest, growth, market and local vault. Coverage includes exact per-crop inventory delta, sale Rune delta, repeat harvest refusal and preserved save state.
