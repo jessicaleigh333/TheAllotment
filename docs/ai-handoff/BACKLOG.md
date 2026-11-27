@@ -6,7 +6,7 @@
 - `architecture-audit` — P0 · open · inventory the current architecture and regression gaps before refactoring. ([2026-11-22T03:31:34Z · Development handoff requested](events/ai-handoff-request.json))
 - `botanical-library` — P2 · foundation merged in [#20](https://github.com/jessicaleigh333/TheAllotment/pull/20) · verify remaining offline reference-library work. ([2026-11-22T03:31:34Z · Development handoff requested](events/ai-handoff-request.json))
 - `environment` — P1 · open · scope seasonal weather and soil behavior against existing mechanics. ([2026-11-22T03:31:34Z · Development handoff requested](events/ai-handoff-request.json))
-- `game-guides` — P2 · open · review Louise, Growing Guide, How to Play and Garden Diary against the current game. ([2026-11-22T03:31:34Z · Development handoff requested](events/ai-handoff-request.json))
+- `game-guides` — P2 · starter Louise, Growing Guide and Garden Diary tested · awaiting review ([2026-11-27T20:44:44Z · Louise, Growing Guide and Garden Diary verified](events/issue-34-garden-guides.json))
 - `harvesting` — P1 · starter basil/cosmos playable loop tested · awaiting review ([2026-11-27T20:41:44Z · Starter care, harvest and sale verified](events/issue-34-starter-care.json))
 - `item-catalog` — Master catalog merged in [#21](https://github.com/jessicaleigh333/TheAllotment/pull/21) · owner art and identity review remain open. ([2026-11-22T03:31:34Z · Development handoff requested](events/ai-handoff-request.json))
 - `lawn-and-paths` — Open · compare overlapping lawn and cobblestone branches against current main. See [integration review](../INTEGRATION_REVIEW_2026-11.md). ([2026-11-22T03:31:34Z · Development handoff requested](events/ai-handoff-request.json))
