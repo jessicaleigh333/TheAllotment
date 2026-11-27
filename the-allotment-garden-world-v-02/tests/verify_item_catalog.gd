@@ -8,10 +8,11 @@ const Gate = preload("res://assets/garden_art/gate_controller.gd")
 func _initialize() -> void:
 	var master = Master.shared()
 	assert(master.error.is_empty(),master.error)
-	assert(master.items.size()==262)
+	assert(master.items.size()==263)
 	for id in master.items:
 		var item: Dictionary = master.by_id(id)
 		if item.domain=="shop": assert(JSON.parse_string(JSON.stringify(Catalog.by_id(id)))==item.legacy_shop_data,"Legacy shop data changed: "+id)
+	assert(master.by_id(Catalog.ATRIUM.ID).shop_listing.effective_price==Catalog.rune_cost(Catalog.by_id(Catalog.ATRIUM.ID)))
 	assert(master.by_id("unknown").is_empty())
 	assert(Catalog.by_id("rose@adult").is_empty())
 	assert(Catalog.by_id("bench@seed").is_empty())
@@ -30,7 +31,7 @@ func _initialize() -> void:
 	assert(index.load_data(data))
 	var broken=data.duplicate(true)
 	broken.schema_version="2"
-	assert(not index.load_data(broken) and index.items.size()==262)
+	assert(not index.load_data(broken) and index.items.size()==263)
 	broken=data.duplicate(true);broken.items.append(broken.items[0])
 	assert(not index.load_data(broken))
 	broken=data.duplicate(true);broken.items[0].asset_bindings=[{"asset_id":"missing"}]

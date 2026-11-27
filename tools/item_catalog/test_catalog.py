@@ -186,7 +186,7 @@ class ItemTests(unittest.TestCase):
         path=self.root/"review.xlsx";create(self.out,path)
         book=load_workbook(path)
         self.assertEqual(book["Master Item Catalog"].max_row,264)
-        self.assertEqual(book["Artwork Review"].max_row,160)
+        self.assertEqual(book["Artwork Review"].max_row,161)
         self.assertEqual(len(book["Artwork Review"]._images),160)
         self.assertEqual(book["Master Item Catalog"].freeze_panes,"C2")
         self.assertIn("Owner Corrections",book.sheetnames);self.assertIn("New Item Requests",book.sheetnames)
