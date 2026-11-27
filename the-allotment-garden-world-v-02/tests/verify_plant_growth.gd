@@ -14,6 +14,19 @@ func verify() -> void:
    var now: float = start+float(info.days[stage])*86400
    var age := Growth.age_days(record,now)
    assert(Growth.state(plant,age).stage == stage)
+  # An actively observed plant and one reopened after the same UTC interval
+  # must converge at every boundary, irrespective of earlier observations.
+  var live := record.duplicate(true)
+  for stage in range(1, 5):
+   var boundary: float = start + float(info.days[stage]) * 86400.0
+   live.growth.observed_age_days = Growth.age_days(live, boundary - 1.0)
+   var reopened: Dictionary = JSON.parse_string(JSON.stringify(record))
+   var live_age := Growth.age_days(live, boundary)
+   var offline_age := Growth.age_days(reopened, boundary)
+   assert(is_equal_approx(live_age, offline_age), plant + " live and offline age differ")
+   assert(Growth.state(plant, offline_age).stage == stage)
+   live.growth.observed_age_days = live_age
+   assert(is_equal_approx(Growth.age_days(live, boundary - 86400.0), live_age))
   assert(Growth.age_days(record,start-86400) == 0,"Clock rollback must not create negative growth")
   record.growth.observed_age_days = float(info.days[2])
   assert(Growth.age_days(record,start) == info.days[2])

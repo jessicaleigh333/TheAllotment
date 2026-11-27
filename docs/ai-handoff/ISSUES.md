@@ -46,3 +46,9 @@
 - Windows native install/update/rollback and production artifact checks require an approved Windows and signing run. The project declares 4.7 while the build pins 4.6.3.
 
 [Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/bde6df3253de5f44225d08350be89b8f22d8f730)
+
+## [2026-11-27T20:36:33Z · Botanical intake and elapsed UTC growth verified](events/issue-34-plant-verification.json)
+
+- No record met the existing runtime approval boundary. Future authoritative care hints need vetted field-level overlays.
+
+[Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/2f4c55d0c0d751e740c37d98a2c9d42b8c04be23)

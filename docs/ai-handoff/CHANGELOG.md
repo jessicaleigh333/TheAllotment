@@ -49,3 +49,10 @@
 - Verified all tips for PRs #1–#16 are reachable from main at 861f686.
 
 [Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/bde6df3253de5f44225d08350be89b8f22d8f730)
+
+## [2026-11-27T20:36:33Z · Botanical intake and elapsed UTC growth verified](events/issue-34-plant-verification.json)
+
+- Compared PR #18 originals with current main and documented stable IDs, overlap, unverified provenance and runtime publication boundary.
+- Compared actively observed and reopened growth at UTC stage boundaries, including a rollback after observation.
+
+[Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/2f4c55d0c0d751e740c37d98a2c9d42b8c04be23)
