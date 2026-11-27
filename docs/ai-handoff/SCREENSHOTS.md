@@ -48,3 +48,9 @@
 - [Staging atrium evidence](https://github.com/jessicaleigh333/TheAllotment/tree/codex/34-greenhouse-atrium/docs/ai-handoff/evidence/greenhouse-34)
 
 [Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/e9cb3f1410dcb2265ff0e2ad734ad5288e418baf)
+
+## [2026-11-27T21:34:02Z · Garden 01 atrium and botanical follow-up ready for review](events/issue-42-atrium-market-draft-tested.json)
+
+- [Atrium placed in Garden 01](https://github.com/jessicaleigh333/TheAllotment/blob/codex/42-atrium-market/docs/ai-handoff/evidence/greenhouse-market-42/garden.png)
+
+[Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/344e736ce29ee9db5aa3cc2c4307b59546cb14ab)

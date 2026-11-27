@@ -133,3 +133,10 @@
 - PASS — draft #44 Guide, HUD, Market, Weather and Plant Care checks; Backpack forecast matched the neighborhood provider.
 
 [Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/e9cb3f1410dcb2265ff0e2ad734ad5288e418baf)
+
+## [2026-11-27T21:34:02Z · Garden 01 atrium and botanical follow-up ready for review](events/issue-42-atrium-market-draft-tested.json)
+
+- PASS — live Garden 01 purchase at the shown price, insufficient funds refusal, terrain rejection, entrance, both flights, rail, placement ownership, saved reopen and retrieval.
+- PASS — extraction of 160 Shop listings and 14 component recipes; master catalog rebuild and item catalog, Market, greenhouse staging, harvest and local vault checks. All 52 Python tests passed.
+
+[Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/344e736ce29ee9db5aa3cc2c4307b59546cb14ab)

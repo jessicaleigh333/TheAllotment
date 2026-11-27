@@ -98,3 +98,11 @@
 - Field-level provenance checked for basil and cosmos. Approved runtime export remains empty. Soil and pest simulation remain open.
 
 [Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/e9cb3f1410dcb2265ff0e2ad734ad5288e418baf)
+
+## [2026-11-27T21:34:02Z · Garden 01 atrium and botanical follow-up ready for review](events/issue-42-atrium-market-draft-tested.json)
+
+- Final greenhouse materials, door treatment, pricing review and manual camera review remain open. #45 is a draft.
+- Soil moisture and pest simulation remain open. The approved botanical runtime export is empty.
+- Windows #30 still requires owner-approved native signing, install/update/rollback evidence and publication. No production release occurred.
+
+[Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/344e736ce29ee9db5aa3cc2c4307b59546cb14ab)

@@ -1,0 +1,42 @@
+{
+  "title": "Garden 01 atrium and botanical follow-up ready for review",
+  "status": "tested",
+  "pr": 45,
+  "summary": "Draft #45 exercises the Rune-purchased greenhouse in Garden 01. Draft #44 records forecast context and four source reviews in two batches.",
+  "changes": [
+    "The atrium reuses the staging geometry and authored collisions. The catalog uses the stable ID greenhouse_atrium_multilevel_01 and a provisional price of 450 Runes.",
+    "Draft #44 adds Basil and Cosmos care cues and neighborhood forecast context. Its provenance review covers sweet basil, cosmos, lavender and Shasta daisy."
+  ],
+  "tests": [
+    "PASS — live Garden 01 purchase at the shown price, insufficient funds refusal, terrain rejection, entrance, both flights, rail, placement ownership, saved reopen and retrieval.",
+    "PASS — extraction of 160 Shop listings and 14 component recipes; master catalog rebuild and item catalog, Market, greenhouse staging, harvest and local vault checks. All 52 Python tests passed."
+  ],
+  "issues": [
+    "Final greenhouse materials, door treatment, pricing review and manual camera review remain open. #45 is a draft.",
+    "Soil moisture and pest simulation remain open. The approved botanical runtime export is empty.",
+    "Windows #30 still requires owner-approved native signing, install/update/rollback evidence and publication. No production release occurred."
+  ],
+  "screenshots": [
+    "[Atrium placed in Garden 01](https://github.com/jessicaleigh333/TheAllotment/blob/codex/42-atrium-market/docs/ai-handoff/evidence/greenhouse-market-42/garden.png)"
+  ],
+  "next": [
+    "Review the draft atrium visual treatment and Rune price. Verify Windows acceptance in the approved environment."
+  ],
+  "backlog": {
+    "greenhouse-atrium": "staging on main via #41; playable Rune purchase and live evidence in draft #45",
+    "botanical-library": "two source review batches in draft #44; approved runtime export remains empty",
+    "plant-health": "forecast and plant-specific care cues in draft #44; soil moisture and pest simulation remain open"
+  },
+  "id": "issue-42-atrium-market-draft-tested",
+  "timestamp": "2026-11-27T21:34:02Z",
+  "branch": "queue34-handoff",
+  "commit": "344e736ce29ee9db5aa3cc2c4307b59546cb14ab",
+  "files": [
+    "docs/ai-handoff/evidence/greenhouse-market-42/garden.png",
+    "docs/item_concepts/GREENHOUSE_ATRIUM_BUILD_STUDY.md",
+    "the-allotment-garden-world-v-02/data/items/catalog.v1.json",
+    "the-allotment-garden-world-v-02/tests/verify_greenhouse_market.gd.uid",
+    "the-allotment-garden-world-v-02/tests/verify_item_catalog.gd",
+    "tools/item_catalog/test_catalog.py"
+  ]
+}
