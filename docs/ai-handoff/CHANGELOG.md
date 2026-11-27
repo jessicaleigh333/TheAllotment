@@ -49,3 +49,10 @@
 - Verified all tips for PRs #1–#16 are reachable from main at 861f686.
 
 [Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/bde6df3253de5f44225d08350be89b8f22d8f730)
+
+## [2026-11-27T20:35:44Z · Radial courtyard turf and limestone surface preview](events/issue-34-courtyard-surfaces.json)
+
+- Reused the original turf shader and limestone mesh and shader on the current radial courtyard.
+- Setts follow the nine approach transforms and remain decorative. The existing courtyard ring and approach surface heights remain authoritative for collisions and placement.
+
+[Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/f1642c0b476b53faac25aa866dc390bc424c3cd9)

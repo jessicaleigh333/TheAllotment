@@ -211,6 +211,14 @@ func _build_lighting() -> void:
 			child.light_energy = .55
 			child.light_color = Color("ffead4")
 
+var courtyard_cobbles := preload("res://scripts/courtyard_cobbles.gd").new()
+
+func _lawn_material(tint: Color) -> ShaderMaterial:
+	var lawn := ShaderMaterial.new()
+	lawn.shader = preload("res://shaders/lawn.gdshader")
+	lawn.set_shader_parameter("lawn_tint", tint)
+	return lawn
+
 func _build_neighborhood() -> void:
 	var ground := MeshInstance3D.new()
 	ground.name = "NeighborhoodGround"
@@ -221,7 +229,7 @@ func _build_neighborhood() -> void:
 	mesh.radial_segments = 128
 	ground.mesh = mesh
 	ground.position.y = -0.43
-	ground.material_override = _material(Color("668557"))
+	ground.material_override = _lawn_material(Color("668557"))
 	add_child(ground)
 	_build_courtyard()
 	for index in range(GARDEN_COUNT):
@@ -259,7 +267,7 @@ func _build_wedge_garden(index: int) -> void:
 	lawn.name = "WedgeGround"
 	lawn.mesh = surface.commit()
 	var tones := [Color("799767"), Color("829c70"), Color("769365"), Color("869b72")]
-	lawn.material_override = _material(tones[index % 4])
+	lawn.material_override = _lawn_material(tones[index % 4])
 	garden.add_child(lawn)
 	var entrance := Marker3D.new()
 	entrance.name = "Entrance"
@@ -278,7 +286,7 @@ func _build_wedge_garden(index: int) -> void:
 	# There is no paved lane or empty strip between gardens.
 	_hedge_divider(garden)
 	var angle := index * SECTOR_ANGLE
-	_stone_link(_polar(COURTYARD_RADIUS - 0.3, angle), _polar(INNER_RADIUS, angle), 4.0)
+	_stone_link(_polar(COURTYARD_RADIUS - 0.3, angle), _polar(INNER_RADIUS, angle), 4.0, index)
 	# Reuse prototype furnishings at their original sizes, leaving most acreage
 	# available for planting, large landmarks and future owner customization.
 	for bed in range(4):
@@ -349,10 +357,11 @@ func _build_courtyard() -> void:
 		var angle := (float(i) + 0.5) * TAU / 9.0
 		_round_planter(courtyard, Vector3(sin(angle) * 22.0, 0.12, cos(angle) * 22.0), i)
 
-func _stone_link(start: Vector3, end: Vector3, width: float) -> void:
+func _stone_link(start: Vector3, end: Vector3, width: float, entrance: int) -> void:
 	var stone := _box((start + end) * 0.5 + Vector3(0, 0.08, 0), Vector3(width, 0.12, start.distance_to(end) + 0.25), Color("bda88b"))
 	stone.name = "GardenApproach"
 	stone.rotation.y = atan2(end.x - start.x, end.z - start.z)
+	courtyard_cobbles.add_to(stone, entrance)
 	# Invisible slopes bridge the grass (-0.105) to paving (0.14).
 	# Overlap the paving slightly so capsule bodies cannot catch on a seam.
 	for side in [-1.0, 1.0]:

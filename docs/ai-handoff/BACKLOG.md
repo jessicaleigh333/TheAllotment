@@ -11,7 +11,7 @@
 - `harvesting` — P1 · open · verify the harvest, inventory and save round trip. ([2026-11-22T03:31:34Z · Development handoff requested](events/ai-handoff-request.json))
 - `hud-regression` — P0 · tested locally · awaiting review ([2026-11-27T20:29:10Z · HUD navigation and Settings regression verified](events/issue-34-hud-verified.json))
 - `item-catalog` — Master catalog merged in [#21](https://github.com/jessicaleigh333/TheAllotment/pull/21) · owner art and identity review remain open. ([2026-11-22T03:31:34Z · Development handoff requested](events/ai-handoff-request.json))
-- `lawn-and-paths` — Open · compare overlapping lawn and cobblestone branches against current main. See [integration review](../INTEGRATION_REVIEW_2026-11.md). ([2026-11-22T03:31:34Z · Development handoff requested](events/ai-handoff-request.json))
+- `lawn-and-paths` — P1 · implemented and tested · awaiting owner visual approval ([2026-11-27T20:35:44Z · Radial courtyard turf and limestone surface preview](events/issue-34-courtyard-surfaces.json))
 - `offline-simulation` — P1 · open · verify real-time and offline equivalence plus save recovery. ([2026-11-22T03:31:34Z · Development handoff requested](events/ai-handoff-request.json))
 - `plant-health` — P1 · open · reconcile current plant implementation before broadening health and survival. ([2026-11-22T03:31:34Z · Development handoff requested](events/ai-handoff-request.json))
 - `quality-and-platforms` — P3 · planned · review playtesting and later platform scope in the [original backlog](https://github.com/jessicaleigh333/TheAllotment/blob/2d05b7d6b4800706c6954b58387035120c5446e3/docs/CODEX_BACKLOG_2026-11-13.md). ([2026-11-22T03:31:34Z · Development handoff requested](events/ai-handoff-request.json))
