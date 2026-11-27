@@ -11,6 +11,8 @@ const MAX_HEIGHT := 24.0
 const EPS := .018
 
 static func size(id: String) -> Vector3:
+ if id == preload("res://assets/garden_art/greenhouse_atrium.gd").ID:
+  return preload("res://assets/garden_art/greenhouse_atrium.gd").SIZE
  if Woodland.SIZES.has(id): return Woodland.SIZES[id]
  if Rustic.SIZES.has(id): return Rustic.SIZES[id]
  if Enchanted.SIZES.has(id): return Enchanted.SIZES[id]

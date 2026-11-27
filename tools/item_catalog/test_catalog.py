@@ -39,11 +39,11 @@ class ItemTests(unittest.TestCase):
             "reviewer":"Test owner","reviewed_at":"2026-11-17T00:00:00Z","reason":"Test fixture",**extra}
 
     def test_complete_existing_catalog_and_distinct_domains(self):
-        self.assertEqual(self.report["domains"],{"shop":159,"surface":84,"scenery":9,"avatar_option":10})
+        self.assertEqual(self.report["domains"],{"shop":160,"surface":84,"scenery":9,"avatar_option":10})
         ids=[r["item_id"] for r in self.bundle["items"]];self.assertEqual(len(ids),len(set(ids)))
         self.assertIn("tree",ids);self.assertIn("scenery:tree",ids)
         with self.db() as db:
-            self.assertEqual(db.execute("SELECT count(*) FROM listing").fetchone()[0],159)
+            self.assertEqual(db.execute("SELECT count(*) FROM listing").fetchone()[0],160)
             self.assertEqual(db.execute("SELECT count(*) FROM external_id WHERE domain='surface'").fetchone()[0],84)
 
     def test_every_evaluated_shop_value_preserved(self):
@@ -56,9 +56,10 @@ class ItemTests(unittest.TestCase):
                 self.assertEqual(strict_json(raw)["original_source_record"],original["original"])
             self.assertEqual(item["physical"]["dimensions_m"],original["dimensions_m"])
 
-    def test_free_shop_historical_prices_and_no_sale(self):
+    def test_rune_purchase_and_legacy_free_prices(self):
         with self.db() as db:
-            self.assertEqual(db.execute("SELECT count(*) FROM listing WHERE effective_price!=0 OR sale_value IS NOT NULL").fetchone()[0],0)
+            self.assertEqual(db.execute("SELECT item_id, effective_price FROM listing WHERE effective_price!=0").fetchall(),[("greenhouse_atrium_multilevel_01",450)])
+            self.assertEqual(db.execute("SELECT count(*) FROM listing WHERE sale_value IS NOT NULL").fetchone()[0],0)
             self.assertEqual(db.execute("SELECT source_price FROM listing WHERE item_id='bench'").fetchone()[0],180)
             self.assertEqual(db.execute("SELECT stack_limit FROM listing WHERE item_id='bench'").fetchone()[0],999)
 
@@ -102,7 +103,7 @@ class ItemTests(unittest.TestCase):
             writer=csv.DictWriter(file,fieldnames=c.REQUEST_COLUMNS);writer.writeheader();writer.writerow(row)
         self.assertEqual(c.requests(self.out/"items.sqlite",source,out),1)
         self.assertIn("request_receipt_only",strict_json(out.read_text())["status"])
-        with self.db() as db:self.assertEqual(db.execute("SELECT count(*) FROM item").fetchone()[0],262)
+        with self.db() as db:self.assertEqual(db.execute("SELECT count(*) FROM item").fetchone()[0],263)
 
     def test_invalid_dimensions_rejected(self):
         with self.db() as db:
@@ -184,9 +185,9 @@ class ItemTests(unittest.TestCase):
         from openpyxl import load_workbook
         path=self.root/"review.xlsx";create(self.out,path)
         book=load_workbook(path)
-        self.assertEqual(book["Master Item Catalog"].max_row,263)
+        self.assertEqual(book["Master Item Catalog"].max_row,264)
         self.assertEqual(book["Artwork Review"].max_row,160)
-        self.assertEqual(len(book["Artwork Review"]._images),159)
+        self.assertEqual(len(book["Artwork Review"]._images),160)
         self.assertEqual(book["Master Item Catalog"].freeze_panes,"C2")
         self.assertIn("Owner Corrections",book.sheetnames);self.assertIn("New Item Requests",book.sheetnames)
         for sheet in book:

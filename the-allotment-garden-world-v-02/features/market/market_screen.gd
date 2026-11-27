@@ -208,11 +208,11 @@ func _set_mode(value: String) -> void:
 	refresh()
 
 func refresh() -> void:
-	balance.text = "Free decorating"
+	balance.text = "%d Runes" % store.data.runes
 	stage_choice.disabled = mode == "backpack"
 	planted_items_button.visible = mode == "backpack"
 	heading.text = "The Allotment · "+{"market":"MARKET","backpack":"BACKPACK","catalog":"BOTANICAL CATALOG"}[mode]
-	status.text = store.last_error if not store.readable else ("Everything is free to use. Choose an item and Decorate inner circle." if mode == "market" else "Choose an owned item to place, equip or pin." if mode == "backpack" else "Discover · Grow · Learn — browse the starter plant collection.")
+	status.text = store.last_error if not store.readable else ("Choose an item to decorate your garden." if mode == "market" else "Choose an owned item to place, equip or pin." if mode == "backpack" else "Discover · Grow · Learn — browse the starter plant collection.")
 	_refresh_grid()
 	_refresh_details()
 	_clear(quickbar)
@@ -288,6 +288,8 @@ func _refresh_grid() -> void:
 		name.mouse_filter = Control.MOUSE_FILTER_IGNORE
 		contents.add_child(name)
 		var tag_text: String = "Free · "+(Growth.Woody.PROFILES[item.plant].names[int(item.growth_stage)] if Growth.Woody.PROFILES.has(item.plant) else Growth.STAGES[int(item.growth_stage)]) if item.has("plant") else "Free · ×%d in bag" % store.count(item.id)
+		var cost := Catalog.rune_cost(item)
+		if cost > 0: tag_text = "%d Runes · ×%d in bag" % [cost,store.count(item.id)]
 		var tag := _text(tag_text,12)
 		tag.mouse_filter = Control.MOUSE_FILTER_IGNORE
 		contents.add_child(tag)
@@ -341,16 +343,18 @@ func _refresh_details() -> void:
 	if item.has("season"):
 		details.add_child(_text("%s · %s\nWater: %s" % [item.season,item.sun,item.water],14,Color("5a664a")))
 	details.add_child(_text("In backpack: %d" % store.count(item.id),16,Color("334632")))
+	var cost := Catalog.rune_cost(item)
 	if mode != "backpack":
-		var buy := _button("Add to backpack · Free",_buy.bind(item.id),true)
+		var buy_label := "Add to backpack · Free" if cost == 0 else "Buy · %d Runes" % cost
+		var buy := _button(buy_label,_buy.bind(item.id),true)
 		buy.name = "Buy"
-		buy.disabled = not store.readable or not item.get("available",true)
+		buy.disabled = not store.readable or not item.get("available",true) or int(store.data.runes) < cost
 		details.add_child(buy)
 	if Catalog.placeable(item):
-		for scope in ["courtyard","garden"]:
+		for scope in (["garden"] if item.id == Catalog.ATRIUM.ID else ["courtyard","garden"]):
 			var place := _button("Decorate inner circle" if scope == "courtyard" else "Place in Garden 01",func() -> void: placement_requested.emit(item.id,scope),true)
 			place.name = "Place" if scope == "courtyard" else "PlaceGarden"
-			place.disabled = not store.readable or world == null
+			place.disabled = not store.readable or world == null or (cost > 0 and store.count(item.id) == 0)
 			details.add_child(place)
 			if scope == "courtyard": details.move_child(place,2 if item.has("latin") else 1)
 	elif item.id == "straw_hat":

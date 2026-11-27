@@ -4,6 +4,7 @@ const MasterIndex := preload("res://features/item_catalog/master_catalog.gd")
 static var _source_index := {}
 const ATLAS := preload("res://features/market/item_atlas.png")
 const BASE_ITEMS := [
+	{"id":"greenhouse_atrium_multilevel_01","name":"Greenhouse atrium","category":"Decor","price":450,"rune_purchase":true,"icon":8,"radius":6.60,"description":"A walkable two-level greenhouse with a glazed roof, stair and mezzanine. Place on level ground in Garden 01."},
 	{"id":"garden_gate","name":"Wrought-iron garden gates","category":"Decor","price":0,"icon":8,"radius":1.9,"featured":true,"description":"Paired scrolling iron gates on limestone piers. Opens automatically as the gardener approaches. 3 m wide, 2 m tall."},
 	{"id":"timber_gate","name":"Timber garden gates","category":"Decor","price":0,"icon":8,"radius":1.7,"description":"An arched pair of timber gates with metal hinges. Opens as the gardener approaches. 2.4 m wide, 1.3 m tall."},
 	{"id":"rock_wall","name":"Rock wall · straight","category":"Decor","price":0,"icon":10,"radius":1.05,"description":"A 2 m limestone and fieldstone border with staggered stones and a coping cap. Place near another wall end to connect."},
@@ -32,6 +33,7 @@ const CLIMBING_ITEMS := [{"id": "climbing_rose", "name": "Climbing rose", "latin
 
 const WOODY_ITEMS := [{"id": "tree", "name": "English oak", "latin": "Quercus robur", "category": "Plants", "price": 0, "icon": 7, "radius": 11.5, "family": "Living trees and hedges", "description": "A spreading oak with acorn, seedling, sapling and mature stages. Representative mature size: 20 m high and 16 m wide after 50 real years. Seeds and nursery plants use the real elapsed/offline clock. Growth curves are representative estimates; conditions and cultivars vary."}, {"id": "cypress", "name": "Italian cypress", "latin": "Cupressus sempervirens", "category": "Plants", "price": 0, "icon": 7, "radius": 2.25, "family": "Living trees and hedges", "description": "A columnar evergreen with its own branching stages. Representative mature size: 15 m high and 3 m wide after 30 real years. Seeds and nursery plants use the real elapsed/offline clock. Growth curves are representative estimates; conditions and cultivars vary."}, {"id": "shrub", "name": "Common box shrub", "latin": "Buxus sempervirens", "category": "Plants", "price": 0, "icon": 7, "radius": 3.65, "family": "Living trees and hedges", "description": "An untrimmed evergreen shrub. Representative mature size: 5 m high and wide after 20 real years. Seeds and nursery plants use the real elapsed/offline clock. Growth curves are representative estimates; conditions and cultivars vary."}, {"id": "hedge", "name": "Dwarf-box hedge · five plants", "latin": "Buxus sempervirens Suffruticosa", "category": "Plants", "price": 0, "icon": 7, "radius": 1.75, "family": "Living trees and hedges", "description": "Five dwarf-box plants spaced 35 cm apart. Representative established size: 1 m high, 1.5 m across and 2.9 m along the row after 10 real years. Seeds and nursery plants use the real elapsed/offline clock. Growth curves are representative estimates; conditions and cultivars vary."}]
 
+const ATRIUM := preload("res://assets/garden_art/greenhouse_atrium.gd")
 const ITEMS := BASE_ITEMS+CLIMBING_ITEMS+WOODY_ITEMS+preload("res://assets/garden_art/french_collection.gd").CATALOG+preload("res://assets/garden_art/roman_collection.gd").CATALOG+preload("res://assets/garden_art/enchanted_collection.gd").CATALOG+preload("res://assets/garden_art/rustic_collection.gd").CATALOG+preload("res://assets/garden_art/woodland_collection.gd").CATALOG
 
 static func by_id(id: String) -> Dictionary:
@@ -66,7 +68,11 @@ static func stage_id(id: String, stage: int) -> String:
 	if plant.is_empty(): return id
 	return plant+{0:"@seed",2:"@seedling",3:"@young",4:""}.get(stage,"")
 
+static func rune_cost(item: Dictionary) -> int:
+	return int(item.price) if item.get("rune_purchase",false) else 0
+
 static func icon(item: Dictionary) -> Texture2D:
+	if item.id == ATRIUM.ID: return preload("res://assets/garden_art/icons/greenhouse_atrium.svg")
 	if Growth.Woody.PROFILES.has(item.get("plant",item.id)):
 		return load("res://assets/garden_art/icons/"+str(item.get("plant",item.id))+"_growing.svg")
 	if item.get("plant",item.id) in ["climbing_rose","clematis","honeysuckle","ivy","wisteria"]:
