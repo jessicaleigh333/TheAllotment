@@ -56,3 +56,11 @@
 - Compared actively observed and reopened growth at UTC stage boundaries, including a rollback after observation.
 
 [Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/2f4c55d0c0d751e740c37d98a2c9d42b8c04be23)
+
+## [2026-11-27T20:41:44Z · Starter care, harvest and sale verified](events/issue-34-starter-care.json)
+
+- Backpack → Plants and harvest shows living plants, accepts watering, exposes harvest readiness and offers one-unit produce sales.
+- Basil and cosmos yields, sale values and the 14-day picking interval are prototype tuning. A new planting must establish before harvest, including after pickup/replant.
+- The garden can continue growing after harvest. The existing free Market remains free.
+
+[Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/557dede47225180eab0b75d1eb8e5416bceb19aa)

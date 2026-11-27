@@ -39,3 +39,9 @@
 - Expired claims require coordinated release after the old writer stops. The queue routes active sessions without launching agents.
 
 [Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/bde6df3253de5f44225d08350be89b8f22d8f730)
+
+## [2026-11-27T20:41:44Z · Starter care, harvest and sale verified](events/issue-34-starter-care.json)
+
+- Watering is recorded as care for the current planting. No weather, moisture or pest inference modifies growth or yield.
+
+[Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/557dede47225180eab0b75d1eb8e5416bceb19aa)

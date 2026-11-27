@@ -26,6 +26,7 @@ var preview_camera: Camera3D
 var card_buttons: Dictionary = {}
 var shop_stage := 4
 var stage_choice: OptionButton
+var planted_items_button: Button
 
 func _ready() -> void:
 	store = Store.new()
@@ -105,6 +106,9 @@ func _build() -> void:
 	layout.add_child(tabs)
 	for entry in [["market","Market"],["backpack","Backpack"],["catalog","Botanical catalog"]]:
 		tabs.add_child(_button(entry[1],_set_mode.bind(entry[0])))
+	planted_items_button = _button("Plants and harvest", _show_placed)
+	planted_items_button.name = "PlantsAndHarvest"
+	tabs.add_child(planted_items_button)
 	var toolbar := HBoxContainer.new()
 	layout.add_child(toolbar)
 	var search := LineEdit.new()
@@ -206,6 +210,7 @@ func _set_mode(value: String) -> void:
 func refresh() -> void:
 	balance.text = "Free decorating"
 	stage_choice.disabled = mode == "backpack"
+	planted_items_button.visible = mode == "backpack"
 	heading.text = "The Allotment · "+{"market":"MARKET","backpack":"BACKPACK","catalog":"BOTANICAL CATALOG"}[mode]
 	status.text = store.last_error if not store.readable else ("Everything is free to use. Choose an item and Decorate inner circle." if mode == "market" else "Choose an owned item to place, equip or pin." if mode == "backpack" else "Discover · Grow · Learn — browse the starter plant collection.")
 	_refresh_grid()
@@ -367,7 +372,6 @@ func _refresh_details() -> void:
 		var placed_count: int = store.data.placed.size()
 		if placed_count > 0:
 			details.add_child(_text("Placed in garden: %d" % placed_count,13,Color("5a664a")))
-			details.add_child(_button("Browse placed items",_show_placed))
 	if item.has("plant"): _preview(item.id)
 
 func _buy(id: String) -> void:
@@ -388,17 +392,63 @@ func _retrieve(index: int) -> void:
 
 func _show_placed() -> void:
 	_clear(details)
-	details.add_child(_text("In your garden · remove upper pieces first",19,Color("334632")))
+	details.add_child(_text("Plants and harvest", 19, Color("334632")))
+	var stock: Dictionary = store.data.get("harvest_stock", {})
+	for species in Store.Harvest.CROPS:
+		if int(stock.get(species, 0)) == 0: continue
+		var crop: Dictionary = Store.Harvest.CROPS[species]
+		details.add_child(_button("%s ×%d · Sell one for %d Runes" % [crop.name, stock[species], crop.runes], _sell_harvest.bind(species)))
+	if stock.values().any(func(count) -> bool: return int(count) > 0):
+		details.add_child(_text("Purse · %d Runes" % store.data.runes, 14, Color("425b3c")))
+	if store.data.placed.is_empty():
+		details.add_child(_text("Place a plant from the Market to start.", 14, Color("425b3c")))
 	var ordered: Array = range(store.data.placed.size())
 	ordered.sort_custom(func(a: int, b: int) -> bool: return Store.Stack.elevation(store.data.placed[a]) > Store.Stack.elevation(store.data.placed[b]))
 	for index in ordered:
 		var placement: Dictionary = store.data.placed[index]
 		var item := Catalog.by_id(placement.id)
 		var plant := Growth.species(item.id)
+		var display_name: String = item.name
 		if not plant.is_empty():
+			display_name = Catalog.by_id(plant).name
 			var state := Growth.state(plant,Growth.age_days(placement,Time.get_unix_time_from_system()))
-			details.add_child(_text("%s · %s · %.2f m" % [plant.capitalize(),state.name,state.height],14,Color("425b3c")))
-		details.add_child(_button("Return %s · %.2f m up" % [item.name,Store.Stack.elevation(placement)],_retrieve.bind(index)))
+			details.add_child(_text("%s · %s · %.2f m" % [display_name,state.name,state.height],14,Color("425b3c")))
+			var watered_at := int(placement.get("last_watered_at", 0))
+			if watered_at > 0:
+				var date := Time.get_date_string_from_unix_time(watered_at)
+				details.add_child(_text("Last watered · %s UTC" % date, 13, Color("425b3c")))
+			var water := _button("Water %s" % display_name, _water.bind(index), true)
+			water.disabled = not store.readable
+			details.add_child(water)
+			if Store.Harvest.CROPS.has(plant):
+				var reason: String = Store.Harvest.status(placement, int(Time.get_unix_time_from_system()))
+				if reason.is_empty():
+					var crop: Dictionary = Store.Harvest.CROPS[plant]
+					details.add_child(_button("Harvest %d · %s" % [crop.quantity, display_name], _harvest.bind(index), true))
+				else:
+					details.add_child(_text(reason, 13, Color("425b3c")))
+		details.add_child(_button("Return %s · %.2f m up" % [display_name,Store.Stack.elevation(placement)],_retrieve.bind(index)))
+
+func _water(index: int) -> void:
+	if store.water(index):
+		_show_placed()
+		status.text = "Watering recorded for this planting."
+	else:
+		status.text = store.last_error
+
+func _harvest(index: int) -> void:
+	if store.harvest(index):
+		_show_placed()
+		status.text = "Harvest added to your backpack."
+	else:
+		status.text = store.last_error
+
+func _sell_harvest(species: String) -> void:
+	if store.sell_harvest(species):
+		_show_placed()
+		status.text = "Sold one %s · %d Runes in your purse." % [Store.Harvest.CROPS[species].name.to_lower(), store.data.runes]
+	else:
+		status.text = store.last_error
 
 func _equip_hat() -> void:
 	var appearance := preload("res://features/avatar/appearance.gd")

@@ -9,3 +9,10 @@
 - [Ground cover customization, Godot 4.6.3 at main 861f686](https://github.com/jessicaleigh333/TheAllotment/blob/9447b3cfdb4714e4d16b1e8f15fa192fefbe8be2/docs/ai-handoff/evidence/architecture-29/ground_cover_customization.png)
 
 [Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/9447b3cfdb4714e4d16b1e8f15fa192fefbe8be2)
+
+## [2026-11-27T20:41:44Z · Starter care, harvest and sale verified](events/issue-34-starter-care.json)
+
+- [Before](https://github.com/jessicaleigh333/TheAllotment/blob/codex/34-plant-care/docs/ai-handoff/evidence/plant-care-34/before.png)
+- [After](https://github.com/jessicaleigh333/TheAllotment/blob/codex/34-plant-care/docs/ai-handoff/evidence/plant-care-34/after.png)
+
+[Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/557dede47225180eab0b75d1eb8e5416bceb19aa)
