@@ -35,3 +35,8 @@ Append one entry per material assignment or status transition. Preserve prior en
 | UTC date | Agent | Assignment and contribution | Status | Evidence |
 | --- | --- | --- | --- | --- |
 | 2026-11-27 | Codex (primary session) | Finished all remote branch comparisons, ran isolated Godot/Python regressions, captured graphical evidence and reviewed #31 claim behavior. No subagents were delegated. | Completed audit, awaiting owner review | [Audit and evidence](../ARCHITECTURE_AUDIT_29.md), [#32](https://github.com/jessicaleigh333/TheAllotment/pull/32), [#31 review](https://github.com/jessicaleigh333/TheAllotment/pull/31#issuecomment-7227173966) |
+## 2026-11-27 Windows verification handoff
+
+| UTC date | Agent | Assignment and contribution | Status | Evidence |
+| --- | --- | --- | --- | --- |
+| 2026-11-27 | Codex (primary session) | Ran production-code launcher fixture suites, Windows-preset pack exports and isolated exported-game save/play checks. Recorded native acceptance steps. No subagents were delegated. | Linux checks complete, native and live release verification blocked | [Report](../WINDOWS_VERIFICATION_30.md), [#30](https://github.com/jessicaleigh333/TheAllotment/issues/30), [#33](https://github.com/jessicaleigh333/TheAllotment/pull/33) |

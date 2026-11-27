@@ -27,3 +27,10 @@
 - [Agent registry](AGENT_REGISTRY.md) records the primary session contribution.
 
 [Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/9447b3cfdb4714e4d16b1e8f15fa192fefbe8be2)
+
+## [2026-11-27T20:11:53Z · Windows updater fixtures and exported game saves verified on Linux](events/windows-verification-fixtures-tested.json)
+
+- [Windows verification report](../WINDOWS_VERIFICATION_30.md) records reproduction steps, export hashes and the native checklist.
+- [Agent registry](AGENT_REGISTRY.md) records actual work completed by the primary session.
+
+[Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/53d77101e0b2170c75a71464f2fdc0029774384b)

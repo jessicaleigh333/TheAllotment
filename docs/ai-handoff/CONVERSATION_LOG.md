@@ -25,3 +25,10 @@
 - Codex completed the audit and reviewed PR #31 for unattended assignment discovery and claiming.
 
 [Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/9447b3cfdb4714e4d16b1e8f15fa192fefbe8be2)
+
+## [2026-11-27T20:11:53Z · Windows updater fixtures and exported game saves verified on Linux](events/windows-verification-fixtures-tested.json)
+
+- Owner requested Windows verification using the implementation in PR #16 and preserving existing saves and gameplay.
+- Codex verified the existing launcher with fixtures and recorded what still needs native evidence.
+
+[Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/53d77101e0b2170c75a71464f2fdc0029774384b)

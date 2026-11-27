@@ -27,3 +27,9 @@
 - PRs #1–#16 already reachable from main. Port desired terrain rendering to the current radial layout only after review. Audit changes are documentation and screenshots.
 
 [Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/9447b3cfdb4714e4d16b1e8f15fa192fefbe8be2)
+
+## [2026-11-27T20:11:53Z · Windows updater fixtures and exported game saves verified on Linux](events/windows-verification-fixtures-tested.json)
+
+- Verified current main because the implementation tip of PR #16 is already an ancestor. Used disposable profiles, fixture keys and installation directories.
+
+[Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/53d77101e0b2170c75a71464f2fdc0029774384b)

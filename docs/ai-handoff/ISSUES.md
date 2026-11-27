@@ -27,3 +27,10 @@
 - [#31 review](https://github.com/jessicaleigh333/TheAllotment/pull/31#issuecomment-7227173966) requests concurrent claim arbitration and structured routing.
 
 [Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/9447b3cfdb4714e4d16b1e8f15fa192fefbe8be2)
+
+## [2026-11-27T20:11:53Z · Windows updater fixtures and exported game saves verified on Linux](events/windows-verification-fixtures-tested.json)
+
+- [#30](https://github.com/jessicaleigh333/TheAllotment/issues/30) remains open pending native Windows verification and the published feed.
+- No Windows executable or Windows screenshots were produced. The official template requests failed in this environment.
+
+[Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/53d77101e0b2170c75a71464f2fdc0029774384b)

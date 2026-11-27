@@ -40,3 +40,12 @@
 - PASS — all 50 Python tests passed after installing CairoSVG into a local dependency directory.
 
 [Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/9447b3cfdb4714e4d16b1e8f15fa192fefbe8be2)
+
+## [2026-11-27T20:11:53Z · Windows updater fixtures and exported game saves verified on Linux](events/windows-verification-fixtures-tested.json)
+
+- PASS — Godot 4.6.3 signed protocol fixture suite, including save sentinels and recovery.
+- PASS — Godot 4.6.3 local HTTP suite, including upgrade, failure, cancellation and running-game protection.
+- PASS — Game and launcher Windows-preset PCKs exported and started under Linux Godot. Exported game profile entry, vault and climbing-vine suites passed.
+- BLOCKED — The public update.json returned HTTP 404. Native Windows execution, publisher-signed artifacts and their live integrity were not verified.
+
+[Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/53d77101e0b2170c75a71464f2fdc0029774384b)
