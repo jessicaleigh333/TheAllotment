@@ -1,0 +1,7 @@
+{
+  "repository": "jessicaleigh333/TheAllotment",
+  "tasks": {
+    "architecture-audit": {"issue": 29, "priority": 0, "depends_on": [], "pull_requests": [32]},
+    "windows-release": {"issue": 30, "priority": 0, "depends_on": [], "pull_requests": [33]}
+  }
+}
