@@ -52,3 +52,9 @@
 - No record met the existing runtime approval boundary. Future authoritative care hints need vetted field-level overlays.
 
 [Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/2f4c55d0c0d751e740c37d98a2c9d42b8c04be23)
+
+## [2026-11-27T20:41:44Z · Starter care, harvest and sale verified](events/issue-34-starter-care.json)
+
+- Harvest implementations for other species and a validated plant-health model remain open.
+
+[Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/557dede47225180eab0b75d1eb8e5416bceb19aa)
