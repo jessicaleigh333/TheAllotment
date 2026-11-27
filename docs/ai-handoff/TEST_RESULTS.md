@@ -31,3 +31,12 @@
 - PASS — GitHub comparison against 861f686 verified Windows 0 ahead / 14 behind, cobblestone 3 / 33 and soft grass 1 / 33.
 
 [Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/14f8db816103fddcfa36a566e3c7d8b3f60e52f7)
+
+## [2026-11-27T20:09:17Z · Architecture and regression audit ready for review](events/architecture-audit-baseline-verified.json)
+
+- PASS — Godot 4.6.3 fresh import and title smoke exited 0, with editor TCP/HDR and shutdown warnings documented in the audit.
+- PASS — 24 isolated headless game suites and one OpenGL graphical suite passed at main 861f686.
+- FAIL — ui/verify_hud.gd:35 rejects the current Settings control tree and times out; dedicated vault and profile suites pass.
+- PASS — all 50 Python tests passed after installing CairoSVG into a local dependency directory.
+
+[Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/9447b3cfdb4714e4d16b1e8f15fa192fefbe8be2)

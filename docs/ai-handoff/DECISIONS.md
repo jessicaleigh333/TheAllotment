@@ -21,3 +21,9 @@
 - Coordinate native Windows checks with #16. Review the two diverged terrain branches together for changes still needed.
 
 [Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/14f8db816103fddcfa36a566e3c7d8b3f60e52f7)
+
+## [2026-11-27T20:09:17Z · Architecture and regression audit ready for review](events/architecture-audit-baseline-verified.json)
+
+- PRs #1–#16 already reachable from main. Port desired terrain rendering to the current radial layout only after review. Audit changes are documentation and screenshots.
+
+[Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/9447b3cfdb4714e4d16b1e8f15fa192fefbe8be2)

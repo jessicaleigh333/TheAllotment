@@ -20,3 +20,10 @@
 - Added verified branch comparisons to the [architecture audit](../ARCHITECTURE_AUDIT_29.md). Updated the [agent registry](AGENT_REGISTRY.md).
 
 [Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/14f8db816103fddcfa36a566e3c7d8b3f60e52f7)
+
+## [2026-11-27T20:09:17Z · Architecture and regression audit ready for review](events/architecture-audit-baseline-verified.json)
+
+- Architecture map, complete branch matrix, conflict details, prioritized integration plan and gameplay recommendations are in docs/ARCHITECTURE_AUDIT_29.md.
+- [Agent registry](AGENT_REGISTRY.md) records the primary session contribution.
+
+[Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/9447b3cfdb4714e4d16b1e8f15fa192fefbe8be2)
