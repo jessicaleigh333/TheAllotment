@@ -398,7 +398,21 @@ func _show_placed() -> void:
 		if not plant.is_empty():
 			var state := Growth.state(plant,Growth.age_days(placement,Time.get_unix_time_from_system()))
 			details.add_child(_text("%s · %s · %.2f m" % [plant.capitalize(),state.name,state.height],14,Color("425b3c")))
+			var watered_at := int(placement.get("last_watered_at", 0))
+			if watered_at > 0:
+				var date := Time.get_date_string_from_unix_time(watered_at)
+				details.add_child(_text("Last watered · %s UTC" % date, 13, Color("425b3c")))
+			var water := _button("Water %s" % item.name, _water.bind(index), true)
+			water.disabled = not store.readable
+			details.add_child(water)
 		details.add_child(_button("Return %s · %.2f m up" % [item.name,Store.Stack.elevation(placement)],_retrieve.bind(index)))
+
+func _water(index: int) -> void:
+	if store.water(index):
+		_show_placed()
+		status.text = "Watering recorded for this planting."
+	else:
+		status.text = store.last_error
 
 func _equip_hat() -> void:
 	var appearance := preload("res://features/avatar/appearance.gd")

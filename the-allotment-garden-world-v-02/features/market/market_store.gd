@@ -44,6 +44,8 @@ func _valid(value: Variant) -> bool:
 		if not placement is Dictionary or not Catalog.placeable(Catalog.by_id(str(placement.get("id","")))): return false
 		if placement.get("area","garden") not in ["garden","courtyard"]: return false
 		if placement.has("growth") and (Growth.species(placement.id).is_empty() or not Growth.valid_record(placement.growth)): return false
+		if placement.has("last_watered_at"):
+			if Growth.species(placement.id).is_empty() or not _whole(placement.last_watered_at, 1, 253402300799): return false
 		for key in ["elevation","ground_y"]:
 			if placement.has(key):
 				var value_at_key = placement[key]
@@ -111,6 +113,17 @@ func ensure_placement_ids(sample_ground: Callable) -> bool:
 			record.ground_y = sample_ground.call(record)
 			changed = true
 	return _commit(next) if changed else readable
+
+func water(index: int) -> bool:
+	if not readable: return false
+	if index < 0 or index >= data.placed.size() or Growth.species(data.placed[index].id).is_empty():
+		return _fail("Choose a living plant in your garden.")
+	var now := int(Time.get_unix_time_from_system())
+	if now <= int(data.placed[index].get("last_watered_at", 0)):
+		return _fail("Watering is already recorded at a later or equal time.")
+	var next := data.duplicate(true)
+	next.placed[index].last_watered_at = now
+	return _commit(next)
 
 func retrieve(index: int) -> bool:
 	if index < 0 or index >= data.placed.size(): return false
