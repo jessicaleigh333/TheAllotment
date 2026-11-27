@@ -23,3 +23,9 @@ Append one entry per material assignment or status transition. Preserve prior en
 - Update this registry alongside the existing milestone event and task PR; include a registry reference in the milestone changes or decisions. Preserve concurrent entries when integrating branches.
 - Public repository: exclude private transcripts, credentials, personal data, internal sensitive identifiers and private links. Use reviewed project-local aliases where appropriate.
 - The parent session is responsible for checking delegated work and reporting failures or unverified claims. The registry does not replace existing code review, test evidence, or owner approval.
+
+## 2026-11-27 Windows verification handoff
+
+| UTC date | Agent | Assignment and contribution | Status | Evidence |
+| --- | --- | --- | --- | --- |
+| 2026-11-27 | Codex (primary session) | Ran production-code launcher fixture suites, Windows-preset pack exports and isolated exported-game save/play checks. Recorded native acceptance steps. No subagents were delegated. | Linux checks complete, native and live release verification blocked | [Report](../WINDOWS_VERIFICATION_30.md), [#30](https://github.com/jessicaleigh333/TheAllotment/issues/30), [#33](https://github.com/jessicaleigh333/TheAllotment/pull/33) |
