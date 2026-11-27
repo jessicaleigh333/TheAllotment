@@ -6,7 +6,7 @@ signal panel_visibility_changed(is_open: bool)
 const LEFT := ["help", "settings", "garden_editor", "shop", "inventory", "journal"]
 const RIGHT := ["weather", "world_map", "friends", "messages", "events", "challenges"]
 const ICON_ORDER := ["help", "settings", "garden_editor", "shop", "inventory", "journal", "weather", "world_map", "friends", "messages", "events", "challenges"]
-const TITLES := {"help": "Help / Louise", "settings": "Settings", "garden_editor": "Garden Editor", "shop": "Shop", "inventory": "Inventory", "journal": "Journal", "weather": "Weather", "world_map": "World Map", "friends": "Friends", "messages": "Messages", "events": "Events", "challenges": "Challenges"}
+const TITLES := {"help": "Help / Louise", "settings": "Settings", "garden_editor": "Garden Editor", "shop": "Shop", "inventory": "Inventory", "journal": "Garden Diary", "weather": "Weather", "world_map": "World Map", "friends": "Friends", "messages": "Messages", "events": "Events", "challenges": "Challenges"}
 var dialog: PanelContainer
 var title: Label
 var content: VBoxContainer
@@ -127,10 +127,9 @@ func _open(id: String, button: Button) -> void:
 	if id == "settings": screen.world = get_parent()
 	if id == "weather" and weather_provider != null: screen.configure(weather_provider)
 	content.add_child(screen)
-	# Give the forecast room for five readable rows; other destinations keep
-	# their original compact dialog size.
-	var half_width := 340.0 if id == "weather" else 230.0
-	var half_height := 270.0 if id == "weather" else 150.0
+	# Give the forecast, guide tabs and diary room to read.
+	var half_width := 340.0 if id in ["weather", "help", "journal"] else 230.0
+	var half_height := 270.0 if id in ["weather", "help", "journal"] else 150.0
 	dialog.offset_left = -half_width
 	dialog.offset_right = half_width
 	dialog.offset_top = -half_height

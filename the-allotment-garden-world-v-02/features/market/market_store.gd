@@ -6,6 +6,7 @@ const Catalog := preload("res://features/market/catalog.gd")
 const Profiles := preload("res://features/profiles/local_profiles.gd")
 const Harvest := preload("res://features/market/plant_harvest.gd")
 const STARTING_RUNES := 1250
+const MAX_OBSERVATIONS := 200
 var path: String
 var data := {"version":1,"runes":STARTING_RUNES,"owned":{},"favorites":[],"placed":[]}
 var last_error := ""
@@ -29,6 +30,12 @@ func _valid(value: Variant) -> bool:
 	if not _whole(value.get("runes"),0,10000000): return false
 	if not value.get("owned") is Dictionary or not value.get("placed") is Array or not value.get("favorites") is Array: return false
 	if value.placed.size() > 500 or value.favorites.size() > 6: return false
+	var observations = value.get("observations", [])
+	if not observations is Array or observations.size() > MAX_OBSERVATIONS: return false
+	for observation in observations:
+		if not observation is Dictionary or observation.get("kind") not in ["water", "harvest"]: return false
+		if not observation.get("plant") is String or not Growth.PLANTS.has(observation.plant): return false
+		if not _whole(observation.get("at"), 1, 253402300799): return false
 	var harvest_stock = value.get("harvest_stock", {})
 	if not harvest_stock is Dictionary: return false
 	for species in harvest_stock:
@@ -131,6 +138,7 @@ func water(index: int) -> bool:
 		return _fail("Watering is already recorded at a later or equal time.")
 	var next := data.duplicate(true)
 	next.placed[index].last_watered_at = now
+	_observe(next, "water", Growth.species(next.placed[index].id), now)
 	return _commit(next)
 
 func harvest(index: int) -> bool:
@@ -149,7 +157,15 @@ func harvest(index: int) -> bool:
 	stock[species] = quantity
 	next.harvest_stock = stock
 	next.placed[index].last_harvested_at = now
+	_observe(next, "harvest", species, now)
 	return _commit(next)
+
+func _observe(next: Dictionary, kind: String, plant: String, timestamp: int) -> void:
+	var observations: Array = next.get("observations", [])
+	if observations.size() == MAX_OBSERVATIONS:
+		observations.pop_front()
+	observations.append({"kind": kind, "plant": plant, "at": timestamp})
+	next.observations = observations
 
 func sell_harvest(species: String) -> bool:
 	if not readable: return false
