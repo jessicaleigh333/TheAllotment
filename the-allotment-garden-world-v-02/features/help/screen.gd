@@ -17,11 +17,11 @@ func _ready() -> void:
 	_line(pages[0], "Open Backpack → Plants and harvest to water a planting, check harvest readiness or sell what you picked. Your Garden Diary records watering and harvests.")
 	_line(pages[0], "If leaves look damaged in a real garden, check both sides for insects, note the pattern of damage and check soil moisture before deciding what caused it.")
 
-	_line(pages[1], "Sweet basil grows in full sun and moist soil that drains well. Pinching back growing tips encourages a bushier plant.")
+	_line(pages[1], "Sweet basil grows in full sun and moist soil that drains well. Check the soil before watering, especially after rain. Watch for new side shoots after pinching and pick leafy tips once the plant is established.")
 	_source(pages[1], "University of Maryland Extension · Sweet basil", "https://extension.umd.edu/resource/growing-basil-home-garden")
-	_line(pages[1], "Cosmos grows in full sun and well-drained soil. Aphids and slugs can be problems outdoors. Look for evidence before blaming either.")
+	_line(pages[1], "Cosmos grows in full sun and moist soil that drains well. Watch for new buds and open flowers. If leaves look damaged, check for aphids on new growth or slugs nearby. Damage alone cannot identify a pest.")
 	_source(pages[1], "Royal Horticultural Society · Cosmos", "https://www.rhs.org.uk/plants/30717/cosmos-bipinnatus/details")
-	_line(pages[1], "In this garden, established basil and cosmos yield sprigs or stems. The game uses its own picking intervals and quantities. Watering records your care without changing those timings.")
+	_line(pages[1], "In this garden, established basil and cosmos yield sprigs or stems. The game uses its own picking intervals and quantities. The Diary records your watering and harvests. Use the care notes above for real plants.")
 	_show_page(pages, pages[0])
 
 func _show_page(pages: Array[Control], selected: Control) -> void:

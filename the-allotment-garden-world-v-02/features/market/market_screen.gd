@@ -393,6 +393,12 @@ func _retrieve(index: int) -> void:
 func _show_placed() -> void:
 	_clear(details)
 	details.add_child(_text("Plants and harvest", 19, Color("334632")))
+	if world != null:
+		var weather = world.get_node_or_null("GardenWeather")
+		if weather != null:
+			var today: Dictionary = weather.current_weather()
+			var forecast_note := "%s today · %d%% chance of rain. Check the soil before watering." % [today.condition, today.rain_chance]
+			details.add_child(_text(forecast_note, 13, Color("425b3c")))
 	var stock: Dictionary = store.data.get("harvest_stock", {})
 	for species in Store.Harvest.CROPS:
 		if int(stock.get(species, 0)) == 0: continue

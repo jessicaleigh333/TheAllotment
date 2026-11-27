@@ -26,10 +26,15 @@ func _verify() -> void:
 	var runes: int = screen.store.data.runes
 	assert(screen.planted_items_button.visible)
 	screen.planted_items_button.pressed.emit()
+	var weather: Dictionary = world.get_node("GardenWeather").current_weather()
+	var forecast_found := false
 	var water: Button
 	for child in screen.details.get_children():
+		if child is Label and child.text.contains("%s today · %d%% chance of rain" % [weather.condition, weather.rain_chance]):
+			forecast_found = true
 		if child is Button and child.text.begins_with("Water Sweet basil"):
 			water = child
+	assert(forecast_found, "Backpack care uses the neighborhood forecast")
 	assert(is_instance_valid(water) and not water.disabled)
 	water.pressed.emit()
 	var recorded: int = int(screen.store.data.placed[0].get("last_watered_at", 0))
