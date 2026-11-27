@@ -38,6 +38,11 @@ isolated protocol godot --headless --path "$launcher" --script res://tests/test_
 python distribution/tests/http_fixture_server.py "$work/fixtures" 18763 &
 fixture_server=$!
 trap 'kill "$fixture_server" 2>/dev/null || true' EXIT
+for attempt in {1..30}; do
+    if curl -fsS http://127.0.0.1:18763/ >/dev/null 2>&1; then break; fi
+    sleep 0.2
+done
+curl -fsS http://127.0.0.1:18763/ >/dev/null || exit 1
 isolated http godot --headless --path "$launcher" --script res://tests/test_download.gd -- "$work/fixtures" http://127.0.0.1:18763
 isolated import godot --headless --path "$game" --editor --import --quit
 isolated packs godot --headless --path "$game" --export-pack 'Windows Desktop' "$work/TheAllotment.pck"
