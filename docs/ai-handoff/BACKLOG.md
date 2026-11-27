@@ -8,6 +8,7 @@
 - `environment` — P1 · open · scope seasonal weather and soil behavior against existing mechanics. ([2026-11-22T03:31:34Z · Development handoff requested](events/ai-handoff-request.json))
 - `game-guides` — P2 · open · review Louise, Growing Guide, How to Play and Garden Diary against the current game. ([2026-11-22T03:31:34Z · Development handoff requested](events/ai-handoff-request.json))
 - `harvesting` — P1 · open · verify the harvest, inventory and save round trip. ([2026-11-22T03:31:34Z · Development handoff requested](events/ai-handoff-request.json))
+- `hud-regression` — P0 · tested locally · awaiting review ([2026-11-27T20:29:10Z · HUD navigation and Settings regression verified](events/issue-34-hud-verified.json))
 - `item-catalog` — Master catalog merged in [#21](https://github.com/jessicaleigh333/TheAllotment/pull/21) · owner art and identity review remain open. ([2026-11-22T03:31:34Z · Development handoff requested](events/ai-handoff-request.json))
 - `lawn-and-paths` — Open · compare overlapping lawn and cobblestone branches against current main. See [integration review](../INTEGRATION_REVIEW_2026-11.md). ([2026-11-22T03:31:34Z · Development handoff requested](events/ai-handoff-request.json))
 - `offline-simulation` — P1 · open · verify real-time and offline equivalence plus save recovery. ([2026-11-22T03:31:34Z · Development handoff requested](events/ai-handoff-request.json))

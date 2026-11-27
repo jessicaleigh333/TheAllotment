@@ -8,3 +8,10 @@
 - Adds instructions in AGENTS.md so future sessions discover and publish milestone reports through existing task PRs.
 
 [Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/0e33a90c12447aa77d7149a9c06f3386587c20a2)
+
+## [2026-11-27T20:29:10Z · HUD navigation and Settings regression verified](events/issue-34-hud-verified.json)
+
+- Exercise all 12 HUD destinations, send Escape through the viewport, check focus restoration and verify the Settings button writes a real vault checkpoint.
+- Open my save folder now creates the active profile directory if needed and reports filesystem or shell errors.
+
+[Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/5e19fc0f337db1b1597da7eb60464b173a7e0140)

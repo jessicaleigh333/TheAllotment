@@ -16,3 +16,9 @@
 - PASS — GitHub remote branch SHA matched the local publish commit. The GitHub connector read both reports on the published branch.
 
 [Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/c28bb80e26552b2834a00f941bbe1b41b4f9cff7)
+
+## [2026-11-27T20:29:10Z · HUD navigation and Settings regression verified](events/issue-34-hud-verified.json)
+
+- PASS — HUD, local profiles, profile entry, vault and weather on Godot 4.6.3. Profile entry emitted an ObjectDB warning at shutdown.
+
+[Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/5e19fc0f337db1b1597da7eb60464b173a7e0140)

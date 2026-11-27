@@ -8,3 +8,9 @@
 - Open limitation — private conversation history has no automatic export feed. Sessions supply reviewed summaries.
 
 [Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/0e33a90c12447aa77d7149a9c06f3386587c20a2)
+
+## [2026-11-27T20:29:10Z · HUD navigation and Settings regression verified](events/issue-34-hud-verified.json)
+
+- The headless suite checks the folder control and its signal wiring. Desktop file-manager launch remains unverified.
+
+[Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/5e19fc0f337db1b1597da7eb60464b173a7e0140)
