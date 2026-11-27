@@ -40,6 +40,10 @@ func _verify() -> void:
 					assert(_verify_settings(world, screen), "Settings controls must save the active garden")
 				"Weather":
 					assert(screen.has_method("refresh"))
+				"Help":
+					assert(screen.get_child(0) is HBoxContainer)
+				"Journal":
+					assert(screen is ScrollContainer)
 				_:
 					assert(screen is Label)
 			_press_escape()

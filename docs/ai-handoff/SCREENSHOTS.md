@@ -18,3 +18,19 @@
 - [After Night](https://github.com/jessicaleigh333/TheAllotment/blob/codex/34-courtyard-surfaces/docs/ai-handoff/evidence/courtyard-34/after-night.png)
 
 [Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/f1642c0b476b53faac25aa866dc390bc424c3cd9)
+
+## [2026-11-27T20:41:44Z · Starter care, harvest and sale verified](events/issue-34-starter-care.json)
+
+- [Before](https://github.com/jessicaleigh333/TheAllotment/blob/codex/34-plant-care/docs/ai-handoff/evidence/plant-care-34/before.png)
+- [After](https://github.com/jessicaleigh333/TheAllotment/blob/codex/34-plant-care/docs/ai-handoff/evidence/plant-care-34/after.png)
+
+[Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/557dede47225180eab0b75d1eb8e5416bceb19aa)
+
+## [2026-11-27T20:44:44Z · Louise, Growing Guide and Garden Diary verified](events/issue-34-garden-guides.json)
+
+- [Before Help](https://github.com/jessicaleigh333/TheAllotment/blob/codex/34-garden-guides/docs/ai-handoff/evidence/guides-34/before-help.png)
+- [After Help](https://github.com/jessicaleigh333/TheAllotment/blob/codex/34-garden-guides/docs/ai-handoff/evidence/guides-34/after-help.png)
+- [Before Journal](https://github.com/jessicaleigh333/TheAllotment/blob/codex/34-garden-guides/docs/ai-handoff/evidence/guides-34/before-journal.png)
+- [After Journal](https://github.com/jessicaleigh333/TheAllotment/blob/codex/34-garden-guides/docs/ai-handoff/evidence/guides-34/after-journal.png)
+
+[Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/c0683f4d8b29b5d2655143f1f868e2041a9bbd12)

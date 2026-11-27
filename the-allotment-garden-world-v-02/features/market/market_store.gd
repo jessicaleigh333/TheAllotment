@@ -4,7 +4,9 @@ const Stack := preload("res://features/market/stack_rules.gd")
 const Growth := preload("res://features/market/plant_growth.gd")
 const Catalog := preload("res://features/market/catalog.gd")
 const Profiles := preload("res://features/profiles/local_profiles.gd")
+const Harvest := preload("res://features/market/plant_harvest.gd")
 const STARTING_RUNES := 1250
+const MAX_OBSERVATIONS := 200
 var path: String
 var data := {"version":1,"runes":STARTING_RUNES,"owned":{},"favorites":[],"placed":[]}
 var last_error := ""
@@ -28,6 +30,16 @@ func _valid(value: Variant) -> bool:
 	if not _whole(value.get("runes"),0,10000000): return false
 	if not value.get("owned") is Dictionary or not value.get("placed") is Array or not value.get("favorites") is Array: return false
 	if value.placed.size() > 500 or value.favorites.size() > 6: return false
+	var observations = value.get("observations", [])
+	if not observations is Array or observations.size() > MAX_OBSERVATIONS: return false
+	for observation in observations:
+		if not observation is Dictionary or observation.get("kind") not in ["water", "harvest"]: return false
+		if not observation.get("plant") is String or not Growth.PLANTS.has(observation.plant): return false
+		if not _whole(observation.get("at"), 1, 253402300799): return false
+	var harvest_stock = value.get("harvest_stock", {})
+	if not harvest_stock is Dictionary: return false
+	for species in harvest_stock:
+		if not Harvest.CROPS.has(species) or not _whole(harvest_stock[species], 0, 999): return false
 	var bag = value.get("bag_growth",{})
 	if not bag is Dictionary: return false
 	for id in bag:
@@ -44,6 +56,11 @@ func _valid(value: Variant) -> bool:
 		if not placement is Dictionary or not Catalog.placeable(Catalog.by_id(str(placement.get("id","")))): return false
 		if placement.get("area","garden") not in ["garden","courtyard"]: return false
 		if placement.has("growth") and (Growth.species(placement.id).is_empty() or not Growth.valid_record(placement.growth)): return false
+		if placement.has("last_watered_at"):
+			if Growth.species(placement.id).is_empty() or not _whole(placement.last_watered_at, 1, 253402300799): return false
+		if placement.has("last_harvested_at"):
+			if not placement.has("growth") or not Harvest.CROPS.has(Growth.species(placement.id)): return false
+			if not _whole(placement.last_harvested_at, 1, 253402300799): return false
 		for key in ["elevation","ground_y"]:
 			if placement.has(key):
 				var value_at_key = placement[key]
@@ -111,6 +128,56 @@ func ensure_placement_ids(sample_ground: Callable) -> bool:
 			record.ground_y = sample_ground.call(record)
 			changed = true
 	return _commit(next) if changed else readable
+
+func water(index: int) -> bool:
+	if not readable: return false
+	if index < 0 or index >= data.placed.size() or Growth.species(data.placed[index].id).is_empty():
+		return _fail("Choose a living plant in your garden.")
+	var now := int(Time.get_unix_time_from_system())
+	if now <= int(data.placed[index].get("last_watered_at", 0)):
+		return _fail("Watering is already recorded at a later or equal time.")
+	var next := data.duplicate(true)
+	next.placed[index].last_watered_at = now
+	_observe(next, "water", Growth.species(next.placed[index].id), now)
+	return _commit(next)
+
+func harvest(index: int) -> bool:
+	if not readable: return false
+	if index < 0 or index >= data.placed.size():
+		return _fail("Choose a living plant in your garden.")
+	var placement: Dictionary = data.placed[index]
+	var now := int(Time.get_unix_time_from_system())
+	var reason := Harvest.status(placement, now)
+	if not reason.is_empty(): return _fail(reason)
+	var species := Growth.species(placement.id)
+	var next := data.duplicate(true)
+	var stock: Dictionary = next.get("harvest_stock", {})
+	var quantity := int(stock.get(species, 0)) + int(Harvest.CROPS[species].quantity)
+	if quantity > 999: return _fail("This harvest stack is full.")
+	stock[species] = quantity
+	next.harvest_stock = stock
+	next.placed[index].last_harvested_at = now
+	_observe(next, "harvest", species, now)
+	return _commit(next)
+
+func _observe(next: Dictionary, kind: String, plant: String, timestamp: int) -> void:
+	var observations: Array = next.get("observations", [])
+	if observations.size() == MAX_OBSERVATIONS:
+		observations.pop_front()
+	observations.append({"kind": kind, "plant": plant, "at": timestamp})
+	next.observations = observations
+
+func sell_harvest(species: String) -> bool:
+	if not readable: return false
+	var stock: Dictionary = data.get("harvest_stock", {})
+	if not Harvest.CROPS.has(species) or int(stock.get(species, 0)) == 0:
+		return _fail("There is none of this harvest in your backpack.")
+	var value := int(Harvest.CROPS[species].runes)
+	if int(data.runes) + value > 10000000: return _fail("Your Rune balance is full.")
+	var next := data.duplicate(true)
+	next.harvest_stock[species] -= 1
+	next.runes += value
+	return _commit(next)
 
 func retrieve(index: int) -> bool:
 	if index < 0 or index >= data.placed.size(): return false

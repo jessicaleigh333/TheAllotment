@@ -1,0 +1,36 @@
+{
+  "title": "Starter care, harvest and sale verified",
+  "status": "tested",
+  "summary": "A local starter loop now supports planting, watering observation, real UTC growth, crop-specific harvests, Backpack sales and save/reopen.",
+  "changes": [
+    "Backpack → Plants and harvest shows living plants, accepts watering, exposes harvest readiness and offers one-unit produce sales.",
+    "Basil and cosmos yields, sale values and the 14-day picking interval are prototype tuning. A new planting must establish before harvest, including after pickup/replant.",
+    "The garden can continue growing after harvest. The existing free Market remains free."
+  ],
+  "tests": [
+    "PASS — Godot 4.6.3 care, harvest, growth, market and local vault. Coverage includes exact per-crop inventory delta, sale Rune delta, repeat harvest refusal and preserved save state.",
+    "PASS — matched OpenGL Compatibility Backpack renders reviewed."
+  ],
+  "decisions": [
+    "Watering is recorded as care for the current planting. No weather, moisture or pest inference modifies growth or yield."
+  ],
+  "issues": [
+    "Harvest implementations for other species and a validated plant-health model remain open."
+  ],
+  "screenshots": [
+    "[Before](https://github.com/jessicaleigh333/TheAllotment/blob/codex/34-plant-care/docs/ai-handoff/evidence/plant-care-34/before.png)",
+    "[After](https://github.com/jessicaleigh333/TheAllotment/blob/codex/34-plant-care/docs/ai-handoff/evidence/plant-care-34/after.png)"
+  ],
+  "backlog": {
+    "harvesting": "P1 · starter basil/cosmos playable loop tested · awaiting review",
+    "plant-health": "P1 · watering observation implemented · diagnostic and health model remain open"
+  },
+  "id": "issue-34-starter-care",
+  "timestamp": "2026-11-27T20:41:44Z",
+  "branch": "codex/34-plant-care",
+  "commit": "557dede47225180eab0b75d1eb8e5416bceb19aa",
+  "files": [
+    "docs/ai-handoff/evidence/plant-care-34/after.png",
+    "docs/ai-handoff/evidence/plant-care-34/before.png"
+  ]
+}

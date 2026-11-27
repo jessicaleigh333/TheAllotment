@@ -78,3 +78,17 @@
 - PASS — growth and stage transitions, woody growth, vines, market and vault in isolated runs.
 
 [Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/2f4c55d0c0d751e740c37d98a2c9d42b8c04be23)
+
+## [2026-11-27T20:41:44Z · Starter care, harvest and sale verified](events/issue-34-starter-care.json)
+
+- PASS — Godot 4.6.3 care, harvest, growth, market and local vault. Coverage includes exact per-crop inventory delta, sale Rune delta, repeat harvest refusal and preserved save state.
+- PASS — matched OpenGL Compatibility Backpack renders reviewed.
+
+[Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/557dede47225180eab0b75d1eb8e5416bceb19aa)
+
+## [2026-11-27T20:44:44Z · Louise, Growing Guide and Garden Diary verified](events/issue-34-garden-guides.json)
+
+- PASS — HUD, Guide tab and source links, Diary save/reopen and Escape, care, harvest and vault checks with Godot 4.6.3.
+- PASS — reviewed matched OpenGL Compatibility renders.
+
+[Source commit](https://github.com/jessicaleigh333/TheAllotment/commit/c0683f4d8b29b5d2655143f1f868e2041a9bbd12)
